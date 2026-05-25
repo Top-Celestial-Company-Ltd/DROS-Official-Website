@@ -16,7 +16,7 @@ function App() {
     { name: "Python", repo: "dros-core-py", icon: "🐍", desc: "AI-native rapid-prototyping core." }
   ];
 
-  const githubUser = "Celestial105";
+  const githubUser = "Top-Celestial-Company-Ltd";
 
   return (
     <>
