@@ -94,7 +94,8 @@ function App() {
             {/* Hacker Tier */}
             <div className="glass-card pricing-card">
               <h3 className="serif-font" style={{fontSize: '1.8rem', color: 'var(--text-primary)'}}>Hacker</h3>
-              <div style={{fontSize: '2.5rem', fontWeight: 'bold', margin: '1rem 0', color: 'var(--accent-blue)'}}>$499</div>
+              <div style={{fontSize: '2.5rem', fontWeight: 'bold', margin: '1rem 0', color: 'var(--accent-blue)'}}>$149<span style={{fontSize:'1rem', color:'var(--text-secondary)'}}>/yr</span></div>
+              <p style={{fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '-0.5rem', marginBottom: '1rem'}}>(or $19/month)</p>
               <p style={{color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '60px'}}>For solo developers and indie hackers building their first DROS application.</p>
               <ul style={{textAlign: 'left', marginBottom: '2rem', listStyle: 'none', padding: 0, lineHeight: '2'}}>
                 <li>✅ Single Developer License</li>
@@ -102,8 +103,11 @@ function App() {
                 <li>✅ 1.6k Golden Nodes API access</li>
                 <li>❌ No Graphify Analytics</li>
               </ul>
-              <a href="https://dros.lemonsqueezy.com/buy/hacker" target="_blank" rel="noreferrer" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box'}}>
-                Buy via Lemon Squeezy
+              <a href="https://dros.lemonsqueezy.com/buy/hacker-yearly" target="_blank" rel="noreferrer" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginBottom: '0.5rem'}}>
+                Buy Yearly ($149)
+              </a>
+              <a href="https://dros.lemonsqueezy.com/buy/hacker-monthly" target="_blank" rel="noreferrer" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', background: 'transparent', border: '1px solid var(--accent-blue)', color: 'var(--accent-blue)'}}>
+                Buy Monthly ($19)
               </a>
             </div>
 
@@ -111,7 +115,8 @@ function App() {
             <div className="glass-card pricing-card" style={{borderColor: 'var(--accent-gold-glow)', transform: 'scale(1.05)', zIndex: 10}}>
               <div style={{position: 'absolute', top: '-15px', left: '50%', transform: 'translateX(-50%)', background: 'var(--accent-gold)', color: '#000', padding: '0.2rem 1rem', borderRadius: '20px', fontSize: '0.8rem', fontWeight: 'bold'}}>MOST POPULAR</div>
               <h3 className="serif-font" style={{fontSize: '1.8rem', color: 'var(--accent-gold)'}}>Startup</h3>
-              <div style={{fontSize: '2.5rem', fontWeight: 'bold', margin: '1rem 0', color: 'var(--accent-gold)'}}>$2,999</div>
+              <div style={{fontSize: '2.5rem', fontWeight: 'bold', margin: '1rem 0', color: 'var(--accent-gold)'}}>$499<span style={{fontSize:'1rem', color:'var(--text-secondary)'}}>/yr</span></div>
+              <p style={{fontSize: '0.9rem', color: 'transparent', marginTop: '-0.5rem', marginBottom: '1rem'}}>-</p>
               <p style={{color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '60px'}}>For small teams and growing SaaS businesses.</p>
               <ul style={{textAlign: 'left', marginBottom: '2rem', listStyle: 'none', padding: 0, lineHeight: '2'}}>
                 <li>✅ Up to 5 Developers</li>
@@ -119,7 +124,7 @@ function App() {
                 <li>✅ Complete 16,071 Nodes</li>
                 <li>✅ Graphify Basic Analytics</li>
               </ul>
-              <a href="https://dros.lemonsqueezy.com/buy/startup" target="_blank" rel="noreferrer" className="btn btn-primary" style={{width: '100%', display: 'block', boxSizing: 'border-box'}}>
+              <a href="https://dros.lemonsqueezy.com/buy/startup" target="_blank" rel="noreferrer" className="btn btn-primary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginTop: '2.8rem'}}>
                 Buy via Lemon Squeezy
               </a>
             </div>
@@ -127,7 +132,8 @@ function App() {
             {/* Enterprise Tier */}
             <div className="glass-card pricing-card">
               <h3 className="serif-font" style={{fontSize: '1.8rem', color: 'var(--text-primary)'}}>Enterprise</h3>
-              <div style={{fontSize: '2.5rem', fontWeight: 'bold', margin: '1rem 0', color: 'var(--text-primary)'}}>$19,900</div>
+              <div style={{fontSize: '2.5rem', fontWeight: 'bold', margin: '1rem 0', color: 'var(--text-primary)'}}>$4,990<span style={{fontSize:'1rem', color:'var(--text-secondary)'}}>/yr</span></div>
+              <p style={{fontSize: '0.9rem', color: 'transparent', marginTop: '-0.5rem', marginBottom: '1rem'}}>-</p>
               <p style={{color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '60px'}}>For large-scale orchestration and infinite API rate limits.</p>
               <ul style={{textAlign: 'left', marginBottom: '2rem', listStyle: 'none', padding: 0, lineHeight: '2'}}>
                 <li>✅ Unlimited Developers</li>
@@ -135,7 +141,7 @@ function App() {
                 <li>✅ Cluster Load Balancing</li>
                 <li>✅ 24/7 Priority Support</li>
               </ul>
-              <a href="https://dros.lemonsqueezy.com/buy/enterprise" target="_blank" rel="noreferrer" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box'}}>
+              <a href="https://dros.lemonsqueezy.com/buy/enterprise" target="_blank" rel="noreferrer" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginTop: '2.8rem'}}>
                 Buy via Lemon Squeezy
               </a>
             </div>
