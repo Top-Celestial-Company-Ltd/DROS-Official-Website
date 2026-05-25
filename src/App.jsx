@@ -84,19 +84,61 @@ function App() {
           </div>
         </section>
 
-        {/* Enterprise VajraClaw */}
-        <section id="enterprise" style={{textAlign: 'center', maxWidth: '800px', margin: '0 auto'}}>
-          <div className="glass-card" style={{padding: '4rem 2rem', borderColor: 'var(--accent-gold-glow)'}}>
-            <h2 className="serif-font gold-text" style={{fontSize: '2.5rem', marginBottom: '1rem'}}>VajraClaw Enterprise</h2>
-            <p style={{marginBottom: '2rem', fontSize: '1.1rem'}}>
-              Ready to scale? VajraClaw is the proprietary orchestration layer featuring multi-tenant isolation, enterprise API rate limiting, and deep-graph analytics (Graphify).
-            </p>
-            <a href="mailto:contact@dros.dev?subject=Request%20VajraClaw%20Enterprise%20Access" className="btn btn-primary" style={{fontSize: '1.2rem', padding: '1rem 2.5rem'}}>
-              Join the Waitlist
-            </a>
-            <p style={{marginTop: '1rem', fontSize: '0.85rem', color: 'var(--text-secondary)'}}>
-              * We will contact you when the VajraClaw commercial portal opens.
-            </p>
+        {/* Commercial Licensing Section */}
+        <section id="pricing" style={{textAlign: 'center', maxWidth: '1200px', margin: '4rem auto 0'}}>
+          <h2 className="section-title">VajraClaw <span className="gold-text">Commercial Licenses</span></h2>
+          <p className="subtitle" style={{marginBottom: '3rem'}}>
+            For SaaS integrations, proprietary modifications, and API monetization.
+          </p>
+          <div className="grid-3">
+            {/* Hacker Tier */}
+            <div className="glass-card pricing-card">
+              <h3 className="serif-font" style={{fontSize: '1.8rem', color: 'var(--text-primary)'}}>Hacker</h3>
+              <div style={{fontSize: '2.5rem', fontWeight: 'bold', margin: '1rem 0', color: 'var(--accent-blue)'}}>$499</div>
+              <p style={{color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '60px'}}>For solo developers and indie hackers building their first DROS application.</p>
+              <ul style={{textAlign: 'left', marginBottom: '2rem', listStyle: 'none', padding: 0, lineHeight: '2'}}>
+                <li>✅ Single Developer License</li>
+                <li>✅ Commercial Exemption</li>
+                <li>✅ 1.6k Golden Nodes API access</li>
+                <li>❌ No Graphify Analytics</li>
+              </ul>
+              <a href="https://dros.lemonsqueezy.com/buy/hacker" target="_blank" rel="noreferrer" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box'}}>
+                Buy via Lemon Squeezy
+              </a>
+            </div>
+
+            {/* Startup Tier */}
+            <div className="glass-card pricing-card" style={{borderColor: 'var(--accent-gold-glow)', transform: 'scale(1.05)', zIndex: 10}}>
+              <div style={{position: 'absolute', top: '-15px', left: '50%', transform: 'translateX(-50%)', background: 'var(--accent-gold)', color: '#000', padding: '0.2rem 1rem', borderRadius: '20px', fontSize: '0.8rem', fontWeight: 'bold'}}>MOST POPULAR</div>
+              <h3 className="serif-font" style={{fontSize: '1.8rem', color: 'var(--accent-gold)'}}>Startup</h3>
+              <div style={{fontSize: '2.5rem', fontWeight: 'bold', margin: '1rem 0', color: 'var(--accent-gold)'}}>$2,999</div>
+              <p style={{color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '60px'}}>For small teams and growing SaaS businesses.</p>
+              <ul style={{textAlign: 'left', marginBottom: '2rem', listStyle: 'none', padding: 0, lineHeight: '2'}}>
+                <li>✅ Up to 5 Developers</li>
+                <li>✅ Commercial Exemption</li>
+                <li>✅ Complete 16,071 Nodes</li>
+                <li>✅ Graphify Basic Analytics</li>
+              </ul>
+              <a href="https://dros.lemonsqueezy.com/buy/startup" target="_blank" rel="noreferrer" className="btn btn-primary" style={{width: '100%', display: 'block', boxSizing: 'border-box'}}>
+                Buy via Lemon Squeezy
+              </a>
+            </div>
+
+            {/* Enterprise Tier */}
+            <div className="glass-card pricing-card">
+              <h3 className="serif-font" style={{fontSize: '1.8rem', color: 'var(--text-primary)'}}>Enterprise</h3>
+              <div style={{fontSize: '2.5rem', fontWeight: 'bold', margin: '1rem 0', color: 'var(--text-primary)'}}>$19,900</div>
+              <p style={{color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '60px'}}>For large-scale orchestration and infinite API rate limits.</p>
+              <ul style={{textAlign: 'left', marginBottom: '2rem', listStyle: 'none', padding: 0, lineHeight: '2'}}>
+                <li>✅ Unlimited Developers</li>
+                <li>✅ Multi-Tenant Isolation</li>
+                <li>✅ Cluster Load Balancing</li>
+                <li>✅ 24/7 Priority Support</li>
+              </ul>
+              <a href="https://dros.lemonsqueezy.com/buy/enterprise" target="_blank" rel="noreferrer" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box'}}>
+                Buy via Lemon Squeezy
+              </a>
+            </div>
           </div>
         </section>
         {/* About Us */}
