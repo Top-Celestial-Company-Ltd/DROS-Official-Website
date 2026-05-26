@@ -26,7 +26,7 @@
       "questions": [
         {
           "q": "How does DROS prevent hallucinations?",
-          "a": "Through **GuardVM**, every inference step is strictly anchored to a defined authoritative rule (T-Number) at runtime. If the output violates the discipline, it is physically fused (blocked) immediately, stopping hallucinations at the source."
+          "a": "To be precise, DROS does not 'cure' the probabilistic hallucinations of neural networks; rather, it **prevents hallucinations from causing any actual impact**. By monitoring the byte stream via **GuardVM**, if an AI-generated output violates the Vajra Contract boundaries or lacks a valid T-Number, the system executes an immediate **Physical Melt** (cuts the connection) before delivery. The AI may still internally hallucinate characters, but under the physical protection of DROS, these hallucinations are rendered completely harmless."
         },
         {
           "q": "How does DROS defend against Prompt Injection?",
