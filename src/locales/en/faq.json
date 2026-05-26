@@ -29,8 +29,8 @@
           "a": "To be precise, DROS does not 'cure' the probabilistic hallucinations of neural networks; rather, it **prevents hallucinations from causing any actual impact**. By monitoring the byte stream via **GuardVM**, if an AI-generated output violates the Vajra Contract boundaries or lacks a valid T-Number, the system executes an immediate **Physical Melt** (cuts the connection) before delivery. The AI may still internally hallucinate characters, but under the physical protection of DROS, these hallucinations are rendered completely harmless."
         },
         {
-          "q": "How does DROS defend against Prompt Injection?",
-          "a": "It utilizes an 'Ephemeral Vajra Discipline' mechanism (dynamic composition of AGENT.MD + Vajra.md + user directives). The Vajra Contract possesses the highest priority. Any input attempting to bypass the rules is blocked instantaneously."
+          "q": "How does DROS achieve 100% defense against Prompt Injection?",
+          "a": "DROS employs a 'Zero Trust Architecture'. We assume the internal LLM can be deceived by malicious prompts at any time, so DROS fundamentally strips the LLM of its execution authority. When a hacker injects a command attempting to make the AI call unauthorized APIs or leak data, the AI-generated output will inevitably fail to meet the strict boundary constraints hardcoded in the GuardVM via the Vajra Contract. Upon violation, the system executes an immediate **Physical Melt** before any data is dispatched. In other words: malicious instructions might deceive the neural network, but they can absolutely never bypass the DROS physical firewall, achieving a 100% system-level defense."
         },
         {
           "q": "Does DROS consume a massive amount of tokens?",
