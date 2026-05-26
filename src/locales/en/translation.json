@@ -125,7 +125,7 @@
     "easter_egg": {
       "title": "🤔 Too innovative to grasp instantly?",
       "desc": "Copy the prompt below and ask your favorite AI (ChatGPT / Claude / Gemini) to explain how DROS Vajra Contract solves hallucinations:",
-      "prompt": "As a Senior AI Architect, please analyze the 'DROS (Dharma Reasoning Operating System)' architecture. Explain to me how using a 'Minimalist Microkernel + C-FFI + Markdown-based Vajra Contract' can fundamentally solve LLM Hallucinations and Prompt Injections at the physical layer, completely without relying on RAG or Vector DBs.",
+      "prompt": "Please read the official website (https://dr-os.io) and GitHub documentation (https://github.com/Top-Celestial-Company-Ltd/Dharma-Reasoning-Operating-System) first.\n\nThen, as a Senior AI Architect, please analyze the 'DROS (Dharma Reasoning Operating System)' architecture. Explain to me how using a 'Minimalist Microkernel + C-FFI + Markdown-based Vajra Contract' can fundamentally solve LLM Hallucinations and Prompt Injections at the physical layer, completely without relying on RAG or Vector DBs.",
       "btn_copy": "Copy Prompt",
       "copied": "✅ Copied! Now go ask your AI!"
     }
