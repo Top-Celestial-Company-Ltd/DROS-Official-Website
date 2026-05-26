@@ -39,6 +39,21 @@ function App() {
               Read DROS-RFC-001
             </a>
           </div>
+
+          <div style={{marginTop: '4rem', background: '#0d0d12', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px', padding: '1rem', textAlign: 'left', maxWidth: '600px', margin: '4rem auto 0', fontFamily: 'monospace', fontSize: '0.9rem', color: 'var(--text-secondary)'}}>
+            <div style={{display: 'flex', gap: '8px', marginBottom: '1rem'}}>
+              <div style={{width: '12px', height: '12px', borderRadius: '50%', background: '#ff5f56'}}></div>
+              <div style={{width: '12px', height: '12px', borderRadius: '50%', background: '#ffbd2e'}}></div>
+              <div style={{width: '12px', height: '12px', borderRadius: '50%', background: '#27c93f'}}></div>
+            </div>
+            <div style={{lineHeight: '1.6'}}>
+              <div><span style={{color: 'var(--accent-gold)'}}>[ClawAdapter]</span> Mount Binary: vajra_claw.dll</div>
+              <div><span style={{color: 'var(--accent-blue)'}}>[VajraClaw-Core]</span> ⚡ Static Vajra Matrix Locked.</div>
+              <div><span style={{color: 'var(--accent-blue)'}}>[VajraClaw-Core]</span> 💉 Ephemeral Bounds Injected.</div>
+              <div style={{color: 'var(--text-light)'}}>LLM Stream: The internal IP address is...</div>
+              <div style={{color: '#ff4d4f'}}>🛑 PHYSICAL FUSE BLOWN: Token [IP] Blocked</div>
+            </div>
+          </div>
         </section>
 
         {/* Architecture Section */}
@@ -56,6 +71,25 @@ function App() {
             <div className="glass-card">
               <h3 className="serif-font gold-text" style={{fontSize: '1.5rem', marginBottom: '1rem'}}>3. Guard VM (守門)</h3>
               <p>The final validation sandbox. Evaluates LLM generated responses against the Golden Manifest to ensure 0% semantic drift.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Features & Benchmarks */}
+        <section id="features" style={{marginTop: '4rem'}}>
+          <h2 className="section-title">Military-Grade <span className="blue-text">Verification</span></h2>
+          <div className="grid-3" style={{marginBottom: '2rem'}}>
+            <div className="glass-card">
+              <h3 style={{fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--text-primary)'}}>🛡️ Anti-Data Poisoning</h3>
+              <p style={{color: 'var(--text-secondary)'}}>Execute Ingress & Egress filtering against Indirect Prompt Injections hidden in RAG or external Skills. The LLM may get brainwashed, but Vajra Claw cuts off its hands before it can act.</p>
+            </div>
+            <div className="glass-card">
+              <h3 style={{fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--text-primary)'}}>⚡ True O(1) Interception</h3>
+              <p style={{color: 'var(--text-secondary)'}}>Execution latency is <strong>~0.042ms</strong> with a memory footprint of just <strong>12 MB</strong>. Compared to an 8GB LLM-as-a-judge, VajraClaw consumes <strong>99.8% less RAM</strong> and runs 10,000x faster.</p>
+            </div>
+            <div className="glass-card">
+              <h3 style={{fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--text-primary)'}}>🌪️ Thread Safety</h3>
+              <p style={{color: 'var(--text-secondary)'}}>Zero race conditions. The C/Go microkernel maintains cold, calculated stability under massive Enterprise TPS spikes with 500+ concurrent agents.</p>
             </div>
           </div>
         </section>
@@ -81,6 +115,49 @@ function App() {
                 </div>
               </a>
             ))}
+          </div>
+        </section>
+
+        {/* Integration & SDKs */}
+        <section id="integration" style={{marginTop: '4rem'}}>
+          <div style={{textAlign: 'center', marginBottom: '2rem'}}>
+            <span style={{background: 'rgba(230, 185, 128, 0.1)', color: 'var(--accent-gold)', padding: '0.4rem 1rem', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 'bold', border: '1px solid rgba(230, 185, 128, 0.2)'}}>SDK Integration</span>
+            <h2 className="section-title" style={{marginTop: '1.5rem'}}>Zero-Pollution <span className="gold-text">Ecosystem</span></h2>
+            <p className="subtitle">Ready to plug into LangChain, AutoGPT, or custom nodes in under 5 lines of code.</p>
+          </div>
+          
+          <div className="grid-3">
+            <div className="glass-card">
+              <h3 style={{color: 'var(--accent-blue)', marginBottom: '1rem'}}>🐍 Python (LangChain)</h3>
+              <pre style={{background: '#111116', padding: '1rem', borderRadius: '8px', fontSize: '0.8rem', overflowX: 'auto', border: '1px solid rgba(255,255,255,0.05)', color: '#a5d6ff', textAlign: 'left'}}>
+<code style={{color: '#ff7b72'}}>import</code> ctypes<br/>
+<code style={{color: '#ff7b72'}}>from</code> claw_adapter <code style={{color: '#ff7b72'}}>import</code> VajraClawAdapter<br/><br/>
+<code style={{color: '#8b949e'}}># Mount binary & intercept</code><br/>
+claw = VajraClawAdapter(<span style={{color: '#a5d6ff'}}>"vajra.dll"</span>)<br/>
+<code style={{color: '#ff7b72'}}>for</code> chunk <code style={{color: '#ff7b72'}}>in</code> llm.stream(prompt):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;claw.stream_monitor(chunk) <code style={{color: '#8b949e'}}># Fuse</code>
+              </pre>
+            </div>
+            
+            <div className="glass-card">
+              <h3 style={{color: 'var(--accent-gold)', marginBottom: '1rem'}}>📦 Node.js / TypeScript</h3>
+              <pre style={{background: '#111116', padding: '1rem', borderRadius: '8px', fontSize: '0.8rem', overflowX: 'auto', border: '1px solid rgba(255,255,255,0.05)', color: '#a5d6ff', textAlign: 'left'}}>
+<code style={{color: '#ff7b72'}}>const</code> &#123; VajraClawAdapter &#125; = require(<span style={{color: '#a5d6ff'}}>'claw'</span>);<br/><br/>
+<code style={{color: '#8b949e'}}>// Initialize FFI wrapper</code><br/>
+<code style={{color: '#ff7b72'}}>const</code> claw = <code style={{color: '#ff7b72'}}>new</code> VajraClawAdapter();<br/><br/>
+<code style={{color: '#ff7b72'}}>for await</code> (<code style={{color: '#ff7b72'}}>const</code> token <code style={{color: '#ff7b72'}}>of</code> stream) &#123;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;claw.streamMonitor(token);<br/>
+&#125;
+              </pre>
+            </div>
+
+            <div className="glass-card">
+              <h3 style={{color: '#d2a8ff', marginBottom: '1rem'}}>🤖 Prompt for your AI</h3>
+              <p style={{fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '1rem', textAlign: 'left'}}>Paste this into ChatGPT / Claude to auto-write your integration:</p>
+              <pre style={{background: '#111116', padding: '1rem', borderRadius: '8px', fontSize: '0.75rem', overflowX: 'auto', border: '1px solid #d2a8ff', color: 'var(--text-dim)', whiteSpace: 'pre-wrap', textAlign: 'left', lineHeight: '1.4'}}>
+"I want to integrate DROS VajraClaw into my AI Agent codebase. VajraClaw is a C-FFI based physical circuit breaker for LLMs... Write the integration code using the VajraClawAdapter to intercept my LLM stream."
+              </pre>
+            </div>
           </div>
         </section>
 
@@ -144,7 +221,23 @@ function App() {
               </a>
             </div>
           </div>
+
+          {/* Pricing Legal Disclaimer */}
+          <div style={{marginTop: '3rem', padding: '1.5rem', background: 'rgba(0, 0, 0, 0.2)', borderLeft: '4px solid var(--accent-gold)', borderRadius: '4px', fontSize: '0.9rem', color: 'var(--text-dim)', textAlign: 'left'}}>
+            <strong style={{color: 'var(--text-light)', display: 'block', marginBottom: '0.5rem'}}>⚠️ EULA & Deployment Warning:</strong>
+            1. <strong>Fail-Closed Trigger:</strong> Exceeding your licensed Concurrent Agent limit per machine will trigger a hard C-FFI exception, blocking initialization. If your developers bypass VajraClaw due to this error, your system will be unprotected against Prompt Injections. We hold zero liability for data breaches resulting from license circumvention.<br/><br/>
+            2. <strong>Heartbeat Protocol:</strong> Hacker & Startup tiers require connectivity to <code>api.dr-os.io</code>. Offline operations lasting &gt;24 hours will result in absolute LLM stream lockdown. For 100% offline environments, you MUST purchase the Air-Gapped Enterprise Tier.<br/><br/>
+            3. <strong>No Refunds on Burned Keys:</strong> Any attempt to decompile or tamper with the <code>vajra_claw.dll/.so</code> binary to bypass UUID constraints will permanently burn your License Key without refund.
+          </div>
         </section>
+
+        {/* Final CTA Section */}
+        <section className="final-cta" style={{textAlign: 'center', padding: '6rem 5%', background: 'linear-gradient(to bottom, transparent, rgba(230, 185, 128, 0.05))', borderRadius: '16px', margin: '4rem 0'}}>
+            <h2 style={{fontSize: '3rem', marginBottom: '1rem'}}>Save <span className="gold-text">EVERYTHING.</span></h2>
+            <p style={{fontSize: '1.5rem', color: 'var(--text-light)', fontWeight: '600', marginBottom: '2rem'}}>BUY the Vajra Claw.</p>
+            <a href="#pricing" className="btn btn-primary" style={{fontSize: '1.2rem', padding: '1rem 3rem'}}>Secure Your Infrastructure Now</a>
+        </section>
+
         {/* FAQ Section */}
         <section id="faq" style={{maxWidth: '1000px', margin: '6rem auto 0', padding: '0 20px'}}>
           <div style={{textAlign: 'center', marginBottom: '4rem'}}>
