@@ -1,10 +1,18 @@
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 export default function Home() {
-  const githubUser = "Top-Celestial-Company-Ltd";
   const { t, i18n } = useTranslation();
+  const githubUser = "Top-Celestial-Company-Ltd";
+  const [isCopied, setIsCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(t('home.easter_egg.prompt'));
+    setIsCopied(true);
+    setTimeout(() => setIsCopied(false), 3000);
+  };
 
   return (
     <main>
@@ -207,6 +215,30 @@ export default function Home() {
               </div>
             </a>
           ))}
+        </div>
+      </section>
+
+      {/* Easter Egg / Ask AI */}
+      <section className="container" style={{ padding: '0 2rem 4rem' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto', background: 'linear-gradient(180deg, rgba(20,20,25,0.8), rgba(10,10,10,0.9))', border: '1px solid rgba(0, 240, 255, 0.15)', borderRadius: '16px', padding: '2.5rem', boxShadow: '0 8px 30px rgba(0,0,0,0.5)' }}>
+          <h3 style={{ fontSize: '1.4rem', color: '#fff', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            {t('home.easter_egg.title')}
+          </h3>
+          <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', lineHeight: '1.6' }}>
+            {t('home.easter_egg.desc')}
+          </p>
+          <div style={{ position: 'relative' }}>
+            <pre style={{ background: 'rgba(0,0,0,0.5)', padding: '1.5rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)', color: '#a5d6ff', fontSize: '0.95rem', whiteSpace: 'pre-wrap', fontFamily: 'var(--font-mono)' }}>
+              {t('home.easter_egg.prompt')}
+            </pre>
+            <button 
+              onClick={handleCopy}
+              className={`btn ${isCopied ? 'btn-primary' : 'btn-secondary'}`}
+              style={{ position: 'absolute', bottom: '1rem', right: '1rem', padding: '0.5rem 1rem', fontSize: '0.85rem' }}
+            >
+              {isCopied ? t('home.easter_egg.copied') : t('home.easter_egg.btn_copy')}
+            </button>
+          </div>
         </div>
       </section>
 

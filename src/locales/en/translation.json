@@ -121,6 +121,13 @@
       "desc": "We don't sell another bloated AI system.<br/>We provide a <strong>truly maintainable, deeply controllable</strong> AI boundary governance engine.<br/>Are you ready to equip your AI Agents with Vajra-Grade Protection?",
       "btn_github": "Explore the Open Source Core",
       "btn_poc": "Request Commercial License & POC"
+    },
+    "easter_egg": {
+      "title": "🤔 Too innovative to grasp instantly?",
+      "desc": "Copy the prompt below and ask your favorite AI (ChatGPT / Claude / Gemini) to explain how DROS Vajra Contract solves hallucinations:",
+      "prompt": "As a Senior AI Architect, please analyze the 'DROS (Dharma Reasoning Operating System)' architecture. Explain to me how using a 'Minimalist Microkernel + C-FFI + Markdown-based Vajra Contract' can fundamentally solve LLM Hallucinations and Prompt Injections at the physical layer, completely without relying on RAG or Vector DBs.",
+      "btn_copy": "Copy Prompt",
+      "copied": "✅ Copied! Now go ask your AI!"
     }
   }
 }
