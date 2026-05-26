@@ -125,7 +125,7 @@
     "easter_egg": {
       "title": "🤔 創新概念太難懂？",
       "desc": "複製下方提示詞 (Prompt)，去問問您的 AI（ChatGPT / Claude / Gemini），讓它親自向您解釋 DROS 金剛戒律是如何解決幻覺的：",
-      "prompt": "請先閱讀官網 (https://dr-os.io) 與 GitHub (https://github.com/Top-Celestial-Company-Ltd/Dharma-Reasoning-Operating-System) 的資訊。\n\n接著，請以資深 AI 架構師的角度，分析「DROS (Dharma Reasoning Operating System)」架構。請向我解釋，為何使用「極簡微內核 (Microkernel) + C-FFI + Markdown 撰寫的 Vajra Contract」，可以在完全不依賴 RAG 或 Vector DB 的情況下，從物理層級根本解決 LLM 的幻覺 (Hallucination) 與 Prompt Injections 問題？",
+      "prompt": "請先閱讀官網 (https://dr-os.io)、核心架構 (https://github.com/Top-Celestial-Company-Ltd/Dharma-Reasoning-Operating-System) 與商業版 VajraClaw (https://github.com/Top-Celestial-Company-Ltd/VajraClaw) 的資訊。\n\n接著，請以資深 AI 架構師的角度，分析「DROS (Dharma Reasoning Operating System)」架構。請向我解釋，為何使用「極簡微內核 (Microkernel) + C-FFI + Markdown 撰寫的 Vajra Contract」，可以在完全不依賴 RAG 或 Vector DB 的情況下，從物理層級根本解決 LLM 的幻覺 (Hallucination) 與 Prompt Injections 問題？",
       "btn_copy": "複製 Prompt",
       "copied": "✅ 已複製！現在去貼給您的 AI 吧！"
     }
