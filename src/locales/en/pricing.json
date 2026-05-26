@@ -14,7 +14,7 @@
       "features": [
         "Bound to 1 Machine UUID",
         "Up to 5 Concurrent Agents",
-        "Online Heartbeat Required",
+        "Online License Validation",
         "Community Forum Support"
       ],
       "btn_yearly": "Buy Yearly ($149)",
@@ -28,8 +28,8 @@
       "features": [
         "Up to 3 Machine UUIDs",
         "10 Concurrent Agents per Machine",
-        "Online Heartbeat Required",
-        "24/7 Email Technical Support"
+        "Online License Validation",
+        "Priority Software Updates & Support"
       ],
       "btn": "Secure Startup License"
     },
@@ -38,18 +38,18 @@
       "price_yearly": "$4,990",
       "desc": "Absolute sovereignty. Zero telemetry. Designed for Fortune 500 companies with extreme security requirements.",
       "features": [
-        "100% Air-Gapped (No Heartbeat)",
+        "100% Air-Gapped (No Validation Req.)",
         "Up to 15 Machine UUIDs",
         "30 Concurrent Agents per Machine",
-        "Dedicated Slack Channel & Rule Customization"
+        "Advanced Rule Configuration Engine & Priority SLA"
       ],
-      "btn": "Contact Sales"
+      "btn": "Purchase Enterprise License"
     }
   },
   "disclaimer": {
     "title": "⚠️ EULA & Deployment Warning:",
     "p1": "1. <strong>Fail-Closed Trigger:</strong> Exceeding the licensed Concurrent Agent limit will trigger a C-FFI hardware-level exception, blocking initialization. If developers bypass VajraClaw by ignoring this exception, the system will be completely exposed to Prompt Injections. We assume no liability for data breaches caused by license circumvention.",
-    "p2": "2. <strong>Heartbeat Protocol:</strong> Hacker and Startup tiers require periodic connections to <code>api.dr-os.io</code> for validation. If offline for over 24 hours, the LLM stream will be completely locked. If your environment is 100% offline, you <strong>must</strong> procure the Air-Gapped Enterprise tier.",
+    "p2": "2. <strong>License Validation Protocol:</strong> Hacker and Startup tiers require periodic connections to <code>api.dr-os.io</code> for validation. If offline for over 24 hours, the LLM stream will be completely locked. If your environment is 100% offline, you <strong>must</strong> procure the Air-Gapped Enterprise tier.",
     "p3": "3. <strong>No Refunds on Burned Keys:</strong> Any attempt to decompile or tamper with the <code>vajra_claw.dll/.so</code> binaries to circumvent UUID restrictions will permanently destroy your License Key without a refund."
   },
   "cta": {

@@ -14,7 +14,7 @@
       "features": [
         "綁定 1 組 Machine UUID",
         "最高 5 個 Concurrent Agents",
-        "需連線驗證 (Online Heartbeat)",
+        "線上授權驗證 (License Validation)",
         "社群論壇支援"
       ],
       "btn_yearly": "Buy Yearly ($149)",
@@ -28,8 +28,8 @@
       "features": [
         "最高 3 組 Machine UUIDs",
         "每機台 10 個 Concurrent Agents",
-        "需連線驗證 (Online Heartbeat)",
-        "24 小時 Email 技術支援"
+        "線上授權驗證 (License Validation)",
+        "優先軟體更新與 Email 支援"
       ],
       "btn": "Secure Startup License"
     },
@@ -38,18 +38,18 @@
       "price_yearly": "$4,990",
       "desc": "絕對主權。零遙測資料。專為對資安要求極高的 Fortune 500 企業設計。",
       "features": [
-        "100% 物理隔離 (無須 Heartbeat)",
+        "100% 物理隔離 (無須 Validation)",
         "最高 15 組 Machine UUIDs",
         "每機台 30 個 Concurrent Agents",
-        "專屬 Slack 頻道與客製化規則支援"
+        "進階規則配置引擎與優先 SLA"
       ],
-      "btn": "Contact Sales"
+      "btn": "Purchase Enterprise License"
     }
   },
   "disclaimer": {
     "title": "⚠️ EULA & Deployment Warning:",
     "p1": "1. <strong>Fail-Closed Trigger:</strong> 超出授權的 Concurrent Agent 數量將觸發 C-FFI 硬體級別異常，阻斷初始化。若開發者因忽略此異常而強行繞過 VajraClaw，系統將完全暴露於 Prompt Injections 攻擊之下。我們對因規避授權而導致的資料外洩不承擔任何責任。",
-    "p2": "2. <strong>Heartbeat Protocol:</strong> Hacker 與 Startup 方案需定期連線至 <code>api.dr-os.io</code> 進行驗證。若離線時間超過 24 小時，將導致 LLM 串流完全鎖定。若您的環境為 100% 離線，<strong>必須</strong>採購 Air-Gapped Enterprise 方案。",
+    "p2": "2. <strong>License Validation Protocol:</strong> Hacker 與 Startup 方案需定期連線至 <code>api.dr-os.io</code> 進行驗證。若離線時間超過 24 小時，將導致 LLM 串流完全鎖定。若您的環境為 100% 離線，<strong>必須</strong>採購 Air-Gapped Enterprise 方案。",
     "p3": "3. <strong>No Refunds on Burned Keys:</strong> 任何試圖反編譯或竄改 <code>vajra_claw.dll/.so</code> 二進位檔案以規避 UUID 限制的行為，將永久銷毀您的 License Key 且不予退費。"
   },
   "cta": {
