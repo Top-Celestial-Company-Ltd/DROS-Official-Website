@@ -51,7 +51,7 @@
         },
         {
           "q": "Is drafting rules difficult?",
-          "a": "Almost zero barrier to entry. Our core philosophy is: **'Borrow AI to set the physical boundaries for AI, rather than using AI hallucination to catch AI hallucination.'** You don't need to manually write complex YAML or code from scratch. Simply describe your business boundaries in natural human language, and our VajraClaw toolkit will instruct an LLM to automatically translate them into perfectly formatted physical discipline files (Vajra.md). This allows enterprises to focus 100% on business logic without any steep learning curve."
+          "a": "**The technical barrier is low, but the domain expertise barrier is high.**\n\nWriting Vajra.md itself requires no programming background — the syntax is close to everyday Markdown. However, the core value of DROS lies in the **precision of your physical boundaries** — and that precision can only come from domain experts who truly understand how the enterprise operates: legal, compliance, security officers, and business owners.\n\n**AI plays the role of a translator here, not a legislator.**\nThe VajraClaw toolkit helps you 'translate' professional judgment into DROS-formatted physical rules. But the prerequisite is that you must first have a clear grasp of your enterprise's complete business boundaries, risk red lines, and compliance requirements — something no tool can replace.\n\nIn one sentence: **Garbage in, garbage out. The more precisely you define your boundaries, the more unbreakable your Vajra Discipline becomes.**"
         },
         {
           "q": "What languages and platforms are supported?",
