@@ -86,9 +86,9 @@ function App() {
 
         {/* Commercial Licensing Section */}
         <section id="pricing" style={{textAlign: 'center', maxWidth: '1200px', margin: '4rem auto 0'}}>
-          <h2 className="section-title">VajraClaw <span className="gold-text">Commercial Licenses</span></h2>
+          <h2 className="section-title">Vajra Claw <span className="gold-text">Commercial Licenses</span></h2>
           <p className="subtitle" style={{marginBottom: '3rem'}}>
-            For SaaS integrations, proprietary modifications, and API monetization.
+            The ultimate O(1) circuit breaker and runtime guardian for AI systems.
           </p>
           <div className="grid-3">
             {/* Hacker Tier */}
@@ -96,12 +96,11 @@ function App() {
               <h3 className="serif-font" style={{fontSize: '1.8rem', color: 'var(--text-primary)'}}>Hacker</h3>
               <div style={{fontSize: '2.5rem', fontWeight: 'bold', margin: '1rem 0', color: 'var(--accent-blue)'}}>$149<span style={{fontSize:'1rem', color:'var(--text-secondary)'}}>/yr</span></div>
               <p style={{fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '-0.5rem', marginBottom: '1rem'}}>(or $19/month)</p>
-              <p style={{color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '60px'}}>For solo developers and indie hackers building their first DROS application.</p>
+              <p style={{color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '60px'}}>The ultimate O(1) circuit breaker for individual developers.</p>
               <ul style={{textAlign: 'left', marginBottom: '2rem', listStyle: 'none', padding: 0, lineHeight: '2'}}>
-                <li>✅ Single Developer License</li>
-                <li>✅ Commercial Exemption</li>
-                <li>✅ 1.6k Golden Nodes API access</li>
-                <li>❌ No Graphify Analytics</li>
+                <li>✅ Bound to 1 Machine UUID</li>
+                <li>✅ Max 5 Concurrent Agents</li>
+                <li style={{color: '#ff4d4f', fontSize: '0.85rem', lineHeight: '1.4', marginTop: '1rem'}}>⚠️ <strong>EULA Warning:</strong> Exceeding 5 agents triggers a Fail-Closed exception. Offline &gt;24h lockdown. No refunds.</li>
               </ul>
               <a href="https://dros.lemonsqueezy.com/buy/hacker-yearly" target="_blank" rel="noreferrer" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginBottom: '0.5rem'}}>
                 Buy Yearly ($149)
@@ -117,29 +116,28 @@ function App() {
               <h3 className="serif-font" style={{fontSize: '1.8rem', color: 'var(--accent-gold)'}}>Startup</h3>
               <div style={{fontSize: '2.5rem', fontWeight: 'bold', margin: '1rem 0', color: 'var(--accent-gold)'}}>$499<span style={{fontSize:'1rem', color:'var(--text-secondary)'}}>/yr</span></div>
               <p style={{fontSize: '0.9rem', color: 'transparent', marginTop: '-0.5rem', marginBottom: '1rem'}}>-</p>
-              <p style={{color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '60px'}}>For small teams and growing SaaS businesses.</p>
+              <p style={{color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '60px'}}>Perfect for SME AI teams and internal deployments.</p>
               <ul style={{textAlign: 'left', marginBottom: '2rem', listStyle: 'none', padding: 0, lineHeight: '2'}}>
-                <li>✅ Up to 5 Developers</li>
-                <li>✅ Commercial Exemption</li>
-                <li>✅ Complete 16,071 Nodes</li>
-                <li>✅ Graphify Basic Analytics</li>
+                <li>✅ Up to 3 Machine UUIDs</li>
+                <li>✅ 10 Concurrent Agents per Machine</li>
+                <li style={{color: '#ff4d4f', fontSize: '0.85rem', lineHeight: '1.4', marginTop: '1rem'}}>⚠️ <strong>EULA Warning:</strong> Exceeding limits triggers a Fail-Closed exception. Offline &gt;24h lockdown. No refunds.</li>
               </ul>
               <a href="https://dros.lemonsqueezy.com/buy/startup" target="_blank" rel="noreferrer" className="btn btn-primary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginTop: '2.8rem'}}>
                 Buy via Lemon Squeezy
               </a>
             </div>
 
-            {/* Enterprise Tier */}
+            {/* Unlimited Tier */}
             <div className="glass-card pricing-card">
-              <h3 className="serif-font" style={{fontSize: '1.8rem', color: 'var(--text-primary)'}}>Enterprise</h3>
+              <h3 className="serif-font" style={{fontSize: '1.8rem', color: 'var(--text-primary)'}}>Enterprise Air-Gapped</h3>
               <div style={{fontSize: '2.5rem', fontWeight: 'bold', margin: '1rem 0', color: 'var(--text-primary)'}}>$4,990<span style={{fontSize:'1rem', color:'var(--text-secondary)'}}>/yr</span></div>
               <p style={{fontSize: '0.9rem', color: 'transparent', marginTop: '-0.5rem', marginBottom: '1rem'}}>-</p>
-              <p style={{color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '60px'}}>For large-scale orchestration and infinite API rate limits.</p>
+              <p style={{color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '60px'}}>Absolute sovereignty. Zero telemetry. For Fortune 500 companies.</p>
               <ul style={{textAlign: 'left', marginBottom: '2rem', listStyle: 'none', padding: 0, lineHeight: '2'}}>
-                <li>✅ Unlimited Developers</li>
-                <li>✅ Multi-Tenant Isolation</li>
-                <li>✅ Cluster Load Balancing</li>
-                <li>✅ 24/7 Priority Support</li>
+                <li>✅ 100% Air-Gapped</li>
+                <li>✅ Up to 15 Machine UUIDs</li>
+                <li>✅ 30 Concurrent Agents per Machine</li>
+                <li style={{color: '#ff4d4f', fontSize: '0.85rem', lineHeight: '1.4', marginTop: '1rem'}}>⚠️ <strong>EULA Warning:</strong> Exceeding limits triggers a Fail-Closed exception. No refunds on tampering.</li>
               </ul>
               <a href="https://dros.lemonsqueezy.com/buy/enterprise" target="_blank" rel="noreferrer" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginTop: '2.8rem'}}>
                 Buy via Lemon Squeezy
