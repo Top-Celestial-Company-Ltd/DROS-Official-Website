@@ -66,7 +66,7 @@
       },
       "summary": {
         "title": "Summary",
-        "desc": "We do not prevent hackers from 'speaking' to the LLM, nor can we prevent the LLM from 'imagining things' internally. However, we have **100% stripped the LLM of its authority to act autonomously**.<br/><br/>As long as the LLM's output does not conform to the physical rules hardcoded in Markdown, that output will never leave the server. This is why DROS provides enterprises with a 100% security guarantee: the ultimate decision-making power lies not with the AI, but with the cold, unyielding binary gatekeeper!"
+        "desc": "We do not prevent hackers from 'speaking' to the LLM, nor can we prevent the LLM from 'imagining things' internally. However, we have <strong>100% stripped the LLM of its authority to act autonomously</strong>. Simply put: <strong style='color:#ff4d4f'>the moment the AI hallucinates, goes crazy, or gets hijacked by a hacker and loses control, Vajra will physically 'chop off the AI's hands and feet'!</strong><br/><br/>As long as the LLM's output does not conform to the physical rules hardcoded in Markdown, that output will never leave the server. This is why DROS provides enterprises with a 100% security guarantee: the ultimate decision-making power lies not with the AI, but with the cold, unyielding binary gatekeeper!"
       }
     },
     "writing_rules": {
