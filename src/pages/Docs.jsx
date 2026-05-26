@@ -282,6 +282,9 @@ result = engine.execute(user_input)
         {/* Section 5 */}
         <section id="comparison" className="doc-section">
           <h2>{t('sections.comparison.title')}</h2>
+          {t('sections.comparison.desc', { defaultValue: '' }) && (
+            <p dangerouslySetInnerHTML={{ __html: t('sections.comparison.desc') }} style={{ marginBottom: '2rem' }}></p>
+          )}
           <div className="table-responsive">
             <table className="doc-table">
               <thead>

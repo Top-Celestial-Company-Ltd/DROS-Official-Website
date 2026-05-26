@@ -113,6 +113,7 @@
     },
     "comparison": {
       "title": "5. 與傳統方案對比",
+      "desc": "在面對「幻覺」與「Prompt Injection」時，傳統方案依賴「概率性防禦」（如 LLM-as-a-judge 或 Prompt Engineering），試圖「治療」AI 的神經網路。而 DROS 則採取 **零信任架構 (Zero Trust Architecture)**：我們假設 AI 隨時會被欺騙，因此直接剝奪其執行權力。所有輸出皆需通過 GuardVM 的物理驗證，一旦越界即觸發 **物理熔斷**，讓幻覺與惡意指令毫無殺傷力。",
       "headers": ["項目", "傳統 RAG + LLM Agent", "DROS 金剛戒律方案", "優勢"],
       "rows": [
         ["幻覺防護", "概率性（後驗 Guardrails）", "物理層級確定性熔斷", "壓倒性"],

@@ -51,7 +51,7 @@
         },
         {
           "q": "Is drafting rules difficult?",
-          "a": "Moderate difficulty. Familiarity with Markdown and basic YAML is sufficient. We provide detailed guidelines and templates. Enterprises know their business best, so internal domain experts write the most effective rules."
+          "a": "Almost zero barrier to entry. Our core philosophy is: **'Borrow AI to set the physical boundaries for AI, rather than using AI hallucination to catch AI hallucination.'** You don't need to manually write complex YAML or code from scratch. Simply describe your business boundaries in natural human language, and our VajraClaw toolkit will instruct an LLM to automatically translate them into perfectly formatted physical discipline files (Vajra.md). This allows enterprises to focus 100% on business logic without any steep learning curve."
         },
         {
           "q": "What languages and platforms are supported?",

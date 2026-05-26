@@ -137,8 +137,10 @@ export default function Home() {
 
       {/* Comparison Table */}
       <section className="container" style={{ padding: '6rem 2rem' }}>
-        <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '4rem' }}>{t('home.comparison.title_prefix')}<span className="blue-text">{t('home.comparison.title_highlight')}</span></h2>
-        
+        <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '2rem' }}>{t('home.comparison.title_prefix')}<span className="blue-text">{t('home.comparison.title_highlight')}</span></h2>
+        {t('home.comparison.desc', { defaultValue: '' }) && (
+          <p dangerouslySetInnerHTML={{ __html: t('home.comparison.desc') }} style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 4rem auto', color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: '1.6' }}></p>
+        )}
         <div style={{ overflowX: 'auto', background: 'rgba(20,20,20,0.5)', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.08)' }}>
           <table style={{ width: '100%', minWidth: '800px', borderCollapse: 'collapse' }}>
             <thead>

@@ -113,7 +113,8 @@
     },
     "comparison": {
       "title": "5. Comparison with Traditional Solutions",
-      "headers": ["Feature", "Traditional RAG + LLM Agent", "DROS Vajra Architecture", "Advantage"],
+      "desc": "When confronting 'Hallucinations' and 'Prompt Injections', traditional solutions rely on 'probabilistic defense' (like LLM-as-a-judge or Prompt Engineering), attempting to 'cure' the AI's neural network. In contrast, DROS adopts a **Zero Trust Architecture**: We assume the AI will be deceived at any moment, and thus fundamentally strip it of execution authority. All outputs must pass the physical verification of GuardVM; any boundary violation triggers an immediate **Physical Melt**, rendering hallucinations and malicious instructions completely harmless.",
+      "headers": ["Item", "Traditional RAG + LLM Agent", "DROS Vajra Discipline", "Advantage"],
       "rows": [
         ["Hallucination Defense", "Probabilistic (Post-generation Guardrails)", "Physical-layer Deterministic Fusion", "Overwhelming"],
         ["Prompt Injection", "Prompt Engineering", "Runtime Contract Forced Validation", "Significant"],
