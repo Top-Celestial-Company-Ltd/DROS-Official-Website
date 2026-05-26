@@ -105,17 +105,21 @@ export default function FAQ() {
                     
                     <div 
                       style={{
-                        maxHeight: isOpen ? '500px' : '0',
+                        maxHeight: isOpen ? '2000px' : '0',
                         opacity: isOpen ? 1 : 0,
-                        transition: 'all 0.3s ease-in-out',
+                        overflow: 'hidden',
+                        transition: 'max-height 0.4s ease-in-out, opacity 0.3s ease-in-out',
                         padding: isOpen ? '0 1.5rem 1.5rem 1.5rem' : '0 1.5rem',
                         color: 'var(--text-secondary)',
-                        lineHeight: '1.7',
+                        lineHeight: '1.8',
                         fontSize: '0.95rem'
                       }}
-                    >
-                      {formatText(item.a)}
-                    </div>
+                      dangerouslySetInnerHTML={{ __html: item.a
+                        .replace(/\*\*「(.+?)」\*\*/g, '<strong style="color:var(--text-primary)">「$1」</strong>')
+                        .replace(/\*\*(.+?)\*\*/g, '<strong style="color:var(--text-primary)">$1</strong>')
+                        .replace(/\n/g, '<br/>')
+                      }}
+                    />
                   </div>
                 );
               })}
