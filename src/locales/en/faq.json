@@ -64,11 +64,11 @@
       "questions": [
         {
           "q": "Does DROS have an open-source version?",
-          "a": "**The core engine is open source. Commercial tooling is not.**\n\n**DROS Core (GuardVM Microkernel)**: Licensed under AGPL-3.0 and publicly available on GitHub. Anyone can freely use it, inspect the core source code, and run tests.\n\nThe following are **commercial-only** features not included in the open-source version:\n- **VajraClaw** (AI-assisted rule generation toolkit)\n- **Six Meridian Sword** (advanced audit & T-Number tracing analytics engine)\n- **DROS Fleet Manager** (enterprise central management dashboard)"
+          "a": "**The core engine is open source. Commercial tooling is not.**\n\n**DROS Core (GuardVM Microkernel)**: Licensed under AGPL-3.0 and publicly available on GitHub. Anyone can freely use it, inspect the core source code, and run tests.\n\nThe following are **commercial-only** features not included in the open-source version:\n- **VajraClaw** (AI-assisted rule generation toolkit)\n- **Native Runtime SDKs** (high-performance native implementations in Rust, C++, Java, and more)\n- **DROS Fleet Manager** (enterprise central management dashboard)"
         },
         {
           "q": "What is the difference between the Commercial License and the Open Source version?",
-          "a": "**Open Source (AGPL-3.0)**\n- Free to use the DROS Core engine\n- Any derivative modifications must be open-sourced\n- Suitable for personal research, academic exploration, and non-commercial use\n\n**Commercial License**\n- Removes AGPL open-source obligations\n- **VajraClaw**: AI-assisted translation of natural language into physical Vajra rules\n- **Six Meridian Sword**: Advanced audit engine for per-T-Number tracing, anomaly alerting, and compliance report generation\n- **DROS Fleet Manager**: Enterprise central management dashboard\n- Dedicated technical support and SLA guarantees\n- Official commercial deployment rights"
+          "a": "**Open Source (AGPL-3.0)**\n- Free to use the DROS Core engine\n- Any derivative modifications must be open-sourced\n- Suitable for personal research, academic exploration, and non-commercial use\n\n**Commercial License**\n- Removes AGPL open-source obligations\n- **VajraClaw**: AI-assisted translation of natural language into physical Vajra rules\n- **Native Runtime SDKs**: High-performance native implementations in Rust, C++, Java, and more — built for enterprise production environments demanding maximum throughput and minimum latency\n- **DROS Fleet Manager**: Enterprise central management dashboard\n- Dedicated technical support and SLA guarantees\n- Official commercial deployment rights"
         },
         {
           "q": "What is the pricing model?",
