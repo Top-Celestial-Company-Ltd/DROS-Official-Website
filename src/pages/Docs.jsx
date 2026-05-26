@@ -42,6 +42,7 @@ export default function Docs() {
         
         <button className={`doc-nav-btn ${activeSection === 'getting-started' ? 'active' : ''}`} onClick={() => scrollTo('getting-started')}>{t('sidebar.getting_started')}</button>
         <button className={`doc-nav-btn ${activeSection === 'architecture' ? 'active' : ''}`} onClick={() => scrollTo('architecture')}>{t('sidebar.architecture')}</button>
+        <button className={`doc-nav-btn ${activeSection === 'security' ? 'active' : ''}`} onClick={() => scrollTo('security')}>{t('sidebar.security')}</button>
         <button className={`doc-nav-btn ${activeSection === 'writing-rules' ? 'active' : ''}`} onClick={() => scrollTo('writing-rules')}>{t('sidebar.writing_rules')}</button>
         <button className={`doc-nav-btn ${activeSection === 'deployment' ? 'active' : ''}`} onClick={() => scrollTo('deployment')}>{t('sidebar.deployment')}</button>
         <button className={`doc-nav-btn ${activeSection === 'comparison' ? 'active' : ''}`} onClick={() => scrollTo('comparison')}>{t('sidebar.comparison')}</button>
@@ -115,7 +116,35 @@ export default function Docs() {
           </div>
         </section>
 
-        {/* Section 3 */}
+        {/* Section 3: Security & Prompt Injection */}
+        <section id="security" className="doc-section">
+          <h2>{t('sections.security.title')}</h2>
+          <p dangerouslySetInnerHTML={{ __html: t('sections.security.desc') }}></p>
+          
+          <div className="grid-2" style={{ marginTop: '2rem', gap: '2rem' }}>
+            <div className="glass-card" style={{ padding: '2rem', background: 'rgba(255, 77, 79, 0.05)', border: '1px solid rgba(255, 77, 79, 0.2)' }}>
+              <h3 style={{ color: '#ff4d4f', marginBottom: '1rem' }}>{t('sections.security.traditional.title')}</h3>
+              <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }} dangerouslySetInnerHTML={{ __html: t('sections.security.traditional.desc') }}></p>
+            </div>
+            
+            <div className="glass-card" style={{ padding: '2rem', background: 'rgba(39, 201, 63, 0.05)', border: '1px solid rgba(39, 201, 63, 0.2)' }}>
+              <h3 style={{ color: '#27c93f', marginBottom: '1rem' }}>{t('sections.security.dros.title')}</h3>
+              <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '1.5rem' }} dangerouslySetInnerHTML={{ __html: t('sections.security.dros.desc') }}></p>
+              <ul className="doc-list check-list" style={{ marginTop: '1rem' }}>
+                {t('sections.security.dros.points', { returnObjects: true }).map((point, i) => (
+                  <li key={i} dangerouslySetInnerHTML={{ __html: point }}></li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          
+          <div style={{ marginTop: '3rem', padding: '2rem', background: 'rgba(212, 175, 55, 0.05)', borderLeft: '4px solid var(--accent-gold)', borderRadius: '0 12px 12px 0' }}>
+            <h3 style={{ color: 'var(--accent-gold)', marginBottom: '1rem' }}>{t('sections.security.summary.title')}</h3>
+            <p style={{ color: 'var(--text-primary)', lineHeight: '1.7', fontSize: '1.05rem', margin: 0 }} dangerouslySetInnerHTML={{ __html: t('sections.security.summary.desc') }}></p>
+          </div>
+        </section>
+
+        {/* Section 4 */}
         <section id="writing-rules" className="doc-section">
           <h2>{t('sections.writing_rules.title')}</h2>
           
