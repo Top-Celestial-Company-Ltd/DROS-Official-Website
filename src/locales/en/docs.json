@@ -1,0 +1,118 @@
+{
+  "meta_title": "DROS Documentation - Zero-Hallucination Architecture",
+  "meta_desc": "DROS (Dharma Reasoning Operating System) Official Documentation. Learn how to build 100% hallucination-free AI Agents via microkernels, Vajra Contracts, and the T-Number system.",
+  "sidebar": {
+    "title": "DROS Documentation",
+    "getting_started": "1. Getting Started",
+    "architecture": "2. Core Architecture",
+    "writing_rules": "3. Rule Drafting Guide",
+    "deployment": "4. Deployment",
+    "comparison": "5. Comparison",
+    "license": "6. Licensing",
+    "btn": "Get Commercial License"
+  },
+  "header": {
+    "title": "Dharma Reasoning Operating System",
+    "version": "v1.0.0 (First Commercial Release)",
+    "last_updated": "Last updated: 2026-05"
+  },
+  "warning": {
+    "title": "Proprietary Code Protection & Commercial Licensing Required",
+    "desc": "The VajraClaw SDK, plugins, and the <code>vajra_claw.dll/.so</code> C-FFI binaries are strictly protected by international copyright laws. These integration tools are <strong>not open-source</strong>. To legally mount, compile, or execute the VajraClaw adapters within your production or staging environments, your organization must possess an active, valid Commercial License or an approved Dharma Exemption."
+  },
+  "sections": {
+    "getting_started": {
+      "title": "1. Getting Started",
+      "what_is_dros": "What is DROS?",
+      "dros_desc": "DROS is a <strong>minimalist microkernel semantic runtime</strong> designed for Enterprise AI Agents. Its core purpose is to eradicate generative AI's two greatest flaws—<strong>Hallucinations</strong> and <strong>Prompt Injections</strong>—via a <strong>Physical-layer Vajra Discipline</strong>.",
+      "core_philosophy": "Core Philosophy",
+      "philosophy_quote": "“Constrain probabilistic generation with deterministic structures”—Minimal core, explicit rules, effortless maintenance.",
+      "quick_start": "3-Minute Quick Start",
+      "steps": [
+        "Download the core binaries (Windows / macOS / Linux)",
+        "Prepare your <code>AGENT.MD</code> + <code>Vajra.md</code> rule files",
+        "Integrate into your AI Agent via our lightweight Adapters"
+      ]
+    },
+    "architecture": {
+      "title": "2. Core Architecture",
+      "desc": "DROS adopts a <strong>Microkernel</strong> design philosophy. All complex logic is decoupled into external rule files.",
+      "key_components": "Key Components",
+      "components": [
+        "<strong>GuardVM</strong>: The runtime interception engine responsible for contract validation and instant circuit-breaking.",
+        "<strong>Vajra Contract</strong>: The authoritative rule definition system, written in YAML + Markdown.",
+        "<strong>Ephemeral Vajra Discipline</strong>: Dynamic synthesis of <code>AGENT.MD + Vajra.md + user input</code> for each task, expiring immediately after.",
+        "<strong>T-Number Coordinate System</strong>: Physical file-based exact traceability mechanism, ensuring every inference step is auditable.",
+        "<strong>Pure Physical File Topology</strong>: Complete abandonment of Vector DBs, eliminating semantic drift and labeling pollution."
+      ]
+    },
+    "writing_rules": {
+      "title": "3. Rule Drafting Guide (Critical)",
+      "core_files": "The Three Core Files",
+      "files": {
+        "agent": {
+          "name": "AGENT.MD",
+          "desc": "Defines the Agent's role, capability boundaries, permitted operations, and prohibited behaviors."
+        },
+        "vajra": {
+          "name": "Vajra.md",
+          "desc": "Defines global disciplines, priorities, compliance requirements, security perimeters, and fusion conditions."
+        },
+        "domain": {
+          "name": "Domain Rule Files",
+          "desc": "Enterprise internal FAQs, policies, workflows, and risk controls (can be multiple Markdown files)."
+        }
+      },
+      "best_practices": "Best Practices",
+      "practices": [
+        "Use clear headings and YAML blocks to define rules.",
+        "<strong>Explicit Priorities</strong>: <code>Vajra.md</code> > <code>AGENT.MD</code> > User Input.",
+        "The more precise and structured the rules, the stronger the Vajra protection.",
+        "Maintainable by internal domain experts; no senior AI engineers required."
+      ],
+      "sandbox": {
+        "title": "✨ Try It: Let AI Generate Your VajraClaw Rules",
+        "desc": "Enter your Agent scenario below, and our AI (Powered by Claude 3.5 / GPT-4o) will guide you step-by-step to create your bespoke <code>AGENT.MD</code> and <code>Vajra.md</code>.",
+        "buttons": ["🏦 Financial Support", "⚖️ Legal Compliance", "🏥 Medical Privacy"],
+        "alert": "This is a UI preview. Actual integration requires hooking up an LLM API.",
+        "placeholder": "Example: I want to build a financial support AI that strictly follows regulations and never gives investment advice...",
+        "submit": "Generate Rules",
+        "footer": "Powered by Claude 3.5 Sonnet"
+      }
+    },
+    "deployment": {
+      "title": "4. Deployment Guide",
+      "methods_title": "Recommended Deployment Methods",
+      "methods": [
+        "<strong>Local Deployment</strong>: Direct binary invocation (.dll / .dylib / .so)",
+        "<strong>Docker Deployment</strong>: Official Dockerfiles provided",
+        "<strong>Cloud Private Deployment</strong>: Kubernetes supported"
+      ],
+      "code_title": "Python Invocation Example"
+    },
+    "comparison": {
+      "title": "5. Comparison with Traditional Solutions",
+      "headers": ["Feature", "Traditional RAG + LLM Agent", "DROS Vajra Architecture", "Advantage"],
+      "rows": [
+        ["Hallucination Defense", "Probabilistic (Post-generation Guardrails)", "Physical-layer Deterministic Fusion", "Overwhelming"],
+        ["Prompt Injection", "Prompt Engineering", "Runtime Contract Forced Validation", "Significant"],
+        ["Token Consumption", "High (Continuous LLM calls)", "Extremely Low (Local Microkernel)", "Massive"],
+        ["Maintenance Complexity", "High (Models, Vectors, Prompts)", "Extremely Low (Markdown only)", "Revolutionary"],
+        ["Auditability", "Weak", "Complete T-Number Traceability", "Enterprise-Grade"],
+        ["OpEx Cost", "High", "Extremely Low", "Significant"]
+      ]
+    },
+    "license": {
+      "title": "6. Licensing",
+      "agpl": {
+        "title": "AGPL-3.0 Open Source",
+        "desc": "Suitable for personal research, academic exploration, and non-commercial use. Requires all derivative works to be open-sourced."
+      },
+      "commercial": {
+        "title": "Commercial License",
+        "desc": "Official Enterprise License (No AGPL obligations). Includes dedicated technical support, advanced API quotas, and unlimited deployment capabilities.",
+        "btn": "View Pricing &rarr;"
+      }
+    }
+  }
+}

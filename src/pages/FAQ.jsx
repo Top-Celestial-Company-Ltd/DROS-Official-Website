@@ -1,108 +1,146 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
+
+// Helper to format bold text and newlines
+const formatText = (text) => {
+  return text.split('\n').map((line, i) => {
+    // Handle bold **text**
+    const parts = line.split(/(\*\*.*?\*\*)/g);
+    return (
+      <span key={i} style={{ display: 'block', marginBottom: '0.5rem' }}>
+        {parts.map((part, j) => {
+          if (part.startsWith('**') && part.endsWith('**')) {
+            return <strong key={j} style={{ color: 'var(--text-primary)' }}>{part.slice(2, -2)}</strong>;
+          }
+          return part;
+        })}
+      </span>
+    );
+  });
+};
 
 export default function FAQ() {
+  const [openIndex, setOpenIndex] = useState(`0-0`); // Open the first question by default
+  const { t } = useTranslation('faq');
+
+  const toggleFAQ = (id) => {
+    setOpenIndex(openIndex === id ? null : id);
+  };
+
+  const categories = t('categories', { returnObjects: true });
+
   return (
-    <main className="container" style={{paddingTop: '2rem', paddingBottom: '4rem'}}>
-      {/* FAQ Section */}
-      <section id="faq" style={{maxWidth: '1000px', margin: '2rem auto 0', padding: '0 20px'}}>
-        <div style={{textAlign: 'center', marginBottom: '4rem'}}>
-          <span style={{background: 'rgba(230, 185, 128, 0.1)', color: 'var(--accent-gold)', padding: '0.4rem 1rem', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 'bold', border: '1px solid rgba(230, 185, 128, 0.2)'}}>Enterprise Security</span>
-          <h1 className="section-title" style={{marginTop: '1.5rem'}}>Chief Technology Officer <span className="gold-text">FAQ</span></h1>
-          <p className="subtitle" style={{margin: '0 auto', maxWidth: '800px'}}>
-            Uncompromising answers to the most critical architecture, security, and licensing questions.
-          </p>
-        </div>
+    <main className="container" style={{paddingTop: '4rem', paddingBottom: '6rem'}}>
+      <Helmet>
+        <title>{t('meta_title')}</title>
+        <meta name="description" content={t('meta_desc')} />
+      </Helmet>
 
-        <div style={{display: 'flex', flexDirection: 'column', gap: '1.5rem'}}>
-          {/* FAQ 1 */}
-          <div className="glass-card" style={{textAlign: 'left', padding: '2rem'}}>
-            <h3 style={{fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--text-primary)', display: 'flex', gap: '1rem', alignItems: 'flex-start'}}>
-              <span style={{color: 'var(--accent-gold)', fontFamily: 'monospace', fontWeight: 'bold'}}>Q.</span> 
-              Why buy VajraClaw when the DROS Digital Dharma Hall is open-source (Python)?
-            </h3>
-            <div style={{color: 'var(--text-secondary)', lineHeight: '1.7', paddingLeft: '2.5rem'}}>
-              <p style={{marginBottom: '1rem'}}>The open-source DROS Python version is a "glass cannon"—perfect for personal use or non-profit Buddhist propagation, but vulnerable in an enterprise environment. It runs on the Python interpreter, which is easily inspected, modified, and struggles under high-concurrency (TPS) loads.</p>
-              <p><strong>VajraClaw is the Enterprise Armor.</strong> It is compiled into a highly optimized, tamper-proof C/Go microkernel (<code>vajra_claw.dll</code> / <code>.so</code>). It operates at the C-FFI memory layer, executing physical interception 100x faster than Python, making it the only choice for banks, tech giants, and organizations handling millions of tokens per second.</p>
-            </div>
-          </div>
-
-          {/* FAQ 2 */}
-          <div className="glass-card" style={{textAlign: 'left', padding: '2rem'}}>
-            <h3 style={{fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--text-primary)', display: 'flex', gap: '1rem', alignItems: 'flex-start'}}>
-              <span style={{color: 'var(--accent-gold)', fontFamily: 'monospace', fontWeight: 'bold'}}>Q.</span> 
-              Can this be installed as an antivirus on top of Claude Code, GitHub Copilot, or ChatGPT?
-            </h3>
-            <div style={{color: 'var(--text-secondary)', lineHeight: '1.7', paddingLeft: '2.5rem'}}>
-              <p style={{marginBottom: '1rem'}}><strong>No.</strong> VajraClaw is an SDK/Middleware for developers building <em>their own</em> AI systems, not a consumer antivirus.</p>
-              <p>Closed-source products like Claude Code run on proprietary infrastructure. VajraClaw must be integrated directly into your agent's orchestration loop (e.g., LangChain, AutoGPT, OpenClaw, or custom Node.js frameworks) via our C-FFI adapters. It intercepts the LLM string stream <em>before</em> your system executes any actions.</p>
-            </div>
-          </div>
-
-          {/* FAQ 3 */}
-          <div className="glass-card" style={{textAlign: 'left', padding: '2rem'}}>
-            <h3 style={{fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--text-primary)', display: 'flex', gap: '1rem', alignItems: 'flex-start'}}>
-              <span style={{color: 'var(--accent-gold)', fontFamily: 'monospace', fontWeight: 'bold'}}>Q.</span> 
-              How exactly does it solve AI Hallucinations?
-            </h3>
-            <div style={{color: 'var(--text-secondary)', lineHeight: '1.7', paddingLeft: '2.5rem'}}>
-              <p style={{marginBottom: '1rem'}}>LLMs are probabilistic; they will eventually hallucinate. Traditional prompt engineering tries to "talk the LLM out of it"—a statistically doomed approach.</p>
-              <p>VajraClaw accepts that hallucinations happen, but <strong>physically cuts off their consequences</strong>. By forcing the LLM's output through a deterministic Static Matrix (the "Vajra Bound"), any hallucinated command (e.g., <code>DROP TABLE</code>) that violates your predefined physical boundaries will instantly blow the C-FFI fuse. The hallucination is contained in memory and never reaches the real world.</p>
-            </div>
-          </div>
-
-          {/* FAQ 4 */}
-          <div className="glass-card" style={{textAlign: 'left', padding: '2rem'}}>
-            <h3 style={{fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--text-primary)', display: 'flex', gap: '1rem', alignItems: 'flex-start'}}>
-              <span style={{color: 'var(--accent-gold)', fontFamily: 'monospace', fontWeight: 'bold'}}>Q.</span> 
-              How does VajraClaw prevent Prompt Injections (Data Poisoning)?
-            </h3>
-            <div style={{color: 'var(--text-secondary)', lineHeight: '1.7', paddingLeft: '2.5rem'}}>
-              <p style={{marginBottom: '1rem'}}>Prompt injections often occur when an LLM reads external data (like an infected web page or RAG document) containing malicious hidden instructions, hijacking the LLM to execute unauthorized API calls or leak data.</p>
-              <p>VajraClaw operates as an ingress/egress physical filter. Even if the LLM's "brain" is hijacked by a prompt injection, the LLM's "hands" are bound by the Vajra Claw. When the hijacked LLM attempts an unauthorized Egress action, the C-FFI physical circuit breaker triggers, stopping the injection dead in its tracks. It's a 100% deterministic block.</p>
-            </div>
-          </div>
-
-          {/* FAQ 5 */}
-          <div className="glass-card" style={{textAlign: 'left', padding: '2rem'}}>
-            <h3 style={{fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--text-primary)', display: 'flex', gap: '1rem', alignItems: 'flex-start'}}>
-              <span style={{color: 'var(--accent-gold)', fontFamily: 'monospace', fontWeight: 'bold'}}>Q.</span> 
-              What is the Return on Investment (ROI) regarding LLM Token costs?
-            </h3>
-            <div style={{color: 'var(--text-secondary)', lineHeight: '1.7', paddingLeft: '2.5rem'}}>
-              <p style={{marginBottom: '1rem'}}>Traditional AI security solutions rely on "LLM-as-a-judge" mechanisms. This means every time your Agent generates a response, you must send that response back to an LLM to evaluate if it's safe. This effectively <strong>doubles your LLM API token costs</strong> and cuts your profit margins in half.</p>
-              <p>Because VajraClaw executes locally within your C-FFI memory layer, it evaluates security boundaries for <strong>$0.00 in token costs</strong>. For enterprise applications processing millions of tokens per day, the API token savings alone will pay for your Enterprise VajraClaw license within the first week.</p>
-            </div>
-          </div>
-
-          {/* FAQ 6 */}
-          <div className="glass-card" style={{textAlign: 'left', padding: '2rem'}}>
-            <h3 style={{fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--text-primary)', display: 'flex', gap: '1rem', alignItems: 'flex-start'}}>
-              <span style={{color: 'var(--accent-gold)', fontFamily: 'monospace', fontWeight: 'bold'}}>Q.</span> 
-              What is the "Dharma Exemption" for Buddhist and Non-Profit Organizations?
-            </h3>
-            <div style={{color: 'var(--text-secondary)', lineHeight: '1.7', paddingLeft: '2.5rem'}}>
-              <p style={{marginBottom: '1rem'}}>As part of our core philosophy, purely non-profit Buddhist propagation usage is 100% free.</p>
-              <p>While the Python version is freely available to everyone, Buddhist institutions requiring the high-performance Go/C++ enterprise versions (for large-scale Dharma processing) can contact us directly at <a href="mailto:service@dr-os.io" style={{color: 'var(--accent-blue)', textDecoration: 'none'}}>service@dr-os.io</a>. After verifying your non-profit status, we will issue a specialized enterprise license completely free of charge.</p>
-            </div>
-          </div>
-
-          {/* FAQ 7 */}
-          <div className="glass-card" style={{textAlign: 'left', padding: '2rem'}}>
-            <h3 style={{fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--text-primary)', display: 'flex', gap: '1rem', alignItems: 'flex-start'}}>
-              <span style={{color: 'var(--accent-gold)', fontFamily: 'monospace', fontWeight: 'bold'}}>Q.</span> 
-              My enterprise requires strict Air-Gapping. Does VajraClaw phone home?
-            </h3>
-            <div style={{color: 'var(--text-secondary)', lineHeight: '1.7', paddingLeft: '2.5rem'}}>
-              <p>The <strong>Enterprise Air-Gapped Tier</strong> is 100% Air-Gapped. It uses an RSA-Signed offline <code>.lic</code> timebomb validation mechanism. There is absolutely zero outbound telemetry, no heartbeat servers, and no API tax. Your data never leaves your internal Kubernetes clusters.</p>
-            </div>
-          </div>
-        </div>
+      {/* Header Section */}
+      <section style={{textAlign: 'center', marginBottom: '5rem'}}>
+        <span style={{background: 'rgba(212, 175, 55, 0.1)', color: 'var(--accent-gold)', padding: '0.4rem 1.2rem', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 'bold', border: '1px solid rgba(212, 175, 55, 0.3)', textTransform: 'uppercase', letterSpacing: '1px'}}>
+          {t('badge')}
+        </span>
+        <h1 style={{fontSize: 'clamp(2.5rem, 5vw, 4rem)', marginTop: '1.5rem', marginBottom: '1rem', background: 'linear-gradient(to right, #fff, var(--text-secondary))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}} dangerouslySetInnerHTML={{ __html: t('title') }}>
+        </h1>
+        <p style={{fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto'}}>
+          {t('subtitle')}
+        </p>
       </section>
 
-      {/* CTA */}
-      <div style={{textAlign: 'center', marginTop: '4rem'}}>
-        <Link to="/pricing" className="btn btn-primary" style={{fontSize: '1.2rem', padding: '1rem 3rem'}}>View Pricing Options</Link>
-      </div>
+      {/* FAQ Accordion Section */}
+      <section style={{maxWidth: '800px', margin: '0 auto'}}>
+        {categories.map((category, catIndex) => (
+          <div key={catIndex} style={{marginBottom: '3rem'}}>
+            <h2 style={{fontSize: '1.5rem', color: 'var(--accent-blue)', borderBottom: '1px solid rgba(0, 240, 255, 0.2)', paddingBottom: '0.5rem', marginBottom: '1.5rem'}}>
+              {category.name}
+            </h2>
+            
+            <div style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
+              {category.questions.map((item, qIndex) => {
+                const id = `${catIndex}-${qIndex}`;
+                const isOpen = openIndex === id;
+                return (
+                  <div 
+                    key={qIndex} 
+                    className="faq-item"
+                    style={{
+                      background: isOpen ? 'rgba(255,255,255,0.03)' : 'rgba(20,20,20,0.4)',
+                      border: `1px solid ${isOpen ? 'rgba(212, 175, 55, 0.3)' : 'rgba(255,255,255,0.05)'}`,
+                      borderRadius: '12px',
+                      overflow: 'hidden',
+                      transition: 'all 0.3s ease'
+                    }}
+                  >
+                    <button 
+                      onClick={() => toggleFAQ(id)}
+                      style={{
+                        width: '100%',
+                        textAlign: 'left',
+                        background: 'transparent',
+                        border: 'none',
+                        padding: '1.5rem',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        color: isOpen ? 'var(--accent-gold)' : 'var(--text-primary)',
+                        fontSize: '1.1rem',
+                        fontWeight: isOpen ? '600' : '400',
+                        cursor: 'pointer',
+                        fontFamily: 'inherit'
+                      }}
+                    >
+                      <span style={{paddingRight: '2rem'}}>{item.q}</span>
+                      <span style={{
+                        fontSize: '1.5rem', 
+                        lineHeight: '1', 
+                        transform: isOpen ? 'rotate(45deg)' : 'none', 
+                        transition: 'transform 0.3s ease',
+                        color: isOpen ? 'var(--accent-gold)' : 'var(--text-secondary)'
+                      }}>
+                        +
+                      </span>
+                    </button>
+                    
+                    <div 
+                      style={{
+                        maxHeight: isOpen ? '500px' : '0',
+                        opacity: isOpen ? 1 : 0,
+                        transition: 'all 0.3s ease-in-out',
+                        padding: isOpen ? '0 1.5rem 1.5rem 1.5rem' : '0 1.5rem',
+                        color: 'var(--text-secondary)',
+                        lineHeight: '1.7',
+                        fontSize: '0.95rem'
+                      }}
+                    >
+                      {formatText(item.a)}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        ))}
+
+        {/* Contact Banner */}
+        <div style={{
+          marginTop: '5rem',
+          padding: '3rem',
+          background: 'linear-gradient(135deg, rgba(20,20,20,0.8), rgba(30,30,35,0.9))',
+          border: '1px solid rgba(255,255,255,0.1)',
+          borderRadius: '16px',
+          textAlign: 'center'
+        }}>
+          <h3 style={{fontSize: '1.8rem', marginBottom: '1rem', color: '#fff'}}>{t('contact_title')}</h3>
+          <p style={{color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '1.1rem'}}>
+            {t('contact_desc')}
+          </p>
+          <a href="mailto:service@dr-os.io" className="btn btn-primary" style={{fontSize: '1.1rem'}}>
+            {t('contact_btn')}
+          </a>
+        </div>
+      </section>
     </main>
   );
 }

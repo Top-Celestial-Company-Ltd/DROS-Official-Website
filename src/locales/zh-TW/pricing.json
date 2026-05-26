@@ -1,0 +1,60 @@
+{
+  "meta_title": "DROS Pricing - 商業授權與定價方案",
+  "meta_desc": "VajraClaw 商業授權方案。從個人開發者到 Fortune 500 企業的 Air-Gapped 完全隔離方案，為您的 AI 基礎設施提供金剛級防護。",
+  "badge": "Commercial License",
+  "title": "Vajra Claw <span class='gold-text'>商業授權</span>",
+  "subtitle": "從根本解決幻覺與注入攻擊。為您的企業 AI 基礎設施採購物理層級的終極防護。",
+  "early_adopter": "<strong style='color: var(--accent-gold)'>Early Adopter Pricing:</strong> 我們目前處於 V1 釋出階段。企業授權將於 2026 Q4 調漲至 <strong>$15,000/yr</strong>。強烈建議在下一波調漲前鎖定您的授權！",
+  "tiers": {
+    "hacker": {
+      "name": "Hacker",
+      "price_yearly": "$149",
+      "price_monthly": "(or $19/month)",
+      "desc": "適合個人開發者與小型 Side Project 的終極 O(1) 斷路器。",
+      "features": [
+        "綁定 1 組 Machine UUID",
+        "最高 5 個 Concurrent Agents",
+        "需連線驗證 (Online Heartbeat)",
+        "社群論壇支援"
+      ],
+      "btn_yearly": "Buy Yearly ($149)",
+      "btn_monthly": "Buy Monthly ($19)"
+    },
+    "startup": {
+      "badge": "MOST POPULAR",
+      "name": "Startup",
+      "price_yearly": "$499",
+      "desc": "完美契合中小企業 AI 團隊與內部生產環境部署。",
+      "features": [
+        "最高 3 組 Machine UUIDs",
+        "每機台 10 個 Concurrent Agents",
+        "需連線驗證 (Online Heartbeat)",
+        "24 小時 Email 技術支援"
+      ],
+      "btn": "Secure Startup License"
+    },
+    "enterprise": {
+      "name": "Enterprise <br/><span style='font-size: 1.2rem; color: #ff4d4f'>Air-Gapped</span>",
+      "price_yearly": "$4,990",
+      "desc": "絕對主權。零遙測資料。專為對資安要求極高的 Fortune 500 企業設計。",
+      "features": [
+        "100% 物理隔離 (無須 Heartbeat)",
+        "最高 15 組 Machine UUIDs",
+        "每機台 30 個 Concurrent Agents",
+        "專屬 Slack 頻道與客製化規則支援"
+      ],
+      "btn": "Contact Sales"
+    }
+  },
+  "disclaimer": {
+    "title": "⚠️ EULA & Deployment Warning:",
+    "p1": "1. <strong>Fail-Closed Trigger:</strong> 超出授權的 Concurrent Agent 數量將觸發 C-FFI 硬體級別異常，阻斷初始化。若開發者因忽略此異常而強行繞過 VajraClaw，系統將完全暴露於 Prompt Injections 攻擊之下。我們對因規避授權而導致的資料外洩不承擔任何責任。",
+    "p2": "2. <strong>Heartbeat Protocol:</strong> Hacker 與 Startup 方案需定期連線至 <code>api.dr-os.io</code> 進行驗證。若離線時間超過 24 小時，將導致 LLM 串流完全鎖定。若您的環境為 100% 離線，<strong>必須</strong>採購 Air-Gapped Enterprise 方案。",
+    "p3": "3. <strong>No Refunds on Burned Keys:</strong> 任何試圖反編譯或竄改 <code>vajra_claw.dll/.so</code> 二進位檔案以規避 UUID 限制的行為，將永久銷毀您的 License Key 且不予退費。"
+  },
+  "cta": {
+    "title": "Save <span class='gold-text'>EVERYTHING.</span>",
+    "subtitle": "BUY the Vajra Claw.",
+    "btn": "Secure Your Infrastructure Now"
+  }
+}

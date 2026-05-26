@@ -1,0 +1,97 @@
+{
+  "meta_title": "DROS FAQ - Enterprise Knowledge Base",
+  "meta_desc": "Comprehensive answers regarding DROS architecture, performance, deployment, and licensing. Learn how to integrate DROS into your enterprise.",
+  "badge": "Knowledge Base",
+  "title": "Frequently Asked Questions <span class='gold-text'>FAQ</span>",
+  "subtitle": "From technical architecture to enterprise deployment, we provide direct and professional answers.",
+  "contact_title": "More Questions?",
+  "contact_desc": "Feel free to reach out via the contact form or email. We typically respond within 24 hours.",
+  "contact_btn": "Contact Us",
+  "categories": [
+    {
+      "name": "Fundamentals",
+      "questions": [
+        {
+          "q": "What is DROS?",
+          "a": "DROS (Dharma Reasoning Operating System) is a **minimalist microkernel semantic runtime**, designed specifically for Enterprise AI Agents. Its core utilizes 'Physical-layer Vajra Discipline' to fundamentally solve hallucination and Prompt Injection in generative AI."
+        },
+        {
+          "q": "How does DROS fundamentally differ from traditional RAG / LLM Agents?",
+          "a": "Traditional solutions rely on vector databases and probabilistic models. DROS utilizes **pure physical file topology + microkernel + runtime strict discipline**. It does not 'optimize probability', but rather 'constrains probability with deterministic structures', solving the issue at the architectural level."
+        }
+      ]
+    },
+    {
+      "name": "Technology & Performance",
+      "questions": [
+        {
+          "q": "How does DROS prevent hallucinations?",
+          "a": "Through **GuardVM**, every inference step is strictly anchored to a defined authoritative rule (T-Number) at runtime. If the output violates the discipline, it is physically fused (blocked) immediately, stopping hallucinations at the source."
+        },
+        {
+          "q": "How does DROS defend against Prompt Injection?",
+          "a": "It utilizes an 'Ephemeral Vajra Discipline' mechanism (dynamic composition of AGENT.MD + Vajra.md + user directives). The Vajra Contract possesses the highest priority. Any input attempting to bypass the rules is blocked instantaneously."
+        },
+        {
+          "q": "Does DROS consume a massive amount of tokens?",
+          "a": "No. The core engine runs entirely locally, consuming almost zero tokens, which drastically lowers long-term operational costs."
+        },
+        {
+          "q": "Is the system difficult to maintain?",
+          "a": "Extremely low difficulty. Maintenance primarily involves updating Markdown rule files. Enterprise domain experts can handle this easily without needing continuous prompt tweaking, vector indexing, or fine-tuning."
+        }
+      ]
+    },
+    {
+      "name": "Deployment & Usage",
+      "questions": [
+        {
+          "q": "How do enterprises deploy DROS?",
+          "a": "1. Deploy the core binaries.\n2. Have internal teams draft `AGENT.MD` and `Vajra.md`.\n3. Integrate into your existing AI Agents via lightweight adapters.\nThe entire process can be completed in weeks."
+        },
+        {
+          "q": "Is drafting rules difficult?",
+          "a": "Moderate difficulty. Familiarity with Markdown and basic YAML is sufficient. We provide detailed guidelines and templates. Enterprises know their business best, so internal domain experts write the most effective rules."
+        },
+        {
+          "q": "What languages and platforms are supported?",
+          "a": "The core libraries can be called via Python, Rust, Go, C++, etc., and are fully compatible with Windows, macOS, Linux, and Docker environments."
+        }
+      ]
+    },
+    {
+      "name": "Business & Licensing",
+      "questions": [
+        {
+          "q": "Does DROS have an open-source version?",
+          "a": "Yes, the core engines are open-sourced under the AGPL-3.0 license on GitHub. Enterprises can freely test the open-source version."
+        },
+        {
+          "q": "What is the difference between the Commercial License and the Open Source version?",
+          "a": "The Commercial License provides:\n- Exemption from AGPL obligations\n- Dedicated technical support\n- Advanced enterprise features\n- Official commercial usage rights"
+        },
+        {
+          "q": "What is the pricing model?",
+          "a": "We use a flexible licensing model based on enterprise scale, deployment volume, and support tiers. Contact us for a customized quote."
+        }
+      ]
+    },
+    {
+      "name": "Use Cases & Advantages",
+      "questions": [
+        {
+          "q": "Which industries are best suited for DROS?",
+          "a": "Sectors demanding absolute compliance and zero-tolerance for hallucinations, such as finance, healthcare, legal, insurance, and enterprise internal knowledge management."
+        },
+        {
+          "q": "Can DROS really reduce AI maintenance headcount?",
+          "a": "Yes. Many enterprises have reported a 60% to 80% reduction in manpower dedicated to prompt engineering, vector maintenance, and model monitoring, allowing them to shift focus to high-value business tasks."
+        },
+        {
+          "q": "How can we start a trial?",
+          "a": "1. Go to GitHub to obtain the open-source version.\n2. Contact us to request a POC (Proof of Concept).\n3. We will help you rapidly configure your first Vajra Discipline."
+        }
+      ]
+    }
+  ]
+}

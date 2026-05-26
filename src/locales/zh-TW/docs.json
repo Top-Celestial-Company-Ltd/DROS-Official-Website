@@ -1,0 +1,118 @@
+{
+  "meta_title": "DROS Documentation - 企業級零幻覺架構",
+  "meta_desc": "DROS (Dharma Reasoning Operating System) 官方技術文件。了解如何透過微內核、金剛合約與 T-Number 系統，打造 100% 無幻覺的 AI Agent。",
+  "sidebar": {
+    "title": "DROS Documentation",
+    "getting_started": "1. 快速入門",
+    "architecture": "2. 核心架構",
+    "writing_rules": "3. 規則撰寫指南",
+    "deployment": "4. 部署指南",
+    "comparison": "5. 與傳統方案對比",
+    "license": "6. 授權模式",
+    "btn": "Get Commercial License"
+  },
+  "header": {
+    "title": "Dharma Reasoning Operating System",
+    "version": "v1.0.0 (商業化第一版)",
+    "last_updated": "Last updated: 2026-05"
+  },
+  "warning": {
+    "title": "Proprietary Code Protection & Commercial Licensing Required",
+    "desc": "The VajraClaw SDK, plugins, and the <code>vajra_claw.dll/.so</code> C-FFI binaries are strictly protected by international copyright laws. These integration tools are <strong>not open-source</strong>. To legally mount, compile, or execute the VajraClaw adapters within your production or staging environments, your organization must possess an active, valid Commercial License or an approved Dharma Exemption."
+  },
+  "sections": {
+    "getting_started": {
+      "title": "1. 快速入門 (Getting Started)",
+      "what_is_dros": "DROS 是什麼？",
+      "dros_desc": "DROS 是一個<strong>極簡微內核語意運行時系統</strong>，專為企業級 AI Agent 設計。其核心目的是透過<strong>物理層級的金剛戒律</strong>，從根本上解決生成式 AI 的兩大頑疾：<strong>幻覺（Hallucination）</strong> 與 <strong>Prompt Injection</strong>。",
+      "core_philosophy": "核心理念",
+      "philosophy_quote": "「用確定性結構約束概率性生成」——核心極小、規則明確、維護極簡。",
+      "quick_start": "3 分鐘上手流程",
+      "steps": [
+        "下載核心二進位庫（Windows / macOS / Linux）",
+        "準備 <code>AGENT.MD</code> + <code>Vajra.md</code> 規則檔案",
+        "透過輕量 Adapter 整合到您的 AI Agent 中"
+      ]
+    },
+    "architecture": {
+      "title": "2. 核心架構",
+      "desc": "DROS 採用<strong>微內核（Microkernel）</strong>設計哲學，所有複雜邏輯都被剝離到外部規則檔案中。",
+      "key_components": "關鍵元件",
+      "components": [
+        "<strong>GuardVM</strong>：運行時強制攔截引擎，負責合約驗證與即時熔斷。",
+        "<strong>Vajra Contract（金剛合約）</strong>：權威規則定義系統，使用 YAML + Markdown 撰寫。",
+        "<strong>一次性金剛戒律</strong>：每次任務由 <code>AGENT.MD + Vajra.md + 使用者指令</code> 動態合成，任務結束後自動失效。",
+        "<strong>T-Number 座標系統</strong>：基於實體檔案的精確溯源機制，確保每一推論步驟皆可稽核。",
+        "<strong>純物理檔案拓樸</strong>：徹底捨棄 Vector DB，消除語意漂移與 Labeling 污染。"
+      ]
+    },
+    "writing_rules": {
+      "title": "3. 規則撰寫指南（最重要）",
+      "core_files": "三大核心檔案",
+      "files": {
+        "agent": {
+          "name": "AGENT.MD",
+          "desc": "定義 Agent 的角色、能力邊界、允許操作與禁止行為。"
+        },
+        "vajra": {
+          "name": "Vajra.md",
+          "desc": "定義全局戒律、優先權、合規要求、安全邊界與熔斷條件。"
+        },
+        "domain": {
+          "name": "領域規則檔案",
+          "desc": "企業內部的 FAQ、政策、流程、風險控管等知識（可多個 Markdown 檔案）。"
+        }
+      },
+      "best_practices": "撰寫最佳實務",
+      "practices": [
+        "使用清晰的標題與 YAML 區塊定義規則。",
+        "<strong>優先權明確</strong>：<code>Vajra.md</code> > <code>AGENT.MD</code> > 使用者指令。",
+        "規則越精準、越結構化，金剛防護越強。",
+        "企業內部領域專家即可維護，無需高階 AI 工程師。"
+      ],
+      "sandbox": {
+        "title": "✨ 立即體驗：讓 AI 協助您建立 VajraClaw 規則",
+        "desc": "在下方輸入您的 Agent 情境或需求，AI (Claude 3.5 / GPT-4o 驅動) 會引導您一步步建立專屬的 <code>AGENT.MD</code> 與 <code>Vajra.md</code>。",
+        "buttons": ["🏦 金融客服防護", "⚖️ 法律合規 Agent", "🏥 醫療隱私邊界"],
+        "alert": "此為 UI 預覽展示，實際整合需串接 LLM API。",
+        "placeholder": "例如：我想建立一個金融客服 AI Agent，需要嚴格遵守法規、不準提供投資建議...",
+        "submit": "生成規則",
+        "footer": "此互動體驗由 Claude 3.5 Sonnet 技術支援"
+      }
+    },
+    "deployment": {
+      "title": "4. 部署指南",
+      "methods_title": "推薦部署方式",
+      "methods": [
+        "<strong>本地部署</strong>：直接呼叫二進位庫（.dll / .dylib / .so）",
+        "<strong>Docker 部署</strong>：提供官方 Dockerfile",
+        "<strong>雲端私有部署</strong>：支援 Kubernetes"
+      ],
+      "code_title": "Python 呼叫範例"
+    },
+    "comparison": {
+      "title": "5. 與傳統方案對比",
+      "headers": ["項目", "傳統 RAG + LLM Agent", "DROS 金剛戒律方案", "優勢"],
+      "rows": [
+        ["幻覺防護", "概率性（後驗 Guardrails）", "物理層級確定性熔斷", "壓倒性"],
+        ["Prompt Injection 防護", "Prompt Engineering", "運行時契約強制驗證", "顯著"],
+        ["Token 消耗", "高（持續呼叫 LLM）", "極低（本地微內核）", "巨大"],
+        ["維護複雜度", "高（模型、向量、Prompt）", "極低（僅維護 Markdown）", "革命性"],
+        ["可稽核性", "弱", "完整 T-Number 溯源", "企業級"],
+        ["部署維護成本", "高", "極低", "顯著"]
+      ]
+    },
+    "license": {
+      "title": "6. 授權模式",
+      "agpl": {
+        "title": "AGPL-3.0 開源版",
+        "desc": "適合個人研究、學術探索與非商業使用。要求所有基於此版修改的程式碼必須開源。"
+      },
+      "commercial": {
+        "title": "Commercial License",
+        "desc": "企業正式授權（無 AGPL 義務）。享有專屬技術支援、進階 API 額度與無限制部署能力。",
+        "btn": "View Pricing &rarr;"
+      }
+    }
+  }
+}

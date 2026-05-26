@@ -1,0 +1,60 @@
+{
+  "meta_title": "DROS Pricing - Commercial Licensing",
+  "meta_desc": "VajraClaw Commercial Licensing. From indie developers to Fortune 500 Air-Gapped deployments. Equip your AI infrastructure with Vajra-grade protection.",
+  "badge": "Commercial License",
+  "title": "Vajra Claw <span class='gold-text'>Licensing</span>",
+  "subtitle": "Fundamentally eradicate hallucinations and injections. Procure physical-layer ultimate protection for your Enterprise AI infrastructure.",
+  "early_adopter": "<strong style='color: var(--accent-gold)'>Early Adopter Pricing:</strong> We are currently in the V1 release phase. Enterprise licenses will increase to <strong>$15,000/yr</strong> in Q4 2026. We strongly recommend locking in your license before the next price hike!",
+  "tiers": {
+    "hacker": {
+      "name": "Hacker",
+      "price_yearly": "$149",
+      "price_monthly": "(or $19/month)",
+      "desc": "The ultimate O(1) circuit breaker for indie developers and small side projects.",
+      "features": [
+        "Bound to 1 Machine UUID",
+        "Up to 5 Concurrent Agents",
+        "Online Heartbeat Required",
+        "Community Forum Support"
+      ],
+      "btn_yearly": "Buy Yearly ($149)",
+      "btn_monthly": "Buy Monthly ($19)"
+    },
+    "startup": {
+      "badge": "MOST POPULAR",
+      "name": "Startup",
+      "price_yearly": "$499",
+      "desc": "Perfectly suited for SME AI teams and internal production deployments.",
+      "features": [
+        "Up to 3 Machine UUIDs",
+        "10 Concurrent Agents per Machine",
+        "Online Heartbeat Required",
+        "24/7 Email Technical Support"
+      ],
+      "btn": "Secure Startup License"
+    },
+    "enterprise": {
+      "name": "Enterprise <br/><span style='font-size: 1.2rem; color: #ff4d4f'>Air-Gapped</span>",
+      "price_yearly": "$4,990",
+      "desc": "Absolute sovereignty. Zero telemetry. Designed for Fortune 500 companies with extreme security requirements.",
+      "features": [
+        "100% Air-Gapped (No Heartbeat)",
+        "Up to 15 Machine UUIDs",
+        "30 Concurrent Agents per Machine",
+        "Dedicated Slack Channel & Rule Customization"
+      ],
+      "btn": "Contact Sales"
+    }
+  },
+  "disclaimer": {
+    "title": "⚠️ EULA & Deployment Warning:",
+    "p1": "1. <strong>Fail-Closed Trigger:</strong> Exceeding the licensed Concurrent Agent limit will trigger a C-FFI hardware-level exception, blocking initialization. If developers bypass VajraClaw by ignoring this exception, the system will be completely exposed to Prompt Injections. We assume no liability for data breaches caused by license circumvention.",
+    "p2": "2. <strong>Heartbeat Protocol:</strong> Hacker and Startup tiers require periodic connections to <code>api.dr-os.io</code> for validation. If offline for over 24 hours, the LLM stream will be completely locked. If your environment is 100% offline, you <strong>must</strong> procure the Air-Gapped Enterprise tier.",
+    "p3": "3. <strong>No Refunds on Burned Keys:</strong> Any attempt to decompile or tamper with the <code>vajra_claw.dll/.so</code> binaries to circumvent UUID restrictions will permanently destroy your License Key without a refund."
+  },
+  "cta": {
+    "title": "Save <span class='gold-text'>EVERYTHING.</span>",
+    "subtitle": "BUY the Vajra Claw.",
+    "btn": "Secure Your Infrastructure Now"
+  }
+}

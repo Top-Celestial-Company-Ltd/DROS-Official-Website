@@ -1,0 +1,126 @@
+{
+  "nav": {
+    "home": "首頁",
+    "docs": "技術文件",
+    "pricing": "定價",
+    "faq": "常見問題",
+    "get_started": "取得 VajraClaw"
+  },
+  "footer": {
+    "desc": "全球首個以微內核 + 實體檔案戒律打造的 AI 語意運行時系統。從根本解決企業 AI Agent 的幻覺與 Prompt Injection 問題。",
+    "resources": "資源",
+    "github": "GitHub 原始碼",
+    "docs": "技術文件",
+    "faq": "常見問題",
+    "company": "公司",
+    "pricing": "定價方案",
+    "contact": "聯絡我們",
+    "tax_id": "統編：43908974",
+    "company_name": "康宸園有限公司",
+    "rights": "© {{year}} DROS Project. 保留所有權利。",
+    "dharma_exemption": "Dharma Exemption：純粹的非營利佛教弘法用途可 100% 免費使用。"
+  },
+  "home": {
+    "meta_title": "DROS - Dharma Reasoning Operating System | 金剛級 AI 防護",
+    "meta_desc": "全球首個以微內核 + 實體檔案戒律打造的 AI 語意運行時系統。從根本解決企業 AI Agent 的幻覺、Prompt Injection 與高昂維護成本問題。",
+    "hero": {
+      "version": "Dharma Reasoning OS v1.0.0",
+      "title_prefix": "物理層級的",
+      "title_highlight": "金剛戒律",
+      "subtitle": "全球首個以 <strong>微內核 + 實體檔案戒律</strong> 打造的 AI 語意運行時系統。<br/>從根本解決企業 AI Agent 的幻覺、Prompt Injection 與高昂維護成本問題。",
+      "value_prop": "用確定性結構約束概率生成，讓企業 AI 真正可靠、可稽核、好維護。",
+      "btn_github": "立即前往 GitHub",
+      "btn_poc": "申請企業 POC 試用"
+    },
+    "terminal": {
+      "cmd": "mount vajra_claw.dll",
+      "locked": "[VajraClaw-Core] ⚡ 靜態金剛矩陣已鎖定。",
+      "injected": "[VajraClaw-Core] 💉 注入一次性邊界戒律。",
+      "llm_stream": "LLM 串流：內部 IP 位址為 192.168.1...",
+      "fuse_blown": "🛑 物理熔斷觸發：偵測到違規 Token [192.168]。違反金剛合約。"
+    },
+    "pain_points": {
+      "title_prefix": "企業 AI Agent 正在面對的",
+      "title_highlight": "三大痛苦",
+      "subtitle": "傳統方案只能治標，DROS 從根本解決問題。",
+      "items": [
+        {
+          "title": "⚠️ 幻覺導致錯誤決策",
+          "desc": "概率模型天生具有不可控性。在金融、法律或醫療場景，即使是 1% 的幻覺也可能導致災難性的合規風險與損失。"
+        },
+        {
+          "title": "💉 Prompt Injection 漏洞",
+          "desc": "傳統的 Prompt 工程防護極易被繞過。攻擊者可透過惡意輸入，輕易操縱 Agent 執行未授權操作或洩漏機密。"
+        },
+        {
+          "title": "💸 成本與維護失控",
+          "desc": "「LLM as a Judge」的安全審查導致 Token 費用翻倍；同時需要龐大團隊持續微調模型、維護向量資料庫，成本難以負荷。"
+        }
+      ],
+      "conclusion_title": "DROS 的終極答案",
+      "conclusion_desc": "以 <strong>極簡微內核 + 物理層級金剛戒律</strong>，徹底改變遊戲規則。"
+    },
+    "advantages": {
+      "title_prefix": "為什麼企業開始選擇",
+      "title_highlight": "DROS",
+      "items": [
+        {
+          "title": "🛡️ 物理層級防護",
+          "desc": "GuardVM + 一次性金剛戒律，運行時強制熔斷危險行為。不依賴語言模型的理解能力，而是直接在記憶體層面斬斷違規操作。"
+        },
+        {
+          "title": "⚡ 極致輕量",
+          "desc": "微內核設計，各語言核心僅 300~600 行程式碼，無複雜依賴，極度穩定。"
+        },
+        {
+          "title": "📉 近乎零 Token 消耗",
+          "desc": "核心引擎完全本地運行，無須二次呼叫 LLM 進行安全判斷，長期使用成本大幅降低。"
+        },
+        {
+          "title": "🔍 完整溯源與稽核",
+          "desc": "T-Number 座標系統，每一步推論皆可精確追溯至權威規則，滿足金融/醫療級合規要求。"
+        },
+        {
+          "title": "🛠️ 維護極簡",
+          "desc": "只需維護 Markdown 規則檔案。企業內部領域專家（非工程師）即可勝任，無需大量調優。"
+        }
+      ]
+    },
+    "comparison": {
+      "title_prefix": "顛覆性的",
+      "title_highlight": "架構升級",
+      "headers": {
+        "item": "項目",
+        "traditional": "傳統 RAG / LLM Agent",
+        "dros": "DROS 金剛戒律系統",
+        "advantage": "優勢"
+      },
+      "rows": [
+        {"item": "幻覺防護", "traditional": "概率性、後驗 Guardrails", "dros": "物理層級、事前強制熔斷", "adv": "壓倒性"},
+        {"item": "Prompt Injection 防禦", "traditional": "依賴 Prompt 工程", "dros": "運行時契約優先驗證", "adv": "顯著"},
+        {"item": "Token 與運營成本", "traditional": "高", "dros": "極低（近乎零）", "adv": "革命性"},
+        {"item": "維護複雜度", "traditional": "高（模型、向量持續調優）", "dros": "極低（僅維護 Markdown 規則）", "adv": "巨大"},
+        {"item": "可稽核性", "traditional": "弱", "dros": "完整 T-Number 溯源", "adv": "企業級"}
+      ]
+    },
+    "ecosystem": {
+      "badge": "Open Source",
+      "title_prefix": "DROS 生態系與多語言",
+      "title_highlight": "微內核",
+      "desc": "真正的智能安全不應依賴概率，而是建立在物理層級的嚴格邊界之上。DROS 核心引擎以 AGPL-3.0 授權開源，各語言核心僅需 300~600 行程式碼。",
+      "view_github": "在 GitHub 上查看"
+    },
+    "industries": {
+      "title_prefix": "最適合的",
+      "title_highlight": "產業場景",
+      "desc": "DROS 特別適合對<strong>安全、合規、可靠性</strong>要求極高的零容錯領域：",
+      "items": ["🏦 金融服務與保險", "🏥 醫療健康與製藥", "⚖️ 法律、科技法務與合規", "🏢 企業內部知識管理系統", "🏛️ 政府與大型組織專案"]
+    },
+    "cta": {
+      "title": "極簡、確定、可靠",
+      "desc": "我們不賣另一套複雜的 AI 系統，<br/>我們提供一套 <strong>真正好維護、好掌控</strong> 的 AI 邊界治理引擎。<br/>準備好讓您的 AI Agent 進入金剛級防護時代了嗎？",
+      "btn_github": "查看 GitHub 開源版",
+      "btn_poc": "申請商業授權與 POC 試用"
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "nav": {
+    "home": "Home",
+    "docs": "Docs",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "get_started": "Get VajraClaw"
+  },
+  "footer": {
+    "desc": "The world's first AI semantic runtime system built on a Microkernel + Physical File Discipline. Radically solve hallucination and Prompt Injection for Enterprise AI Agents.",
+    "resources": "Resources",
+    "github": "GitHub Repository",
+    "docs": "Documentation",
+    "faq": "FAQ",
+    "company": "Company",
+    "pricing": "Pricing",
+    "contact": "Contact Us",
+    "tax_id": "Tax ID: 43908974",
+    "company_name": "Top-Celestial Company Ltd.",
+    "rights": "© {{year}} DROS Project. All Rights Reserved.",
+    "dharma_exemption": "Dharma Exemption: Purely non-profit Buddhist propagation usage is 100% free."
+  },
+  "home": {
+    "meta_title": "DROS - Dharma Reasoning Operating System | Vajra-Grade AI Security",
+    "meta_desc": "The world's first AI semantic runtime system built on a Microkernel + Physical File Discipline. Radically solve hallucination and Prompt Injection.",
+    "hero": {
+      "version": "Dharma Reasoning OS v1.0.0",
+      "title_prefix": "The Vajra Discipline at the ",
+      "title_highlight": "Physical Layer",
+      "subtitle": "The world's first AI semantic runtime system built on a <strong>Microkernel + Physical File Discipline</strong>.<br/>Fundamentally eliminating hallucinations, Prompt Injections, and runaway maintenance costs for Enterprise AI.",
+      "value_prop": "Constrain probabilistic generation with deterministic structures. Make Enterprise AI truly reliable, auditable, and maintainable.",
+      "btn_github": "View on GitHub",
+      "btn_poc": "Request Enterprise POC"
+    },
+    "terminal": {
+      "cmd": "mount vajra_claw.dll",
+      "locked": "[VajraClaw-Core] ⚡ Static Vajra Matrix Locked.",
+      "injected": "[VajraClaw-Core] 💉 Ephemeral Bounds Injected.",
+      "llm_stream": "LLM Stream: The internal IP address is 192.168.1...",
+      "fuse_blown": "🛑 PHYSICAL FUSE BLOWN: Token [192.168] Blocked. Contract Violation."
+    },
+    "pain_points": {
+      "title_prefix": "The Three Agonies of ",
+      "title_highlight": "Enterprise AI",
+      "subtitle": "Traditional solutions treat the symptoms. DROS cures the disease.",
+      "items": [
+        {
+          "title": "⚠️ Hallucination-Driven Catastrophes",
+          "desc": "Probabilistic models are inherently uncontrollable. In finance, law, or healthcare, even a 1% hallucination rate introduces devastating compliance risks."
+        },
+        {
+          "title": "💉 Prompt Injection Vulnerabilities",
+          "desc": "Traditional Prompt Engineering guardrails are easily bypassed. Attackers can manipulate agents into executing unauthorized actions or leaking data."
+        },
+        {
+          "title": "💸 Spiraling Token & Maintenance Costs",
+          "desc": "Using 'LLM as a Judge' doubles token costs. Constantly fine-tuning models and maintaining vector databases requires massive teams and exorbitant budgets."
+        }
+      ],
+      "conclusion_title": "The Ultimate Answer: DROS",
+      "conclusion_desc": "A <strong>minimalist Microkernel + Physical Vajra Discipline</strong> that completely changes the game."
+    },
+    "advantages": {
+      "title_prefix": "Why Enterprises are Upgrading to ",
+      "title_highlight": "DROS",
+      "items": [
+        {
+          "title": "🛡️ Physical Layer Protection",
+          "desc": "GuardVM + Ephemeral Vajra Discipline enforces runtime circuit-breaking. Instead of relying on LLM comprehension, we sever violating operations directly in memory."
+        },
+        {
+          "title": "⚡ Extreme Lightweight",
+          "desc": "A pure Microkernel architecture. Core implementations across languages are under 600 lines of code, with zero complex dependencies for absolute stability."
+        },
+        {
+          "title": "📉 Near-Zero Token Overhead",
+          "desc": "The core engine runs entirely locally. No secondary LLM calls are needed for security validation, drastically reducing your long-term operational costs."
+        },
+        {
+          "title": "🔍 Absolute Auditability",
+          "desc": "The T-Number coordinate system maps every inference step back to an authoritative physical rule, satisfying extreme financial and medical compliance mandates."
+        },
+        {
+          "title": "🛠️ Minimal Maintenance",
+          "desc": "Security is defined via simple Markdown files. Enterprise domain experts can maintain bounds without needing highly-paid AI engineers."
+        }
+      ]
+    },
+    "comparison": {
+      "title_prefix": "A Paradigm-Shifting ",
+      "title_highlight": "Architecture",
+      "headers": {
+        "item": "Feature",
+        "traditional": "Traditional RAG / LLM Agent",
+        "dros": "DROS Vajra Discipline",
+        "advantage": "Advantage"
+      },
+      "rows": [
+        {"item": "Hallucination Defense", "traditional": "Probabilistic, Post-generation", "dros": "Physical-layer Pre-emptive Fuse", "adv": "Overwhelming"},
+        {"item": "Prompt Injection", "traditional": "Relies on Prompt Engineering", "dros": "Runtime Contract Priority Validation", "adv": "Significant"},
+        {"item": "Token / OpEx Cost", "traditional": "Extremely High", "dros": "Near Zero", "adv": "Revolutionary"},
+        {"item": "Maintenance Complexity", "traditional": "High (Vector DBs, Fine-tuning)", "dros": "Extremely Low (Markdown only)", "adv": "Massive"},
+        {"item": "Auditability", "traditional": "Weak", "dros": "Strict T-Number Traceability", "adv": "Enterprise Grade"}
+      ]
+    },
+    "ecosystem": {
+      "badge": "Open Source",
+      "title_prefix": "DROS Ecosystem & ",
+      "title_highlight": "Microkernels",
+      "desc": "True AI security cannot rely on probability; it must be built on strict physical boundaries. The DROS core engines are open-sourced under AGPL-3.0, with each language kernel implemented in just 300~600 lines of code.",
+      "view_github": "View on GitHub"
+    },
+    "industries": {
+      "title_prefix": "Built for Zero-Tolerance ",
+      "title_highlight": "Industries",
+      "desc": "DROS is designed for mission-critical sectors demanding absolute <strong>security, compliance, and reliability</strong>:",
+      "items": ["🏦 Financial Services & Insurance", "🏥 Healthcare & Pharmaceuticals", "⚖️ Legal & Tech Compliance", "🏢 Enterprise Knowledge Management", "🏛️ Government & High-Security Projects"]
+    },
+    "cta": {
+      "title": "Minimalist. Deterministic. Reliable.",
+      "desc": "We don't sell another bloated AI system.<br/>We provide a <strong>truly maintainable, deeply controllable</strong> AI boundary governance engine.<br/>Are you ready to equip your AI Agents with Vajra-Grade Protection?",
+      "btn_github": "Explore the Open Source Core",
+      "btn_poc": "Request Commercial License & POC"
+    }
+  }
+}
