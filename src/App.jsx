@@ -164,9 +164,15 @@ claw = VajraClawAdapter(<span style={{color: '#a5d6ff'}}>"vajra.dll"</span>)<br/
         {/* Commercial Licensing Section */}
         <section id="pricing" style={{textAlign: 'center', maxWidth: '1200px', margin: '4rem auto 0'}}>
           <h2 className="section-title">Vajra Claw <span className="gold-text">Commercial Licenses</span></h2>
-          <p className="subtitle" style={{marginBottom: '3rem'}}>
+          <p className="subtitle" style={{marginBottom: '2rem'}}>
             The ultimate O(1) circuit breaker and runtime guardian for AI systems.
           </p>
+
+          {/* Early Adopter Banner */}
+          <div style={{background: 'rgba(230, 185, 128, 0.1)', border: '1px solid var(--accent-gold)', padding: '1rem', borderRadius: '8px', textAlign: 'center', marginBottom: '3rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto'}}>
+            <strong style={{color: 'var(--accent-gold)'}}>Early Adopter Pricing:</strong> We are currently in our V1 release phase. Enterprise licensing will increase to <strong>$15,000/yr</strong> in Q4 2026. Secure your license today before the next price increase!
+          </div>
+
           <div className="grid-3">
             {/* Hacker Tier */}
             <div className="glass-card pricing-card">
@@ -177,6 +183,7 @@ claw = VajraClawAdapter(<span style={{color: '#a5d6ff'}}>"vajra.dll"</span>)<br/
               <ul style={{textAlign: 'left', marginBottom: '2rem', listStyle: 'none', padding: 0, lineHeight: '2'}}>
                 <li>✅ Bound to 1 Machine UUID</li>
                 <li>✅ Max 5 Concurrent Agents</li>
+                <li>✅ Online Heartbeat Validation</li>
                 <li style={{color: '#ff4d4f', fontSize: '0.85rem', lineHeight: '1.4', marginTop: '1rem'}}>⚠️ <strong>EULA Warning:</strong> Exceeding 5 agents triggers a Fail-Closed exception. Offline &gt;24h lockdown. No refunds.</li>
               </ul>
               <a href="https://dros.lemonsqueezy.com/buy/hacker-yearly" target="_blank" rel="noreferrer" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginBottom: '0.5rem'}}>
@@ -197,6 +204,7 @@ claw = VajraClawAdapter(<span style={{color: '#a5d6ff'}}>"vajra.dll"</span>)<br/
               <ul style={{textAlign: 'left', marginBottom: '2rem', listStyle: 'none', padding: 0, lineHeight: '2'}}>
                 <li>✅ Up to 3 Machine UUIDs</li>
                 <li>✅ 10 Concurrent Agents per Machine</li>
+                <li>✅ Online Heartbeat Validation</li>
                 <li style={{color: '#ff4d4f', fontSize: '0.85rem', lineHeight: '1.4', marginTop: '1rem'}}>⚠️ <strong>EULA Warning:</strong> Exceeding limits triggers a Fail-Closed exception. Offline &gt;24h lockdown. No refunds.</li>
               </ul>
               <a href="https://dros.lemonsqueezy.com/buy/startup" target="_blank" rel="noreferrer" className="btn btn-primary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginTop: '2.8rem'}}>
@@ -211,7 +219,7 @@ claw = VajraClawAdapter(<span style={{color: '#a5d6ff'}}>"vajra.dll"</span>)<br/
               <p style={{fontSize: '0.9rem', color: 'transparent', marginTop: '-0.5rem', marginBottom: '1rem'}}>-</p>
               <p style={{color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '60px'}}>Absolute sovereignty. Zero telemetry. For Fortune 500 companies.</p>
               <ul style={{textAlign: 'left', marginBottom: '2rem', listStyle: 'none', padding: 0, lineHeight: '2'}}>
-                <li>✅ 100% Air-Gapped</li>
+                <li>✅ 100% Air-Gapped (No Heartbeat)</li>
                 <li>✅ Up to 15 Machine UUIDs</li>
                 <li>✅ 30 Concurrent Agents per Machine</li>
                 <li style={{color: '#ff4d4f', fontSize: '0.85rem', lineHeight: '1.4', marginTop: '1rem'}}>⚠️ <strong>EULA Warning:</strong> Exceeding limits triggers a Fail-Closed exception. No refunds on tampering.</li>
