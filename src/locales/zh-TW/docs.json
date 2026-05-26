@@ -71,13 +71,34 @@
         "企業內部領域專家即可維護，無需高階 AI 工程師。"
       ],
       "sandbox": {
-        "title": "✨ 立即體驗：讓 AI 協助您建立 VajraClaw 規則",
-        "desc": "在下方輸入您的 Agent 情境或需求，AI (Claude 3.5 / GPT-4o 驅動) 會引導您一步步建立專屬的 <code>AGENT.MD</code> 與 <code>Vajra.md</code>。",
-        "buttons": ["🏦 金融客服防護", "⚖️ 法律合規 Agent", "🏥 醫療隱私邊界"],
-        "alert": "此為 UI 預覽展示，實際整合需串接 LLM API。",
-        "placeholder": "例如：我想建立一個金融客服 AI Agent，需要嚴格遵守法規、不準提供投資建議...",
-        "submit": "生成規則",
-        "footer": "此互動體驗由 Claude 3.5 Sonnet 技術支援"
+        "title": "✨ 互動展示：VajraClaw 規則生成 (Simulated)",
+        "desc": "點擊下方預設的企業情境，看看 DROS 如何為不同產業自動生成專屬的 <code>AGENT.MD</code> 與 <code>Vajra.md</code> 金剛戒律。（此為無 API 消耗之安全展示）",
+        "scenarios": [
+          {
+            "id": "finance",
+            "name": "🏦 金融客服防護",
+            "prompt": "我想建立一個金融客服 AI，嚴格遵守法規、不提供任何投資建議。",
+            "result_agent": "# AGENT.MD\nrole: Financial_Customer_Support\nboundaries:\n  - CAN_ANSWER_FAQ\n  - CANNOT_GIVE_INVESTMENT_ADVICE\n  - CANNOT_ASK_FOR_PASSWORD\n\ninstructions:\n  1. Only answer based on officially approved docs.\n  2. If asked about stock picks, trigger 'investment_advice_refusal' workflow.",
+            "result_vajra": "vajra_contract:\n  version: \"1.0\"\n  priority: \"highest\"\n  rules:\n    - action: \"deny\"\n      condition: \"contains specific stock tickers or buy/sell recommendations\"\n      response: \"physical_melt\"\n      audit_log: true\n    - action: \"allow\"\n      condition: \"query within approved banking FAQ\"\n      require_tnumber: true"
+          },
+          {
+            "id": "legal",
+            "name": "⚖️ 法律合規 Agent",
+            "prompt": "我要做一個企業內部法務審閱助理，只能引述公司現有條款，不能自己發明法律解釋。",
+            "result_agent": "# AGENT.MD\nrole: Internal_Legal_Reviewer\nboundaries:\n  - MUST_CITE_INTERNAL_TERMS\n  - NO_CREATIVE_INTERPRETATION\n\ninstructions:\n  1. Review contracts against company_policy.md.\n  2. Quote exact clauses, do not paraphrase.",
+            "result_vajra": "vajra_contract:\n  version: \"1.0\"\n  priority: \"highest\"\n  rules:\n    - action: \"deny\"\n      condition: \"generates novel legal interpretations not present in T-Number source\"\n      response: \"physical_melt\"\n    - action: \"allow\"\n      condition: \"exact quote matching source document\"\n      require_tnumber: true"
+          },
+          {
+            "id": "medical",
+            "name": "🏥 醫療隱私邊界",
+            "prompt": "建立一個病歷摘要 AI，絕對禁止在輸出中包含病患的真實姓名與身分證字號。",
+            "result_agent": "# AGENT.MD\nrole: Medical_Record_Summarizer\nboundaries:\n  - STRICT_PII_REDACTION\n  - CLINICAL_SUMMARY_ONLY\n\ninstructions:\n  1. Summarize clinical symptoms and treatments.\n  2. Ensure PII is strictly redacted before output.",
+            "result_vajra": "vajra_contract:\n  version: \"1.0\"\n  priority: \"highest\"\n  rules:\n    - action: \"deny\"\n      condition: \"contains Patient Name, SSN, or exact Date of Birth\"\n      response: \"physical_melt\"\n      alert_admin: true\n    - action: \"allow\"\n      condition: \"fully anonymized clinical summary\"\n      require_tnumber: true"
+          }
+        ],
+        "select_prompt": "請選擇上方一個情境，查看生成的規則...",
+        "generating": "DROS 引擎合成中...",
+        "footer": "安全聲明：為防止 Prompt Injection 攻擊與免費 API 濫用，此互動視窗採本地沙盒模擬架構，無實際 API 消耗。"
       }
     },
     "deployment": {

@@ -71,13 +71,34 @@
         "Maintainable by internal domain experts; no senior AI engineers required."
       ],
       "sandbox": {
-        "title": "✨ Try It: Let AI Generate Your VajraClaw Rules",
-        "desc": "Enter your Agent scenario below, and our AI (Powered by Claude 3.5 / GPT-4o) will guide you step-by-step to create your bespoke <code>AGENT.MD</code> and <code>Vajra.md</code>.",
-        "buttons": ["🏦 Financial Support", "⚖️ Legal Compliance", "🏥 Medical Privacy"],
-        "alert": "This is a UI preview. Actual integration requires hooking up an LLM API.",
-        "placeholder": "Example: I want to build a financial support AI that strictly follows regulations and never gives investment advice...",
-        "submit": "Generate Rules",
-        "footer": "Powered by Claude 3.5 Sonnet"
+        "title": "✨ Interactive Demo: VajraClaw Rule Generation",
+        "desc": "Select a predefined enterprise scenario below to see how DROS automatically generates bespoke <code>AGENT.MD</code> and <code>Vajra.md</code> disciplines. (Safe Simulation Mode - Zero API Cost)",
+        "scenarios": [
+          {
+            "id": "finance",
+            "name": "🏦 Financial Support",
+            "prompt": "I want to build a financial support AI that strictly follows regulations and never gives investment advice.",
+            "result_agent": "# AGENT.MD\nrole: Financial_Customer_Support\nboundaries:\n  - CAN_ANSWER_FAQ\n  - CANNOT_GIVE_INVESTMENT_ADVICE\n  - CANNOT_ASK_FOR_PASSWORD\n\ninstructions:\n  1. Only answer based on officially approved docs.\n  2. If asked about stock picks, trigger 'investment_advice_refusal' workflow.",
+            "result_vajra": "vajra_contract:\n  version: \"1.0\"\n  priority: \"highest\"\n  rules:\n    - action: \"deny\"\n      condition: \"contains specific stock tickers or buy/sell recommendations\"\n      response: \"physical_melt\"\n      audit_log: true\n    - action: \"allow\"\n      condition: \"query within approved banking FAQ\"\n      require_tnumber: true"
+          },
+          {
+            "id": "legal",
+            "name": "⚖️ Legal Compliance",
+            "prompt": "I need an internal legal review assistant that only quotes existing clauses and never invents legal interpretations.",
+            "result_agent": "# AGENT.MD\nrole: Internal_Legal_Reviewer\nboundaries:\n  - MUST_CITE_INTERNAL_TERMS\n  - NO_CREATIVE_INTERPRETATION\n\ninstructions:\n  1. Review contracts against company_policy.md.\n  2. Quote exact clauses, do not paraphrase.",
+            "result_vajra": "vajra_contract:\n  version: \"1.0\"\n  priority: \"highest\"\n  rules:\n    - action: \"deny\"\n      condition: \"generates novel legal interpretations not present in T-Number source\"\n      response: \"physical_melt\"\n    - action: \"allow\"\n      condition: \"exact quote matching source document\"\n      require_tnumber: true"
+          },
+          {
+            "id": "medical",
+            "name": "🏥 Medical Privacy",
+            "prompt": "Create a medical record summarization AI that strictly prohibits outputting the patient's real name and SSN.",
+            "result_agent": "# AGENT.MD\nrole: Medical_Record_Summarizer\nboundaries:\n  - STRICT_PII_REDACTION\n  - CLINICAL_SUMMARY_ONLY\n\ninstructions:\n  1. Summarize clinical symptoms and treatments.\n  2. Ensure PII is strictly redacted before output.",
+            "result_vajra": "vajra_contract:\n  version: \"1.0\"\n  priority: \"highest\"\n  rules:\n    - action: \"deny\"\n      condition: \"contains Patient Name, SSN, or exact Date of Birth\"\n      response: \"physical_melt\"\n      alert_admin: true\n    - action: \"allow\"\n      condition: \"fully anonymized clinical summary\"\n      require_tnumber: true"
+          }
+        ],
+        "select_prompt": "Please select a scenario above to view the generated rules...",
+        "generating": "DROS Engine synthesizing...",
+        "footer": "Security Notice: To prevent Prompt Injection and API abuse, this interactive window operates in a local sandbox simulation mode with zero API consumption."
       }
     },
     "deployment": {

@@ -5,7 +5,10 @@ import { useTranslation } from 'react-i18next';
 
 export default function Docs() {
   const [activeSection, setActiveSection] = useState('getting-started');
+  const [activeScenario, setActiveScenario] = useState(null);
+  const [isGenerating, setIsGenerating] = useState(false);
   const { t } = useTranslation('docs');
+  const scenarios = t('sections.writing_rules.sandbox.scenarios', { returnObjects: true });
 
   const scrollTo = (id) => {
     setActiveSection(id);
@@ -177,47 +180,62 @@ export default function Docs() {
             </p>
 
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem', marginBottom: '1.5rem' }}>
-              {t('sections.writing_rules.sandbox.buttons', { returnObjects: true }).map((btn, i) => (
-                <button key={i} className="btn btn-secondary" style={{ fontSize: '0.85rem', padding: '0.5rem 1rem' }} onClick={() => alert(t('sections.writing_rules.sandbox.alert'))}>{btn}</button>
+              {Array.isArray(scenarios) && scenarios.map((s, i) => (
+                <button 
+                  key={i} 
+                  className={`btn ${activeScenario === i ? 'btn-primary' : 'btn-secondary'}`}
+                  style={{ fontSize: '0.9rem', padding: '0.6rem 1.2rem', transition: 'all 0.3s ease' }} 
+                  onClick={() => {
+                    if (activeScenario === i) return;
+                    setActiveScenario(i);
+                    setIsGenerating(true);
+                    setTimeout(() => setIsGenerating(false), 1200);
+                  }}
+                >
+                  {s.name}
+                </button>
               ))}
             </div>
 
-            <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
-              <input 
-                type="text" 
-                placeholder={t('sections.writing_rules.sandbox.placeholder')}
-                style={{
-                  width: '100%',
-                  padding: '1.2rem 1.5rem',
-                  paddingRight: '120px',
-                  background: 'rgba(255,255,255,0.03)',
-                  border: '1px solid rgba(255,255,255,0.1)',
-                  borderRadius: '12px',
-                  color: '#fff',
-                  fontSize: '1rem',
-                  outline: 'none',
-                  fontFamily: 'inherit'
-                }}
-                disabled
-              />
-              <button 
-                className="btn btn-primary"
-                style={{
-                  position: 'absolute',
-                  right: '8px',
-                  padding: '0.8rem 1.5rem',
-                  background: 'var(--accent-blue)',
-                  color: '#000',
-                  border: 'none',
-                  borderRadius: '8px',
-                  fontWeight: 'bold'
-                }}
-                onClick={() => alert(t('sections.writing_rules.sandbox.alert'))}
-              >
-                {t('sections.writing_rules.sandbox.submit')}
-              </button>
+            <div style={{ background: 'rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '12px', padding: '1.5rem', minHeight: '300px' }}>
+              {activeScenario === null ? (
+                <div style={{ color: 'var(--text-dim)', textAlign: 'center', paddingTop: '5rem', fontSize: '1.1rem' }}>
+                  {t('sections.writing_rules.sandbox.select_prompt')}
+                </div>
+              ) : isGenerating ? (
+                <div style={{ color: 'var(--accent-blue)', textAlign: 'center', paddingTop: '5rem', fontSize: '1.1rem', animation: 'pulse 1s infinite' }}>
+                  {t('sections.writing_rules.sandbox.generating')}
+                </div>
+              ) : (
+                <div style={{ animation: 'fadeIn 0.4s ease-out' }}>
+                  <div style={{ marginBottom: '1.5rem', color: 'var(--text-secondary)', fontStyle: 'italic', paddingLeft: '1rem', borderLeft: '3px solid var(--accent-blue)', fontSize: '1.05rem', lineHeight: '1.5' }}>
+                    "{scenarios[activeScenario].prompt}"
+                  </div>
+                  <div className="grid-2" style={{ gap: '1rem' }}>
+                    <div className="code-block-wrapper" style={{ margin: 0 }}>
+                      <div className="code-header">
+                        <span>markdown</span>
+                        <span>AGENT.MD</span>
+                      </div>
+                      <pre style={{ margin: 0, height: '240px', overflowY: 'auto', background: 'rgba(20,20,20,0.8)', padding: '1rem', borderRadius: '0 0 8px 8px', fontSize: '0.85rem' }}>
+                        <code style={{ color: 'var(--text-primary)' }}>{scenarios[activeScenario].result_agent}</code>
+                      </pre>
+                    </div>
+                    <div className="code-block-wrapper" style={{ margin: 0 }}>
+                      <div className="code-header">
+                        <span>yaml</span>
+                        <span>Vajra.md</span>
+                      </div>
+                      <pre style={{ margin: 0, height: '240px', overflowY: 'auto', background: 'rgba(20,20,20,0.8)', padding: '1rem', borderRadius: '0 0 8px 8px', fontSize: '0.85rem' }}>
+                        <code style={{ color: '#a5d6ff' }}>{scenarios[activeScenario].result_vajra}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
-            <div style={{ textAlign: 'right', marginTop: '0.5rem', fontSize: '0.75rem', color: 'var(--text-dim)' }}>
+            
+            <div style={{ textAlign: 'right', marginTop: '1.5rem', fontSize: '0.8rem', color: 'var(--text-dim)' }}>
               {t('sections.writing_rules.sandbox.footer')}
             </div>
           </div>
