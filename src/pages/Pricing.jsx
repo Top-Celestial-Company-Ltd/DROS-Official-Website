@@ -38,8 +38,8 @@ export default function Pricing() {
           <ul className="check-list" style={{textAlign: 'left', marginBottom: '2.5rem', lineHeight: '2.5', color: 'var(--text-primary)'}}>
             {t('tiers.hacker.features', { returnObjects: true }).map((f, i) => <li key={i}>{f}</li>)}
           </ul>
-          <a href="#" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginBottom: '0.8rem'}}>{t('tiers.hacker.btn_yearly')}</a>
-          <a href="#" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', background: 'transparent', border: '1px solid rgba(0, 240, 255, 0.3)', color: 'var(--accent-blue)'}}>{t('tiers.hacker.btn_monthly')}</a>
+          <Link to="/coming-soon" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginBottom: '0.8rem'}}>{t('tiers.hacker.btn_yearly')}</Link>
+          <Link to="/coming-soon" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', background: 'transparent', border: '1px solid rgba(0, 240, 255, 0.3)', color: 'var(--accent-blue)'}}>{t('tiers.hacker.btn_monthly')}</Link>
         </div>
 
         {/* Startup Tier (Recommended) */}
@@ -52,9 +52,9 @@ export default function Pricing() {
           <ul className="check-list" style={{textAlign: 'left', marginBottom: '2.5rem', lineHeight: '2.5', color: 'var(--text-primary)'}}>
             {t('tiers.startup.features', { returnObjects: true }).map((f, i) => <li key={i}>{f}</li>)}
           </ul>
-          <a href="#" className="btn btn-primary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginTop: '2.8rem', padding: '1.2rem'}}>
+          <Link to="/coming-soon" className="btn btn-primary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginTop: '2.8rem', padding: '1.2rem'}}>
             {t('tiers.startup.btn')}
-          </a>
+          </Link>
         </div>
 
         {/* Enterprise Tier */}
@@ -66,9 +66,9 @@ export default function Pricing() {
           <ul className="check-list" style={{textAlign: 'left', marginBottom: '2.5rem', lineHeight: '2.5', color: 'var(--text-primary)'}}>
             {t('tiers.enterprise.features', { returnObjects: true }).map((f, i) => <li key={i}>{f}</li>)}
           </ul>
-          <a href="#" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginTop: '2.8rem', padding: '1.2rem'}}>
+          <Link to="/coming-soon" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginTop: '2.8rem', padding: '1.2rem'}}>
             {t('tiers.enterprise.btn')}
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -84,7 +84,7 @@ export default function Pricing() {
       <section className="final-cta" style={{textAlign: 'center', padding: '6rem 5%', background: 'linear-gradient(to bottom, transparent, rgba(230, 185, 128, 0.05))', borderRadius: '16px', margin: '4rem 0'}}>
           <h2 style={{fontSize: '3rem', marginBottom: '1rem'}} dangerouslySetInnerHTML={{ __html: t('cta.title') }}></h2>
           <p style={{fontSize: '1.5rem', color: 'var(--text-light)', fontWeight: '600', marginBottom: '2rem'}}>{t('cta.subtitle')}</p>
-          <Link to="/pricing" className="btn btn-primary" style={{fontSize: '1.2rem', padding: '1rem 3rem'}}>{t('cta.btn')}</Link>
+          <Link to="/coming-soon" className="btn btn-primary" style={{fontSize: '1.2rem', padding: '1rem 3rem'}}>{t('cta.btn')}</Link>
       </section>
     </main>
   );

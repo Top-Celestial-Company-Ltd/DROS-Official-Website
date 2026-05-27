@@ -10,19 +10,23 @@ import faqEN from './locales/en/faq.json';
 import faqZHTW from './locales/zh-TW/faq.json';
 import docsEN from './locales/en/docs.json';
 import docsZHTW from './locales/zh-TW/docs.json';
+import comingsoonEN from './locales/en/comingsoon.json';
+import comingsoonZHTW from './locales/zh-TW/comingsoon.json';
 
 const resources = {
   en: {
     translation: translationEN,
     pricing: pricingEN,
     faq: faqEN,
-    docs: docsEN
+    docs: docsEN,
+    comingsoon: comingsoonEN
   },
   'zh-TW': {
     translation: translationZHTW,
     pricing: pricingZHTW,
     faq: faqZHTW,
-    docs: docsZHTW
+    docs: docsZHTW,
+    comingsoon: comingsoonZHTW
   }
 };
 

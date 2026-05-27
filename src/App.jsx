@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Docs from './pages/Docs';
 import Pricing from './pages/Pricing';
 import FAQ from './pages/FAQ';
+import ComingSoon from './pages/ComingSoon';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
           <Route path="/docs" element={<Docs />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/coming-soon" element={<ComingSoon />} />
         </Routes>
       </div>
       <Footer />
