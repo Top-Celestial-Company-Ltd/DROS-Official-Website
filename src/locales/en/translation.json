@@ -39,6 +39,17 @@
       "llm_stream": "LLM Stream: The internal IP address is 192.168.1...",
       "fuse_blown": "🛑 PHYSICAL FUSE BLOWN: Token [192.168] Blocked. Contract Violation."
     },
+    "hourglass": {
+      "title_prefix": "The Ultimate ",
+      "title_highlight": "Bottleneck",
+      "subtitle": "How VajraClaw targets the most vulnerable throat of modern computer science to achieve an unavoidable dimensional strike.",
+      "layer1_title": "⏳ The Upper Hourglass (Ever-changing)",
+      "layer1_desc": "From Python and Rust to OpenAI and Claude, along with thousands of AI Agent frameworks, all operating within User Space.",
+      "layer2_title": "🌉 The Narrowest Point (The Only Path)",
+      "layer2_desc": "C-ABI (Binary Interface) and OS System Calls. No matter how smart the AI is, to touch the physical world, it must shed its high-level code and become raw C pointers.",
+      "layer3_title": "👑 The Boundary of Life and Death",
+      "layer3_desc": "VajraClaw is built physically on this tollbooth. We don't interfere with AI thoughts, nor do we alter the OS kernel. We strictly validate Vajra Contracts in hexadecimal right before System Calls occur."
+    },
     "pain_points": {
       "title_prefix": "The Three Agonies of ",
       "title_highlight": "Enterprise AI",

@@ -75,6 +75,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* The Ultimate Bottleneck (Hourglass Theory) */}
+      <section className="container" style={{ padding: '6rem 2rem' }}>
+        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+          <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{t('home.hourglass.title_prefix')}<span className="gold-text">{t('home.hourglass.title_highlight')}</span></h2>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto' }}>{t('home.hourglass.subtitle')}</p>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem', maxWidth: '900px', margin: '0 auto', position: 'relative' }}>
+          {/* Vertical Connecting Line */}
+          <div style={{ position: 'absolute', left: '50%', top: '0', bottom: '0', width: '2px', background: 'linear-gradient(to bottom, rgba(212,175,55,0.1), rgba(0,240,255,0.5), rgba(255,77,79,0.3))', transform: 'translateX(-50%)', zIndex: 0 }}></div>
+          
+          <div className="glass-card" style={{ zIndex: 1, borderTop: '2px solid rgba(212,175,55,0.5)', background: 'rgba(212,175,55,0.03)', textAlign: 'center', padding: '2rem' }}>
+            <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', color: 'var(--accent-gold)' }}>{t('home.hourglass.layer1_title')}</h3>
+            <p style={{ color: 'var(--text-secondary)' }}>{t('home.hourglass.layer1_desc')}</p>
+          </div>
+          
+          <div className="glass-card" style={{ zIndex: 1, borderTop: '2px solid rgba(0,240,255,0.5)', background: 'rgba(0,240,255,0.03)', textAlign: 'center', padding: '2rem', width: '80%', margin: '0 auto' }}>
+            <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', color: 'var(--accent-blue)' }}>{t('home.hourglass.layer2_title')}</h3>
+            <p style={{ color: 'var(--text-secondary)' }}>{t('home.hourglass.layer2_desc')}</p>
+          </div>
+          
+          <div className="glass-card" style={{ zIndex: 1, borderTop: '2px solid #ff4d4f', background: 'rgba(255,77,79,0.03)', textAlign: 'center', padding: '2rem', width: '60%', margin: '0 auto' }}>
+            <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', color: '#ff4d4f' }}>{t('home.hourglass.layer3_title')}</h3>
+            <p style={{ color: 'var(--text-secondary)' }}>{t('home.hourglass.layer3_desc')}</p>
+          </div>
+        </div>
+      </section>
+
       {/* Pain Points & Solutions */}
       <section className="container" style={{ padding: '6rem 2rem' }}>
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>

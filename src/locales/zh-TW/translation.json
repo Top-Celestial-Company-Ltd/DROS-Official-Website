@@ -39,6 +39,17 @@
       "llm_stream": "LLM 串流：內部 IP 位址為 192.168.1...",
       "fuse_blown": "🛑 物理熔斷觸發：偵測到違規 Token [192.168]。違反金剛合約。"
     },
+    "hourglass": {
+      "title_prefix": "計算機科學的",
+      "title_highlight": "絕對漏斗",
+      "subtitle": "VajraClaw (金剛蝦) 是如何精準鎖定現代電腦科學最脆弱的咽喉，達成無可繞過的降維打擊。",
+      "layer1_title": "⏳ 沙漏的上層（千變萬化）",
+      "layer1_desc": "從 Python、Rust 到 OpenAI、Claude，以及成千上萬種 AI Agent 框架，皆在 User Space 中運作。",
+      "layer2_title": "🌉 沙漏的最窄處（唯一通道）",
+      "layer2_desc": "C-ABI (二進位介面) 與 OS System Call (作業系統呼叫)。無論 AI 多聰明，要觸碰真實物理世界都必須脫掉外衣，變成 C 語言指標。",
+      "layer3_title": "👑 跨越生死的通關閘口",
+      "layer3_desc": "VajraClaw 實體建在通關閘口的收費站上。不干涉 AI 思考，也不改動作業系統核心，我們只在 System Call 發生前，用十六進位嚴格驗證金剛合約。"
+    },
     "pain_points": {
       "title_prefix": "企業 AI Agent 正在面對的",
       "title_highlight": "三大痛苦",
