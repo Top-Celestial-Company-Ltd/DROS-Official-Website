@@ -52,9 +52,9 @@ export default function Pricing() {
           <ul className="check-list" style={{textAlign: 'left', marginBottom: '2.5rem', lineHeight: '2.5', color: 'var(--text-primary)'}}>
             {t('tiers.startup.features', { returnObjects: true }).map((f, i) => <li key={i}>{f}</li>)}
           </ul>
-          <Link to="/coming-soon" className="btn btn-primary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginTop: '2.8rem', padding: '1.2rem'}}>
+          <a href="https://drosvajra.gumroad.com/l/vajraclaw_startup" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginTop: '2.8rem', padding: '1.2rem', textAlign: 'center'}}>
             {t('tiers.startup.btn')}
-          </Link>
+          </a>
         </div>
 
         {/* Enterprise Tier */}
@@ -66,9 +66,9 @@ export default function Pricing() {
           <ul className="check-list" style={{textAlign: 'left', marginBottom: '2.5rem', lineHeight: '2.5', color: 'var(--text-primary)'}}>
             {t('tiers.enterprise.features', { returnObjects: true }).map((f, i) => <li key={i}>{f}</li>)}
           </ul>
-          <Link to="/coming-soon" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginTop: '2.8rem', padding: '1.2rem'}}>
+          <a href="https://drosvajra.gumroad.com/l/vajraclaw_enterprise" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginTop: '2.8rem', padding: '1.2rem', textAlign: 'center'}}>
             {t('tiers.enterprise.btn')}
-          </Link>
+          </a>
         </div>
       </div>
 
