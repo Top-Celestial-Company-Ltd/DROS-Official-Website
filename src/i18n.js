@@ -12,6 +12,8 @@ import docsEN from './locales/en/docs.json';
 import docsZHTW from './locales/zh-TW/docs.json';
 import comingsoonEN from './locales/en/comingsoon.json';
 import comingsoonZHTW from './locales/zh-TW/comingsoon.json';
+import aboutEN from './locales/en/about.json';
+import aboutZHTW from './locales/zh-TW/about.json';
 
 const resources = {
   en: {
@@ -19,14 +21,16 @@ const resources = {
     pricing: pricingEN,
     faq: faqEN,
     docs: docsEN,
-    comingsoon: comingsoonEN
+    comingsoon: comingsoonEN,
+    about: aboutEN
   },
   'zh-TW': {
     translation: translationZHTW,
     pricing: pricingZHTW,
     faq: faqZHTW,
     docs: docsZHTW,
-    comingsoon: comingsoonZHTW
+    comingsoon: comingsoonZHTW,
+    about: aboutZHTW
   }
 };
 
