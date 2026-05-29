@@ -41,8 +41,12 @@
           "a": "極低。主要維護工作僅是更新 Markdown 規則檔案，企業內部技術人員或領域專家即可勝任，無需持續調整 Prompt、向量索引或 Fine-tuning。"
         },
         {
-          "q": "如果宿主機器當機，或者 VajraClaw 自身發生崩潰，會發生什麼事？系統會因此門戶大開嗎？",
-          "a": "**絕對不會。DROS 嚴格遵循 Fail-Closed (失效安全) 鐵律。**\n\n這是在企業級資安中最關鍵的一點：**「系統失效時會發生什麼事？」(Failure Mode)**\n\n如果在極端情況下（例如伺服器記憶體耗盡、遭受攻擊），導致 VajraClaw 崩潰，或者宿主機器直接當機，結果是：Agent 會跟著停擺，但**絕對不會門戶大開**。\n\n因為 VajraClaw 是卡在 Agent 與作業系統 System Call 中間的「收費站」。如果收費站垮了，車子（指令）就絕對過不去。駭客**無法**透過故意製造大量垃圾請求 (DDoS) 把 VajraClaw 塞爆當機，藉此讓 Agent 繞過防護。這種 Fail-Closed 架構是銀行與軍工級系統的標準要求，寧可犧牲可用性 (Availability)，也絕不妥協安全性 (Security)。"
+          "q": "如果 VajraClaw 崩潰或連線中斷，會導致系統門戶大開嗎？",
+          "a": "**絕對不會。DROS 在架構上保證了「執行路徑唯一性 (Execution Path Uniqueness)」與「預設阻斷 (Fail-Closed)」。**\n\n這是 SRE 與資安審查中最關鍵的問題：系統失效時，權限會不會跟著提升？\n在 DROS 架構下，VajraClaw 嚴格執行 Fail-Closed 模型：在所有失效情境下，權限驗證預設為拒絕 (Deny by default)，確保系統失效絕對不會轉變為權限提升。\n\n所有 Tool Invocation 必須經過 VajraClaw，不存在任何繞過 (Bypass) 的路徑。如果 VajraClaw 崩潰，有副作用的 API 呼叫將在 OS 系統層被物理阻斷。"
+        },
+        {
+          "q": "Fail-Closed 會不會導致系統可用性 (Availability) 太差，造成業務全停？",
+          "a": "**為了兼顧極致安全與業務連續性，DROS 提供多層次容錯模式 (Failure Modes)。**\n\n- **Mode C (Safe Degraded / 降權沙盒模式)**：企業最常用的折衷設定。當安全網格連線異常或部分組件失效時，Agent 不會全面當機，而是自動降級為「唯讀沙盒」。客服機器人依然可以回答 FAQ，但所有涉及寫入或外部 API 呼叫的操作會被物理性攔截。\n- **Mode D (Strict Fail-Closed / 嚴格阻斷模式)**：預設模式。無有效憑證即無執行權限。針對金融轉帳或醫療病歷修改等高危險操作，寧可全系統停擺，也絕對不允許在沒有安全憑證的情況下執行。\n\n這讓基礎設施工程師不必因為擔心可用性而偷偷編寫不安全的 Bypass Route，完美平衡了 CISO 要的安全與 CTO 要的穩定。"
         },
         {
           "q": "VajraClaw 容易當機嗎？如果斷網或是重開機，需要多久才能恢復防護？",

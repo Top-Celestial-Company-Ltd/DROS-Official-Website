@@ -6,11 +6,12 @@
     "getting_started": "1. 快速入門",
     "architecture": "2. 分散式能力網格",
     "enterprise": "3. 企業級防禦",
-    "security": "4. 零信任架構",
-    "writing_rules": "5. 規則撰寫指南",
-    "deployment": "6. 部署指南",
-    "comparison": "7. 與傳統方案對比",
-    "license": "8. 授權模式",
+    "sre_model": "4. SRE 容錯與資安模型",
+    "security": "5. 零信任架構",
+    "writing_rules": "6. 規則撰寫指南",
+    "deployment": "7. 部署指南",
+    "comparison": "8. 與傳統方案對比",
+    "license": "9. 授權模式",
     "btn": "Get Commercial License"
   },
   "header": {
@@ -58,6 +59,39 @@
       "sub_airgap": "Air-Gapped 離線滿血防護",
       "desc_airgap": "DROS 的防禦核心完全依賴本地端的二進位憑證與純 C 語言指標運算。即使部署於極度機密的 Air-Gapped (實體隔離) 內網環境，防護力依舊絲毫不減，無需對外連線進行驗證。"
     },
+    "sre_model": {
+      "title": "4. SRE 容錯與資安模型 (SRE & Security Model v1)",
+      "desc": "系統安全定位：DROS 是一個**具備確定性、預設阻斷的執行治理層 (deterministic, fail-closed execution governance layer)**。它在工具呼叫邊界強制執行基於能力的授權 (Capability-based Security)，確保 AI Agent 無法執行任何未授權的操作，**即使在系統崩潰或遭到入侵的情況下也是如此**。核心哲學：We control what AI is allowed to execute.",
+      "principles_title": "核心資安設計原則",
+      "principles": [
+        "<strong>預設阻斷 (Fail-Closed by Default)</strong>：任何異常狀態（崩潰、損壞、缺失、不同步）一律導向拒絕執行 (deny execution)。不允許任何「降級為全面放行」的模式，確保系統失效絕對不會轉變為特權提升 (Privilege Escalation)。",
+        "<strong>執行路徑唯一性 (Execution Path Uniqueness)</strong>：所有外部執行必須經過 VajraClaw 執行層，架構上**絕對禁止任何 Bypass Route (繞過路徑)**。",
+        "<strong>基於能力的授權 (Capability-Based Security)</strong>：權限不是基於語意判斷，而是完全依賴顯式的授權憑證 (Explicit Capability Token) 與確定性的密碼學驗證。",
+        "<strong>無狀態快速驗證 (Stateless Fast Path)</strong>：運行時的防護不依賴對話狀態、LLM Context 或外部記憶體系統，僅依賴已簽章的二進位憑證與本地 Bitmap。",
+        "<strong>確定性行為 (Deterministic Behavior)</strong>：相同的輸入 + 相同的憑證版本 = 完全相同的決策結果。"
+      ],
+      "matrix_title": "災難容錯矩陣 (Failure Mode Matrix)",
+      "matrix_headers": {
+        "scenario": "情境 (Scenario)",
+        "behavior": "行為 (System Behavior)",
+        "guarantee": "資安保證 (Security Guarantee)"
+      },
+      "matrix_rows": [
+        {"scenario": "VajraClaw 崩潰", "behavior": "Deny-by-default + 執行中斷", "guarantee": "沒有任何外部 API 可以繞過防護被執行。"},
+        {"scenario": "宿主節點當機", "behavior": "狀態遺失 (State lost)", "guarantee": "重啟或崩潰期間皆無特權提升風險。"},
+        {"scenario": "網路連線中斷", "behavior": "繼續本地執行 (Fail-Isolate)", "guarantee": "基於本地最後一次有效憑證持續防護。"},
+        {"scenario": "找不到安全憑證", "behavior": "阻斷執行 (Block execution)", "guarantee": "安全停機。"},
+        {"scenario": "憑證簽章無效", "behavior": "阻斷執行 (Block execution)", "guarantee": "阻擋被竄改或過期的策略。"},
+        {"scenario": "記憶體 mmap 損壞", "behavior": "安全失效停機 (Safe fail-stop)", "guarantee": "指標運算層級的硬阻斷。"}
+      ],
+      "modes_title": "企業維運模式 (Operational Modes)",
+      "modes": [
+        "<strong>Mode A (Normal Mode)</strong>：完整的權限強制執行與 API 存取控制。",
+        "<strong>Mode B (Isolated Mode)</strong>：網路中斷時，僅依靠本地憑證，維持 100% 防護強度，無需外部同步。",
+        "<strong>Mode C (Safe Degraded Mode)</strong>：可選的企業降級折衷設定。部分服務中斷時，Agent 可自動降級為「唯讀沙盒 (Read-only Sandbox)」，保留業務可用性，但物理攔截所有寫入操作。",
+        "<strong>Mode D (Strict Fail-Closed)</strong>：預設模式。無有效憑證即無執行權。針對金融與醫療場景，寧可全系統停擺，也絕對不妥協放行。"
+      ]
+    },
     "security": {
       "title": "4. 零信任架構與 Prompt Injection 防禦",
       "desc": "在系統安全與執行權限的層面上，DROS <strong>100% 消除了 Prompt Injection 的威脅</strong>。這與我們處理「幻覺」的底層邏輯有異曲同工之妙。以下為您剖析為何 DROS 敢做此宣稱：",
@@ -81,7 +115,7 @@
       }
     },
     "writing_rules": {
-      "title": "5. 規則撰寫指南（金剛戒律）",
+      "title": "6. 規則撰寫指南（金剛戒律）",
       "core_files": "三大核心檔案",
       "files": {
         "agent": {
@@ -136,7 +170,7 @@
       }
     },
     "deployment": {
-      "title": "6. 部署方式",
+      "title": "7. 部署方式",
       "methods_title": "推薦部署架構",
       "methods": [
         "<strong>本地端部署</strong>：直接呼叫核心庫（.dll / .dylib / .so）",
@@ -146,7 +180,7 @@
       "code_title": "Python 呼叫範例"
     },
     "comparison": {
-      "title": "7. 與傳統方案對比",
+      "title": "8. 與傳統方案對比",
       "desc": "在面對「幻覺」與「Prompt Injection」時，傳統方案依賴「概率性防禦」（如 LLM-as-a-judge 或 Prompt Engineering），試圖「治療」AI 的神經網路。而 DROS 則採取 **零信任架構 (Zero Trust Architecture)**：我們假設 AI 隨時會被欺騙，因此直接剝奪其執行權力。所有輸出皆需通過 GuardVM 的物理驗證，一旦越界即觸發 **物理熔斷**，讓幻覺與惡意指令毫無殺傷力。",
       "headers": ["項目", "傳統 RAG + LLM Agent", "DROS 金剛戒律方案", "優勢"],
       "rows": [
@@ -159,7 +193,7 @@
       ]
     },
     "license": {
-      "title": "8. 授權模式",
+      "title": "9. 授權模式",
       "agpl": {
         "title": "AGPL-3.0 開源版",
         "desc": "適合個人研究、學術探索與非商業使用。要求所有基於此版修改的程式碼必須開源。"

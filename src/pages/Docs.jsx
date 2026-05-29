@@ -43,6 +43,7 @@ export default function Docs() {
         <button className={`doc-nav-btn ${activeSection === 'getting-started' ? 'active' : ''}`} onClick={() => scrollTo('getting-started')}>{t('sidebar.getting_started')}</button>
         <button className={`doc-nav-btn ${activeSection === 'architecture' ? 'active' : ''}`} onClick={() => scrollTo('architecture')}>{t('sidebar.architecture')}</button>
         <button className={`doc-nav-btn ${activeSection === 'enterprise' ? 'active' : ''}`} onClick={() => scrollTo('enterprise')}>{t('sidebar.enterprise')}</button>
+        <button className={`doc-nav-btn ${activeSection === 'sre-model' ? 'active' : ''}`} onClick={() => scrollTo('sre-model')}>{t('sidebar.sre_model')}</button>
         <button className={`doc-nav-btn ${activeSection === 'security' ? 'active' : ''}`} onClick={() => scrollTo('security')}>{t('sidebar.security')}</button>
         <button className={`doc-nav-btn ${activeSection === 'writing-rules' ? 'active' : ''}`} onClick={() => scrollTo('writing-rules')}>{t('sidebar.writing_rules')}</button>
         <button className={`doc-nav-btn ${activeSection === 'deployment' ? 'active' : ''}`} onClick={() => scrollTo('deployment')}>{t('sidebar.deployment')}</button>
@@ -153,7 +154,49 @@ export default function Docs() {
           </div>
         </section>
 
-        {/* Section 3: Security & Prompt Injection */}
+        {/* Section 4: SRE & Security Model */}
+        <section id="sre-model" className="doc-section">
+          <h2 style={{ color: 'var(--accent-gold)' }}>{t('sections.sre_model.title')}</h2>
+          <p dangerouslySetInnerHTML={{ __html: t('sections.sre_model.desc') }}></p>
+          
+          <h3 style={{ marginTop: '2rem' }}>{t('sections.sre_model.principles_title')}</h3>
+          <ul className="doc-list check-list">
+            {t('sections.sre_model.principles', { returnObjects: true }).map((principle, i) => (
+              <li key={i} dangerouslySetInnerHTML={{ __html: principle }}></li>
+            ))}
+          </ul>
+
+          <h3 style={{ marginTop: '3rem' }}>{t('sections.sre_model.matrix_title')}</h3>
+          <div className="table-responsive" style={{ marginTop: '1.5rem', marginBottom: '3rem' }}>
+            <table className="doc-table">
+              <thead>
+                <tr>
+                  <th style={{ width: '25%' }}>{t('sections.sre_model.matrix_headers.scenario')}</th>
+                  <th style={{ width: '35%', color: '#ff4d4f' }}>{t('sections.sre_model.matrix_headers.behavior')}</th>
+                  <th style={{ width: '40%', color: 'var(--accent-gold)' }}>{t('sections.sre_model.matrix_headers.guarantee')}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {t('sections.sre_model.matrix_rows', { returnObjects: true }).map((row, i) => (
+                  <tr key={i}>
+                    <td style={{ fontWeight: 'bold' }}>{row.scenario}</td>
+                    <td style={{ color: 'var(--text-primary)' }}>{row.behavior}</td>
+                    <td style={{ color: 'var(--text-secondary)' }}>{row.guarantee}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style={{ marginTop: '2rem' }}>{t('sections.sre_model.modes_title')}</h3>
+          <ul className="doc-list">
+            {t('sections.sre_model.modes', { returnObjects: true }).map((mode, i) => (
+              <li key={i} dangerouslySetInnerHTML={{ __html: mode }}></li>
+            ))}
+          </ul>
+        </section>
+
+        {/* Section 5: Security & Prompt Injection */}
         <section id="security" className="doc-section">
           <h2>{t('sections.security.title')}</h2>
           <p dangerouslySetInnerHTML={{ __html: t('sections.security.desc') }}></p>
@@ -181,7 +224,7 @@ export default function Docs() {
           </div>
         </section>
 
-        {/* Section 4 */}
+        {/* Section 6 */}
         <section id="writing-rules" className="doc-section">
           <h2>{t('sections.writing_rules.title')}</h2>
           
@@ -307,7 +350,7 @@ export default function Docs() {
           </div>
         </section>
 
-        {/* Section 4 */}
+        {/* Section 7 */}
         <section id="deployment" className="doc-section">
           <h2>{t('sections.deployment.title')}</h2>
           <div style={{ display: 'flex', gap: '1rem', margin: '2rem 0' }}>
@@ -345,7 +388,7 @@ result = engine.execute(user_input)
           </div>
         </section>
 
-        {/* Section 5 */}
+        {/* Section 8 */}
         <section id="comparison" className="doc-section">
           <h2>{t('sections.comparison.title')}</h2>
           {t('sections.comparison.desc', { defaultValue: '' }) && (
@@ -374,7 +417,7 @@ result = engine.execute(user_input)
           </div>
         </section>
 
-        {/* Section 6 */}
+        {/* Section 9 */}
         <section id="license" className="doc-section" style={{ borderBottom: 'none' }}>
           <h2>{t('sections.license.title')}</h2>
           <div className="grid-2" style={{ marginTop: '2rem' }}>

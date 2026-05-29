@@ -6,11 +6,12 @@
     "getting_started": "1. Getting Started",
     "architecture": "2. Distributed Mesh",
     "enterprise": "3. Enterprise Defense",
-    "security": "4. Zero Trust Security",
-    "writing_rules": "5. Rule Drafting",
-    "deployment": "6. Deployment",
-    "comparison": "7. Comparison",
-    "license": "8. Licensing",
+    "sre_model": "4. SRE & Security Model",
+    "security": "5. Zero Trust Security",
+    "writing_rules": "6. Rule Drafting",
+    "deployment": "7. Deployment",
+    "comparison": "8. Comparison",
+    "license": "9. Licensing",
     "btn": "Get Commercial License"
   },
   "header": {
@@ -58,8 +59,41 @@
       "sub_airgap": "100% Air-Gapped Protection",
       "desc_airgap": "The core defense mechanism of DROS relies entirely on local binary signatures and pure C pointer arithmetic. Even when deployed in highly classified Air-Gapped internal networks, the protection remains flawless without any need for external validation connections."
     },
+    "sre_model": {
+      "title": "4. SRE & Security Model v1",
+      "desc": "System Positioning: DROS is a **deterministic, fail-closed execution governance layer**. It enforces capability-based security at the tool invocation boundary, ensuring AI Agents cannot execute beyond authorized constraints, **even under system failure or compromise**. Core Philosophy: We control what AI is allowed to execute.",
+      "principles_title": "Core Security Principles",
+      "principles": [
+        "<strong>Fail-Closed by Default</strong>: Any abnormal state (crash, corruption, missing artifact, out-of-sync epoch) invariably defaults to deny execution. The system strictly forbids any 'fallback to allow' modes, ensuring system failure cannot be transformed into privilege escalation.",
+        "<strong>Execution Path Uniqueness</strong>: All external execution MUST pass through the VajraClaw execution layer. Architecture **absolutely prohibits any Bypass Route**.",
+        "<strong>Capability-Based Security</strong>: Privileges are not determined by semantic reasoning, but rely entirely on explicit Capability Tokens combined with deterministic cryptographic verification.",
+        "<strong>Stateless Fast Path Enforcement</strong>: Runtime enforcement is completely decoupled from conversation state, LLM context, or external memory systems. It relies solely on the signed binary credential and local bitmap.",
+        "<strong>Deterministic Behavior</strong>: Same Input + Same Policy Version = Exact Same Decision, unaffected by LLM stochasticity."
+      ],
+      "matrix_title": "Failure Mode Matrix",
+      "matrix_headers": {
+        "scenario": "Scenario",
+        "behavior": "System Behavior",
+        "guarantee": "Security Guarantee"
+      },
+      "matrix_rows": [
+        {"scenario": "VajraClaw Crash", "behavior": "Deny-by-default + Execution Halt", "guarantee": "No direct tool execution occurs outside the enforcement layer."},
+        {"scenario": "Host Node Crash", "behavior": "State lost", "guarantee": "No privilege escalation is possible during or after recovery."},
+        {"scenario": "Network Loss", "behavior": "Local enforcement continues (Fail-Isolate)", "guarantee": "Zero-trust execution proceeds using the last verified local policy."},
+        {"scenario": "Policy Artifact Missing", "behavior": "Block execution", "guarantee": "Safe halt."},
+        {"scenario": "Signature Invalid", "behavior": "Block execution", "guarantee": "Prevents execution of tampered or unauthorized capability policies."},
+        {"scenario": "Corrupted mmap", "behavior": "Safe fail-stop", "guarantee": "Hard halt at the C-pointer level."}
+      ],
+      "modes_title": "Operational Modes",
+      "modes": [
+        "<strong>Mode A (Normal Mode)</strong>: Full capability enforcement and tool access control.",
+        "<strong>Mode B (Isolated Mode)</strong>: Upon network loss, local policy enforcement only. Retains 100% protection without external sync.",
+        "<strong>Mode C (Safe Degraded Mode)</strong>: Optional enterprise setting. When partial failure occurs, Agent degrades to a 'Read-only Sandbox', preserving business availability while physically intercepting all writes.",
+        "<strong>Mode D (Strict Fail-Closed)</strong>: Default mode. No valid capability token = no execution rights. Guarantees absolute safety for financial or medical scenarios."
+      ]
+    },
     "security": {
-      "title": "4. Zero Trust Architecture & Prompt Injection Defense",
+      "title": "5. Zero Trust Architecture & Prompt Injection Defense",
       "desc": "At the system security and execution privilege level, DROS **100% eliminates the threat of Prompt Injection**. The underlying logic here shares similarities with how we handle 'hallucinations'. Here is an analysis of why DROS can confidently make this claim:",
       "traditional": {
         "title": "Why Traditional Architectures Fail to Eliminate the Threat?",
@@ -81,7 +115,7 @@
       }
     },
     "writing_rules": {
-      "title": "5. Writing Rules Guide (Vajra Discipline)",
+      "title": "6. Writing Rules Guide (Vajra Discipline)",
       "core_files": "The Three Core Files",
       "files": {
         "agent": {
@@ -136,7 +170,7 @@
       }
     },
     "deployment": {
-      "title": "6. Deployment",
+      "title": "7. Deployment",
       "methods_title": "Recommended Deployment Architectures",
       "methods": [
         "<strong>Local Deployment</strong>: Direct call to core binaries (.dll / .dylib / .so)",
@@ -146,7 +180,7 @@
       "code_title": "Python Calling Example"
     },
     "comparison": {
-      "title": "7. Comparison with Traditional Solutions",
+      "title": "8. Comparison with Traditional Solutions",
       "desc": "When confronting 'Hallucinations' and 'Prompt Injections', traditional solutions rely on 'probabilistic defense' (like LLM-as-a-judge or Prompt Engineering), attempting to 'cure' the AI's neural network. In contrast, DROS adopts a **Zero Trust Architecture**: We assume the AI will be deceived at any moment, and thus fundamentally strip it of execution authority. All outputs must pass the physical verification of GuardVM; any boundary violation triggers an immediate **Physical Melt**, rendering hallucinations and malicious instructions completely harmless.",
       "headers": ["Item", "Traditional RAG + LLM Agent", "DROS Vajra Discipline", "Advantage"],
       "rows": [
@@ -159,7 +193,7 @@
       ]
     },
     "license": {
-      "title": "8. Licensing",
+      "title": "9. Licensing",
       "agpl": {
         "title": "AGPL-3.0 Open Source",
         "desc": "Suitable for personal research, academic exploration, and non-commercial use. Requires all derivative works to be open-sourced."
