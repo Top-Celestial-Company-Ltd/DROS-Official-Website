@@ -42,6 +42,7 @@ export default function Docs() {
         
         <button className={`doc-nav-btn ${activeSection === 'getting-started' ? 'active' : ''}`} onClick={() => scrollTo('getting-started')}>{t('sidebar.getting_started')}</button>
         <button className={`doc-nav-btn ${activeSection === 'architecture' ? 'active' : ''}`} onClick={() => scrollTo('architecture')}>{t('sidebar.architecture')}</button>
+        <button className={`doc-nav-btn ${activeSection === 'enterprise' ? 'active' : ''}`} onClick={() => scrollTo('enterprise')}>{t('sidebar.enterprise')}</button>
         <button className={`doc-nav-btn ${activeSection === 'security' ? 'active' : ''}`} onClick={() => scrollTo('security')}>{t('sidebar.security')}</button>
         <button className={`doc-nav-btn ${activeSection === 'writing-rules' ? 'active' : ''}`} onClick={() => scrollTo('writing-rules')}>{t('sidebar.writing_rules')}</button>
         <button className={`doc-nav-btn ${activeSection === 'deployment' ? 'active' : ''}`} onClick={() => scrollTo('deployment')}>{t('sidebar.deployment')}</button>
@@ -113,6 +114,42 @@ export default function Docs() {
                 <li key={i} dangerouslySetInnerHTML={{ __html: comp }}></li>
               ))}
             </ul>
+          </div>
+        </section>
+
+        {/* Section 3: Enterprise Defense */}
+        <section id="enterprise" className="doc-section">
+          <h2 style={{ color: 'var(--accent-gold)' }}>{t('sections.enterprise.title')}</h2>
+          <p dangerouslySetInnerHTML={{ __html: t('sections.enterprise.desc') }}></p>
+          
+          <div className="grid-2" style={{ marginTop: '2rem', gap: '2rem' }}>
+            <div className="glass-card" style={{ padding: '2rem', border: '1px solid rgba(212, 175, 55, 0.3)' }}>
+              <h3 style={{ color: '#fff', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <span style={{ fontSize: '1.2rem' }}>🔐</span> {t('sections.enterprise.sub_bloodline')}
+              </h3>
+              <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }} dangerouslySetInnerHTML={{ __html: t('sections.enterprise.desc_bloodline') }}></p>
+            </div>
+            
+            <div className="glass-card" style={{ padding: '2rem', border: '1px solid rgba(0, 240, 255, 0.3)' }}>
+              <h3 style={{ color: '#fff', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <span style={{ fontSize: '1.2rem' }}>⚡</span> {t('sections.enterprise.sub_o1')}
+              </h3>
+              <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }} dangerouslySetInnerHTML={{ __html: t('sections.enterprise.desc_o1') }}></p>
+            </div>
+
+            <div className="glass-card" style={{ padding: '2rem', border: '1px solid rgba(39, 201, 63, 0.3)' }}>
+              <h3 style={{ color: '#fff', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <span style={{ fontSize: '1.2rem' }}>🕒</span> {t('sections.enterprise.sub_ephemeral')}
+              </h3>
+              <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }} dangerouslySetInnerHTML={{ __html: t('sections.enterprise.desc_ephemeral') }}></p>
+            </div>
+            
+            <div className="glass-card" style={{ padding: '2rem', border: '1px solid rgba(255, 77, 79, 0.3)' }}>
+              <h3 style={{ color: '#fff', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <span style={{ fontSize: '1.2rem' }}>🔌</span> {t('sections.enterprise.sub_airgap')}
+              </h3>
+              <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }} dangerouslySetInnerHTML={{ __html: t('sections.enterprise.desc_airgap') }}></p>
+            </div>
           </div>
         </section>
 

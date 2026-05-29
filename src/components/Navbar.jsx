@@ -27,7 +27,9 @@ function Navbar() {
         </Link>
         <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
           <Link to="/" style={{ color: currentPath === '/' ? 'var(--accent-gold)' : 'var(--text-secondary)', textDecoration: 'none', fontWeight: '600' }}>{t('nav.home')}</Link>
+          <Link to="/about" style={{ color: currentPath === '/about' ? 'var(--accent-gold)' : 'var(--text-secondary)', textDecoration: 'none', fontWeight: '600' }}>{t('nav.about')}</Link>
           <Link to="/docs" style={{ color: currentPath === '/docs' ? 'var(--accent-gold)' : 'var(--text-secondary)', textDecoration: 'none', fontWeight: '600' }}>{t('nav.docs')}</Link>
+          <Link to="/solutions" style={{ color: currentPath === '/solutions' ? 'var(--accent-gold)' : 'var(--text-secondary)', textDecoration: 'none', fontWeight: '600' }}>{t('nav.solutions')}</Link>
           <Link to="/pricing" style={{ color: currentPath === '/pricing' ? 'var(--accent-gold)' : 'var(--text-secondary)', textDecoration: 'none', fontWeight: '600' }}>{t('nav.pricing')}</Link>
           <Link to="/faq" style={{ color: currentPath === '/faq' ? 'var(--accent-gold)' : 'var(--text-secondary)', textDecoration: 'none', fontWeight: '600' }}>{t('nav.faq')}</Link>
           

@@ -4,12 +4,13 @@
   "sidebar": {
     "title": "DROS Documentation",
     "getting_started": "1. Getting Started",
-    "architecture": "2. Core Architecture",
-    "security": "3. Zero Trust Security",
-    "writing_rules": "4. Rule Drafting",
-    "deployment": "5. Deployment",
-    "comparison": "6. Comparison",
-    "license": "7. Licensing",
+    "architecture": "2. Distributed Mesh",
+    "enterprise": "3. Enterprise Defense",
+    "security": "4. Zero Trust Security",
+    "writing_rules": "5. Rule Drafting",
+    "deployment": "6. Deployment",
+    "comparison": "7. Comparison",
+    "license": "8. Licensing",
     "btn": "Get Commercial License"
   },
   "header": {
@@ -36,19 +37,29 @@
       ]
     },
     "architecture": {
-      "title": "2. Core Architecture",
-      "desc": "DROS adopts a <strong>Microkernel</strong> design philosophy. All complex logic is decoupled into external rule files.",
-      "key_components": "Key Components",
+      "title": "2. Distributed Capability Mesh",
+      "desc": "DROS has evolved from a standalone architecture into a Kubernetes-level <strong>Zero-Trust Mesh</strong>. It physically partitions the system into a 'Strategic Control Plane' and a 'Frontline Execution Plane'.",
+      "key_components": "Core Mesh Components",
       "components": [
-        "<strong>GuardVM</strong>: The runtime interception engine responsible for contract validation and instant circuit-breaking.",
-        "<strong>Vajra Contract</strong>: The authoritative rule definition system, written in YAML + Markdown.",
-        "<strong>Ephemeral Vajra Discipline</strong>: Dynamic synthesis of <code>AGENT.MD + Vajra.md + user input</code> for each task, expiring immediately after.",
-        "<strong>T-Number Coordinate System</strong>: Physical file-based exact traceability mechanism, ensuring every inference step is auditable.",
-        "<strong>Pure Physical File Topology</strong>: Complete abandonment of Vector DBs, eliminating semantic drift and labeling pollution."
+        "<strong>VajraAgent (Control Plane)</strong>: The strategic headquarters. Responsible for defining human semantics and compiling them into binary security credentials (.bin) with cryptographic signatures.",
+        "<strong>Distribution Mesh</strong>: Encrypted channel-based. Supports microsecond-level Delta Updates for immediate revocation, instantly cutting off a compromised Agent's global access.",
+        "<strong>VajraClaw (Execution Plane)</strong>: Acts as an O(1) physical circuit-breaker sidecar mounted on each node. It only trusts credentials, not narratives, rendering Prompt Injection entirely ineffective."
       ]
     },
+    "enterprise": {
+      "title": "3. Enterprise Defense",
+      "desc": "This is the deepest moat of VajraAgent / VajraClaw for large enterprises, completely resolving C2 hijacking and privilege escalation attacks.",
+      "sub_bloodline": "Cryptographic Bloodline",
+      "desc_bloodline": "In traditional architectures, if a hacker hijacks the Control Plane (C2), they can issue forged commands. DROS uses asymmetric encryption: the headquarters holds the private key and signs the compiled `.bin` files. The VajraClaw at the perimeter has a built-in public key. If the signature doesn't match, it triggers a physical melt. This ensures that 'even if the system admin account is compromised, they cannot command the Agent to do harm'.",
+      "sub_o1": "O(1) Pure C Physical Melt",
+      "desc_o1": "The execution plane abandons JSON parsing and network dependencies, using `mmap` to load credentials into memory. Every Tool Invocation by the Agent is pure C pointer arithmetic. If the bit is 1, it allows; if 0, it issues a hardware interrupt, completing validation in microseconds.",
+      "sub_ephemeral": "Ephemeral Bounds",
+      "desc_ephemeral": "For dynamic Agent tool calls, DROS can instantly inject 'one-time permission boundaries' at runtime. Once the task concludes, they are immediately revoked, physically eradicating privilege crossover when a high-privilege Agent processes malicious input.",
+      "sub_airgap": "100% Air-Gapped Protection",
+      "desc_airgap": "The core defense mechanism of DROS relies entirely on local binary signatures and pure C pointer arithmetic. Even when deployed in highly classified Air-Gapped internal networks, the protection remains flawless without any need for external validation connections."
+    },
     "security": {
-      "title": "3. Zero Trust Architecture & Prompt Injection Defense",
+      "title": "4. Zero Trust Architecture & Prompt Injection Defense",
       "desc": "At the system security and execution privilege level, DROS **100% eliminates the threat of Prompt Injection**. The underlying logic here shares similarities with how we handle 'hallucinations'. Here is an analysis of why DROS can confidently make this claim:",
       "traditional": {
         "title": "Why Traditional Architectures Fail to Eliminate the Threat?",
@@ -70,7 +81,7 @@
       }
     },
     "writing_rules": {
-      "title": "4. Writing Rules Guide (Vajra Discipline)",
+      "title": "5. Writing Rules Guide (Vajra Discipline)",
       "core_files": "The Three Core Files",
       "files": {
         "agent": {
@@ -125,7 +136,7 @@
       }
     },
     "deployment": {
-      "title": "5. Deployment",
+      "title": "6. Deployment",
       "methods_title": "Recommended Deployment Architectures",
       "methods": [
         "<strong>Local Deployment</strong>: Direct call to core binaries (.dll / .dylib / .so)",
@@ -135,7 +146,7 @@
       "code_title": "Python Calling Example"
     },
     "comparison": {
-      "title": "6. Comparison with Traditional Solutions",
+      "title": "7. Comparison with Traditional Solutions",
       "desc": "When confronting 'Hallucinations' and 'Prompt Injections', traditional solutions rely on 'probabilistic defense' (like LLM-as-a-judge or Prompt Engineering), attempting to 'cure' the AI's neural network. In contrast, DROS adopts a **Zero Trust Architecture**: We assume the AI will be deceived at any moment, and thus fundamentally strip it of execution authority. All outputs must pass the physical verification of GuardVM; any boundary violation triggers an immediate **Physical Melt**, rendering hallucinations and malicious instructions completely harmless.",
       "headers": ["Item", "Traditional RAG + LLM Agent", "DROS Vajra Discipline", "Advantage"],
       "rows": [
@@ -148,7 +159,7 @@
       ]
     },
     "license": {
-      "title": "7. Licensing",
+      "title": "8. Licensing",
       "agpl": {
         "title": "AGPL-3.0 Open Source",
         "desc": "Suitable for personal research, academic exploration, and non-commercial use. Requires all derivative works to be open-sourced."

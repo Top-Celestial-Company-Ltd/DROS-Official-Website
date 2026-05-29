@@ -34,16 +34,16 @@
       "btn": "Secure Startup License"
     },
     "enterprise": {
-      "name": "Enterprise <br/><span style='font-size: 1.2rem; color: #ff4d4f'>Air-Gapped</span>",
-      "price_yearly": "$4,990",
-      "desc": "Absolute sovereignty. Zero telemetry. Designed for Fortune 500 companies with extreme security requirements.",
+      "name": "Enterprise <br/><span style='font-size: 1.2rem; color: #ff4d4f'>Zero-Trust Mesh</span>",
+      "price_yearly": "Custom",
+      "desc": "Enterprise Zero-Trust Mesh (Control Plane + Data Plane). Unlimited node distribution, highest SLA guarantees.",
       "features": [
-        "100% Air-Gapped (No Validation Req.)",
-        "Up to 15 Machine UUIDs",
-        "30 Concurrent Agents per Machine",
-        "Advanced Rule Configuration Engine & Priority SLA"
+        "VajraAgent Strategic Hub Deployment",
+        "Volume-based Node Pricing",
+        "Cryptographic Bloodline Anti-tamper",
+        "Dedicated Architect & Priority SLA"
       ],
-      "btn": "Purchase Enterprise License"
+      "btn": "Contact Sales"
     }
   },
   "disclaimer": {

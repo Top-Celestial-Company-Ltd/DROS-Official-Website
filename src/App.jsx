@@ -6,6 +6,8 @@ import Docs from './pages/Docs';
 import Pricing from './pages/Pricing';
 import FAQ from './pages/FAQ';
 import ComingSoon from './pages/ComingSoon';
+import Solutions from './pages/Solutions';
+import About from './pages/About';
 
 export default function App() {
   return (
@@ -17,6 +19,8 @@ export default function App() {
           <Route path="/docs" element={<Docs />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/solutions" element={<Solutions />} />
+          <Route path="/about" element={<About />} />
           <Route path="/coming-soon" element={<ComingSoon />} />
         </Routes>
       </div>

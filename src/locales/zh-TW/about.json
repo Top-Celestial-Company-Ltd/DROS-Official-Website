@@ -1,0 +1,32 @@
+{
+  "meta_title": "DROS - 關於我們 | 數據的瑞士中立國",
+  "meta_desc": "DROS 的市場定位與願景：拒絕概率的沙洲，為 AGI 時代澆灌物理層級的混凝土。成為全球 AI Agent 的標準防護協定。",
+  "hero": {
+    "title": "About <span class='gold-text'>DROS</span>",
+    "subtitle": "我們不建造大模型，我們建造約束大模型的物理法則。",
+    "desc": "在追求 AGI 的狂熱中，產業將摩天大樓蓋在了概率模型的沙洲上。DROS 存在的意義，就是為企業 AI 澆灌最底層的物理混凝土。"
+  },
+  "sections": {
+    "philosophy": {
+      "title": "我們的信仰：確定性 > 概率",
+      "desc": "我們鄙視用疊加十幾個微服務、龐大的向量資料庫 (Vector DB) 與無休止的 Prompt Engineering 來修補「幻覺」。真正的安全不應該建立在猜測與概率之上。<br/><br/>我們主張 <strong>回歸作業系統本質 (Microkernel)</strong>。放棄讓 AI「理解」規則，而是用純粹的記憶體映射 (mmap) 與 C 語言指標運算，在物理層級直接熔斷危險邊界。",
+      "icon": "⚡"
+    },
+    "niche": {
+      "title": "市場定位：數據的「中立國瑞士」",
+      "desc": "我們在 AI 產業鏈中佔據著極其獨特的生態位：<br/><br/>1. <strong>不與 OpenAI、Anthropic 競爭</strong>：我們不訓練底層大模型。<br/>2. <strong>不覬覦企業機密</strong>：我們是零遙測 (Zero-Telemetry) 的物理元件。<br/><br/>我們只做一件事：成為卡在「黑盒大模型」與「企業核心資料」中間的那座 <strong>絕對中立的物理收費站</strong>。只要經過 DROS，再聰明的惡意模型也無法作惡。",
+      "icon": "🇨🇭"
+    },
+    "vision": {
+      "title": "終極願景：AI 治理的標準協定",
+      "desc": "網路時代有 TCP/IP 確保傳輸可靠，加密貨幣有區塊鏈確保共識信任。未來的 Agentic AI 時代，也需要一套確保機器行為不可越界的底層協議。<br/><br/>我們的願景是讓 <strong>DROS 金剛合約 (Vajra Contract)</strong> 成為全球 AI 代理人之間溝通的標準防護憑證網格。讓未來的每一台伺服器，都標配 VajraClaw 物理斷路器。",
+      "icon": "🌐"
+    }
+  },
+  "cta": {
+    "title": "The paradigm shift is here.",
+    "subtitle": "準備好加入我們的物理防護網格了嗎？",
+    "btn_contact": "聯絡創辦團隊",
+    "btn_docs": "閱讀技術白皮書"
+  }
+}

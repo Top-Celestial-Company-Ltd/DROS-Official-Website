@@ -39,6 +39,14 @@
         {
           "q": "Is the system difficult to maintain?",
           "a": "Extremely low difficulty. Maintenance primarily involves updating Markdown rule files. Enterprise domain experts can handle this easily without needing continuous prompt tweaking, vector indexing, or fine-tuning."
+        },
+        {
+          "q": "What happens if the host machine crashes, or if VajraClaw itself experiences a fatal error? Does it leave the system wide open?",
+          "a": "**Absolutely not. DROS strictly adheres to the Fail-Closed security principle.**\n\nThis is the most critical question in enterprise security: **'What is the Failure Mode?'**\n\nIn extreme scenarios (e.g., server memory exhaustion, DDoS attacks) where VajraClaw crashes, or the host machine simply loses power, the result is: The Agent will stop functioning, but the system **will never be left wide open**.\n\nBecause VajraClaw acts as a 'tollbooth' wedged right between the Agent and the OS System Call layer. If the tollbooth collapses, the cars (commands) simply cannot pass. Hackers **cannot** bypass the protection by intentionally flooding VajraClaw with garbage requests to make it crash. This Fail-Closed architecture is a standard requirement for banking and military-grade systems—we would rather sacrifice Availability than compromise Security."
+        },
+        {
+          "q": "Is VajraClaw prone to crashing? How long does it take to recover if it goes offline or the machine reboots?",
+          "a": "**VajraClaw features 'Microkernel Stability', 'Air-Gapped Resilience', and 'Microsecond Recovery'.**\n\n**1. Extreme Stability (Low Crash Rate)**\nTraditional RAG defense solutions rely on bloated Python environments, Vector DBs, Redis caches, or even external API calls. If the network drops or the DB runs out of memory, the whole system paralyzes. VajraClaw, however, uses a **Microkernel design**. The core is just a few hundred lines of pure C/Go code with **zero external dependencies**. As long as the CPU and memory aren't physically fried, it will run stably.\n\n**2. Air-Gapped Resilience**\nIf the node running VajraClaw loses its connection to the VajraAgent Control Plane at headquarters, does it freeze? **Not at all.** At runtime, VajraClaw only relies on the binary capability file (`.bin`) stored on its local disk. Even if you pull the network cable, it retains 100% of its full defensive capabilities without needing to dial home for permission on every tool invocation.\n\n**3. Microsecond Recovery After Reboot**\nIf a VM or physical server restarts due to a power outage, do you need complex data recovery? **No.** VajraClaw uses `mmap` to map security capabilities directly into memory. Once the system reboots, it simply reads the file from disk, and the defense mesh is reconstructed in **microseconds**, bypassing the time-consuming index-rebuilding required by traditional databases."
         }
       ]
     },

@@ -34,16 +34,16 @@
       "btn": "Secure Startup License"
     },
     "enterprise": {
-      "name": "Enterprise <br/><span style='font-size: 1.2rem; color: #ff4d4f'>Air-Gapped</span>",
-      "price_yearly": "$4,990",
-      "desc": "絕對主權。零遙測資料。專為對資安要求極高的 Fortune 500 企業設計。",
+      "name": "Enterprise <br/><span style='font-size: 1.2rem; color: #ff4d4f'>Zero-Trust Mesh</span>",
+      "price_yearly": "Custom",
+      "desc": "企業級零信任網格 (Control Plane + Data Plane)。無上限節點派發，最高等級 SLA 保障。",
       "features": [
-        "100% 物理隔離 (無須 Validation)",
-        "最高 15 組 Machine UUIDs",
-        "每機台 30 個 Concurrent Agents",
-        "進階規則配置引擎與優先 SLA"
+        "VajraAgent 戰略中樞部署",
+        "按節點與網格規模計費",
+        "密碼學血統證明防篡改",
+        "專屬架構師導入與優先 SLA"
       ],
-      "btn": "Purchase Enterprise License"
+      "btn": "Contact Sales"
     }
   },
   "disclaimer": {

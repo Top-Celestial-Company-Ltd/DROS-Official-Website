@@ -1,10 +1,12 @@
 {
   "nav": {
     "home": "Home",
+    "about": "About Us",
     "docs": "Docs",
     "pricing": "Pricing",
     "faq": "FAQ",
-    "get_started": "Get VajraClaw"
+    "get_started": "Get VajraClaw",
+    "solutions": "Solutions"
   },
   "footer": {
     "desc": "The world's first AI semantic runtime system built on a Microkernel + Physical File Discipline. Radically solve hallucination and Prompt Injection for Enterprise AI Agents.",
@@ -139,6 +141,72 @@
       "prompt": "Please read the official website (https://dr-os.io), the Core Architecture (https://github.com/Top-Celestial-Company-Ltd/Dharma-Reasoning-Operating-System), and the Commercial VajraClaw Adapter (https://github.com/Top-Celestial-Company-Ltd/VajraClaw) first.\n\nThen, as a Senior AI Architect, please analyze the 'DROS (Dharma Reasoning Operating System)' architecture. Explain to me how using a 'Minimalist Microkernel + C-FFI + Markdown-based Vajra Contract' can fundamentally solve LLM Hallucinations and Prompt Injections at the physical layer, completely without relying on RAG or Vector DBs.",
       "btn_copy": "Copy Prompt",
       "copied": "✅ Copied! Now go ask your AI!"
+    }
+  },
+  "solutions": {
+    "hero": {
+      "title_prefix": "Enterprise-Grade ",
+      "title_highlight": "AI Governance Mesh",
+      "subtitle": "Addressing the critical pain points of data leaks, lack of RBAC, and audit failures in enterprise LLM adoption.<br/>DROS serves as an irreplaceable 'Third-Party Neutral Security Gateway' at the physical layer."
+    },
+    "products": {
+      "vajraclaw": {
+        "title": "VajraClaw (Hacker Edition)",
+        "tag": "1 Install / 5 Concurrencies",
+        "desc": "The standalone API gateway proxy for the DROS core reasoning engine. Built for individual developers and startups with basic protection."
+      },
+      "vajraclaw_plus": {
+        "title": "VajraClaw+ (SMB Edition)",
+        "tag": "3 Installs / 10 Concurrencies",
+        "desc": "Advanced endpoint protection proxy. Supports Fine-Grained RBAC, offline/intranet deployments, and deep system interception."
+      },
+      "vajraagent": {
+        "title": "VajraAgent (Corporate Brain)",
+        "tag": "Enterprise Mesh Control Plane",
+        "desc": "A centralized strategic control plane. Unifies policy distribution to all VajraClaw nodes, forming a Zero-Trust Enterprise Mesh."
+      }
+    },
+    "architecture": {
+      "title": "Architectural Advantage: Perfect Distributed Protection",
+      "desc": "Similar to Kubernetes or Istio, VajraAgent handles strategic command and privilege distribution, while countless VajraClaw nodes execute O(1) physical circuit-breaking at the edge."
+    },
+    "features": {
+      "title": "Implemented Core Defense Mechanisms",
+      "subtitle": "We don't rely on language models to 'guess' hacker intentions. We establish absolute physical boundaries at the OS level.",
+      "items": {
+        "mmap": {
+          "title": "Zero-Copy Memory Interception",
+          "desc": "The Execution Sidecar mmaps the security capability directly into virtual memory upon startup. Bypassing network and JSON parsing overhead, it executes O(1) microsecond blocking right before a System Call."
+        },
+        "ephemeral": {
+          "title": "Ephemeral Bounds",
+          "desc": "For dynamic Agent tool invocations, we instantly inject 'ephemeral bounds' at runtime. Revoked immediately after use, physically preventing cross-contamination when a high-privilege Agent processes a malicious payload."
+        },
+        "airgap": {
+          "title": "100% Air-Gapped Protection",
+          "desc": "DROS's defense core relies entirely on local binary signatures and pure C pointer arithmetic. It provides uncompromising security even in the strictest Air-Gapped enterprise environments."
+        }
+      }
+    },
+    "planes": {
+      "title": "The Three-Tiered Mesh for Enterprise AI Governance",
+      "layer1": {
+        "title": "Layer 1: Control Plane",
+        "desc": "The strategic hub (VajraAgent) at headquarters. It compiles complex enterprise security semantics and RBAC policies into highly dense, tamper-proof binary security capabilities (.bin)."
+      },
+      "layer2": {
+        "title": "Layer 2: Distribution Mesh",
+        "desc": "Dedicated to the global distribution of security capabilities. When an Agent is compromised, the hub uses micro-sized Delta Updates to instantly revoke its privileges across the global mesh."
+      },
+      "layer3": {
+        "title": "Layer 3: Execution Sidecar",
+        "desc": "Manifested as ultra-lightweight chip modules (`vajra_claw.dll`/`.so`) mounted on endpoints. It guards the OS System Call tollbooth, strictly enforcing the binary contract and rendering Prompt Injections completely ineffective."
+      }
+    },
+    "cta": {
+      "title": "Ready to deploy ultimate AI protection for your enterprise?",
+      "btn_contact": "Contact Sales",
+      "btn_demo": "Book a Demo"
     }
   }
 }

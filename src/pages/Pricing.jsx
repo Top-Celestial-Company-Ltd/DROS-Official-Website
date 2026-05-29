@@ -60,13 +60,13 @@ export default function Pricing() {
         {/* Enterprise Tier */}
         <div className="glass-card pricing-card" style={{ padding: '2.5rem 2rem', background: 'rgba(20,20,20,0.6)' }}>
           <h3 className="serif-font" style={{fontSize: '1.8rem', color: 'var(--text-primary)'}} dangerouslySetInnerHTML={{ __html: t('tiers.enterprise.name') }}></h3>
-          <div style={{fontSize: '2.5rem', fontWeight: 'bold', margin: '1rem 0', color: 'var(--text-primary)'}}>{t('tiers.enterprise.price_yearly')}<span style={{fontSize:'1rem', color:'var(--text-secondary)'}}>/yr</span></div>
+          <div style={{fontSize: '2.5rem', fontWeight: 'bold', margin: '1rem 0', color: 'var(--text-primary)'}}>{t('tiers.enterprise.price_yearly')}</div>
           <p style={{fontSize: '0.9rem', color: 'transparent', marginTop: '-0.5rem', marginBottom: '1.5rem'}}>-</p>
           <p style={{color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '60px', lineHeight: '1.6'}}>{t('tiers.enterprise.desc')}</p>
           <ul className="check-list" style={{textAlign: 'left', marginBottom: '2.5rem', lineHeight: '2.5', color: 'var(--text-primary)'}}>
             {t('tiers.enterprise.features', { returnObjects: true }).map((f, i) => <li key={i}>{f}</li>)}
           </ul>
-          <a href="https://drosvajra.gumroad.com/l/vajraclaw_enterprise" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginTop: '2.8rem', padding: '1.2rem', textAlign: 'center'}}>
+          <a href="mailto:service@dr-os.io" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginTop: '2.8rem', padding: '1.2rem', textAlign: 'center'}}>
             {t('tiers.enterprise.btn')}
           </a>
         </div>
