@@ -162,8 +162,8 @@
       },
       "vajraagent": {
         "title": "VajraAgent (Corporate Brain)",
-        "tag": "Enterprise Mesh Control Plane",
-        "desc": "A centralized strategic control plane. Unifies policy distribution to all VajraClaw nodes, forming a Zero-Trust Enterprise Mesh."
+        "tag": "Enterprise Mesh Control Plane (Contact Sales)",
+        "desc": "A centralized strategic control plane architecture. Unifies policy distribution to all VajraClaw nodes, forming a Zero-Trust Enterprise Mesh. Architecture is defined — contact our sales team to discuss enterprise onboarding."
       }
     },
     "architecture": {
@@ -176,7 +176,7 @@
       "items": {
         "mmap": {
           "title": "Zero-Copy Memory Interception",
-          "desc": "The Execution Sidecar mmaps the security capability directly into virtual memory upon startup. Bypassing network and JSON parsing overhead, it executes O(1) microsecond blocking right before a System Call."
+          "desc": "The Execution Sidecar loads security capabilities directly into virtual memory at startup. Bypassing network and JSON parsing overhead, it executes O(1) microsecond blocking right before a tool invocation. Enterprise edition supports full mmap direct-mapping mode."
         },
         "ephemeral": {
           "title": "Ephemeral Bounds",
@@ -192,15 +192,15 @@
       "title": "The Three-Tiered Mesh for Enterprise AI Governance",
       "layer1": {
         "title": "Layer 1: Control Plane",
-        "desc": "The strategic hub (VajraAgent) at headquarters. It compiles complex enterprise security semantics and RBAC policies into highly dense, tamper-proof binary security capabilities (.bin)."
+        "desc": "The strategic hub (VajraAgent) at headquarters. Compiles enterprise security semantics and RBAC policies into tamper-proof binary security capabilities (.bin). (Enterprise plan — architecture defined, features in active development)"
       },
       "layer2": {
         "title": "Layer 2: Distribution Mesh",
-        "desc": "Dedicated to the global distribution of security capabilities. When an Agent is compromised, the hub uses micro-sized Delta Updates to instantly revoke its privileges across the global mesh."
+        "desc": "Handles distribution and revocation of security capabilities. When an Agent is compromised, uses micro-sized Delta Updates to instantly revoke its privileges. (Enterprise plan — architecture defined, features in active development)"
       },
       "layer3": {
         "title": "Layer 3: Execution Sidecar",
-        "desc": "Manifested as ultra-lightweight chip modules (`vajra_claw.dll`/`.so`) mounted on endpoints. It guards the OS System Call tollbooth, strictly enforcing the binary contract and rendering Prompt Injections completely ineffective."
+        "desc": "Ultra-lightweight chip modules (`vajra_claw.dll`/`.so`) mounted on endpoints. Guards the tool invocation boundary, strictly enforcing the binary contract and rendering Prompt Injections ineffective. (Available in Hacker & Startup editions)"
       }
     },
     "cta": {

@@ -162,8 +162,8 @@
       },
       "vajraagent": {
         "title": "VajraAgent (集團級大腦)",
-        "tag": "企業級 Mesh 控制平面",
-        "desc": "集中式的戰略控制平面。能統一派發政策 (Policy) 給所有 VajraClaw 節點，形成零信任的企業級安全網 (Mesh)。"
+        "tag": "企業 Mesh 控制平面（洽詢中）",
+        "desc": "集中式戰略控制平面架構。統一派發政策給所有 VajraClaw 節點，形成零信任企業安全網。此方案架構設計已定義，企業導入請聯繫銷售團隊進行評估。"
       }
     },
     "architecture": {
@@ -176,7 +176,7 @@
       "items": {
         "mmap": {
           "title": "Zero-Copy 記憶體層攔截",
-          "desc": "執行面 Sidecar 啟動時直接將安全憑證 mmap 映射進虛擬記憶體。不依賴網路傳輸、不浪費效能解析 JSON，在外部工具 (Tool Invocation) 呼叫前執行 O(1) 微秒級阻斷。"
+          "desc": "執行面 Sidecar 啟動時將安全憑證直接載入虛擬記憶體。不依賴網路傳輸、不浪費效能解析 JSON，在外部工具 (Tool Invocation) 呼叫前執行 O(1) 微秒級阻斷。企業版支援 mmap 直接映射模式。"
         },
         "ephemeral": {
           "title": "一次性動態戒律 (Ephemeral Bounds)",
@@ -192,15 +192,15 @@
       "title": "企業 AI 治理的「三層網格架構」",
       "layer1": {
         "title": "Layer 1: 控制面 (Control Plane)",
-        "desc": "佈建於總部的戰略中樞 (VajraAgent)。將企業複雜的資安語意、RBAC 權限，統一降維編譯為極度緻密、且具備防篡改簽章的二進位安全憑證 (.bin)。"
+        "desc": "部署於總部的戰略中樞 (VajraAgent)。將企業的資安語意、RBAC 權限，編譯為具備防篡改簽章的二進位安全憑證 (.bin)。（企業方案，架構設計已定義，功能持續完善中）"
       },
       "layer2": {
         "title": "Layer 2: 派發與撤銷網格",
-        "desc": "專注於安全憑證的全球派發。當系統偵測到特定 Agent 遭受劫持，中樞能透過極小的增量更新 (Delta Update)，瞬間向全球網格註銷該 Agent 的所有權限。"
+        "desc": "負責安全憑證的分發管理。當特定 Agent 遭受劫持，可透過增量更新 (Delta Update) 快速撤銷該 Agent 的所有權限。（企業方案，架構設計已定義，功能持續完善中）"
       },
       "layer3": {
         "title": "Layer 3: 邊車執行面 (Execution Sidecar)",
-        "desc": "化身為超輕量的晶片模組 (`vajra_claw.dll`/`.so`) 掛載於各端點。它死死守在作業系統的 System Call 收費站，只認憑證不聽故事，徹底免疫 Prompt Injection。"
+        "desc": "以超輕量晶片模組 (`vajra_claw.dll`/`.so`) 形式掛載於各端點。守在工具呼叫邊界，只認憑證不聽故事，徹底免疫 Prompt Injection。（Hacker / Startup 版本均已提供）"
       }
     },
     "cta": {
