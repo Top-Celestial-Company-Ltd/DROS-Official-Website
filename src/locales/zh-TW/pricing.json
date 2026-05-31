@@ -1,60 +1,79 @@
 {
   "meta_title": "DROS Pricing - 商業授權與定價方案",
-  "meta_desc": "VajraClaw 商業授權方案。從個人開發者到 Fortune 500 企業的 Air-Gapped 完全隔離方案，為您的 AI 基礎設施提供金剛級防護。",
+  "meta_desc": "DROS 商業授權方案。從獨立開發者的 Free-Trial 到 Fortune 500 企業的密碼學稽核方案，為您的 Agentic AI 基礎設施提供執行期防護。",
   "badge": "Commercial License",
-  "title": "Vajra Claw <span class='gold-text'>商業授權</span>",
-  "subtitle": "從根本解決幻覺與注入攻擊。為您的企業 AI 基礎設施採購物理層級的終極防護。",
-  "early_adopter": "<strong style='color: var(--accent-gold)'>Early Adopter Pricing:</strong> 我們目前處於 V1 釋出階段。企業授權將於 2026 Q4 調漲至 <strong>$15,000/yr</strong>。強烈建議在下一波調漲前鎖定您的授權！",
+  "title": "DROS <span class='gold-text'>生態定價方案</span>",
+  "subtitle": "從根本解決幻覺與注入攻擊。為您的企業 AI 基礎設施升級至 OS 等級的執行治理標準。",
+  "early_adopter": "<strong style='color: var(--accent-gold)'>Early Adopter Pricing:</strong> 我們目前處於 V3 釋出階段。企業授權將於 2026 Q4 調漲至 <strong>$15,000/yr</strong>。強烈建議在下一波調漲前鎖定您的授權！",
   "tiers": {
+    "free_trial": {
+      "name": "VajraClaw Free-Trial <br/><span style='font-size: 1.2rem; color: #a0a0a0'>PLG Edition</span>",
+      "price_yearly": "$0",
+      "price_monthly": "30 Days Timebomb",
+      "desc": "適合獨立開發者與 PoC 概念驗證的終極 O(1) 斷路器。",
+      "features": [
+        "綁定 1 組 Machine UUID",
+        "最高 2 個 Concurrent Agents",
+        "線上授權驗證 (License Validation)",
+        "社群論壇支援"
+      ],
+      "details_title": "展開看詳細技術規格",
+      "details_content": "<p><strong>產品定位</strong>：輕量級、極速、可嵌入的開發者防護工具包，專注體驗 Time-to-first-deny: < 1ms。<br/><strong>核心機制：</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>O(1) Bitmap 引擎</strong>：原生編譯，執行期延遲不到 1 ms。</li><li><strong>Strict Fail-Closed</strong>：直接觸發 Panic，拒絕服務。</li><li><strong>開發體驗</strong>：支援編譯 Vajra.md，快速上手。</li></ul>",
+      "btn": "Download Core Engine"
+    },
     "hacker": {
-      "name": "Hacker",
+      "name": "VajraClaw Hacker <br/><span style='font-size: 1.2rem; color: #a0a0a0'>Solo Developer</span>",
       "price_yearly": "$149",
       "price_monthly": "(or $19/month)",
-      "desc": "適合個人開發者與小型 Side Project 的終極 O(1) 斷路器。",
+      "desc": "適合個人開發者與小型 Side Project。",
       "features": [
         "綁定 1 組 Machine UUID",
         "最高 5 個 Concurrent Agents",
         "線上授權驗證 (License Validation)",
         "社群論壇支援"
       ],
+      "details_title": "展開看詳細技術規格",
+      "details_content": "<p><strong>產品定位</strong>：輕量級、極速、可嵌入的開發者防護工具包，專注體驗 Time-to-first-deny: < 1ms。<br/><strong>核心機制：</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>O(1) Bitmap 引擎</strong>：原生編譯，執行期延遲不到 1 ms。</li><li><strong>Strict Fail-Closed</strong>：直接觸發 Panic，拒絕服務。</li><li><strong>開發體驗</strong>：支援編譯 Vajra.md，快速上手。</li></ul>",
       "btn_yearly": "Buy Yearly ($149)",
       "btn_monthly": "Buy Monthly ($19)"
     },
     "startup": {
-      "badge": "MOST POPULAR",
-      "name": "Startup",
-      "price_yearly": "$499",
-      "desc": "完美契合中小企業 AI 團隊與內部生產環境部署。",
+      "badge": "RECOMMENDED",
+      "name": "VajraClaw+ Startup <br/><span style='font-size: 1.2rem; color: var(--accent-gold)'>Core Engine</span>",
+      "price_yearly": "$799",
+      "desc": "完美契合中小企業 AI 團隊與內部微服務部署。",
       "features": [
         "最高 3 組 Machine UUIDs",
         "每機台 10 個 Concurrent Agents",
-        "線上授權驗證 (License Validation)",
+        "Python / Go 原生跨語言 SDK",
         "優先軟體更新與 Email 支援"
       ],
+      "details_title": "展開看詳細技術規格",
+      "details_content": "<p><strong>產品定位</strong>：商用級別微服務防護版本，針對多 Agent 協作場景與正式上線環境設計。<br/><strong>核心機制：</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li>包含 Hacker 版所有基礎功能。</li><li><strong>Compile-time Intelligence</strong>：在編譯期解開複雜的正規表達式與權限繼承關係。</li><li><strong>跨語言 SDK (Zero-Code)</strong>：提供 Python <code>vajraclaw</code> 模組，一行程式碼封裝 LangChain / AutoGen 呼叫。</li></ul>",
       "btn": "Secure Startup License"
     },
     "enterprise": {
-      "name": "Enterprise <br/><span style='font-size: 1.2rem; color: #ff4d4f'>Zero-Trust Mesh</span>",
-      "price_yearly": "Custom",
-      "desc": "企業級零信任網格 (Control Plane + Data Plane)。無上限節點派發，最高等級 SLA 保障。",
+      "name": "VajraAgent Enterprise <br/><span style='font-size: 1.2rem; color: #ff4d4f'>Zero-Trust Mesh</span>",
+      "price_yearly": "$7,990",
+      "desc": "專為高併發的大型組織打造。當 Agent 併發高達 450 個時，您會需要企業級中控網格與密碼學保護來進行集中管理。",
       "features": [
-        "VajraAgent 戰略中樞部署",
-        "按節點與網格規模計費",
-        "密碼學血統證明防篡改",
-        "專屬架構師導入與優先 SLA"
+        "最高 15 組 Machine UUIDs",
+        "每機台 30 個 Concurrent Agents",
+        "Sealed Binary Policy (防篡改)",
+        "Cryptographic Audit Trace (密碼學稽核)"
       ],
       "btn": "Contact Sales"
     }
   },
   "disclaimer": {
     "title": "⚠️ EULA & Deployment Warning:",
-    "p1": "1. <strong>Fail-Closed Trigger:</strong> 超出授權的 Concurrent Agent 數量將觸發 C-FFI 硬體級別異常，阻斷初始化。若開發者因忽略此異常而強行繞過 VajraClaw，系統將完全暴露於 Prompt Injections 攻擊之下。我們對因規避授權而導致的資料外洩不承擔任何責任。",
-    "p2": "2. <strong>License Validation Protocol:</strong> Hacker 與 Startup 方案需定期連線至 <code>api.dr-os.io</code> 進行驗證。若離線時間超過 24 小時，將導致 LLM 串流完全鎖定。若您的環境為 100% 離線，<strong>必須</strong>採購 Air-Gapped Enterprise 方案。",
-    "p3": "3. <strong>No Refunds on Burned Keys:</strong> 任何試圖反編譯或竄改 <code>vajra_claw.dll/.so</code> 二進位檔案以規避 UUID 限制的行為，將永久銷毀您的 License Key 且不予退費。"
+    "p1": "1. <strong>Fail-Closed Trigger:</strong> DROS 引擎採取嚴格預設攔截。若開發者因忽略 Panic 異常而強行繞過 DROS，系統將完全暴露於 Prompt Injections 攻擊之下。我們對因規避授權或拆卸 DROS 引擎而導致的資料外洩不承擔任何責任。",
+    "p2": "2. <strong>Mesh OTA & Mobile SDK:</strong> 若您需要部署 VajraAgent (企業級中控台) 或 DROS Mobile SDK (終端邊緣防護)，請直接聯繫銷售團隊進行專案評估與架構諮詢。",
+    "p3": "3. <strong>No Refunds on Burned Keys:</strong> 任何試圖反編譯或竄改 <code>policy.bin</code> 二進位簽章的行為，將永久銷毀您的 License Key 且不予退費。"
   },
   "cta": {
-    "title": "Save <span class='gold-text'>EVERYTHING.</span>",
-    "subtitle": "BUY the Vajra Claw.",
-    "btn": "Secure Your Infrastructure Now"
+    "title": "Upgrade to <span class='gold-text'>OS-Level Security.</span>",
+    "subtitle": "SECURE your Agentic Infrastructure.",
+    "btn": "Contact Sales Team"
   }
 }

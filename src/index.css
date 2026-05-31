@@ -149,6 +149,12 @@ section {
   gap: 2rem;
 }
 
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
 /* Text Gradients */
 .gold-text {
   color: var(--accent-gold);
@@ -401,4 +407,54 @@ footer {
 @media (max-width: 768px) {
   .docs-sidebar { display: none; }
   .docs-content { padding: 2rem 1.5rem !important; }
+
+  /* Mobile RWD Overrides */
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  section {
+    padding: 3rem 0;
+  }
+
+  .hero {
+    padding: 4rem 1.5rem 2rem !important;
+    min-height: auto;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .hero .subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .glass-card {
+    padding: 1.5rem;
+  }
+
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Adjust absolute positioning items to not cause overflow */
+  .hero-bg-circle-1, .hero-bg-circle-2 {
+    max-width: 100vw;
+    overflow: hidden;
+  }
 }
+

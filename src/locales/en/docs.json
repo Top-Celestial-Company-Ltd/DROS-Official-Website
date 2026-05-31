@@ -32,7 +32,7 @@
       "philosophy_quote": "“Constrain probabilistic generation with deterministic structures”—Minimal core, explicit rules, effortless maintenance.",
       "quick_start": "3-Minute Quick Start",
       "steps": [
-        "Download the core binaries (Windows / macOS / Linux)",
+        "Go to <a href='https://github.com/mahabodhi/DROS/releases/latest' target='_blank' rel='noreferrer' style='color:var(--accent-gold); text-decoration:underline;'>GitHub Releases</a> to download the core binaries (Windows / macOS / Linux)",
         "Prepare your <code>AGENT.MD</code> + <code>Vajra.md</code> rule files",
         "Integrate into your AI Agent via our lightweight Adapters"
       ]

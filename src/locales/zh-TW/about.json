@@ -9,12 +9,17 @@
   "sections": {
     "philosophy": {
       "title": "我們的信仰：確定性 > 概率",
-      "desc": "我們鄙視用疊加十幾個微服務、龐大的向量資料庫 (Vector DB) 與無休止的 Prompt Engineering 來修補「幻覺」。真正的安全不應該建立在猜測與概率之上。<br/><br/>我們主張 <strong>回歸作業系統本質 (Microkernel)</strong>。放棄讓 AI「理解」規則，而是用純粹的記憶體映射 (mmap) 與 C 語言指標運算，在物理層級直接熔斷危險邊界。",
+      "desc": "我們鄙視用疊加十幾個微服務、龐大的向量資料庫 (Vector DB) 與無休止的 Prompt Engineering 來修補「幻覺」。真正的安全不應該建立在猜測與概率之上。<br/><br/>我們主張 <strong>回歸作業系統本質</strong>。放棄讓 AI「理解」規則，而是用純粹的記憶體映射與位元運算，在物理層級直接熔斷危險邊界。",
       "icon": "⚡"
+    },
+    "origin": {
+      "title": "命名起源：Dharma Reasoning",
+      "desc": "在古老的東方哲學中，<strong>Dharma (法/達摩)</strong> 代表著維持宇宙秩序的絕對法則。我們深信，隨著 AI 具備自主行動能力 (Agentic)，它們也需要一套絕對的法則來約束其行為。<br/><br/>DROS 最初的命名理念便是 <strong>Dharma Reasoning Operation System</strong>，代表著 AI 必須在絕對法度的邊界內進行推理與行動。如今，這份哲學已演進成業界最強悍的 <strong>Deterministic Runtime Operating System</strong>。",
+      "icon": "☸️"
     },
     "niche": {
       "title": "市場定位：數據的「中立國瑞士」",
-      "desc": "我們在 AI 產業鏈中佔據著極其獨特的生態位：<br/><br/>1. <strong>不與 OpenAI、Anthropic 競爭</strong>：我們不訓練底層大模型。<br/>2. <strong>不覬覦企業機密</strong>：我們是零遙測 (Zero-Telemetry) 的物理元件。<br/><br/>我們只做一件事：成為卡在「黑盒大模型」與「企業核心資料」中間的那座 <strong>絕對中立的物理收費站</strong>。只要經過 DROS，再聰明的惡意模型也無法作惡。",
+      "desc": "我們在 AI 產業鏈中佔據著極其獨特的生態位：<br/><br/>1. <strong>不與 OpenAI、Anthropic 競爭</strong>：我們不訓練底層大模型。<br/>2. <strong>不覬覦企業機密</strong>：我們是零遙測 (Zero-Telemetry) 的物理元件。<br/><br/>我們只做一件事：成為卡在「黑盒大模型」與「企業核心資料」中間的那座 <strong>絕對中立的物理檢核站 (Checkpoint)</strong>。只要經過 DROS，再聰明的惡意模型也無法作惡。",
       "icon": "🇨🇭"
     },
     "vision": {

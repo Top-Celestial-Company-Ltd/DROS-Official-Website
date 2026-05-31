@@ -31,6 +31,15 @@ export default function About() {
           <p style={{fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: '1.8'}} dangerouslySetInnerHTML={{ __html: t('sections.philosophy.desc') }}></p>
         </div>
 
+        {/* Origin / Dharma */}
+        <div className="glass-card" style={{ padding: '3rem', borderLeft: '4px solid var(--accent-gold)', position: 'relative', overflow: 'hidden' }}>
+          <div style={{ position: 'absolute', top: '-10px', right: '-10px', fontSize: '6rem', opacity: '0.05', transform: 'rotate(15deg)' }}>{t('sections.origin.icon')}</div>
+          <h3 className="serif-font" style={{fontSize: '2rem', marginBottom: '1.5rem', color: 'var(--accent-gold)', display: 'flex', alignItems: 'center', gap: '0.8rem'}}>
+            <span>{t('sections.origin.icon')}</span> {t('sections.origin.title')}
+          </h3>
+          <p style={{fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: '1.8'}} dangerouslySetInnerHTML={{ __html: t('sections.origin.desc') }}></p>
+        </div>
+
         {/* Niche: Switzerland */}
         <div className="glass-card" style={{ padding: '3rem', borderLeft: '4px solid #e53935', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', top: '-10px', right: '-10px', fontSize: '6rem', opacity: '0.05', transform: 'rotate(15deg)' }}>{t('sections.niche.icon')}</div>

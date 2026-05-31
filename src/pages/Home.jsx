@@ -22,9 +22,9 @@ export default function Home() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="hero" style={{ position: 'relative', overflow: 'hidden', padding: '8rem 2rem 6rem', minHeight: '90vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-        <div style={{ position: 'absolute', top: '20%', left: '50%', transform: 'translate(-50%, -50%)', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(212,175,55,0.15) 0%, rgba(0,0,0,0) 70%)', zIndex: -1, filter: 'blur(40px)' }}></div>
-        <div style={{ position: 'absolute', bottom: '10%', right: '10%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(0,240,255,0.1) 0%, rgba(0,0,0,0) 70%)', zIndex: -1, filter: 'blur(40px)' }}></div>
+      <section className="hero">
+        <div className="hero-bg-circle-1" style={{ position: 'absolute', top: '20%', left: '50%', transform: 'translate(-50%, -50%)', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(212,175,55,0.15) 0%, rgba(0,0,0,0) 70%)', zIndex: -1, filter: 'blur(40px)' }}></div>
+        <div className="hero-bg-circle-2" style={{ position: 'absolute', bottom: '10%', right: '10%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(0,240,255,0.1) 0%, rgba(0,0,0,0) 70%)', zIndex: -1, filter: 'blur(40px)' }}></div>
 
         <div style={{ textAlign: 'center', maxWidth: '900px', zIndex: 1, animation: 'fadeUp 1s ease forwards' }}>
           <span style={{ display: 'inline-block', padding: '0.4rem 1.2rem', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '30px', fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '2rem', letterSpacing: '1px' }}>
@@ -47,7 +47,7 @@ export default function Home() {
               <svg height="24" width="24" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
               {t('home.hero.btn_github')}
             </a>
-            <Link to="/pricing" className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.1rem' }}>
+            <Link to="/docs" className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.1rem' }}>
               {t('home.hero.btn_poc')} &rarr;
             </Link>
           </div>
@@ -76,7 +76,7 @@ export default function Home() {
       </section>
 
       {/* The Ultimate Bottleneck (Hourglass Theory) */}
-      <section className="container" style={{ padding: '6rem 2rem' }}>
+      <section className="container">
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
           <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{t('home.hourglass.title_prefix')}<span className="gold-text">{t('home.hourglass.title_highlight')}</span></h2>
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto' }}>{t('home.hourglass.subtitle')}</p>
@@ -104,7 +104,7 @@ export default function Home() {
       </section>
 
       {/* Pain Points & Solutions */}
-      <section className="container" style={{ padding: '6rem 2rem' }}>
+      <section className="container">
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
           <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{t('home.pain_points.title_prefix')}<span style={{ color: '#ff4d4f' }}>{t('home.pain_points.title_highlight')}</span></h2>
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem' }}>{t('home.pain_points.subtitle')}</p>
@@ -132,7 +132,7 @@ export default function Home() {
       </section>
 
       {/* Core Advantages */}
-      <section className="container" style={{ padding: '6rem 2rem' }}>
+      <section className="container">
         <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '4rem' }}>{t('home.advantages.title_prefix')} <span className="gold-text">{t('home.advantages.title_highlight')}</span>？</h2>
         
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(12, 1fr)', gap: '1.5rem', autoRows: 'minmax(200px, auto)' }}>
@@ -164,7 +164,7 @@ export default function Home() {
       </section>
 
       {/* Comparison Table */}
-      <section className="container" style={{ padding: '6rem 2rem' }}>
+      <section className="container">
         <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '2rem' }}>{t('home.comparison.title_prefix')}<span className="blue-text">{t('home.comparison.title_highlight')}</span></h2>
         {t('home.comparison.desc', { defaultValue: '' }) && (
           <p dangerouslySetInnerHTML={{ __html: t('home.comparison.desc') }} style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 4rem auto', color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: '1.6' }}></p>
@@ -194,7 +194,7 @@ export default function Home() {
       </section>
 
       {/* Target Industries */}
-      <section className="container" style={{ padding: '6rem 2rem' }}>
+      <section className="container">
         <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '4rem' }}>{t('home.industries.title_prefix')}<span className="gold-text">{t('home.industries.title_highlight')}</span></h2>
         <p style={{ textAlign: 'center', color: 'var(--text-secondary)', fontSize: '1.2rem', marginBottom: '3rem' }} dangerouslySetInnerHTML={{ __html: t('home.industries.desc') }}></p>
         
@@ -208,7 +208,7 @@ export default function Home() {
       </section>
 
       {/* Open Source Ecosystem */}
-      <section className="container" style={{ padding: '6rem 2rem' }}>
+      <section className="container">
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
           <span style={{ display: 'inline-block', padding: '0.4rem 1.2rem', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '30px', fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '1rem', letterSpacing: '1px' }}>
             {t('home.ecosystem.badge')}
@@ -249,7 +249,7 @@ export default function Home() {
       </section>
 
       {/* Easter Egg / Ask AI */}
-      <section className="container" style={{ padding: '0 2rem 4rem' }}>
+      <section className="container" style={{ paddingBottom: '4rem' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto', background: 'linear-gradient(180deg, rgba(20,20,25,0.8), rgba(10,10,10,0.9))', border: '1px solid rgba(0, 240, 255, 0.15)', borderRadius: '16px', padding: '2.5rem', boxShadow: '0 8px 30px rgba(0,0,0,0.5)' }}>
           <h3 style={{ fontSize: '1.4rem', color: '#fff', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             {t('home.easter_egg.title')}
@@ -273,7 +273,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="container" style={{ padding: '4rem 2rem 8rem' }}>
+      <section className="container" style={{ paddingBottom: '8rem' }}>
         <div style={{ background: 'linear-gradient(135deg, rgba(20,20,20,0.9), rgba(30,30,35,0.95))', border: '1px solid rgba(212, 175, 55, 0.3)', borderRadius: '24px', padding: '4rem 2rem', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '4px', background: 'linear-gradient(90deg, transparent, var(--accent-gold), transparent)' }}></div>
           
@@ -284,7 +284,7 @@ export default function Home() {
             <a href={`https://github.com/${githubUser}/Dharma-Reasoning-Operating-System`} target="_blank" rel="noreferrer" className="btn btn-secondary" style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
               {t('home.cta.btn_github')}
             </a>
-            <Link to="/pricing" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
+            <Link to="/docs" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
               {t('home.cta.btn_poc')}
             </Link>
           </div>

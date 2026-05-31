@@ -13,11 +13,11 @@
       "questions": [
         {
           "q": "What is DROS?",
-          "a": "DROS (Dharma Reasoning Operating System) is a **minimalist microkernel semantic runtime**, designed specifically for Enterprise AI Agents. Its core utilizes 'Physical-layer Vajra Discipline' to fundamentally solve hallucination and Prompt Injection in generative AI."
+          "a": "In commercial applications, DROS stands for **Deterministic Runtime Operating System**. This reflects our ultimate demand for AI systems: transforming the probabilistic behavior of black-box LLMs into 100% predictable, deterministic execution.\n\nThis naming actually originates from our core philosophy—**Dharma Reasoning Operation System**. This is a profound technological easter egg, representing the original intention of DROS: even when dealing with philosophical doctrines as deep and dense as the Tripitaka (Buddhist canon), the system ensures the AI strictly adheres to the discipline (security contracts) without generating any hallucinations or logical drift. Today, this system has evolved into a **minimalist microkernel semantic runtime** designed specifically for the Agentic AI era, fundamentally solving generative AI's hallucinations and Prompt Injection issues through 'Physical-layer Vajra Discipline'."
         },
         {
           "q": "How does DROS fundamentally differ from traditional RAG / LLM Agents?",
-          "a": "Traditional solutions rely on vector databases and probabilistic models. DROS utilizes **pure physical file topology + microkernel + runtime strict discipline**. It does not 'optimize probability', but rather 'constrains probability with deterministic structures', solving the issue at the architectural level."
+          "a": "Traditional LLM Agent or RAG (Retrieval-Augmented Generation) solutions rely heavily on vector databases (Vector DB) and probabilistic models. They attempt to reduce error rates by 'optimizing prompts' or 'increasing retrieval accuracy', but this is merely playing with 'probabilities' and cannot guarantee absolute safety.\n\nDROS employs a disruptive architecture of **pure physical file topology + O(1) microkernel engine + runtime strict discipline**. We do not waste time 'optimizing probability', but rather **'constrain probability with a deterministic physical structure'**. All contracts and permissions are unrolled into binary Bitmap arrays at Compile-time, and during Runtime, every single Agent operation is subjected to absolute physical-layer verification with a latency of less than 1 millisecond."
         }
       ]
     },
@@ -29,16 +29,20 @@
           "a": "To be precise, DROS does not 'cure' the probabilistic hallucinations of neural networks; rather, it **prevents hallucinations from causing any actual impact**. By monitoring the byte stream via **GuardVM**, if an AI-generated output violates the Vajra Contract boundaries or lacks a valid T-Number, the system executes an immediate **Physical Melt** (cuts the connection) before delivery. The AI may still internally hallucinate characters, but under the physical protection of DROS, these hallucinations are rendered completely harmless."
         },
         {
-          "q": "How does DROS achieve 100% defense against Prompt Injection?",
-          "a": "DROS employs a 'Zero Trust Architecture'. We assume the internal LLM can be deceived by malicious prompts at any time, so DROS fundamentally strips the LLM of its execution authority. When a hacker injects a command attempting to make the AI call unauthorized APIs or leak data, the AI-generated output will inevitably fail to meet the strict boundary constraints hardcoded in the GuardVM via the Vajra Contract. Upon violation, the system executes an immediate **Physical Melt** before any data is dispatched. In other words: malicious instructions might deceive the neural network, but they can absolutely never bypass the DROS physical firewall, achieving a 100% system-level defense."
+          "q": "How does DROS 100% defend against Prompt Injection?",
+          "a": "DROS adopts a 'Zero Trust Architecture'. We assume the LLM can be deceived by a malicious Prompt at any time. Therefore, DROS fundamentally strips the LLM of its execution authority. When a hacker injects commands trying to make the AI call an unauthorized API or leak information, the AI-generated output will inevitably fail to meet the Vajra Contract boundaries hardcoded in GuardVM. Once a violation occurs, the system will directly trigger a **Physical Melt** before the data is even sent out. In other words: malicious instructions might deceive the neural network, but they can never cross DROS's physical firewall, achieving 100% absolute defense at the system level."
+        },
+        {
+          "q": "Is it possible for a hijacked Agent to self-disable or tamper with VajraClaw's rules?",
+          "a": "**Absolutely not. A prisoner cannot fire the warden!**\n\nThis is precisely the core value of DROS's 'OS-level' defense, built on two physical isolation mechanisms:\n\n1. **Physical Privilege Separation**: The Agent only operates in a restricted User Space responsible for 'generating strings'. It has absolutely no high-level host privileges. Therefore, it **cannot touch or tamper with** the `Vajra.md` on the hard drive, let alone unload the VajraClaw module from memory.\n2. **The 'Bomb Defusal' command itself will be intercepted**: Even if the Agent goes crazy due to Prompt Injection and attempts to issue an `rm Vajra.md` command or call a system API to disable the protection, this 'action' itself is a Tool Call. Before it even touches the OS, it will first hit VajraClaw. VajraClaw will detect that this destructive action is not on the contract's whitelist and will instantly trigger a **Physical Melt** in less than 1 millisecond. The Agent never even gets the chance to disarm the system."
         },
         {
           "q": "Does DROS consume a massive amount of tokens?",
-          "a": "No. The core engine runs entirely locally, consuming almost zero tokens, which drastically lowers long-term operational costs."
+          "a": "Absolutely not. The core engine of DROS (VajraClaw) is a pure local binary executable. It does not require sending data back to the LLM for secondary verification, nor does it consume any Tokens. This means that no matter how many Tool Calls your Agent generates per second, the verification cost of DROS is always exactly 0, drastically lowering the infrastructure costs for enterprises operating long-term AI systems."
         },
         {
           "q": "Is the system difficult to maintain?",
-          "a": "Extremely low difficulty. Maintenance primarily involves updating Markdown rule files. Enterprise domain experts can handle this easily without needing continuous prompt tweaking, vector indexing, or fine-tuning."
+          "a": "The maintenance difficulty is extremely low, which is one of the core advantages of DROS. Enterprises do not need to hire dedicated Prompt Engineers, nor do they need to spend massive amounts of time maintaining and tuning vector databases (Vector DB).\n\nAll security boundaries and authorization contracts are defined through human-readable Markdown files (`Vajra.md`). Legal, compliance officers, or domain experts within the enterprise only need to draft rules just like writing everyday documents. The system's compiler will automatically translate them into the underlying defense mesh readable by the engine. This 'Zero-Code' management model brings the maintenance cost close to zero."
         },
         {
           "q": "What happens if VajraClaw crashes or loses connection? Does it leave the system wide open?",
@@ -58,8 +62,12 @@
       "name": "Deployment & Usage",
       "questions": [
         {
-          "q": "How do enterprises deploy DROS?",
-          "a": "1. Deploy the core binaries.\n2. Have internal teams draft `AGENT.MD` and `Vajra.md`.\n3. Integrate into your existing AI Agents via lightweight adapters.\nThe entire process can be completed in weeks."
+          "q": "How do enterprises adopt DROS?",
+          "a": "1. Deploy the core binaries.\n2. Have internal teams draft the AGENT.MD and Vajra.md files.\n3. Integrate into your existing AI Agent via our lightweight Adapters.\nThe entire process can be completed in a few weeks."
+        },
+        {
+          "q": "Will DROS appear in my computer's installed program list? Is it easy to remove?",
+          "a": "**It will not appear in the standard program list, and removal is extremely easy.**\n\nDROS is a **Developer Infrastructure** product. It exists as a library or a sidecar (e.g., installed via `pip install vajraclaw`, or mounted directly as a `.dll/.so` file). It is not a standard desktop application and will not show up in 'Add/Remove Programs'.\n\nAnother major advantage of DROS is that it is **absolutely Stateless**. It does not remember conversations, store business data, or hijack your network layer. This means if you want to remove it, you simply delete the few lines of code calling VajraClaw, and it leaves without a single trace.\n\nThis is also why many solo developers (Hacker tier users, or as we playfully call them, 'players of the Lobster (VajraClaw)') love it so much: there is absolutely zero vendor lock-in. Plug and play, unplug and walk away!"
         },
         {
           "q": "Is drafting rules difficult?",
@@ -67,7 +75,7 @@
         },
         {
           "q": "What languages and platforms are supported?",
-          "a": "The core libraries can be called via Python, Rust, Go, C++, etc., and are fully compatible with Windows, macOS, Linux, and Docker environments."
+          "a": "The DROS microkernel is written in extremely lightweight native languages (C / Go / Zig), providing developers with maximum integration flexibility.\n\nWe provide **Native Cross-Language SDKs for Python and Go**, allowing you to seamlessly embed the DROS core engine into mainstream AI frameworks like LangChain, AutoGen, and Semantic Kernel with just a single line of code. Furthermore, DROS supports multiple deployment environments including Windows, macOS, Linux, and Docker, and even provides a Mobile SDK for Android / iOS edge devices."
         }
       ]
     },
@@ -84,7 +92,7 @@
         },
         {
           "q": "What is the pricing model?",
-          "a": "We use a flexible licensing model based on enterprise scale, deployment volume, and support tiers. Contact us for a customized quote."
+          "a": "To meet the needs of different scales and scenarios, we offer 4 commercial licensing tiers:\n\n1. **VajraClaw Free-Trial (Free)**: PLG Edition, max 2 Concurrent Agents, physical circuit break after 30 days. Perfect for PoC validation.\n2. **VajraClaw Hacker ($149/yr)**: Ideal for solo developers, binding 1 machine UUID, max 5 Concurrent Agents.\n3. **VajraClaw+ Startup ($799/yr)**: The prime choice for SMB microservices, binding 3 machines, up to 10 Concurrent Agents per machine.\n4. **VajraAgent Enterprise ($7,990/yr)**: Built for high-concurrency large organizations (e.g., up to 450 concurrent Agents). Provides an enterprise-grade Mesh Control Plane for centralized management, equipped with tamper-proof Cryptographic Audit Trace. Binding 15 machines, up to 30 Concurrent Agents per machine.\n\nThis tiered pricing ensures that as enterprises scale their AI operations, the protection cost per Agent gradually decreases, maximizing ROI."
         }
       ]
     },
@@ -101,7 +109,7 @@
         },
         {
           "q": "How can we start a trial?",
-          "a": "1. Go to GitHub to obtain the open-source version.\n2. Contact us to request a POC (Proof of Concept).\n3. We will help you rapidly configure your first Vajra Discipline."
+          "a": "It's extremely simple! You can go directly to our homepage and click 'Download Core Engine' to obtain the VajraClaw Free-Trial version.\n\nWe recommend that you first draft a simple `Vajra.md` locally and use the 30-day free license to personally experience the '< 1ms' blazing-fast physical interception speed delivered by DROS. Once you confirm it can perfectly block all Prompt Injection attacks, you can upgrade to the Hacker or Startup commercial licenses at any time."
         }
       ]
     }

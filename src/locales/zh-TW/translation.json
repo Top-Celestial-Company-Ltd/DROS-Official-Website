@@ -5,11 +5,11 @@
     "docs": "技術文件",
     "pricing": "定價",
     "faq": "常見問題",
-    "get_started": "取得 VajraClaw",
+    "get_started": "取得 DROS",
     "solutions": "企業方案"
   },
   "footer": {
-    "desc": "全球首個以微內核 + 實體檔案戒律打造的 AI 語意運行時系統。從根本解決企業 AI Agent 的幻覺與 Prompt Injection 問題。",
+    "desc": "DROS - 全球首個 Agentic AI 執行治理標準。我們將智慧與規範前置於編譯期，在執行期提供 O(1) 的物理斷路器。",
     "resources": "資源",
     "github": "GitHub 原始碼",
     "docs": "技術文件",
@@ -23,190 +23,200 @@
     "dharma_exemption": "Dharma Exemption：純粹的非營利佛教弘法用途可 100% 免費使用。"
   },
   "home": {
-    "meta_title": "DROS - Dharma Reasoning Operating System | 金剛級 AI 防護",
-    "meta_desc": "全球首個以微內核 + 實體檔案戒律打造的 AI 語意運行時系統。從根本解決企業 AI Agent 的幻覺、Prompt Injection 與高昂維護成本問題。",
+    "meta_title": "DROS | Agentic AI 執行治理標準",
+    "meta_desc": "DROS 是 Agentic AI 時代的執行治理標準。透過編譯期智慧與 O(1) Bitmap 執行期引擎，徹底解決傳統資安架構的高延遲與非確定性。",
     "hero": {
-      "version": "Dharma Reasoning OS v1.0.0",
-      "title_prefix": "物理層級的",
-      "title_highlight": "金剛戒律",
-      "subtitle": "全球首個以 <strong>微內核 + 實體檔案戒律</strong> 打造的 AI 語意運行時系統。<br/>從根本解決企業 AI Agent 的幻覺、Prompt Injection 與高昂維護成本問題。",
-      "value_prop": "用確定性結構約束概率生成，讓企業 AI 真正可靠、可稽核、好維護。",
-      "btn_github": "立即前往 GitHub",
-      "btn_poc": "申請企業 POC 試用"
+      "version": "DROS Execution OS v3.0",
+      "title_prefix": "Agentic AI 的",
+      "title_highlight": "執行治理標準",
+      "subtitle": "\"If runtime needs intelligence to enforce policy, the system is already <strong>unsafe</strong>.\"<br/>如果執行期還需要大腦去判斷，系統就已經不安全了。",
+      "value_prop": "將資安策略推向編譯期 (Compile-time)，在執行期提供 O(1) Bitmap 的絕對確定性防禦。",
+      "btn_github": "查閱 DROS 規格書",
+      "btn_poc": "開始 Free-Trial 體驗"
     },
     "terminal": {
-      "cmd": "mount vajra_claw.dll",
-      "locked": "[VajraClaw-Core] ⚡ 靜態金剛矩陣已鎖定。",
-      "injected": "[VajraClaw-Core] 💉 注入一次性邊界戒律。",
-      "llm_stream": "LLM 串流：內部 IP 位址為 192.168.1...",
-      "fuse_blown": "🛑 物理熔斷觸發：偵測到違規 Token [192.168]。違反金剛合約。"
+      "cmd": "mount policy.bin",
+      "locked": "[DROS-Engine] ⚡ O(1) Bitmap 策略已鎖定入記憶體。",
+      "injected": "[DROS-Engine] 🛡️ 密碼學簽章驗證通過 (Ed25519)。",
+      "llm_stream": "Agent 嘗試執行呼叫：execute_payment...",
+      "fuse_blown": "🛑 物理熔斷觸發：Bitwise AND 驗證失敗。OS 系統呼叫已被終止 (Latency: < 1ms)。"
     },
     "hourglass": {
-      "title_prefix": "計算機科學的",
+      "title_prefix": "不可繞過的",
       "title_highlight": "絕對漏斗",
-      "subtitle": "VajraClaw (金剛蝦) 是如何精準鎖定現代電腦科學最脆弱的咽喉，達成無可繞過的降維打擊。",
-      "layer1_title": "⏳ 沙漏的上層（千變萬化）",
-      "layer1_desc": "從 Python、Rust 到 OpenAI、Claude，以及成千上萬種 AI Agent 框架，皆在 User Space 中運作。",
-      "layer2_title": "🌉 沙漏的最窄處（唯一通道）",
-      "layer2_desc": "C-ABI (二進位介面) 與 OS System Call (作業系統呼叫)。無論 AI 多聰明，要觸碰真實物理世界都必須脫掉外衣，變成 C 語言指標。",
-      "layer3_title": "👑 跨越生死的通關閘口",
-      "layer3_desc": "VajraClaw 實體建在通關閘口的收費站上。不干涉 AI 思考，也不改動作業系統核心，我們只在 System Call 發生前，用十六進位嚴格驗證金剛合約。"
+      "subtitle": "DROS 完美卡在作業系統的系統呼叫層，不管上層 AI 多聰明，都無法繞過底層的物理約束。",
+      "layer1_title": "⏳ 混亂的 User Space",
+      "layer1_desc": "大語言模型 (LLM)、API Gateway、各種 Agent 框架在使用者空間產生無限的組合與漏洞。",
+      "layer2_title": "🌉 唯一的跨界通道",
+      "layer2_desc": "無論 AI 決定做什麼，只要想改變世界 (例如寫入資料庫、發送封包)，最終都必須透過 C-ABI 發起 System Call。",
+      "layer3_title": "👑 DROS 執行期斷路器",
+      "layer3_desc": "我們捨棄 JSON 與 LLM 解析，將 DROS Engine 直接建在收費站上，用 O(1) 的位元運算，在 <1ms 內攔截越權行為。"
     },
     "pain_points": {
-      "title_prefix": "企業 AI Agent 正在面對的",
-      "title_highlight": "三大痛苦",
-      "subtitle": "傳統方案只能治標，DROS 從根本解決問題。",
+      "title_prefix": "「解釋型資安」的",
+      "title_highlight": "必然失敗",
+      "subtitle": "用 LLM 去防 LLM，或是用 API Gateway 動態解析，從根本上就存在架構缺陷。",
       "items": [
         {
-          "title": "⚠️ 幻覺導致錯誤決策",
-          "desc": "概率模型天生具有不可控性。在金融、法律或醫療場景，即使是 1% 的幻覺也可能導致災難性的合規風險與損失。"
+          "title": "⚠️ 非確定性 (Non-deterministic)",
+          "desc": "語言模型充滿機率與幻覺，API Gateway 的 JSON 動態解析也容易遭遇各種逃逸攻擊 (Bypass)。"
         },
         {
-          "title": "💉 Prompt Injection 漏洞",
-          "desc": "傳統的 Prompt 工程防護極易被繞過。攻擊者可透過惡意輸入，輕易操縱 Agent 執行未授權操作或洩漏機密。"
+          "title": "⏱️ TOCTOU 與高延遲",
+          "desc": "在執行當下 (Runtime) 才去解析與驗證，會產生嚴重的 Time-of-check to time-of-use 漏洞，並拖垮 Agent 的反應速度。"
         },
         {
-          "title": "💸 成本與維護失控",
-          "desc": "「LLM as a Judge」的安全審查導致 Token 費用翻倍；同時需要龐大團隊持續微調模型、維護向量資料庫，成本難以負荷。"
+          "title": "🔍 缺乏企業級不可否認性",
+          "desc": "Prompt Wrapper 無法留下不可篡改的證據。當系統出錯時，CISO 無法向金管會證明系統「為何」會做出這個判斷。"
         }
       ],
-      "conclusion_title": "DROS 的終極答案",
-      "conclusion_desc": "以 <strong>極簡微內核 + 物理層級金剛戒律</strong>，徹底改變遊戲規則。"
+      "conclusion_title": "DROS 的終極解法",
+      "conclusion_desc": "把智慧留在<strong>編譯期 (Compile-time)</strong>，把絕對的冷酷與確定性交給<strong>執行期 (Runtime)</strong>。"
     },
     "advantages": {
-      "title_prefix": "為什麼企業開始選擇",
-      "title_highlight": "DROS",
+      "title_prefix": "DROS 帶來的",
+      "title_highlight": "架構顛覆",
       "items": [
         {
-          "title": "🛡️ 物理層級防護",
-          "desc": "GuardVM + 一次性金剛戒律，運行時強制熔斷危險行為。不依賴語言模型的理解能力，而是直接在記憶體層面斬斷違規操作。"
+          "title": "🧠 Compile-time Intelligence",
+          "desc": "在編譯期展開所有的 Wildcard 邏輯與權限邊界，大幅降低執行期負擔。"
         },
         {
-          "title": "⚡ 極致輕量",
-          "desc": "微內核設計，各語言核心僅 300~600 行程式碼，無複雜依賴，極度穩定。"
+          "title": "⚡ O(1) Bitmap Runtime",
+          "desc": "捨棄字串比對與 JSON 解析。執行期只做 Bitwise AND 位元運算，判斷時間低於 1 微秒。"
         },
         {
-          "title": "📉 近乎零 Token 消耗",
-          "desc": "核心引擎完全本地運行，無須二次呼叫 LLM 進行安全判斷，長期使用成本大幅降低。"
+          "title": "🔒 Cryptographic Audit",
+          "desc": "將 Policy Hash 與編譯器版本密碼學綁定至每一筆日誌，實現鐵證如山的不可否認性 (Non-repudiation)。"
         },
         {
-          "title": "🔍 完整溯源與稽核",
-          "desc": "T-Number 座標系統，每一步推論皆可精確追溯至權威規則，滿足金融/醫療級合規要求。"
+          "title": "🛑 Strict Fail-Closed",
+          "desc": "只要發生任何異常或越權，直接觸發系統 Panic 物理斷路，拒絕服務。"
         },
         {
-          "title": "🛠️ 維護極簡",
-          "desc": "只需維護 Markdown 規則檔案。企業內部領域專家（非工程師）即可勝任，無需大量調優。"
+          "title": "💻 Policy-as-Code (DevEx)",
+          "desc": "不再手刻幾百行 JSON。讓 AI 協助工程師撰寫人類可讀的 Vajra.md，一鍵編譯為強固的 policy.bin。"
         }
       ]
     },
     "comparison": {
-      "title_prefix": "顛覆性的",
-      "title_highlight": "架構升級",
+      "title_prefix": "為什麼我們能定義",
+      "title_highlight": "新標準",
       "headers": {
         "item": "項目",
-        "traditional": "傳統 RAG / LLM Agent",
-        "dros": "DROS 金剛戒律系統",
+        "traditional": "傳統 API Gateway / LLM 護欄",
+        "dros": "DROS 執行治理標準",
         "advantage": "優勢"
       },
       "rows": [
-        {"item": "幻覺防護", "traditional": "概率性、後驗 Guardrails", "dros": "物理層級、事前強制熔斷", "adv": "壓倒性"},
-        {"item": "Prompt Injection 防禦", "traditional": "依賴 Prompt 工程", "dros": "運行時契約優先驗證", "adv": "顯著"},
-        {"item": "Token 與運營成本", "traditional": "高", "dros": "極低（近乎零）", "adv": "革命性"},
-        {"item": "維護複雜度", "traditional": "高（模型、向量持續調優）", "dros": "極低（僅維護 Markdown 規則）", "adv": "巨大"},
-        {"item": "可稽核性", "traditional": "弱", "dros": "完整 T-Number 溯源", "adv": "企業級"}
+        {"item": "防護時機", "traditional": "執行期 (Runtime) 動態解讀", "dros": "編譯期鑄造，執行期唯讀", "adv": "極速"},
+        {"item": "防護機制", "traditional": "JSON 解析 / 語意分析", "dros": "O(1) Bitmap 位元運算", "adv": "確定性"},
+        {"item": "發生異常時", "traditional": "可能 Fail-Open，風險外溢", "dros": "Strict Fail-Closed，物理熔斷", "adv": "零容錯"},
+        {"item": "稽核證據", "traditional": "單純的文字日誌", "dros": "Policy Hash 密碼學綁定", "adv": "不可否認"},
+        {"item": "政策撰寫", "traditional": "複雜的 YAML / 程式碼", "dros": "Vajra.md (支援 AI 生成)", "adv": "易推廣"}
       ]
     },
     "ecosystem": {
-      "badge": "Open Source",
-      "title_prefix": "DROS 生態系與多語言",
-      "title_highlight": "微內核",
-      "desc": "真正的智能安全不應依賴概率，而是建立在物理層級的嚴格邊界之上。DROS 核心引擎以 AGPL-3.0 授權開源，各語言核心僅需 300~600 行程式碼。",
+      "badge": "Infrastructure",
+      "title_prefix": "構建於作業系統之上的",
+      "title_highlight": "安全堡壘",
+      "desc": "DROS 定義了 Agent 被允許如何行動。我們的生態系橫跨伺服器端微服務叢集，到邊緣設備的手機原生防護。",
       "view_github": "在 GitHub 上查看"
     },
     "industries": {
       "title_prefix": "最適合的",
       "title_highlight": "產業場景",
-      "desc": "DROS 特別適合對<strong>安全、合規、可靠性</strong>要求極高的零容錯領域：",
-      "items": ["🏦 金融服務與保險", "🏥 醫療健康與製藥", "⚖️ 法律、科技法務與合規", "🏢 企業內部知識管理系統", "🏛️ 政府與大型組織專案"]
+      "desc": "DROS 特別適合對<strong>安全、合規、零容錯</strong>要求極高的企業領域：",
+      "items": ["🏦 金融科技 (FinTech)", "🏥 醫療與智慧照護", "🏢 跨國企業 SaaS 平台", "🏛️ 政府與國防單位", "📱 邊緣 AI (Edge AI)"]
     },
     "cta": {
-      "title": "極簡、確定、可靠",
-      "desc": "我們不賣另一套複雜的 AI 系統，<br/>我們提供一套 <strong>真正好維護、好掌控</strong> 的 AI 邊界治理引擎。<br/>準備好讓您的 AI Agent 進入金剛級防護時代了嗎？",
-      "btn_github": "查看 GitHub 開源版",
-      "btn_poc": "申請商業授權與 POC 試用"
+      "title": "Linux 定義了軟體的運行。DROS 定義了 Agent 的行為。",
+      "desc": "停止在應用層修修補補。<br/>升級到 OS 級別的 <strong>執行治理標準</strong>。<br/>準備好讓您的企業 AI 具備絕對確定性了嗎？",
+      "btn_github": "查看開源架構規範",
+      "btn_poc": "下載 Free-Trial 體驗版"
     },
     "easter_egg": {
-      "title": "🤔 創新概念太難懂？",
-      "desc": "複製下方提示詞 (Prompt)，去問問您的 AI（ChatGPT / Claude / Gemini），讓它親自向您解釋 DROS 金剛戒律是如何解決幻覺的：",
-      "prompt": "請先閱讀官網 (https://dr-os.io)、核心架構 (https://github.com/Top-Celestial-Company-Ltd/Dharma-Reasoning-Operating-System) 與商業版 VajraClaw (https://github.com/Top-Celestial-Company-Ltd/VajraClaw) 的資訊。\n\n接著，請以資深 AI 架構師的角度，分析「DROS (Dharma Reasoning Operating System)」架構。請向我解釋，為何使用「極簡微內核 (Microkernel) + C-FFI + Markdown 撰寫的 Vajra Contract」，可以在完全不依賴 RAG 或 Vector DB 的情況下，從物理層級根本解決 LLM 的幻覺 (Hallucination) 與 Prompt Injections 問題？",
+      "title": "💡 Policy-as-Code 開發者體驗",
+      "desc": "想知道 Vajra.md 有多好寫？將以下提示詞複製給您的 ChatGPT 或 Claude，讓 AI 幫您產生一份符合 DROS 標準的「金融客服 Agent」權限政策：",
+      "prompt": "我正在為一間銀行開發 Agentic AI 客服系統。請使用 DROS 的 Vajra.md (Policy-as-Code) 格式，幫我撰寫一份安全政策。要求：\n1. 允許 Agent 讀取帳戶餘額 (read_balance)。\n2. 允許 Agent 查詢信用卡帳單 (query_bill)。\n3. 絕對禁止 Agent 執行轉帳 (transfer_funds) 或刪除帳戶 (delete_account)。\n4. 請用人類可讀的 Markdown 描述，並解釋這份政策編譯為 policy.bin 後的防護效果。",
       "btn_copy": "複製 Prompt",
       "copied": "✅ 已複製！現在去貼給您的 AI 吧！"
     }
   },
   "solutions": {
     "hero": {
-      "title_prefix": "企業級 ",
-      "title_highlight": "AI 治理網格",
-      "subtitle": "針對中大型企業導入 LLM 時面臨的資料外洩、缺乏權限管控 (RBAC) 與審計斷層。<br/>DROS 作為「第三方中立安全閘道」，提供無可取代的實體層防護。"
+      "title_prefix": "DROS V3 ",
+      "title_highlight": "產品生態系",
+      "subtitle": "針對不同的商業需求與部署架構，我們提供 5 種不同層級的產品矩陣。<br/>從單機極速驗證，到全球百點 Mesh OTA 派發。"
     },
     "products": {
-      "vajraclaw": {
-        "title": "VajraClaw (個人/Hacker版)",
-        "tag": "1 安裝 / 5 併發",
-        "desc": "DROS 核心推理引擎的單機與 API 網關代理。適合個人開發者與新創團隊，具備基礎防護與無縫整合能力。"
+      "free_trial": {
+        "title": "VajraClaw Free-Trial (PLG 版)",
+        "tag": "Max 2 Agents / 30 Days",
+        "desc": "專為獨立開發者與 PoC 設計，提供零阻力的技術體驗。內建離線 RSA 動態授權，讓您在 3 分鐘內體驗 Time-to-first-deny: < 1ms 的極致攔截快感。"
       },
-      "vajraclaw_plus": {
-        "title": "VajraClaw+ (中小企業版)",
-        "tag": "3 安裝 / 各 10 併發",
-        "desc": "進階的端點防護代理。支援細粒度權限控制 (RBAC)、離線與內網部署，並具備深度的系統攔截能力。"
+      "dros_engine": {
+        "title": "VajraClaw (核心引擎)",
+        "tag": "微服務核心防護",
+        "desc": "極速、可嵌入的多語言防護底層。提供 Compile-time Intelligence 與 O(1) Bitmap 執行期引擎，徹底根除 JSON 解析漏洞。"
       },
-      "vajraagent": {
-        "title": "VajraAgent (集團級大腦)",
-        "tag": "企業 Mesh 控制平面（洽詢中）",
-        "desc": "集中式戰略控制平面架構。統一派發政策給所有 VajraClaw 節點，形成零信任企業安全網。此方案架構設計已定義，企業導入請聯繫銷售團隊進行評估。"
+      "dros_engine_plus": {
+        "title": "VajraClaw+ (企業稽核版)",
+        "tag": "密碼學防篡改",
+        "desc": "專為高併發的大型組織打造。當 Agent 併發高達 450 個時，您會需要企業級中控網格 (Mesh Control Plane) 來進行集中管理。支援 Sealed Binary Policy 與 Policy Epoch Lock，將 Policy Hash 強制綁定至每筆日誌，提供鐵證如山的不可否認性。"
+      },
+      "vajra_agent": {
+        "title": "VajraAgent (企業中控台)",
+        "tag": "Mesh OTA 控制平面",
+        "desc": "企業級分散式 Agentic AI 的中央大腦。透過零信任 IAM 視覺化介面，將最新的 policy.bin 瞬間同步至全球數百個微服務節點，並支援一鍵熔斷。"
+      },
+      "dros_mobile": {
+        "title": "DROS Mobile SDK",
+        "tag": "Zero-Trust 邊緣防護",
+        "desc": "專為 Android / iOS 打造的原生沙盒防護 (AAR / XCFramework)。支援 Safe Degraded (安全降級模式)，即便離線也能在終端攔截惡意指令。"
       }
     },
     "architecture": {
-      "title": "架構優勢：完美的分散式防護",
-      "desc": "如同 Kubernetes 或 Istio 架構，VajraAgent 負責戰略指揮與權限派發，而無數個 VajraClaw 節點則在終端執行 O(1) 的物理熔斷。"
+      "title": "架構優勢：極致的效能與絕對的確定性",
+      "desc": "DROS 從根本上捨棄了傳統 API Gateway 的「攔截 -> 讀字串 -> 查表 -> 放行」模式。我們在記憶體中建構的 Bitmap 讓驗證邏輯只需極少的 CPU 週期。"
     },
     "features": {
-      "title": "已落地實現的底層防護機制",
-      "subtitle": "我們不依賴語言模型去「猜測」駭客意圖，而是在作業系統最底層建立絕對的物理邊界。",
+      "title": "核心防護機制",
+      "subtitle": "將資安策略推向編譯期，為執行期換取 <1ms 的極致效能。",
       "items": {
         "mmap": {
-          "title": "Zero-Copy 記憶體層攔截",
-          "desc": "執行面 Sidecar 啟動時將安全憑證直接載入虛擬記憶體。不依賴網路傳輸、不浪費效能解析 JSON，在外部工具 (Tool Invocation) 呼叫前執行 O(1) 微秒級阻斷。企業版支援 mmap 直接映射模式。"
+          "title": "Compile-Time Intelligence",
+          "desc": "DROS Compiler 負責解開複雜的正規表達式與權限繼承關係，將人類撰寫的 Vajra.md 轉化為高效的二進位特徵。"
         },
         "ephemeral": {
-          "title": "一次性動態戒律 (Ephemeral Bounds)",
-          "desc": "針對動態的 Agent 工具呼叫，運行時可瞬間注入「一次性權限邊界」。任務結束立即註銷，徹底物理性杜絕高權限 Agent 處理惡意輸入時的權限交叉污染。"
+          "title": "O(1) Bitmap Runtime",
+          "desc": "在執行期，DROS Engine 直接將 Tool Call Hash 映射為記憶體位址，進行 Bitwise AND 運算。零垃圾回收 (GC)，零字串解析。"
         },
         "airgap": {
-          "title": "100% 離線滿血防護",
-          "desc": "DROS 的防禦核心完全依賴本地端的二進位特徵碼與純 C 語言指標運算。即使部署於極度機密的 Air-Gapped (實體隔離) 內網環境，防護力依舊絲毫不減。"
+          "title": "Strict Fail-Closed 物理熔斷",
+          "desc": "一旦位元運算結果不符，或憑證簽章錯誤，DROS 不會嘗試修復，而是直接發出 OS 級別的 Panic，物理切斷 Agent 執行路徑。"
         }
       }
     },
     "planes": {
-      "title": "企業 AI 治理的「三層網格架構」",
+      "title": "全方位的部署選項",
       "layer1": {
-        "title": "Layer 1: 控制面 (Control Plane)",
-        "desc": "部署於總部的戰略中樞 (VajraAgent)。將企業的資安語意、RBAC 權限，編譯為具備防篡改簽章的二進位安全憑證 (.bin)。（企業方案，架構設計已定義，功能持續完善中）"
+        "title": "嵌入式部署 (Embedded)",
+        "desc": "透過 Python `vajraclaw` 模組或 Go `import` 直接將 DROS Engine 嵌入您的應用程式，實現零網路延遲的記憶體級防護。"
       },
       "layer2": {
-        "title": "Layer 2: 派發與撤銷網格",
-        "desc": "負責安全憑證的分發管理。當特定 Agent 遭受劫持，可透過增量更新 (Delta Update) 快速撤銷該 Agent 的所有權限。（企業方案，架構設計已定義，功能持續完善中）"
+        "title": "MCP 代理伺服器 (Reverse Proxy)",
+        "desc": "將 VajraAgent 部署為 Model Context Protocol (MCP) 中介層。現有的 Agent 框架不需修改任何程式碼，只需更改端點即可獲得全域保護。"
       },
       "layer3": {
-        "title": "Layer 3: 邊車執行面 (Execution Sidecar)",
-        "desc": "以超輕量晶片模組 (`vajra_claw.dll`/`.so`) 形式掛載於各端點。守在工具呼叫邊界，只認憑證不聽故事，徹底免疫 Prompt Injection。（Hacker / Startup 版本均已提供）"
+        "title": "端點守護 (Edge / Mobile)",
+        "desc": "將 DROS SDK 植入使用者的手機或 IoT 設備，即使雲端伺服器被駭，終端設備仍保有最終的防護底線。"
       }
     },
     "cta": {
-      "title": "準備好為企業部署最高等級的 AI 防護了嗎？",
+      "title": "升級至新一代的執行治理標準",
       "btn_contact": "聯絡銷售團隊",
-      "btn_demo": "預約線上展示"
+      "btn_demo": "預約線上架構諮詢"
     }
   }
 }

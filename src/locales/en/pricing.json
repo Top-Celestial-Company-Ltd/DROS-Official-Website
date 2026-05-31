@@ -1,60 +1,79 @@
 {
-  "meta_title": "DROS Pricing - Commercial Licensing",
-  "meta_desc": "VajraClaw Commercial Licensing. From indie developers to Fortune 500 Air-Gapped deployments. Equip your AI infrastructure with Vajra-grade protection.",
+  "meta_title": "DROS Pricing - Commercial Licenses",
+  "meta_desc": "DROS Commercial Licenses. From the Free-Trial for indie developers to the Cryptographic Audit solutions for Fortune 500 enterprises. Secure your Agentic AI infrastructure.",
   "badge": "Commercial License",
-  "title": "Vajra Claw <span class='gold-text'>Licensing</span>",
-  "subtitle": "Fundamentally eradicate hallucinations and injections. Procure physical-layer ultimate protection for your Enterprise AI infrastructure.",
-  "early_adopter": "<strong style='color: var(--accent-gold)'>Early Adopter Pricing:</strong> We are currently in the V1 release phase. Enterprise licenses will increase to <strong>$15,000/yr</strong> in Q4 2026. We strongly recommend locking in your license before the next price hike!",
+  "title": "DROS <span class='gold-text'>Ecosystem Pricing</span>",
+  "subtitle": "Eradicate hallucinations and injection attacks at the root. Upgrade your Enterprise AI infrastructure to an OS-level execution governance standard.",
+  "early_adopter": "<strong style='color: var(--accent-gold)'>Early Adopter Pricing:</strong> We are currently in the V3 rollout phase. Enterprise licenses will increase to <strong>$15,000/yr</strong> in Q4 2026. Lock in your license before the price hike!",
   "tiers": {
+    "free_trial": {
+      "name": "VajraClaw Free-Trial <br/><span style='font-size: 1.2rem; color: #a0a0a0'>PLG Edition</span>",
+      "price_yearly": "$0",
+      "price_monthly": "30 Days Timebomb",
+      "desc": "The ultimate O(1) circuit breaker designed for independent developers and PoC validation.",
+      "features": [
+        "1 Machine UUID Binding",
+        "Max 2 Concurrent Agents",
+        "Online License Validation",
+        "Community forum support"
+      ],
+      "details_title": "View Technical Specs",
+      "details_content": "<p><strong>Target Audience</strong>: A lightweight, blazingly fast, embeddable developer toolkit focused on delivering Time-to-first-deny: < 1ms.<br/><strong>Core Mechanisms:</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>O(1) Bitmap Engine</strong>: Native compilation, runtime latency under 1ms.</li><li><strong>Strict Fail-Closed</strong>: Triggers OS-level Panic immediately.</li><li><strong>DevEx</strong>: Compiles Vajra.md for instant deployment.</li></ul>",
+      "btn": "Download Core Engine"
+    },
     "hacker": {
-      "name": "Hacker",
+      "name": "VajraClaw Hacker <br/><span style='font-size: 1.2rem; color: #a0a0a0'>Solo Developer</span>",
       "price_yearly": "$149",
       "price_monthly": "(or $19/month)",
-      "desc": "The ultimate O(1) circuit breaker for indie developers and small side projects.",
+      "desc": "Ideal for solo developers and small side projects.",
       "features": [
-        "Bound to 1 Machine UUID",
-        "Up to 5 Concurrent Agents",
+        "1 Machine UUID Binding",
+        "Max 5 Concurrent Agents",
         "Online License Validation",
-        "Community Forum Support"
+        "Community forum support"
       ],
+      "details_title": "View Technical Specs",
+      "details_content": "<p><strong>Target Audience</strong>: A lightweight, blazingly fast, embeddable developer toolkit focused on delivering Time-to-first-deny: < 1ms.<br/><strong>Core Mechanisms:</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>O(1) Bitmap Engine</strong>: Native compilation, runtime latency under 1ms.</li><li><strong>Strict Fail-Closed</strong>: Triggers OS-level Panic immediately.</li><li><strong>DevEx</strong>: Compiles Vajra.md for instant deployment.</li></ul>",
       "btn_yearly": "Buy Yearly ($149)",
       "btn_monthly": "Buy Monthly ($19)"
     },
     "startup": {
-      "badge": "MOST POPULAR",
-      "name": "Startup",
-      "price_yearly": "$499",
-      "desc": "Perfectly suited for SME AI teams and internal production deployments.",
+      "badge": "RECOMMENDED",
+      "name": "VajraClaw+ Startup <br/><span style='font-size: 1.2rem; color: var(--accent-gold)'>Core Engine</span>",
+      "price_yearly": "$799",
+      "desc": "Perfectly tailored for SMB AI teams and internal microservice deployments.",
       "features": [
-        "Up to 3 Machine UUIDs",
+        "Max 3 Machine UUIDs",
         "10 Concurrent Agents per Machine",
-        "Online License Validation",
-        "Priority Software Updates & Support"
+        "Native Python / Go SDK",
+        "Priority updates & Email support"
       ],
+      "details_title": "View Technical Specs",
+      "details_content": "<p><strong>Target Audience</strong>: Commercial-grade microservice protection for multi-agent workflows and production environments.<br/><strong>Core Mechanisms:</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li>Includes all Hacker tier features.</li><li><strong>Compile-time Intelligence</strong>: Resolves complex regex and permission inheritance at compile time.</li><li><strong>Cross-Language SDK</strong>: Provides Python <code>vajraclaw</code> module for 1-line integration with LangChain / AutoGen.</li></ul>",
       "btn": "Secure Startup License"
     },
     "enterprise": {
-      "name": "Enterprise <br/><span style='font-size: 1.2rem; color: #ff4d4f'>Zero-Trust Mesh</span>",
-      "price_yearly": "Custom",
-      "desc": "Enterprise Zero-Trust Mesh (Control Plane + Data Plane). Unlimited node distribution, highest SLA guarantees.",
+      "name": "VajraAgent Enterprise <br/><span style='font-size: 1.2rem; color: #ff4d4f'>Zero-Trust Mesh</span>",
+      "price_yearly": "$7,990",
+      "desc": "Built for high-concurrency large organizations. When scaling up to 450 concurrent Agents, you need an enterprise-grade control mesh and cryptographic protection for centralized management.",
       "features": [
-        "VajraAgent Strategic Hub Deployment",
-        "Volume-based Node Pricing",
-        "Cryptographic Bloodline Anti-tamper",
-        "Dedicated Architect & Priority SLA"
+        "Max 15 Machine UUIDs",
+        "30 Concurrent Agents per Machine",
+        "Sealed Binary Policy (Anti-tamper)",
+        "Cryptographic Audit Trace"
       ],
       "btn": "Contact Sales"
     }
   },
   "disclaimer": {
     "title": "⚠️ EULA & Deployment Warning:",
-    "p1": "1. <strong>Fail-Closed Trigger:</strong> Exceeding the licensed Concurrent Agent limit will trigger a C-FFI hardware-level exception, blocking initialization. If developers bypass VajraClaw by ignoring this exception, the system will be completely exposed to Prompt Injections. We assume no liability for data breaches caused by license circumvention.",
-    "p2": "2. <strong>License Validation Protocol:</strong> Hacker and Startup tiers require periodic connections to <code>api.dr-os.io</code> for validation. If offline for over 24 hours, the LLM stream will be completely locked. If your environment is 100% offline, you <strong>must</strong> procure the Air-Gapped Enterprise tier.",
-    "p3": "3. <strong>No Refunds on Burned Keys:</strong> Any attempt to decompile or tamper with the <code>vajra_claw.dll/.so</code> binaries to circumvent UUID restrictions will permanently destroy your License Key without a refund."
+    "p1": "1. <strong>Fail-Closed Trigger:</strong> The DROS Engine defaults to strict interception. If developers ignore Panic exceptions and force-bypass DROS, the system is completely exposed to Prompt Injections. We accept zero liability for data breaches resulting from bypassing or disabling the DROS Engine.",
+    "p2": "2. <strong>Mesh OTA & Mobile SDK:</strong> If you require VajraAgent (Enterprise Control Plane) or DROS Mobile SDK (Endpoint Edge Protection) deployments, please contact our sales team directly for architectural consultation.",
+    "p3": "3. <strong>No Refunds on Burned Keys:</strong> Any attempt to decompile or tamper with the <code>policy.bin</code> binary signature will permanently destroy your License Key without refund."
   },
   "cta": {
-    "title": "Save <span class='gold-text'>EVERYTHING.</span>",
-    "subtitle": "BUY the Vajra Claw.",
-    "btn": "Secure Your Infrastructure Now"
+    "title": "Upgrade to <span class='gold-text'>OS-Level Security.</span>",
+    "subtitle": "SECURE your Agentic Infrastructure.",
+    "btn": "Contact Sales Team"
   }
 }

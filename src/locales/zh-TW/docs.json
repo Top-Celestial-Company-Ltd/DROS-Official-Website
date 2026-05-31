@@ -32,7 +32,7 @@
       "philosophy_quote": "「用確定性結構約束概率性生成」——核心極小、規則明確、維護極簡。",
       "quick_start": "3 分鐘上手流程",
       "steps": [
-        "下載核心二進位庫（Windows / macOS / Linux）",
+        "前往 <a href='https://github.com/mahabodhi/DROS/releases/latest' target='_blank' rel='noreferrer' style='color:var(--accent-gold); text-decoration:underline;'>GitHub Releases</a> 下載核心二進位庫（Windows / macOS / Linux）",
         "準備 <code>AGENT.MD</code> + <code>Vajra.md</code> 規則檔案",
         "透過輕量 Adapter 整合到您的 AI Agent 中"
       ]

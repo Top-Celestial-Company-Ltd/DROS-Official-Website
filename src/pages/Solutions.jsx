@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 
@@ -33,39 +33,63 @@ export default function Solutions() {
       <section style={{ paddingTop: '2rem' }}>
         <div className="container">
           <div className="grid-3">
-            {/* VajraClaw (Hacker) */}
+            {/* Free Trial */}
             <div className="glass-card animate-fade-up delay-1">
-              <div className="kernel-icon">⚡</div>
-              <h3 style={{ marginBottom: '0.5rem', fontSize: '1.5rem' }}>{t('solutions.products.vajraclaw.title')}</h3>
+              <div className="kernel-icon">🎁</div>
+              <h3 style={{ marginBottom: '0.5rem', fontSize: '1.4rem' }}>{t('solutions.products.free_trial.title')}</h3>
               <div className="platform-tag" style={{ display: 'inline-block', marginBottom: '1rem', color: '#a0a0a0' }}>
-                {t('solutions.products.vajraclaw.tag')}
+                {t('solutions.products.free_trial.tag')}
               </div>
               <p style={{ color: 'var(--text-secondary)' }}>
-                {t('solutions.products.vajraclaw.desc')}
+                {t('solutions.products.free_trial.desc')}
               </p>
             </div>
 
-            {/* VajraClaw+ (SMB) */}
-            <div className="glass-card animate-fade-up delay-2" style={{ borderColor: 'rgba(212, 175, 55, 0.3)' }}>
-              <div className="kernel-icon" style={{ color: 'var(--accent-gold)' }}>🛡️</div>
-              <h3 style={{ marginBottom: '0.5rem', fontSize: '1.5rem' }}>{t('solutions.products.vajraclaw_plus.title')}</h3>
-              <div className="platform-tag" style={{ display: 'inline-block', marginBottom: '1rem', color: 'var(--accent-gold)', borderColor: 'rgba(212, 175, 55, 0.3)' }}>
-                {t('solutions.products.vajraclaw_plus.tag')}
-              </div>
-              <p style={{ color: 'var(--text-secondary)' }}>
-                {t('solutions.products.vajraclaw_plus.desc')}
-              </p>
-            </div>
-
-            {/* VajraAgent (Enterprise) */}
-            <div className="glass-card animate-fade-up delay-3" style={{ background: 'rgba(0, 240, 255, 0.05)', borderColor: 'rgba(0, 240, 255, 0.3)' }}>
-              <div className="kernel-icon" style={{ color: 'var(--accent-blue)' }}>🧠</div>
-              <h3 style={{ marginBottom: '0.5rem', fontSize: '1.5rem' }}>{t('solutions.products.vajraagent.title')}</h3>
+            {/* DROS Engine */}
+            <div className="glass-card animate-fade-up delay-2" style={{ borderColor: 'rgba(0, 240, 255, 0.3)' }}>
+              <div className="kernel-icon" style={{ color: 'var(--accent-blue)' }}>⚡</div>
+              <h3 style={{ marginBottom: '0.5rem', fontSize: '1.4rem' }}>{t('solutions.products.dros_engine.title')}</h3>
               <div className="platform-tag" style={{ display: 'inline-block', marginBottom: '1rem', color: 'var(--accent-blue)', borderColor: 'rgba(0, 240, 255, 0.3)' }}>
-                {t('solutions.products.vajraagent.tag')}
+                {t('solutions.products.dros_engine.tag')}
               </div>
               <p style={{ color: 'var(--text-secondary)' }}>
-                {t('solutions.products.vajraagent.desc')}
+                {t('solutions.products.dros_engine.desc')}
+              </p>
+            </div>
+
+            {/* DROS Engine+ */}
+            <div className="glass-card animate-fade-up delay-3" style={{ borderColor: 'rgba(212, 175, 55, 0.3)' }}>
+              <div className="kernel-icon" style={{ color: 'var(--accent-gold)' }}>🛡️</div>
+              <h3 style={{ marginBottom: '0.5rem', fontSize: '1.4rem' }}>{t('solutions.products.dros_engine_plus.title')}</h3>
+              <div className="platform-tag" style={{ display: 'inline-block', marginBottom: '1rem', color: 'var(--accent-gold)', borderColor: 'rgba(212, 175, 55, 0.3)' }}>
+                {t('solutions.products.dros_engine_plus.tag')}
+              </div>
+              <p style={{ color: 'var(--text-secondary)' }}>
+                {t('solutions.products.dros_engine_plus.desc')}
+              </p>
+            </div>
+
+            {/* VajraAgent */}
+            <div className="glass-card animate-fade-up delay-1" style={{ borderColor: 'rgba(210, 168, 255, 0.3)' }}>
+              <div className="kernel-icon" style={{ color: '#d2a8ff' }}>🧠</div>
+              <h3 style={{ marginBottom: '0.5rem', fontSize: '1.4rem' }}>{t('solutions.products.vajra_agent.title')}</h3>
+              <div className="platform-tag" style={{ display: 'inline-block', marginBottom: '1rem', color: '#d2a8ff', borderColor: 'rgba(210, 168, 255, 0.3)' }}>
+                {t('solutions.products.vajra_agent.tag')}
+              </div>
+              <p style={{ color: 'var(--text-secondary)' }}>
+                {t('solutions.products.vajra_agent.desc')}
+              </p>
+            </div>
+
+            {/* DROS Mobile SDK */}
+            <div className="glass-card animate-fade-up delay-2" style={{ borderColor: 'rgba(39, 201, 63, 0.3)' }}>
+              <div className="kernel-icon" style={{ color: '#27c93f' }}>📱</div>
+              <h3 style={{ marginBottom: '0.5rem', fontSize: '1.4rem' }}>{t('solutions.products.dros_mobile.title')}</h3>
+              <div className="platform-tag" style={{ display: 'inline-block', marginBottom: '1rem', color: '#27c93f', borderColor: 'rgba(39, 201, 63, 0.3)' }}>
+                {t('solutions.products.dros_mobile.tag')}
+              </div>
+              <p style={{ color: 'var(--text-secondary)' }}>
+                {t('solutions.products.dros_mobile.desc')}
               </p>
             </div>
           </div>
