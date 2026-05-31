@@ -10,11 +10,11 @@
     "philosophy": {
       "title": "Our Philosophy: Determinism > Probability",
       "desc": "We disdain patching 'hallucinations' by layering dozens of microservices, massive Vector DBs, and endless Prompt Engineering. True security should never be built on guesswork and probabilities.<br/><br/>We advocate for <strong>returning to OS-level primitives</strong>. Instead of trying to make the AI 'understand' the rules, we use pure memory mapping and bitwise operations to physically melt dangerous boundaries at runtime.",
-      "icon": "⚡"
+      "icon": "🛡️"
     },
     "origin": {
       "title": "Name Origin: Dharma Reasoning",
-      "desc": "In ancient Eastern philosophy, <strong>Dharma</strong> represents the absolute laws that maintain cosmic order. We firmly believe that as AI attains autonomous capabilities (Agentic), it requires an absolute set of laws to govern its behavior.<br/><br/>The original conceptual name for DROS was the <strong>Dharma Reasoning Operation System</strong>, signifying that AI must reason and operate strictly within the boundaries of an absolute law. Today, this philosophy has evolved into the industry's most robust <strong>Deterministic Runtime Operating System</strong>.",
+      "desc": "Driven by a deep passion for Buddhism, DROS began as the <strong>Dharma Reasoning Operating System</strong>—an open-source AI infrastructure designed to eliminate hallucinations and preserve the purity of Buddhist teachings. We open-sourced this core on GitHub to allow public scrutiny and offer it for free to anyone seeking the Dharma.<br/><br/>During this process, we unexpectedly discovered that this exact deterministic core could be applied to solve the broader, critical enterprise problems of AI hallucinations and Prompt Injections. This realization led us to develop our first commercial product: <strong>VajraClaw</strong>.",
       "icon": "☸️"
     },
     "niche": {
@@ -25,7 +25,7 @@
     "vision": {
       "title": "Ultimate Vision: The Standard AI Protocol",
       "desc": "Just as the internet era relies on TCP/IP for reliable transmission, and crypto relies on blockchain for consensus, the upcoming Agentic AI era requires a foundational protocol to ensure machine behavior never crosses the line.<br/><br/>Our vision is to make the <strong>DROS Vajra Contract</strong> the standard security credential mesh for global AI Agent communication. We aim for every future server to be equipped with a VajraClaw physical circuit-breaker by default.",
-      "icon": "🌐"
+      "icon": "🕸️"
     }
   },
   "cta": {

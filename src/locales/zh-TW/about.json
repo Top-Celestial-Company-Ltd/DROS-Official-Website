@@ -1,37 +1,37 @@
 {
-  "meta_title": "DROS - 關於我們 | 數據的瑞士中立國",
-  "meta_desc": "DROS 的市場定位與願景：拒絕概率的沙洲，為 AGI 時代澆灌物理層級的混凝土。成為全球 AI Agent 的標準防護協定。",
+  "meta_title": "DROS - 關於我們 | 數據的數位瑞士",
+  "meta_desc": "DROS 市場定位與願景：拒絕機率性的沙洲，為 AGI 時代澆灌最堅固的底層物理混凝土。成為全球 AI Agent 的標準防護協定。",
   "hero": {
     "title": "About <span class='gold-text'>DROS</span>",
-    "subtitle": "我們不建造大模型，我們建造約束大模型的物理法則。",
-    "desc": "在追求 AGI 的狂熱中，產業將摩天大樓蓋在了概率模型的沙洲上。DROS 存在的意義，就是為企業 AI 澆灌最底層的物理混凝土。"
+    "subtitle": "我們不建造大模型，我們建立約束大模型的物理定律。",
+    "desc": "在追求 AGI 的狂熱競逐中，產業在機率模型的沙洲上蓋起了摩天大樓。DROS 存在的意義，就是為企業 AI 澆灌最底層的物理混凝土。"
   },
   "sections": {
     "philosophy": {
-      "title": "我們的信仰：確定性 > 概率",
-      "desc": "我們鄙視用疊加十幾個微服務、龐大的向量資料庫 (Vector DB) 與無休止的 Prompt Engineering 來修補「幻覺」。真正的安全不應該建立在猜測與概率之上。<br/><br/>我們主張 <strong>回歸作業系統本質</strong>。放棄讓 AI「理解」規則，而是用純粹的記憶體映射與位元運算，在物理層級直接熔斷危險邊界。",
-      "icon": "⚡"
+      "title": "我們的信仰：確定性 > 機率性",
+      "desc": "我們深感遺憾看著大廠用疊床架屋的微服務、龐大的向量資料庫 (Vector DB) 與無休止的 Prompt Engineering 來修補「幻覺」。真正的安全不應該建立在預測與機率之上。<br/><br/>我們主張<strong>回歸作業系統本質</strong>。放棄對 AI 「講道理」，而是用純粹的記憶體映射與位元運算，在底層直接熔斷危險邊界。",
+      "icon": "🛡️"
     },
     "origin": {
       "title": "命名起源：Dharma Reasoning",
-      "desc": "在古老的東方哲學中，<strong>Dharma (法/達摩)</strong> 代表著維持宇宙秩序的絕對法則。我們深信，隨著 AI 具備自主行動能力 (Agentic)，它們也需要一套絕對的法則來約束其行為。<br/><br/>DROS 最初的命名理念便是 <strong>Dharma Reasoning Operation System</strong>，代表著 AI 必須在絕對法度的邊界內進行推理與行動。如今，這份哲學已演進成業界最強悍的 <strong>Deterministic Runtime Operating System</strong>。",
+      "desc": "源自對佛法的深厚熱忱，DROS 起初被定義為 <strong>Dharma Reasoning Operating System (佛法推演作業系統)</strong>——一套旨在消除 AI 幻覺、確保佛法精確傳遞的開源底層基礎設施。我們在 GitHub 上將其無私分享，接受全球公開檢視，並免費提供給所有求法者。<br/><br/>在這過程中，我們意外發現，這套絕對確定性的核心技術，竟能完美解決企業級 AI 幻覺與 Prompt Injection 等關鍵痛點——這促使我們開發出首款商業防禦引擎：<strong>VajraClaw (金剛爪)</strong>。",
       "icon": "☸️"
     },
     "niche": {
-      "title": "市場定位：數據的「中立國瑞士」",
-      "desc": "我們在 AI 產業鏈中佔據著極其獨特的生態位：<br/><br/>1. <strong>不與 OpenAI、Anthropic 競爭</strong>：我們不訓練底層大模型。<br/>2. <strong>不覬覦企業機密</strong>：我們是零遙測 (Zero-Telemetry) 的物理元件。<br/><br/>我們只做一件事：成為卡在「黑盒大模型」與「企業核心資料」中間的那座 <strong>絕對中立的物理檢核站 (Checkpoint)</strong>。只要經過 DROS，再聰明的惡意模型也無法作惡。",
+      "title": "市場定位：數據的數位瑞士",
+      "desc": "我們在 AI 產業鏈中佔據極為獨特的生態位：<br/><br/>1. <strong>不與 OpenAI、Anthropic 競爭</strong>：我們不訓練底層大模型。<br/>2. <strong>不覬覦企業機密</strong>：我們是零監測 (Zero-Telemetry) 的物理元件。<br/><br/>我們只做一件事：完美卡在「黑盒子大模型」與「企業核心數據」的中間，擔任<strong>絕對中立的物理檢查哨 (Checkpoint)</strong>。只要經過 DROS，再狡猾的惡意模型也無法作惡。",
       "icon": "🇨🇭"
     },
     "vision": {
-      "title": "終極願景：AI 治理的標準協定",
-      "desc": "網路時代有 TCP/IP 確保傳輸可靠，加密貨幣有區塊鏈確保共識信任。未來的 Agentic AI 時代，也需要一套確保機器行為不可越界的底層協議。<br/><br/>我們的願景是讓 <strong>DROS 金剛合約 (Vajra Contract)</strong> 成為全球 AI 代理人之間溝通的標準防護憑證網格。讓未來的每一台伺服器，都標配 VajraClaw 物理斷路器。",
-      "icon": "🌐"
+      "title": "終極願景：AI 治理標準協定",
+      "desc": "網路時代靠 TCP/IP 確保傳輸可靠，加密貨幣靠區塊鏈確保去信任化。未來的 Agentic AI 時代，則需要一套確保機器行為永不越軌的底層協定。<br/><br/>我們的願景是讓 <strong>DROS 金剛合約 (Vajra Contract)</strong> 成為全球 AI 溝通的安全憑證網格。讓每一台伺服器，都標配 VajraClaw 的物理斷路器。",
+      "icon": "🕸️"
     }
   },
   "cta": {
     "title": "The paradigm shift is here.",
-    "subtitle": "準備好加入我們的物理防護網格了嗎？",
-    "btn_contact": "聯絡創辦團隊",
+    "subtitle": "準備好加入物理防禦網格了嗎？",
+    "btn_contact": "聯絡創辦人",
     "btn_docs": "閱讀技術白皮書"
   }
 }
