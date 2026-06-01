@@ -1,6 +1,6 @@
 {
   "meta_title": "DROS Documentation - 企業級零幻覺架構",
-  "meta_desc": "DROS (Dharma Reasoning Operating System) 官方技術文件。了解如何透過微內核、金剛合約與 T-Number 系統，打造 100% 無幻覺的 AI Agent。",
+  "meta_desc": "DROS (Deterministic Runtime Operating System) 官方技術文件。了解如何透過微內核、金剛合約與 T-Number 系統，打造 100% 無幻覺的 AI Agent。",
   "sidebar": {
     "title": "DROS Documentation",
     "getting_started": "1. 快速入門",
@@ -15,7 +15,7 @@
     "btn": "Get Commercial License"
   },
   "header": {
-    "title": "Dharma Reasoning Operating System",
+    "title": "Deterministic Runtime Operating System",
     "version": "v1.0.0 (商業化第一版)",
     "last_updated": "Last updated: 2026-05"
   },

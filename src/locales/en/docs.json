@@ -1,6 +1,6 @@
 {
   "meta_title": "DROS Documentation - Zero-Hallucination Architecture",
-  "meta_desc": "DROS (Dharma Reasoning Operating System) Official Documentation. Learn how to build 100% hallucination-free AI Agents via microkernels, Vajra Contracts, and the T-Number system.",
+  "meta_desc": "DROS (Deterministic Runtime Operating System) Official Documentation. Learn how to build 100% hallucination-free AI Agents via microkernels, Vajra Contracts, and the T-Number system.",
   "sidebar": {
     "title": "DROS Documentation",
     "getting_started": "1. Getting Started",
@@ -15,7 +15,7 @@
     "btn": "Get Commercial License"
   },
   "header": {
-    "title": "Dharma Reasoning Operating System",
+    "title": "Deterministic Runtime Operating System",
     "version": "v1.0.0 (First Commercial Release)",
     "last_updated": "Last updated: 2026-05"
   },
