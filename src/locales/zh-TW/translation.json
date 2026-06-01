@@ -162,13 +162,13 @@
       },
       "dros_engine_plus": {
         "title": "VajraClaw+ (企業稽核版)",
-        "tag": "密碼學防篡改",
-        "desc": "專為高併發的大型組織打造。當 Agent 併發高達 450 個時，您會需要企業級中控網格 (Mesh Control Plane) 來進行集中管理。支援 Sealed Binary Policy 與 Policy Epoch Lock，將 Policy Hash 強制綁定至每筆日誌，提供鐵證如山的不可否認性。"
+        "tag": "密碼學稽核與安全防線",
+        "desc": "專為高安全與合規（FinTech/醫療）組織打造。支援 15 台機器、每台 30 併發（共 450 併發）。提供 Sealed Binary Policy 與 Policy Epoch Lock 防止降級攻擊，將 SHA-256 Policy Hash 與 Ed25519 簽章強制綁定至每筆 Audit Trace，提供具備密碼學不可否認性的合規鐵證。"
       },
       "vajra_agent": {
-        "title": "VajraAgent (企業中控台)",
-        "tag": "Mesh OTA 控制平面",
-        "desc": "企業級分散式 Agentic AI 的中央大腦。透過零信任 IAM 視覺化介面，將最新的 policy.bin 瞬間同步至全球數百個微服務節點，並支援一鍵熔斷。"
+        "title": "VajraAgent (企業網格版)",
+        "tag": "Mesh OTA 控制面 / Corporate",
+        "desc": "企業級分佈式 Agentic AI 的中央大腦。支援 100% On-Premise 私有雲與斷網機房部署，提供中央 IAM 視覺化戰情室。配合 K8s Helm 與 Ansible 自動化部署與自適應 Phone Home 連線，一鍵向全球數百個微內核節點派發安全策略，並支援 1 毫秒內一鍵全局緊急熔斷。"
       },
       "dros_mobile": {
         "title": "DROS Mobile SDK",

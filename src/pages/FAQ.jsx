@@ -2,23 +2,6 @@ import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 
-// Helper to format bold text and newlines
-const formatText = (text) => {
-  return text.split('\n').map((line, i) => {
-    // Handle bold **text**
-    const parts = line.split(/(\*\*.*?\*\*)/g);
-    return (
-      <span key={i} style={{ display: 'block', marginBottom: '0.5rem' }}>
-        {parts.map((part, j) => {
-          if (part.startsWith('**') && part.endsWith('**')) {
-            return <strong key={j} style={{ color: 'var(--text-primary)' }}>{part.slice(2, -2)}</strong>;
-          }
-          return part;
-        })}
-      </span>
-    );
-  });
-};
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(`0-0`); // Open the first question by default

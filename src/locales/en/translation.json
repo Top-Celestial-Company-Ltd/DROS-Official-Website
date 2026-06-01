@@ -162,13 +162,13 @@
       },
       "dros_engine_plus": {
         "title": "VajraClaw+ (Enterprise Audit)",
-        "tag": "Cryptographic Anti-Tampering",
-        "desc": "Built for high-concurrency large organizations. When scaling up to 450 concurrent Agents, you need an enterprise-grade Mesh Control Plane for centralized management. Supports Sealed Binary Policies and Policy Epoch Locks, binding the Policy Hash to every log for irrefutable non-repudiation."
+        "tag": "Cryptographic Audit & Compliance",
+        "desc": "Built for high-security, highly-regulated industries (FinTech/Healthcare). Binds 15 Machine UUIDs, supporting up to 30 concurrent agents per machine (Total 450 Concurrency). Features Sealed Binary Policy, Ed25519 signatures, and Policy Epoch Lock, binding SHA-256 Policy Hash directly to every audit trace for legally binding non-repudiation."
       },
       "vajra_agent": {
-        "title": "VajraAgent (Control Plane)",
-        "tag": "Mesh OTA Control Plane",
-        "desc": "The central brain for distributed Agentic AI. Distribute the latest policy.bin instantly to hundreds of global nodes via a visual Zero-Trust IAM dashboard, featuring a global kill-switch."
+        "title": "VajraAgent (Mesh / Corporate)",
+        "tag": "Mesh Control Plane & Central CommandCenter",
+        "desc": "The central brain of distributed Agentic AI. Supports 100% On-Premise private clouds or air-gapped datacenters. Enables zero-touch automated deployment via Kubernetes Helm and Ansible with adaptive Phone Home connections. Instantly push updates via Mesh OTA to hundreds of nodes with a 1ms global emergency kill-switch."
       },
       "dros_mobile": {
         "title": "DROS Mobile SDK",

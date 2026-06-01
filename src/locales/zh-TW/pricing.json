@@ -59,9 +59,15 @@
       "features": [
         "最高 15 組 Machine UUIDs",
         "每機台 30 個 Concurrent Agents",
-        "Sealed Binary Policy (防篡改)",
-        "Cryptographic Audit Trace (密碼學稽核)"
+        "VajraAgent Mesh OTA 全局策略派發",
+        "中央視覺化監控戰情室 (Command Center)",
+        "100% On-Premise / 斷網私有雲部署",
+        "K8s Helm 與 Ansible 自動化部署支援",
+        "離線自適應安全降級 (Safe Degraded) 防禦",
+        "Sealed Binary Policy (防篡改) 與密碼學稽核"
       ],
+      "details_title": "展開看詳細技術規格",
+      "details_content": "<p><strong>產品定位</strong>：針對大型高併發場景，部署安全中控網格的終極防線，提供最高規格密碼學防護與自動化維運支援。<br/><strong>核心機制：</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>VajraAgent Mesh</strong>：統一進行 OTA 安全策略更新，無縫派發至數百個 AI Employee。</li><li><strong>多重防禦機制</strong>：包含 Sealed Binary Policy 與 Cryptographic Audit，杜絕內部與外部篡改。</li><li><strong>強固型底座</strong>：支援完全斷網/私有雲部署，搭配 K8s/Ansible 及離線自適應安全降級防禦。</li></ul>",
       "btn": "Contact Sales"
     }
   },

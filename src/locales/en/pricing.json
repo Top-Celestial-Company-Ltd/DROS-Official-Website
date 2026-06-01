@@ -59,9 +59,15 @@
       "features": [
         "Max 15 Machine UUIDs",
         "30 Concurrent Agents per Machine",
-        "Sealed Binary Policy (Anti-tamper)",
-        "Cryptographic Audit Trace"
+        "VajraAgent Mesh OTA Central Deployment",
+        "Centralized Visual Command Center Dashboard",
+        "100% On-Premise / Air-Gapped Datacenters",
+        "Kubernetes Helm & Ansible Support",
+        "Standalone Fail-Closed Safe Degraded Defense",
+        "Sealed Binary Policy (Anti-tamper) & Cryptographic Audit"
       ],
+      "details_title": "View Technical Specs",
+      "details_content": "<p><strong>Target Audience</strong>: Enterprise-grade centralized control mesh and cryptographic protection designed for high-concurrency multi-agent environments.<br/><strong>Core Mechanisms:</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>VajraAgent Mesh</strong>: Unified OTA security policy updates seamlessly deployed across hundreds of AI Employees.</li><li><strong>Robust Security Shield</strong>: Sealed Binary Policy and Cryptographic Audit Trace to eliminate any threat of internal/external policy tampering.</li><li><strong>Enterprise Scale</strong>: Supports fully air-gapped private cloud deployments, Kubernetes Helm & Ansible automation, and autonomous fail-closed safe degradation.</li></ul>",
       "btn": "Contact Sales"
     }
   },
