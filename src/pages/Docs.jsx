@@ -19,25 +19,14 @@ export default function Docs() {
   };
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', background: 'var(--bg-color)' }}>
+    <div className="docs-container">
       <Helmet>
         <title>{t('meta_title')}</title>
         <meta name="description" content={t('meta_desc')} />
       </Helmet>
 
       {/* Sidebar Navigation */}
-      <aside style={{ 
-        width: '280px', 
-        position: 'sticky', 
-        top: '80px', 
-        height: 'calc(100vh - 80px)', 
-        overflowY: 'auto',
-        borderRight: '1px solid rgba(255,255,255,0.05)',
-        padding: '2rem 1.5rem',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '0.5rem'
-      }} className="docs-sidebar">
+      <aside className="docs-sidebar">
         <h4 style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '1px', color: 'var(--text-secondary)', marginBottom: '1rem' }}>{t('sidebar.title')}</h4>
         
         <button className={`doc-nav-btn ${activeSection === 'getting-started' ? 'active' : ''}`} onClick={() => scrollTo('getting-started')}>{t('sidebar.getting_started')}</button>
@@ -58,7 +47,7 @@ export default function Docs() {
       </aside>
 
       {/* Main Content Area */}
-      <main style={{ flex: 1, padding: '3rem 4rem', maxWidth: '900px' }} className="docs-content">
+      <main className="docs-content">
         <div style={{ marginBottom: '4rem' }}>
           <h1 style={{ fontSize: '3rem', marginBottom: '1rem', background: 'linear-gradient(to right, #fff, var(--accent-gold))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
             {t('header.title')}
