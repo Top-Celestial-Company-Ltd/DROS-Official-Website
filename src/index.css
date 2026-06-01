@@ -477,6 +477,23 @@ footer {
   transform: translateY(0);
 }
 
+/* Advantages Custom Grid */
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+  auto-rows: minmax(200px, auto);
+}
+.advantages-grid .card-span-12 {
+  grid-column: span 12;
+}
+.advantages-grid .card-span-8 {
+  grid-column: span 8;
+}
+.advantages-grid .card-span-4 {
+  grid-column: span 4;
+}
+
 @media (max-width: 768px) {
   .nav-links-desktop {
     display: none !important;
@@ -544,6 +561,16 @@ footer {
   .hero-bg-circle-1, .hero-bg-circle-2 {
     max-width: 100vw;
     overflow: hidden;
+  }
+
+  .advantages-grid {
+    grid-template-columns: 1fr;
+    auto-rows: auto;
+  }
+  .advantages-grid .card-span-12,
+  .advantages-grid .card-span-8,
+  .advantages-grid .card-span-4 {
+    grid-column: span 1;
   }
 }
 

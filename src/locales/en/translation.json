@@ -96,6 +96,10 @@
         {
           "title": "💻 Policy-as-Code (DevEx)",
           "desc": "Stop writing hundreds of lines of JSON. Use AI to help write human-readable Vajra.md, compiling it into an unbreakable policy.bin."
+        },
+        {
+          "title": "🌐 VajraAgent Mesh OTA Control Plane",
+          "desc": "Supports 100% On-Premise or air-gapped private clouds. Sync latest policy.bin instantly to hundreds of microservice nodes via K8s/Ansible with a 1ms global kill-switch and centralized dashboard."
         }
       ]
     },

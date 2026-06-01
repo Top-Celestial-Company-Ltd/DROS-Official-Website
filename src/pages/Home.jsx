@@ -135,31 +135,38 @@ export default function Home() {
       <section className="container">
         <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '4rem' }}>{t('home.advantages.title_prefix')} <span className="gold-text">{t('home.advantages.title_highlight')}</span>？</h2>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(12, 1fr)', gap: '1.5rem', autoRows: 'minmax(200px, auto)' }}>
-          <div className="glass-card" style={{ gridColumn: 'span 8', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-            <h3 style={{ fontSize: '1.5rem', color: 'var(--accent-gold)', marginBottom: '1rem' }}>{t('home.advantages.items.0.title')}</h3>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>{t('home.advantages.items.0.desc')}</p>
-          </div>
-          
-          <div className="glass-card" style={{ gridColumn: 'span 4', display: 'flex', flexDirection: 'column', justifyContent: 'center', background: 'rgba(0, 240, 255, 0.03)' }}>
-            <h3 style={{ fontSize: '1.3rem', color: 'var(--accent-blue)', marginBottom: '1rem' }}>{t('home.advantages.items.1.title')}</h3>
-            <p style={{ color: 'var(--text-secondary)' }}>{t('home.advantages.items.1.desc')}</p>
-          </div>
+        <div className="advantages-grid">
+          {t('home.advantages.items', { returnObjects: true }).map((item, index) => {
+            let spanClass = 'card-span-4';
+            if (index === 0) spanClass = 'card-span-8';
+            if (index === 5) spanClass = 'card-span-12';
 
-          <div className="glass-card" style={{ gridColumn: 'span 4', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-            <h3 style={{ fontSize: '1.3rem', color: '#d2a8ff', marginBottom: '1rem' }}>{t('home.advantages.items.2.title')}</h3>
-            <p style={{ color: 'var(--text-secondary)' }}>{t('home.advantages.items.2.desc')}</p>
-          </div>
+            const colors = [
+              'var(--accent-gold)',
+              'var(--accent-blue)',
+              '#d2a8ff',
+              '#27c93f',
+              '#ffbd2e',
+              '#ff4d4f'
+            ];
+            const cardColor = colors[index % colors.length];
 
-          <div className="glass-card" style={{ gridColumn: 'span 4', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-            <h3 style={{ fontSize: '1.3rem', color: '#27c93f', marginBottom: '1rem' }}>{t('home.advantages.items.3.title')}</h3>
-            <p style={{ color: 'var(--text-secondary)' }}>{t('home.advantages.items.3.desc')}</p>
-          </div>
-
-          <div className="glass-card" style={{ gridColumn: 'span 4', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-            <h3 style={{ fontSize: '1.3rem', color: '#ffbd2e', marginBottom: '1rem' }}>{t('home.advantages.items.4.title')}</h3>
-            <p style={{ color: 'var(--text-secondary)' }}>{t('home.advantages.items.4.desc')}</p>
-          </div>
+            return (
+              <div 
+                key={index} 
+                className={`glass-card ${spanClass}`} 
+                style={{ 
+                  display: 'flex', 
+                  flexDirection: 'column', 
+                  justifyContent: 'center',
+                  background: index === 1 ? 'rgba(0, 240, 255, 0.03)' : undefined
+                }}
+              >
+                <h3 style={{ fontSize: index === 0 ? '1.5rem' : '1.3rem', color: cardColor, marginBottom: '1rem' }}>{item.title}</h3>
+                <p style={{ color: 'var(--text-secondary)', fontSize: index === 0 ? '1.1rem' : '1.0rem' }}>{item.desc}</p>
+              </div>
+            );
+          })}
         </div>
       </section>
 

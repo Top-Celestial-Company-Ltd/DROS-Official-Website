@@ -96,6 +96,10 @@
         {
           "title": "💻 Policy-as-Code (DevEx)",
           "desc": "不再手刻幾百行 JSON。讓 AI 協助工程師撰寫人類可讀的 Vajra.md，一鍵編譯為強固的 policy.bin。"
+        },
+        {
+          "title": "🌐 VajraAgent Mesh OTA 控制面",
+          "desc": "支援 100% On-Premise / 斷網私有雲部署，搭配 K8s/Ansible 一鍵向全球數百個微服務節點同步最新安全策略，提供 1 毫秒內一鍵全局緊急熔斷與中央視覺化監控。"
         }
       ]
     },
