@@ -6,7 +6,8 @@
     "pricing": "定價方案",
     "faq": "常見問題",
     "get_started": "取得 DROS",
-    "solutions": "企業方案"
+    "solutions": "企業方案",
+    "trust": "確信驗證"
   },
   "footer": {
     "desc": "DROS 是全球首個專為異質 AI 系統設計的執行治理標準 (Execution Governance Standard)。透過將策略驗證移至編譯期，並在執行期採用 O(1) 確定性查表，為企業級自主 AI 構築 Fail-Closed 實體安全防線。",
@@ -24,12 +25,12 @@
   },
   "home": {
     "meta_title": "DROS | Agentic AI 執行治理標準",
-    "meta_desc": "DROS 是 Agentic AI 時代的執行治理標準。透過編譯期智慧與 O(1) Bitmap 執行期引擎，徹底解決傳統資安架構的高延遲與非確定性。",
+    "meta_desc": "DROS 是 Agentic AI 時代的執行確信基礎設施與執行治理標準。透過編譯期智慧與 O(1) Bitmap 執行期引擎（實測核心延遲低至 484.8 奈秒），徹底解決傳統資安架構的高延遲與非確定性。",
     "hero": {
       "version": "DROS Execution OS v3.0",
       "title_prefix": "Agentic AI 的",
       "title_highlight": "執行治理標準",
-      "subtitle": "\"If runtime needs intelligence to enforce policy, the system is already <strong>unsafe</strong>.\"<br/>如果執行安全防衛在運行時仍需依賴智能進行決策，該系統本質上已暴露於風險中。",
+      "subtitle": "\"If runtime needs intelligence to enforce policy, the system is already <strong>unsafe</strong>.\"<br/>如果執行安全防衛在運行時仍需依賴智慧進行決策，該系統本質上已暴露於風險中。",
       "value_prop": "將安全策略前置於編譯期 (Compile-time)，在執行期提供 O(1) Contiguous Bitmap 的絕對確定性防禦。",
       "btn_github": "查閱 DROS 規格書",
       "btn_poc": "開始 Free-Trial 體驗"
@@ -39,18 +40,18 @@
       "locked": "[DROS-Engine] ⚡ O(1) Bitmap 策略已鎖定入記憶體。",
       "injected": "[DROS-Engine] 🛡️ 密碼學簽章驗證通過 (Ed25519)。",
       "llm_stream": "Agent 嘗試執行呼叫：execute_payment...",
-      "fuse_blown": "🛑 物理熔斷觸發：Bitwise AND 驗證失敗。OS 系統調用已被終止 (驗證延遲: < 0.02ms)。"
+      "fuse_blown": "🛑 物理熔斷觸發：Bitwise AND 驗證失敗。OS 系統調用已被終止 (實測核心延遲: 484.8 ns / 0.00048 ms)。"
     },
     "hourglass": {
       "title_prefix": "作業系統級",
-      "title_highlight": "C-ABI 邊界收費站",
+      "title_highlight": "C-ABI 邊界檢核站",
       "subtitle": "DROS 部署於作業系統的 C-ABI 通道，無論上層 AI 應用邏輯如何變更，均無法繞過底層的物理約束。",
       "layer1_title": "⏳ 不確定性的 User Space",
       "layer1_desc": "大語言模型 (LLM)、API 網關與各類 Agent 框架在使用者空間產生高度不確定性的調用鏈結與安全漏洞。",
       "layer2_title": "🌉 唯一的跨界咽喉通道",
       "layer2_desc": "無論 AI 的推理邏輯如何變更，只要需要執行實體外部操作（如資料庫寫入、網路發送），其所有指令最終都必須通過 C-ABI 並發起 System Call。",
       "layer3_title": "👑 DROS 執行期物理斷路器",
-      "layer3_desc": "DROS 捨棄執行期字串解析與 LLM 動態推理，將攔截微內核建置於 C-ABI 咽喉處，以 O(1) 位元運算在微秒級（0.016 毫秒）內實行精確攔截。"
+      "layer3_desc": "DROS 捨棄執行期字串解析與 LLM 動態推理，將攔截微內核建置於 C-ABI 咽喉處，以 O(1) 位元運算在奈秒級（實測核心延遲: 484.8 ns）內實行精確攔截。"
     },
     "pain_points": {
       "title_prefix": "「解釋型防禦」的",
@@ -74,8 +75,8 @@
       "conclusion_desc": "將安全智慧與策略分析置於<strong>編譯期 (Compile-time)</strong>，把絕對的確定性與 Fail-Closed 防禦交給<strong>執行期 (Runtime)</strong>。"
     },
     "advantages": {
-      "title_prefix": "DROS 的",
-      "title_highlight": "技術領先特徵",
+      "title_prefix": "DROS 以基準測試驅動的",
+      "title_highlight": "執行確信基礎設施 (ETI) 特徵",
       "items": [
         {
           "title": "🧠 Compile-time Intelligence",
@@ -83,7 +84,7 @@
         },
         {
           "title": "⚡ O(1) Bitmap Runtime",
-          "desc": "排除字串比對、JSON 解析與模型推理。執行期專注於 Contiguous 狀態位元運算，攔截耗時低於 0.02 毫秒。"
+          "desc": "排除字串比對、JSON 解析與模型推理。實測核心延遲低至 484.8 奈秒，並在 50 執行緒 OTA 熱重載下維持 0 Race Condition。"
         },
         {
           "title": "🔒 Cryptographic Audit",
@@ -113,11 +114,36 @@
         "advantage": "標準優勢"
       },
       "rows": [
-        {"item": "防護時機", "traditional": "運行期動態解讀與評估", "dros": "編譯期靜態鑄造，運行期唯讀", "adv": "零運行時解析"},
-        {"item": "防護機制", "traditional": "JSON 解析 / Heuristics 語意推理", "dros": "O(1) Bitmap 常數時間位元運算", "adv": "100% 確定性"},
-        {"item": "發生異常時", "traditional": "潛在 Fail-Open 導致防線擊穿", "dros": "Strict Fail-Closed 硬體級熔斷", "adv": "防線零外溢"},
-        {"item": "稽核證據", "traditional": "非可驗證文字日誌", "dros": "Policy Hash 密碼學強綁定", "adv": "不可否認"},
-        {"item": "政策制定", "traditional": "異構且繁雜的配置代碼", "dros": "Vajra DSL (Policy-as-Code)", "adv": "高度可維護"}
+        {
+          "item": "防護時機",
+          "traditional": "運行期動態解讀與評估",
+          "dros": "編譯期靜態鑄造，運行期唯讀",
+          "adv": "零運行時解析"
+        },
+        {
+          "item": "防護機制",
+          "traditional": "JSON 解析 / Heuristics 語意推理",
+          "dros": "O(1) Bitmap 常數時間位元運算",
+          "adv": "100% 確定性"
+        },
+        {
+          "item": "發生異常時",
+          "traditional": "潛在 Fail-Open 導致防線擊穿",
+          "dros": "Strict Fail-Closed 硬體級熔斷",
+          "adv": "防線零外溢"
+        },
+        {
+          "item": "稽核證據",
+          "traditional": "非可驗證文字日誌",
+          "dros": "Policy Hash 密碼學強綁定",
+          "adv": "不可否認"
+        },
+        {
+          "item": "政策制定",
+          "traditional": "異構且繁雜的配置代碼",
+          "dros": "Vajra DSL (Policy-as-Code)",
+          "adv": "高度可維護"
+        }
       ]
     },
     "ecosystem": {
@@ -131,7 +157,13 @@
       "title_prefix": "最適合的",
       "title_highlight": "合規產業場景",
       "desc": "DROS 特別適合對<strong>安全、合規、零延遲、零容錯</strong>要求極高的企業領域：",
-      "items": ["🏦 金融科技與高頻交易", "🏥 智慧醫療與健康隱私", "🏢 跨雲企業級 SaaS 平台", "🏛️ 政府、司法與國防單位", "📱 行動與邊緣自主 AI 系統"]
+      "items": [
+        "🏦 金融科技與高頻交易",
+        "🏥 智慧醫療與健康隱私",
+        "🏢 跨雲企業級 SaaS 平台",
+        "🏛️ 政府、司法與國防單位",
+        "📱 行動與邊緣自主 AI 系統"
+      ]
     },
     "cta": {
       "title": "POSIX 定義了系統調用。DROS 定義了 AI 執行邊界。",
@@ -157,7 +189,7 @@
       "free_trial": {
         "title": "VajraClaw Free-Trial (PLG 版)",
         "tag": "Max 2 Agents / 30 Days",
-        "desc": "專為獨立開發者與 PoC 設計，提供零阻力的技術體驗。內建離線 RSA 動態授權，快速體驗 Time-to-first-deny: < 0.02ms 的極速攔截性能。"
+        "desc": "專為獨立開發者與 PoC 設計，提供零阻力的技術體驗。內建離線 RSA 動態授權與 v1.0 驗證合約，快速體驗實測核心延遲低至 484.8 奈秒的極速攔截性能。"
       },
       "dros_engine": {
         "title": "VajraClaw (核心引擎)",
@@ -194,7 +226,7 @@
         },
         "ephemeral": {
           "title": "O(1) Bitmap Runtime",
-          "desc": "於執行期，DROS 引擎直接定位權限點記憶體位址，實行 $\mathcal{O}(1)$ 常數複雜度位元運算，確保零 heap 分配與零 GC 壓力。"
+          "desc": "於執行期，DROS 引擎直接定位權限點記憶體位址，實行 O(1) 常數複雜度位元運算，確保零 heap 分配與零 GC 壓力。"
         },
         "airgap": {
           "title": "Strict Fail-Closed 物理熔斷",
@@ -221,6 +253,65 @@
       "title": "升級至新一代的執行治理標準",
       "btn_contact": "聯絡銷售團隊",
       "btn_demo": "預約線上架構諮詢"
+    }
+  },
+  "trust": {
+    "meta_title": "DROS | 確信驗證與系統物理極限揭露",
+    "meta_desc": "公開披露 DROS v1.0 驗證合約、實測混亂並發壓測基準與物理極限。我們秉持硬核系統工程的誠實態度，拒絕行銷話術。",
+    "hero": {
+      "title_prefix": "DROS v1.0",
+      "title_highlight": "確信安全與驗證標準",
+      "subtitle": "我們深知，真正的系統級安全不是行銷口號。我們在此公開 DROS 的驗證合約、真實壓力測試數據以及物理底層約束，供全球 CISO 與資深架構師嚴格檢視。"
+    },
+    "harness": {
+      "title": "一、v1.0 驗證合約規格 (Certification Harness)",
+      "desc": "DROS 拒絕寫死的偽模擬。我們正式將本地 `dros-home-lab/tests/` 下的 5 大基準測試指令，凍結為 v1.0 官方確信驗證合約。任何人皆可透過本地環境執行並重現相同的防護特徵：",
+      "test1": "🧬 test_agent_framework_sim.py — 異構 Agent 調用熔斷與日誌規整性校驗",
+      "test2": "🧪 test_policy_ota_concurrent_agent.py — 50 執行緒動態 OTA 熱重載混亂壓力測試"
+    },
+    "benchmarks": {
+      "title": "二、RCU 混亂並發壓力測試 (RCU Concurrent Chaos)",
+      "desc": "在極端的並發混沌測試環境下（50 條執行緒持續發起調用，並在高頻進行 RCU 指標熱重載策略變更），DROS 取得了令人矚目的實測物理指標：",
+      "latency_val": "484.8 ns",
+      "latency_lbl": "微核心核心攔截延遲",
+      "queries_val": "61,919",
+      "queries_lbl": "混沌壓力測試調用總數",
+      "swaps_val": "187 次",
+      "swaps_lbl": "無鎖 RCU 熱重載指標變更",
+      "races_val": "0 次",
+      "races_lbl": "Race Condition / 策略越權繞過"
+    },
+    "reality": {
+      "title": "三、系統物理極限與邊界披露 (DROS Engineering Reality)",
+      "desc": "作為嚴謹的系統工程師，我們不提供任何「完美無瑕」的行銷承諾。我們公開以下在實體硬體上的物理限制與邊界指標：",
+      "points": [
+        {
+          "title": "1. 指令快取抖動 (Cache Jitter)",
+          "desc": "在極少數情況下，CPU 執行期由於 L1/L2 指令快取預取（Prefetch）與 Locality 溫暖度的不同，核心延遲可能在 400ns 到 900ns 之間微幅抖動。這屬於常規硬體執行特徵，而非 O(1) Bitmap 複雜度失效。"
+        },
+        {
+          "title": "2. 跨語言 FFI / JNI 封裝開銷 (FFI Conversion)",
+          "desc": "雖然 DROS 核心位元運算僅耗時 484.8 奈秒，但當高階語言（如 Python、Go、AAR-Java）跨越邊界調用編譯後的 C-ABI 動態庫時，會產生 10μs 到 50μs 的 FFI/JNI 封裝與上下文轉換開銷。此開銷與模型推理（動輒幾百毫秒）相比仍忽略不計，但應在超高頻場景中被予以考量。"
+        },
+        {
+          "title": "3. 審計持久化非同步隔離 (Async I/O Decoupling)",
+          "desc": "為確保 484.8ns 的極致攔截效率，DROS 將日誌硬碟寫入與 C-ABI 執行阻斷進行了徹底的非同步隔離。我們採用無鎖環形緩衝區 (Lock-free Circular Ring Buffer) 進行日誌收集，日誌落盤不佔用關鍵防禦執行路徑。"
+        },
+        {
+          "title": "4. 雙快取 RCU RAM 空間開銷 (RCU Double Buffering)",
+          "desc": "在進行策略熱重載時，為確保無鎖並發安全，DROS 會短暫保留新舊策略指標，這會產生微幅的記憶體雙倍開銷。經實際壓測，策略載入期間 DROS 總體 RAM 佔用仍穩定保持在極低的 2MB ~ 5MB 區間。"
+        }
+      ]
+    },
+    "open_source": {
+      "title": "四、Vajra Core 開源倡議與公共合約庫",
+      "desc": "我們深信「合約不應被私有專利所壟斷」。我們正式將 Vajra Core 語法檢測與健康診斷引擎開源，並建立 GitHub 公共策略合約庫 (Vajra Policy Hub)：",
+      "lint_title": "Vajra Lint 靜態校驗",
+      "lint_desc": "提供開源規則編譯與五級自動阻斷。工程師在 CI/CD 即可預先攔截不安全的權限萬用字元與策略衝突。",
+      "doctor_title": "Vajra Doctor 結構診斷",
+      "doctor_desc": "自動檢測策略複雜度與稀疏矩陣（Sparse Matrix）分佈，避免 IAM 權限配置膨脹。",
+      "hub_title": "GitHub Vajra Policy Hub",
+      "hub_desc": "由全球開發者共建的跨平台合約模板庫。開發者可以隨時拉取、分享標準 Agent 策略，加速 Vajra 成為事實上的業界標準。"
     }
   }
 }

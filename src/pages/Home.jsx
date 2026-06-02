@@ -214,6 +214,61 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Trust & Open Source Initiative Gateway Section */}
+      <section className="container">
+        <div style={{ background: 'linear-gradient(135deg, rgba(212,175,55,0.05) 0%, rgba(0,240,255,0.03) 100%)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '24px', padding: '3.5rem 2rem', position: 'relative', overflow: 'hidden', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
+          <div style={{ position: 'absolute', top: '-20%', right: '-10%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(212,175,55,0.1) 0%, rgba(0,0,0,0) 70%)', zIndex: 0, filter: 'blur(30px)' }}></div>
+          <div style={{ zIndex: 1 }}>
+            <span style={{ display: 'inline-block', padding: '0.3rem 1rem', background: 'rgba(212,175,55,0.1)', border: '1px solid rgba(212,175,55,0.2)', borderRadius: '20px', fontSize: '0.85rem', color: 'var(--accent-gold)', marginBottom: '1rem', fontWeight: 'bold', letterSpacing: '1px' }}>
+              PROVEN ASSURANCE / 確信安全
+            </span>
+            <h2 style={{ fontSize: '2.2rem', marginBottom: '1rem', textAlign: 'left', lineHeight: '1.3' }}>
+              {i18n.language === 'en' ? 'Open Source Core & v1.0 Chaos Benchmarks' : '開源策略引擎與 v1.0 混沌壓測基準'}
+            </h2>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '2rem' }}>
+              {i18n.language === 'en' 
+                ? 'DROS is built on systems engineering transparency. Explore our frozen v1.0 Certification Harness, concurrent RCU stress test reports (484.8 ns latency, 0 race conditions), and the open-source compiler frontend.'
+                : 'DROS 建立在系統級工程的透明度之上。在此公開披露我們 frozen 的 v1.0 驗證合約、實測 RCU 混亂壓力測試報告（核心延遲低至 484.8 奈秒、0 Race Condition）以及開源的語法檢查引擎。'}
+            </p>
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <Link to="/trust" className="btn btn-primary" style={{ padding: '0.8rem 2rem' }}>
+                {i18n.language === 'en' ? 'Explore Trust Page' : '進入確信驗證頁面'} &rarr;
+              </Link>
+              <a href={`https://github.com/${githubUser}/Dharma-Reasoning-Operating-System`} target="_blank" rel="noreferrer" className="btn btn-secondary" style={{ padding: '0.8rem 2rem' }}>
+                {i18n.language === 'en' ? 'View on GitHub' : '在 GitHub 參與共建'}
+              </a>
+            </div>
+          </div>
+          
+          <div className="glass-card" style={{ zIndex: 1, background: 'rgba(10, 10, 12, 0.8)', border: '1px solid rgba(212,175,55,0.15)', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', padding: '2rem' }}>
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: '2rem', fontWeight: 'bold', color: 'var(--accent-gold)', fontFamily: 'monospace' }}>484.8 ns</div>
+              <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '0.2rem' }}>
+                {i18n.language === 'en' ? 'Intercept Latency' : '核心攔截延遲'}
+              </div>
+            </div>
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: '2rem', fontWeight: 'bold', color: 'var(--accent-blue)', fontFamily: 'monospace' }}>61,919</div>
+              <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '0.2rem' }}>
+                {i18n.language === 'en' ? 'Stress Queries' : '混沌壓測呼叫'}
+              </div>
+            </div>
+            <div style={{ textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '1rem' }}>
+              <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#d2a8ff', fontFamily: 'monospace' }}>187</div>
+              <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '0.2rem' }}>
+                {i18n.language === 'en' ? 'RCU Swaps' : 'RCU 無鎖交換'}
+              </div>
+            </div>
+            <div style={{ textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '1rem' }}>
+              <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#27c93f', fontFamily: 'monospace' }}>0</div>
+              <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '0.2rem' }}>
+                {i18n.language === 'en' ? 'Race Conditions' : '競爭危害越權'}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Open Source Ecosystem */}
       <section className="container">
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>

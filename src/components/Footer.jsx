@@ -29,6 +29,9 @@ export default function Footer() {
                 <Link to="/docs" style={{ color: 'var(--text-secondary)', textDecoration: 'none', transition: 'color 0.2s' }}>{t('footer.docs')}</Link>
               </li>
               <li>
+                <Link to="/trust" style={{ color: 'var(--text-secondary)', textDecoration: 'none', transition: 'color 0.2s' }}>{t('nav.trust')}</Link>
+              </li>
+              <li>
                 <Link to="/faq" style={{ color: 'var(--text-secondary)', textDecoration: 'none', transition: 'color 0.2s' }}>{t('footer.faq')}</Link>
               </li>
             </ul>

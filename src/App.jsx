@@ -8,6 +8,7 @@ import FAQ from './pages/FAQ';
 import ComingSoon from './pages/ComingSoon';
 import Solutions from './pages/Solutions';
 import About from './pages/About';
+import Trust from './pages/Trust';
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/faq" element={<FAQ />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/about" element={<About />} />
+          <Route path="/trust" element={<Trust />} />
           <Route path="/coming-soon" element={<ComingSoon />} />
         </Routes>
       </div>

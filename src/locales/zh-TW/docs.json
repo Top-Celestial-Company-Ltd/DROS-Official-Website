@@ -93,7 +93,7 @@
       ]
     },
     "security": {
-      "title": "4. 零信任架構與 Prompt Injection 防禦",
+      "title": "5. 零信任架構與 Prompt Injection 防禦",
       "desc": "在系統安全與執行權限的層面上，DROS <strong>100% 消除了 Prompt Injection 的威脅</strong>。這與我們處理「幻覺」的底層邏輯有異曲同工之妙。以下為您剖析為何 DROS 敢做此宣稱：",
       "traditional": {
         "title": "傳統架構為何無法消除威脅？",

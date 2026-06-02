@@ -6,7 +6,8 @@
     "pricing": "Pricing Plans",
     "faq": "FAQ",
     "get_started": "Get DROS",
-    "solutions": "Solutions"
+    "solutions": "Solutions",
+    "trust": "Trust"
   },
   "footer": {
     "desc": "DROS is a vendor-neutral execution governance layer for agentic AI systems. It enforces AI tool execution through compile-time resolved, cryptographically signed policies executed in O(1) deterministic runtime.",
@@ -113,11 +114,36 @@
         "advantage": "Advantage"
       },
       "rows": [
-        {"item": "Timing", "traditional": "Dynamic Runtime Parsing", "dros": "Compile-time Minting, Read-Only Runtime", "adv": "Zero Runtime Overhead"},
-        {"item": "Mechanism", "traditional": "JSON Parsing / Heuristic Reasoning", "dros": "O(1) Bitmap Bitwise Operations", "adv": "100% Deterministic"},
-        {"item": "Failure Mode", "traditional": "Potential Fail-Open Exposure", "dros": "Strict Fail-Closed Hardware Panic", "adv": "Zero Risk Spillover"},
-        {"item": "Audit Logs", "traditional": "Unverifiable Plain Text Logs", "dros": "Policy Hash Cryptographic Binding", "adv": "Non-Repudiation"},
-        {"item": "Policy Creation", "traditional": "Fragmented & Heavy Configuration", "dros": "Vajra DSL (Policy-as-Code)", "adv": "Highly Maintainable"}
+        {
+          "item": "Timing",
+          "traditional": "Dynamic Runtime Parsing",
+          "dros": "Compile-time Minting, Read-Only Runtime",
+          "adv": "Zero Runtime Overhead"
+        },
+        {
+          "item": "Mechanism",
+          "traditional": "JSON Parsing / Heuristic Reasoning",
+          "dros": "O(1) Bitmap Bitwise Operations",
+          "adv": "100% Deterministic"
+        },
+        {
+          "item": "Failure Mode",
+          "traditional": "Potential Fail-Open Exposure",
+          "dros": "Strict Fail-Closed Hardware Panic",
+          "adv": "Zero Risk Spillover"
+        },
+        {
+          "item": "Audit Logs",
+          "traditional": "Unverifiable Plain Text Logs",
+          "dros": "Policy Hash Cryptographic Binding",
+          "adv": "Non-Repudiation"
+        },
+        {
+          "item": "Policy Creation",
+          "traditional": "Fragmented & Heavy Configuration",
+          "dros": "Vajra DSL (Policy-as-Code)",
+          "adv": "Highly Maintainable"
+        }
       ]
     },
     "ecosystem": {
@@ -131,7 +157,13 @@
       "title_prefix": "Designed For",
       "title_highlight": "Compliance Industries",
       "desc": "DROS is designed for sectors where security, compliance, and deterministic reliability are non-negotiable:",
-      "items": ["🏦 FinTech & High-Frequency Trading", "🏥 Digital Healthcare & Diagnostics", "🏢 Enterprise SaaS Platforms", "🏛️ Government, Legal & Defense Nodes", "📱 Mobile & Edge Autonomous AI Systems"]
+      "items": [
+        "🏦 FinTech & High-Frequency Trading",
+        "🏥 Digital Healthcare & Diagnostics",
+        "🏢 Enterprise SaaS Platforms",
+        "🏛️ Government, Legal & Defense Nodes",
+        "📱 Mobile & Edge Autonomous AI Systems"
+      ]
     },
     "cta": {
       "title": "POSIX defined system calls. DROS defines AI execution boundaries.",
@@ -221,6 +253,65 @@
       "title": "Upgrade to the Next-Gen Execution Governance Standard",
       "btn_contact": "Contact Sales",
       "btn_demo": "Book Architecture Consultation"
+    }
+  },
+  "trust": {
+    "meta_title": "DROS | Trust, Verification & Systems Reality",
+    "meta_desc": "Public disclosure of DROS v1.0 Certification Harness, concurrent RCU stress test benchmarks, and physical hardware boundaries. We embrace strict systems engineering honesty.",
+    "hero": {
+      "title_prefix": "DROS v1.0",
+      "title_highlight": "Trust & Verification Standard",
+      "subtitle": "We believe system-level security is built on transparency, not marketing claims. Here we publish DROS's certification harness, raw stress test benchmarks, and physical limits for CISOs and principal architects."
+    },
+    "harness": {
+      "title": "1. v1.0 Certification Harness Specifications",
+      "desc": "DROS rejects static mock demonstrations. We formally freeze the 5 benchmark tests under `dros-home-lab/tests/` as the v1.0 Official Certification Harness, allowing anyone to verify and reproduce the same enforcement traits locally:",
+      "test1": "🧬 test_agent_framework_sim.py — Heterogeneous agent invocation block & log uniformity verification",
+      "test2": "🧪 test_policy_ota_concurrent_agent.py — 50-thread concurrent OTA hot-reload chaos stress test"
+    },
+    "benchmarks": {
+      "title": "2. RCU Concurrent Chaos Benchmarks",
+      "desc": "Under extreme concurrent chaos (50 threads calling tools while performing high-frequency lock-free RCU swaps), DROS recorded outstanding physical performance in laboratory stress environments:",
+      "latency_val": "484.8 ns",
+      "latency_lbl": "Microkernel Core Intercept Latency",
+      "queries_val": "61,919",
+      "queries_lbl": "Total Stress Test Queries",
+      "swaps_val": "187",
+      "swaps_lbl": "Lock-free RCU Pointer Swaps",
+      "races_val": "0",
+      "races_lbl": "Race Conditions or Policy Bypass"
+    },
+    "reality": {
+      "title": "3. Hardware Limits & Boundaries (DROS Engineering Reality)",
+      "desc": "As strict system engineers, we make no 'perfectly flawless' marketing promises. We transparently disclose the following physical limits and execution envelopes on real hardware:",
+      "points": [
+        {
+          "title": "1. Instruction Cache Jitter",
+          "desc": "Due to CPU instruction L1/L2 prefetching and locality warmth variances, core latency may jitter between 400ns and 900ns. This represents natural hardware behavior rather than a failure of O(1) bitmap complexity."
+        },
+        {
+          "title": "2. Cross-Language FFI / JNI Overhead",
+          "desc": "While DROS's core bitwise logic evaluates in 484.8 ns, transitioning across FFI/JNI boundaries (Python/Go/Java) to invoke the compiled C-ABI library adds a 10μs to 50μs marshaling overhead. This is negligible compared to model inference but should be considered in ultra-high-frequency loops."
+        },
+        {
+          "title": "3. Asynchronous I/O Audit Decoupling",
+          "desc": "To preserve a 484.8ns critical path, DROS decouples file system persistence from FFI execution blocks. We employ lock-free circular ring-buffers for log aggregation, keeping disk writes entirely off the critical security path."
+        },
+        {
+          "title": "4. Double-Buffered RCU Memory Overhead",
+          "desc": "To ensure lock-free concurrent safety during hot-reloads, DROS briefly retains both old and new policy pointers, causing minor memory inflation. Under chaos stress, overall memory usage remains extremely low between 2MB and 5MB."
+        }
+      ]
+    },
+    "open_source": {
+      "title": "4. Vajra Core Open Source & Public Policy Hub",
+      "desc": "We believe execution contracts should not be locked behind proprietary patents. We are open-sourcing Vajra Core's checking and diagnostic engines and establishing the crowdsourced GitHub Vajra Policy Hub:",
+      "lint_title": "Vajra Lint Core Engine",
+      "lint_desc": "Provides open-source parsing and 5-level automatic blocking. Intercepts unsafe wildcards and policy conflicts during CI/CD checks.",
+      "doctor_title": "Vajra Doctor Diagnostics",
+      "doctor_desc": "Automatically profiles policy complexity and sparse matrix distribution, preventing IAM complexity bloat.",
+      "hub_title": "GitHub Vajra Policy Hub",
+      "hub_desc": "A crowdsourced, cross-platform library of policy templates. Pull, share, and collaborate on policies to establish Vajra as the de facto standard."
     }
   }
 }

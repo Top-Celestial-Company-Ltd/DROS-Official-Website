@@ -23,10 +23,11 @@ function Navbar() {
 
   const navItems = [
     { path: '/', label: t('nav.home') },
-    { path: '/about', label: t('nav.about') },
-    { path: '/docs', label: t('nav.docs') },
     { path: '/solutions', label: t('nav.solutions') },
+    { path: '/trust', label: t('nav.trust') },
+    { path: '/docs', label: t('nav.docs') },
     { path: '/pricing', label: t('nav.pricing') },
+    { path: '/about', label: t('nav.about') },
     { path: '/faq', label: t('nav.faq') },
   ];
 
