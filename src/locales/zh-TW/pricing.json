@@ -3,14 +3,14 @@
   "meta_desc": "DROS 商業授權方案。從獨立開發者的 Free-Trial 到 Fortune 500 企業的密碼學稽核方案，為您的 Agentic AI 基礎設施提供執行期防護。",
   "badge": "Commercial License",
   "title": "DROS <span class='gold-text'>生態定價方案</span>",
-  "subtitle": "從根本解決幻覺與注入攻擊。為您的企業 AI 基礎設施升級至 OS 等級的執行治理標準。",
+  "subtitle": "從根本解決法義幻覺與注入攻擊。為您的企業 AI 基礎設施升級至 OS 等級的執行治理標準。",
   "early_adopter": "<strong style='color: var(--accent-gold)'>Early Adopter Pricing:</strong> 我們目前處於 V3 釋出階段。企業授權將於 2026 Q4 調漲至 <strong>$15,000/yr</strong>。強烈建議在下一波調漲前鎖定您的授權！",
   "tiers": {
     "free_trial": {
       "name": "VajraClaw Free-Trial <br/><span style='font-size: 1.2rem; color: #a0a0a0'>PLG Edition</span>",
       "price_yearly": "$0",
       "price_monthly": "30 Days Timebomb",
-      "desc": "適合獨立開發者與 PoC 概念驗證的終極 O(1) 斷路器。",
+      "desc": "適用於個人開發者與 PoC 概念驗證的 O(1) 攔截防禦工具。",
       "features": [
         "綁定 1 組 Machine UUID",
         "最高 2 個 Concurrent Agents",
@@ -18,7 +18,7 @@
         "社群論壇支援"
       ],
       "details_title": "展開看詳細技術規格",
-      "details_content": "<p><strong>產品定位</strong>：輕量級、極速、可嵌入的開發者防護工具包，專注體驗 Time-to-first-deny: < 1ms。<br/><strong>核心機制：</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>O(1) Bitmap 引擎</strong>：原生編譯，執行期延遲不到 1 ms。</li><li><strong>Strict Fail-Closed</strong>：直接觸發 Panic，拒絕服務。</li><li><strong>開發體驗</strong>：支援編譯 Vajra.md，快速上手。</li></ul>",
+      "details_content": "<p><strong>產品定位</strong>：輕量級、極速、可嵌入的開發者防護工具包，專注體驗低於 0.02ms 的極速攔截性能。<br/><strong>核心機制：</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>O(1) Bitmap 引擎</strong>：原生編譯，執行期驗證延遲低於 0.02ms。</li><li><strong>Strict Fail-Closed</strong>：直接觸發 Panic，拒絕服務。</li><li><strong>開發體驗</strong>：支援編譯 Vajra DSL，快速上手。</li></ul>",
       "btn": "Download Core Engine"
     },
     "hacker": {
@@ -33,7 +33,7 @@
         "社群論壇支援"
       ],
       "details_title": "展開看詳細技術規格",
-      "details_content": "<p><strong>產品定位</strong>：輕量級、極速、可嵌入的開發者防護工具包，專注體驗 Time-to-first-deny: < 1ms。<br/><strong>核心機制：</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>O(1) Bitmap 引擎</strong>：原生編譯，執行期延遲不到 1 ms。</li><li><strong>Strict Fail-Closed</strong>：直接觸發 Panic，拒絕服務。</li><li><strong>開發體驗</strong>：支援編譯 Vajra.md，快速上手。</li></ul>",
+      "details_content": "<p><strong>產品定位</strong>：輕量級、極速、可嵌入的開發者防護工具包，專注體驗低於 0.02ms 的極速攔截性能。<br/><strong>核心機制：</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>O(1) Bitmap 引擎</strong>：原生編譯，執行期驗證延遲低於 0.02ms。</li><li><strong>Strict Fail-Closed</strong>：直接觸發 Panic，拒絕服務。</li><li><strong>開發體驗</strong>：支援編譯 Vajra DSL，快速上手。</li></ul>",
       "btn_yearly": "Buy Yearly ($149)",
       "btn_monthly": "Buy Monthly ($19)"
     },

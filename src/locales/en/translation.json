@@ -3,13 +3,13 @@
     "home": "Home",
     "about": "About",
     "docs": "Docs",
-    "pricing": "Pricing",
+    "pricing": "Pricing Plans",
     "faq": "FAQ",
     "get_started": "Get DROS",
     "solutions": "Solutions"
   },
   "footer": {
-    "desc": "DROS - The world's first Execution Governance Standard for Agentic AI. We shift intelligence to compile-time, providing O(1) physical circuit breakers at runtime.",
+    "desc": "DROS is a vendor-neutral execution governance layer for agentic AI systems. It enforces AI tool execution through compile-time resolved, cryptographically signed policies executed in O(1) deterministic runtime.",
     "resources": "Resources",
     "github": "GitHub Source",
     "docs": "Documentation",
@@ -29,8 +29,8 @@
       "version": "DROS Execution OS v3.0",
       "title_prefix": "The Execution Governance Standard",
       "title_highlight": "for Agentic AI",
-      "subtitle": "\"If runtime needs intelligence to enforce policy, the system is already <strong>unsafe</strong>.\"",
-      "value_prop": "Shift security policies to compile-time, delivering absolute deterministic defense at runtime via O(1) Bitmaps.",
+      "subtitle": "\"If runtime needs intelligence to enforce policy, the system is already <strong>unsafe</strong>.\"<br/>If security validation at runtime still relies on intelligence, the system is already exposed.",
+      "value_prop": "Shift security validation to compile-time, enforcing policy via O(1) contiguous bitmap bitwise operations at runtime.",
       "btn_github": "Read the DROS Spec",
       "btn_poc": "Start Free-Trial"
     },
@@ -39,110 +39,110 @@
       "locked": "[DROS-Engine] ⚡ O(1) Bitmap policy locked in memory.",
       "injected": "[DROS-Engine] 🛡️ Cryptographic signature verified (Ed25519).",
       "llm_stream": "Agent attempting to call: execute_payment...",
-      "fuse_blown": "🛑 Physical Fusing Triggered: Bitwise AND verification failed. OS System Call terminated (Latency: < 1ms)."
+      "fuse_blown": "🛑 Physical Fusing Triggered: Bitwise AND verification failed. OS System Call terminated (Latency: < 0.02ms)."
     },
     "hourglass": {
-      "title_prefix": "The Inevitable",
-      "title_highlight": "Absolute Bottleneck",
-      "subtitle": "DROS is perfectly positioned at the OS System Call layer. No matter how smart the AI is, it cannot bypass physical hardware constraints.",
-      "layer1_title": "⏳ The Chaotic User Space",
-      "layer1_desc": "LLMs, API Gateways, and Agent frameworks create infinite combinations and vulnerabilities in user space.",
-      "layer2_title": "🌉 The Single Gateway",
-      "layer2_desc": "Whenever an AI wants to change the world (e.g., write to DB, send packets), it must strip away its abstraction and use C-ABI to trigger a System Call.",
+      "title_prefix": "OS-Level",
+      "title_highlight": "C-ABI Gateway",
+      "subtitle": "DROS is integrated directly at the OS C-ABI boundary. Regardless of upper-layer model reasoning changes, the execution boundary cannot bypass physical binary constraints.",
+      "layer1_title": "⏳ The Uncertain User Space",
+      "layer1_desc": "Language models, API gateways, and agent orchestration frameworks generate high degrees of uncertainty and runtime vulnerabilities within User Space.",
+      "layer2_title": "🌉 The Single Execution Choke Point",
+      "layer2_desc": "Regardless of the AI reasoning logic, executing external actions (e.g., database writes, network packages) forces all commands to transition through C-ABI and initiate OS system calls.",
       "layer3_title": "👑 DROS Runtime Circuit Breaker",
-      "layer3_desc": "We discard JSON and LLM parsing. We embed the DROS Engine directly at the gateway, using O(1) bitwise operations to block unauthorized actions in <1ms."
+      "layer3_desc": "DROS eliminates runtime text parsing and dynamic model judges, sitting directly at the C-ABI gateway to enforce authorization via O(1) bitwise operations in sub-milliseconds (0.016ms)."
     },
     "pain_points": {
-      "title_prefix": "The Inevitable Failure of",
+      "title_prefix": "The Structural Fragility of",
       "title_highlight": "\"Interpreted Security\"",
-      "subtitle": "Using AI to govern AI, or using API Gateways for dynamic parsing, is fundamentally flawed.",
+      "subtitle": "Relying on runtime LLM moderation or API gateway parsing has inherent architectural flaws.",
       "items": [
         {
           "title": "⚠️ Non-deterministic",
-          "desc": "Language models are probabilistic and hallucinate. Dynamic JSON parsing in API Gateways is vulnerable to evasion attacks."
+          "desc": "Large language models are probabilistic, while dynamic JSON/YAML parsing within API gateways is vulnerable to bypass vectors."
         },
         {
-          "title": "⏱️ TOCTOU & High Latency",
-          "desc": "Evaluating permissions at runtime introduces Time-of-check to time-of-use vulnerabilities and cripples Agent performance."
+          "title": "⏱️ TOCTOU Security Races & Latency",
+          "desc": "Evaluating permissions at runtime introduces critical TOCTOU (Time-of-Check to Time-of-Use) security races and degrades execution latency."
         },
         {
-          "title": "🔍 Lack of Enterprise Auditability",
-          "desc": "Prompt Wrappers leave no tamper-proof evidence. CISOs cannot mathematically prove to regulators \"why\" a system allowed an action."
+          "title": "🔍 Lack of Non-Repudiation Audit Logs",
+          "desc": "Prompt level guardrails fail to produce verifiable, non-repudiation logs. CISO teams cannot mathematically reconstruct or prove safety decisions to regulatory bodies or auditors."
         }
       ],
-      "conclusion_title": "The DROS Answer",
-      "conclusion_desc": "Leave intelligence in the <strong>Compile-time</strong>. Leave absolute cold determinism to the <strong>Runtime</strong>."
+      "conclusion_title": "The DROS Architectural Solution",
+      "conclusion_desc": "Maintain security intelligence within <strong>Compile-time</strong>. Enforce absolute deterministic defense at <strong>Runtime</strong>."
     },
     "advantages": {
-      "title_prefix": "The DROS",
-      "title_highlight": "Architectural Revolution",
+      "title_prefix": "Core DROS",
+      "title_highlight": "Technical Moats",
       "items": [
         {
           "title": "🧠 Compile-time Intelligence",
-          "desc": "Unroll all wildcards and inheritance logic during compilation, drastically reducing runtime overhead."
+          "desc": "Statically expand wildcards and capability inheritance during compilation, eliminating runtime resolution loads."
         },
         {
           "title": "⚡ O(1) Bitmap Runtime",
-          "desc": "No string matching. No JSON parsing. Only pure bitwise AND operations evaluating in under 1 microsecond."
+          "desc": "Eliminates string matching, JSON parsing, and model inference. Enforces decisions in under 0.02 milliseconds via contiguous bitwise operations."
         },
         {
           "title": "🔒 Cryptographic Audit",
-          "desc": "Bind the Policy Hash and Compiler Version to every audit log, guaranteeing irrefutable non-repudiation."
+          "desc": "Cryptographically binds compiled policy SHA-256 signatures and compiler versions to every audit trail, guaranteeing forensic-grade non-repudiation."
         },
         {
           "title": "🛑 Strict Fail-Closed",
-          "desc": "Any anomaly, missing signature, or unauthorized access triggers an immediate OS-level Panic. Service is denied."
+          "desc": "Any dynamic signature validation failure or unauthorized call triggers an OS-level Thread Panic, ensuring immediate fail-closed protection."
         },
         {
           "title": "💻 Policy-as-Code (DevEx)",
-          "desc": "Stop writing hundreds of lines of JSON. Use AI to help write human-readable Vajra.md, compiling it into an unbreakable policy.bin."
+          "desc": "Eliminates manual JSON policy editing. Engineers use declarative Vajra DSL, compiled into deterministic policy.bin files signed with Ed25519."
         },
         {
           "title": "🌐 VajraAgent Mesh OTA Control Plane",
-          "desc": "Supports 100% On-Premise or air-gapped private clouds. Sync latest policy.bin instantly to hundreds of microservice nodes via K8s/Ansible with a 1ms global kill-switch and centralized dashboard."
+          "desc": "Supports 100% On-Premise or air-gapped private deployments. Push updates instantly to hundreds of microservice nodes via K8s/Ansible with a 1ms emergency global kill-switch."
         }
       ]
     },
     "comparison": {
-      "title_prefix": "Defining the",
-      "title_highlight": "New Standard",
+      "title_prefix": "Architectural",
+      "title_highlight": "Comparison",
       "headers": {
         "item": "Category",
-        "traditional": "Traditional API Gateways",
-        "dros": "DROS Execution Governance",
+        "traditional": "Traditional API Gateways / LLM Guards",
+        "dros": "DROS Execution Standard",
         "advantage": "Advantage"
       },
       "rows": [
-        {"item": "Timing", "traditional": "Dynamic Runtime Parsing", "dros": "Compile-time Minting, Read-Only Runtime", "adv": "Speed"},
-        {"item": "Mechanism", "traditional": "JSON Parsing / Semantic Analysis", "dros": "O(1) Bitmap Bitwise Operations", "adv": "Deterministic"},
-        {"item": "Failure Mode", "traditional": "Often Fail-Open, Risk Spillover", "dros": "Strict Fail-Closed, Physical Fusing", "adv": "Zero Tolerance"},
-        {"item": "Audit Evidence", "traditional": "Plain Text Logs", "dros": "Cryptographically Bound Policy Hash", "adv": "Irrefutable"},
-        {"item": "Policy Authoring", "traditional": "Complex YAML / Code", "dros": "Vajra.md (AI-Assisted)", "adv": "Accessible"}
+        {"item": "Timing", "traditional": "Dynamic Runtime Parsing", "dros": "Compile-time Minting, Read-Only Runtime", "adv": "Zero Runtime Overhead"},
+        {"item": "Mechanism", "traditional": "JSON Parsing / Heuristic Reasoning", "dros": "O(1) Bitmap Bitwise Operations", "adv": "100% Deterministic"},
+        {"item": "Failure Mode", "traditional": "Potential Fail-Open Exposure", "dros": "Strict Fail-Closed Hardware Panic", "adv": "Zero Risk Spillover"},
+        {"item": "Audit Logs", "traditional": "Unverifiable Plain Text Logs", "dros": "Policy Hash Cryptographic Binding", "adv": "Non-Repudiation"},
+        {"item": "Policy Creation", "traditional": "Fragmented & Heavy Configuration", "dros": "Vajra DSL (Policy-as-Code)", "adv": "Highly Maintainable"}
       ]
     },
     "ecosystem": {
       "badge": "Infrastructure",
-      "title_prefix": "A Fortress Built Upon",
-      "title_highlight": "The Operating System",
+      "title_prefix": "A Physical Security Fortress Built at",
+      "title_highlight": "The C-ABI Boundary",
       "desc": "DROS defines how Agents are allowed to act. Our ecosystem spans from backend microservices to native protection on edge devices.",
       "view_github": "View on GitHub"
     },
     "industries": {
-      "title_prefix": "Perfect For",
-      "title_highlight": "Zero-Tolerance Industries",
+      "title_prefix": "Designed For",
+      "title_highlight": "Compliance Industries",
       "desc": "DROS is designed for sectors where security, compliance, and deterministic reliability are non-negotiable:",
-      "items": ["🏦 Financial Services (FinTech)", "🏥 Healthcare & Medical", "🏢 Global Enterprise SaaS", "🏛️ Government & Defense", "📱 Edge AI Devices"]
+      "items": ["🏦 FinTech & High-Frequency Trading", "🏥 Digital Healthcare & Diagnostics", "🏢 Enterprise SaaS Platforms", "🏛️ Government, Legal & Defense Nodes", "📱 Mobile & Edge Autonomous AI Systems"]
     },
     "cta": {
-      "title": "Linux defined how software runs. DROS defines how Agents act.",
-      "desc": "Stop patching the application layer.<br/>Upgrade to an OS-level <strong>Execution Governance Standard</strong>.<br/>Are you ready to give your Enterprise AI absolute determinism?",
+      "title": "POSIX defined system calls. DROS defines AI execution boundaries.",
+      "desc": "Stop patching the application layer with probabilistic security.<br/>Upgrade to an OS-level <strong>Execution Governance Standard</strong>.",
       "btn_github": "View Open Source Specs",
       "btn_poc": "Download Free-Trial"
     },
     "easter_egg": {
       "title": "💡 Policy-as-Code Developer Experience",
-      "desc": "Want to see how easy it is to write Vajra.md? Copy the prompt below and ask your AI (ChatGPT/Claude) to generate a policy for a Financial Customer Service Agent:",
-      "prompt": "I am developing an Agentic AI customer service system for a bank. Please write a security policy using the DROS Vajra.md (Policy-as-Code) format. Requirements:\n1. Allow the Agent to read account balances (read_balance).\n2. Allow the Agent to query credit card bills (query_bill).\n3. Strictly prohibit the Agent from transferring funds (transfer_funds) or deleting accounts (delete_account).\n4. Please describe this in human-readable Markdown and explain the protective effect once compiled into policy.bin.",
+      "desc": "Want to see how easy it is to write Vajra DSL? Copy the prompt below and ask your AI (ChatGPT/Claude) to generate a policy for a Financial Customer Service Agent:",
+      "prompt": "I am developing an Agentic AI customer service system for a bank. Please write a security policy using the DROS Vajra DSL (Policy-as-Code) format. Requirements:\n1. Allow the Agent to read account balances (read_balance).\n2. Allow the Agent to query credit card bills (query_bill).\n3. Strictly prohibit the Agent from transferring funds (transfer_funds) or deleting accounts (delete_account).\n4. Please describe this in standard YAML and explain the protective effect once compiled into policy.bin.",
       "btn_copy": "Copy Prompt",
       "copied": "✅ Copied! Now paste it to your AI."
     }
@@ -157,12 +157,12 @@
       "free_trial": {
         "title": "VajraClaw Free-Trial (PLG Edition)",
         "tag": "Max 2 Agents / 30 Days",
-        "desc": "Designed for independent developers and PoCs. Features an offline RSA dynamic license, letting you experience Time-to-first-deny: < 1ms interception in just 3 minutes."
+        "desc": "Designed for solo developers and PoCs. Features an offline RSA dynamic license, enabling instant integration testing with sub-millisecond evaluation (<0.02ms)."
       },
       "dros_engine": {
         "title": "VajraClaw (Core Engine)",
         "tag": "Microservice Core Protection",
-        "desc": "A lightning-fast, embeddable multi-language runtime. Delivers Compile-time Intelligence and an O(1) Bitmap execution engine, completely eradicating JSON parsing vulnerabilities."
+        "desc": "A high-performance, portable multi-language runtime. Employs compile-time resolution and an O(1) contiguous bitmap engine, eradicating serialization parsers and latency lag."
       },
       "dros_engine_plus": {
         "title": "VajraClaw+ (Enterprise Audit)",
@@ -182,23 +182,23 @@
     },
     "architecture": {
       "title": "Architectural Edge: Ultimate Performance & Determinism",
-      "desc": "DROS fundamentally discards the traditional API Gateway model of \"intercept -> read string -> table lookup -> allow\". Our in-memory Bitmaps execute validation logic in a fraction of CPU cycles."
+      "desc": "DROS discards dynamic API gateway parsing chains, executing constant-time contiguous bitmap lookups in a fraction of CPU cycles."
     },
     "features": {
       "title": "Core Protection Mechanisms",
-      "subtitle": "Pushing security logic to compile-time to guarantee <1ms latency at runtime.",
+      "subtitle": "Shifting security validation to compile-time to guarantee sub-millisecond execution latency at runtime.",
       "items": {
         "mmap": {
           "title": "Compile-Time Intelligence",
-          "desc": "The DROS Compiler unrolls complex regex and inheritance hierarchies, converting human-written Vajra.md into highly optimized binary signatures."
+          "desc": "The DROS Compiler statically evaluates wildcards and privilege structures, translating Vajra DSL files into contiguous binary signatures."
         },
         "ephemeral": {
           "title": "O(1) Bitmap Runtime",
-          "desc": "At runtime, the DROS Engine maps the Tool Call Hash directly to a memory address for a Bitwise AND operation. Zero Garbage Collection. Zero String Parsing."
+          "desc": "At runtime, the DROS Engine maps tool paths to static indices, executing O(1) bitwise operations with zero heap allocation and zero GC overhead."
         },
         "airgap": {
           "title": "Strict Fail-Closed Fusing",
-          "desc": "If bitwise operations fail, or if signature validation errors out, DROS doesn't attempt to recover. It triggers an OS-level Panic, physically severing the Agent's execution path."
+          "desc": "If verification fails, the microkernel initiates an immediate system-level Thread Panic, enforcing immediate fail-closed protection."
         }
       }
     },

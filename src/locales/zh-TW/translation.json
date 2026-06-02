@@ -3,13 +3,13 @@
     "home": "首頁",
     "about": "關於我們",
     "docs": "技術文件",
-    "pricing": "定價",
+    "pricing": "定價方案",
     "faq": "常見問題",
     "get_started": "取得 DROS",
     "solutions": "企業方案"
   },
   "footer": {
-    "desc": "DROS - 全球首個 Agentic AI 執行治理標準。我們將智慧與規範前置於編譯期，在執行期提供 O(1) 的物理斷路器。",
+    "desc": "DROS 是全球首個專為異質 AI 系統設計的執行治理標準 (Execution Governance Standard)。透過將策略驗證移至編譯期，並在執行期採用 O(1) 確定性查表，為企業級自主 AI 構築 Fail-Closed 實體安全防線。",
     "resources": "資源",
     "github": "GitHub 原始碼",
     "docs": "技術文件",
@@ -29,8 +29,8 @@
       "version": "DROS Execution OS v3.0",
       "title_prefix": "Agentic AI 的",
       "title_highlight": "執行治理標準",
-      "subtitle": "\"If runtime needs intelligence to enforce policy, the system is already <strong>unsafe</strong>.\"<br/>如果執行期還需要大腦去判斷，系統就已經不安全了。",
-      "value_prop": "將資安策略推向編譯期 (Compile-time)，在執行期提供 O(1) Bitmap 的絕對確定性防禦。",
+      "subtitle": "\"If runtime needs intelligence to enforce policy, the system is already <strong>unsafe</strong>.\"<br/>如果執行安全防衛在運行時仍需依賴智能進行決策，該系統本質上已暴露於風險中。",
+      "value_prop": "將安全策略前置於編譯期 (Compile-time)，在執行期提供 O(1) Contiguous Bitmap 的絕對確定性防禦。",
       "btn_github": "查閱 DROS 規格書",
       "btn_poc": "開始 Free-Trial 體驗"
     },
@@ -39,110 +39,110 @@
       "locked": "[DROS-Engine] ⚡ O(1) Bitmap 策略已鎖定入記憶體。",
       "injected": "[DROS-Engine] 🛡️ 密碼學簽章驗證通過 (Ed25519)。",
       "llm_stream": "Agent 嘗試執行呼叫：execute_payment...",
-      "fuse_blown": "🛑 物理熔斷觸發：Bitwise AND 驗證失敗。OS 系統呼叫已被終止 (Latency: < 1ms)。"
+      "fuse_blown": "🛑 物理熔斷觸發：Bitwise AND 驗證失敗。OS 系統調用已被終止 (驗證延遲: < 0.02ms)。"
     },
     "hourglass": {
-      "title_prefix": "不可繞過的",
-      "title_highlight": "絕對漏斗",
-      "subtitle": "DROS 完美卡在作業系統的系統呼叫層，不管上層 AI 多聰明，都無法繞過底層的物理約束。",
-      "layer1_title": "⏳ 混亂的 User Space",
-      "layer1_desc": "大語言模型 (LLM)、API Gateway、各種 Agent 框架在使用者空間產生無限的組合與漏洞。",
-      "layer2_title": "🌉 唯一的跨界通道",
-      "layer2_desc": "無論 AI 決定做什麼，只要想改變世界 (例如寫入資料庫、發送封包)，最終都必須透過 C-ABI 發起 System Call。",
-      "layer3_title": "👑 DROS 執行期斷路器",
-      "layer3_desc": "我們捨棄 JSON 與 LLM 解析，將 DROS Engine 直接建在收費站上，用 O(1) 的位元運算，在 <1ms 內攔截越權行為。"
+      "title_prefix": "作業系統級",
+      "title_highlight": "C-ABI 邊界收費站",
+      "subtitle": "DROS 部署於作業系統的 C-ABI 通道，無論上層 AI 應用邏輯如何變更，均無法繞過底層的物理約束。",
+      "layer1_title": "⏳ 不確定性的 User Space",
+      "layer1_desc": "大語言模型 (LLM)、API 網關與各類 Agent 框架在使用者空間產生高度不確定性的調用鏈結與安全漏洞。",
+      "layer2_title": "🌉 唯一的跨界咽喉通道",
+      "layer2_desc": "無論 AI 的推理邏輯如何變更，只要需要執行實體外部操作（如資料庫寫入、網路發送），其所有指令最終都必須通過 C-ABI 並發起 System Call。",
+      "layer3_title": "👑 DROS 執行期物理斷路器",
+      "layer3_desc": "DROS 捨棄執行期字串解析與 LLM 動態推理，將攔截微內核建置於 C-ABI 咽喉處，以 O(1) 位元運算在微秒級（0.016 毫秒）內實行精確攔截。"
     },
     "pain_points": {
-      "title_prefix": "「解釋型資安」的",
-      "title_highlight": "必然失敗",
-      "subtitle": "用 LLM 去防 LLM，或是用 API Gateway 動態解析，從根本上就存在架構缺陷。",
+      "title_prefix": "「解釋型防禦」的",
+      "title_highlight": "結構性脆弱",
+      "subtitle": "依賴運行時 LLM 語意審查或 API 網關解析，存在本質上的架構缺陷。",
       "items": [
         {
           "title": "⚠️ 非確定性 (Non-deterministic)",
-          "desc": "語言模型充滿機率與幻覺，API Gateway 的 JSON 動態解析也容易遭遇各種逃逸攻擊 (Bypass)。"
+          "desc": "大語言模型決策具有機率性與不確定性，而基於 API 網關的 JSON 動態解析亦面臨各類繞過與逃逸風險。"
         },
         {
-          "title": "⏱️ TOCTOU 與高延遲",
-          "desc": "在執行當下 (Runtime) 才去解析與驗證，會產生嚴重的 Time-of-check to time-of-use 漏洞，並拖垮 Agent 的反應速度。"
+          "title": "⏱️ TOCTOU 安全競態與延遲",
+          "desc": "在執行期 (Runtime) 進行解析與策略驗證，容易引發 TOCTOU (Time-of-Check to Time-of-Use) 安全競態，且大幅拖累 Agent 的執行效能。"
         },
         {
-          "title": "🔍 缺乏企業級不可否認性",
-          "desc": "Prompt Wrapper 無法留下不可篡改的證據。當系統出錯時，CISO 無法向金管會證明系統「為何」會做出這個判斷。"
+          "title": "🔍 缺乏不可否認性稽核軌跡",
+          "desc": "傳統 Prompt 級別防護無法提供防篡改的安全憑證。當系統行為異常時，CISO 無法向監管機構或審計委員會重現並證明安全決策的決策源流。"
         }
       ],
-      "conclusion_title": "DROS 的終極解法",
-      "conclusion_desc": "把智慧留在<strong>編譯期 (Compile-time)</strong>，把絕對的冷酷與確定性交給<strong>執行期 (Runtime)</strong>。"
+      "conclusion_title": "DROS 物理學解決方案",
+      "conclusion_desc": "將安全智慧與策略分析置於<strong>編譯期 (Compile-time)</strong>，把絕對的確定性與 Fail-Closed 防禦交給<strong>執行期 (Runtime)</strong>。"
     },
     "advantages": {
-      "title_prefix": "DROS 帶來的",
-      "title_highlight": "架構顛覆",
+      "title_prefix": "DROS 的",
+      "title_highlight": "技術領先特徵",
       "items": [
         {
           "title": "🧠 Compile-time Intelligence",
-          "desc": "在編譯期展開所有的 Wildcard 邏輯與權限邊界，大幅降低執行期負擔。"
+          "desc": "於編譯期靜態展開萬用字元（Wildcard）與權限關聯，完全免除執行期的策略計算負荷。"
         },
         {
           "title": "⚡ O(1) Bitmap Runtime",
-          "desc": "捨棄字串比對與 JSON 解析。執行期只做 Bitwise AND 位元運算，判斷時間低於 1 微秒。"
+          "desc": "排除字串比對、JSON 解析與模型推理。執行期專注於 Contiguous 狀態位元運算，攔截耗時低於 0.02 毫秒。"
         },
         {
           "title": "🔒 Cryptographic Audit",
-          "desc": "將 Policy Hash 與編譯器版本密碼學綁定至每一筆日誌，實現鐵證如山的不可否認性 (Non-repudiation)。"
+          "desc": "將編譯策略 SHA-256 哈希值與編譯器版本資訊，強制與每一筆執行日誌進行密碼學綁定，確保不可否認性（Non-repudiation）。"
         },
         {
           "title": "🛑 Strict Fail-Closed",
-          "desc": "只要發生任何異常或越權，直接觸發系統 Panic 物理斷路，拒絕服務。"
+          "desc": "一旦發生憑證篡改、簽章失配或越權請求，微內核立刻觸發 OS 級別 Panic，實現 fail-closed 物理熔斷。"
         },
         {
           "title": "💻 Policy-as-Code (DevEx)",
-          "desc": "不再手刻幾百行 JSON。讓 AI 協助工程師撰寫人類可讀的 Vajra.md，一鍵編譯為強固的 policy.bin。"
+          "desc": "無需撰寫繁瑣的 JSON。工程師採用宣告式 Vajra DSL 制定規則，由編譯器一鍵產出具備 Ed25519 簽章的 deterministic policy.bin。"
         },
         {
           "title": "🌐 VajraAgent Mesh OTA 控制面",
-          "desc": "支援 100% On-Premise / 斷網私有雲部署，搭配 K8s/Ansible 一鍵向全球數百個微服務節點同步最新安全策略，提供 1 毫秒內一鍵全局緊急熔斷與中央視覺化監控。"
+          "desc": "支援 100% On-Premise 與 Air-Gapped 私有雲部署，提供 K8s/Ansible 自動化推送，具備 1ms 內全局緊急熔斷與中央視覺化稽核功能。"
         }
       ]
     },
     "comparison": {
-      "title_prefix": "為什麼我們能定義",
-      "title_highlight": "新標準",
+      "title_prefix": "安全架構的",
+      "title_highlight": "維度差別",
       "headers": {
-        "item": "項目",
-        "traditional": "傳統 API Gateway / LLM 護欄",
+        "item": "治理維度",
+        "traditional": "傳統 API 網關 / LLM 護欄",
         "dros": "DROS 執行治理標準",
-        "advantage": "優勢"
+        "advantage": "標準優勢"
       },
       "rows": [
-        {"item": "防護時機", "traditional": "執行期 (Runtime) 動態解讀", "dros": "編譯期鑄造，執行期唯讀", "adv": "極速"},
-        {"item": "防護機制", "traditional": "JSON 解析 / 語意分析", "dros": "O(1) Bitmap 位元運算", "adv": "確定性"},
-        {"item": "發生異常時", "traditional": "可能 Fail-Open，風險外溢", "dros": "Strict Fail-Closed，物理熔斷", "adv": "零容錯"},
-        {"item": "稽核證據", "traditional": "單純的文字日誌", "dros": "Policy Hash 密碼學綁定", "adv": "不可否認"},
-        {"item": "政策撰寫", "traditional": "複雜的 YAML / 程式碼", "dros": "Vajra.md (支援 AI 生成)", "adv": "易推廣"}
+        {"item": "防護時機", "traditional": "運行期動態解讀與評估", "dros": "編譯期靜態鑄造，運行期唯讀", "adv": "零運行時解析"},
+        {"item": "防護機制", "traditional": "JSON 解析 / Heuristics 語意推理", "dros": "O(1) Bitmap 常數時間位元運算", "adv": "100% 確定性"},
+        {"item": "發生異常時", "traditional": "潛在 Fail-Open 導致防線擊穿", "dros": "Strict Fail-Closed 硬體級熔斷", "adv": "防線零外溢"},
+        {"item": "稽核證據", "traditional": "非可驗證文字日誌", "dros": "Policy Hash 密碼學強綁定", "adv": "不可否認"},
+        {"item": "政策制定", "traditional": "異構且繁雜的配置代碼", "dros": "Vajra DSL (Policy-as-Code)", "adv": "高度可維護"}
       ]
     },
     "ecosystem": {
       "badge": "Infrastructure",
-      "title_prefix": "構建於作業系統之上的",
-      "title_highlight": "安全堡壘",
+      "title_prefix": "基於底層 C-ABI 的",
+      "title_highlight": "安全物理堡壘",
       "desc": "DROS 定義了 Agent 被允許如何行動。我們的生態系橫跨伺服器端微服務叢集，到邊緣設備的手機原生防護。",
       "view_github": "在 GitHub 上查看"
     },
     "industries": {
       "title_prefix": "最適合的",
-      "title_highlight": "產業場景",
-      "desc": "DROS 特別適合對<strong>安全、合規、零容錯</strong>要求極高的企業領域：",
-      "items": ["🏦 金融科技 (FinTech)", "🏥 醫療與智慧照護", "🏢 跨國企業 SaaS 平台", "🏛️ 政府與國防單位", "📱 邊緣 AI (Edge AI)"]
+      "title_highlight": "合規產業場景",
+      "desc": "DROS 特別適合對<strong>安全、合規、零延遲、零容錯</strong>要求極高的企業領域：",
+      "items": ["🏦 金融科技與高頻交易", "🏥 智慧醫療與健康隱私", "🏢 跨雲企業級 SaaS 平台", "🏛️ 政府、司法與國防單位", "📱 行動與邊緣自主 AI 系統"]
     },
     "cta": {
-      "title": "Linux 定義了軟體的運行。DROS 定義了 Agent 的行為。",
-      "desc": "停止在應用層修修補補。<br/>升級到 OS 級別的 <strong>執行治理標準</strong>。<br/>準備好讓您的企業 AI 具備絕對確定性了嗎？",
+      "title": "POSIX 定義了系統調用。DROS 定義了 AI 執行邊界。",
+      "desc": "停止在應用層進行機率性修補。<br/>升級到 OS 等級的 <strong>執行治理標準</strong>。<br/>準備好讓您的企業 AI 具備絕對確定性了嗎？",
       "btn_github": "查看開源架構規範",
       "btn_poc": "下載 Free-Trial 體驗版"
     },
     "easter_egg": {
       "title": "💡 Policy-as-Code 開發者體驗",
-      "desc": "想知道 Vajra.md 有多好寫？將以下提示詞複製給您的 ChatGPT 或 Claude，讓 AI 幫您產生一份符合 DROS 標準的「金融客服 Agent」權限政策：",
-      "prompt": "我正在為一間銀行開發 Agentic AI 客服系統。請使用 DROS 的 Vajra.md (Policy-as-Code) 格式，幫我撰寫一份安全政策。要求：\n1. 允許 Agent 讀取帳戶餘額 (read_balance)。\n2. 允許 Agent 查詢信用卡帳單 (query_bill)。\n3. 絕對禁止 Agent 執行轉帳 (transfer_funds) 或刪除帳戶 (delete_account)。\n4. 請用人類可讀的 Markdown 描述，並解釋這份政策編譯為 policy.bin 後的防護效果。",
+      "desc": "想知道 Vajra DSL 有多好寫？將以下提示詞複製給您的 ChatGPT 或 Claude，讓 AI 幫您產生一份符合 DROS 標準的「金融客服 Agent」權限政策：",
+      "prompt": "我正在為一間銀行開發 Agentic AI 客服系統。請使用 DROS 的 Vajra DSL (Policy-as-Code) 格式，幫我撰寫一份安全政策。要求：\n1. 允許 Agent 讀取帳戶餘額 (read_balance)。\n2. 允許 Agent 查詢信用卡帳單 (query_bill)。\n3. 絕對禁止 Agent 執行轉帳 (transfer_funds) 或刪除帳戶 (delete_account)。\n4. 請使用標準 YAML 語法描述，並解釋這份政策編譯為 policy.bin 後的防護效果。",
       "btn_copy": "複製 Prompt",
       "copied": "✅ 已複製！現在去貼給您的 AI 吧！"
     }
@@ -157,12 +157,12 @@
       "free_trial": {
         "title": "VajraClaw Free-Trial (PLG 版)",
         "tag": "Max 2 Agents / 30 Days",
-        "desc": "專為獨立開發者與 PoC 設計，提供零阻力的技術體驗。內建離線 RSA 動態授權，讓您在 3 分鐘內體驗 Time-to-first-deny: < 1ms 的極致攔截快感。"
+        "desc": "專為獨立開發者與 PoC 設計，提供零阻力的技術體驗。內建離線 RSA 動態授權，快速體驗 Time-to-first-deny: < 0.02ms 的極速攔截性能。"
       },
       "dros_engine": {
         "title": "VajraClaw (核心引擎)",
         "tag": "微服務核心防護",
-        "desc": "極速、可嵌入的多語言防護底層。提供 Compile-time Intelligence 與 O(1) Bitmap 執行期引擎，徹底根除 JSON 解析漏洞。"
+        "desc": "高效、可嵌入的多語言執行保護層。採用編譯期安全展開與 O(1) Contiguous Bitmap 查表機制，免除運行時解析漏洞與效能損耗。"
       },
       "dros_engine_plus": {
         "title": "VajraClaw+ (企業稽核版)",
@@ -182,23 +182,23 @@
     },
     "architecture": {
       "title": "架構優勢：極致的效能與絕對的確定性",
-      "desc": "DROS 從根本上捨棄了傳統 API Gateway 的「攔截 -> 讀字串 -> 查表 -> 放行」模式。我們在記憶體中建構的 Bitmap 讓驗證邏輯只需極少的 CPU 週期。"
+      "desc": "DROS 捨棄傳統 API 網關的複雜解析鏈結，直接在記憶體中執行 Contiguous Bitmap 查表，將安全驗證開銷降至 CPU 週期極限。"
     },
     "features": {
       "title": "核心防護機制",
-      "subtitle": "將資安策略推向編譯期，為執行期換取 <1ms 的極致效能。",
+      "subtitle": "將安全驗證與策略分析移至編譯期，為執行期換取低於 0.02 毫秒的極致效能。",
       "items": {
         "mmap": {
           "title": "Compile-Time Intelligence",
-          "desc": "DROS Compiler 負責解開複雜的正規表達式與權限繼承關係，將人類撰寫的 Vajra.md 轉化為高效的二進位特徵。"
+          "desc": "DROS 編譯器靜態展開複雜的萬用字元與權限繼承關係，將宣告式 Vajra DSL 制定規則轉譯為 contiguously 對齊的二進位特徵。"
         },
         "ephemeral": {
           "title": "O(1) Bitmap Runtime",
-          "desc": "在執行期，DROS Engine 直接將 Tool Call Hash 映射為記憶體位址，進行 Bitwise AND 運算。零垃圾回收 (GC)，零字串解析。"
+          "desc": "於執行期，DROS 引擎直接定位權限點記憶體位址，實行 $\mathcal{O}(1)$ 常數複雜度位元運算，確保零 heap 分配與零 GC 壓力。"
         },
         "airgap": {
           "title": "Strict Fail-Closed 物理熔斷",
-          "desc": "一旦位元運算結果不符，或憑證簽章錯誤，DROS 不會嘗試修復，而是直接發出 OS 級別的 Panic，物理切斷 Agent 執行路徑。"
+          "desc": "一旦檢測到權限未授權或簽章損毀，微內核立即發起作業系統級 Thread Panic，落實嚴格的 fail-closed 物理熔斷。"
         }
       }
     },

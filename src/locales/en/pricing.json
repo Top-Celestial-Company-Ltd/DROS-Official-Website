@@ -10,7 +10,7 @@
       "name": "VajraClaw Free-Trial <br/><span style='font-size: 1.2rem; color: #a0a0a0'>PLG Edition</span>",
       "price_yearly": "$0",
       "price_monthly": "30 Days Timebomb",
-      "desc": "The ultimate O(1) circuit breaker designed for independent developers and PoC validation.",
+      "desc": "A high-performance O(1) execution gate designed for independent developers and PoC validation.",
       "features": [
         "1 Machine UUID Binding",
         "Max 2 Concurrent Agents",
@@ -18,7 +18,7 @@
         "Community forum support"
       ],
       "details_title": "View Technical Specs",
-      "details_content": "<p><strong>Target Audience</strong>: A lightweight, blazingly fast, embeddable developer toolkit focused on delivering Time-to-first-deny: < 1ms.<br/><strong>Core Mechanisms:</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>O(1) Bitmap Engine</strong>: Native compilation, runtime latency under 1ms.</li><li><strong>Strict Fail-Closed</strong>: Triggers OS-level Panic immediately.</li><li><strong>DevEx</strong>: Compiles Vajra.md for instant deployment.</li></ul>",
+      "details_content": "<p><strong>Target Audience</strong>: A lightweight, blazingly fast, embeddable developer toolkit focused on delivering constant-time evaluation (<0.02ms) at runtime.<br/><strong>Core Mechanisms:</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>O(1) Bitmap Engine</strong>: Native compilation, runtime latency under 0.02ms.</li><li><strong>Strict Fail-Closed</strong>: Triggers OS-level Panic immediately.</li><li><strong>DevEx</strong>: Compiles Vajra DSL for instant deployment.</li></ul>",
       "btn": "Download Core Engine"
     },
     "hacker": {
@@ -33,7 +33,7 @@
         "Community forum support"
       ],
       "details_title": "View Technical Specs",
-      "details_content": "<p><strong>Target Audience</strong>: A lightweight, blazingly fast, embeddable developer toolkit focused on delivering Time-to-first-deny: < 1ms.<br/><strong>Core Mechanisms:</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>O(1) Bitmap Engine</strong>: Native compilation, runtime latency under 1ms.</li><li><strong>Strict Fail-Closed</strong>: Triggers OS-level Panic immediately.</li><li><strong>DevEx</strong>: Compiles Vajra.md for instant deployment.</li></ul>",
+      "details_content": "<p><strong>Target Audience</strong>: A lightweight, blazingly fast, embeddable developer toolkit focused on delivering constant-time evaluation (<0.02ms) at runtime.<br/><strong>Core Mechanisms:</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>O(1) Bitmap Engine</strong>: Native compilation, runtime latency under 0.02ms.</li><li><strong>Strict Fail-Closed</strong>: Triggers OS-level Panic immediately.</li><li><strong>DevEx</strong>: Compiles Vajra DSL for instant deployment.</li></ul>",
       "btn_yearly": "Buy Yearly ($149)",
       "btn_monthly": "Buy Monthly ($19)"
     },
