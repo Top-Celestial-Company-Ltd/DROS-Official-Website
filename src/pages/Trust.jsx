@@ -36,6 +36,24 @@ export default function Trust() {
         </div>
       </section>
 
+      {/* Existential Threat Alert Section */}
+      <section style={{ padding: '4rem 0', background: 'linear-gradient(180deg, rgba(255, 77, 79, 0.02) 0%, transparent 100%)', borderBottom: '1px solid rgba(255,77,79,0.05)' }}>
+        <div className="container" style={{ maxWidth: '800px', textAlign: 'center' }}>
+          <div style={{ background: 'rgba(255, 77, 79, 0.05)', border: '1px solid rgba(255, 77, 79, 0.15)', borderRadius: '16px', padding: '2.5rem', boxShadow: '0 4px 30px rgba(255, 77, 79, 0.02)' }}>
+            <span style={{ fontSize: '2rem', display: 'block', marginBottom: '1rem' }}>🚨</span>
+            <h2 style={{ fontSize: '1.8rem', color: '#ff4d4f', marginBottom: '1rem', fontFamily: 'Noto Serif TC, serif', fontWeight: 'bold' }}>
+              {t('trust.threat.title')}
+            </h2>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: '1.8', marginBottom: '1.5rem', textAlign: 'left' }}>
+              {t('trust.threat.desc1')}
+            </p>
+            <p style={{ color: 'var(--text-primary)', fontSize: '1.05rem', lineHeight: '1.8', fontWeight: '500', textAlign: 'left' }}>
+              {t('trust.threat.desc2')}
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Verification Harness Block */}
       <section style={{ backgroundColor: 'rgba(20,20,20,0.3)', padding: '6rem 0' }}>
         <div className="container">

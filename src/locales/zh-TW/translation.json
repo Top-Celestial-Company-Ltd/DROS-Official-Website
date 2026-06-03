@@ -259,18 +259,18 @@
     "meta_title": "DROS | 確信驗證與系統物理極限揭露",
     "meta_desc": "公開披露 DROS v1.0 驗證合約、實測混亂並發壓測基準與物理極限。我們秉持硬核系統工程的誠實態度，拒絕行銷話術。",
     "hero": {
-      "title_prefix": "DROS v1.0",
-      "title_highlight": "確信安全與驗證標準",
-      "subtitle": "我們深知，真正的系統級安全不是行銷口號。我們在此公開 DROS 的驗證合約、真實壓力測試數據以及物理底層約束，供全球 CISO 與資深架構師嚴格檢視。"
+      "title_prefix": "DROS v1.0 / AGI 時代安全保險絲",
+      "title_highlight": "確信安全與根憑證標準",
+      "subtitle": "未來的網際網路將充斥著密密麻麻、高推理能力的自主 Agent。一旦它們被提示詞劫持發瘋，將在毫無人類指紋的情況下，執行完全「無人負責、無法追溯、無跡可尋」的無痕犯罪。DROS 拒絕機率性的修補，我們在 C-ABI 咽喉處為 Agent 戴上冰冷的密碼學手銬，將機率性的失控轉化為可證實的法律責任。"
     },
     "harness": {
-      "title": "一、v1.0 驗證合約規格 (Certification Harness)",
+      "title": "二、v1.0 驗證合約規格 (Certification Harness)",
       "desc": "DROS 拒絕寫死的偽模擬。我們正式將本地 `dros-home-lab/tests/` 下的 5 大基準測試指令，凍結為 v1.0 官方確信驗證合約。任何人皆可透過本地環境執行並重現相同的防護特徵：",
       "test1": "🧬 test_agent_framework_sim.py — 異構 Agent 調用熔斷與日誌規整性校驗",
       "test2": "🧪 test_policy_ota_concurrent_agent.py — 50 執行緒動態 OTA 熱重載混亂壓力測試"
     },
     "benchmarks": {
-      "title": "二、RCU 混亂並發壓力測試 (RCU Concurrent Chaos)",
+      "title": "三、RCU 混亂並發壓力測試 (RCU Concurrent Chaos)",
       "desc": "在極端的並發混沌測試環境下（50 條執行緒持續發起調用，並在高頻進行 RCU 指標熱重載策略變更），DROS 取得了令人矚目的實測物理指標：",
       "latency_val": "484.8 ns",
       "latency_lbl": "微核心核心攔截延遲",
@@ -282,7 +282,7 @@
       "races_lbl": "Race Condition / 策略越權繞過"
     },
     "reality": {
-      "title": "三、系統物理極限與邊界披露 (DROS Engineering Reality)",
+      "title": "四、系統物理極限與邊界披露 (DROS Engineering Reality)",
       "desc": "作為嚴謹的系統工程師，我們不提供任何「完美無瑕」的行銷承諾。我們公開以下在實體硬體上的物理限制與邊界指標：",
       "points": [
         {
@@ -304,7 +304,7 @@
       ]
     },
     "open_source": {
-      "title": "四、Vajra Core 開源倡議與公共合約庫",
+      "title": "五、Vajra Core 開源倡議與公共合約庫",
       "desc": "我們深信「合約不應被私有專利所壟斷」。我們正式將 Vajra Core 語法檢測與健康診斷引擎開源，並建立 GitHub 公共策略合約庫 (Vajra Policy Hub)：",
       "lint_title": "Vajra Lint 靜態校驗",
       "lint_desc": "提供開源規則編譯與五級自動阻斷。工程師在 CI/CD 即可預先攔截不安全的權限萬用字元與策略衝突。",
@@ -312,6 +312,11 @@
       "doctor_desc": "自動檢測策略複雜度與稀疏矩陣（Sparse Matrix）分佈，避免 IAM 權限配置膨脹。",
       "hub_title": "GitHub Vajra Policy Hub",
       "hub_desc": "由全球開發者共建的跨平台合約模板庫。開發者可以隨時拉取、分享標準 Agent 策略，加速 Vajra 成為事實上的業界標準。"
+    },
+    "threat": {
+      "title": "生存威脅：完全「無痕」的自主 Agent 浪潮",
+      "desc1": "當我們賦予 AI 大腦自主執行 System Call 的權限，就等於為惡意代碼開啟了一扇物理大門。一個發瘋的 Agent 可以自己註冊域名、編寫病毒、在不同的雲伺服器間轉移，且完全不留下任何人類的指紋紀錄。這在司法鑑定上是一場災難。",
+      "desc2": "DROS 作為 **Agentic Web 的根憑證發放中心 (Root CA)**，強制為每一次執行注入不可抵賴的密碼學鋼印。AI 大腦可以想入非非，但只要伸手去觸碰未授權的實體 Tool，DROS 核心便以 O(1) Bitwise AND 位元運算在奈秒級內直接物理性熔斷，從根本上終結 AI 甩鍋的時代。"
     }
   }
 }

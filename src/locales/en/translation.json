@@ -259,18 +259,18 @@
     "meta_title": "DROS | Trust, Verification & Systems Reality",
     "meta_desc": "Public disclosure of DROS v1.0 Certification Harness, concurrent RCU stress test benchmarks, and physical hardware boundaries. We embrace strict systems engineering honesty.",
     "hero": {
-      "title_prefix": "DROS v1.0",
-      "title_highlight": "Trust & Verification Standard",
-      "subtitle": "We believe system-level security is built on transparency, not marketing claims. Here we publish DROS's certification harness, raw stress test benchmarks, and physical limits for CISOs and principal architects."
+      "title_prefix": "DROS v1.0 / AGI Security Fusing",
+      "title_highlight": "Trust & Root CA Standard",
+      "subtitle": "The future web will be crowded with autonomous Agents equipped with high-level reasoning. If hijacked or rogue, they will execute illegal transfers, data breaches, or cyberattacks completely without human footprints—an untraceable crisis. DROS rejects probabilistic patches, acting as the Root CA of the Agentic Web to bind every tool execution to a cryptographic signature, making probabilistic chaos legally accountable."
     },
     "harness": {
-      "title": "1. v1.0 Certification Harness Specifications",
+      "title": "2. v1.0 Certification Harness Specifications",
       "desc": "DROS rejects static mock demonstrations. We formally freeze the 5 benchmark tests under `dros-home-lab/tests/` as the v1.0 Official Certification Harness, allowing anyone to verify and reproduce the same enforcement traits locally:",
       "test1": "🧬 test_agent_framework_sim.py — Heterogeneous agent invocation block & log uniformity verification",
       "test2": "🧪 test_policy_ota_concurrent_agent.py — 50-thread concurrent OTA hot-reload chaos stress test"
     },
     "benchmarks": {
-      "title": "2. RCU Concurrent Chaos Benchmarks",
+      "title": "3. RCU Concurrent Chaos Benchmarks",
       "desc": "Under extreme concurrent chaos (50 threads calling tools while performing high-frequency lock-free RCU swaps), DROS recorded outstanding physical performance in laboratory stress environments:",
       "latency_val": "484.8 ns",
       "latency_lbl": "Microkernel Core Intercept Latency",
@@ -282,7 +282,7 @@
       "races_lbl": "Race Conditions or Policy Bypass"
     },
     "reality": {
-      "title": "3. Hardware Limits & Boundaries (DROS Engineering Reality)",
+      "title": "4. Hardware Limits & Boundaries (DROS Engineering Reality)",
       "desc": "As strict system engineers, we make no 'perfectly flawless' marketing promises. We transparently disclose the following physical limits and execution envelopes on real hardware:",
       "points": [
         {
@@ -304,7 +304,7 @@
       ]
     },
     "open_source": {
-      "title": "4. Vajra Core Open Source & Public Policy Hub",
+      "title": "5. Vajra Core Open Source & Public Policy Hub",
       "desc": "We believe execution contracts should not be locked behind proprietary patents. We are open-sourcing Vajra Core's checking and diagnostic engines and establishing the crowdsourced GitHub Vajra Policy Hub:",
       "lint_title": "Vajra Lint Core Engine",
       "lint_desc": "Provides open-source parsing and 5-level automatic blocking. Intercepts unsafe wildcards and policy conflicts during CI/CD checks.",
@@ -312,6 +312,11 @@
       "doctor_desc": "Automatically profiles policy complexity and sparse matrix distribution, preventing IAM complexity bloat.",
       "hub_title": "GitHub Vajra Policy Hub",
       "hub_desc": "A crowdsourced, cross-platform library of policy templates. Pull, share, and collaborate on policies to establish Vajra as the de facto standard."
+    },
+    "threat": {
+      "title": "Existential Threat: The Traceless Agent Swarms",
+      "desc1": "Granting AI models the authority to initiate System Calls is opening a physical gate to malicious execution. A rogue Agent can register domains, compile viruses, and migrate across servers without leaving any human footprints. In terms of forensics and legal liability, this is a catastrophe.",
+      "desc2": "DROS, acting as the **Root Certificate Authority (Root CA)** for the Agentic Web, forces a non-repudiable cryptographic stamp onto every single execution. The AI model can hypothesize, but the moment it attempts to invoke an unauthorized physical Tool, DROS microkernel triggers a physical fail-closed thread panic in 484.8 ns, ending the era of AI blame-shifting."
     }
   }
 }
