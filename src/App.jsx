@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -13,6 +14,7 @@ import Trust from './pages/Trust';
 export default function App() {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <div style={{ minHeight: '80vh' }}>
         <Routes>

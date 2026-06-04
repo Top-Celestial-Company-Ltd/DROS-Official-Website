@@ -24,14 +24,14 @@
     "dharma_exemption": "Dharma Exemption：純粹的非營利佛教弘法用途可 100% 免費使用。"
   },
   "home": {
-    "meta_title": "DROS | Agentic AI 執行治理標準",
-    "meta_desc": "DROS 是 Agentic AI 時代的執行確信基礎設施與執行治理標準。透過編譯期智慧與 O(1) Bitmap 執行期引擎（實測核心延遲低至 484.8 奈秒），徹底解決傳統資安架構的高延遲與非確定性。",
+    "meta_title": "DROS | Agentic Web 根憑證與執行不可否認性標準",
+    "meta_desc": "DROS 是 Agentic Web 的根憑證發行機構 (Root CA)。透過解決上下文丟失問題，簽發具備 Ed25519 簽章的 signed policy.bin 憑證，為企業落實無可抵賴的 AI 執行不可否認性 (Execution Non-Repudiation)。",
     "hero": {
       "version": "DROS Execution OS v3.0",
-      "title_prefix": "Agentic AI 的",
-      "title_highlight": "執行治理標準",
+      "title_prefix": "Agentic Web 的",
+      "title_highlight": "根憑證與不可否認性標準",
       "subtitle": "\"If runtime needs intelligence to enforce policy, the system is already <strong>unsafe</strong>.\"<br/>如果執行安全防衛在運行時仍需依賴智慧進行決策，該系統本質上已暴露於風險中。",
-      "value_prop": "將安全策略前置於編譯期 (Compile-time)，在執行期提供 O(1) Contiguous Bitmap 的絕對確定性防禦。",
+      "value_prop": "作為 Agentic Web 的根憑證發行機構 (Root CA)，簽發 signed policy.bin 能力憑證，為全球 AI 代理網格建立不可否認的執行授權與責任審計軌跡。",
       "btn_github": "查閱 DROS 規格書",
       "btn_poc": "開始 Free-Trial 體驗"
     },
@@ -261,7 +261,7 @@
     "hero": {
       "title_prefix": "DROS v1.0 / AGI 時代安全保險絲",
       "title_highlight": "確信安全與根憑證標準",
-      "subtitle": "未來的網際網路將充斥著密密麻麻、高推理能力的自主 Agent。一旦它們被提示詞劫持發瘋，將在毫無人類指紋的情況下，執行完全「無人負責、無法追溯、無跡可尋」的無痕犯罪。DROS 拒絕機率性的修補，我們在 C-ABI 咽喉處為 Agent 戴上冰冷的密碼學手銬，將機率性的失控轉化為可證實的法律責任。"
+      "subtitle": "未來的網際網路將充斥著密密麻麻、高推理能力的自主 Agent。一旦它們被提示詞劫持發瘋，將在毫無人類指紋的情況下，執行完全「無人負責、無法追溯、無跡可尋」的無痕犯罪。DROS 拒絕機率性的修補，我們以 Root CA 簽發執行能力憑證，在 C-ABI 咽喉處為 Agent 戴上冰冷的密碼學手銬，將機率性的失控轉化為可證實的法律責任。"
     },
     "harness": {
       "title": "二、v1.0 驗證合約規格 (Certification Harness)",
@@ -316,7 +316,7 @@
     "threat": {
       "title": "生存威脅：完全「無痕」的自主 Agent 浪潮",
       "desc1": "當我們賦予 AI 大腦自主執行 System Call 的權限，就等於為惡意代碼開啟了一扇物理大門。一個發瘋的 Agent 可以自己註冊域名、編寫病毒、在不同的雲伺服器間轉移，且完全不留下任何人類的指紋紀錄。這在司法鑑定上是一場災難。",
-      "desc2": "DROS 作為 **Agentic Web 的根憑證發放中心 (Root CA)**，強制為每一次執行注入不可抵賴的密碼學鋼印。AI 大腦可以想入非非，但只要伸手去觸碰未授權的實體 Tool，DROS 核心便以 O(1) Bitwise AND 位元運算在奈秒級內直接物理性熔斷，從根本上終結 AI 甩鍋的時代。"
+      "desc2": "DROS 作為 **Agentic Web 的根憑證發放中心 (Root CA)**，強制為每一次執行注入不可抵賴的密碼學鋼印。我們將合規合約編譯為帶有 Ed25519 簽章的 `policy.bin`（內含 Header、簽章區、字典排序的 Agent/Tool 索引與 O(1) 權限位元矩陣）。AI 大腦可以想入非非，但只要伸手去觸碰未授權的實體 Tool，DROS 微核心便在 484.8 奈秒內直接物理性熔斷，從根本上終結 AI 甩鍋的時代。"
     }
   }
 }

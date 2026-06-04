@@ -4,7 +4,7 @@
   "sidebar": {
     "title": "DROS Documentation",
     "getting_started": "1. Getting Started",
-    "architecture": "2. Distributed Mesh",
+    "architecture": "2. Mesh & Credentials",
     "enterprise": "3. Enterprise Defense",
     "sre_model": "4. SRE & Security Model",
     "security": "5. Zero Trust Security",
@@ -38,14 +38,36 @@
       ]
     },
     "architecture": {
-      "title": "2. Distributed Capability Mesh",
-      "desc": "DROS has evolved from a standalone architecture into a Kubernetes-level <strong>Zero-Trust Mesh</strong>. It physically partitions the system into a 'Strategic Control Plane' and a 'Frontline Execution Plane'.",
-      "key_components": "Core Mesh Components",
+      "title": "2. Distributed Mesh & Root CA Credentials",
+      "desc": "DROS has evolved from a standalone architecture into a Kubernetes-level <strong>Zero-Trust Mesh</strong>, acting as the <strong>Root Certificate Authority (Root CA)</strong> for the Agentic Web. It compiles security policies into signed binary capability credentials. For details, refer to the newly published <a href='file:///e:/vscode/AI%E7%9F%A5%E8%AD%98%E5%BA%AB/DROS%E5%95%86%E5%93%81%E5%B0%88%E6%A1%88%E6%9A%AB%E5%AD%98/%E5%95%86%E6%A5%AD%E8%88%87%E6%9E%B6%E6%A7%8B%E6%96%87%E4%BB%B6%E5%BA%AB/DROS_Agent_Trust_Infrastructure_Whitepaper.md' target='_blank' style='color:var(--accent-gold); text-decoration:underline;'>DROS Agent Trust Infrastructure Whitepaper</a>.",
+      "key_components": "Mesh Components & Credential Structure",
       "components": [
-        "<strong>VajraAgent (Control Plane)</strong>: The strategic headquarters. Responsible for defining human semantics and compiling them into binary security credentials (.bin) with cryptographic signatures.",
-        "<strong>Distribution Mesh</strong>: Encrypted channel-based. Supports microsecond-level Delta Updates for immediate revocation, instantly cutting off a compromised Agent's global access.",
-        "<strong>VajraClaw (Execution Plane)</strong>: Acts as an O(1) physical circuit-breaker sidecar mounted on each node. It only trusts credentials, not narratives, rendering Prompt Injection entirely ineffective."
-      ]
+        "<strong>VajraAgent (Control Plane / Root CA)</strong>: Responsible for defining security policies and compiling them into signed binary credentials (<code>policy.bin</code>).",
+        "<strong>Distribution Mesh</strong>: Supports microsecond-level delta updates for immediate credential revocation across the global grid.",
+        "<strong>VajraClaw (Execution Plane / PEP)</strong>: Mounted at the C-ABI bottleneck, loading the <code>policy.bin</code> into memory as an O(1) bitwise matrix for 484.8ns offline validation."
+      ],
+      "bin_layout_title": "Open-Source policy.bin Specification",
+      "bin_layout_desc": "DROS capability credentials are laid out in a highly compact binary format with a signature block and sorted indexes for nanosecond-level local evaluations:",
+      "table": {
+        "offset": "Offset",
+        "name": "Field",
+        "size": "Size",
+        "desc": "Description",
+        "rows": [
+          {"offset": "0x00 - 0x05", "name": "Header", "size": "6 Bytes", "desc": "ASCII value fixed to 'VAJRAC'"},
+          {"offset": "0x06", "name": "Version", "size": "1 Byte", "desc": "Version byte (currently 0x03)"},
+          {"offset": "0x07", "name": "Sig Scheme", "size": "1 Byte", "desc": "Signature algorithm (0x01 = Ed25519)"},
+          {"offset": "0x08 - 0x47", "name": "CA Signature", "size": "64 Bytes", "desc": "Cryptographic signature from the CA"},
+          {"offset": "0x48", "name": "DSL Version", "size": "1 Byte", "desc": "Vajra DSL version byte"},
+          {"offset": "0x49 - 0x50", "name": "Timestamp", "size": "8 Bytes", "desc": "Issue timestamp (Epoch Time)"},
+          {"offset": "0x51 - 0x58", "name": "Expiry", "size": "8 Bytes", "desc": "Expiration timestamp (0 for permanent)"},
+          {"offset": "0x59 - 0x68", "name": "Serial Number", "size": "16 Bytes", "desc": "Unique certificate UUID"},
+          {"offset": "0x69 - 0x70", "name": "Agent Offset", "size": "8 Bytes", "desc": "Offset to Agent Index Table"},
+          {"offset": "0x71 - 0x78", "name": "Tool Offset", "size": "8 Bytes", "desc": "Offset to Tool Index Table"},
+          {"offset": "0x79 - 0x80", "name": "Matrix Offset", "size": "8 Bytes", "desc": "Offset to O(1) Bitwise Matrix"},
+          {"offset": "0x81 - EOF", "name": "Index Tables & Matrix", "size": "Variable", "desc": "Sorted Agent/Tool lists and bit-packed capability matrix"}
+        ]
+      }
     },
     "enterprise": {
       "title": "3. Enterprise Defense",

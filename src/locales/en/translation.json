@@ -24,14 +24,14 @@
     "dharma_exemption": "Dharma Exemption: 100% free for pure non-profit Buddhist propagation purposes."
   },
   "home": {
-    "meta_title": "DROS | Execution Governance Standard for Agentic AI",
-    "meta_desc": "DROS is the Execution Governance Standard for Agentic AI. We eliminate the latency and non-determinism of traditional security architecture using Compile-time Intelligence and an O(1) Bitmap Runtime Engine.",
+    "meta_title": "DROS | Agentic Web Root CA & Execution Non-Repudiation Standard",
+    "meta_desc": "DROS is the Root Certificate Authority (Root CA) for the Agentic Web. Solving the Context Loss Problem by issuing signed policy.bin capability credentials to establish absolute Execution Non-Repudiation.",
     "hero": {
       "version": "DROS Execution OS v3.0",
-      "title_prefix": "The Execution Governance Standard",
-      "title_highlight": "for Agentic AI",
-      "subtitle": "\"If runtime needs intelligence to enforce policy, the system is already <strong>unsafe</strong>.\"<br/>If security validation at runtime still relies on intelligence, the system is already exposed.",
-      "value_prop": "Shift security validation to compile-time, enforcing policy via O(1) contiguous bitmap bitwise operations at runtime.",
+      "title_prefix": "Agentic Web's",
+      "title_highlight": "Root CA & Non-Repudiation Standard",
+      "subtitle": "\"If runtime needs intelligence to enforce policy, the system is already <strong>unsafe</strong>.\"<br/>If execution safety depends on intelligence at runtime, the system is already exposed to risks.",
+      "value_prop": "As the Root Certificate Authority (Root CA) for the Agentic Web, DROS signs policy.bin capability credentials to establish non-repudiable execution authorization and audit trails.",
       "btn_github": "Read the DROS Spec",
       "btn_poc": "Start Free-Trial"
     },
@@ -261,7 +261,7 @@
     "hero": {
       "title_prefix": "DROS v1.0 / AGI Security Fusing",
       "title_highlight": "Trust & Root CA Standard",
-      "subtitle": "The future web will be crowded with autonomous Agents equipped with high-level reasoning. If hijacked or rogue, they will execute illegal transfers, data breaches, or cyberattacks completely without human footprints—an untraceable crisis. DROS rejects probabilistic patches, acting as the Root CA of the Agentic Web to bind every tool execution to a cryptographic signature, making probabilistic chaos legally accountable."
+      "subtitle": "The future web will be crowded with autonomous Agents equipped with high-level reasoning. If rogue, they will execute illegal transactions, data breaches, or cyberattacks completely without human footprints—an untraceable crisis. DROS rejects probabilistic patches, acting as the Root CA of the Agentic Web to sign capability credentials, enforcing agent accountability from the ground up."
     },
     "harness": {
       "title": "2. v1.0 Certification Harness Specifications",
@@ -316,7 +316,7 @@
     "threat": {
       "title": "Existential Threat: The Traceless Agent Swarms",
       "desc1": "Granting AI models the authority to initiate System Calls is opening a physical gate to malicious execution. A rogue Agent can register domains, compile viruses, and migrate across servers without leaving any human footprints. In terms of forensics and legal liability, this is a catastrophe.",
-      "desc2": "DROS, acting as the **Root Certificate Authority (Root CA)** for the Agentic Web, forces a non-repudiable cryptographic stamp onto every single execution. The AI model can hypothesize, but the moment it attempts to invoke an unauthorized physical Tool, DROS microkernel triggers a physical fail-closed thread panic in 484.8 ns, ending the era of AI blame-shifting."
+      "desc2": "DROS, acting as the **Root Certificate Authority (Root CA)** for the Agentic Web, forces a non-repudiable cryptographic seal onto every execution. We compile security contracts into a signed `policy.bin` (containing Header, Ed25519 signature, sorted agent/tool index tables, and O(1) capability bitmap matrix). The Agent can reason freely, but the moment it attempts to invoke an unauthorized tool, the DROS microkernel triggers a fail-closed thread panic in 484.8 ns, ending the era of AI blame-shifting."
     }
   }
 }

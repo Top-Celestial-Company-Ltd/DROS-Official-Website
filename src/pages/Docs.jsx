@@ -105,6 +105,31 @@ export default function Docs() {
               ))}
             </ul>
           </div>
+
+          <h3 style={{ marginTop: '3rem', color: 'var(--accent-gold)' }}>{t('sections.architecture.bin_layout_title')}</h3>
+          <p dangerouslySetInnerHTML={{ __html: t('sections.architecture.bin_layout_desc') }}></p>
+          <div className="table-responsive" style={{ marginTop: '1.5rem', marginBottom: '3rem' }}>
+            <table className="doc-table">
+              <thead>
+                <tr>
+                  <th style={{ width: '20%' }}>{t('sections.architecture.table.offset')}</th>
+                  <th style={{ width: '25%' }}>{t('sections.architecture.table.name')}</th>
+                  <th style={{ width: '15%' }}>{t('sections.architecture.table.size')}</th>
+                  <th style={{ width: '40%' }}>{t('sections.architecture.table.desc')}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {t('sections.architecture.table.rows', { returnObjects: true }).map((row, i) => (
+                  <tr key={i}>
+                    <td style={{ fontFamily: 'monospace', color: 'var(--accent-blue)' }}>{row.offset}</td>
+                    <td style={{ fontWeight: 'bold', color: '#fff' }}>{row.name}</td>
+                    <td>{row.size}</td>
+                    <td style={{ color: 'var(--text-secondary)' }}>{row.desc}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </section>
 
         {/* Section 3: Enterprise Defense */}

@@ -1,15 +1,15 @@
 {
-  "meta_title": "DROS - 關於我們 | 數據的數位瑞士",
-  "meta_desc": "DROS 市場定位與願景：拒絕機率性的沙洲，為 AGI 時代澆灌最堅固的底層物理混凝土。成為全球 AI Agent 的標準防護協定。",
+  "meta_title": "DROS - 關於我們 | Agentic Web 的根憑證發行機構 (Root CA)",
+  "meta_desc": "DROS 市場定位與願景：作為 Agentic Web 的根憑證發行機構 (Root CA) 與 PKI 信任地基，從執行治理落實代理責任歸屬 (Agent Accountability)，終結無痕 Agent 的安全性威脅。",
   "hero": {
     "title": "About <span class='gold-text'>DROS</span>",
-    "subtitle": "我們不建造大模型，我們建立約束大模型的物理定律。",
-    "desc": "在追求 AGI 的狂熱競逐中，產業在機率模型的沙洲上蓋起了摩天大樓。DROS 存在的意義，就是為企業 AI 澆灌最底層的物理混凝土。"
+    "subtitle": "我們不只約束大模型，我們更是 Agentic Web 的根憑證發行機構與 PKI 信任地基。",
+    "desc": "在追求 AGI 的狂熱競逐中，自主 Agent 隨處湧現。然而，一旦它們被提示詞劫持發瘋，將在無人類指紋的情況下執行完全「無痕」的犯罪。DROS 存在的意義，是為全球 Agentic Web 簽發不可抵賴的能力憑證，將失控風險物理性熔斷在 C-ABI 咽喉處。"
   },
   "sections": {
     "philosophy": {
       "title": "我們的信仰：確定性 > 機率性",
-      "desc": "我們深感遺憾看著大廠用疊床架屋的微服務、龐大的向量資料庫 (Vector DB) 與無休止的 Prompt Engineering 來修補「幻覺」。真正的安全不應該建立在預測與機率之上。<br/><br/>我們主張<strong>回歸作業系統本質</strong>。放棄對 AI 「講道理」，而是用純粹的記憶體映射與位元運算，在底層直接熔斷危險邊界。",
+      "desc": "我們深感遺憾看著大廠用疊床架屋的微服務、龐大的向量資料庫 (Vector DB) 與無休止的 Prompt Engineering 來修補「幻覺」。真正的安全不應該建立在預測與機率之上。<br/><br/>我們主張<strong>回歸作業系統本質</strong>。放棄對 AI 「講道理」，而是用純粹的記憶體映射與位元運算，在底層直接熔斷危險邊界，建立不可抵賴的代理責任歸屬 (Agent Accountability)。",
       "icon": "🛡️"
     },
     "origin": {
@@ -18,19 +18,19 @@
       "icon": "☸️"
     },
     "niche": {
-      "title": "市場定位：數據的數位瑞士",
-      "desc": "我們在 AI 產業鏈中佔據極為獨特的生態位：<br/><br/>1. <strong>不與 OpenAI、Anthropic 競爭</strong>：我們不訓練底層大模型。<br/>2. <strong>不覬覦企業機密</strong>：我們是零監測 (Zero-Telemetry) 的物理元件。<br/><br/>我們只做一件事：完美卡在「黑盒子大模型」與「企業核心數據」的中間，擔任<strong>絕對中立的物理檢查哨 (Checkpoint)</strong>。只要經過 DROS，再狡猾的惡意模型也無法作惡。",
+      "title": "市場定位：Agentic Web 的 Root CA",
+      "desc": "我們在 AI 產業鏈中佔據極為獨特的生態位：<br/><br/>1. <strong>不與 OpenAI、Anthropic 競爭</strong>：我們不訓練底層大模型。<br/>2. <strong>不覬覦企業機密</strong>：我們是零監測 (Zero-Telemetry) 的物理元件。<br/><br/>我們擔任<strong>中立的能力憑證發放中心 (Root CA) 與物理檢核哨 (Inspection Station)</strong>。Agent 在網路跨伺服器協同中必須攜帶 signed `policy.bin` 憑證，並由節點在 484.8ns 內離線驗證，終結無痕作惡。",
       "icon": "🇨🇭"
     },
     "vision": {
-      "title": "終極願景：AI 治理標準協定",
-      "desc": "網路時代靠 TCP/IP 確保傳輸可靠，加密貨幣靠區塊鏈確保去信任化。未來的 Agentic AI 時代，則需要一套確保機器行為永不越軌的底層協定。<br/><br/>我們的願景是讓 <strong>DROS 金剛合約 (Vajra Contract)</strong> 成為全球 AI 溝通的安全憑證網格。讓每一台伺服器，都標配 VajraClaw 的物理斷路器。",
+      "title": "終極願景：從執行治理到代理責任歸屬",
+      "desc": "正如 SSL/TLS 憑證規範了主機信任，OAuth 規範了人類用戶授權。在自主代理網路時代，<strong>DROS 金剛合約 (Vajra Contract)</strong> 將成為全球 AI 的能力憑證標準網格。我們的願景是從底層「執行治理」走向「代理責任歸屬」，讓每一個 Agent 都具備不可抵賴的密碼學鋼印。",
       "icon": "🕸️"
     }
   },
   "cta": {
     "title": "The paradigm shift is here.",
-    "subtitle": "準備好加入物理防禦網格了嗎？",
+    "subtitle": "準備好加入實體防禦網格與 PKI 信任鏈了嗎？",
     "btn_contact": "聯絡創辦人",
     "btn_docs": "閱讀技術白皮書"
   }

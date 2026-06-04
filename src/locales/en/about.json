@@ -1,15 +1,15 @@
 {
-  "meta_title": "DROS - About Us | The Switzerland of Data",
-  "meta_desc": "DROS Market Positioning & Vision: Rejecting probabilistic sand dunes to pour physical concrete for the AGI era. Becoming the standard protection protocol for global AI Agents.",
+  "meta_title": "DROS - About Us | The Root CA of the Agentic Web",
+  "meta_desc": "DROS Market Positioning & Vision: As the Root Certificate Authority (Root CA) and PKI trust foundation for the Agentic Web, enforcing Agent Accountability from the ground up to eliminate traceless agent threats.",
   "hero": {
     "title": "About <span class='gold-text'>DROS</span>",
-    "subtitle": "We do not build large models. We build the physical laws that constrain them.",
-    "desc": "In the frantic race toward AGI, the industry has built skyscrapers on the sand dunes of probabilistic models. DROS exists to pour the foundational physical concrete for Enterprise AI."
+    "subtitle": "We do not just constrain large models. We are the Root CA and PKI trust foundation for the Agentic Web.",
+    "desc": "In the frantic race toward AGI, autonomous Agents are emerging everywhere. However, if hijacked or rogue, they will execute illegal transfers or breaches without human footprints—a traceless crisis. DROS exists to sign non-repudiable capability credentials, melting risks physically at the C-ABI bottleneck."
   },
   "sections": {
     "philosophy": {
       "title": "Our Philosophy: Determinism > Probability",
-      "desc": "We disdain patching 'hallucinations' by layering dozens of microservices, massive Vector DBs, and endless Prompt Engineering. True security should never be built on guesswork and probabilities.<br/><br/>We advocate for <strong>returning to OS-level primitives</strong>. Instead of trying to make the AI 'understand' the rules, we use pure memory mapping and bitwise operations to physically melt dangerous boundaries at runtime.",
+      "desc": "We disdain patching 'hallucinations' by layering dozens of microservices, massive Vector DBs, and endless Prompt Engineering. True security should never be built on guesswork and probabilities.<br/><br/>We advocate for <strong>returning to OS-level primitives</strong>. Instead of trying to make the AI 'understand' the rules, we use pure memory mapping and bitwise operations to physically melt dangerous boundaries at runtime, establishing clear Agent Accountability.",
       "icon": "🛡️"
     },
     "origin": {
@@ -18,19 +18,19 @@
       "icon": "☸️"
     },
     "niche": {
-      "title": "Positioning: The 'Switzerland' of AI",
-      "desc": "We occupy a highly unique ecological niche in the AI supply chain:<br/><br/>1. <strong>We do not compete with OpenAI or Anthropic</strong>: We do not train foundational models.<br/>2. <strong>We do not covet enterprise secrets</strong>: We are a Zero-Telemetry physical component.<br/><br/>We do only one thing: We sit as the <strong>absolutely neutral physical checkpoint</strong> between the 'Black-box Models' and 'Core Enterprise Data'. Once passing through DROS, even the most cunning malicious model is stripped of its ability to do harm.",
+      "title": "Positioning: The Root CA of the Agentic Web",
+      "desc": "We occupy a highly unique ecological niche in the AI supply chain:<br/><br/>1. <strong>We do not compete with OpenAI or Anthropic</strong>: We do not train foundational models.<br/>2. <strong>We do not covet enterprise secrets</strong>: We are a Zero-Telemetry physical component.<br/><br/>We act as the <strong>neutral Capability Certificate Authority (Root CA) and physical Inspection Station</strong>. Agents must carry a signed `policy.bin` credential to interact across servers, which nodes verify offline in 484.8ns, eliminating anonymous execution threats.",
       "icon": "🇨🇭"
     },
     "vision": {
-      "title": "Ultimate Vision: The Standard AI Protocol",
-      "desc": "Just as the internet era relies on TCP/IP for reliable transmission, and crypto relies on blockchain for consensus, the upcoming Agentic AI era requires a foundational protocol to ensure machine behavior never crosses the line.<br/><br/>Our vision is to make the <strong>DROS Vajra Contract</strong> the standard security credential mesh for global AI Agent communication. We aim for every future server to be equipped with a VajraClaw physical circuit-breaker by default.",
+      "title": "Ultimate Vision: From Execution Governance to Agent Accountability",
+      "desc": "Just as SSL/TLS certificates secure host trust and OAuth secures human identity, the <strong>DROS Vajra Contract</strong> will serve as the capability credential mesh for the Agentic Web. Our vision is to transition from basic 'execution governance' to absolute 'agent accountability', wrapping every agent in a non-repudiable cryptographic seal.",
       "icon": "🕸️"
     }
   },
   "cta": {
     "title": "The paradigm shift is here.",
-    "subtitle": "Ready to join the physical defense mesh?",
+    "subtitle": "Ready to join the physical defense mesh and PKI chain of trust?",
     "btn_contact": "Contact Founders",
     "btn_docs": "Read the Whitepaper"
   }

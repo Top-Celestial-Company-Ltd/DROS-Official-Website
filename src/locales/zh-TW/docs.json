@@ -4,7 +4,7 @@
   "sidebar": {
     "title": "DROS Documentation",
     "getting_started": "1. 快速入門",
-    "architecture": "2. 分散式能力網格",
+    "architecture": "2. 能力網格與憑證架構",
     "enterprise": "3. 企業級防禦",
     "sre_model": "4. SRE 容錯與資安模型",
     "security": "5. 零信任架構",
@@ -38,14 +38,36 @@
       ]
     },
     "architecture": {
-      "title": "2. 分散式能力網格 (Distributed Capability Mesh)",
-      "desc": "DROS 從原本的單機架構升級為對標 Kubernetes 的<strong>零信任網格 (Zero-Trust Mesh)</strong>。它將系統物理性劃分為「戰略控制面」與「前線執行面」。",
-      "key_components": "核心網格元件",
+      "title": "2. 分散式能力網格與 Root CA 憑證架構",
+      "desc": "DROS 從原本的單機架構升級為對標 Kubernetes 的<strong>零信任網格 (Zero-Trust Mesh)</strong>，並扮演 Agentic Web 的<strong>根憑證發行機構 (Root CA)</strong>。它將安全合規政策編譯為帶有 Ed25519 密碼學簽章的二進位能力憑證。詳細架構可參閱最新發佈的 <a href='file:///e:/vscode/AI%E7%9F%A5%E8%AD%98%E5%BA%AB/DROS%E5%95%86%E5%93%81%E5%B0%88%E6%A1%88%E6%9A%AB%E5%AD%98/%E5%95%86%E6%A5%AD%E8%88%87%E6%9E%B6%E6%A7%8B%E6%96%87%E4%BB%B6%E5%BA%AB/DROS_Agent_Trust_Infrastructure_Whitepaper.md' target='_blank' style='color:var(--accent-gold); text-decoration:underline;'>DROS Agent Trust Infrastructure Whitepaper</a>。",
+      "key_components": "核心網格元件與憑證結構",
       "components": [
-        "<strong>VajraAgent (控制面)</strong>：總部戰略中樞。負責定義人類語意，並降維編譯為附帶密碼學簽章的二進位安全憑證 (.bin)。",
-        "<strong>Distribution Mesh (派發網格)</strong>：基於加密通道。支援微秒級的 Delta Update 增量撤銷，當 Agent 被劫持可瞬間切斷其全球權限。",
-        "<strong>VajraClaw (執行面)</strong>：化身為 O(1) 的物理斷路器邊車，掛載於各節點。直接 mmap 映射憑證，只認憑證不聽故事，徹底免疫 Prompt Injection。"
-      ]
+        "<strong>VajraAgent (控制面 / Root CA)</strong>：負責定義安全合規語意，並編譯與簽署為輕量、防篡改的二進位憑證 <code>policy.bin</code>。",
+        "<strong>Distribution Mesh (派發網格)</strong>：支援微秒級 Delta Update 增量撤銷，當 Agent 被劫持可瞬間廣播撤銷全球權限憑證。",
+        "<strong>VajraClaw (執行面 / PEP)</strong>：部署於 C-ABI 通道的微核心檢核哨。讀取 <code>policy.bin</code> 後直接載入為 O(1) 權限位元矩陣，在 484.8ns 內實行離線無狀態確信與熔斷。"
+      ],
+      "bin_layout_title": "開源憑證佈局格式說明 (policy.bin Specification)",
+      "bin_layout_desc": "DROS 能力憑證為極度緊湊的二進位數據格式，包含簽章與排序表以實現高效率離線檢索，具體位元組偏移量規格如下：",
+      "table": {
+        "offset": "位元組偏移量 (Offset)",
+        "name": "欄位名稱 (Field)",
+        "size": "長度 (Size)",
+        "desc": "欄位說明 (Description)",
+        "rows": [
+          {"offset": "0x00 - 0x05", "name": "Header", "size": "6 Bytes", "desc": "固定為 'VAJRAC'"},
+          {"offset": "0x06", "name": "Version", "size": "1 Byte", "desc": "憑證版本 (當前為 0x03)"},
+          {"offset": "0x07", "name": "Sig Scheme", "size": "1 Byte", "desc": "簽章種類 (0x01 = Ed25519)"},
+          {"offset": "0x08 - 0x47", "name": "CA Signature", "size": "64 Bytes", "desc": "CA 簽發之密碼學簽章"},
+          {"offset": "0x48", "name": "DSL Version", "size": "1 Byte", "desc": "DSL 編譯版本"},
+          {"offset": "0x49 - 0x50", "name": "Timestamp", "size": "8 Bytes", "desc": "簽發時間戳記 (Epoch Time)"},
+          {"offset": "0x51 - 0x58", "name": "Expiry", "size": "8 Bytes", "desc": "過期時間 (0 代表永久)"},
+          {"offset": "0x59 - 0x68", "name": "Serial Number", "size": "16 Bytes", "desc": "唯一憑證 UUID"},
+          {"offset": "0x69 - 0x70", "name": "Agent Offset", "size": "8 Bytes", "desc": "Agent ID 索引表檔案偏移量"},
+          {"offset": "0x71 - 0x78", "name": "Tool Offset", "size": "8 Bytes", "desc": "Tool Name 索引表檔案偏移量"},
+          {"offset": "0x79 - 0x80", "name": "Matrix Offset", "size": "8 Bytes", "desc": "O(1) 權限位元矩陣檔案偏移量"},
+          {"offset": "0x81 - EOF", "name": "Index Tables & Matrix", "size": "變長 (Variable)", "desc": "字典排序之 Agent/Tool 索引表與緊密位元矩陣"}
+        ]
+      }
     },
     "enterprise": {
       "title": "3. 企業級防禦 (Enterprise Defense)",
