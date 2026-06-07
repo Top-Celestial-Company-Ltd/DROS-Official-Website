@@ -44,7 +44,7 @@ export default function Footer() {
                 <Link to="/pricing" style={{ color: 'var(--text-secondary)', textDecoration: 'none', transition: 'color 0.2s' }}>{t('footer.pricing')}</Link>
               </li>
               <li>
-                <a href="mailto:business@dr-os.io" style={{ color: 'var(--text-secondary)', textDecoration: 'none', transition: 'color 0.2s' }}>{t('footer.contact')} (business@dr-os.io)</a>
+                <a href="mailto:service@dr-os.io" style={{ color: 'var(--text-secondary)', textDecoration: 'none', transition: 'color 0.2s' }}>{t('footer.contact')} (service@dr-os.io)</a>
               </li>
               <li style={{ color: 'var(--text-dim)', fontSize: '0.85rem', marginTop: '0.5rem' }}>
                 {t('footer.tax_id')}<br/>
