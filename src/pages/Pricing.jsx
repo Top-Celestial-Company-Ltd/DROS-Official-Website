@@ -102,7 +102,7 @@ export default function Pricing() {
             <div style={{marginTop: '1rem', fontSize: '0.9rem', lineHeight: '1.6'}} dangerouslySetInnerHTML={{ __html: t('tiers.enterprise.details_content') }}></div>
           </details>
 
-          <a href="mailto:service@dr-os.io" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginTop: '1rem', padding: '1.2rem', textAlign: 'center'}}>
+          <a href="mailto:order@dr-os.io?subject=DROS Enterprise Inquiry" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginTop: '1rem', padding: '1.2rem', textAlign: 'center'}}>
             {t('tiers.enterprise.btn')}
           </a>
         </div>
