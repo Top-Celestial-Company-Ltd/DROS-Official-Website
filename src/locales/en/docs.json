@@ -27,24 +27,24 @@
     "getting_started": {
       "title": "1. Getting Started",
       "what_is_dros": "What is DROS?",
-      "dros_desc": "DROS is a <strong>minimalist microkernel semantic runtime</strong> designed for Enterprise AI Agents. Its core purpose is to eradicate generative AI's two greatest flaws—<strong>Hallucinations</strong> and <strong>Prompt Injections</strong>—via a <strong>Physical-layer Vajra Discipline</strong>.",
-      "core_philosophy": "Core Philosophy",
-      "philosophy_quote": "“Constrain probabilistic generation with deterministic structures”—Minimal core, explicit rules, effortless maintenance.",
+      "dros_desc": "DROS is a <strong>Runtime Attribution Framework & microkernel execution governance substrate</strong> designed for Enterprise AI and Multi-Agent mesh systems. Acting as the <strong>Missing Layer</strong> in the AI security ecosystem, DROS does not compete with cloud monitors or orchestration frameworks. Instead, it deploys directly at the binary FFI choke points, addressing the structural flaws of model-level semantic guardrails and traditional sandboxes that are Context-Blind (context loss), physically chaining AI execution with cryptographic seals.",
+      "core_philosophy": "Core Philosophy: Missing Layer Orchestration & Cooperation",
+      "philosophy_quote": "DROS acts as a neutral execution-layer security officer, complementing Permiso's cloud security, Microsoft's Agent Governance Toolkit, and host-level SELinux/eBPF. We do not control what the Agent 'imagines'; we enforce what the Agent is 'physically permitted to execute' via O(1) bitmap logic.",
       "quick_start": "3-Minute Quick Start",
       "steps": [
-        "Go to <a href='https://github.com/mahabodhi/DROS/releases/latest' target='_blank' rel='noreferrer' style='color:var(--accent-gold); text-decoration:underline;'>GitHub Releases</a> to download the core binaries (Windows / macOS / Linux)",
-        "Prepare your <code>AGENT.MD</code> + <code>Vajra.md</code> rule files",
-        "Integrate into your AI Agent via our lightweight Adapters"
+        "Download or checkout the free-trial VajraClaw core binaries (.dll / .so / .aar) from Gumroad",
+        "Draft your <code>AGENT.MD</code> and <code>Vajra.md</code> to define capabilities and circuit-breaker thresholds",
+        "Mount the VajraClaw SDK or JNI/FFI wrappers into your execution pipeline to enforce safety"
       ]
     },
     "architecture": {
-      "title": "2. Distributed Mesh & Root CA Credentials",
-      "desc": "DROS has evolved from a standalone architecture into a Kubernetes-level <strong>Zero-Trust Mesh</strong>, acting as the <strong>Root Certificate Authority (Root CA)</strong> for the Agentic Web. It compiles security policies into signed binary capability credentials. For details, refer to the newly published <a href='file:///e:/vscode/AI%E7%9F%A5%E8%AD%98%E5%BA%AB/DROS%E5%95%86%E5%93%81%E5%B0%88%E6%A1%88%E6%9A%AB%E5%AD%98/%E5%95%86%E6%A5%AD%E8%88%87%E6%9E%B6%E6%A7%8B%E6%96%87%E4%BB%B6%E5%BA%AB/DROS_Agent_Trust_Infrastructure_Whitepaper.md' target='_blank' style='color:var(--accent-gold); text-decoration:underline;'>DROS Agent Trust Infrastructure Whitepaper</a>.",
-      "key_components": "Mesh Components & Credential Structure",
+      "title": "2. Capability Mesh & Execution Identity",
+      "desc": "DROS has evolved from a standalone architecture into a Kubernetes-level <strong>Zero-Trust Mesh</strong>, acting as the <strong>Root Certificate Authority (Root CA)</strong> for the Agentic Web. Unlike traditional Workload Identity (like SPIFFE/SPIRE) which only verifies the process PID, DROS introduces <strong>Execution Identity</strong>: for every tool call, VajraAgent dynamically mints a single-use credential <code>policy.bin</code>, binding the running thread directly to the Agent Role to resolve the Context Loss problem. For details, refer to the newly published <a href='file:///e:/vscode/AI%E7%9F%A5%E8%AD%98%E5%BA%AB/DROS%E5%95%86%E5%93%81%E5%B0%88%E6%A1%88%E6%9A%AB%E5%AD%98/%E5%95%86%E6%A5%AD%E8%88%87%E6%9E%B6%E6%A7%8B%E6%96%87%E4%BB%B6%E5%BA%AB/DROS_Agent_Trust_Infrastructure_Whitepaper.md' target='_blank' style='color:var(--accent-gold); text-decoration:underline;'>DROS Agent Trust Infrastructure Whitepaper</a>.",
+      "key_components": "Identity Evolution & Core Mesh Components",
       "components": [
-        "<strong>VajraAgent (Control Plane / Root CA)</strong>: Responsible for defining security policies and compiling them into signed binary credentials (<code>policy.bin</code>).",
-        "<strong>Distribution Mesh</strong>: Supports microsecond-level delta updates for immediate credential revocation across the global grid.",
-        "<strong>VajraClaw (Execution Plane / PEP)</strong>: Mounted at the C-ABI bottleneck, loading the <code>policy.bin</code> into memory as an O(1) bitwise matrix for 484.8ns offline validation."
+        "<strong>Identity Granularity Evolution</strong>: Paradigm shift from Human Identity ➡️ Workload Identity (SPIFFE application-level) ➡️ <strong>Execution Identity (DROS per-execution task-level)</strong>.",
+        "<strong>VajraAgent (Control Plane / Root CA)</strong>: Defines semantic capabilities, compiling Vajra DSL files into signed binary certificates (policy.bin).",
+        "<strong>VajraClaw (Execution Plane / PEP)</strong>: Mounted at the C-ABI gateway, loading the policy.bin into memory as an O(1) bitwise matrix. It boasts a 484.8ns core validation delay, with E2E FFI conversions of 8–20 μs on Mobile and 20–80 μs on Cloud."
       ],
       "bin_layout_title": "Open-Source policy.bin Specification",
       "bin_layout_desc": "DROS capability credentials are laid out in a highly compact binary format with a signature block and sorted indexes for nanosecond-level local evaluations:",
@@ -202,16 +202,15 @@
       "code_title": "Python Calling Example"
     },
     "comparison": {
-      "title": "8. Comparison with Traditional Solutions",
-      "desc": "When confronting 'Hallucinations' and 'Prompt Injections', traditional solutions rely on 'probabilistic defense' (like LLM-as-a-judge or Prompt Engineering), attempting to 'cure' the AI's neural network. In contrast, DROS adopts a **Zero Trust Architecture**: We assume the AI will be deceived at any moment, and thus fundamentally strip it of execution authority. All outputs must pass the physical verification of GuardVM; any boundary violation triggers an immediate **Physical Melt**, rendering hallucinations and malicious instructions completely harmless.",
-      "headers": ["Item", "Traditional RAG + LLM Agent", "DROS Vajra Discipline", "Advantage"],
+      "title": "8. Architectural Comparison with Other Security Lines",
+      "desc": "In the historical evolution of AI security, alternative solutions often fall into the trap of semantic-only guardrails or context-blind process sandboxing. DROS fills this gap by acting as the neutral execution-layer Missing Layer.",
+      "headers": ["Dimension", "Semantic Guards (e.g., NeMo)", "OS Sandboxes (e.g., eBPF)", "DROS RAF Substrate", "DROS Advantage"],
       "rows": [
-        ["Hallucination Defense", "Probabilistic (Post-generation Guardrails)", "Physical-layer Deterministic Fusion", "Overwhelming"],
-        ["Prompt Injection", "Prompt Engineering", "Runtime Contract Forced Validation", "Significant"],
-        ["Token Consumption", "High (Continuous LLM calls)", "Extremely Low (Local Microkernel)", "Massive"],
-        ["Maintenance Complexity", "High (Models, Vectors, Prompts)", "Extremely Low (Markdown only)", "Revolutionary"],
-        ["Auditability", "Weak", "Complete T-Number Traceability", "Enterprise-grade"],
-        ["Deployment Costs", "High", "Extremely Low", "Significant"]
+        ["Timing", "Dynamic Runtime Evaluation", "Dynamic OS syscall interception", "Compile-time Minting, Read-Only Runtime", "Zero runtime decision latency"],
+        ["Context Awareness", "Full (High Latency)", "None (Context-Blind)", "Maps & binds directly to running thread", "Solves Context Loss gaps"],
+        ["Core Latency", "Milliseconds to Seconds (300-2000ms)", "Microseconds (1-10μs)", "Core 484.8ns / Offline O(1) Lookup", "Constant-time physical melt"],
+        ["Auditability", "None (Plain text/JSON logs)", "None", "Signed policy.bin with Epoch SHA-256 Hash", "Forensic-grade Non-repudiation"],
+        ["Edge Support", "Poor (GPU & memory overhead)", "Linux Only", "Excellent (Kotlin AAR / Swift XCFramework)", "Hardware Keystore/Secure Enclave binding"]
       ]
     },
     "license": {

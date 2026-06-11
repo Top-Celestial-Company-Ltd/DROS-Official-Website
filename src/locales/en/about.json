@@ -18,8 +18,8 @@
       "icon": "☸️"
     },
     "niche": {
-      "title": "Positioning: The Root CA of the Agentic Web",
-      "desc": "We occupy a highly unique ecological niche in the AI supply chain:<br/><br/>1. <strong>We do not compete with OpenAI or Anthropic</strong>: We do not train foundational models.<br/>2. <strong>We do not covet enterprise secrets</strong>: We are a Zero-Telemetry physical component.<br/><br/>We act as the <strong>neutral Capability Certificate Authority (Root CA) and physical Inspection Station</strong>. Agents must carry a signed `policy.bin` credential to interact across servers, which nodes verify offline in 484.8ns, eliminating anonymous execution threats.",
+      "title": "Ecological Niche: The Missing Layer of the Agentic Web",
+      "desc": "We occupy a highly unique position as a neutral execution-layer trust substrate:<br/><br/>1. <strong>Cooperation with Cloud Auditing (e.g., Permiso Security)</strong>: Permiso specializes in cloud workload monitoring and post-incident analysis; DROS complements this by providing hardware-backed FFI/C-ABI boundary protection and O(1) local enforcement.<br/>2. <strong>Cooperation with Application-layer Governance (e.g., Microsoft Agent Governance Toolkit)</strong>: Large vendors secure orchestrations, while DROS serves as the vendor-neutral microkernel boundary to secure the final line of physical execution.<br/><br/>We act as the neutral Root CA and physical C-ABI gatekeeper, signing capability credentials for heterogeneous brain models with constant-time verification (484.8ns) for legally binding non-repudiation.",
       "icon": "🇨🇭"
     },
     "vision": {

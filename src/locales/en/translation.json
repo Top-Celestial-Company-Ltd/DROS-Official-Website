@@ -27,48 +27,48 @@
     "meta_title": "DROS | Agentic Web Root CA & Execution Non-Repudiation Standard",
     "meta_desc": "DROS is the Root Certificate Authority (Root CA) for the Agentic Web. Solving the Context Loss Problem by issuing signed policy.bin capability credentials to establish absolute Execution Non-Repudiation.",
     "hero": {
-      "version": "DROS Execution OS v3.0",
+      "version": "DROS Runtime Attribution Framework v7.3",
       "title_prefix": "Agentic Web's",
-      "title_highlight": "Root CA & Non-Repudiation Standard",
+      "title_highlight": "Runtime Attribution Framework & Execution Identity",
       "subtitle": "\"If runtime needs intelligence to enforce policy, the system is already <strong>unsafe</strong>.\"<br/>If execution safety depends on intelligence at runtime, the system is already exposed to risks.",
-      "value_prop": "As the Root Certificate Authority (Root CA) for the Agentic Web, DROS signs policy.bin capability credentials to establish non-repudiable execution authorization and audit trails.",
+      "value_prop": "As the execution-layer Missing Layer for the Agentic Web, DROS signs policy.bin capability credentials to establish non-repudiable execution authorization and immutable audit trails.",
       "btn_github": "Read the DROS Spec",
       "btn_poc": "Start Free-Trial"
     },
     "terminal": {
       "cmd": "mount policy.bin",
-      "locked": "[DROS-Engine] ⚡ O(1) Bitmap policy locked in memory.",
-      "injected": "[DROS-Engine] 🛡️ Cryptographic signature verified (Ed25519).",
+      "locked": "[DROS-Engine] ⚡ O(1) Bitmap policy loaded in memory (Constant-time check mode).",
+      "injected": "[DROS-Engine] 🛡️ Cryptographic signature verified (Ed25519 / Offline Verifiable).",
       "llm_stream": "Agent attempting to call: execute_payment...",
-      "fuse_blown": "🛑 Physical Fusing Triggered: Bitwise AND verification failed. OS System Call terminated (Latency: < 0.02ms)."
+      "fuse_blown": "🛑 Physical Fusing Triggered: Bitwise AND verification failed. OS System Call terminated (Core Latency: 484.8 ns / 0.00048 ms)."
     },
     "hourglass": {
       "title_prefix": "OS-Level",
-      "title_highlight": "C-ABI Gateway",
-      "subtitle": "DROS is integrated directly at the OS C-ABI boundary. Regardless of upper-layer model reasoning changes, the execution boundary cannot bypass physical binary constraints.",
+      "title_highlight": "C-ABI Gateway (FFI Choke Point)",
+      "subtitle": "DROS is integrated directly at the OS C-ABI boundary. Regardless of upper-layer model reasoning changes, the execution boundary cannot bypass physical binary constraints and cryptographic token validation.",
       "layer1_title": "⏳ The Uncertain User Space",
       "layer1_desc": "Language models, API gateways, and agent orchestration frameworks generate high degrees of uncertainty and runtime vulnerabilities within User Space.",
-      "layer2_title": "🌉 The Single Execution Choke Point",
-      "layer2_desc": "Regardless of the AI reasoning logic, executing external actions (e.g., database writes, network packages) forces all commands to transition through C-ABI and initiate OS system calls.",
-      "layer3_title": "👑 DROS Runtime Circuit Breaker",
-      "layer3_desc": "DROS eliminates runtime text parsing and dynamic model judges, sitting directly at the C-ABI gateway to enforce authorization via O(1) bitwise operations in sub-milliseconds (0.016ms)."
+      "layer2_title": "🌉 The Single FFI Execution Choke Point",
+      "layer2_desc": "Regardless of the AI reasoning logic, executing external actions (e.g., database writes, network packages, system calls) forces all commands to transition through C-ABI / FFI and initiate OS system calls.",
+      "layer3_title": "👑 DROS Missing Layer Substrate",
+      "layer3_desc": "DROS eliminates runtime text parsing and dynamic model judges, sitting directly at the FFI gateway to enforce capability-based authorization via O(1) bitwise operations in nanoseconds."
     },
     "pain_points": {
-      "title_prefix": "The Structural Fragility of",
-      "title_highlight": "\"Interpreted Security\"",
-      "subtitle": "Relying on runtime LLM moderation or API gateway parsing has inherent architectural flaws.",
+      "title_prefix": "Structural Gaps of",
+      "title_highlight": "Alternative Security Lines",
+      "subtitle": "Relying on runtime LLM filters, traditional OS-level sandboxes, or Web3 DID mechanisms has inherent architectural limits.",
       "items": [
         {
-          "title": "⚠️ Non-deterministic",
-          "desc": "Large language models are probabilistic, while dynamic JSON/YAML parsing within API gateways is vulnerable to bypass vectors."
+          "title": "⚠️ Model & Semantic Guardrails (e.g., NeMo)",
+          "desc": "Stays at the 'Semantic Layer'. Forcing LLMs to moderate themselves adds massive latency (milliseconds), burns GPU memory on edge devices, and lacks cryptographic signatures for non-repudiation auditing."
         },
         {
-          "title": "⏱️ TOCTOU Security Races & Latency",
-          "desc": "Evaluating permissions at runtime introduces critical TOCTOU (Time-of-Check to Time-of-Use) security races and degrades execution latency."
+          "title": "⏱️ Traditional OS-Level Sandboxes (e.g., eBPF)",
+          "desc": "Stays at the 'Kernel/OS Layer'. Suffers from Context Loss (Context-Blind)—the kernel only sees process PID (like python executing a write) but cannot resolve which Agent role initiated the action."
         },
         {
-          "title": "🔍 Lack of Non-Repudiation Audit Logs",
-          "desc": "Prompt level guardrails fail to produce verifiable, non-repudiation logs. CISO teams cannot mathematically reconstruct or prove safety decisions to regulatory bodies or auditors."
+          "title": "🔍 Web3 / DID Network-layer Identity",
+          "desc": "Stays at the 'Network/Chain Layer'. Chain transactions or DID resolutions take hundreds of milliseconds to seconds, failing high-frequency Agent requirements, and cannot enforce local binary runtime boundaries."
         }
       ],
       "conclusion_title": "The DROS Architectural Solution",
@@ -84,7 +84,7 @@
         },
         {
           "title": "⚡ O(1) Bitmap Runtime",
-          "desc": "Eliminates string matching, JSON parsing, and model inference. Enforces decisions in under 0.02 milliseconds via contiguous bitwise operations."
+          "desc": "Eliminates string matching and model inference. The microkernel core checks decisions in 484.8 ns, with an E2E FFI overhead of 8–20 μs on Mobile and 20–80 μs on Cloud, significantly faster than OPA."
         },
         {
           "title": "🔒 Cryptographic Audit",

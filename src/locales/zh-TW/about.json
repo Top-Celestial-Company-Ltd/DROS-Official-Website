@@ -18,8 +18,8 @@
       "icon": "☸️"
     },
     "niche": {
-      "title": "市場定位：Agentic Web 的 Root CA",
-      "desc": "我們在 AI 產業鏈中佔據極為獨特的生態位：<br/><br/>1. <strong>不與 OpenAI、Anthropic 競爭</strong>：我們不訓練底層大模型。<br/>2. <strong>不覬覦企業機密</strong>：我們是零監測 (Zero-Telemetry) 的物理元件。<br/><br/>我們擔任<strong>中立的能力憑證發放中心 (Root CA) 與物理檢核哨 (Inspection Station)</strong>。Agent 在網路跨伺服器協同中必須攜帶 signed `policy.bin` 憑證，並由節點在 484.8ns 內離線驗證，終結無痕作惡。",
+      "title": "生態定位：Agentic Web 的 Missing Layer (生態缺失層)",
+      "desc": "我們在 AI 產業鏈中佔據獨特的『中立執行層信任基礎設施』定位：<br/><br/>1. <strong>與雲端行為審計（如 Permiso Security）協同</strong>：Permiso 專長於雲端主體監控與事後響應，DROS 則補足了 Edge 端與 FFI/C-ABI 咽喉邊界的強迫阻斷能力。<br/>2. <strong>與應用層治理（如微軟 Agent Governance Toolkit）協同</strong>：微軟為上層編排提供安全規則，DROS 作為不綁定 Vendor 的中立微核心，為這些系統守住物理執行的最後防線。<br/><br/>我們擔任中立的能力憑證 Root CA 與 C-ABI 檢核哨，簽發離線可驗證憑證，為異構大腦模型提供常數時間內（484.8ns）的不可否認性保證。",
       "icon": "🇨🇭"
     },
     "vision": {

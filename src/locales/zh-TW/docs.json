@@ -27,24 +27,24 @@
     "getting_started": {
       "title": "1. 快速入門 (Getting Started)",
       "what_is_dros": "DROS 是什麼？",
-      "dros_desc": "DROS 是一個<strong>極簡微內核語意運行時系統</strong>，專為企業級 AI Agent 設計。其核心目的是透過<strong>物理層級的金剛戒律</strong>，從根本上解決生成式 AI 的兩大頑疾：<strong>幻覺（Hallucination）</strong> 與 <strong>Prompt Injection</strong>。",
-      "core_philosophy": "核心理念",
-      "philosophy_quote": "「用確定性結構約束概率性生成」——核心極小、規則明確、維護極簡。",
+      "dros_desc": "DROS 是一個<strong>執行期能力歸責與微核心治理系統 (Runtime Attribution Framework, RAF)</strong>，專為企業級自主 AI 與 Multi-Agent 團隊設計。作為 Agentic Web 的<strong>生態缺失層 (Missing Layer)</strong>，DROS 不與雲端行為監控或上層編排框架競爭，而是部署於二進位 FFI 通道邊界，解決傳統微核心沙箱 Context-Blind (上下文丟失) 與模型 Guardrails 停留在機率性語意層的致命盲區，從根本上為 Agent 戴上密碼學的實體安全手銬。",
+      "core_philosophy": "核心理念：生態缺失層 (Missing Layer) 的協同",
+      "philosophy_quote": "DROS 作為獨立於大腦模型的執行層治安官，與雲端安全（如 Permiso）、應用層治理框架（如微軟 Toolkit）以及宿主 SELinux/eBPF 完美互補——我們不控制 Agent「想做什麼」，我們只用常數時間 O(1) 密碼學憑證強制限制 Agent「物理上被允許執行什麼」。",
       "quick_start": "3 分鐘上手流程",
       "steps": [
-        "前往 <a href='https://github.com/mahabodhi/DROS/releases/latest' target='_blank' rel='noreferrer' style='color:var(--accent-gold); text-decoration:underline;'>GitHub Releases</a> 下載核心二進位庫（Windows / macOS / Linux）",
-        "準備 <code>AGENT.MD</code> + <code>Vajra.md</code> 規則檔案",
-        "透過輕量 Adapter 整合到您的 AI Agent 中"
+        "前往官方下載或透過 Gumroad 獲取 0 元免費版 VajraClaw 核心二進位動態庫 (.dll / .so / .aar)",
+        "準備 <code>AGENT.MD</code> 與 <code>Vajra.md</code>，宣告 Agent 的能力邊界與熔斷條件",
+        "透過 VajraClaw SDK 或 JNI/FFI 封裝，將攔截哨嵌入您的 AI 執行流程中"
       ]
     },
     "architecture": {
-      "title": "2. 分散式能力網格與 Root CA 憑證架構",
-      "desc": "DROS 從原本的單機架構升級為對標 Kubernetes 的<strong>零信任網格 (Zero-Trust Mesh)</strong>，並扮演 Agentic Web 的<strong>根憑證發行機構 (Root CA)</strong>。它將安全合規政策編譯為帶有 Ed25519 密碼學簽章的二進位能力憑證。詳細架構可參閱最新發佈的 <a href='file:///e:/vscode/AI%E7%9F%A5%E8%AD%98%E5%BA%AB/DROS%E5%95%86%E5%93%81%E5%B0%88%E6%A1%88%E6%9A%AB%E5%AD%98/%E5%95%86%E6%A5%AD%E8%88%87%E6%9E%B6%E6%A7%8B%E6%96%87%E4%BB%B6%E5%BA%AB/DROS_Agent_Trust_Infrastructure_Whitepaper.md' target='_blank' style='color:var(--accent-gold); text-decoration:underline;'>DROS Agent Trust Infrastructure Whitepaper</a>。",
-      "key_components": "核心網格元件與憑證結構",
+      "title": "2. 能力網格與執行期身分 (Execution Identity)",
+      "desc": "DROS 從原本的單機架構升級為對標 Kubernetes 的<strong>零信任能力網格 (Zero-Trust Mesh)</strong>，扮演 Agentic Web 的<strong>根憑證發行機構 (Root CA)</strong>。相較於傳統僅停留在虛擬進程層級的 Workload Identity (如 SPIFFE/SPIRE)，DROS 首創提出更細粒度的 <strong>Execution Identity (執行期身分)</strong> 模型：每次 Tool Call 時，VajraAgent 會動態發放單次動態憑證 <code>policy.bin</code>，將當前執行的執行緒 (Thread) 與 Agent Role 進行密碼學綁定，以消除 Context Loss 痛點。詳細架構可參閱最新發佈的 <a href='file:///e:/vscode/AI%E7%9F%A5%E8%AD%98%E5%BA%AB/DROS%E5%95%86%E5%93%81%E5%B0%88%E6%A1%88%E6%9A%AB%E5%AD%98/%E5%95%86%E6%A5%AD%E8%88%87%E6%9E%B6%E6%A7%8B%E6%96%87%E4%BB%B6%E5%BA%AB/DROS_Agent_Trust_Infrastructure_Whitepaper.md' target='_blank' style='color:var(--accent-gold); text-decoration:underline;'>DROS Agent Trust Infrastructure Whitepaper</a>。",
+      "key_components": "核心身分演進與能力元件結構",
       "components": [
-        "<strong>VajraAgent (控制面 / Root CA)</strong>：負責定義安全合規語意，並編譯與簽署為輕量、防篡改的二進位憑證 <code>policy.bin</code>。",
-        "<strong>Distribution Mesh (派發網格)</strong>：支援微秒級 Delta Update 增量撤銷，當 Agent 被劫持可瞬間廣播撤銷全球權限憑證。",
-        "<strong>VajraClaw (執行面 / PEP)</strong>：部署於 C-ABI 通道的微核心檢核哨。讀取 <code>policy.bin</code> 後直接載入為 O(1) 權限位元矩陣，在 484.8ns 內實行離線無狀態確信與熔斷。"
+        "<strong>身分粒度演進</strong>：由 Human Identity (終端人類) ➡️ Workload Identity (SPIFFE 應用服務級) ➡️ <strong>Execution Identity (DROS 執行期單次任務級)</strong> 的範式轉移。",
+        "<strong>VajraAgent (控制面 / Root CA)</strong>：定義安全合規語意與能力 (Capabilities)，並將 Vajra DSL 政策 AOT 編譯、簽章產出 policy.bin 二進位能力證書。",
+        "<strong>VajraClaw (執行面 / PEP)</strong>：部署於 C-ABI 通道的微核心檢核哨。讀取 policy.bin 後直接在記憶體中執行 O(1) 位元矩陣校驗。核心純校驗延遲低至 484.8ns，端到端加上 FFI 封裝在行動端為 8–20 μs，雲端為 20–80 μs，實行 fail-closed 物理熔斷。"
       ],
       "bin_layout_title": "開源憑證佈局格式說明 (policy.bin Specification)",
       "bin_layout_desc": "DROS 能力憑證為極度緊湊的二進位數據格式，包含簽章與排序表以實現高效率離線檢索，具體位元組偏移量規格如下：",
@@ -202,16 +202,15 @@
       "code_title": "Python 呼叫範例"
     },
     "comparison": {
-      "title": "8. 與傳統方案對比",
-      "desc": "在面對「幻覺」與「Prompt Injection」時，傳統方案依賴「概率性防禦」（如 LLM-as-a-judge 或 Prompt Engineering），試圖「治療」AI 的神經網路。而 DROS 則採取 **零信任架構 (Zero Trust Architecture)**：我們假設 AI 隨時會被欺騙，因此直接剝奪其執行權力。所有輸出皆需通過 GuardVM 的物理驗證，一旦越界即觸發 **物理熔斷**，讓幻覺與惡意指令毫無殺傷力。",
-      "headers": ["項目", "傳統 RAG + LLM Agent", "DROS 金剛戒律方案", "優勢"],
+      "title": "8. 與其它安全防禦方案之架構對比",
+      "desc": "在 AI 安全防禦的歷史演進中，傳統方案常陷入『思想層語意過濾』或『系統進程層 Context-Blind』的兩極化盲區。DROS 透過微內核攔截與 O(1) 憑證矩陣，填補了生態系中這一塊缺失的 Missing Layer。",
+      "headers": ["治理維度", "語意防護 (如 NeMo)", "內核沙箱 (如 eBPF)", "DROS 歸責框架", "DROS 優勢"],
       "rows": [
-        ["幻覺防護", "概率性（後驗 Guardrails）", "物理層級確定性熔斷", "壓倒性"],
-        ["Prompt Injection 防護", "Prompt Engineering", "運行時契約強制驗證", "顯著"],
-        ["Token 消耗", "高（持續呼叫 LLM）", "極低（本地微內核）", "巨大"],
-        ["維護複雜度", "高（模型、向量、Prompt）", "極低（僅維護 Markdown）", "革命性"],
-        ["可稽核性", "弱", "完整 T-Number 溯源", "企業級"],
-        ["部署維護成本", "高", "極低", "顯著"]
+        ["防護時機", "運行期 LLM 動態語意解讀", "運行期 OS 進程攔截", "編譯期靜態鑄造，運行期唯讀", "零運行時決策負載"],
+        ["上下文感知", "完全感知（慢）", "完全丟失 (Context-Blind)", "完整映射並與執行緒強綁定", "解決 Context Loss 痛點"],
+        ["核心延遲", "毫秒至秒級 (300-2000ms)", "微秒級 (1-10μs)", "核心 484.8ns / 離線 O(1) 查表", "常數時間級物理熔斷"],
+        ["稽核憑證", "無 (純文字/JSON 日誌)", "無", "Ed25519 簽章與 Policy Hash 鋼印", "Forensic 級不可否認性"],
+        ["邊緣端部署", "極差 (高度依賴 GPU 顯存)", "僅限 Linux 環境", "極佳 (行動端 AAR/XCFramework 原生庫)", "晶片級安全晶片綁定"]
       ]
     },
     "license": {

@@ -27,52 +27,52 @@
     "meta_title": "DROS | Agentic Web 根憑證與執行不可否認性標準",
     "meta_desc": "DROS 是 Agentic Web 的根憑證發行機構 (Root CA)。透過解決上下文丟失問題，簽發具備 Ed25519 簽章的 signed policy.bin 憑證，為企業落實無可抵賴的 AI 執行不可否認性 (Execution Non-Repudiation)。",
     "hero": {
-      "version": "DROS Execution OS v3.0",
+      "version": "DROS Runtime Attribution Framework v7.3",
       "title_prefix": "Agentic Web 的",
-      "title_highlight": "根憑證與不可否認性標準",
+      "title_highlight": "執行期身分與不可否認性歸責框架",
       "subtitle": "\"If runtime needs intelligence to enforce policy, the system is already <strong>unsafe</strong>.\"<br/>如果執行安全防衛在運行時仍需依賴智慧進行決策，該系統本質上已暴露於風險中。",
-      "value_prop": "作為 Agentic Web 的根憑證發行機構 (Root CA)，簽發 signed policy.bin 能力憑證，為全球 AI 代理網格建立不可否認的執行授權與責任審計軌跡。",
+      "value_prop": "作為 Agentic Web 的執行層缺失模組 (Missing Layer)，簽發具備 Ed25519 簽章的二進位能力憑證 policy.bin，為全球異質 AI 代理建立無可抵賴的執行不可否認性 (Execution Non-Repudiation) 責任審計軌跡。",
       "btn_github": "查閱 DROS 規格書",
       "btn_poc": "開始 Free-Trial 體驗"
     },
     "terminal": {
       "cmd": "mount policy.bin",
-      "locked": "[DROS-Engine] ⚡ O(1) Bitmap 策略已鎖定入記憶體。",
-      "injected": "[DROS-Engine] 🛡️ 密碼學簽章驗證通過 (Ed25519)。",
+      "locked": "[DROS-Engine] ⚡ O(1) Bitmap 策略已載入記憶體 (常數時間校驗模式)。",
+      "injected": "[DROS-Engine] 🛡️ 密碼學簽章驗證通過 (Ed25519 / 離線可驗證)。",
       "llm_stream": "Agent 嘗試執行呼叫：execute_payment...",
       "fuse_blown": "🛑 物理熔斷觸發：Bitwise AND 驗證失敗。OS 系統調用已被終止 (實測核心延遲: 484.8 ns / 0.00048 ms)。"
     },
     "hourglass": {
       "title_prefix": "作業系統級",
-      "title_highlight": "C-ABI 邊界檢核站",
-      "subtitle": "DROS 部署於作業系統的 C-ABI 通道，無論上層 AI 應用邏輯如何變更，均無法繞過底層的物理約束。",
+      "title_highlight": "C-ABI 邊界檢核站 (FFI Choke Point)",
+      "subtitle": "DROS 部署於作業系統的 C-ABI 通道，不論上層 AI 應用邏輯如何變更，均無法繞過底層微核心的物理阻斷與簽章通關驗證。",
       "layer1_title": "⏳ 不確定性的 User Space",
-      "layer1_desc": "大語言模型 (LLM)、API 網關與各類 Agent 框架在使用者空間產生高度不確定性的調用鏈結與安全漏洞。",
-      "layer2_title": "🌉 唯一的跨界咽喉通道",
-      "layer2_desc": "無論 AI 的推理邏輯如何變更，只要需要執行實體外部操作（如資料庫寫入、網路發送），其所有指令最終都必須通過 C-ABI 並發起 System Call。",
-      "layer3_title": "👑 DROS 執行期物理斷路器",
-      "layer3_desc": "DROS 捨棄執行期字串解析與 LLM 動態推理，將攔截微內核建置於 C-ABI 咽喉處，以 O(1) 位元運算在奈秒級（實測核心延遲: 484.8 ns）內實行精確攔截。"
+      "layer1_desc": "大語言模型 (LLM)、API 網關與各類 Agent 框架在使用者空間產生高度隨機、不確定性的調用鏈結與越權安全漏洞。",
+      "layer2_title": "🌉 唯一的 FFI 跨界咽喉通道",
+      "layer2_desc": "不論 AI 的推理邏輯如何變更，只要需要執行實體外部操作（如資料庫寫入、網路發送、系統調用），其所有指令最終都必須通過 C-ABI / FFI 邊界並發起 System Call。",
+      "layer3_title": "👑 DROS 生態缺失層 (Missing Layer)",
+      "layer3_desc": "DROS 捨棄執行期字串解析與 LLM 動態推理，將攔截微核心建置於 C-ABI 咽喉處，以 O(1) 位元運算在奈秒級內實行精確的實體通關驗證。"
     },
     "pain_points": {
-      "title_prefix": "「解釋型防禦」的",
-      "title_highlight": "結構性脆弱",
-      "subtitle": "依賴運行時 LLM 語意審查或 API 網關解析，存在本質上的架構缺陷。",
+      "title_prefix": "三大主流方案的",
+      "title_highlight": "底層架構盲區",
+      "subtitle": "依賴運行時 LLM 語意過濾、傳統內核沙箱或 Web3 身份機制，在 Agentic 時代皆存在根本缺陷。",
       "items": [
         {
-          "title": "⚠️ 非確定性 (Non-deterministic)",
-          "desc": "大語言模型決策具有機率性與不確定性，而基於 API 網關的 JSON 動態解析亦面臨各類繞過與逃逸風險。"
+          "title": "⚠️ 模型與語意大廠路線 (如 NeMo Guardrails)",
+          "desc": "停留在「思想層 (Semantic Layer)」。讓 LLM 自己審查自己，不僅運算延遲大（毫秒級）、消耗 GPU 顯存使 Edge 端失效，且缺乏密碼學簽章，事後無法形成第三方審計不可否認證據鏈。"
         },
         {
-          "title": "⏱️ TOCTOU 安全競態與延遲",
-          "desc": "在執行期 (Runtime) 進行解析與策略驗證，容易引發 TOCTOU (Time-of-Check to Time-of-Use) 安全競態，且大幅拖累 Agent 的執行效能。"
+          "title": "⏱️ 傳統資安沙箱路線 (如 eBPF, AppArmor)",
+          "desc": "停留在「內核進程層」。屬於 Context-Blind（上下文缺失），OS 內核僅能感知進程（如 python 執行寫入），無法辨識該行為隸屬「哪一個 Agent 角色的哪一項 Task」，權限無法精細歸責。"
         },
         {
-          "title": "🔍 缺乏不可否認性稽核軌跡",
-          "desc": "傳統 Prompt 級別防護無法提供防篡改的安全憑證。當系統行為異常時，CISO 無法向監管機構或審計委員會重現並證明安全決策的決策源流。"
+          "title": "🔍 Web3 / DID 去中心化身份路線",
+          "desc": "停留在「網絡層與鏈上」。交易確認或 DID 解析通常需數百毫秒至數秒，無法匹配高頻 Agent 協作（每秒數十次 Tool Call）的效能要求，且對本地執行緒與 C-ABI 跨越行為缺乏控制。"
         }
       ],
       "conclusion_title": "DROS 物理學解決方案",
-      "conclusion_desc": "將安全智慧與策略分析置於<strong>編譯期 (Compile-time)</strong>，把絕對的確定性與 Fail-Closed 防禦交給<strong>執行期 (Runtime)</strong>。"
+      "conclusion_desc": "將安全智慧與策略分析置於<strong>編譯期 (Compile-time)</strong>，把絕對的確定性與 Fail-Closed 物理防禦交給<strong>執行期 (Runtime)</strong>。"
     },
     "advantages": {
       "title_prefix": "DROS 以基準測試驅動的",
@@ -84,7 +84,7 @@
         },
         {
           "title": "⚡ O(1) Bitmap Runtime",
-          "desc": "排除字串比對、JSON 解析與模型推理。實測核心延遲低至 484.8 奈秒，並在 50 執行緒 OTA 熱重載下維持 0 Race Condition。"
+          "desc": "排除字串比對與模型推理。實測微內核純校驗延遲低至 484.8 奈秒，端到端加上 FFI 封裝開銷於行動端為 8–20 μs，雲端為 20–80 μs，相較傳統 OPA 毫秒級引擎具備絕對優勢。"
         },
         {
           "title": "🔒 Cryptographic Audit",
