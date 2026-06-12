@@ -3,10 +3,17 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
+// DROS Visual Assets
+import drosFlowAnimationZh from '../assets/DROS_Visual_Assets/dros_flow_animation_zh.webp';
+import drosFlowAnimationEn from '../assets/DROS_Visual_Assets/dros_flow_animation_en.webp';
+
 export default function Home() {
   const { t, i18n } = useTranslation();
   const githubUser = "Top-Celestial-Company-Ltd";
   const [isCopied, setIsCopied] = useState(false);
+
+  const isZh = i18n.language && i18n.language.startsWith('zh');
+  const flowAnimation = isZh ? drosFlowAnimationZh : drosFlowAnimationEn;
 
   const handleCopy = () => {
     navigator.clipboard.writeText(t('home.easter_egg.prompt'));
@@ -53,16 +60,17 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Terminal Animation */}
-        <div style={{ marginTop: '5rem', width: '100%', maxWidth: '800px', zIndex: 1, animation: 'fadeUp 1.2s ease forwards', opacity: 0 }}>
-          <div style={{ background: '#0d0d12', border: '1px solid rgba(212, 175, 55, 0.2)', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.6), 0 0 20px rgba(212, 175, 55, 0.05)' }}>
+        {/* Terminal & Flow Visualization */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2.5rem', width: '100%', maxWidth: '1200px', marginTop: '5rem', zIndex: 1, animation: 'fadeUp 1.2s ease forwards', opacity: 0 }}>
+          {/* Terminal Code Mockup */}
+          <div style={{ background: '#0d0d12', border: '1px solid rgba(212, 175, 55, 0.2)', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.6), 0 0 20px rgba(212, 175, 55, 0.05)', display: 'flex', flexDirection: 'column' }}>
             <div style={{ display: 'flex', gap: '8px', padding: '1rem', background: 'rgba(255,255,255,0.02)', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
               <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ff5f56' }}></div>
               <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ffbd2e' }}></div>
               <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#27c93f' }}></div>
               <div style={{ marginLeft: '1rem', fontSize: '0.8rem', color: 'var(--text-secondary)', fontFamily: 'monospace' }}>vajra-terminal (v1.0.0)</div>
             </div>
-            <div style={{ padding: '1.5rem', fontFamily: 'JetBrains Mono, monospace', fontSize: '0.9rem', lineHeight: '1.7', textAlign: 'left' }}>
+            <div style={{ padding: '1.5rem', fontFamily: 'JetBrains Mono, monospace', fontSize: '0.9rem', lineHeight: '1.7', textAlign: 'left', flex: 1 }}>
               <div><span style={{ color: '#8b949e' }}>$</span> <span style={{ color: 'var(--accent-gold)' }}>dros-cli</span> <span style={{ color: '#a5d6ff' }}>mount</span> vajra_claw.dll</div>
               <div style={{ color: 'var(--accent-blue)', marginTop: '0.5rem' }}>{t('home.terminal.locked')}</div>
               <div style={{ color: 'var(--accent-blue)' }}>{t('home.terminal.injected')}</div>
@@ -71,6 +79,14 @@ export default function Home() {
                 {t('home.terminal.fuse_blown')}
               </div>
             </div>
+          </div>
+
+          {/* Visual Flow Animation */}
+          <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', background: 'rgba(20,20,30,0.4)', borderColor: 'rgba(255,255,255,0.08)', boxShadow: '0 20px 40px rgba(0,0,0,0.5)' }}>
+            <img src={flowAnimation} alt="DROS Zero-Trust Flow Animation" style={{ width: '100%', height: 'auto', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)', backgroundColor: '#0d0d12' }} />
+            <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '1rem', fontFamily: 'monospace', letterSpacing: '0.5px' }}>
+              ℹ️ {isZh ? '圖-1：DROS 零信任執行期攔截流程' : 'fig-1: DROS Zero-Trust Runtime Interception Flow'}
+            </span>
           </div>
         </div>
       </section>

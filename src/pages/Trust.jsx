@@ -2,9 +2,31 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 
+// DROS Visual Assets
+import drosConcurrencyLatency from '../assets/DROS_Visual_Assets/dros_concurrency_latency.png';
+import drosVsOpaBenchmark from '../assets/DROS_Visual_Assets/dros_vs_opa_benchmark.png';
+import drosPkiAnimationZh from '../assets/DROS_Visual_Assets/dros_pki_animation_zh.webp';
+import drosPkiAnimationEn from '../assets/DROS_Visual_Assets/dros_pki_animation_en.webp';
+import drosPkiChainZh from '../assets/DROS_Visual_Assets/dros_pki_chain_zh.png';
+import drosPkiChainEn from '../assets/DROS_Visual_Assets/dros_pki_chain_en.png';
+import drosLifecycleFlowZh from '../assets/DROS_Visual_Assets/dros_lifecycle_flow_zh.png';
+import drosLifecycleFlowEn from '../assets/DROS_Visual_Assets/dros_lifecycle_flow_en.png';
+import drosRcuZh from '../assets/DROS_Visual_Assets/dros_rcu_zh.png';
+import drosRcuEn from '../assets/DROS_Visual_Assets/dros_rcu_en.png';
+import drosZeroCopyZh from '../assets/DROS_Visual_Assets/dros_zerocopy_zh.png';
+import drosZeroCopyEn from '../assets/DROS_Visual_Assets/dros_zerocopy_en.png';
+
 export default function Trust() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const githubUser = "Top-Celestial-Company-Ltd";
+
+  const isZh = i18n.language && i18n.language.startsWith('zh');
+  const pkiAnimation = isZh ? drosPkiAnimationZh : drosPkiAnimationEn;
+  const pkiChain = isZh ? drosPkiChainZh : drosPkiChainEn;
+  const lifecycleFlow = isZh ? drosLifecycleFlowZh : drosLifecycleFlowEn;
+  const rcuDiagram = isZh ? drosRcuZh : drosRcuEn;
+  const zeroCopyDiagram = isZh ? drosZeroCopyZh : drosZeroCopyEn;
+
 
   // Scroll to top on mount
   useEffect(() => {
@@ -118,7 +140,7 @@ export default function Trust() {
             </p>
           </div>
 
-          <div className="grid-4" style={{ gap: '1.5rem' }}>
+          <div className="grid-4" style={{ gap: '1.5rem', marginBottom: '4rem' }}>
             <div className="glass-card" style={{ textAlign: 'center', borderTop: '3px solid var(--accent-gold)' }}>
               <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: 'var(--accent-gold)', marginBottom: '0.5rem', fontFamily: 'monospace' }}>
                 {t('trust.benchmarks.latency_val')}
@@ -155,6 +177,91 @@ export default function Trust() {
               </p>
             </div>
           </div>
+
+          {/* Benchmark Charts Grid */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '3rem', maxWidth: '1200px', margin: '0 auto' }}>
+            {/* Chart 1: Latency Curve */}
+            <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'rgba(20,20,30,0.4)', borderColor: 'rgba(255,255,255,0.08)', boxShadow: '0 20px 40px rgba(0,0,0,0.3)' }}>
+              <h4 style={{ marginBottom: '1.2rem', color: 'var(--accent-gold)', fontSize: '1.1rem', fontWeight: '600' }}>
+                {isZh ? '併發量與延遲扁平化曲線' : 'Concurrency vs Intercept Latency Scale Flatness'}
+              </h4>
+              <img src={drosConcurrencyLatency} alt="DROS Concurrency vs Latency" style={{ width: '100%', height: 'auto', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)', backgroundColor: '#0d0d12' }} />
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '1.2rem', lineHeight: '1.6', textAlign: 'center' }}>
+                {isZh 
+                  ? '測試顯示在達到 50,000 個策略與多執行緒併發負載下，DROS 攔截開銷仍穩定保持在 300ns–600ns 的常數時間，無快取阻礙與性能退化。'
+                  : 'Benchmarks show that under 50,000 rules and active multi-threaded concurrent stress, DROS intercept latency remains stable in O(1) constant time without cache jitter.'}
+              </p>
+            </div>
+
+            {/* Chart 2: DROS vs OPA */}
+            <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'rgba(20,20,30,0.4)', borderColor: 'rgba(255,255,255,0.08)', boxShadow: '0 20px 40px rgba(0,0,0,0.3)' }}>
+              <h4 style={{ marginBottom: '1.2rem', color: 'var(--accent-blue)', fontSize: '1.1rem', fontWeight: '600' }}>
+                {isZh ? 'DROS 與 OPA 引擎效能對比' : 'DROS vs Open Policy Agent (OPA) Performance'}
+              </h4>
+              <img src={drosVsOpaBenchmark} alt="DROS vs OPA Benchmark" style={{ width: '100%', height: 'auto', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)', backgroundColor: '#0d0d12' }} />
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '1.2rem', lineHeight: '1.6', textAlign: 'center' }}>
+                {isZh 
+                  ? '相較於傳統 OPA 引擎基於字串解析與 AST 計算導致的毫秒級延遲，DROS 以 contiguous bitmap 記憶體直查快了 4,000 倍以上。'
+                  : 'Compared to traditional OPA engines which suffer from millisecond-level parser latency, DROS contiguous bitmap lookup runs up to 4,000x faster.'}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cryptographic Execution Identity & PKI Section */}
+      <section style={{ backgroundColor: 'rgba(10,10,15,0.4)', padding: '6rem 0', borderTop: '1px solid rgba(255,255,255,0.05)', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+        <div className="container animate-fade-up">
+          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+            <span style={{ display: 'inline-block', padding: '0.4rem 1.2rem', background: 'rgba(212,175,55,0.08)', border: '1px solid rgba(212,175,55,0.2)', borderRadius: '30px', fontSize: '0.9rem', color: 'var(--accent-gold)', marginBottom: '1.5rem', letterSpacing: '1px' }}>
+              Execution Identity PKI
+            </span>
+            <h2 style={{ fontSize: '2.2rem', marginBottom: '1rem', fontFamily: 'Noto Serif TC, serif', fontWeight: 'bold' }}>
+              {isZh ? '密碼學執行期身分與憑證鏈體系' : 'Cryptographic Execution Identity & PKI'}
+            </h2>
+            <p style={{ color: 'var(--text-secondary)', maxWidth: '750px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.7' }}>
+              {isZh 
+                ? '為避免 Agent 遭遇提示詞注入後偽造權限，DROS 由認證機構 (AIA) 簽發「依執行期動態綁定 (By-Execution)」的 Ed25519 數位憑證，在底層進行嚴格的不可否認性溯源。'
+                : 'To prevent agents from forging permissions after prompt injections, DROS issues dynamic By-Execution Ed25519 digital certificates signed by the Agent Identity Authority (AIA) for cryptographically binding execution non-repudiation.'}
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '3rem', alignItems: 'center', maxWidth: '1200px', margin: '0 auto' }}>
+            {/* Left Column: PKI Animation WebP */}
+            <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'rgba(20,20,30,0.4)', borderColor: 'rgba(255,255,255,0.08)', boxShadow: '0 20px 40px rgba(0,0,0,0.4)' }}>
+              <h4 style={{ marginBottom: '1rem', color: '#fff', fontSize: '1.1rem', fontWeight: '600' }}>
+                {isZh ? '動態憑證簽發與校驗流程' : 'Dynamic Certificate Issuance & Validation Flow'}
+              </h4>
+              <img src={pkiAnimation} alt="DROS PKI Certificate Issuance Animation" style={{ width: '100%', height: 'auto', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)', backgroundColor: '#0d0d12' }} />
+              <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '0.8rem', fontFamily: 'monospace' }}>
+                ℹ️ {isZh ? '圖-3：依執行期動態憑證 (By-Execution) 驗證流程' : 'fig-3: By-Execution Dynamic Certificate Verification Flow'}
+              </span>
+            </div>
+
+            {/* Right Column: PKI Chain Diagram */}
+            <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'rgba(20,20,30,0.4)', borderColor: 'rgba(255,255,255,0.08)', boxShadow: '0 20px 40px rgba(0,0,0,0.4)' }}>
+              <h4 style={{ marginBottom: '1rem', color: '#fff', fontSize: '1.1rem', fontWeight: '600' }}>
+                {isZh ? '執行期身分憑證信任鏈結構' : 'Execution Identity Trust Chain Hierarchy'}
+              </h4>
+              <img src={pkiChain} alt="DROS PKI Trust Chain Hierarchy" style={{ width: '100%', height: 'auto', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)', backgroundColor: '#0d0d12' }} />
+              <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '0.8rem', fontFamily: 'monospace' }}>
+                ℹ️ {isZh ? '圖-4：DROS PKI 認證體系憑證樹' : 'fig-4: DROS PKI Certificate Trust Hierarchy'}
+              </span>
+            </div>
+          </div>
+          
+          {/* Third Diagram: Lifecycle flow */}
+          <div style={{ maxWidth: '900px', margin: '4rem auto 0 auto', textAlign: 'center' }}>
+            <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'rgba(20,20,30,0.4)', borderColor: 'rgba(255,255,255,0.08)', boxShadow: '0 20px 40px rgba(0,0,0,0.4)' }}>
+              <h4 style={{ marginBottom: '1rem', color: 'var(--accent-gold)', fontSize: '1.1rem', fontWeight: '600' }}>
+                {isZh ? '數位身分與憑證生命週期管理' : 'Identity Certificate Lifecycle Management'}
+              </h4>
+              <img src={lifecycleFlow} alt="DROS Certificate Lifecycle Flow" style={{ width: '100%', height: 'auto', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)', backgroundColor: '#0d0d12' }} />
+              <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '0.8rem', fontFamily: 'monospace' }}>
+                ℹ️ {isZh ? '圖-5：身分憑證從開採、審核到簽發轉正生命週期' : 'fig-5: Lifecycle flow of identity certificate from mining to signing'}
+              </span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -179,6 +286,31 @@ export default function Trust() {
                 </p>
               </div>
             ))}
+          </div>
+
+          {/* Systems Engineering Diagrams */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '3rem', maxWidth: '1200px', margin: '4rem auto 0 auto' }}>
+            {/* Zero Copy Diagram */}
+            <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'rgba(20,20,30,0.4)', borderColor: 'rgba(255,255,255,0.08)', boxShadow: '0 20px 40px rgba(0,0,0,0.3)' }}>
+              <h4 style={{ marginBottom: '1.2rem', color: 'var(--accent-blue)', fontSize: '1.1rem', fontWeight: '600' }}>
+                {isZh ? 'Contiguous Bitmap 零拷貝對齊結構' : 'Contiguous Bitmap Zero-Copy Memory Alignment'}
+              </h4>
+              <img src={zeroCopyDiagram} alt="DROS Zero-Copy Memory" style={{ width: '100%', height: 'auto', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)', backgroundColor: '#0d0d12' }} />
+              <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '0.8rem', fontFamily: 'monospace' }}>
+                ℹ️ {isZh ? '圖-6：C-ABI / FFI 邊界零分配記憶體映射' : 'fig-6: Zero-Allocation memory mapping at C-ABI / FFI boundary'}
+              </span>
+            </div>
+
+            {/* RCU Diagram */}
+            <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'rgba(20,20,30,0.4)', borderColor: 'rgba(255,255,255,0.08)', boxShadow: '0 20px 40px rgba(0,0,0,0.3)' }}>
+              <h4 style={{ marginBottom: '1.2rem', color: 'var(--accent-gold)', fontSize: '1.1rem', fontWeight: '600' }}>
+                {isZh ? '鎖無關 RCU 動態策略熱插拔' : 'Lock-Free RCU Dynamic Policy OTA Hot-Swap'}
+              </h4>
+              <img src={rcuDiagram} alt="DROS Lock-Free RCU Updates" style={{ width: '100%', height: 'auto', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)', backgroundColor: '#0d0d12' }} />
+              <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '0.8rem', fontFamily: 'monospace' }}>
+                ℹ️ {isZh ? '圖-7：高併發讀寫分離策略 OTA 更新' : 'fig-7: High-concurrency read-write separation policy OTA hot-swap'}
+              </span>
+            </div>
           </div>
         </div>
       </section>

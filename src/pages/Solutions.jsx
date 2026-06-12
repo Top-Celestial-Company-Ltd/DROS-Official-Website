@@ -2,13 +2,22 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 
+// DROS Visual Assets
+import drosDefenseLayersZh from '../assets/DROS_Visual_Assets/dros_defense_layers_zh.png';
+import drosDefenseLayersEn from '../assets/DROS_Visual_Assets/dros_defense_layers_en.png';
+import drosVajraClawVideo from '../assets/DROS_Visual_Assets/DROS-VajraClaw.mp4';
+
 export default function Solutions() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  
+  const isZh = i18n.language && i18n.language.startsWith('zh');
+  const defenseLayers = isZh ? drosDefenseLayersZh : drosDefenseLayersEn;
 
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
 
   return (
     <>
@@ -96,6 +105,23 @@ export default function Solutions() {
         </div>
       </section>
 
+      {/* Interactive Video Demo Showcase */}
+      <section className="container animate-fade-up delay-2" style={{ padding: '4rem 0' }}>
+        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+          <h2 style={{ fontSize: '2.2rem', marginBottom: '0.8rem', fontFamily: 'Noto Serif TC, serif' }}>
+            {isZh ? 'VajraClaw 核心防禦運行演示' : 'VajraClaw Execution Governance Video Demo'}
+          </h2>
+          <p style={{ color: 'var(--text-secondary)', maxWidth: '750px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.7' }}>
+            {isZh 
+              ? '觀看實體運作中的 VajraClaw 引擎如何在作業系統的 C-ABI / FFI 邊界阻斷惡意 System Call、執行安全熔斷並記錄不可否認的審計日誌。' 
+              : 'Watch how the VajraClaw engine intercepts malicious system calls at the OS FFI boundary, triggers safe execution panics, and logs cryptographic audit trails.'}
+          </p>
+        </div>
+        <div style={{ maxWidth: '900px', margin: '0 auto', background: '#0d0d12', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 20px 50px rgba(0,0,0,0.6)' }}>
+          <video src={drosVajraClawVideo} controls style={{ width: '100%', display: 'block', backgroundColor: '#000' }} />
+        </div>
+      </section>
+
       {/* The Three Planes of Defense */}
       <section style={{ backgroundColor: 'rgba(20,20,20,0.3)', padding: '6rem 0' }}>
         <div className="container animate-fade-up delay-2">
@@ -106,38 +132,43 @@ export default function Solutions() {
             </p>
           </div>
           
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', maxWidth: '900px', margin: '0 auto' }}>
-            {/* Layer 1 */}
-            <div className="glass-card" style={{ display: 'flex', gap: '2rem', alignItems: 'center', borderLeft: '4px solid var(--accent-blue)' }}>
-              <div className="kernel-icon" style={{ fontSize: '3rem', margin: 0, color: 'var(--accent-blue)' }}>🧠</div>
-              <div>
-                <h3 style={{ fontSize: '1.4rem', marginBottom: '0.5rem', color: 'var(--accent-blue)' }}>{t('solutions.planes.layer1.title')}</h3>
-                <p style={{ color: 'var(--text-secondary)' }}>{t('solutions.planes.layer1.desc')}</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '3rem', alignItems: 'center', maxWidth: '1200px', margin: '0 auto' }}>
+            {/* Left Column: Planes list */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+              {/* Layer 1 */}
+              <div className="glass-card" style={{ display: 'flex', gap: '2rem', alignItems: 'center', borderLeft: '4px solid var(--accent-blue)', padding: '1.5rem' }}>
+                <div className="kernel-icon" style={{ fontSize: '2.5rem', margin: 0, color: 'var(--accent-blue)' }}>🧠</div>
+                <div>
+                  <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem', color: 'var(--accent-blue)' }}>{t('solutions.planes.layer1.title')}</h3>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6' }}>{t('solutions.planes.layer1.desc')}</p>
+                </div>
+              </div>
+
+              {/* Layer 2 */}
+              <div className="glass-card" style={{ display: 'flex', gap: '2rem', alignItems: 'center', borderLeft: '4px solid #a0a0a0', padding: '1.5rem' }}>
+                <div className="kernel-icon" style={{ fontSize: '2.5rem', margin: 0, color: '#a0a0a0' }}>🕸️</div>
+                <div>
+                  <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem', color: '#f0f0f0' }}>{t('solutions.planes.layer2.title')}</h3>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6' }}>{t('solutions.planes.layer2.desc')}</p>
+                </div>
+              </div>
+
+              {/* Layer 3 */}
+              <div className="glass-card" style={{ display: 'flex', gap: '2rem', alignItems: 'center', borderLeft: '4px solid var(--accent-gold)', padding: '1.5rem' }}>
+                <div className="kernel-icon" style={{ fontSize: '2.5rem', margin: 0, color: 'var(--accent-gold)' }}>⚡</div>
+                <div>
+                  <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem', color: 'var(--accent-gold)' }}>{t('solutions.planes.layer3.title')}</h3>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6' }}>{t('solutions.planes.layer3.desc')}</p>
+                </div>
               </div>
             </div>
 
-            {/* Down Arrow */}
-            <div style={{ textAlign: 'center', color: 'var(--text-secondary)', fontSize: '1.5rem', margin: '-1rem 0' }}>↓</div>
-
-            {/* Layer 2 */}
-            <div className="glass-card" style={{ display: 'flex', gap: '2rem', alignItems: 'center', borderLeft: '4px solid #a0a0a0' }}>
-              <div className="kernel-icon" style={{ fontSize: '3rem', margin: 0, color: '#a0a0a0' }}>🕸️</div>
-              <div>
-                <h3 style={{ fontSize: '1.4rem', marginBottom: '0.5rem', color: '#f0f0f0' }}>{t('solutions.planes.layer2.title')}</h3>
-                <p style={{ color: 'var(--text-secondary)' }}>{t('solutions.planes.layer2.desc')}</p>
-              </div>
-            </div>
-
-            {/* Down Arrow */}
-            <div style={{ textAlign: 'center', color: 'var(--text-secondary)', fontSize: '1.5rem', margin: '-1rem 0' }}>↓</div>
-
-            {/* Layer 3 */}
-            <div className="glass-card" style={{ display: 'flex', gap: '2rem', alignItems: 'center', borderLeft: '4px solid var(--accent-gold)' }}>
-              <div className="kernel-icon" style={{ fontSize: '3rem', margin: 0, color: 'var(--accent-gold)' }}>⚡</div>
-              <div>
-                <h3 style={{ fontSize: '1.4rem', marginBottom: '0.5rem', color: 'var(--accent-gold)' }}>{t('solutions.planes.layer3.title')}</h3>
-                <p style={{ color: 'var(--text-secondary)' }}>{t('solutions.planes.layer3.desc')}</p>
-              </div>
+            {/* Right Column: Visual Diagram */}
+            <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: 'rgba(20,20,30,0.4)', borderColor: 'rgba(255,255,255,0.08)', boxShadow: '0 20px 40px rgba(0,0,0,0.4)' }}>
+              <img src={defenseLayers} alt="DROS Defense Layers Architecture" style={{ width: '100%', height: 'auto', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)', backgroundColor: '#0d0d12' }} />
+              <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '1rem', fontFamily: 'monospace', letterSpacing: '0.5px' }}>
+                ℹ️ {isZh ? '圖-2：DROS 多層確信防護架構' : 'fig-2: DROS Multi-Layer Assurance Defense Architecture'}
+              </span>
             </div>
           </div>
         </div>
