@@ -219,10 +219,10 @@ export default function Trust() {
             <h2 style={{ fontSize: '2.2rem', marginBottom: '1rem', fontFamily: 'Noto Serif TC, serif', fontWeight: 'bold' }}>
               {isZh ? '密碼學執行期身分與憑證鏈體系' : 'Cryptographic Execution Identity & PKI'}
             </h2>
-            <p style={{ color: 'var(--text-secondary)', maxWidth: '750px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.7' }}>
+            <p style={{ color: 'var(--text-secondary)', maxWidth: '850px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.7' }}>
               {isZh 
-                ? '為避免 Agent 遭遇提示詞注入後偽造權限，DROS 由認證機構 (AIA) 簽發「依執行期動態綁定 (By-Execution)」的 Ed25519 數位憑證，在底層進行嚴格的不可否認性溯源。'
-                : 'To prevent agents from forging permissions after prompt injections, DROS issues dynamic By-Execution Ed25519 digital certificates signed by the Agent Identity Authority (AIA) for cryptographically binding execution non-repudiation.'}
+                ? 'DROS 採用解耦的雙層信任架構 (GATI)：Layer-1 憑證結算支援去中心化帳本 (DLT/DID) 錨定，免除單點失效與企業壟斷風險；Layer-2 執行歸屬由 GuardVM 於本地記憶體極速 (<0.8ms) 同步校驗「依執行期動態綁定 (By-Execution)」的數位憑證，兼顧全球公信力與極致防禦效能。'
+                : 'DROS adopts a decoupled dual-layer trust network (GATI): Layer-1 trust settlement supports decentralized ledger (DLT/DID) anchoring to eliminate single points of failure and corporate monopolies, while Layer-2 execution attribution is verified by GuardVM locally in microseconds (<0.8ms) via dynamic By-Execution certificates, balancing global credibility with extreme performance.'}
             </p>
           </div>
 
