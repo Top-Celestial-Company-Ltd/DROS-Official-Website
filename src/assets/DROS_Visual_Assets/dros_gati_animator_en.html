@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DROS GATI Decoupled Dual-Layer Trust Simulator</title>
+    <style>
+        body {
+            background-color: #0E161B;
+            color: #E2E8F0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* 800x600 aspect ratio container */
+        .canvas-container {
+            width: 800px;
+            height: 600px;
+            background-color: #111A20;
+            border-radius: 12px;
+            position: relative;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+            border: 1px solid #1F2E38;
+            overflow: hidden;
+        }
+
+        /* Header Banner */
+        .header {
+            width: 760px;
+            height: 45px;
+            background-color: #16242D;
+            border-radius: 6px;
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-sizing: border-box;
+            border-left: 4px solid #D4AF37;
+            z-index: 10;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: #FFFFFF;
+        }
+
+        .header .badge {
+            background-color: rgba(212,175,55,0.1);
+            border: 1px solid rgba(212,175,55,0.3);
+            color: #D4AF37;
+            padding: 2px 8px;
+            font-size: 11px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        /* Row Separation Layout */
+        .row-title {
+            position: absolute;
+            left: 30px;
+            font-size: 11px;
+            color: #8A9BA8;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 5;
+        }
+        .rt1 { top: 75px; }
+        .rt2 { top: 310px; }
+
+        /* Separating Dashed Line */
+        .separator-line {
+            position: absolute;
+            top: 290px;
+            left: 20px;
+            width: 760px;
+            height: 1px;
+            border-top: 1px dashed rgba(255,255,255,0.08);
+            z-index: 2;
+        }
+
+        /* SVG Connections */
+        svg.connections {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 800px;
+            height: 600px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        svg.connections path {
+            fill: none;
+            stroke: #1F2E38;
+            stroke-width: 2;
+            stroke-dasharray: 6 4;
+            transition: all 0.5s ease;
+        }
+
+        svg.connections path.active-gold {
+            stroke: #D4AF37;
+            stroke-width: 3;
+            animation: march 0.8s linear infinite;
+        }
+
+        svg.connections path.active-green {
+            stroke: #2ECC71;
+            stroke-width: 3;
+            animation: march 0.8s linear infinite;
+        }
+
+        svg.connections path.active-red {
+            stroke: #E74C3C;
+            stroke-width: 3;
+            animation: march 0.8s linear infinite;
+        }
+
+        @keyframes march {
+            to { stroke-dashoffset: -20; }
+        }
+
+        /* Entity Cards (Common styles) */
+        .node {
+            position: absolute;
+            border-radius: 8px;
+            background-color: rgba(26, 37, 44, 0.8);
+            border: 1px solid #24333D;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+            z-index: 3;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .node-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 4px;
+        }
+
+        .node-desc {
+            font-size: 10px;
+            color: #8A9BA8;
+            text-align: center;
+            padding: 0 10px;
+        }
+
+        /* Layer 1 Nodes (Settlement) */
+        .node-root-ca {
+            width: 170px;
+            height: 80px;
+            top: 110px;
+            left: 315px;
+            border-color: rgba(212,175,55,0.4);
+        }
+        .node-root-ca.active {
+            box-shadow: 0 0 20px rgba(212,175,55,0.4);
+            background-color: rgba(212,175,55,0.05);
+        }
+
+        .node-dlt {
+            width: 140px;
+            height: 70px;
+            top: 115px;
+            left: 90px;
+        }
+        .node-dlt.active {
+            border-color: #3498DB;
+            box-shadow: 0 0 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .node-aia {
+            width: 150px;
+            height: 70px;
+            top: 115px;
+            left: 560px;
+        }
+        .node-aia.active {
+            border-color: #9B59B6;
+            box-shadow: 0 0 15px rgba(155, 89, 182, 0.3);
+        }
+
+        /* Layer 2 Nodes (Execution) */
+        .node-agent {
+            width: 150px;
+            height: 80px;
+            top: 350px;
+            left: 90px;
+        }
+        .node-agent.active {
+            border-color: #3498DB;
+            box-shadow: 0 0 20px rgba(52, 152, 219, 0.4);
+        }
+
+        .node-guardvm {
+            width: 180px;
+            height: 90px;
+            top: 345px;
+            left: 310px;
+            border-color: rgba(46, 204, 113, 0.3);
+        }
+        .node-guardvm.active-verify {
+            border-color: #2ECC71;
+            box-shadow: 0 0 25px rgba(46, 204, 113, 0.6);
+            background-color: rgba(46, 204, 113, 0.05);
+        }
+        .node-guardvm.active-revoke {
+            border-color: #E74C3C;
+            box-shadow: 0 0 25px rgba(231, 76, 60, 0.6);
+            background-color: rgba(231, 76, 60, 0.05);
+        }
+
+        .node-resources {
+            width: 150px;
+            height: 80px;
+            top: 350px;
+            left: 560px;
+        }
+        .node-resources.active {
+            border-color: #2ECC71;
+            box-shadow: 0 0 15px rgba(46, 204, 113, 0.4);
+        }
+        .node-resources.blocked {
+            border-color: #E74C3C;
+            box-shadow: 0 0 15px rgba(231, 76, 60, 0.4);
+        }
+
+        /* Ephemeral BEC Token Card Overlay */
+        .bec-token {
+            position: absolute;
+            width: 90px;
+            height: 35px;
+            background: rgba(212,175,55,0.15);
+            border: 1px solid #D4AF37;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9px;
+            font-weight: bold;
+            color: #D4AF37;
+            z-index: 5;
+            opacity: 0;
+            pointer-events: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        /* Animation data packet */
+        .data-packet {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: #D4AF37;
+            border-radius: 50%;
+            z-index: 4;
+            opacity: 0;
+            box-shadow: 0 0 10px #D4AF37;
+        }
+
+        .data-packet.green {
+            background-color: #2ECC71;
+            box-shadow: 0 0 10px #2ECC71;
+        }
+
+        .data-packet.red {
+            background-color: #E74C3C;
+            box-shadow: 0 0 10px #E74C3C;
+        }
+
+        /* Console Display */
+        .console {
+            position: absolute;
+            width: 760px;
+            height: 65px;
+            bottom: 80px;
+            left: 20px;
+            background-color: #0A1014;
+            border-radius: 6px;
+            border: 1px solid #1F2E38;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 10px 15px;
+            box-sizing: border-box;
+            overflow-y: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            z-index: 10;
+        }
+
+        .console-line {
+            font-size: 11px;
+            line-height: 1.5;
+            color: #8A9BA8;
+            margin: 0;
+        }
+        .console-line.success { color: #2ECC71; }
+        .console-line.warning { color: #E67E22; }
+        .console-line.error { color: #E74C3C; }
+        .console-line.highlight { color: #D4AF37; }
+
+        /* Control Panel (Buttons) */
+        .control-panel {
+            position: absolute;
+            width: 760px;
+            height: 50px;
+            bottom: 15px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 10;
+        }
+
+        .btn {
+            flex: 1;
+            margin: 0 5px;
+            height: 38px;
+            background-color: #1A2730;
+            border: 1px solid #2B3D4A;
+            border-radius: 4px;
+            color: #E2E8F0;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+        }
+
+        .btn:first-child { margin-left: 0; }
+        .btn:last-child { margin-right: 0; }
+
+        .btn:hover:not(:disabled) {
+            background-color: #243542;
+            border-color: #3D566B;
+            color: #FFFFFF;
+        }
+
+        .btn:active:not(:disabled) {
+            transform: scale(0.98);
+        }
+
+        .btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .btn-gold {
+            border-color: rgba(212,175,55,0.4);
+            color: #D4AF37;
+        }
+        .btn-gold:hover:not(:disabled) {
+            background-color: rgba(212,175,55,0.08) !important;
+            border-color: #D4AF37 !important;
+        }
+
+        .btn-red {
+            border-color: rgba(231,76,60,0.4);
+            color: #E74C3C;
+        }
+        .btn-red:hover:not(:disabled) {
+            background-color: rgba(231,76,60,0.08) !important;
+            border-color: #E74C3C !important;
+        }
+
+        /* Pulse animations */
+        @keyframes pulse-gold {
+            0% { box-shadow: 0 0 5px rgba(212,175,55,0.3); }
+            50% { box-shadow: 0 0 20px rgba(212,175,55,0.6); }
+            100% { box-shadow: 0 0 5px rgba(212,175,55,0.3); }
+        }
+
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 5px rgba(46,204,113,0.3); }
+            50% { box-shadow: 0 0 20px rgba(46,204,113,0.6); }
+            100% { box-shadow: 0 0 5px rgba(46,204,113,0.3); }
+        }
+
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 5px rgba(231,76,60,0.3); }
+            50% { box-shadow: 0 0 20px rgba(231,76,60,0.6); }
+            100% { box-shadow: 0 0 5px rgba(231,76,60,0.3); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="canvas-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>DROS Global Agent Trust Infrastructure (GATI) Dual-Layer Simulator</h1>
+            <span class="badge">Standardized Agentic Trust Mesh</span>
+        </div>
+
+        <!-- Row labels -->
+        <span class="row-title rt1">Layer-1: Decentralized Trust Settlement (Out-of-band Consensus)</span>
+        <span class="row-title rt2">Layer-2: Execution Attribution & Security Grid (Local Microsecond)</span>
+
+        <!-- Separating line -->
+        <div class="separator-line"></div>
+
+        <!-- SVG Links -->
+        <svg class="connections">
+            <!-- DLT <-> Root CA <-> AIA -->
+            <path id="path-dlt-root" d="M 230 150 L 315 150" />
+            <path id="path-root-aia" d="M 485 150 L 560 150" />
+
+            <!-- Sync Path Layer 1 (AIA) -> Layer 2 (GuardVM) -->
+            <path id="path-sync" d="M 635 185 C 635 270, 400 270, 400 345" />
+
+            <!-- Local Verification Loop: Agent -> GuardVM -> System resources -->
+            <path id="path-agent-guard" d="M 240 390 L 310 390" />
+            <path id="path-guard-resource" d="M 490 390 L 560 390" />
+        </svg>
+
+        <!-- Layer 1 Entity Cards -->
+        <div id="node-dlt" class="node node-dlt">
+            <span class="node-title">Consortium DLT</span>
+            <span class="node-desc">Decentralized Root Certificate Registry</span>
+        </div>
+
+        <div id="node-root" class="node node-root-ca">
+            <span class="node-title">DROS Root CA</span>
+            <span class="node-desc">Consortium Root CA (HSM/TEE Secured)</span>
+        </div>
+
+        <div id="node-aia" class="node node-aia">
+            <span class="node-title">AIA Authority</span>
+            <span class="node-desc">Enterprise Certificate Management Plane</span>
+        </div>
+
+        <!-- Layer 2 Entity Cards -->
+        <div id="node-agent" class="node node-agent">
+            <span class="node-title">AI Agent</span>
+            <span class="node-desc">Autonomous Agent Execution Entity</span>
+        </div>
+
+        <div id="node-guardvm" class="node node-guardvm">
+            <span class="node-title">DROS GuardVM</span>
+            <span class="node-desc">Local Microsecond Kernel (Ed25519)</span>
+        </div>
+
+        <div id="node-resources" class="node node-resources">
+            <span class="node-title">System Resources</span>
+            <span class="node-desc">DB, File I/O, API, Core Tools</span>
+        </div>
+
+        <!-- Animation Elements -->
+        <div id="bec-card" class="bec-token">BEC Token</div>
+        <div id="packet" class="data-packet"></div>
+
+        <!-- Console -->
+        <div id="console" class="console">
+            <p class="console-line success">>> DROS GATI virtual sandbox initialized successfully.</p>
+            <p class="console-line">>> Layer-1 & Layer-2 Status: Decoupled, local CRL cache is valid.</p>
+        </div>
+
+        <!-- Control buttons -->
+        <div class="control-panel">
+            <button id="btn-register" class="btn btn-gold" onclick="triggerRegister()">1. On-Chain Register (L1)</button>
+            <button id="btn-sync" class="btn" onclick="triggerSync()" disabled>2. Async Sync Policy (CRL)</button>
+            <button id="btn-invoke" class="btn" onclick="triggerInvoke()">3. Locally Invoke Tool (L2)</button>
+            <button id="btn-revoke" class="btn btn-red" onclick="triggerRevoke()" disabled>4. Revoke & Intercept</button>
+        </div>
+    </div>
+
+    <script>
+        const consoleEl = document.getElementById('console');
+        const packetEl = document.getElementById('packet');
+        const becEl = document.getElementById('bec-card');
+        
+        let isRegistered = false;
+        let isSynced = false;
+        let isRevoked = false;
+
+        function log(text, type = '') {
+            const p = document.createElement('p');
+            p.className = `console-line ${type}`;
+            p.textContent = `>> ${text}`;
+            consoleEl.appendChild(p);
+            consoleEl.scrollTop = consoleEl.scrollHeight;
+            
+            // Limit to 3 lines
+            while (consoleEl.children.length > 3) {
+                consoleEl.removeChild(consoleEl.firstChild);
+            }
+        }
+
+        // 1. AIA Register (Layer-1)
+        function triggerRegister() {
+            if (isRegistered) return;
+            
+            disableAllButtons();
+            log("Registering Enterprise Intermediate CA (AIA) on-chain...", "highlight");
+            
+            const path = document.getElementById('path-dlt-root');
+            const path2 = document.getElementById('path-root-aia');
+            
+            path.classList.add('active-gold');
+            document.getElementById('node-dlt').classList.add('active');
+            
+            setTimeout(() => {
+                document.getElementById('node-root').classList.add('active');
+                path2.classList.add('active-gold');
+                log("DROS Root CA issued AIA intermediate certificate via HSM.");
+            }, 1000);
+
+            setTimeout(() => {
+                document.getElementById('node-aia').classList.add('active');
+                log("AIA Intermediate Certificate written to DLT registry. Layer-1 Settlement complete (Latency ~2000ms).", "success");
+                isRegistered = true;
+                
+                document.getElementById('btn-sync').removeAttribute('disabled');
+                enableControlPanel();
+            }, 2000);
+        }
+
+        // 2. Sync Policy (CRL / Cache Sync)
+        function triggerSync() {
+            if (!isRegistered || isSynced) return;
+            
+            disableAllButtons();
+            log("Starting async policy sync. Loading chain CRL into local cache...", "highlight");
+            
+            const syncPath = document.getElementById('path-sync');
+            syncPath.classList.add('active-gold');
+            
+            // Animate data packet descending
+            packetEl.style.opacity = 1;
+            packetEl.className = "data-packet";
+            
+            let step = 0;
+            const steps = 30;
+            const interval = 30; // ms
+            
+            const timer = setInterval(() => {
+                step++;
+                const t = step / steps;
+                const x = (1-t)**3 * 635 + 3 * (1-t)**2 * t * 635 + 3 * (1-t) * t**2 * 400 + t**3 * 400;
+                const y = (1-t)**3 * 185 + 3 * (1-t)**2 * t * 270 + 3 * (1-t) * t**2 * 270 + t**3 * 345;
+                
+                packetEl.style.left = `${x}px`;
+                packetEl.style.top = `${y}px`;
+                
+                if (step >= steps) {
+                    clearInterval(timer);
+                    packetEl.style.opacity = 0;
+                    syncPath.classList.remove('active-gold');
+                    
+                    document.getElementById('node-guardvm').classList.add('active-verify');
+                    log("Local GuardVM cache updated: Policy aligned, CRL loaded (Asynchronous out-of-band sync, zero thread blocking).", "success");
+                    isSynced = true;
+                    
+                    document.getElementById('btn-revoke').removeAttribute('disabled');
+                    enableControlPanel();
+                }
+            }, interval);
+        }
+
+        // 3. Local Invoke (Layer-2)
+        function triggerInvoke() {
+            disableAllButtons();
+            
+            const invokeMsg = isRevoked 
+                ? "AI Agent initiating system call, local GuardVM performing verification..."
+                : "AI Agent initiating system call, performing microsecond cryptographic check...";
+            
+            log(invokeMsg, "highlight");
+            
+            const path1 = document.getElementById('path-agent-guard');
+            const path2 = document.getElementById('path-guard-resource');
+            
+            document.getElementById('node-agent').classList.add('active');
+            
+            // Phase A: Agent -> GuardVM
+            path1.className = "connections active-green";
+            
+            // Ephemeral BEC Card emerges
+            becEl.style.opacity = 1;
+            becEl.style.left = "120px";
+            becEl.style.top = "370px";
+            
+            // BEC moves to GuardVM
+            setTimeout(() => {
+                becEl.style.left = "310px";
+                becEl.style.top = "370px";
+            }, 200);
+
+            setTimeout(() => {
+                becEl.style.opacity = 0;
+                path1.className = "";
+                
+                if (isRevoked) {
+                    // Revoked case: Block access
+                    document.getElementById('node-guardvm').classList.add('active-revoke');
+                    path2.className = "connections active-red";
+                    document.getElementById('node-resources').classList.add('blocked');
+                    log("Interception successful! This Agent's certificate has been revoked on Layer-1 and synced. Local GuardVM hard blocked execution (484ns)!", "error");
+                    
+                    setTimeout(() => {
+                        document.getElementById('node-guardvm').classList.remove('active-revoke');
+                        path2.className = "";
+                        document.getElementById('node-resources').classList.remove('blocked');
+                        document.getElementById('node-agent').classList.remove('active');
+                        enableControlPanel();
+                    }, 1500);
+                } else {
+                    // Approved case: Grant access
+                    document.getElementById('node-guardvm').classList.add('active-verify');
+                    path2.className = "connections active-green";
+                    document.getElementById('node-resources').classList.add('active');
+                    log("Verification passed! BEC chain is valid. Capability bitmap check approved. Execution latency: 484.8 ns.", "success");
+                    
+                    setTimeout(() => {
+                        document.getElementById('node-guardvm').classList.remove('active-verify');
+                        path2.className = "";
+                        document.getElementById('node-resources').classList.remove('active');
+                        document.getElementById('node-agent').classList.remove('active');
+                        enableControlPanel();
+                    }, 1500);
+                }
+            }, 800);
+        }
+
+        // 4. Revoke (Layer-1 -> Layer-2)
+        function triggerRevoke() {
+            if (!isSynced || isRevoked) return;
+            
+            disableAllButtons();
+            log("Warning! Rogue Agent behavior detected. AIA initiating emergency revocation...", "warning");
+            
+            // Animate revocation on Layer-1
+            document.getElementById('node-aia').style.borderColor = "#E74C3C";
+            document.getElementById('node-aia').style.boxShadow = "0 0 15px rgba(231, 76, 60, 0.4)";
+            
+            setTimeout(() => {
+                log("Layer-1 published new CRL cache to Consortium DLT Registry.");
+                
+                // Animate packet descending
+                packetEl.style.opacity = 1;
+                packetEl.className = "data-packet red";
+                
+                let step = 0;
+                const steps = 30;
+                const interval = 20;
+                
+                const timer = setInterval(() => {
+                    step++;
+                    const t = step / steps;
+                    const x = (1-t)**3 * 635 + 3 * (1-t)**2 * t * 635 + 3 * (1-t) * t**2 * 400 + t**3 * 400;
+                    const y = (1-t)**3 * 185 + 3 * (1-t)**2 * t * 270 + 3 * (1-t) * t**2 * 270 + t**3 * 345;
+                    
+                    packetEl.style.left = `${x}px`;
+                    packetEl.style.top = `${y}px`;
+                    
+                    if (step >= steps) {
+                        clearInterval(timer);
+                        packetEl.style.opacity = 0;
+                        
+                        document.getElementById('node-guardvm').classList.add('active-revoke');
+                        log("Local GuardVM RCU strategy hot-swap complete! Compromised certificate revoked in <10ms.", "success");
+                        isRevoked = true;
+                        
+                        document.getElementById('btn-revoke').setAttribute('disabled', 'true');
+                        document.getElementById('btn-revoke').textContent = "Cert Revoked";
+                        enableControlPanel();
+                    }
+                }, interval);
+            }, 1000);
+        }
+
+        function disableAllButtons() {
+            const btns = document.querySelectorAll('.btn');
+            btns.forEach(btn => btn.setAttribute('disabled', 'true'));
+        }
+
+        function enableControlPanel() {
+            document.getElementById('btn-register').removeAttribute('disabled');
+            document.getElementById('btn-invoke').removeAttribute('disabled');
+            
+            if (isRegistered && !isSynced) {
+                document.getElementById('btn-sync').removeAttribute('disabled');
+            }
+            if (isSynced && !isRevoked) {
+                document.getElementById('btn-revoke').removeAttribute('disabled');
+            }
+            
+            if (isRegistered) {
+                document.getElementById('btn-register').textContent = "AIA Registered";
+                document.getElementById('btn-register').setAttribute('disabled', 'true');
+            }
+            if (isSynced) {
+                document.getElementById('btn-sync').textContent = "Strategy Synced";
+                document.getElementById('btn-sync').setAttribute('disabled', 'true');
+            }
+        }
+    </script>
+</body>
+</html>

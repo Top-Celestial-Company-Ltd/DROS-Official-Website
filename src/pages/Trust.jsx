@@ -15,6 +15,7 @@ import drosRcuZh from '../assets/DROS_Visual_Assets/dros_rcu_zh.png';
 import drosRcuEn from '../assets/DROS_Visual_Assets/dros_rcu_en.png';
 import drosZeroCopyZh from '../assets/DROS_Visual_Assets/dros_zerocopy_zh.png';
 import drosZeroCopyEn from '../assets/DROS_Visual_Assets/dros_zerocopy_en.png';
+import drosGatiArchitecture from '../assets/DROS_Visual_Assets/dros_gati_architecture.png';
 
 export default function Trust() {
   const { t, i18n } = useTranslation();
@@ -259,6 +260,58 @@ export default function Trust() {
               <img src={lifecycleFlow} alt="DROS Certificate Lifecycle Flow" style={{ width: '100%', height: 'auto', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)', backgroundColor: '#0d0d12' }} />
               <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '0.8rem', fontFamily: 'monospace' }}>
                 ℹ️ {isZh ? '圖-5：身分憑證從開採、審核到簽發轉正生命週期' : 'fig-5: Lifecycle flow of identity certificate from mining to signing'}
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Global Agent Trust Infrastructure (GATI) Section */}
+      <section style={{ padding: '6rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)', backgroundColor: 'rgba(10,10,15,0.2)' }}>
+        <div className="container animate-fade-up">
+          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+            <span style={{ display: 'inline-block', padding: '0.4rem 1.2rem', background: 'rgba(212,175,55,0.08)', border: '1px solid rgba(212,175,55,0.2)', borderRadius: '30px', fontSize: '0.9rem', color: 'var(--accent-gold)', marginBottom: '1.5rem', letterSpacing: '1px' }}>
+              Global Trust Protocol
+            </span>
+            <h2 style={{ fontSize: '2.2rem', marginBottom: '1rem', fontFamily: 'Noto Serif TC, serif', fontWeight: 'bold' }}>
+              {isZh ? '全球智能體信任基礎設施 (GATI)' : 'Global Agent Trust Infrastructure (GATI)'}
+            </h2>
+            <p style={{ color: 'var(--text-secondary)', maxWidth: '850px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.7' }}>
+              {isZh 
+                ? 'DROS 不僅提供本地執行期防禦，更建構了全球智能體網路的解耦雙層信任協議。Layer-1 帶外結算層可選錨定去中心化帳本 (DLT/DID) 以免除單點失效與企業壟斷風險；Layer-2 執行歸屬由 GuardVM 於本地記憶體極速 (<0.8ms) 同步校驗「依執行期動態綁定 (By-Execution)」的數位憑證，兼顧全球公信力與運行期極致效能。'
+                : 'DROS establishes the GATI protocol: Layer-1 trust settlement supports decentralized ledger anchoring to eliminate corporate monopoly, while Layer-2 runtime attribution enforces microsecond-level certificate validation on-device, balancing global credibility with extreme performance.'}
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: '3rem', alignItems: 'start', maxWidth: '1200px', margin: '0 auto' }}>
+            {/* Left Column: GATI Architecture Diagram */}
+            <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'rgba(20,20,30,0.4)', borderColor: 'rgba(255,255,255,0.08)', boxShadow: '0 20px 40px rgba(0,0,0,0.4)' }}>
+              <h4 style={{ marginBottom: '1.2rem', color: '#fff', fontSize: '1.1rem', fontWeight: '600' }}>
+                {isZh ? 'GATI 雙層解耦信任架構' : 'GATI Decoupled Dual-Layer Architecture'}
+              </h4>
+              <img src={drosGatiArchitecture} alt="DROS GATI Architecture Diagram" style={{ width: '100%', height: 'auto', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)', backgroundColor: '#0d0d12' }} />
+              <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '0.8rem', fontFamily: 'monospace' }}>
+                ℹ️ {isZh ? '圖-6：Layer-1 帶外共識結算層與 Layer-2 本地熱路徑執行層之解耦機制' : 'fig-6: Decoupling mechanism between Layer-1 out-of-band consensus and Layer-2 local execution'}
+              </span>
+            </div>
+
+            {/* Right Column: GATI Interactive Simulator */}
+            <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'rgba(20,20,30,0.4)', borderColor: 'rgba(255,255,255,0.08)', boxShadow: '0 20px 40px rgba(0,0,0,0.4)' }}>
+              <h4 style={{ marginBottom: '1.2rem', color: 'var(--accent-gold)', fontSize: '1.1rem', fontWeight: '600' }}>
+                {isZh ? 'GATI 雙層非同步防禦互動模擬器' : 'GATI Interactive Sandbox Simulator'}
+              </h4>
+              
+              {/* Responsive Iframe Container */}
+              <div style={{ position: 'relative', width: '100%', paddingBottom: '75%', height: 0, overflow: 'hidden', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)', backgroundColor: '#0E161B' }}>
+                <iframe 
+                  src={isZh ? '/src/assets/DROS_Visual_Assets/dros_gati_animator.html' : '/src/assets/DROS_Visual_Assets/dros_gati_animator_en.html'} 
+                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none' }}
+                  title="DROS GATI Simulator"
+                />
+              </div>
+              
+              <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '0.8rem', fontFamily: 'monospace', textAlign: 'center' }}>
+                ℹ️ {isZh ? '互動演示：體驗 AIA 鏈上註冊、策略同步與本機微秒 Tool Call 校驗' : 'Interactive Demo: Experience AIA on-chain registration, strategy sync, and local tool call checks'}
               </span>
             </div>
           </div>
