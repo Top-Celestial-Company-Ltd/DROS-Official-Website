@@ -3,7 +3,12 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 export default function About() {
-  const { t } = useTranslation('about');
+  const { t, i18n } = useTranslation('about');
+  
+  const isZh = i18n.language === 'zh-TW';
+  const whitepaperLink = isZh
+    ? '/docs/DROS_Runtime_Attribution_Framework_ZH.pdf'
+    : '/docs/DROS_Runtime_Attribution_Framework_EN.pdf';
 
   return (
     <main className="container" style={{paddingTop: '4rem', paddingBottom: '6rem'}}>
@@ -66,7 +71,7 @@ export default function About() {
           <p style={{fontSize: '1.3rem', color: 'var(--text-light)', marginBottom: '2rem'}}>{t('cta.subtitle')}</p>
           <div style={{display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap'}}>
             <a href="mailto:founders@dr-os.io" className="btn btn-primary" style={{padding: '1rem 2.5rem', fontSize: '1.1rem'}}>{t('cta.btn_contact')}</a>
-            <Link to="/docs" className="btn btn-secondary" style={{padding: '1rem 2.5rem', fontSize: '1.1rem'}}>{t('cta.btn_docs')}</Link>
+            <a href={whitepaperLink} target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{padding: '1rem 2.5rem', fontSize: '1.1rem'}}>{t('cta.btn_docs')}</a>
           </div>
       </section>
     </main>
