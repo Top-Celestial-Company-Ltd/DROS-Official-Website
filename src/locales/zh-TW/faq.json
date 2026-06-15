@@ -75,6 +75,14 @@
         {
           "q": "Multi-Agent 工作流協作（如 AutoGen、CrewAI）中的「連鎖污染」與「權限放大」問題，DROS 如何防禦？效能如何？",
           "a": "**DROS 首創了鏈式執行憑證 (BEC Chain) 授權交集計算來解決混淆代理人 (Confused Deputy) 問題，且對效能幾乎無感。**\n\n- **BEC Chain 交集防禦**：Agent 之間的協作呼叫必須傳遞密碼學簽名的憑證鏈。當 Agent B (高權限) 收到 Agent A (低權限) 的請求時，VajraClaw 會在底層執行交集運算：\n  $$\\text{Effective Scope} = \\text{Scope}(Agent_A) \\cap \\text{Scope}(Agent_B)$$\n  若 Agent A 因爬蟲被污染而命令 Agent B 刪庫，因為交集權限不包含寫入權，VajraClaw 會立刻熔斷阻斷，防止權限被惡意放大。\n- **微秒級極致效能**：VajraClaw 採用 **O(1) 複雜度的 Bitmap 狀態機算法**。單次規則判定僅需 **10 至 50 微秒 (Microseconds)**，且**零 Token 消耗**（完全在本地記憶體完成），效能開銷相較於 LLM 推論時間完全可以忽略不計。"
+        },
+        {
+          "q": "DROS / VajraClaw 是無狀態 (Stateless) 的，那我們怎麼知道它有沒有正常運行？有沒有當掉或『忘記執行』防範規則？",
+          "a": "**這正是 SRE（網站可靠性工程）與資安監控設計的核心。無狀態 (Stateless) 指的是『不保存業務與會話狀態』以追求極致效能，但並不代表『缺乏可觀測性 (Observability)』。**\n\nDROS 設計了三重複雜的主動防護與可觀測性機制，確保安全網格隨時處於監控之下：\n\n1. **FFI 剛性攔截（物理上無法『忘記執行』）**：\n   * VajraClaw 不是一個可有可無的『旁路監控器』，而是以 SDK 函式庫或 Sidecar 的形式**強行嵌入在 Agent 呼叫 Tool 決策的唯一代碼路徑上**。這在編譯期就被代碼綁定死。Agent 若想呼叫外部工具（如資料庫或 API），就『必須』調用 VajraClaw 進行 Bitmap 校驗。如果 VajraClaw 當掉或忘記加載，呼叫鏈路就會物理中斷，回傳 Null 執行權限，Agent 根本無法執行任何動作。這就是 **Fail-Closed（預設阻斷）**。\n\n2. **微秒級心跳（Micro-Heartbeats）與健康檢查**：\n   * 運行於各 VM/容器節點的 VajraClaw Daemon 會定時向中央中控台（Fleet Manager / VajraAgent）上報微秒級心跳封包。心跳內容不包含業務隱私，僅攜帶當前節點的系統指標（CPU/記憶體）、運行狀態，以及目前加載規則的 `policy.bin` 密碼學哈希值（Hash）。中控台只要發現某個節點心跳超時（如超過 2 秒），會立刻觸發警報並調度備份節點。\n\n3. **密碼學日誌流與『沉默警報』（Silence Alert）**：\n   * 每次校驗（不論放行 ALLOW 還是阻斷 BLOCK）都會在本地生成一筆由該節點私鑰**密碼學簽名（Signature）**的審計日誌，並即時串流（Stream）回中央日誌系統。如果該 Agent 持續有對話與 API 調用，但中央系統卻『沒有收到該節點的任何簽名日誌』，日誌系統會觸發 **Silence Alert（異常沉默警報）**，判斷該節點可能遭到系統級掛起或繞過，立刻通報資安人員介入排查。"
+        },
+        {
+          "q": "在沒有安裝 DROS 中央控制台（Fleet Manager / VajraAgent）的單機版（VajraClaw、VajraClaw+）環境中，管理員該如何查看日誌？需要自己去翻找資料夾嗎？",
+          "a": "**不需要盲目尋找。單機版雖無中央視覺化控制台，但遵循了標準的 SRE 日誌規範與 Unix 哲學，提供了極為直觀的系統級集成。**\n\n無中央控制台時，管理員可以透過以下三種極為標準且便利的方式查看與監控日誌：\n\n1. **系統級統一日誌（SystemD / Journalctl）**：\n   * VajraClaw 預設會將所有校驗與攔截日誌以標準 JSON 格式輸出至系統標準輸出流（stdout/stderr）。\n   * 如果您是以 SystemD 服務（如 `lobster`）運行 Agent，系統會自動接管日誌。您只需在終端機輸入一行標準指令，即可實時觀看滾動日誌：\n     ```bash\n     journalctl -u lobster -f\n     ```\n\n2. **標準路徑與自定義日誌檔（JSON Log File）**：\n   * 在配置檔（如 `openclaw.json` 或 `Vajra.json`）中，您可以自由指定一個標準路徑（例如 `log_path: \"/var/log/vajraclaw/audit.json\"`）。\n   * VajraClaw 會自動在此路徑生成按日輪轉（Rotate）的結構化日誌檔，管理員只需使用一行標準指令即可即時監聽攔截事件：\n     ```bash\n     tail -f /var/log/vajraclaw/audit.json\n     ```\n\n3. **無縫對接開源日誌收集器**：\n   * 由於日誌輸出是標準的單行 JSON 格式，開發者可以非常輕易地用開源的 Filebeat、Vector 或 FluentBit 收集這些日誌，直接打入企業現有的 ELK 或 Grafana Loki 中，無需 any 二次開發。"
         }
       ]
     },
