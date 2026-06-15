@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ChatWidget from './components/ChatWidget';
 import Home from './pages/Home';
 import Docs from './pages/Docs';
 import Pricing from './pages/Pricing';
@@ -29,6 +30,7 @@ export default function App() {
         </Routes>
       </div>
       <Footer />
+      <ChatWidget />
     </>
   );
 }
