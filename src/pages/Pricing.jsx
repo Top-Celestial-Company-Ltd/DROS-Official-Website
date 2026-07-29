@@ -108,6 +108,39 @@ export default function Pricing() {
         </div>
       </div>
 
+      {/* ── Feature Comparison Matrix ── */}
+      <section style={{marginTop: '6rem', marginBottom: '2rem'}}>
+        <h2 style={{textAlign: 'center', fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', marginBottom: '0.5rem', background: 'linear-gradient(to right, #fff, var(--text-secondary))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
+          {t('matrix.title')}
+        </h2>
+        <p style={{textAlign: 'center', color: 'var(--text-secondary)', marginBottom: '2.5rem', fontSize: '1rem'}}>{t('matrix.subtitle')}</p>
+
+        <div style={{overflowX: 'auto', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.08)'}}>
+          <table style={{width: '100%', borderCollapse: 'collapse', fontSize: '0.88rem', minWidth: '700px'}}>
+            <thead>
+              <tr style={{background: 'rgba(255,255,255,0.04)'}}>
+                {['matrix.col_feature','matrix.col_free','matrix.col_hacker','matrix.col_startup','matrix.col_enterprise','matrix.col_sovereign'].map((key, i) => (
+                  <th key={i} style={{padding: '1rem 0.8rem', textAlign: i === 0 ? 'left' : 'center', fontWeight: 'bold', color: i === 3 ? 'var(--accent-gold)' : 'var(--text-primary)', borderBottom: '1px solid rgba(255,255,255,0.1)', whiteSpace: 'nowrap'}}>
+                    {t(key)}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {t('matrix.rows', { returnObjects: true }).map((row, ri) => (
+                <tr key={ri} style={{background: ri % 2 === 0 ? 'transparent' : 'rgba(255,255,255,0.02)', borderBottom: '1px solid rgba(255,255,255,0.05)'}}>
+                  {row.map((cell, ci) => (
+                    <td key={ci} style={{padding: '0.85rem 0.8rem', textAlign: ci === 0 ? 'left' : 'center', color: ci === 0 ? 'var(--text-primary)' : cell === '✅' ? '#4ade80' : cell === '❌' ? 'rgba(255,255,255,0.25)' : cell === '⭐' ? 'var(--accent-gold)' : 'var(--text-secondary)', fontWeight: ci === 0 ? '600' : 'normal'}}
+                      dangerouslySetInnerHTML={{ __html: cell }}>
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       {/* Pricing Legal Disclaimer */}
       <div style={{marginTop: '5rem', padding: '2rem', background: 'rgba(0, 0, 0, 0.4)', borderLeft: '4px solid var(--accent-gold)', borderRadius: '12px', fontSize: '0.95rem', color: 'var(--text-secondary)', textAlign: 'left', lineHeight: '1.8'}}>
         <strong style={{color: '#ff4d4f', display: 'block', marginBottom: '1rem', fontSize: '1.1rem'}}>{t('disclaimer.title')}</strong>

@@ -33,7 +33,7 @@
         "社群論壇支援"
       ],
       "details_title": "展開看詳細技術規格",
-      "details_content": "<p><strong>產品定位</strong>：輕量級、極速、可嵌入的開發者防護工具包，專注體驗低於 0.02ms 的極速攔截性能。<br/><strong>核心機制：</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>O(1) Bitmap 引擎</strong>：原生編譯，執行期驗證延遲低於 0.02ms。</li><li><strong>Strict Fail-Closed</strong>：直接觸發 Panic，拒絕服務。</li><li><strong>開發體驗</strong>：支援編譯 Vajra DSL，快速上手。</li></ul>",
+      "details_content": "<p><strong>Hacker vs. Free Trial — 核心差異</strong>：Hacker 版為第一個正式付費訂閱級別，解除試用版的所有限制。</p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>⏱️ 無時限授權</strong>：不同於 Free Trial 的 30 天炸彈，年訂閱制永久使用至下一訂閱週期。</li><li><strong>🤖 5 個 Concurrent Agents</strong>：從 Free Trial 的 2 個提升至 5 個，支援更複雜的 Side Project 工作流。</li><li><strong>O(1) Bitmap 引擎</strong>：原生編譯，執行期驗證延遲低於 0.02ms。</li><li><strong>Strict Fail-Closed</strong>：直接觸發 OS 層 Panic，無法被 LLM 語意繞過。</li><li><strong>Priority Software Updates</strong>：優先獲得安全更新與新功能推送。</li></ul>",
       "btn_yearly": "Buy Yearly ($149)",
       "btn_monthly": "Buy Monthly ($19)"
     },
@@ -49,7 +49,7 @@
         "優先軟體更新與 Email 支援"
       ],
       "details_title": "展開看詳細技術規格",
-      "details_content": "<p><strong>產品定位</strong>：商用級別微服務防護版本，針對多 Agent 協作場景與正式上線環境設計。<br/><strong>核心機制：</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li>包含 Hacker 版所有基礎功能。</li><li><strong>Compile-time Intelligence</strong>：在編譯期解開複雜的正規表達式與權限繼承關係。</li><li><strong>跨語言 SDK (Zero-Code)</strong>：提供 Python <code>vajraclaw</code> 模組，一行程式碼封裝 LangChain / AutoGen 呼叫。</li></ul>",
+      "details_content": "<p><strong>🔐 核心升級：Level 2 資訊流控制 (IFC) — Startup 獨有</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>動態污點追蹤 (Dynamic Data Tainting)</strong>：將 <code>PII_CONFIDENTIAL</code> 等敏感標籤物理綁定到特定安全通道，阻斷任何未授權的資料流向。</li><li><strong>🚨 跨通道語意誘騙洩密阻斷 (POL-0021)</strong>：100% 物理熔斷攻擊者透過 Telegram / Discord / Email 等跨通道誘騙 Agent 洩漏 PII 的攻擊向量。Hacker 版無此防禦。</li><li><strong>Compile-time Intelligence</strong>：在編譯期解開複雜的正規表達式與權限繼承關係。</li><li><strong>跨語言 SDK (Zero-Code)</strong>：提供 Python <code>vajraclaw</code> 模組，一行程式碼封裝 LangChain / AutoGen 呼叫。</li><li><strong>3 組 Machine UUIDs</strong>：支援 Dev / Staging / Production 三環境隔離部署，共計 30 個 Concurrent Agents。</li></ul>",
       "btn": "Secure Startup License"
     },
     "enterprise": {
@@ -76,6 +76,34 @@
     "p1": "1. <strong>Fail-Closed Trigger:</strong> DROS 引擎採取嚴格預設攔截。若開發者因忽略 Panic 異常而強行繞過 DROS，系統將完全暴露於 Prompt Injections 攻擊之下。我們對因規避授權或拆卸 DROS 引擎而導致的資料外洩不承擔任何責任。",
     "p2": "2. <strong>Mesh OTA & Mobile SDK:</strong> 若您需要部署 VajraAgent (企業級中控台) 或 DROS Mobile SDK (終端邊緣防護)，請直接聯繫銷售團隊進行專案評估與架構諮詢。",
     "p3": "3. <strong>No Refunds on Burned Keys:</strong> 任何試圖反編譯或竄改 <code>policy.bin</code> 二進位簽章的行為，將永久銷毀您的 License Key 且不予退費。"
+  },
+  "matrix": {
+    "title": "完整功能規格對照表",
+    "subtitle": "各版本完整安全功能一覽，選擇最符合您 AI 基礎設施需求的防護等級",
+    "col_feature": "安全功能 / 規格",
+    "col_free": "⚪ Free Trial",
+    "col_hacker": "🟢 Hacker",
+    "col_startup": "🔵 Startup",
+    "col_enterprise": "🟣 Enterprise",
+    "col_sovereign": "👑 Sovereign",
+    "rows": [
+      ["目標客戶", "個人試用", "個人開發者", "10~50 人新創", "中大型企業", "金融 / 國防"],
+      ["使用期限", "1 個月試用", "年度訂閱", "年度訂閱", "年度訂閱", "專案合約"],
+      ["Machine UUIDs", "1 組", "1 組", "3 組", "15 組", "無限制"],
+      ["Concurrent Agents", "2 個", "5 個", "30 個 (3×10)", "450 個 (15×30)", "無限制"],
+      ["Level 1：FFI 微內核熔斷", "✅ 限時", "✅", "✅", "✅", "✅"],
+      ["Level 1：C-ABI 記憶體保護", "✅ 限時", "✅", "✅", "✅", "✅"],
+      ["Level 2：資訊流控制 (IFC)", "❌", "❌", "✅", "✅", "✅"],
+      ["Level 2：動態污點追蹤", "❌", "❌", "✅", "✅", "✅"],
+      ["Level 2：跨通道洩密阻斷 (POL-0021)", "❌", "❌", "✅", "✅", "✅"],
+      ["Level 3：Auto-DSL 飛輪引擎", "❌", "❌", "❌", "⭐", "⭐"],
+      ["Level 3：動態 Baseline 熔斷", "❌", "❌", "❌", "✅", "✅"],
+      ["Level 3：HIL 多重簽章", "❌", "❌", "❌", "✅", "✅"],
+      ["Level 3：CoW 1秒快照回滾", "❌", "❌", "❌", "✅", "✅"],
+      ["100% Air-Gapped 離線部署", "❌", "❌", "❌", "✅", "✅"],
+      ["零停機熱加載", "❌", "❌", "手動重載", "✅ 毫秒級", "✅ 分散式"],
+      ["部署環境", "Local PC", "Local / Docker", "VM / NAS", "K8s / GKE", "Air-Gapped / FPGA"]
+    ]
   },
   "cta": {
     "title": "Upgrade to <span class='gold-text'>OS-Level Security.</span>",
