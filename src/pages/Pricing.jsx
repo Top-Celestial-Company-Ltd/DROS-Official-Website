@@ -207,40 +207,43 @@ export default function Pricing() {
       </section>
 
       {/* ── Competitive Positioning Section ── */}
-      <section style={{marginTop: '5rem', marginBottom: '2rem'}}>
+      <section style={{marginTop: '5rem', marginBottom: '3rem', padding: '2.5rem 2rem', background: 'rgba(15, 23, 42, 0.6)', border: '1px solid rgba(96, 165, 250, 0.25)', borderRadius: '20px', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)'}}>
         <div style={{textAlign: 'center', marginBottom: '2rem'}}>
+          <span style={{background: 'rgba(96, 165, 250, 0.1)', color: '#60a5fa', padding: '0.35rem 1.1rem', borderRadius: '20px', fontSize: '0.8rem', fontWeight: 'bold', border: '1px solid rgba(96, 165, 250, 0.3)', textTransform: 'uppercase', letterSpacing: '1px', display: 'inline-block', marginBottom: '0.8rem'}}>
+            Architecture & Defense Layers
+          </span>
           <h2 style={{fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', marginBottom: '0.5rem', background: 'linear-gradient(to right, #fff, var(--text-secondary))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
             {t('positioning.title')}
           </h2>
-          <p style={{color: 'var(--text-secondary)', fontSize: '1rem', maxWidth: '680px', margin: '0 auto'}}>
+          <p style={{color: 'var(--text-secondary)', fontSize: '0.98rem', maxWidth: '720px', margin: '0 auto', lineHeight: '1.6'}}>
             {t('positioning.subtitle')}
           </p>
         </div>
         <div style={{overflowX: 'auto'}}>
           <table style={{width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem', minWidth: '700px'}}>
             <thead>
-              <tr style={{borderBottom: '1px solid rgba(255,255,255,0.1)'}}>
-                <th style={{padding: '0.9rem 1rem', textAlign: 'left', color: 'var(--text-secondary)', fontWeight: '600', width: '28%'}}>{t('positioning.col_dimension')}</th>
-                <th style={{padding: '0.9rem 0.8rem', textAlign: 'center', color: '#60a5fa'}}>{t('positioning.col_conf_vm')}</th>
-                <th style={{padding: '0.9rem 0.8rem', textAlign: 'center', color: '#a78bfa'}}>{t('positioning.col_clean_room')}</th>
-                <th style={{padding: '0.9rem 0.8rem', textAlign: 'center', color: '#94a3b8'}}>{t('positioning.col_api_gw')}</th>
-                <th style={{padding: '0.9rem 0.8rem', textAlign: 'center', color: '#4ade80', fontWeight: '700', background: 'rgba(74,222,128,0.06)', borderRadius: '4px'}}>{t('positioning.col_dros')}</th>
+              <tr style={{borderBottom: '1px solid rgba(255,255,255,0.1)', background: 'rgba(255,255,255,0.03)'}}>
+                <th style={{padding: '1rem', textAlign: 'left', color: 'var(--text-secondary)', fontWeight: '600', width: '28%'}}>{t('positioning.col_dimension')}</th>
+                <th style={{padding: '1rem 0.8rem', textAlign: 'center', color: '#60a5fa'}}>{t('positioning.col_conf_vm')}</th>
+                <th style={{padding: '1rem 0.8rem', textAlign: 'center', color: '#a78bfa'}}>{t('positioning.col_clean_room')}</th>
+                <th style={{padding: '1rem 0.8rem', textAlign: 'center', color: '#94a3b8'}}>{t('positioning.col_api_gw')}</th>
+                <th style={{padding: '1rem 0.8rem', textAlign: 'center', color: '#4ade80', fontWeight: '700', background: 'rgba(74,222,128,0.1)', borderRadius: '6px 6px 0 0'}}>{t('positioning.col_dros')}</th>
               </tr>
             </thead>
             <tbody>
               {t('positioning.rows', { returnObjects: true }).map((row, i) => (
                 <tr key={i} style={{borderBottom: '1px solid rgba(255,255,255,0.05)', background: i % 2 === 0 ? 'rgba(255,255,255,0.02)' : 'transparent'}}>
-                  <td style={{padding: '0.75rem 1rem', color: '#e2e8f0', fontWeight: '500'}}>{row[0]}</td>
-                  <td style={{padding: '0.75rem 0.8rem', textAlign: 'center', color: '#94a3b8'}} dangerouslySetInnerHTML={{__html: row[1]}}></td>
-                  <td style={{padding: '0.75rem 0.8rem', textAlign: 'center', color: '#94a3b8'}} dangerouslySetInnerHTML={{__html: row[2]}}></td>
-                  <td style={{padding: '0.75rem 0.8rem', textAlign: 'center', color: '#94a3b8'}} dangerouslySetInnerHTML={{__html: row[3]}}></td>
-                  <td style={{padding: '0.75rem 0.8rem', textAlign: 'center', color: '#4ade80', fontWeight: '600', background: 'rgba(74,222,128,0.04)'}} dangerouslySetInnerHTML={{__html: row[4]}}></td>
+                  <td style={{padding: '0.85rem 1rem', color: '#e2e8f0', fontWeight: '500'}}>{row[0]}</td>
+                  <td style={{padding: '0.85rem 0.8rem', textAlign: 'center', color: '#94a3b8'}} dangerouslySetInnerHTML={{__html: row[1]}}></td>
+                  <td style={{padding: '0.85rem 0.8rem', textAlign: 'center', color: '#94a3b8'}} dangerouslySetInnerHTML={{__html: row[2]}}></td>
+                  <td style={{padding: '0.85rem 0.8rem', textAlign: 'center', color: '#94a3b8'}} dangerouslySetInnerHTML={{__html: row[3]}}></td>
+                  <td style={{padding: '0.85rem 0.8rem', textAlign: 'center', color: '#4ade80', fontWeight: '600', background: 'rgba(74,222,128,0.05)'}} dangerouslySetInnerHTML={{__html: row[4]}}></td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-        <div style={{marginTop: '1.5rem', background: 'rgba(96,165,250,0.07)', border: '1px solid rgba(96,165,250,0.25)', borderRadius: '10px', padding: '1rem 1.4rem', fontSize: '0.88rem', color: '#cbd5e1', lineHeight: '1.7'}}>
+        <div style={{marginTop: '1.5rem', background: 'rgba(96,165,250,0.07)', border: '1px solid rgba(96,165,250,0.25)', borderRadius: '12px', padding: '1.1rem 1.5rem', fontSize: '0.88rem', color: '#cbd5e1', lineHeight: '1.7'}}>
           {t('positioning.footnote')}
         </div>
       </section>
