@@ -106,9 +106,29 @@
     ]
   },
   "cta": {
-    "title": "Upgrade to <span class='gold-text'>OS-Level Security.</span>",
-    "subtitle": "SECURE your Agentic Infrastructure.",
-    "btn": "Contact Sales Team"
+    "title": "升級至 <span class='gold-text'>OS 等級安全。</span>",
+    "subtitle": "為您的 Agent 基礎設施注入確定性防護。",
+    "btn": "聯繫銷售團隊"
+  },
+  "positioning": {
+    "title": "技術定位：DROS 在現有安全技術棧中的角色",
+    "subtitle": "DROS 不是既有安全工具的替代方案，而是 AI Agent 執行期治理的新類別。以下對比說明各技術的防禦層次與能力範圍，以利準確選型與縱深防禦部署。",
+    "col_dimension": "能力維度",
+    "col_conf_vm": "Intel TDX / Confidential VM",
+    "col_clean_room": "Data Clean Room",
+    "col_api_gw": "API Gateway",
+    "col_dros": "✦ DROS VEP",
+    "rows": [
+      ["防禦層次", "基礎設施層<br/><small>（防雲端廠商）</small>", "資料協作層<br/><small>（批次聚合）</small>", "網路閘道層<br/><small>（流量控制）</small>", "AI Agent 執行期層<br/><small>（應用行為治理）</small>"],
+      ["防止雲端廠商 / Hypervisor 窺視", "✅ 強<br/><small>TEE 記憶體加密</small>", "✅ 中", "❌", "❌<br/><small>（非設計目標）</small>"],
+      ["欄位級動態 Policy 遮蔽（即時 API）", "❌<br/><small>無欄位層概念</small>", "⚠️ 部分<br/><small>批次聚合，非即時</small>", "⚠️ 部分<br/><small>靜態規則，無 AI 語意</small>", "✅<br/><small>帶內 26.1μs 決策</small>"],
+      ["AI Agent Tool Call 越權行為治理", "❌", "❌", "❌", "✅<br/><small>C-ABI 物理熔斷</small>"],
+      ["即時輸出密碼學簽章合規憑證（DPP）", "❌", "❌", "❌", "✅<br/><small>SHA-256 Merkle 簽章</small>"],
+      ["不可竄改稽核鏈（可獨立驗證）", "⚠️ 部分<br/><small>TEE Attestation</small>", "❌", "❌", "✅<br/><small>完整 Merkle Chain</small>"],
+      ["Human-in-the-Loop 高風險動作懸停", "❌", "❌", "❌", "✅<br/><small>HITL 雙重簽署</small>"],
+      ["秒級 Token 動態撤銷", "❌", "❌", "⚠️ 部分<br/><small>需重新部署</small>", "✅<br/><small>O(1) RCU 原子交換</small>"]
+    ],
+    "footnote": "📌 互補關係說明：Confidential Computing（Intel TDX / Azure Confidential VM）與 DROS 保護不同攻擊面，為互補而非競爭關係。Confidential Computing 防禦基礎設施層攻擊（防止雲端廠商與 Hypervisor 窺視 TEE 記憶體）；DROS 防禦 AI Agent 執行期應用層攻擊（防止 Agent 越權行為、Prompt Injection 導出機密資料）。兩者可同時部署，實現縱深防禦（Defense in Depth）。Data Clean Room 適用於離線批次多方資料協作，API Gateway 適用於流量管控，均非針對 AI Agent 執行期動態行為治理所設計。"
   },
   "addons": {
     "badge": "Specialized Compliance Modules",

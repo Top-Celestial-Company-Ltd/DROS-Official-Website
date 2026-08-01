@@ -110,6 +110,26 @@
     "subtitle": "SECURE your Agentic Infrastructure.",
     "btn": "Contact Sales Team"
   },
+  "positioning": {
+    "title": "Technology Positioning: Where DROS Fits in the Security Stack",
+    "subtitle": "DROS is not a replacement for existing security tools — it is a new category: AI Agent Runtime Governance. The table below clarifies each technology's defense layer and capability scope for accurate selection and Defense-in-Depth deployment.",
+    "col_dimension": "Capability Dimension",
+    "col_conf_vm": "Intel TDX / Confidential VM",
+    "col_clean_room": "Data Clean Room",
+    "col_api_gw": "API Gateway",
+    "col_dros": "✦ DROS VEP",
+    "rows": [
+      ["Defense Layer", "Infrastructure Layer<br/><small>(Anti cloud-operator)</small>", "Data Collaboration Layer<br/><small>(Batch analytics)</small>", "Network Gateway Layer<br/><small>(Traffic control)</small>", "AI Agent Runtime Layer<br/><small>(Application behavior governance)</small>"],
+      ["Block Cloud Provider / Hypervisor Snooping", "✅ Strong<br/><small>TEE memory encryption</small>", "✅ Moderate", "❌", "❌<br/><small>(Out of scope by design)</small>"],
+      ["Field-Level Dynamic Policy Masking (Real-Time API)", "❌<br/><small>No field-level concept</small>", "⚠️ Partial<br/><small>Batch aggregation, not real-time</small>", "⚠️ Partial<br/><small>Static rules, no AI semantic awareness</small>", "✅<br/><small>In-band 26.1μs decision</small>"],
+      ["AI Agent Tool Call Unauthorized Behavior Governance", "❌", "❌", "❌", "✅<br/><small>C-ABI physical circuit-breaking</small>"],
+      ["Real-Time Cryptographic Compliance Proof Output (DPP)", "❌", "❌", "❌", "✅<br/><small>SHA-256 Merkle-signed</small>"],
+      ["Tamper-Evident Audit Chain (Independently Verifiable)", "⚠️ Partial<br/><small>TEE Attestation only</small>", "❌", "❌", "✅<br/><small>Full Merkle Chain</small>"],
+      ["Human-in-the-Loop High-Risk Action Suspension", "❌", "❌", "❌", "✅<br/><small>HITL dual-signature gate</small>"],
+      ["Sub-Second Token Dynamic Revocation", "❌", "❌", "⚠️ Partial<br/><small>Requires redeployment</small>", "✅<br/><small>O(1) RCU atomic swap</small>"]
+    ],
+    "footnote": "📌 Complementary Relationship Notice: Confidential Computing (Intel TDX / Azure Confidential VM) and DROS protect different attack surfaces and are complementary, not competing. Confidential Computing defends the infrastructure layer (preventing cloud operators and hypervisors from reading TEE memory); DROS defends the AI Agent runtime application layer (preventing Agent privilege escalation and Prompt Injection exfiltration). Both can be deployed simultaneously for Defense-in-Depth. Data Clean Rooms are designed for offline batch multi-party analytics; API Gateways handle traffic control — neither is designed for real-time AI Agent runtime behavioral governance."
+  },
   "addons": {
     "badge": "Specialized Compliance Modules",
     "promo": "Launch Offer: $4,990 USD/yr/server until end of 2026 (Regular Price $10,000 USD/yr/server)",

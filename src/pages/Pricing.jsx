@@ -206,6 +206,45 @@ export default function Pricing() {
         </div>
       </section>
 
+      {/* ── Competitive Positioning Section ── */}
+      <section style={{marginTop: '5rem', marginBottom: '2rem'}}>
+        <div style={{textAlign: 'center', marginBottom: '2rem'}}>
+          <h2 style={{fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', marginBottom: '0.5rem', background: 'linear-gradient(to right, #fff, var(--text-secondary))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
+            {t('positioning.title')}
+          </h2>
+          <p style={{color: 'var(--text-secondary)', fontSize: '1rem', maxWidth: '680px', margin: '0 auto'}}>
+            {t('positioning.subtitle')}
+          </p>
+        </div>
+        <div style={{overflowX: 'auto'}}>
+          <table style={{width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem', minWidth: '700px'}}>
+            <thead>
+              <tr style={{borderBottom: '1px solid rgba(255,255,255,0.1)'}}>
+                <th style={{padding: '0.9rem 1rem', textAlign: 'left', color: 'var(--text-secondary)', fontWeight: '600', width: '28%'}}>{t('positioning.col_dimension')}</th>
+                <th style={{padding: '0.9rem 0.8rem', textAlign: 'center', color: '#60a5fa'}}>{t('positioning.col_conf_vm')}</th>
+                <th style={{padding: '0.9rem 0.8rem', textAlign: 'center', color: '#a78bfa'}}>{t('positioning.col_clean_room')}</th>
+                <th style={{padding: '0.9rem 0.8rem', textAlign: 'center', color: '#94a3b8'}}>{t('positioning.col_api_gw')}</th>
+                <th style={{padding: '0.9rem 0.8rem', textAlign: 'center', color: '#4ade80', fontWeight: '700', background: 'rgba(74,222,128,0.06)', borderRadius: '4px'}}>{t('positioning.col_dros')}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {t('positioning.rows', { returnObjects: true }).map((row, i) => (
+                <tr key={i} style={{borderBottom: '1px solid rgba(255,255,255,0.05)', background: i % 2 === 0 ? 'rgba(255,255,255,0.02)' : 'transparent'}}>
+                  <td style={{padding: '0.75rem 1rem', color: '#e2e8f0', fontWeight: '500'}}>{row[0]}</td>
+                  <td style={{padding: '0.75rem 0.8rem', textAlign: 'center', color: '#94a3b8'}} dangerouslySetInnerHTML={{__html: row[1]}}></td>
+                  <td style={{padding: '0.75rem 0.8rem', textAlign: 'center', color: '#94a3b8'}} dangerouslySetInnerHTML={{__html: row[2]}}></td>
+                  <td style={{padding: '0.75rem 0.8rem', textAlign: 'center', color: '#94a3b8'}} dangerouslySetInnerHTML={{__html: row[3]}}></td>
+                  <td style={{padding: '0.75rem 0.8rem', textAlign: 'center', color: '#4ade80', fontWeight: '600', background: 'rgba(74,222,128,0.04)'}} dangerouslySetInnerHTML={{__html: row[4]}}></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div style={{marginTop: '1.5rem', background: 'rgba(96,165,250,0.07)', border: '1px solid rgba(96,165,250,0.25)', borderRadius: '10px', padding: '1rem 1.4rem', fontSize: '0.88rem', color: '#cbd5e1', lineHeight: '1.7'}}>
+          {t('positioning.footnote')}
+        </div>
+      </section>
+
       {/* ── Feature Comparison Matrix ── */}
       <section style={{marginTop: '6rem', marginBottom: '2rem'}}>
         <h2 style={{textAlign: 'center', fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', marginBottom: '0.5rem', background: 'linear-gradient(to right, #fff, var(--text-secondary))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
