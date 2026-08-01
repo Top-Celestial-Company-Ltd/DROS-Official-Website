@@ -112,6 +112,9 @@
   },
   "addons": {
     "badge": "Specialized Compliance Modules",
+    "promo": "Launch Offer: $4,990 USD/yr/server until end of 2026 (Regular Price $10,000 USD/yr/server)",
+    "original_price": "Reg. $10,000",
+    "details_title": "▼ Detailed Specs & Technical Overview",
     "title": "Paid Add-On Solution Packages",
     "subtitle": "Specialized compliance modules for EU ESPR Carbon Passport, FinTech Anti-Money Laundering & US HIPAA Patient Privacy ($4,990 USD / Year / Server Node)",
     "note": "💡 Licensing Model: Each Add-On key is cryptographically bound to 1 Server Machine UUID / VajraAgent Control Panel. Deploying across 3 server nodes requires 3 Add-On keys ($4,990 × 3 = $14,970/yr).",
@@ -121,6 +124,7 @@
       "price": "$4,990",
       "unit": "/ year / server",
       "desc": "EU Cross-Border Supply Chain Carbon Passport Zero-Knowledge Shield. Resolves the trade-off between EU ESPR (DPP) transparency mandates and proprietary BOM secret exfiltration! Produces verifiable carbon proofs.",
+      "details": "<p><strong>🎯 Target Regulations</strong>: EU ESPR 2024/1781, EU CBAM, ISO 14040/44 LCA Carbon Standards</p><p><strong>🛡️ Core Mechanisms</strong></p><ul style='list-style:disc;margin-left:16px;margin-top:6px'><li><strong>In-Band Zero-Knowledge Field Redaction</strong>: 14+ proprietary BOM fields (baking temperatures, material costs, formulation ratios) are physically overwritten in memory before TCP packet assembly — they never leave the server.</li><li><strong>Verifiable Carbon Proof Output</strong>: Only SHA-256 signed aggregate CO2e values and CBAM-compliant certificate IDs are returned. EU auditors can independently verify without accessing raw manufacturing data.</li><li><strong>Scope-Declarative Authorization Matrix</strong>: vajra_policy.yaml statically declares permitted/prohibited field access. Compiled to binary lookup at build time — no regex, no runtime string matching.</li><li><strong>HITL Dual-Signature Gate</strong>: High-risk queries (e.g. full BOM export attempts) auto-trigger human approval flow; requests remain suspended until plant manager signs off.</li></ul><p style='margin-top:8px'><strong>📦 Includes</strong>: ESPR Compliance VEP Control Panel UI Template + vajra_policy.yaml Carbon Passport Redaction Rules + Installation README</p>",
       "btn": "🛒 Buy on Gumroad ($4,990/yr/node)"
     },
     "fintech": {
@@ -129,6 +133,7 @@
       "price": "$4,990",
       "unit": "/ year / server",
       "desc": "FinTech Cross-Institutional Anti-Money Laundering & Anonymized Risk Gate. Operates strictly on anonymized behavioral vectors, providing 26.1μs in-band circuit-breaking and O(1) Token freezing.",
+      "details": "<p><strong>🎯 Target Regulations</strong>: GDPR Article 5(f), PDPA (Taiwan), AML / FATF Travel Rule, MAS TRM, FinCEN BSA</p><p><strong>🛡️ Core Mechanisms</strong></p><ul style='list-style:disc;margin-left:16px;margin-top:6px'><li><strong>In-Band De-identification & Behavioral Vector Conversion</strong>: Raw transaction records (name, SSN, card number, line items) are read in memory and immediately converted to statistical behavioral metrics (frequency, amount variance, fan-out node count). PII fields are physically zeroed before TCP packet assembly — the risk AI model never receives raw PII.</li><li><strong>26.1μs In-Band AML Circuit-Breaker</strong>: Fan-out mule pattern detected (e.g. 20+ recipients in 3 mins with near-identical amounts) triggers INTERCEPT_AND_SUSPEND within 26.1 microseconds. Payment held pending human confirmation.</li><li><strong>O(1) RCU Token Instant Freeze</strong>: Single-click freeze via RCU atomic pointer swap completes token revocation. All subsequent payment API calls receive 403 FORBIDDEN with total latency &lt; 1 second.</li></ul><p style='margin-top:8px'><strong>📦 Includes</strong>: FinTech Risk VEP Control Panel UI Template + vajra_policy.yaml Privacy Vector Rules + Installation README</p>",
       "btn": "🛒 Buy on Gumroad ($4,990/yr/node)"
     },
     "health": {
@@ -137,6 +142,7 @@
       "price": "$4,990",
       "unit": "/ year / server",
       "desc": "Healthcare PHI Redaction & Patient Consent Governance Shield. Compliant with US HIPAA & EU EHDS. Features dynamic PHI de-identification and patient e-consent token verification.",
+      "details": "<p><strong>🎯 Target Regulations</strong>: US HIPAA 45 CFR §164.514 (Safe Harbor De-identification), EU EHDS (European Health Data Space), Taiwan Medical Data Privacy Law</p><p><strong>🛡️ Core Mechanisms</strong></p><ul style='list-style:disc;margin-left:16px;margin-top:6px'><li><strong>Dynamic PHI Redaction Filter</strong>: Based on HIPAA Safe Harbor 18-identifier checklist, the VEP automatically redacts patient name, SSN, address, phone, DOB and other sensitive fields before EHR / HL7 / FHIR API response packaging. Only de-identified diagnostic summaries and lab results are returned.</li><li><strong>Patient E-Consent Token Dynamic Validation</strong>: Before each cross-hospital AI Agent query, VEP validates the patient's signed e-consent token (Scope & expiry). Unauthorized queries are hard-rejected in-band within 26.1μs.</li><li><strong>Cross-Hospital Agent Action Boundary Enforcement</strong>: Medical AI Agents are physically restricted to get_diagnosis_summary(). Any attempt to read full EHR or transmit raw PHI cross-institution is circuit-broken at the VEP binary layer.</li></ul><p style='margin-top:8px'><strong>📦 Includes</strong>: Healthcare VEP Control Panel UI Template + vajra_policy.yaml PHI De-identification Rules + Installation README</p>",
       "btn": "🛒 Buy on Gumroad ($4,990/yr/node)"
     }
   }

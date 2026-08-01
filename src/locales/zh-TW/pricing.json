@@ -112,6 +112,9 @@
   },
   "addons": {
     "badge": "Specialized Compliance Modules",
+    "promo": "新品上市優惠：2026 年底前優惠 $4,990 美元/年/server（原價 $10,000 美元/年/server）",
+    "original_price": "原價 $10,000",
+    "details_title": "▼ 詳細規格與技術說明",
     "title": "三大高價值獨立產業合規加購套裝包 (Paid Add-On Solution Packages)",
     "subtitle": "對接歐盟 ESPR 碳護照、金融防洗錢個資法與美國 HIPAA 醫療隱私法規之專用加購模組 ($4,990 USD / 年 / 伺服器實體)",
     "note": "💡 計費說明：每份加購金鑰密碼學綁定 1 台伺服器 UUID / VajraAgent 控制版。若於 3 台伺服器節點開通即需 3 份授權 ($4,990 × 3 = $14,970/年)。",
@@ -121,6 +124,7 @@
       "price": "$4,990",
       "unit": "/ year / server",
       "desc": "歐盟跨國供應鏈碳護照零知識過濾套裝包。解決歐盟 ESPR (DPP) 法規透明要求與企業核心 BOM 配方商業機密洩漏之零和衝突！零知識產出可信碳足跡證明。",
+      "details": "<p><strong>🎯 適用法規</strong>：EU ESPR 2024/1781、EU CBAM、ISO 14040/44 碳足跡標準</p><p><strong>🛡️ 核心機制</strong></p><ul style='list-style:disc;margin-left:16px;margin-top:6px'><li><strong>帶內零知識欄位遮蔽</strong>：BOM 物料清單、燒結溫度、成本結構等 14+ 商業機密欄位，在 API 回應封裝前物理覆寫替換，永不傳出伺服器。</li><li><strong>可驗證碳足跡證明</strong>：僅傳回 SHA-256 簽章之聚合碳排放量（kg CO2e）與 CBAM 合規憑證 ID，歐盟稽核員可獨立驗證。</li><li><strong>Scope 宣告式授權矩陣</strong>：以 vajra_policy.yaml 靜態宣告允許與禁止的資料欄位存取範圍，編譯期解析為二進位查表。</li><li><strong>HITL 雙重簽署</strong>：高風險查詢（如嘗試匯出完整 BOM）自動觸發人工二階確認，廠長核准前請求保持掛起狀態。</li></ul><p style='margin-top:8px'><strong>📦 包含內容</strong>：ESPR 合規 VEP 控制台 UI 模板 + vajra_policy.yaml 碳護照過濾規則 + 安裝說明 README</p>",
       "btn": "🛒 前往 Gumroad 購買 ($4,990/年/台)"
     },
     "fintech": {
@@ -129,6 +133,7 @@
       "price": "$4,990",
       "unit": "/ year / server",
       "desc": "金融跨機構隱私洗錢聯防套裝包。對接 GDPR 與洗錢防制法。風控 Agent 僅掃描去識別化特徵向量，26.1μs 帶內熔斷人頭洗錢特徵並支援 O(1) Token 秒級凍結。",
+      "details": "<p><strong>🎯 適用法規</strong>：GDPR Article 5(f)、台灣個人資料保護法、AML（洗錢防制法）、FATF Travel Rule、MAS TRM</p><p><strong>🛡️ 核心機制</strong></p><ul style='list-style:disc;margin-left:16px;margin-top:6px'><li><strong>帶內去識別化行為向量轉換</strong>：原始帳務記錄（姓名、身份證、卡號、交易明細）在記憶體中讀取後，僅計算統計行為特徵（交易頻率、金額方差、扇出節點數），個資欄位於 TCP 封包組裝前物理覆寫刪除，風控 AI 零接觸個資。</li><li><strong>26.1μs 帶內洗錢特徵熔斷</strong>：偵測到 Fan-out 分散轉帳特徵（如 3 分鐘內向 20+ 帳戶各轉近似金額），VEP 在 26.1 微秒內觸發 INTERCEPT_AND_SUSPEND，支付掛起等待人工確認。</li><li><strong>O(1) RCU Token 秒級凍結</strong>：風控中心一鍵凍結後，透過 RCU 原子記憶體指針交換完成 Token 廢止，後續所有支付 API 請求立即收到 403，整體延遲 &lt; 1 秒。</li></ul><p style='margin-top:8px'><strong>📦 包含內容</strong>：FinTech 風控 VEP 控制台 UI 模板 + vajra_policy.yaml 隱私向量過濾規則 + 安裝說明 README</p>",
       "btn": "🛒 前往 Gumroad 購買 ($4,990/年/台)"
     },
     "health": {
@@ -137,6 +142,7 @@
       "price": "$4,990",
       "unit": "/ year / server",
       "desc": "醫療健康個資與跨院同意書治理套裝包。對接 US HIPAA 與醫療隱私法規。內建病歷 PHI 動態去識別過濾器與患者電子同意書動態 Token 驗證。",
+      "details": "<p><strong>🎯 適用法規</strong>：US HIPAA 45 CFR §164.514（Safe Harbor 去識別化）、EU EHDS（歐盟健康資料空間）、台灣醫療法個資保護條款</p><p><strong>🛡️ 核心機制</strong></p><ul style='list-style:disc;margin-left:16px;margin-top:6px'><li><strong>PHI 動態去識別化過濾器</strong>：依 HIPAA Safe Harbor 18 項識別元素清單，在 EHR / HL7 / FHIR API 回應封裝前，自動遮蔽病患姓名、SSN、地址、電話、出生日期等敏感欄位，僅放行臨床診斷摘要與去識別化檢驗結果。</li><li><strong>患者電子同意書 Token 動態驗證</strong>：每次跨院 AI Agent 查詢前，VEP 自動比對患者簽署之電子同意書 Token 有效性（Scope 與到期時間），未獲授權之查詢在帶內 26.1μs 內被硬性拒絕。</li><li><strong>跨院 Agent 行為邊界強制執行</strong>：AI 診斷 Agent 僅能呼叫 get_diagnosis_summary()，任何嘗試讀取完整病歷或跨院傳輸原始 PHI 的 Tool Call 均被 VEP 物理熔斷。</li></ul><p style='margin-top:8px'><strong>📦 包含內容</strong>：醫療 VEP 控制台 UI 模板 + vajra_policy.yaml PHI 去識別化規則 + 安裝說明 README</p>",
       "btn": "🛒 前往 Gumroad 購買 ($4,990/年/台)"
     }
   }

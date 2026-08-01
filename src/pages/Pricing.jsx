@@ -120,6 +120,10 @@ export default function Pricing() {
           <p style={{fontSize: '1.1rem', color: 'var(--text-secondary)', maxWidth: '700px', margin: '0 auto', marginBottom: '1rem'}}>
             {t('addons.subtitle')}
           </p>
+          {/* 新品上市優惠標語 */}
+          <div style={{display: 'inline-block', background: 'linear-gradient(135deg, rgba(251,191,36,0.15), rgba(245,158,11,0.1))', border: '1px solid rgba(251,191,36,0.5)', borderRadius: '12px', padding: '0.7rem 1.6rem', margin: '0 auto 1rem', fontSize: '1rem', fontWeight: 'bold', color: '#fbbf24', letterSpacing: '0.5px'}}>
+            🎉 {t('addons.promo')}
+          </div>
           <div style={{background: 'rgba(192, 132, 252, 0.08)', border: '1px solid rgba(192, 132, 252, 0.25)', borderRadius: '10px', padding: '0.8rem 1.2rem', maxWidth: '780px', margin: '0 auto', fontSize: '0.9rem', color: '#e2e8f0', textAlign: 'center'}}>
             {t('addons.note')}
           </div>
@@ -134,10 +138,17 @@ export default function Pricing() {
                 {t('addons.espr.tag')}
               </span>
               <h3 style={{fontSize: '1.5rem', color: '#fff', marginBottom: '0.5rem'}}>{t('addons.espr.name')}</h3>
-              <div style={{fontSize: '2rem', fontWeight: 'bold', color: '#4ade80', margin: '0.5rem 0', fontFamily: 'monospace'}}>{t('addons.espr.price')} <span style={{fontSize: '1rem', color: 'var(--text-secondary)'}}>{t('addons.espr.unit')}</span></div>
-              <p style={{color: 'var(--text-secondary)', fontSize: '0.92rem', lineHeight: '1.6', marginBottom: '1.5rem'}}>
+              <div style={{fontSize: '2rem', fontWeight: 'bold', color: '#4ade80', margin: '0.5rem 0', fontFamily: 'monospace'}}>
+                {t('addons.espr.price')} <span style={{fontSize: '1rem', color: 'var(--text-secondary)'}}>{t('addons.espr.unit')}</span>
+                <span style={{fontSize: '0.8rem', color: '#9ca3af', textDecoration: 'line-through', marginLeft: '0.6rem', fontFamily: 'inherit'}}>{t('addons.original_price')}</span>
+              </div>
+              <p style={{color: 'var(--text-secondary)', fontSize: '0.92rem', lineHeight: '1.6', marginBottom: '1rem'}}>
                 {t('addons.espr.desc')}
               </p>
+              <details style={{marginBottom: '1.5rem', background: 'rgba(56,189,248,0.05)', border: '1px solid rgba(56,189,248,0.2)', borderRadius: '8px', padding: '0.8rem 1rem'}}>
+                <summary style={{cursor: 'pointer', fontWeight: 'bold', color: '#38bdf8', fontSize: '0.9rem', outline: 'none', userSelect: 'none'}}>{t('addons.details_title')}</summary>
+                <div style={{marginTop: '0.8rem', fontSize: '0.87rem', lineHeight: '1.7', color: '#cbd5e1'}} dangerouslySetInnerHTML={{ __html: t('addons.espr.details') }}></div>
+              </details>
             </div>
             <a href="https://drosvajra.gumroad.com/l/espr-dpp" target="_blank" rel="noopener noreferrer" className="btn" style={{background: 'linear-gradient(135deg, #ff90e8, #ff63d8)', color: '#000', fontWeight: '800', textAlign: 'center', width: '100%', display: 'block', padding: '1rem', borderRadius: '10px', textDecoration: 'none', boxShadow: '0 4px 15px rgba(255, 144, 232, 0.3)'}}>
               {t('addons.espr.btn')}
@@ -151,10 +162,17 @@ export default function Pricing() {
                 {t('addons.fintech.tag')}
               </span>
               <h3 style={{fontSize: '1.5rem', color: '#fff', marginBottom: '0.5rem'}}>{t('addons.fintech.name')}</h3>
-              <div style={{fontSize: '2rem', fontWeight: 'bold', color: '#4ade80', margin: '0.5rem 0', fontFamily: 'monospace'}}>{t('addons.fintech.price')} <span style={{fontSize: '1rem', color: 'var(--text-secondary)'}}>{t('addons.fintech.unit')}</span></div>
-              <p style={{color: 'var(--text-secondary)', fontSize: '0.92rem', lineHeight: '1.6', marginBottom: '1.5rem'}}>
+              <div style={{fontSize: '2rem', fontWeight: 'bold', color: '#4ade80', margin: '0.5rem 0', fontFamily: 'monospace'}}>
+                {t('addons.fintech.price')} <span style={{fontSize: '1rem', color: 'var(--text-secondary)'}}>{t('addons.fintech.unit')}</span>
+                <span style={{fontSize: '0.8rem', color: '#9ca3af', textDecoration: 'line-through', marginLeft: '0.6rem', fontFamily: 'inherit'}}>{t('addons.original_price')}</span>
+              </div>
+              <p style={{color: 'var(--text-secondary)', fontSize: '0.92rem', lineHeight: '1.6', marginBottom: '1rem'}}>
                 {t('addons.fintech.desc')}
               </p>
+              <details style={{marginBottom: '1.5rem', background: 'rgba(192,132,252,0.05)', border: '1px solid rgba(192,132,252,0.2)', borderRadius: '8px', padding: '0.8rem 1rem'}}>
+                <summary style={{cursor: 'pointer', fontWeight: 'bold', color: '#c084fc', fontSize: '0.9rem', outline: 'none', userSelect: 'none'}}>{t('addons.details_title')}</summary>
+                <div style={{marginTop: '0.8rem', fontSize: '0.87rem', lineHeight: '1.7', color: '#cbd5e1'}} dangerouslySetInnerHTML={{ __html: t('addons.fintech.details') }}></div>
+              </details>
             </div>
             <a href="https://drosvajra.gumroad.com/l/fin-risk" target="_blank" rel="noopener noreferrer" className="btn" style={{background: 'linear-gradient(135deg, #ff90e8, #ff63d8)', color: '#000', fontWeight: '800', textAlign: 'center', width: '100%', display: 'block', padding: '1rem', borderRadius: '10px', textDecoration: 'none', boxShadow: '0 4px 15px rgba(255, 144, 232, 0.3)'}}>
               {t('addons.fintech.btn')}
@@ -168,10 +186,17 @@ export default function Pricing() {
                 {t('addons.health.tag')}
               </span>
               <h3 style={{fontSize: '1.5rem', color: '#fff', marginBottom: '0.5rem'}}>{t('addons.health.name')}</h3>
-              <div style={{fontSize: '2rem', fontWeight: 'bold', color: '#4ade80', margin: '0.5rem 0', fontFamily: 'monospace'}}>{t('addons.health.price')} <span style={{fontSize: '1rem', color: 'var(--text-secondary)'}}>{t('addons.health.unit')}</span></div>
-              <p style={{color: 'var(--text-secondary)', fontSize: '0.92rem', lineHeight: '1.6', marginBottom: '1.5rem'}}>
+              <div style={{fontSize: '2rem', fontWeight: 'bold', color: '#4ade80', margin: '0.5rem 0', fontFamily: 'monospace'}}>
+                {t('addons.health.price')} <span style={{fontSize: '1rem', color: 'var(--text-secondary)'}}>{t('addons.health.unit')}</span>
+                <span style={{fontSize: '0.8rem', color: '#9ca3af', textDecoration: 'line-through', marginLeft: '0.6rem', fontFamily: 'inherit'}}>{t('addons.original_price')}</span>
+              </div>
+              <p style={{color: 'var(--text-secondary)', fontSize: '0.92rem', lineHeight: '1.6', marginBottom: '1rem'}}>
                 {t('addons.health.desc')}
               </p>
+              <details style={{marginBottom: '1.5rem', background: 'rgba(74,222,128,0.05)', border: '1px solid rgba(74,222,128,0.2)', borderRadius: '8px', padding: '0.8rem 1rem'}}>
+                <summary style={{cursor: 'pointer', fontWeight: 'bold', color: '#4ade80', fontSize: '0.9rem', outline: 'none', userSelect: 'none'}}>{t('addons.details_title')}</summary>
+                <div style={{marginTop: '0.8rem', fontSize: '0.87rem', lineHeight: '1.7', color: '#cbd5e1'}} dangerouslySetInnerHTML={{ __html: t('addons.health.details') }}></div>
+              </details>
             </div>
             <a href="https://drosvajra.gumroad.com/l/health-hipaa" target="_blank" rel="noopener noreferrer" className="btn" style={{background: 'linear-gradient(135deg, #ff90e8, #ff63d8)', color: '#000', fontWeight: '800', textAlign: 'center', width: '100%', display: 'block', padding: '1rem', borderRadius: '10px', textDecoration: 'none', boxShadow: '0 4px 15px rgba(255, 144, 232, 0.3)'}}>
               {t('addons.health.btn')}
