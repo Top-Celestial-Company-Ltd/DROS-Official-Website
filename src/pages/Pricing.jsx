@@ -117,9 +117,12 @@ export default function Pricing() {
           <h2 style={{fontSize: 'clamp(2rem, 4vw, 3rem)', marginTop: '1rem', marginBottom: '0.8rem', color: '#fff'}}>
             {t('addons.title')}
           </h2>
-          <p style={{fontSize: '1.1rem', color: 'var(--text-secondary)', maxWidth: '700px', margin: '0 auto'}}>
+          <p style={{fontSize: '1.1rem', color: 'var(--text-secondary)', maxWidth: '700px', margin: '0 auto', marginBottom: '1rem'}}>
             {t('addons.subtitle')}
           </p>
+          <div style={{background: 'rgba(192, 132, 252, 0.08)', border: '1px solid rgba(192, 132, 252, 0.25)', borderRadius: '10px', padding: '0.8rem 1.2rem', maxWidth: '780px', margin: '0 auto', fontSize: '0.9rem', color: '#e2e8f0', textAlign: 'center'}}>
+            {t('addons.note')}
+          </div>
         </div>
 
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem'}}>
