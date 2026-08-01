@@ -62,8 +62,8 @@ export default function Pricing() {
             <div style={{marginTop: '1rem', fontSize: '0.9rem', lineHeight: '1.6'}} dangerouslySetInnerHTML={{ __html: t('tiers.hacker.details_content') }}></div>
           </details>
 
-          <a href="https://drosvajra.gumroad.com/l/vajraclaw_hacker" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginBottom: '0.8rem', textAlign: 'center'}}>{t('tiers.hacker.btn_yearly')}</a>
-          <a href="https://drosvajra.gumroad.com/l/vajraclaw_hacker" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', background: 'transparent', border: '1px solid rgba(0, 240, 255, 0.3)', color: 'var(--accent-blue)', textAlign: 'center'}}>{t('tiers.hacker.btn_monthly')}</a>
+          <a href="https://drosvajra.gumroad.com/l/vajraclaw-hacker" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginBottom: '0.8rem', textAlign: 'center'}}>{t('tiers.hacker.btn_yearly')}</a>
+          <a href="https://drosvajra.gumroad.com/l/vajraclaw-hacker" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', background: 'transparent', border: '1px solid rgba(0, 240, 255, 0.3)', color: 'var(--accent-blue)', textAlign: 'center'}}>{t('tiers.hacker.btn_monthly')}</a>
         </div>
 
         {/* Startup Tier (Recommended) */}
@@ -82,7 +82,7 @@ export default function Pricing() {
             <div style={{marginTop: '1rem', fontSize: '0.9rem', lineHeight: '1.6'}} dangerouslySetInnerHTML={{ __html: t('tiers.startup.details_content') }}></div>
           </details>
 
-          <a href="https://drosvajra.gumroad.com/l/vajraclaw_startup" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginTop: '2.8rem', padding: '1.2rem', textAlign: 'center'}}>
+          <a href="https://drosvajra.gumroad.com/l/vajraclaw-startup" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginTop: '2.8rem', padding: '1.2rem', textAlign: 'center'}}>
             {t('tiers.startup.btn')}
           </a>
         </div>
@@ -102,7 +102,7 @@ export default function Pricing() {
             <div style={{marginTop: '1rem', fontSize: '0.9rem', lineHeight: '1.6'}} dangerouslySetInnerHTML={{ __html: t('tiers.enterprise.details_content') }}></div>
           </details>
 
-          <a href="mailto:order@dr-os.io?subject=DROS Enterprise Inquiry" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginTop: '1rem', padding: '1.2rem', textAlign: 'center'}}>
+          <a href="https://drosvajra.gumroad.com/l/vajraclaw-enterprise" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginTop: '1rem', padding: '1.2rem', textAlign: 'center'}}>
             {t('tiers.enterprise.btn')}
           </a>
         </div>
