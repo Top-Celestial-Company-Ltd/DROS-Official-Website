@@ -109,5 +109,34 @@
     "title": "Upgrade to <span class='gold-text'>OS-Level Security.</span>",
     "subtitle": "SECURE your Agentic Infrastructure.",
     "btn": "Contact Sales Team"
+  },
+  "addons": {
+    "badge": "Specialized Compliance Modules",
+    "title": "三大高價值獨立產業合規加購套裝包 (Paid Add-On Solution Packages)",
+    "subtitle": "對接歐盟 ESPR 碳護照、金融防洗錢個資法與美國 HIPAA 醫療隱私法規之專用加購模組 ($4,990 USD / 年)",
+    "espr": {
+      "tag": "REGULATION: EU ESPR / CBAM",
+      "name": "🌿 DROS-ESPR-DPP Package",
+      "price": "$4,990",
+      "unit": "/ year",
+      "desc": "歐盟跨國供應鏈碳護照零知識過濾套裝包。解決歐盟 ESPR (DPP) 法規透明要求與企業核心 BOM 配方商業機密洩漏之零和衝突！零知識產出可信碳足跡證明。",
+      "btn": "🛒 前往 Gumroad 購買 ($4,990/年)"
+    },
+    "fintech": {
+      "tag": "REGULATION: GDPR / AML / TRAVEL RULE",
+      "name": "💳 DROS-FinRisk-Privacy Package",
+      "price": "$4,990",
+      "unit": "/ year",
+      "desc": "金融跨機構隱私洗錢聯防套裝包。對接 GDPR 與洗錢防制法。風控 Agent 僅掃描去識別化特徵向量，26.1μs 帶內熔斷人頭洗錢特徵並支援 O(1) Token 秒級凍結。",
+      "btn": "🛒 前往 Gumroad 購買 ($4,990/年)"
+    },
+    "health": {
+      "tag": "REGULATION: US HIPAA / EU EHDS",
+      "name": "🏥 DROS-Health-HIPAA Package",
+      "price": "$4,990",
+      "unit": "/ year",
+      "desc": "醫療健康個資與跨院同意書治理套裝包。對接 US HIPAA 與醫療隱私法規。內建病歷 PHI 動態去識別過濾器與患者電子同意書動態 Token 驗證。",
+      "btn": "🛒 前往 Gumroad 購買 ($4,990/年)"
+    }
   }
 }

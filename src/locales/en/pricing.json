@@ -109,5 +109,34 @@
     "title": "Upgrade to <span class='gold-text'>OS-Level Security.</span>",
     "subtitle": "SECURE your Agentic Infrastructure.",
     "btn": "Contact Sales Team"
+  },
+  "addons": {
+    "badge": "Specialized Compliance Modules",
+    "title": "Paid Add-On Solution Packages",
+    "subtitle": "Specialized compliance modules for EU ESPR Carbon Passport, FinTech Anti-Money Laundering & US HIPAA Patient Privacy ($4,990 USD / Year)",
+    "espr": {
+      "tag": "REGULATION: EU ESPR / CBAM",
+      "name": "🌿 DROS-ESPR-DPP Package",
+      "price": "$4,990",
+      "unit": "/ year",
+      "desc": "EU Cross-Border Supply Chain Carbon Passport Zero-Knowledge Shield. Resolves the trade-off between EU ESPR (DPP) transparency mandates and proprietary BOM secret exfiltration! Produces verifiable carbon proofs.",
+      "btn": "🛒 Buy on Gumroad ($4,990/yr)"
+    },
+    "fintech": {
+      "tag": "REGULATION: GDPR / AML / TRAVEL RULE",
+      "name": "💳 DROS-FinRisk-Privacy Package",
+      "price": "$4,990",
+      "unit": "/ year",
+      "desc": "FinTech Cross-Institutional Anti-Money Laundering & Anonymized Risk Gate. Operates strictly on anonymized behavioral vectors, providing 26.1μs in-band circuit-breaking and O(1) Token freezing.",
+      "btn": "🛒 Buy on Gumroad ($4,990/yr)"
+    },
+    "health": {
+      "tag": "REGULATION: US HIPAA / EU EHDS",
+      "name": "🏥 DROS-Health-HIPAA Package",
+      "price": "$4,990",
+      "unit": "/ year",
+      "desc": "Healthcare PHI Redaction & Patient Consent Governance Shield. Compliant with US HIPAA & EU EHDS. Features dynamic PHI de-identification and patient e-consent token verification.",
+      "btn": "🛒 Buy on Gumroad ($4,990/yr)"
+    }
   }
 }
