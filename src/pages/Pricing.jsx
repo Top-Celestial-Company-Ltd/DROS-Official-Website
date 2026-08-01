@@ -108,6 +108,76 @@ export default function Pricing() {
         </div>
       </div>
 
+      {/* ── Paid Add-On Solution Packages Section ── */}
+      <section style={{marginTop: '5rem', marginBottom: '3rem'}}>
+        <div style={{textAlign: 'center', marginBottom: '2.5rem'}}>
+          <span style={{background: 'rgba(192, 132, 252, 0.1)', color: '#c084fc', padding: '0.4rem 1.2rem', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 'bold', border: '1px solid rgba(192, 132, 252, 0.3)', textTransform: 'uppercase', letterSpacing: '1px'}}>
+            Specialized Compliance Modules
+          </span>
+          <h2 style={{fontSize: 'clamp(2rem, 4vw, 3rem)', marginTop: '1rem', marginBottom: '0.8rem', color: '#fff'}}>
+            三大高價值獨立產業合規加購套裝包 (Paid Add-On Solution Packages)
+          </h2>
+          <p style={{fontSize: '1.1rem', color: 'var(--text-secondary)', maxWidth: '700px', margin: '0 auto'}}>
+            對接歐盟 ESPR 碳護照、金融防洗錢個資法與美國 HIPAA 醫療隱私法規之專用加購模組 ($4,990 USD / 年)
+          </p>
+        </div>
+
+        <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem'}}>
+          
+          {/* Add-On 1: ESPR DPP */}
+          <div className="glass-card" style={{padding: '2.5rem 2rem', border: '1px solid rgba(56, 189, 248, 0.3)', background: 'rgba(15, 23, 42, 0.7)', borderRadius: '16px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+            <div>
+              <span style={{fontSize: '0.75rem', fontWeight: 'bold', color: '#38bdf8', background: 'rgba(56, 189, 248, 0.1)', border: '1px solid #38bdf8', padding: '3px 10px', borderRadius: '6px', display: 'inline-block', marginBottom: '1rem'}}>
+                REGULATION: EU ESPR / CBAM
+              </span>
+              <h3 style={{fontSize: '1.5rem', color: '#fff', marginBottom: '0.5rem'}}>🌿 DROS-ESPR-DPP Package</h3>
+              <div style={{fontSize: '2rem', fontWeight: 'bold', color: '#4ade80', margin: '0.5rem 0', fontFamily: 'monospace'}}>$4,990 <span style={{fontSize: '1rem', color: 'var(--text-secondary)'}}>/ year</span></div>
+              <p style={{color: 'var(--text-secondary)', fontSize: '0.92rem', lineHeight: '1.6', marginBottom: '1.5rem'}}>
+                歐盟跨國供應鏈碳護照零知識過濾套裝包。解決歐盟 ESPR (DPP) 法規透明要求與企業核心 BOM 配方商業機密洩漏之零和衝突！零知識產出可信碳足跡證明。
+              </p>
+            </div>
+            <a href="https://drosvajra.gumroad.com/l/espr-dpp" target="_blank" rel="noopener noreferrer" className="btn" style={{background: 'linear-gradient(135deg, #ff90e8, #ff63d8)', color: '#000', fontWeight: '800', textAlign: 'center', width: '100%', display: 'block', padding: '1rem', borderRadius: '10px', textDecoration: 'none', boxShadow: '0 4px 15px rgba(255, 144, 232, 0.3)'}}>
+              🛒 前往 Gumroad 購買 ($4,990/年)
+            </a>
+          </div>
+
+          {/* Add-On 2: FinRisk Privacy */}
+          <div className="glass-card" style={{padding: '2.5rem 2rem', border: '1px solid rgba(192, 132, 252, 0.3)', background: 'rgba(15, 23, 42, 0.7)', borderRadius: '16px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+            <div>
+              <span style={{fontSize: '0.75rem', fontWeight: 'bold', color: '#c084fc', background: 'rgba(192, 132, 252, 0.1)', border: '1px solid #c084fc', padding: '3px 10px', borderRadius: '6px', display: 'inline-block', marginBottom: '1rem'}}>
+                REGULATION: GDPR / AML / TRAVEL RULE
+              </span>
+              <h3 style={{fontSize: '1.5rem', color: '#fff', marginBottom: '0.5rem'}}>💳 DROS-FinRisk-Privacy Package</h3>
+              <div style={{fontSize: '2rem', fontWeight: 'bold', color: '#4ade80', margin: '0.5rem 0', fontFamily: 'monospace'}}>$4,990 <span style={{fontSize: '1rem', color: 'var(--text-secondary)'}}>/ year</span></div>
+              <p style={{color: 'var(--text-secondary)', fontSize: '0.92rem', lineHeight: '1.6', marginBottom: '1.5rem'}}>
+                金融跨機構隱私洗錢聯防套裝包。對接 GDPR 與洗錢防制法。風控 Agent 僅掃描去識別化特徵向量，26.1μs 帶內熔斷人頭洗錢特徵並支援 $O(1)$ Token 秒級凍結。
+              </p>
+            </div>
+            <a href="https://drosvajra.gumroad.com/l/fin-risk" target="_blank" rel="noopener noreferrer" className="btn" style={{background: 'linear-gradient(135deg, #ff90e8, #ff63d8)', color: '#000', fontWeight: '800', textAlign: 'center', width: '100%', display: 'block', padding: '1rem', borderRadius: '10px', textDecoration: 'none', boxShadow: '0 4px 15px rgba(255, 144, 232, 0.3)'}}>
+              🛒 前往 Gumroad 購買 ($4,990/年)
+            </a>
+          </div>
+
+          {/* Add-On 3: Health HIPAA */}
+          <div className="glass-card" style={{padding: '2.5rem 2rem', border: '1px solid rgba(74, 222, 128, 0.3)', background: 'rgba(15, 23, 42, 0.7)', borderRadius: '16px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+            <div>
+              <span style={{fontSize: '0.75rem', fontWeight: 'bold', color: '#4ade80', background: 'rgba(74, 222, 128, 0.1)', border: '1px solid #4ade80', padding: '3px 10px', borderRadius: '6px', display: 'inline-block', marginBottom: '1rem'}}>
+                REGULATION: US HIPAA / EU EHDS
+              </span>
+              <h3 style={{fontSize: '1.5rem', color: '#fff', marginBottom: '0.5rem'}}>🏥 DROS-Health-HIPAA Package</h3>
+              <div style={{fontSize: '2rem', fontWeight: 'bold', color: '#4ade80', margin: '0.5rem 0', fontFamily: 'monospace'}}>$4,990 <span style={{fontSize: '1rem', color: 'var(--text-secondary)'}}>/ year</span></div>
+              <p style={{color: 'var(--text-secondary)', fontSize: '0.92rem', lineHeight: '1.6', marginBottom: '1.5rem'}}>
+                醫療健康個資與跨院同意書治理套裝包。對接 US HIPAA 與醫療隱私法規。內建病歷 PHI 動態去識別過濾器與患者電子同意書動態 Token 驗證。
+              </p>
+            </div>
+            <a href="https://drosvajra.gumroad.com/l/health-hipaa" target="_blank" rel="noopener noreferrer" className="btn" style={{background: 'linear-gradient(135deg, #ff90e8, #ff63d8)', color: '#000', fontWeight: '800', textAlign: 'center', width: '100%', display: 'block', padding: '1rem', borderRadius: '10px', textDecoration: 'none', boxShadow: '0 4px 15px rgba(255, 144, 232, 0.3)'}}>
+              🛒 前往 Gumroad 購買 ($4,990/年)
+            </a>
+          </div>
+
+        </div>
+      </section>
+
       {/* ── Feature Comparison Matrix ── */}
       <section style={{marginTop: '6rem', marginBottom: '2rem'}}>
         <h2 style={{textAlign: 'center', fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', marginBottom: '0.5rem', background: 'linear-gradient(to right, #fff, var(--text-secondary))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
