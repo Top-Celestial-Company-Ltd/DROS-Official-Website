@@ -9,58 +9,6 @@ export default function About() {
     ? '/docs/DROS_Runtime_Attribution_Framework_ZH.pdf'
     : '/docs/DROS_Runtime_Attribution_Framework_EN.pdf';
 
-  const logoAssets = [
-    {
-      id: 'square-black',
-      badge: t('logos.badge_square'),
-      name: t('logos.black_bg_white_txt'),
-      src: '/logos/dros-logo-square-black.png',
-      bgStyle: '#06080d'
-    },
-    {
-      id: 'square-white',
-      badge: t('logos.badge_square'),
-      name: t('logos.white_bg_black_txt'),
-      src: '/logos/dros-logo-square-white.png',
-      bgStyle: '#ffffff'
-    },
-    {
-      id: 'circle-black',
-      badge: t('logos.badge_circle'),
-      name: t('logos.black_bg_white_txt'),
-      src: '/logos/dros-logo-circle-black.png',
-      bgStyle: '#06080d'
-    },
-    {
-      id: 'circle-white',
-      badge: t('logos.badge_circle'),
-      name: t('logos.white_bg_black_txt'),
-      src: '/logos/dros-logo-circle-white.png',
-      bgStyle: '#ffffff'
-    },
-    {
-      id: 'trans-white',
-      badge: t('logos.badge_transparent'),
-      name: t('logos.trans_white_txt'),
-      src: '/logos/dros-logo-transparent-white.png',
-      bgStyle: 'radial-gradient(circle, rgba(245,158,11,0.15) 0%, rgba(6,8,13,0.9) 100%)'
-    },
-    {
-      id: 'trans-black',
-      badge: t('logos.badge_transparent'),
-      name: t('logos.trans_black_txt'),
-      src: '/logos/dros-logo-transparent-black.png',
-      bgStyle: '#f3f4f6'
-    },
-    {
-      id: 'spotlight',
-      badge: t('logos.spotlight'),
-      name: t('logos.spotlight'),
-      src: '/logos/dros-logo-spotlight.png',
-      bgStyle: '#0a0f1d'
-    }
-  ];
-
   return (
     <main className="container" style={{paddingTop: '4rem', paddingBottom: '6rem'}}>
       <Helmet>
@@ -185,67 +133,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Official LOGO Brand Assets Section */}
-        <div style={{ marginTop: '1rem' }}>
-          <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-            <h2 style={{ fontSize: '2rem', color: 'var(--accent-gold)', marginBottom: '0.5rem' }}>{t('logos.title')}</h2>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>{t('logos.subtitle')}</p>
-          </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
-            {logoAssets.map((logo) => (
-              <div key={logo.id} className="glass-card" style={{
-                padding: '1.5rem',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                textAlign: 'center',
-                border: '1px solid rgba(255, 255, 255, 0.08)'
-              }}>
-                <div style={{ width: '100%', marginBottom: '1rem' }}>
-                  <span style={{
-                    fontSize: '0.75rem',
-                    padding: '0.2rem 0.6rem',
-                    borderRadius: '4px',
-                    background: 'rgba(255,255,255,0.06)',
-                    color: 'var(--text-secondary)',
-                    fontFamily: 'var(--font-code, monospace)'
-                  }}>
-                    {logo.badge}
-                  </span>
-                </div>
-
-                <div style={{
-                  width: '100%',
-                  height: '140px',
-                  background: logo.bgStyle,
-                  borderRadius: '10px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  padding: '1rem',
-                  marginBottom: '1rem',
-                  border: '1px solid rgba(255, 255, 255, 0.05)',
-                  boxShadow: 'inset 0 0 15px rgba(0,0,0,0.2)'
-                }}>
-                  <img src={logo.src} alt={logo.name} style={{ maxHeight: '100px', maxWidth: '100%', objectFit: 'contain' }} />
-                </div>
-
-                <h4 style={{ fontSize: '1rem', color: '#fff', marginBottom: '1rem' }}>{logo.name}</h4>
-
-                <a
-                  href={logo.src}
-                  download
-                  className="btn btn-secondary"
-                  style={{ padding: '0.4rem 1rem', fontSize: '0.85rem', width: '100%', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem' }}
-                >
-                  📥 {t('logos.btn_download')}
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* Niche: Switzerland Neutrality */}
         <div className="glass-card" style={{ padding: '2.5rem', borderLeft: '4px solid #e53935' }}>

@@ -13,7 +13,7 @@
       "questions": [
         {
           "q": "DROS 是什麼？",
-          "a": "在商業運用上，DROS 的全名是 **Deterministic Runtime Operating System (確定性執行期作業系統)**。這反映了我們對 AI 系統的最高要求：將大模型黑盒子的機率性行為，轉化為 高度可預測的確定性執行。\n\n這個命名其實源自於我們的核心哲學——**Dharma Reasoning Operation System (佛法推演作業系統)**。這是一個充滿底蘊的科技彩蛋，代表了 DROS 的初衷：即使是面對如三藏十二部這般深奧且高密度的哲學義理，系統也能確保 AI 嚴守戒律（安全合約），不會產生任何幻覺或邏輯漂移。如今，這套系統已演進為專為 Agentic AI 時代打造的**極簡微內核語意運行時系統**，透過「物理層級的金剛戒律」，從根本上解決了生成式 AI 的幻覺與 Prompt Injection 問題。"
+          "a": "在商業運用上，DROS 的全名是 **Deterministic Runtime Operating System (確定性執行期作業系統)**。這反映了我們對 AI 系統的最高要求：將大模型黑盒子的機率性行為，轉化為 高度可預測的確定性執行。\n\n這個命名其實源自於我們的核心哲學——**Dharma Reasoning Operation System (佛法義理推論系統)**。這是一個充滿底蘊的科技彩蛋，代表了 DROS 的初衷：即使是面對如三藏十二部這般深奧且高密度的哲學義理，系統也能確保 AI 嚴守戒律（安全合約），不會產生任何幻覺或邏輯漂移。如今，這套系統已演進為專為 Agentic AI 時代打造的**極簡微內核語意運行時系統**，透過「物理層級的金剛戒律」，從根本上解決了生成式 AI 的幻覺與 Prompt Injection 問題。"
         },
         {
           "q": "DROS 與傳統 RAG / LLM Agent 有什麼本質差異？",
