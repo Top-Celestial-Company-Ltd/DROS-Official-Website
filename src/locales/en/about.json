@@ -1,32 +1,72 @@
 {
   "meta_title": "DROS - About Us | The Root CA of the Agentic Web",
-  "meta_desc": "DROS Market Positioning & Vision: As the Root Certificate Authority (Root CA) and PKI trust foundation for the Agentic Web, enforcing Agent Accountability from the ground up to eliminate traceless agent threats.",
+  "meta_desc": "DROS Origin & Vision: Born from safeguarding scriptural purity in Dharma Reasoning OS, tempered into an enterprise binary security OS, serving as the Root CA and PKI trust substrate for the Agentic Web.",
   "hero": {
     "title": "About <span class='gold-text'>DROS</span>",
-    "subtitle": "We do not just constrain large models. We are the Root CA and PKI trust foundation for the Agentic Web.",
-    "desc": "In the frantic race toward AGI, autonomous Agents are emerging everywhere. However, if hijacked or rogue, they will execute illegal transfers or breaches without human footprints—a traceless crisis. DROS exists to sign non-repudiable capability credentials, melting risks physically at the C-ABI bottleneck."
+    "subtitle": "Born from Truth, Tempered in Determinism — From Dharma AI to Binary Security OS",
+    "desc": "DROS was born from a singular, uncompromising pursuit: safeguarding the purity of truth. An evolution from scriptural integrity to physical binary execution verification."
   },
-  "sections": {
-    "philosophy": {
-      "title": "Our Philosophy: Determinism > Probability",
-      "desc": "We disdain patching 'hallucinations' by layering dozens of microservices, massive Vector DBs, and endless Prompt Engineering. True security should never be built on guesswork and probabilities.<br/><br/>We advocate for <strong>returning to OS-level primitives</strong>. Instead of trying to make the AI 'understand' the rules, we use pure memory mapping and bitwise operations to physically melt dangerous boundaries at runtime, establishing clear Agent Accountability.",
-      "icon": "🛡️"
-    },
-    "origin": {
-      "title": "Name Origin: Dharma Reasoning",
-      "desc": "Driven by a deep passion for Buddhism, DROS began as the <strong>Dharma Reasoning Operating System</strong>—an open-source AI infrastructure designed to eliminate hallucinations and preserve the purity of Buddhist teachings. We open-sourced this core on GitHub to allow public scrutiny and offer it for free to anyone seeking the Dharma.<br/><br/>During this process, we unexpectedly discovered that this exact deterministic core could be applied to solve the broader, critical enterprise problems of AI hallucinations and Prompt Injections. This realization led us to develop our first commercial product: <strong>VajraClaw</strong>.",
-      "icon": "☸️"
-    },
-    "niche": {
-      "title": "Ecological Niche: The Missing Layer of the Agentic Web",
-      "desc": "We occupy a highly unique position as a neutral execution-layer trust substrate:<br/><br/>1. <strong>Cooperation with Cloud Auditing (e.g., Permiso Security)</strong>: Permiso specializes in cloud workload monitoring and post-incident analysis; DROS complements this by providing hardware-backed FFI/C-ABI boundary protection and O(1) local enforcement.<br/>2. <strong>Cooperation with Application-layer Governance (e.g., Microsoft Agent Governance Toolkit)</strong>: Large vendors secure orchestrations, while DROS serves as the vendor-neutral microkernel boundary to secure the final line of physical execution.<br/><br/>We act as the neutral Root CA and physical C-ABI gatekeeper, signing capability credentials for heterogeneous brain models with constant-time verification (484.8ns) for legally binding non-repudiation.",
-      "icon": "🇨🇭"
-    },
-    "vision": {
-      "title": "Ultimate Vision: From Execution Governance to Agent Accountability",
-      "desc": "Just as SSL/TLS certificates secure host trust and OAuth secures human identity, the <strong>DROS Vajra Contract</strong> will serve as the capability credential mesh for the Agentic Web. Our vision is to transition from basic 'execution governance' to absolute 'agent accountability', wrapping every agent in a non-repudiable cryptographic seal.",
-      "icon": "🕸️"
-    }
+  "manifesto": {
+    "text": "DROS was originally built to solve the \"AI hallucination\" problem in Buddhist Dharma reasoning. Its original name was Dharma Reasoning OS—a deterministic reasoning system rooted in the principle that \"words are unreliable; only actions have irreversible consequences.\"<br/><br/>Later, we adapted this core mechanism—\"ignore language, read only behavior\"—to enterprise AI security, and it became the Deterministic Runtime OS. So DROS is not an antivirus tool—it is the physical precept that governs AI behavior."
+  },
+  "story": {
+    "title": "🪷 Origin: Born from Truth, Tempered in Determinism",
+    "subtitle": "How a quest for scriptural purity led to deterministic enterprise security",
+    "card1_title": "📜 Safeguarding the Purity of Truth",
+    "card1_p1": "DROS was born from a singular, uncompromising pursuit: <strong>safeguarding the purity of truth</strong>.<br/><br/>When we originally set out to build a \"Dharma AI\" (Dharma Reasoning OS), we encountered the exact same crisis that every modern enterprise faces today: Large Language Models hallucinate citations, play subtle word games, and drift away from truth while sounding convincingly logical. Through this challenge, we realized a fundamental law: <strong>Language itself is inherently unreliable.</strong>",
+    "card1_p2": "In philosophy, truth is measured not by words, but by action and consequence (Karma). To prevent AI from corrupting truth, we abandoned the futile game of prompt engineering. Instead, we built a physical boundary engine directly at the runtime layer—one that ignores words, disregards prompt intent, and validates strictly by behavior (Zero-overhead Bitmap lookup & C-ABI execution boundaries).",
+    "card2_title": "⚡ The Birth of Enterprise DROS",
+    "card2_p1": "Later, we adapted this core mechanism into an enterprise-grade security runtime: <strong>DROS (Deterministic Runtime OS)</strong>.",
+    "card2_p2": "<strong>DROS was not created merely to stop hackers; it was created to ensure AI can never deceive.</strong> We simply discovered that the exact physical mechanism that keeps AI truthful also renders prompt injections and privilege escalations completely powerless."
+  },
+  "metaphor": {
+    "title": "🐒 AI is Sun Wukong; DROS is the Golden Headband",
+    "subtitle": "The Monkey King & The Circlet of Restraint",
+    "m1_title": "🪄 Sun Wukong (AI Magic)",
+    "m1_1": "Boundless capability: 72 transformations & infinite generation",
+    "m1_2": "Language games: Easily swayed or hijacked by prompts",
+    "m1_3": "Chaotic risk: Unchecked freedom leads to havoc in heaven",
+    "m2_title": "☸️ Golden Headband (DROS Restraint)",
+    "m2_1": "Unsuppressed wisdom: Grants complete cognitive freedom",
+    "m2_2": "Physical boundary: Sub-microsecond C-ABI enforcement",
+    "m2_3": "Deterministic consequence: Instant <500ns SIGKILL on breach"
+  },
+  "matrix": {
+    "title": "🧠 Philosophical & Technical Alignment",
+    "subtitle": "Bridging Eastern Philosophy with Binary Physics",
+    "th1": "Dharma AI Primary Insight",
+    "th2": "DROS Deterministic Implementation",
+    "t1_left": "<strong>Transcendence of Words</strong><br/>Language and prompts are easily manipulated.",
+    "t1_right": "<strong>Zero-Semantic Inspection</strong><br/>Validates fast Bitmaps; ignores fragile intent analysis.",
+    "t2_left": "<strong>Law of Karma</strong><br/>Intent is meaningless without physical consequence.",
+    "t2_right": "<strong>C-ABI Execution Signature</strong><br/>Every system call is validated via deterministic SHA-256 tables.",
+    "t3_left": "<strong>Precepts as Shield</strong><br/>Precepts do not cage; they prevent self-destruction.",
+    "t3_right": "<strong><500ns Hardware Meltdown</strong><br/>Instantly halts unauthorized processes to keep core system pristine."
+  },
+  "logos": {
+    "title": "🎨 Official DROS Brand Assets & Logo Kit",
+    "subtitle": "Official logo variants for media, partners, and community developers",
+    "badge_square": "Square",
+    "badge_circle": "Circle",
+    "badge_transparent": "Transparent",
+    "black_bg_white_txt": "Black BG / White Text",
+    "white_bg_black_txt": "White BG / Black Text",
+    "trans_white_txt": "Transparent / White Text",
+    "trans_black_txt": "Transparent / Black Text",
+    "spotlight": "Spotlight Version",
+    "btn_download": "Download Image"
+  },
+  "niche": {
+    "title": "🇨🇭 Ecological Niche: The Missing Layer of the Agentic Web (Swiss Neutrality)",
+    "desc": "We occupy a highly unique position as a neutral execution-layer trust substrate:<br/><br/>1. <strong>Cooperation with Cloud Auditing (e.g., Permiso Security)</strong>: Permiso specializes in cloud workload monitoring and post-incident analysis; DROS complements this by providing hardware-backed FFI/C-ABI boundary protection and O(1) local enforcement.<br/>2. <strong>Cooperation with Application-layer Governance (e.g., Microsoft Agent Governance Toolkit)</strong>: Large vendors secure orchestrations, while DROS serves as the vendor-neutral microkernel boundary to secure the final line of physical execution.<br/><br/>We act as the neutral Root CA and physical C-ABI gatekeeper, signing capability credentials for heterogeneous brain models with constant-time verification (484.8ns) for legally binding non-repudiation."
+  },
+  "vision": {
+    "title": "🕸️ Ultimate Vision: From Execution Governance to Agent Accountability",
+    "desc": "Just as SSL/TLS certificates secure host trust and OAuth secures human identity, the <strong>DROS Vajra Contract</strong> will serve as the capability credential mesh for the Agentic Web. Our vision is to transition from basic 'execution governance' to absolute 'agent accountability', wrapping every agent in a non-repudiable cryptographic seal."
+  },
+  "quote": {
+    "text": "\"DROS was not built to fight hackers; it was built to keep AI truthful. We simply discovered that what keeps AI honest also keeps hackers at bay.\"",
+    "author": "— DROS Founder & R&D Team"
   },
   "cta": {
     "title": "The paradigm shift is here.",

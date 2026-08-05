@@ -43,8 +43,9 @@ function Navbar() {
     }} className="global-nav">
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'relative' }}>
         {/* Logo */}
-        <Link to="/" onClick={closeMenu} style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--text-primary)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <span style={{ fontSize: '1.8rem' }}>🦞</span> DROS™
+        <Link to="/" onClick={closeMenu} style={{ fontSize: '1.4rem', fontWeight: 'bold', color: 'var(--text-primary)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <img src="/logos/dros-logo-transparent-white.png" alt="DROS Logo" style={{ height: '32px', width: 'auto', objectFit: 'contain' }} />
+          <span>DROS™</span>
         </Link>
 
         {/* Desktop Menu Links */}

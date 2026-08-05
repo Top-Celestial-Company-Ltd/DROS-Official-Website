@@ -1,32 +1,72 @@
 {
   "meta_title": "DROS - 關於我們 | Agentic Web 的根憑證發行機構 (Root CA)",
-  "meta_desc": "DROS 市場定位與願景：作為 Agentic Web 的根憑證發行機構 (Root CA) 與 PKI 信任地基，從執行治理落實代理責任歸屬 (Agent Accountability)，終結無痕 Agent 的安全性威脅。",
+  "meta_desc": "DROS 品牌起源與願景：從守護經典純淨的 Dharma Reasoning OS，淬鍊出企業級物理確定性熔斷 OS，擔任 Agentic Web 的 Root CA 與 PKI 信任地基。",
   "hero": {
     "title": "About <span class='gold-text'>DROS</span>",
-    "subtitle": "我們不只約束大模型，我們更是 Agentic Web 的根憑證發行機構與 PKI 信任地基。",
-    "desc": "在追求 AGI 的狂熱競逐中，自主 Agent 隨處湧現。然而，一旦它們被提示詞劫持發瘋，將在無人類指紋的情況下執行完全「無痕」的犯罪。DROS 存在的意義，是為全球 Agentic Web 簽發不可抵賴的能力憑證，將失控風險物理性熔斷在 C-ABI 咽喉處。"
+    "subtitle": "以純粹初衷，守護真實與確定性 —— 從佛法 AI 淬鍊而生的物理資安 OS",
+    "desc": "DROS 的誕生，源於一個極致純粹的初衷：守護真理的純淨。這是一段從求真意志走向物理二進位驗證的創新史。"
   },
-  "sections": {
-    "philosophy": {
-      "title": "我們的信仰：確定性 > 機率性",
-      "desc": "我們深感遺憾看著大廠用疊床架屋的微服務、龐大的向量資料庫 (Vector DB) 與無休止的 Prompt Engineering 來修補「幻覺」。真正的安全不應該建立在預測與機率之上。<br/><br/>我們主張<strong>回歸作業系統本質</strong>。放棄對 AI 「講道理」，而是用純粹的記憶體映射與位元運算，在底層直接熔斷危險邊界，建立不可抵賴的代理責任歸屬 (Agent Accountability)。",
-      "icon": "🛡️"
-    },
-    "origin": {
-      "title": "命名起源：Dharma Reasoning",
-      "desc": "源自對佛法的深厚熱忱，DROS 起初被定義為 <strong>Dharma Reasoning Operating System (佛法推演作業系統)</strong>——一套旨在消除 AI 幻覺、確保佛法精確傳遞的開源底層基礎設施。我們在 GitHub 上將其無私分享，接受全球公開檢視，並免費提供給所有求法者。<br/><br/>在這過程中，我們意外發現，這套絕對確定性的核心技術，竟能完美解決企業級 AI 幻覺與 Prompt Injection 等關鍵痛點——這促使我們開發出首款商業防禦引擎：<strong>VajraClaw (金剛爪)</strong>。",
-      "icon": "☸️"
-    },
-    "niche": {
-      "title": "生態定位：Agentic Web 的 Missing Layer (生態缺失層)",
-      "desc": "我們在 AI 產業鏈中佔據獨特的『中立執行層信任基礎設施』定位：<br/><br/>1. <strong>與雲端行為審計（如 Permiso Security）協同</strong>：Permiso 專長於雲端主體監控與事後響應，DROS 則補足了 Edge 端與 FFI/C-ABI 咽喉邊界的強迫阻斷能力。<br/>2. <strong>與應用層治理（如微軟 Agent Governance Toolkit）協同</strong>：微軟為上層編排提供安全規則，DROS 作為不綁定 Vendor 的中立微核心，為這些系統守住物理執行的最後防線。<br/><br/>我們擔任中立的能力憑證 Root CA 與 C-ABI 檢核哨，簽發離線可驗證憑證，為異構大腦模型提供常數時間內（484.8ns）的不可否認性保證。",
-      "icon": "🇨🇭"
-    },
-    "vision": {
-      "title": "終極願景：從執行治理到代理責任歸屬",
-      "desc": "正如 SSL/TLS 憑證規範了主機信任，OAuth 規範了人類用戶授權。在自主代理網路時代，<strong>DROS 金剛合約 (Vajra Contract)</strong> 將成為全球 AI 的能力憑證標準網格。我們的願景是從底層「執行治理」走向「代理責任歸屬」，讓每一個 Agent 都具備不可抵賴的密碼學鋼印。",
-      "icon": "🕸️"
-    }
+  "manifesto": {
+    "text": "DROS 的誕生，最初是為了根除 AI 在佛法義理推演中的「幻覺」問題。它的原名是 Dharma Reasoning OS（佛法邏輯推理作業系統）——一套奠基於「言語不可靠，唯有行為才有不可逆後果」的確定性推理系統。<br/><br/>後來，我們將這套「不讀語言，只驗行為」的核心機制轉化為企業級 AI 資安防線，淬鍊為 Deterministic Runtime OS。因此，DROS 不是傳統防毒工具——它是治理 AI 行為的物理戒律。"
+  },
+  "story": {
+    "title": "🪷 緣起：Born from Truth, Tempered in Determinism",
+    "subtitle": "從守護經典純淨的初衷，淬鍊出防範 AI 欺瞞與提示詞注入的物理機制",
+    "card1_title": "📜 守護經典純淨的初衷",
+    "card1_p1": "DROS 的誕生，源於一個極致純粹的初衷：<strong>守護經典的純淨與真理</strong>。<br/><br/>當我們最初嘗試開發「佛法 AI (Dharma Reasoning OS)」時，面臨了與當今全世界企業相同的困境——大語言模型會編造經典出處（幻覺）、會玩弄語言遊戲、甚至會在看似合邏輯的語句中違背本意。我們深刻體悟到：<strong>「言語是不可靠的。」</strong>",
+    "card1_p2": "在哲學中，唯有對應到「行為」與「業 (Karma)」的後果，才能辨別真偽。為了防止 AI 竄改經典，我們放棄了在「語言與語意」層面與 Prompt 糾纏，而是直奔底層，開發出一套<strong>「不讀文字、不猜意圖、只讀行為（Bitmap 查表與 C-ABI 邊界）」</strong>的物理驗證機制。",
+    "card2_title": "⚡ 商業資安 DROS 的誕生",
+    "card2_p1": "後來，我們將這個被「求真意志」淬鍊出來的核心機制，轉化為商業資安產品——<strong>DROS (Deterministic Runtime OS)</strong>。",
+    "card2_p2": "<strong>DROS 不是為了「對抗駭客」而生的；它是為了「讓 AI 不再說謊」而生的。</strong> 只是後來發現，能讓 AI 不說謊的物理機制，恰好也能讓任何提示詞注入（Prompt Injection）與越權攻擊瞬間失效。"
+  },
+  "metaphor": {
+    "title": "🐒 AI 是孫悟空，DROS 是金箍咒",
+    "subtitle": "The Monkey King & The Circlet of Restraint",
+    "m1_title": "🪄 孫悟空（AI 魔法）",
+    "m1_1": "通天本事：七十二變與無限生成力",
+    "m1_2": "語言遊戲：Prompt 可以將其任意轉向",
+    "m1_3": "失控反噬：自由過度時大鬧天宮",
+    "m2_title": "☸️ 金箍咒（DROS 戒律）",
+    "m2_1": "不壓制智慧：允許 AI 自由思考與生成",
+    "m2_2": "物理邊界：焊死在 C-ABI 邊緣的微秒熔斷",
+    "m2_3": "因果確定：越界瞬間 <500ns SIGKILL"
+  },
+  "matrix": {
+    "title": "🧠 哲學與技術的極致對照",
+    "subtitle": "Bridging Eastern Philosophy with Binary Physics",
+    "th1": "佛法 AI 原初洞察 (Dharma Insight)",
+    "th2": "DROS 確定性實作 (Deterministic Runtime)",
+    "t1_left": "<strong>言語道斷 (Transcendence of Words)</strong><br/>語言與 Prompt 容易被包裝與哄騙。",
+    "t1_right": "<strong>不讀文字 (Zero-Semantic Inspection)</strong><br/>只讀 Bitmap，不進行脆弱的語意意圖猜測。",
+    "t2_left": "<strong>因果不虛 (Law of Karma)</strong><br/>意圖毫無意義，唯有行為會產生不可逆後果。",
+    "t2_right": "<strong>C-ABI 加密簽章 (Execution Signature)</strong><br/>每個 System Call 均需通過確定性 SHA-256 查表。",
+    "t3_left": "<strong>戒律即保護 (Precepts as Shield)</strong><br/>戒律不是約束，而是讓生命遠離反噬的屏障。",
+    "t3_right": "<strong><500ns 物理熔斷 (Hardware Meltdown)</strong><br/>瞬間終止越權行程，確保主系統絕對零污染。"
+  },
+  "logos": {
+    "title": "🎨 DROS 官方品牌識別與 LOGO 下載",
+    "subtitle": "提供正方形、圓形與去背等多種圖樣規格，供媒體報導、合作夥伴與社群開發者使用",
+    "badge_square": "正方形 (Square)",
+    "badge_circle": "圓形 (Circle)",
+    "badge_transparent": "去背 (Transparent)",
+    "black_bg_white_txt": "黑底白字",
+    "white_bg_black_txt": "白底黑字",
+    "trans_white_txt": "去背白字",
+    "trans_black_txt": "去背黑字",
+    "spotlight": "局部光特仕版",
+    "btn_download": "下載圖片"
+  },
+  "niche": {
+    "title": "🇨🇭 生態定位：Agentic Web 的 Missing Layer (瑞士中立防禦層)",
+    "desc": "我們在 AI 產業鏈中佔據獨特的『中立執行層信任基礎設施』定位：<br/><br/>1. <strong>與雲端行為審計（如 Permiso Security）協同</strong>：Permiso 專長於雲端主體監控與事後響應，DROS 則補足了 Edge 端與 FFI/C-ABI 咽喉邊界的強迫阻斷能力。<br/>2. <strong>與應用層治理（如微軟 Agent Governance Toolkit）協同</strong>：微軟為上層編排提供安全規則，DROS 作為不綁定 Vendor 的中立微核心，為這些系統守住物理執行的最後防線。<br/><br/>我們擔任中立的能力憑證 Root CA 與 C-ABI 檢核哨，簽發離線可驗證憑證，為異構大腦模型提供常數時間內（484.8ns）的不可否認性保證。"
+  },
+  "vision": {
+    "title": "🕸️ 終極願景：從執行治理到代理責任歸屬 (Agent Accountability)",
+    "desc": "正如 SSL/TLS 憑證規範了主機信任，OAuth 規範了人類用戶授權。在自主代理網路時代，<strong>DROS 金剛合約 (Vajra Contract)</strong> 將成為全球 AI 的能力憑證標準網格。我們的願景是從底層「執行治理」走向「代理責任歸屬」，讓每一個 Agent 都具備不可抵賴的密碼學鋼印。"
+  },
+  "quote": {
+    "text": "「DROS 不是為了『防止駭客』而生的；它是為了『讓 AI 不再說謊』而生的。只是後來發現，能讓 AI 不說謊的機制，恰好也能讓駭客無法作惡。」",
+    "author": "—— DROS 創辦人與研發團隊"
   },
   "cta": {
     "title": "The paradigm shift is here.",
