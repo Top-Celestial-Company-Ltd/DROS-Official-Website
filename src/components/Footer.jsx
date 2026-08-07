@@ -23,7 +23,7 @@ export default function Footer() {
             <h4 style={{ color: '#fff', marginBottom: '1rem', fontSize: '1.1rem' }}>{t('footer.resources')}</h4>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
               <li>
-                <a href={`https://github.com/${githubUser}/Dharma-Reasoning-Operating-System`} target="_blank" rel="noreferrer" style={{ color: 'var(--text-secondary)', textDecoration: 'none', transition: 'color 0.2s' }}>{t('footer.github')}</a>
+                <a href={`https://github.com/${githubUser}/DROS-Official-Website`} target="_blank" rel="noreferrer" style={{ color: 'var(--text-secondary)', textDecoration: 'none', transition: 'color 0.2s' }}>{t('footer.github')}</a>
               </li>
               <li>
                 <Link to="/docs" style={{ color: 'var(--text-secondary)', textDecoration: 'none', transition: 'color 0.2s' }}>{t('footer.docs')}</Link>

@@ -389,9 +389,9 @@ export default function Trust() {
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6', flex: 1 }}>
                 {t('trust.open_source.lint_desc')}
               </p>
-              <a href={`https://github.com/${githubUser}/Dharma-Reasoning-Operating-System`} target="_blank" rel="noreferrer" className="btn btn-secondary" style={{ marginTop: '1.5rem', width: '100%', textAlign: 'center', fontSize: '0.9rem' }}>
+              <Link to="/docs" className="btn btn-secondary" style={{ marginTop: '1.5rem', width: '100%', textAlign: 'center', fontSize: '0.9rem' }}>
                 vajra lint &rarr;
-              </a>
+              </Link>
             </div>
 
             {/* Vajra Doctor */}
@@ -401,9 +401,9 @@ export default function Trust() {
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6', flex: 1 }}>
                 {t('trust.open_source.doctor_desc')}
               </p>
-              <a href={`https://github.com/${githubUser}/Dharma-Reasoning-Operating-System`} target="_blank" rel="noreferrer" className="btn btn-secondary" style={{ marginTop: '1.5rem', width: '100%', textAlign: 'center', fontSize: '0.9rem', borderColor: 'rgba(0,240,255,0.3)' }}>
+              <Link to="/docs" className="btn btn-secondary" style={{ marginTop: '1.5rem', width: '100%', textAlign: 'center', fontSize: '0.9rem', borderColor: 'rgba(0,240,255,0.3)' }}>
                 vajra doctor &rarr;
-              </a>
+              </Link>
             </div>
 
             {/* Vajra Policy Hub */}
@@ -413,9 +413,9 @@ export default function Trust() {
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6', flex: 1 }}>
                 {t('trust.open_source.hub_desc')}
               </p>
-              <a href={`https://github.com/${githubUser}/Dharma-Reasoning-Operating-System`} target="_blank" rel="noreferrer" className="btn btn-primary" style={{ marginTop: '1.5rem', width: '100%', textAlign: 'center', fontSize: '0.9rem' }}>
+              <Link to="/docs" className="btn btn-primary" style={{ marginTop: '1.5rem', width: '100%', textAlign: 'center', fontSize: '0.9rem' }}>
                 Join Policy Hub
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -428,9 +428,9 @@ export default function Trust() {
           <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem auto' }}>
             Stop wrapping uncertain logic with dynamic firewalls. Bring system-level deterministic assurance into your agent production stack.
           </p>
-          <a href={`https://github.com/${githubUser}/Dharma-Reasoning-Operating-System`} target="_blank" rel="noreferrer" className="btn btn-primary" style={{ padding: '0.8rem 2.5rem' }}>
+          <Link to="/pricing" className="btn btn-primary" style={{ padding: '0.8rem 2.5rem' }}>
             Get Started with DROS
-          </a>
+          </Link>
         </div>
       </section>
     </main>
