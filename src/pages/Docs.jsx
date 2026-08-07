@@ -423,7 +423,8 @@ result = engine.execute(user_input)
                     <td>{row[0]}</td>
                     <td style={{ color: 'var(--text-secondary)' }}>{row[1]}</td>
                     <td style={{ color: '#27c93f', fontWeight: '600' }}>{row[2]}</td>
-                    <td><span className={i === 0 || i === 2 || i === 3 ? "tag-supreme" : "tag-good"}>{row[3]}</span></td>
+                    <td><span className="tag-supreme">{row[3]}</span></td>
+                    <td style={{ color: 'var(--accent-gold)', fontSize: '0.9rem' }}>{row[4]}</td>
                   </tr>
                 ))}
               </tbody>
