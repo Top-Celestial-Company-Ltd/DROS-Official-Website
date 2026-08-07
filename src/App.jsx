@@ -3,6 +3,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ChatWidget from './components/ChatWidget';
+import ErrorBoundary from './components/ErrorBoundary';
 import Home from './pages/Home';
 import Docs from './pages/Docs';
 import Pricing from './pages/Pricing';
@@ -18,16 +19,18 @@ export default function App() {
       <ScrollToTop />
       <Navbar />
       <div style={{ minHeight: '80vh' }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/docs" element={<Docs />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/solutions" element={<Solutions />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/trust" element={<Trust />} />
-          <Route path="/coming-soon" element={<ComingSoon />} />
-        </Routes>
+        <ErrorBoundary>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/docs" element={<Docs />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/solutions" element={<Solutions />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/trust" element={<Trust />} />
+            <Route path="/coming-soon" element={<ComingSoon />} />
+          </Routes>
+        </ErrorBoundary>
       </div>
       <Footer />
       <ChatWidget />
