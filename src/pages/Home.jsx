@@ -270,7 +270,7 @@ export default function Home() {
               </div>
             </div>
             <div style={{ textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '1rem' }}>
-              <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#d2a8ff', fontFamily: 'monospace' }}>< 1 μs</div>
+              <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#d2a8ff', fontFamily: 'monospace' }}>&lt; 1 μs</div>
               <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '0.2rem' }}>
                 {i18n.language === 'en' ? 'RCU Atomic Swap' : 'RCU 無鎖撤銷 (HTTP 403)'}
               </div>
