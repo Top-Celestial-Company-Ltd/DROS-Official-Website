@@ -183,7 +183,7 @@ export default function About() {
           <h2 style={{fontSize: '2.3rem', marginBottom: '1rem', color: 'var(--accent-gold)'}} dangerouslySetInnerHTML={{ __html: t('cta.title') }}></h2>
           <p style={{fontSize: '1.2rem', color: 'var(--text-light)', marginBottom: '2rem'}}>{t('cta.subtitle')}</p>
           <div style={{display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap'}}>
-            <a href="mailto:founders@dr-os.io" className="btn btn-primary" style={{padding: '0.9rem 2.2rem', fontSize: '1.05rem'}}>{t('cta.btn_contact')}</a>
+            <a href="mailto:service@dr-os.io" className="btn btn-primary" style={{padding: '0.9rem 2.2rem', fontSize: '1.05rem'}}>{t('cta.btn_contact')}</a>
             <a href={whitepaperLink} target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{padding: '0.9rem 2.2rem', fontSize: '1.05rem'}}>{t('cta.btn_docs')}</a>
           </div>
       </section>
