@@ -181,35 +181,35 @@
   },
   "solutions": {
     "hero": {
-      "title_prefix": "DROS V3 ",
+      "title_prefix": "DROS-6P ",
       "title_highlight": "產品生態系",
-      "subtitle": "針對不同的商業需求與部署架構，我們提供 5 種不同層級的產品矩陣。<br/>從單機極速驗證，到全球百點 Mesh OTA 派發。"
+      "subtitle": "依據 IEEE 論文標準，針對不同的商業規模與部署架構，提供 5 種完整對應 6-Pillars 信任邊界的產品矩陣。<br/>從單機 26.1 μs 硬熔斷，到企業雙向權限控制台與全網 Swarm 戰術指揮中心。"
     },
     "products": {
       "free_trial": {
         "title": "VajraClaw Free-Trial (PLG 版)",
         "tag": "Max 2 Agents / 30 Days",
-        "desc": "專為獨立開發者與 PoC 設計，提供零阻力的技術體驗。內建離線 RSA 動態授權與 v1.0 驗證合約，快速體驗實測核心延遲低至 484.8 奈秒的極速攔截性能。"
+        "desc": "專為獨立開發者與 PoC 設計，體驗單機 Agent 護照發行與 26.1 μs C-ABI 帶內硬熔斷性能。"
       },
       "dros_engine": {
-        "title": "VajraClaw (核心引擎)",
+        "title": "VajraClaw (核心引擎 / Hacker)",
         "tag": "微服務核心防護",
-        "desc": "高效、可嵌入的多語言執行保護層。採用編譯期安全展開與 O(1) Contiguous Bitmap 查表機制，免除運行時解析漏洞與效能損耗。"
+        "desc": "高效、可嵌入的多語言執行保護層。採用編譯期 Bitmaps 鑄造與 $O(1)$ 位元矩陣查表，零 Heap 分配，提供確定性實體防禦。"
       },
       "dros_engine_plus": {
-        "title": "VajraClaw+ (企業稽核版)",
-        "tag": "密碼學稽核與安全防線",
-        "desc": "專為高安全與合規（FinTech/醫療）組織打造。支援 15 台機器、每台 30 併發（共 450 併發）。提供 Sealed Binary Policy 與 Policy Epoch Lock 防止降級攻擊，將 SHA-256 Policy Hash 與 Ed25519 簽章強制綁定至每筆 Audit Trace，提供具備密碼學不可否認性的合規鐵證。"
+        "title": "VajraClaw+ Startup (Core Engine)",
+        "tag": "雙向權限與動態遮蔽",
+        "desc": "專為 10~50 人新創與中小企業打造。支援 30 個 Concurrent Agents，具備 PII/PHI 動態遮蔽、HITL 懸停機制與一鍵黑名單按鈕。"
       },
       "vajra_agent": {
-        "title": "VajraAgent (企業網格版)",
-        "tag": "Mesh OTA 控制面 / Corporate",
-        "desc": "企業級分佈式 Agentic AI 的中央大腦。支援 100% On-Premise 私有雲與斷網機房部署，提供中央 IAM 視覺化戰情室。配合 K8s Helm 與 Ansible 自動化部署與自適應 Phone Home 連線，一鍵向全球數百個微內核節點派發安全策略，並支援 1 毫秒內一鍵全局緊急熔斷。"
+        "title": "VajraAgent Enterprise (Zero-Trust Mesh)",
+        "tag": "雙向權限總控台 / Corporate",
+        "desc": "企業級分佈式 Agentic AI 的中央大腦。具備對內發行 DIT 身分憑證與對外 Capability 視覺化勾選介面，提供 SHA-256 Merkle 雜湊鏈、Ed25519 簽章與 $<1\\ \\mu\\text{s}$ RCU 一鍵撤銷按鈕 (HTTP 403)。"
       },
       "dros_mobile": {
-        "title": "DROS Mobile SDK",
-        "tag": "Zero-Trust 邊緣防護",
-        "desc": "專為 Android / iOS 打造的原生沙盒防護 (AAR / XCFramework)。支援 Safe Degraded (安全降級模式)，即便離線也能在終端攔截惡意指令。"
+        "title": "DROS Sovereign (Swarm Tactical Command)",
+        "tag": "全網 Swarm 戰術指揮中心",
+        "desc": "專為金融、國防與關鍵基建打造。支援全網 Swarm 戰術圖譜監控與 1ms 全網緊急熔斷 Kill-Switch 觸發。"
       }
     },
     "architecture": {
