@@ -24,23 +24,23 @@
     "dharma_exemption": "Dharma Exemption：純粹的非營利佛教弘法用途可 100% 免費使用。"
   },
   "home": {
-    "meta_title": "DROS | Agentic Web 根憑證與執行不可否認性標準",
-    "meta_desc": "DROS 是 Agentic Web 的根憑證發行機構 (Root CA)。透過解決上下文丟失問題，簽發具備 Ed25519 簽章的 signed policy.bin 憑證，為企業落實無可抵賴的 AI 執行不可否認性 (Execution Non-Repudiation)。",
+    "meta_title": "DROS-6P | Agentic Web 根憑證與 6-Pillars 執行不可否認性標準",
+    "meta_desc": "DROS-6P 是 Agentic Web 的根憑證發行機構 (Root CA)。依據 IEEE 論文標準，透過 C-ABI 帶內內核以平均 26.1 μs 決策延遲閉環六大信任邊界，簽發具備 Ed25519 簽章的 DIT 與 policy.bin 憑證。",
     "hero": {
-      "version": "DROS Runtime Attribution Framework v7.3",
+      "version": "IEEE DROS-6P Unified Standard v2.0",
       "title_prefix": "Agentic Web 的",
       "title_highlight": "執行期身分與不可否認性歸責框架",
       "subtitle": "\"If runtime needs intelligence to enforce policy, the system is already <strong>unsafe</strong>.\"<br/>如果執行安全防衛在運行時仍需依賴智慧進行決策，該系統本質上已暴露於風險中。",
-      "value_prop": "作為 Agentic Web 的執行層缺失模組 (Missing Layer)，簽發具備 Ed25519 簽章的二進位能力憑證 policy.bin，為全球異質 AI 代理建立無可抵賴的執行不可否認性 (Execution Non-Repudiation) 責任審計軌跡。",
+      "value_prop": "貫徹「開放身份，在地治理 (Open Identity, Localized Governance)」範式：簽發符合 RFC-010 W3C DID 的 DIT 身分憑證與二進位能力憑證 policy.bin，在 26.1 μs 內為全球異質 AI 代理建立無可抵賴的不可否認性 (Execution Non-Repudiation) 責任審計軌跡。",
       "btn_github": "查閱 DROS 規格書",
       "btn_poc": "開始 Free-Trial 體驗"
     },
     "terminal": {
       "cmd": "mount policy.bin",
-      "locked": "[DROS-Engine] ⚡ O(1) Bitmap 策略已載入記憶體 (常數時間校驗模式)。",
-      "injected": "[DROS-Engine] 🛡️ 密碼學簽章驗證通過 (Ed25519 / 離線可驗證)。",
+      "locked": "[DROS-Engine] ⚡ $O(1)$ Capability Bitmaps 策略已載入記憶體 (帶內 26.1 μs 模式)。",
+      "injected": "[DROS-Engine] 🛡️ 密碼學簽章驗證通過 (Ed25519 / DIT 憑證)。",
       "llm_stream": "Agent 嘗試執行呼叫：execute_payment...",
-      "fuse_blown": "🛑 物理熔斷觸發：Bitwise AND 驗證失敗。OS 系統調用已被終止 (實測核心延遲: 484.8 ns / 0.00048 ms)。"
+      "fuse_blown": "🛑 物理熔斷觸發：Bitwise AND 驗證失敗。C-ABI 系統調用已被終止 (實測平均延遲: 26.1 μs / p99 = 29.8 μs)。"
     },
     "hourglass": {
       "title_prefix": "作業系統級",
