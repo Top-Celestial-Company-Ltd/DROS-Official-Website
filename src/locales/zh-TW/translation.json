@@ -25,9 +25,9 @@
   },
   "home": {
     "meta_title": "DROS | Agentic Web 根憑證與 6-Pillars 執行不可否認性標準",
-    "meta_desc": "DROS 是 Agentic Web 的根憑證發行機構 (Root CA)。依據 IEEE 論文標準，透過 C-ABI 帶內內核以平均 26.1 μs 決策延遲閉環六大信任邊界，簽發具備 Ed25519 簽章的 DIT 與 policy.bin 憑證。",
+    "meta_desc": "DROS 是 Agentic Web 的根憑證發行機構 (Root CA)。透過 C-ABI 帶內內核以平均 26.1 μs 決策延遲閉環六大信任邊界，簽發具備 Ed25519 簽章的 DIT 與 policy.bin 憑證。",
     "hero": {
-      "version": "IEEE DROS Unified Standard v2.0",
+      "version": "DROS Unified Standard v2.0",
       "title_prefix": "Agentic Web 的",
       "title_highlight": "執行期身分與不可否認性歸責框架",
       "subtitle": "\"If runtime needs intelligence to enforce policy, the system is already <strong>unsafe</strong>.\"<br/>如果執行安全防衛在運行時仍需依賴智慧進行決策，該系統本質上已暴露於風險中。",
@@ -183,7 +183,7 @@
     "hero": {
       "title_prefix": "DROS ",
       "title_highlight": "產品生態系",
-      "subtitle": "依據 IEEE 論文標準，針對不同的商業規模與部署架構，提供 5 種完整對應 6-Pillars 信任邊界的產品矩陣。<br/>從單機 26.1 μs 硬熔斷，到企業雙向權限控制台與全網 Swarm 戰術指揮中心。"
+      "subtitle": "針對不同的商業規模與部署架構，提供 5 種完整對應 6-Pillars 信任邊界的產品矩陣。<br/>從單機 26.1 μs 硬熔斷，到企業雙向權限控制台與全網 Swarm 戰術指揮中心。"
     },
     "products": {
       "free_trial": {
@@ -257,21 +257,21 @@
   },
   "trust": {
     "meta_title": "DROS | 確信驗證與系統物理極限揭露",
-    "meta_desc": "公開披露 DROS-6P 驗證合約、IEEE 實測 $26.1\\ \\mu\\text{s}$ 決策延遲基準與物理極限。我們秉持硬核系統工程的誠實態度，拒絕行銷吹誇。",
+    "meta_desc": "公開披露 DROS 驗證合約、實測 $26.1\\ \\mu\\text{s}$ 決策延遲基準與物理極限。我們秉持硬核系統工程的誠實態度，拒絕行銷吹誇。",
     "hero": {
-      "title_prefix": "IEEE DROS-6P Standard / AGI 時代安全保險絲",
+      "title_prefix": "DROS Standard / AGI 時代安全保險絲",
       "title_highlight": "確信安全與 6-Pillars 憑證標準",
-      "subtitle": "未來的網際網路將充斥著密密麻麻、高推理能力的自主 Agent。一旦它們被提示詞劫持發瘋，將在毫無人類指紋的情況下，執行完全「無人負責、無法追溯、無跡可尋」的無痕犯罪。DROS-6P 拒絕機率性的修補，我們以 Root CA 簽發執行能力憑證，在 C-ABI 咽喉處為 Agent 戴上冰冷的密碼學手銬，將機率性的失控轉化為可證實的法律責任。"
+      "subtitle": "未來的網際網路將充斥著密密麻麻、高推理能力的自主 Agent。一旦它們被提示詞劫持發瘋，將在毫無人類指紋的情況下，執行完全「無人負責、無法追溯、無跡可尋」的無痕犯罪。DROS 拒絕機率性的修補，我們以 Root CA 簽發執行能力憑證，在 C-ABI 咽喉處為 Agent 戴上冰冷的密碼學手銬，將機率性的失控轉化為可證實的法律責任。"
     },
     "harness": {
-      "title": "二、IEEE DROS-6P 驗證合約規格 (Certification Harness)",
-      "desc": "DROS-6P 拒絕寫死的偽模擬。我們正式將本地 `dros-verification/` 與 `dros-home-lab/tests/` 下的 6 大產業賽道測試集，凍結為 IEEE 官方確信驗證合約。任何人皆可透過本地環境執行並重現相同的 100% 防護特徵：",
+      "title": "二、DROS 驗證合約規格 (Certification Harness)",
+      "desc": "DROS 拒絕寫死的偽模擬。我們正式將本地 `dros-verification/` 與 `dros-home-lab/tests/` 下的 6 大產業賽道測試集，凍結為確信驗證合約。任何人皆可透過本地環境執行並重現相同的 100% 防護特徵：",
       "test1": "🧬 test_dros_6pillars_verification.py — 6-Pillars 六大信任邊界完整性驗證與 C-ABI 熔斷校驗",
       "test2": "🧪 test_rcu_chaos_concurrency.py — 50 執行緒動態 RCU 無鎖熱重載混亂壓力測試 (0.004s 通過)"
     },
     "benchmarks": {
-      "title": "三、IEEE 實測決策延遲與 RCU 混亂並發壓測 (26.1μs Empirical Benchmark)",
-      "desc": "在符合企業實務的 $N = 100,000$ 工具調用與並發混沌壓測下，DROS-6P 帶內內核取得了權威的實測物理指標：",
+      "title": "三、實測決策延遲與 RCU 混亂並發壓測 (26.1μs Empirical Benchmark)",
+      "desc": "在符合企業實務的 $N = 100,000$ 工具調用與並發混沌壓測下，DROS 帶內內核取得了權威的實測物理指標：",
       "latency_val": "26.1 μs",
       "latency_lbl": "平均帶內決策延遲 (p99 = 29.8μs, σ = 1.42μs)",
       "queries_val": "100,000 次",
@@ -287,7 +287,7 @@
       "points": [
         {
           "title": "1. 帶內決策延遲邊界 (In-Band Kernel Latency)",
-          "desc": "在實體伺服器測試中，DROS-6P C-ABI 帶內內核平均決策延遲為 26.1 μs，第 99 百分位 (p99) 為 29.8 μs。這確保防禦控制平面在高頻 Syscalls 下不會成為效能瓶頸或產生自發性 DDoS 效能衰退。"
+          "desc": "在實體伺服器測試中，DROS C-ABI 帶內內核平均決策延遲為 26.1 μs，第 99 百分位 (p99) 為 29.8 μs。這確保防禦控制平面在高頻 Syscalls 下不會成為效能瓶頸或產生自發性 DDoS 效能衰退。"
         },
         {
           "title": "2. 跨語言 FFI / JNI 轉換開銷 (FFI Boundary Overhead)",
@@ -295,11 +295,11 @@
         },
         {
           "title": "3. SHA-256 Merkle 雜湊鏈持久化 (Merkle Hash Chain Provenance)",
-          "desc": "為確保 26.1 μs 的極致攔截效率，DROS-6P 採用無鎖環形緩衝區 (Lock-free Ring Buffer) 將日誌硬碟寫入與 C-ABI 執行阻斷進行非同步隔離，並生成 SHA-256 Merkle 雜湊鏈與 Ed25519 簽章。"
+          "desc": "為確保 26.1 μs 的極致攔截效率，DROS 採用無鎖環形緩衝區 (Lock-free Ring Buffer) 將日誌硬碟寫入與 C-ABI 執行阻斷進行非同步隔離，並生成 SHA-256 Merkle 雜湊鏈與 Ed25519 簽章。"
         },
         {
           "title": "4. O(1) RCU 雙指標記憶體開銷 (RCU Double Buffering)",
-          "desc": "在進行策略一鍵撤銷時，為確保無鎖並發安全，DROS-6P 在微秒內保留新舊策略指標，產生極微幅的 RAM 雙倍開銷，總體記憶體佔用穩定保持在 2MB ~ 5MB 區間。"
+          "desc": "在進行策略一鍵撤銷時，為確保無鎖並發安全，DROS 在微秒內保留新舊策略指標，產生極微幅的 RAM 雙倍開銷，總體記憶體佔用穩定保持在 2MB ~ 5MB 區間。"
         }
       ]
     },
@@ -316,7 +316,7 @@
     "threat": {
       "title": "生存威脅：完全「無痕」的自主 Agent 浪潮",
       "desc1": "當我們賦予 AI 大腦自主執行 System Call 的權限，就等於為惡意代碼開啟了一扇物理大門。一個發瘋的 Agent 可以自己註冊域名、編寫病毒、在不同的雲伺服器間轉移，且完全不留下任何人類的指紋紀錄。這在司法鑑定上是一場災難。",
-      "desc2": "DROS-6P 作為 **Agentic Web 的根憑證發放中心 (Root CA)**，強制為每一次執行注入不可抵賴的密碼學鋼印。我們將合規合約編譯為帶有 Ed25519 簽章的 `policy.bin` 與 DIT 身分憑證。AI 大腦可以想入非非，但只要伸手去觸碰未授權的實體 Tool，DROS 微核心便在 26.1 微秒內直接物理性熔斷，從根本上終結 AI 甩鍋的時代。"
+      "desc2": "DROS 作為 **Agentic Web 的根憑證發放中心 (Root CA)**，強制為每一次執行注入不可抵賴的密碼學鋼印。我們將合規合約編譯為帶有 Ed25519 簽章的 `policy.bin` 與 DIT 身分憑證。AI 大腦可以想入非非，但只要伸手去觸碰未授權的實體 Tool，DROS 微核心便在 26.1 微秒內直接物理性熔斷，從根本上終結 AI 甩鍋的時代。"
     }
   }
 }
