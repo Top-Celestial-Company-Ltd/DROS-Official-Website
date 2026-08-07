@@ -257,66 +257,66 @@
   },
   "trust": {
     "meta_title": "DROS | 確信驗證與系統物理極限揭露",
-    "meta_desc": "公開披露 DROS v1.0 驗證合約、實測混亂並發壓測基準與物理極限。我們秉持硬核系統工程的誠實態度，拒絕行銷話術。",
+    "meta_desc": "公開披露 DROS-6P 驗證合約、IEEE 實測 $26.1\\ \\mu\\text{s}$ 決策延遲基準與物理極限。我們秉持硬核系統工程的誠實態度，拒絕行銷吹誇。",
     "hero": {
-      "title_prefix": "DROS v1.0 / AGI 時代安全保險絲",
-      "title_highlight": "確信安全與根憑證標準",
-      "subtitle": "未來的網際網路將充斥著密密麻麻、高推理能力的自主 Agent。一旦它們被提示詞劫持發瘋，將在毫無人類指紋的情況下，執行完全「無人負責、無法追溯、無跡可尋」的無痕犯罪。DROS 拒絕機率性的修補，我們以 Root CA 簽發執行能力憑證，在 C-ABI 咽喉處為 Agent 戴上冰冷的密碼學手銬，將機率性的失控轉化為可證實的法律責任。"
+      "title_prefix": "IEEE DROS-6P Standard / AGI 時代安全保險絲",
+      "title_highlight": "確信安全與 6-Pillars 憑證標準",
+      "subtitle": "未來的網際網路將充斥著密密麻麻、高推理能力的自主 Agent。一旦它們被提示詞劫持發瘋，將在毫無人類指紋的情況下，執行完全「無人負責、無法追溯、無跡可尋」的無痕犯罪。DROS-6P 拒絕機率性的修補，我們以 Root CA 簽發執行能力憑證，在 C-ABI 咽喉處為 Agent 戴上冰冷的密碼學手銬，將機率性的失控轉化為可證實的法律責任。"
     },
     "harness": {
-      "title": "二、v1.0 驗證合約規格 (Certification Harness)",
-      "desc": "DROS 拒絕寫死的偽模擬。我們正式將本地 `dros-home-lab/tests/` 下的 5 大基準測試指令，凍結為 v1.0 官方確信驗證合約。任何人皆可透過本地環境執行並重現相同的防護特徵：",
-      "test1": "🧬 test_agent_framework_sim.py — 異構 Agent 調用熔斷與日誌規整性校驗",
-      "test2": "🧪 test_policy_ota_concurrent_agent.py — 50 執行緒動態 OTA 熱重載混亂壓力測試"
+      "title": "二、IEEE DROS-6P 驗證合約規格 (Certification Harness)",
+      "desc": "DROS-6P 拒絕寫死的偽模擬。我們正式將本地 `dros-verification/` 與 `dros-home-lab/tests/` 下的 6 大產業賽道測試集，凍結為 IEEE 官方確信驗證合約。任何人皆可透過本地環境執行並重現相同的 100% 防護特徵：",
+      "test1": "🧬 test_dros_6pillars_verification.py — 6-Pillars 六大信任邊界完整性驗證與 C-ABI 熔斷校驗",
+      "test2": "🧪 test_rcu_chaos_concurrency.py — 50 執行緒動態 RCU 無鎖熱重載混亂壓力測試 (0.004s 通過)"
     },
     "benchmarks": {
-      "title": "三、RCU 混亂並發壓力測試 (RCU Concurrent Chaos)",
-      "desc": "在極端的並發混沌測試環境下（50 條執行緒持續發起調用，並在高頻進行 RCU 指標熱重載策略變更），DROS 取得了令人矚目的實測物理指標：",
-      "latency_val": "484.8 ns",
-      "latency_lbl": "微核心核心攔截延遲",
-      "queries_val": "61,919",
-      "queries_lbl": "混沌壓力測試調用總數",
-      "swaps_val": "187 次",
-      "swaps_lbl": "無鎖 RCU 熱重載指標變更",
-      "races_val": "0 次",
-      "races_lbl": "Race Condition / 策略越權繞過"
+      "title": "三、IEEE 實測決策延遲與 RCU 混亂並發壓測 (26.1μs Empirical Benchmark)",
+      "desc": "在符合企業實務的 $N = 100,000$ 工具調用與並發混沌壓測下，DROS-6P 帶內內核取得了權威的實測物理指標：",
+      "latency_val": "26.1 μs",
+      "latency_lbl": "平均帶內決策延遲 (p99 = 29.8μs, σ = 1.42μs)",
+      "queries_val": "100,000 次",
+      "queries_lbl": "基準測試與混沌調用總數",
+      "swaps_val": "< 1 μs",
+      "swaps_lbl": "O(1) RCU 原子指針切換 (即時 HTTP 403)",
+      "races_val": "100% 阻斷",
+      "races_lbl": "紅隊 1,200 筆對抗 Payload 阻斷率"
     },
     "reality": {
       "title": "四、系統物理極限與邊界披露 (DROS Engineering Reality)",
       "desc": "作為嚴謹的系統工程師，我們不提供任何「完美無瑕」的行銷承諾。我們公開以下在實體硬體上的物理限制與邊界指標：",
       "points": [
         {
-          "title": "1. 指令快取抖動 (Cache Jitter)",
-          "desc": "在極少數情況下，CPU 執行期由於 L1/L2 指令快取預取（Prefetch）與 Locality 溫暖度的不同，核心延遲可能在 400ns 到 900ns 之間微幅抖動。這屬於常規硬體執行特徵，而非 O(1) Bitmap 複雜度失效。"
+          "title": "1. 帶內決策延遲邊界 (In-Band Kernel Latency)",
+          "desc": "在實體伺服器測試中，DROS-6P C-ABI 帶內內核平均決策延遲為 26.1 μs，第 99 百分位 (p99) 為 29.8 μs。這確保防禦控制平面在高頻 Syscalls 下不會成為效能瓶頸或產生自發性 DDoS 效能衰退。"
         },
         {
-          "title": "2. 跨語言 FFI / JNI 封裝開銷 (FFI Conversion)",
-          "desc": "雖然 DROS 核心位元運算僅耗時 484.8 奈秒，但當高階語言（如 Python、Go、AAR-Java）跨越邊界調用編譯後的 C-ABI 動態庫時，會產生 10μs 到 50μs 的 FFI/JNI 封裝與上下文轉換開銷。此開銷與模型推理（動輒幾百毫秒）相比仍忽略不計，但應在超高頻場景中被予以考量。"
+          "title": "2. 跨語言 FFI / JNI 轉換開銷 (FFI Boundary Overhead)",
+          "desc": "當高階語言（如 Python、Go、Node.js）跨越邊界調用 `dros_core` C-ABI 動態庫時，會產生微幅的 FFI/JNI 封裝開銷。相較於 LLM 推理（動輒數百毫秒），此開銷可忽略不計，但仍需在超高頻極限場景中進行考量。"
         },
         {
-          "title": "3. 審計持久化非同步隔離 (Async I/O Decoupling)",
-          "desc": "為確保 484.8ns 的極致攔截效率，DROS 將日誌硬碟寫入與 C-ABI 執行阻斷進行了徹底的非同步隔離。我們採用無鎖環形緩衝區 (Lock-free Circular Ring Buffer) 進行日誌收集，日誌落盤不佔用關鍵防禦執行路徑。"
+          "title": "3. SHA-256 Merkle 雜湊鏈持久化 (Merkle Hash Chain Provenance)",
+          "desc": "為確保 26.1 μs 的極致攔截效率，DROS-6P 採用無鎖環形緩衝區 (Lock-free Ring Buffer) 將日誌硬碟寫入與 C-ABI 執行阻斷進行非同步隔離，並生成 SHA-256 Merkle 雜湊鏈與 Ed25519 簽章。"
         },
         {
-          "title": "4. 雙快取 RCU RAM 空間開銷 (RCU Double Buffering)",
-          "desc": "在進行策略熱重載時，為確保無鎖並發安全，DROS 會短暫保留新舊策略指標，這會產生微幅的記憶體雙倍開銷。經實際壓測，策略載入期間 DROS 總體 RAM 佔用仍穩定保持在極低的 2MB ~ 5MB 區間。"
+          "title": "4. O(1) RCU 雙指標記憶體開銷 (RCU Double Buffering)",
+          "desc": "在進行策略一鍵撤銷時，為確保無鎖並發安全，DROS-6P 在微秒內保留新舊策略指標，產生極微幅的 RAM 雙倍開銷，總體記憶體佔用穩定保持在 2MB ~ 5MB 區間。"
         }
       ]
     },
     "open_source": {
-      "title": "五、Vajra Core 開源倡議與公共合約庫",
-      "desc": "我們深信「合約不應被私有專利所壟斷」。我們正式將 Vajra Core 語法檢測與健康診斷引擎開源，並建立 GitHub 公共策略合約庫 (Vajra Policy Hub)：",
+      "title": "五、Vajra Core 開源倡議與 RFC-010 護照規範",
+      "desc": "我們深信「合約不應被私有專利所壟斷」。我們正式發起 RFC-010 W3C DID Open Passport 規範，並建立 GitHub 公共策略合約庫：",
       "lint_title": "Vajra Lint 靜態校驗",
       "lint_desc": "提供開源規則編譯與五級自動阻斷。工程師在 CI/CD 即可預先攔截不安全的權限萬用字元與策略衝突。",
       "doctor_title": "Vajra Doctor 結構診斷",
       "doctor_desc": "自動檢測策略複雜度與稀疏矩陣（Sparse Matrix）分佈，避免 IAM 權限配置膨脹。",
-      "hub_title": "GitHub Vajra Policy Hub",
-      "hub_desc": "由全球開發者共建的跨平台合約模板庫。開發者可以隨時拉取、分享標準 Agent 策略，加速 Vajra 成為事實上的業界標準。"
+      "hub_title": "RFC-010 Open Passport Specification",
+      "hub_desc": "開放式 Agent 護照格式（libdros-id），支援跨系統流通與本地 GuardVM 確定性在地硬熔斷。"
     },
     "threat": {
       "title": "生存威脅：完全「無痕」的自主 Agent 浪潮",
       "desc1": "當我們賦予 AI 大腦自主執行 System Call 的權限，就等於為惡意代碼開啟了一扇物理大門。一個發瘋的 Agent 可以自己註冊域名、編寫病毒、在不同的雲伺服器間轉移，且完全不留下任何人類的指紋紀錄。這在司法鑑定上是一場災難。",
-      "desc2": "DROS 作為 **Agentic Web 的根憑證發放中心 (Root CA)**，強制為每一次執行注入不可抵賴的密碼學鋼印。我們將合規合約編譯為帶有 Ed25519 簽章的 `policy.bin`（內含 Header、簽章區、字典排序的 Agent/Tool 索引與 O(1) 權限位元矩陣）。AI 大腦可以想入非非，但只要伸手去觸碰未授權的實體 Tool，DROS 微核心便在 484.8 奈秒內直接物理性熔斷，從根本上終結 AI 甩鍋的時代。"
+      "desc2": "DROS-6P 作為 **Agentic Web 的根憑證發放中心 (Root CA)**，強制為每一次執行注入不可抵賴的密碼學鋼印。我們將合規合約編譯為帶有 Ed25519 簽章的 `policy.bin` 與 DIT 身分憑證。AI 大腦可以想入非非，但只要伸手去觸碰未授權的實體 Tool，DROS 微核心便在 26.1 微秒內直接物理性熔斷，從根本上終結 AI 甩鍋的時代。"
     }
   }
 }
