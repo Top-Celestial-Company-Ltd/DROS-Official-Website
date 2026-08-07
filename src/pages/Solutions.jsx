@@ -214,8 +214,8 @@ export default function Solutions() {
         <div className="container animate-fade-up delay-3">
           <h2 style={{ fontSize: '2rem', marginBottom: '2rem' }}>{t('solutions.cta.title')}</h2>
           <div className="hero-buttons">
-            <a href="mailto:sales@top-celestial.com" className="btn btn-primary">{t('solutions.cta.btn_contact')}</a>
-            <a href="mailto:demo@top-celestial.com" className="btn btn-secondary">{t('solutions.cta.btn_demo')}</a>
+            <a href="mailto:service@dr-os.io" className="btn btn-primary">{t('solutions.cta.btn_contact')}</a>
+            <a href="mailto:service@dr-os.io" className="btn btn-secondary">{t('solutions.cta.btn_demo')}</a>
           </div>
         </div>
       </section>
