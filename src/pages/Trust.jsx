@@ -222,8 +222,8 @@ export default function Trust() {
             </h2>
             <p style={{ color: 'var(--text-secondary)', maxWidth: '850px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.7' }}>
               {isZh 
-                ? 'DROS 採用解耦的雙層信任架構 (GATI)：Layer-1 憑證結算支援去中心化帳本 (DLT/DID) 錨定，免除單點失效與企業壟斷風險；Layer-2 執行歸屬由 GuardVM 於本地記憶體極速 (<0.8ms) 同步校驗「依執行期動態綁定 (By-Execution)」的數位憑證，兼顧全球公信力與極致防禦效能。'
-                : 'DROS adopts a decoupled dual-layer trust network (GATI): Layer-1 trust settlement supports decentralized ledger (DLT/DID) anchoring to eliminate single points of failure and corporate monopolies, while Layer-2 execution attribution is verified by GuardVM locally in microseconds (<0.8ms) via dynamic By-Execution certificates, balancing global credibility with extreme performance.'}
+                ? 'DROS 採用解耦的雙層信任架構 (GATI)：Layer-1 憑證結算支援去中心化帳本 (DLT/DID) 錨定，免除單點失效與企業壟斷風險；Layer-2 執行歸屬由 GuardVM 於本地記憶體極速 (&lt;0.8ms) 同步校驗「依執行期動態綁定 (By-Execution)」的數位憑證，兼顧全球公信力與極致防禦效能。'
+                : 'DROS adopts a decoupled dual-layer trust network (GATI): Layer-1 trust settlement supports decentralized ledger (DLT/DID) anchoring to eliminate single points of failure and corporate monopolies, while Layer-2 execution attribution is verified by GuardVM locally in microseconds (&lt;0.8ms) via dynamic By-Execution certificates, balancing global credibility with extreme performance.'}
             </p>
           </div>
 
@@ -278,7 +278,7 @@ export default function Trust() {
             </h2>
             <p style={{ color: 'var(--text-secondary)', maxWidth: '850px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.7' }}>
               {isZh 
-                ? 'DROS 不僅提供本地執行期防禦，更建構了全球智能體網路的解耦雙層信任協議。Layer-1 帶外結算層可選錨定去中心化帳本 (DLT/DID) 以免除單點失效與企業壟斷風險；Layer-2 執行歸屬由 GuardVM 於本地記憶體極速 (<0.8ms) 同步校驗「依執行期動態綁定 (By-Execution)」的數位憑證，兼顧全球公信力與運行期極致效能。'
+                ? 'DROS 不僅提供本地執行期防禦，更建構了全球智能體網路的解耦雙層信任協議。Layer-1 帶外結算層可選錨定去中心化帳本 (DLT/DID) 以免除單點失效與企業壟斷風險；Layer-2 執行歸屬由 GuardVM 於本地記憶體極速 (&lt;0.8ms) 同步校驗「依執行期動態綁定 (By-Execution)」的數位憑證，兼顧全球公信力與運行期極致效能。'
                 : 'DROS establishes the GATI protocol: Layer-1 trust settlement supports decentralized ledger anchoring to eliminate corporate monopoly, while Layer-2 runtime attribution enforces microsecond-level certificate validation on-device, balancing global credibility with extreme performance.'}
             </p>
           </div>
@@ -304,7 +304,7 @@ export default function Trust() {
               {/* Responsive Iframe Container */}
               <div style={{ position: 'relative', width: '100%', paddingBottom: '75%', height: 0, overflow: 'hidden', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)', backgroundColor: '#0E161B' }}>
                 <iframe 
-                  src={isZh ? '/src/assets/DROS_Visual_Assets/dros_gati_animator.html' : '/src/assets/DROS_Visual_Assets/dros_gati_animator_en.html'} 
+                  src={isZh ? '/assets/DROS_Visual_Assets/dros_gati_animator.html' : '/assets/DROS_Visual_Assets/dros_gati_animator_en.html'} 
                   style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none' }}
                   title="DROS GATI Simulator"
                 />

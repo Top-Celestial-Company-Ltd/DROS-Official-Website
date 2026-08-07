@@ -34,7 +34,7 @@ export default function FAQ() {
 
       {/* FAQ Accordion Section */}
       <section style={{maxWidth: '800px', margin: '0 auto'}}>
-        {categories.map((category, catIndex) => (
+        {categories && Array.isArray(categories) && categories.map((category, catIndex) => (
           <div key={catIndex} style={{marginBottom: '3rem'}}>
             <h2 style={{fontSize: '1.5rem', color: 'var(--accent-blue)', borderBottom: '1px solid rgba(0, 240, 255, 0.2)', paddingBottom: '0.5rem', marginBottom: '1.5rem'}}>
               {category.name}
