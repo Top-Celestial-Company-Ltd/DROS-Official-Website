@@ -9,7 +9,24 @@
   "contact_btn": "聯絡我們 (Contact Us)",
   "categories": [
     {
-      "name": "基礎問題",
+      "name": "開放身份與在地治理 (RFC-010 & 6-Pillars)",
+      "questions": [
+        {
+          "q": "什麼是「開放身份，在地治理 (Open Identity, Localized Governance)」範式？",
+          "a": "在 Agentic Web 時代，外部與跨國 Agent 攜帶符合 **RFC-010 W3C DID Open Passport** 標準的護照進入企業或個人系統流通。然而，外部護照宣告的最高權限（例如主張存取財務資料庫）不代表本地端必須照單全收。\n\nDROS 的核心哲學是**「開放身份流通，堅持在地確定性硬熔斷」**：企業或機關本地端的 **GuardVM 網關** 透過 $O(1)$ Capability Bitmaps 確定性地實施在地權限區隔。即使外部 Agent 攜帶高權限護照，本地 GuardVM 依然會在 $26.1\\ \\mu\\text{s}$ 內硬性進行 C-ABI 攔截與遮蔽，無視並阻斷過度的外部存取請求。"
+        },
+        {
+          "q": "VajraAgent 主控頁控制台在 Startup, Enterprise 與 Sovereign 有何 UI 介面與功能差異？",
+          "a": "VajraAgent 針對不同規模提供階梯式的 UI 控制台介面：\n- **Startup (單機 Agent 護照控制台)**：專注於單機與個人 Agent 護照發行與 26.1μs 本地熔斷日誌查看。\n- **Enterprise (企業雙向權限總控台)**：具備對內發行 DIT (DROS Identity Token) 身分憑證與對外視覺化 Capability 勾選介面，管理者可一鍵設定對內/對外雙向權限遮蔽，並包含 **$<1\\ \\mu\\text{s}$ RCU 一鍵黑名單按鈕**。\n- **Sovereign (全網 Swarm 戰術指揮中心)**：提供大規模跨國 Swarm 戰術圖譜監控，支援 **1ms 全網緊急熔斷 Kill-Switch** 觸發。"
+        },
+        {
+          "q": "DROS-6P 六大信任邊界 (6-Pillars) 如何落地？",
+          "a": "DROS-6P 透過物理 C-ABI 與 eBPF 帶內執行層，完整閉環六大信任問題：\n1. **Principal**：透過 3-Tier PKI 簽署 DIT 驗證身份。\n2. **Authorization**：透過 $O(1)$ Capability Bitmaps 精確區隔工具存取權。\n3. **Tool/Action Bound**：透過 FFI 邊界 $26.1\\ \\mu\\text{s}$ 物理硬熔斷。\n4. **Policy Gate**：透過 PII/PHI 動態遮蔽、HITL 懸停與 ZKP-Lite 選擇性揭露。\n5. **Audit Log**：透過 SHA-256 Merkle Hash Chain + Ed25519 生成不可篡改追溯鏈。\n6. **Revocation**：透過 $O(1)$ RCU 原子指針切換提供 $<1\\ \\mu\\text{s}$ 即時撤銷 (HTTP 403)。"
+        }
+      ]
+    },
+    {
+      "name": "基礎問答",
       "questions": [
         {
           "q": "DROS 是什麼？",

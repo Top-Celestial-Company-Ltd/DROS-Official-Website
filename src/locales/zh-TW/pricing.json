@@ -87,22 +87,18 @@
     "col_enterprise": "🟣 Enterprise",
     "col_sovereign": "👑 Sovereign",
     "rows": [
-      ["目標客戶", "個人試用", "個人開發者", "10~50 人新創", "中大型企業", "金融 / 國防"],
-      ["使用期限", "1 個月試用", "年度訂閱", "年度訂閱", "年度訂閱", "專案合約"],
+      ["目標客戶", "個人試用", "個人開發者", "10~50 人新創", "中大型企業", "金融 / 國防 / 關鍵基建"],
+      ["使用期限", "1 個月試用", "年度訂閱", "年度訂閱", "年度訂閱", "專案雙向合約"],
       ["Machine UUIDs", "1 組", "1 組", "3 組", "15 組", "無限制"],
-      ["Concurrent Agents", "2 個", "5 個", "30 個 (3×10)", "450 個 (15×30)", "無限制"],
-      ["Level 1：FFI 微內核熔斷", "✅ 限時", "✅", "✅", "✅", "✅"],
-      ["Level 1：C-ABI 記憶體保護", "✅ 限時", "✅", "✅", "✅", "✅"],
-      ["Level 2：資訊流控制 (IFC)", "❌", "❌", "✅", "✅", "✅"],
-      ["Level 2：動態污點追蹤", "❌", "❌", "✅", "✅", "✅"],
-      ["Level 2：跨通道洩密阻斷 (POL-0021)", "❌", "❌", "✅", "✅", "✅"],
-      ["Level 3：Auto-DSL 飛輪引擎", "❌", "❌", "❌", "⭐", "⭐"],
-      ["Level 3：動態 Baseline 熔斷", "❌", "❌", "❌", "✅", "✅"],
-      ["Level 3：HIL 多重簽章", "❌", "❌", "❌", "✅", "✅"],
-      ["Level 3：CoW 1秒快照回滾", "❌", "❌", "❌", "✅", "✅"],
-      ["100% Air-Gapped 離線部署", "❌", "❌", "❌", "✅", "✅"],
-      ["零停機熱加載", "❌", "❌", "手動重載", "✅ 毫秒級", "✅ 分散式"],
-      ["部署環境", "Local PC", "Local / Docker", "VM / NAS", "K8s / GKE", "Air-Gapped / FPGA"]
+      ["Concurrent Agents", "2 個", "5 個", "30 個 (3×10)", "450 個 (15×30)", "無限制 (Swarm)"],
+      ["VajraAgent 主控頁控制台", "單機 Agent 護照控制台", "單機 Agent 護照控制台", "單機 Agent 護照控制台", "企業雙向權限總控台 (對內發行 DIT、對外 Capability 勾選)", "全網 Swarm 戰術指揮中心 (1ms 全網 Kill-Switch)"],
+      ["Pillar 1: Principal (RFC-010 護照 / DIT)", "✅ 30 天試用憑證", "✅ 單機 DIT 憑證", "✅ 雙向權限標籤發行", "✅ 企業階層式 PKI Token 發行", "✅ 跨國網域 Sovereign DID"],
+      ["Pillar 2: Authorization (Capability Bitmaps)", "✅ $O(1)$ 基礎位元圖", "✅ $O(1)$ 基礎位元圖", "✅ 視覺化勾選與動態 Bitmaps", "✅ 企業級 256-bit 位元矩陣", "✅ 自訂硬體級 SIMD 位元遮罩"],
+      ["Pillar 3: Tool/Action Bound (C-ABI 熔斷)", "✅ $26.1\\ \\mu\\text{s}$ 帶內硬熔斷", "✅ $26.1\\ \\mu\\text{s}$ 帶內硬熔斷", "✅ $26.1\\ \\mu\\text{s}$ 帶內硬熔斷", "✅ $26.1\\ \\mu\\text{s}$ 帶內硬熔斷", "✅ $26.1\\ \\mu\\text{s}$ 硬體 eBPF/FPGA 熔斷"],
+      ["Pillar 4: Policy Gate (動態遮蔽 / HITL / ZKP)", "❌", "❌", "✅ PII 動態遮蔽與 HITL 懸停", "✅ 完整 ZKP-Lite 零知識證明與 HITL", "✅ 國防級雙人授權與硬體門閥"],
+      ["Pillar 5: Audit Log (Merkle Hash Chain)", "❌", "❌", "✅ 本地不可篡改追溯", "✅ SHA-256 Merkle 雜湊鏈 + Ed25519 簽章", "✅ 分散式鏈上/跨伺服器稽核"],
+      ["Pillar 6: Revocation (<1μs RCU 一鍵撤銷)", "❌", "❌", "✅ 一鍵黑名單按鈕", "✅ 一鍵按鈕 $<1\\ \\mu\\text{s}$ RCU 撤銷 (HTTP 403)", "✅ 全網 1ms 戰術 Kill-Switch"],
+      ["部署環境", "Local PC", "Local / Docker", "VM / NAS", "K8s / GKE / On-Premise", "Air-Gapped / Sovereign Cloud"]
     ]
   },
   "cta": {
