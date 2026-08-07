@@ -20,8 +20,8 @@
           "a": "VajraAgent provides tiered UI consoles tailored to organizational scales:\n- **Startup (Single Agent Passport Console)**: Single-machine token issuance and 26.1μs interception logging.\n- **Enterprise (Enterprise Bidirectional Control Console)**: Features DIT token issuance and visual capability toggle checkboxes for bidirectional privacy controls, along with a **$<1\\ \\mu\\text{s}$ RCU 1-click blacklist button**.\n- **Sovereign (Swarm Tactical Command Center)**: Real-time swarm monitoring topology with a **1ms Global Tactical Kill-Switch**."
         },
         {
-          "q": "How does DROS-6P enforce the Six Fundamental Trust Boundaries?",
-          "a": "DROS-6P closes all six trust boundaries within a single C-ABI and eBPF in-band kernel:\n1. **Principal**: Enforced via 3-tier PKI-signed DROS Identity Tokens (DIT).\n2. **Authorization**: Enforced via $O(1)$ zero-heap Capability Bitmaps.\n3. **Tool/Action Bound**: Enforced via $26.1\\ \\mu\\text{s}$ C-ABI binary interception.\n4. **Policy Gate**: Enforced via PII/PHI redaction, HITL suspension, and ZKP-Lite.\n5. **Audit Log**: Enforced via SHA-256 Merkle Hash Chains and Ed25519 signatures.\n6. **Revocation**: Enforced via $O(1)$ RCU atomic pointer swaps ($<1\\ \\mu\\text{s}$ HTTP 403)."
+          "q": "How does DROS enforce the Six Fundamental Trust Boundaries?",
+          "a": "DROS closes all six trust boundaries within a single C-ABI and eBPF in-band kernel:\n1. **Principal**: Enforced via 3-tier PKI-signed DROS Identity Tokens (DIT).\n2. **Authorization**: Enforced via $O(1)$ zero-heap Capability Bitmaps.\n3. **Tool/Action Bound**: Enforced via $26.1\\ \\mu\\text{s}$ C-ABI binary interception.\n4. **Policy Gate**: Enforced via PII/PHI redaction, HITL suspension, and ZKP-Lite.\n5. **Audit Log**: Enforced via SHA-256 Merkle Hash Chains and Ed25519 signatures.\n6. **Revocation**: Enforced via $O(1)$ RCU atomic pointer swaps ($<1\\ \\mu\\text{s}$ HTTP 403)."
         }
       ]
     },

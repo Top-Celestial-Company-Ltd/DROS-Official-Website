@@ -15,21 +15,21 @@
     "btn": "Get Commercial License"
   },
   "header": {
-    "title": "Deterministic Runtime Operating System (DROS-6P)",
-    "version": "v2.0.0 (IEEE DROS-6P Unified Edition)",
+    "title": "Deterministic Runtime Operating System (DROS)",
+    "version": "v2.0.0 (IEEE DROS Unified Edition)",
     "last_updated": "Last updated: 2026-08"
   },
   "warning": {
     "title": "Proprietary Code Protection & Commercial Licensing Required",
-    "desc": "The VajraClaw SDK, plugins, and <code>dros_core</code> / <code>vajra_claw</code> C-FFI binaries are protected under U.S. Provisional Patent Application No. 64/111,973 (Patent Pending). To legally execute or deploy VajraClaw adapters within production or staging environments, your organization must possess an active Commercial License."
+    "desc": "The VajraClaw SDK, plugins, and the <code>dros_core</code> / <code>vajra_claw</code> C-FFI binaries are protected under U.S. Provisional Patent Application No. 64/111,973 (Patent Pending). To legally execute or deploy the VajraClaw adapters within production or staging environments, your organization must possess an active Commercial License."
   },
   "sections": {
     "getting_started": {
-      "title": "1. Getting Started",
-      "what_is_dros": "What is DROS-6P?",
-      "dros_desc": "DROS-6P is a <strong>Unified Deterministic Runtime Governance Kernel</strong> designed for autonomous enterprise AI agents and Multi-Agent Swarms. Built on IEEE publication standards, DROS-6P closes all <strong>Six Fundamental Trust Boundaries</strong> within a single C-ABI and eBPF in-band execution layer, achieving an empirical average decision latency of <strong>26.1 μs</strong> ($p_{99} = 29.8\\ \\mu\\text{s}$), physically bounding AI agent actions with cryptographic non-repudiation.",
-      "core_philosophy": "Core Philosophy: 6-Pillars Trust Closure & Localized Governance",
-      "philosophy_quote": "DROS-6P embodies the 'Open Identity, Localized Governance' paradigm: external agents present RFC-010 W3C DID Open Passports, while local GuardVM gateways enforce C-ABI hard interception in 26.1 μs. We do not attempt to constrain LLM thinking; we enforce deterministic $O(1)$ capability bitmask boundaries on what agents are physically allowed to execute.",
+      "title": "1. 快速入門 (Getting Started)",
+      "what_is_dros": "What is DROS?",
+      "dros_desc": "DROS is a <strong>Unified Deterministic Runtime Governance Kernel</strong> designed for autonomous enterprise AI agents and Multi-Agent Swarms. Built on IEEE publication standards, DROS closes all <strong>Six Fundamental Trust Boundaries</strong> within a single C-ABI and eBPF in-band execution layer, achieving an empirical average decision latency of <strong>26.1 μs</strong> ($p_{99} = 29.8\\ \\mu\\text{s}$), physically bounding AI agent actions with cryptographic non-repudiation.",
+      "core_philosophy": "Core Philosophy: 6-Pillars Deterministic Trust Closure & Localized Governance",
+      "philosophy_quote": "DROS embodies the 'Open Identity, Localized Governance' paradigm: external agents present RFC-010 W3C DID Open Passports, while local GuardVM gateways enforce C-ABI hard interception in 26.1 μs. We do not attempt to constrain LLM thinking; we enforce deterministic $O(1)$ capability bitmask boundaries on what agents are physically allowed to execute.",
       "quick_start": "3-Minute Quick Start",
       "steps": [
         "Download or checkout the free-trial VajraClaw core binaries (.dll / .so / .aar) from Gumroad",
@@ -203,11 +203,11 @@
     },
     "comparison": {
       "title": "8. Architecture Comparison",
-      "desc": "Traditional AI security falls into either probabilistic semantic filtering (slow & non-deterministic) or OS process sandboxing (context-blind). DROS-6P fills the Missing Layer using C-ABI interception and 6-Pillars capability matrices.",
-      "headers": ["Governance Dimension", "Semantic Guards (e.g. NeMo)", "Kernel Sandbox (e.g. eBPF)", "DROS-6P Unified Kernel", "DROS-6P Advantage"],
+      "desc": "Traditional AI security falls into either probabilistic semantic filtering (slow & non-deterministic) or OS process sandboxing (context-blind). DROS fills the Missing Layer using C-ABI interception and 6-Pillars capability matrices.",
+      "headers": ["Governance Dimension", "Semantic Guards (e.g. NeMo)", "Kernel Sandbox (e.g. eBPF)", "DROS Unified Kernel", "DROS Advantage"],
       "rows": [
-        ["Interception Timing", "Runtime LLM Semantic Evaluation", "Runtime OS Process Intercept", "AOT Compiled Bitmaps, In-Band Intercept", "Zero Runtime LLM Evaluation Overhead"],
-        ["Trust Boundary Coverage", "Partial Policy Filtering", "None (Context-Blind)", "Full 6-Pillars Trust Boundary Closure", "IEEE DROS-6P Paper Specification"],
+        ["Timing", "Runtime LLM Semantic Interpretation", "Runtime OS Process Intercept", "Compile-time Bitmaps, In-Band Intercept", "Zero Runtime LLM Overhead"],
+        ["Trust Boundary Coverage", "Partial Policy Filtering", "None (Context-Blind)", "Full 6-Pillars Trust Boundary Closure", "IEEE DROS Paper Specification"],
         ["Core Decision Latency", "Milliseconds to Seconds (300-2000ms)", "Microseconds (1-10μs)", "Average 26.1 μs ($p_{99} = 29.8\\ \\mu\\text{s}$)", "Microsecond Interception, No DDoS Bottleneck"],
         ["Audit & Provenance", "None (Plain Text/JSON Logs)", "None", "SHA-256 Merkle Hash Chain + Ed25519", "Forensic-Grade Non-Repudiation"],
         ["Revocation & Fusing", "Re-prompting (Slow)", "Process Kill (Brute Force)", "O(1) RCU Pointer Swap (<1μs)", "Instant HTTP 403, No Restart Required"]

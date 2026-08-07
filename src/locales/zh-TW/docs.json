@@ -15,8 +15,8 @@
     "btn": "Get Commercial License"
   },
   "header": {
-    "title": "Deterministic Runtime Operating System (DROS-6P)",
-    "version": "v2.0.0 (IEEE DROS-6P Unified Edition)",
+    "title": "Deterministic Runtime Operating System (DROS)",
+    "version": "v2.0.0 (IEEE DROS Unified Edition)",
     "last_updated": "Last updated: 2026-08"
   },
   "warning": {
@@ -26,10 +26,10 @@
   "sections": {
     "getting_started": {
       "title": "1. 快速入門 (Getting Started)",
-      "what_is_dros": "DROS-6P 是什麼？",
-      "dros_desc": "DROS-6P 是一個<strong>統合確定性執行期治理內核 (Unified Deterministic Runtime Governance Kernel)</strong>，專為企業級自主 AI Agent 與 Multi-Agent Swarm 架構設計。依據 IEEE 發表論文標準，DROS-6P 在 C-ABI 與 eBPF 帶內執行層完整閉環企業 AI 的<strong>六大核心信任邊界 (Six Fundamental Trust Boundaries)</strong>，實測 average 決策延遲低至 <strong>26.1 μs</strong> (p99 = 29.8 μs)，從根本上為 Agent 戴上密碼學的實體安全手銬。",
+      "what_is_dros": "DROS 是什麼？",
+      "dros_desc": "DROS 是一個<strong>統合確定性執行期治理內核 (Unified Deterministic Runtime Governance Kernel)</strong>，專為企業級自主 AI Agent 與 Multi-Agent Swarm 架構設計。依據 IEEE 發表論文標準，DROS 在 C-ABI 與 eBPF 帶內執行層完整閉環企業 AI 的<strong>六大核心信任邊界 (Six Fundamental Trust Boundaries)</strong>，實測 average 決策延遲低至 <strong>26.1 μs</strong> (p99 = 29.8 μs)，從根本上為 Agent 戴上密碼學的實體安全手銬。",
       "core_philosophy": "核心理念：6-Pillars 確定性信任閉環與開放身份在地治理",
-      "philosophy_quote": "DROS-6P 貫徹「開放身份，在地治理 (Open Identity, Localized Governance)」範式：外部 Agent 可攜帶 RFC-010 W3C DID Open Passport 護照流通，但本地端 GuardVM 網關在 26.1 μs 內以硬熔斷決定在地存取權限。我們不干涉 Agent 的思考，我們只用 $O(1)$ 位元矩陣硬性約束 Agent「物理上被允許執行什麼」。",
+      "philosophy_quote": "DROS 貫徹「開放身份，在地治理 (Open Identity, Localized Governance)」範式：外部 Agent 可攜帶 RFC-010 W3C DID Open Passport 護照流通，但本地端 GuardVM 網關在 26.1 μs 內以硬熔斷決定在地存取權限。我們不干涉 Agent 的思考，我們只用 $O(1)$ 位元矩陣硬性約束 Agent「物理上被允許執行什麼」。",
       "quick_start": "3 分鐘上手流程",
       "steps": [
         "前往官方下載或透過 Gumroad 獲取 0 元免費版 VajraClaw 核心二進位動態庫 (.dll / .so / .aar)",
@@ -203,11 +203,11 @@
     },
     "comparison": {
       "title": "8. 與其它安全防禦方案之架構對比",
-      "desc": "在 AI 安全防禦演進中，傳統方案常陷入『思想層語意過濾 (慢且不確定)』或『系統進程層 Context-Blind (上下文丟失)』的盲區。DROS-6P 透過物理 C-ABI 攔截與 6-Pillars 憑證矩陣，填補了生態系中的 Missing Layer。",
-      "headers": ["治理維度", "語意防護 (如 NeMo)", "內核沙箱 (如 eBPF)", "DROS-6P 統合內核", "DROS-6P 技術優勢"],
+      "desc": "在 AI 安全防禦演進中，傳統方案常陷入『思想層語意過濾 (慢且不確定)』或『系統進程層 Context-Blind (上下文丟失)』的盲區。DROS 透過物理 C-ABI 攔截與 6-Pillars 憑證矩陣，填補了生態系中的 Missing Layer。",
+      "headers": ["治理維度", "語意防護 (如 NeMo)", "內核沙箱 (如 eBPF)", "DROS 統合內核", "DROS 技術優勢"],
       "rows": [
         ["防護時機", "運行期 LLM 動態語意解讀", "運行期 OS 進程攔截", "編譯期 Bitmaps 鑄造，帶內硬攔截", "零運行時 LLM 決策負載"],
-        ["信任邊界覆蓋", "僅包含部分 Policy", "無 (僅 Context-Blind)", "完整閉環 6-Pillars 信任邊界", "符合 IEEE DROS-6P 論文規格"],
+        ["信任邊界覆蓋", "僅包含部分 Policy", "無 (僅 Context-Blind)", "完整閉環 6-Pillars 信任邊界", "符合 IEEE DROS 論文規格"],
         ["核心評估延遲", "毫秒至秒級 (300-2000ms)", "微秒級 (1-10μs)", "帶內內核平均 26.1 μs ($p_{99} = 29.8\\ \\mu\\text{s}$)", "微秒級硬熔斷，無 DDoS 效能衰退"],
         ["稽核憑證與追溯", "無 (純文字/JSON 日誌)", "無", "SHA-256 Merkle 雜湊鏈 + Ed25519", "Forensic 級不可否認性"],
         ["撤銷與熔斷機制", "重新 Prompt 評估 (慢)", "進程 Kill (粗暴)", "O(1) RCU 原子指針切換 (<1μs)", "即時 HTTP 403 阻斷，無須重啟"]
