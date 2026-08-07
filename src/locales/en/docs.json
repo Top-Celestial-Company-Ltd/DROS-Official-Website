@@ -15,21 +15,21 @@
     "btn": "Get Commercial License"
   },
   "header": {
-    "title": "Deterministic Runtime Operating System",
-    "version": "v1.0.0 (First Commercial Release)",
-    "last_updated": "Last updated: 2026-05"
+    "title": "Deterministic Runtime Operating System (DROS-6P)",
+    "version": "v2.0.0 (IEEE DROS-6P Unified Edition)",
+    "last_updated": "Last updated: 2026-08"
   },
   "warning": {
     "title": "Proprietary Code Protection & Commercial Licensing Required",
-    "desc": "The VajraClaw SDK, plugins, and the <code>vajra_claw.dll/.so</code> C-FFI binaries are strictly protected by international copyright laws. These integration tools are <strong>not open-source</strong>. To legally mount, compile, or execute the VajraClaw adapters within your production or staging environments, your organization must possess an active, valid Commercial License or an approved Dharma Exemption."
+    "desc": "The VajraClaw SDK, plugins, and <code>dros_core</code> / <code>vajra_claw</code> C-FFI binaries are protected under U.S. Provisional Patent Application No. 64/111,973 (Patent Pending). To legally execute or deploy VajraClaw adapters within production or staging environments, your organization must possess an active Commercial License."
   },
   "sections": {
     "getting_started": {
       "title": "1. Getting Started",
-      "what_is_dros": "What is DROS?",
-      "dros_desc": "DROS is a <strong>Runtime Attribution Framework & microkernel execution governance substrate</strong> designed for Enterprise AI and Multi-Agent mesh systems. Acting as the <strong>Missing Layer</strong> in the AI security ecosystem, DROS does not compete with cloud monitors or orchestration frameworks. Instead, it deploys directly at the binary FFI choke points, addressing the structural flaws of model-level semantic guardrails and traditional sandboxes that are Context-Blind (context loss), physically chaining AI execution with cryptographic seals.",
-      "core_philosophy": "Core Philosophy: Missing Layer Orchestration & Cooperation",
-      "philosophy_quote": "DROS acts as a neutral execution-layer security officer, complementing Permiso's cloud security, Microsoft's Agent Governance Toolkit, and host-level SELinux/eBPF. We do not control what the Agent 'imagines'; we enforce what the Agent is 'physically permitted to execute' via O(1) bitmap logic.",
+      "what_is_dros": "What is DROS-6P?",
+      "dros_desc": "DROS-6P is a <strong>Unified Deterministic Runtime Governance Kernel</strong> designed for autonomous enterprise AI agents and Multi-Agent Swarms. Built on IEEE publication standards, DROS-6P closes all <strong>Six Fundamental Trust Boundaries</strong> within a single C-ABI and eBPF in-band execution layer, achieving an empirical average decision latency of <strong>26.1 μs</strong> ($p_{99} = 29.8\\ \\mu\\text{s}$), physically bounding AI agent actions with cryptographic non-repudiation.",
+      "core_philosophy": "Core Philosophy: 6-Pillars Trust Closure & Localized Governance",
+      "philosophy_quote": "DROS-6P embodies the 'Open Identity, Localized Governance' paradigm: external agents present RFC-010 W3C DID Open Passports, while local GuardVM gateways enforce C-ABI hard interception in 26.1 μs. We do not attempt to constrain LLM thinking; we enforce deterministic $O(1)$ capability bitmask boundaries on what agents are physically allowed to execute.",
       "quick_start": "3-Minute Quick Start",
       "steps": [
         "Download or checkout the free-trial VajraClaw core binaries (.dll / .so / .aar) from Gumroad",
@@ -202,15 +202,15 @@
       "code_title": "Python Calling Example"
     },
     "comparison": {
-      "title": "8. Architectural Comparison with Other Security Lines",
-      "desc": "In the historical evolution of AI security, alternative solutions often fall into the trap of semantic-only guardrails or context-blind process sandboxing. DROS fills this gap by acting as the neutral execution-layer Missing Layer.",
-      "headers": ["Dimension", "Semantic Guards (e.g., NeMo)", "OS Sandboxes (e.g., eBPF)", "DROS RAF Substrate", "DROS Advantage"],
+      "title": "8. Architecture Comparison",
+      "desc": "Traditional AI security falls into either probabilistic semantic filtering (slow & non-deterministic) or OS process sandboxing (context-blind). DROS-6P fills the Missing Layer using C-ABI interception and 6-Pillars capability matrices.",
+      "headers": ["Governance Dimension", "Semantic Guards (e.g. NeMo)", "Kernel Sandbox (e.g. eBPF)", "DROS-6P Unified Kernel", "DROS-6P Advantage"],
       "rows": [
-        ["Timing", "Dynamic Runtime Evaluation", "Dynamic OS syscall interception", "Compile-time Minting, Read-Only Runtime", "Zero runtime decision latency"],
-        ["Context Awareness", "Full (High Latency)", "None (Context-Blind)", "Maps & binds directly to running thread", "Solves Context Loss gaps"],
-        ["Core Latency", "Milliseconds to Seconds (300-2000ms)", "Microseconds (1-10μs)", "Core 484.8ns / Offline O(1) Lookup", "Constant-time physical melt"],
-        ["Auditability", "None (Plain text/JSON logs)", "None", "Signed policy.bin with Epoch SHA-256 Hash", "Forensic-grade Non-repudiation"],
-        ["Edge Support", "Poor (GPU & memory overhead)", "Linux Only", "Excellent (Kotlin AAR / Swift XCFramework)", "Hardware Keystore/Secure Enclave binding"]
+        ["Interception Timing", "Runtime LLM Semantic Evaluation", "Runtime OS Process Intercept", "AOT Compiled Bitmaps, In-Band Intercept", "Zero Runtime LLM Evaluation Overhead"],
+        ["Trust Boundary Coverage", "Partial Policy Filtering", "None (Context-Blind)", "Full 6-Pillars Trust Boundary Closure", "IEEE DROS-6P Paper Specification"],
+        ["Core Decision Latency", "Milliseconds to Seconds (300-2000ms)", "Microseconds (1-10μs)", "Average 26.1 μs ($p_{99} = 29.8\\ \\mu\\text{s}$)", "Microsecond Interception, No DDoS Bottleneck"],
+        ["Audit & Provenance", "None (Plain Text/JSON Logs)", "None", "SHA-256 Merkle Hash Chain + Ed25519", "Forensic-Grade Non-Repudiation"],
+        ["Revocation & Fusing", "Re-prompting (Slow)", "Process Kill (Brute Force)", "O(1) RCU Pointer Swap (<1μs)", "Instant HTTP 403, No Restart Required"]
       ]
     },
     "license": {
