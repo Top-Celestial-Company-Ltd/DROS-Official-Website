@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DROS / VajraClaw 官方網站 - 四大版本規格比較表 (對齊 IEEE 6-Pillars & RFC-010 護照標準)</title>
+    <style>
+        :root {
+            --bg-primary: #0a0d14;
+            --bg-card: #121824;
+            --bg-card-featured: #1a2234;
+            --border-color: #1e293b;
+            --border-featured: #06b6d4;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-cyan: #06b6d4;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-green: #10b981;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .matrix-section {
+            max-width: 1150px;
+            width: 100%;
+        }
+
+        .matrix-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .matrix-header h2 {
+            font-size: 2.3rem;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .matrix-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-card);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        table.matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            min-width: 900px;
+        }
+
+        th, td {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.95rem;
+        }
+
+        th {
+            background: #0f172a;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--text-main);
+        }
+
+        th.featured-col, td.featured-col {
+            background: rgba(6, 182, 212, 0.05);
+            border-left: 1px solid rgba(6, 182, 212, 0.2);
+            border-right: 1px solid rgba(6, 182, 212, 0.2);
+        }
+
+        th.featured-col {
+            background: rgba(6, 182, 212, 0.12);
+            position: relative;
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            color: #000;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 2px 10px;
+            border-radius: 12px;
+            text-transform: uppercase;
+        }
+
+        .category-row td {
+            background: rgba(30, 41, 59, 0.5);
+            font-weight: 700;
+            color: var(--accent-cyan);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        .check-icon {
+            color: var(--accent-green);
+            font-weight: bold;
+        }
+
+        .cross-icon {
+            color: #64748b;
+        }
+
+        .star-icon {
+            color: #f59e0b;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            text-align: center;
+            width: 80%;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            color: #000;
+            font-weight: 700;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+        }
+
+        .price-tag {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-top: 4px;
+        }
+
+        .price-sub {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+
+<section class="matrix-section">
+    <div class="matrix-header">
+        <h2>選擇最適合您的 DROS / VajraClaw 版本</h2>
+        <p>「開放身份，在地治理 (Open Identity, Localized Governance)」── 對齊 IEEE 論文 6-Pillars 與 U.S. Patent 64/111,973 標準</p>
+    </div>
+
+    <div class="table-responsive">
+        <table class="matrix-table">
+            <thead>
+                <tr>
+                    <th style="width: 28%;">規格維度 / 版本</th>
+                    <th style="width: 18%;">🟢 Hacker<br><div class="price-tag">$149 <span class="price-sub">/ 年</span></div></th>
+                    <th style="width: 18%;">🔵 Startup<br><div class="price-tag">$799 <span class="price-sub">/ 年</span></div></th>
+                    <th style="width: 18%;" class="featured-col">
+                        <div class="featured-badge">MOST POPULAR</div>
+                        🟣 Enterprise<br><div class="price-tag">$7,990 <span class="price-sub">/ 年起</span></div>
+                    </th>
+                    <th style="width: 18%;">👑 Sovereign<br><div class="price-tag">Contact Sales</div></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 類別：容量與機器授權 -->
+                <tr class="category-row">
+                    <td colspan="5">容量與適用規模 (Scale & Machine Licensing)</td>
+                </tr>
+                <tr>
+                    <td>目標客戶與場景</td>
+                    <td>個人開發者 / 學生</td>
+                    <td>10~50 人新創團隊</td>
+                    <td class="featured-col"><strong>中大型企業 / 上市公司</strong></td>
+                    <td>國防 / 政府 / 巨型金控</td>
+                </tr>
+                <tr>
+                    <td>機器授權 (Machine UUIDs)</td>
+                    <td>1 組 UUID</td>
+                    <td>3 組 UUIDs (3台伺服器)</td>
+                    <td class="featured-col"><strong>15 組 UUIDs (15台集群)</strong></td>
+                    <td>無限制 (Swarm 支援)</td>
+                </tr>
+                <tr>
+                    <td>Concurrent Agents 上限</td>
+                    <td>5 個 Agents</td>
+                    <td>30 個 Agents</td>
+                    <td class="featured-col"><strong>450 個 Agents (15台 × 30個)</strong></td>
+                    <td>無限制 (Swarm 支援)</td>
+                </tr>
+
+                <!-- 類別：6-Pillars 確定性治理與護照 -->
+                <tr class="category-row">
+                    <td colspan="5">6-Pillars 確定性治理與開放護照 (6-Pillar Enforcement & Open Passport)</td>
+                </tr>
+                <tr>
+                    <td>Pillar 1: Principal 身份證明</td>
+                    <td><span class="check-icon">✓</span> (libdros-id SDK)</td>
+                    <td><span class="check-icon">✓</span> (3-Tier PKI DIT 簽章)</td>
+                    <td class="featured-col"><span class="check-icon">✓</span> <strong>(跨域 BEC 憑證簽發)</strong></td>
+                    <td><span class="check-icon">✓</span> (晶片級硬體 Dongle 印記)</td>
+                </tr>
+                <tr>
+                    <td>Pillar 2: Authorization 權限區隔</td>
+                    <td>基礎 Scope 比對</td>
+                    <td><span class="check-icon">✓</span> 零堆積 Bitmaps</td>
+                    <td class="featured-col"><span class="check-icon">✓</span> <strong>全自訂 Capability 向量</strong></td>
+                    <td><span class="check-icon">✓</span> 動態位元圖多維矩陣</td>
+                </tr>
+                <tr>
+                    <td>Pillar 3: Tool Bound 工具硬阻斷</td>
+                    <td>C-ABI 基礎攔截</td>
+                    <td><span class="check-icon">✓</span> 26.1μs 帶內硬熔斷</td>
+                    <td class="featured-col"><span class="check-icon">✓</span> <strong>Sub-500ns Thread Panic</strong></td>
+                    <td><span class="check-icon">✓</span> 晶片級硬體物理熔斷</td>
+                </tr>
+                <tr>
+                    <td>Pillar 4: Policy Gate 三大門閥</td>
+                    <td><span class="cross-icon">✗</span></td>
+                    <td><span class="check-icon">✓</span> PII 動態遮蔽</td>
+                    <td class="featured-col"><span class="check-icon">✓</span> <strong>HITL 雙簽 + ZKP-Lite</strong></td>
+                    <td><span class="check-icon">✓</span> 軍規級門閥矩陣</td>
+                </tr>
+                <tr>
+                    <td>Pillar 5: Audit Log 密碼學稽核</td>
+                    <td>基礎 JSON 鏈</td>
+                    <td><span class="check-icon">✓</span> Ed25519 數位簽章</td>
+                    <td class="featured-col"><span class="check-icon">✓</span> <strong>SHA-256 Merkle 雜湊鏈</strong></td>
+                    <td><span class="check-icon">✓</span> 不可否認性法院級憑證</td>
+                </tr>
+                <tr>
+                    <td>Pillar 6: Expiry/Revocation 秒撤</td>
+                    <td><span class="cross-icon">✗ (需重啟)</span></td>
+                    <td>🟡 15分鐘 BEC 自然過期</td>
+                    <td class="featured-col"><span class="check-icon">✓</span> <strong>&lt;1μs RCU 原子指針切換</strong></td>
+                    <td><span class="check-icon">✓</span> 分散式秒級網格撤銷</td>
+                </tr>
+                <tr>
+                    <td>RFC-010 開放 Agent 護照支持</td>
+                    <td><span class="check-icon">✓</span> 發行與簽章</td>
+                    <td><span class="check-icon">✓</span> 多角色 DIT 簽署</td>
+                    <td class="featured-col"><span class="check-icon">✓</span> <strong>企業 GuardVM 集中驗證</strong></td>
+                    <td><span class="check-icon">✓</span> 國防級 3-Tier 簽章鏈</td>
+                </tr>
+
+                <!-- 類別：VajraAgent 主控頁 UI 與管理維度 -->
+                <tr class="category-row">
+                    <td colspan="5">VajraAgent 主控頁控制台介面 (VajraAgent Control Panel UI)</td>
+                </tr>
+                <tr>
+                    <td>VajraAgent UI 控制台類型</td>
+                    <td>輕量單機 CLI 視窗</td>
+                    <td>單機 Agent 護照控制台</td>
+                    <td class="featured-col"><span class="star-icon">★</span> <strong>企業雙向權限總控台 (Web)</strong></td>
+                    <td><span class="star-icon">★</span> 全網 Swarm 戰術指揮中心</td>
+                </tr>
+                <tr>
+                    <td>對內/對外雙向權限勾選介面</td>
+                    <td><span class="cross-icon">✗</span></td>
+                    <td>基礎角色對照表</td>
+                    <td class="featured-col"><span class="check-icon">✓</span> <strong>完全視覺化 Capability 比對</strong></td>
+                    <td><span class="check-icon">✓</span> 多維矩陣點選</td>
+                </tr>
+                <tr>
+                    <td>微秒級決策開銷即時儀表板</td>
+                    <td><span class="cross-icon">✗</span></td>
+                    <td>基礎日誌列表</td>
+                    <td class="featured-col"><span class="check-icon">✓</span> <strong>26.1μs 即時毫秒級圖表</strong></td>
+                    <td><span class="check-icon">✓</span> 全網熱力圖與節點狀態</td>
+                </tr>
+                <tr>
+                    <td>一鍵 RCU 即時黑名單撤銷按鈕</td>
+                    <td><span class="cross-icon">✗</span></td>
+                    <td><span class="cross-icon">✗</span></td>
+                    <td class="featured-col"><span class="check-icon">✓</span> <strong>一鍵按鈕 &lt;1μs 撤銷 (HTTP 403)</strong></td>
+                    <td><span class="check-icon">✓</span> 全網 1ms 緊急 Kill-Switch</td>
+                </tr>
+
+                <!-- 類別：獨立加購與 SLA -->
+                <tr class="category-row">
+                    <td colspan="5">獨立產業加購包與部署 (Add-Ons & Deployment)</td>
+                </tr>
+                <tr>
+                    <td>彈性加購獨立產業合規 Package</td>
+                    <td><span class="cross-icon">✗</span></td>
+                    <td>💡 開放彈性加購</td>
+                    <td class="featured-col">⭐ <strong>開放彈性加購</strong></td>
+                    <td><span class="check-icon">✓</span> 包含完整權限</td>
+                </tr>
+                <tr>
+                    <td>100% Air-Gapped 離線運作</td>
+                    <td><span class="cross-icon">✗</span></td>
+                    <td><span class="cross-icon">✗</span></td>
+                    <td class="featured-col"><span class="check-icon">✓</span> <strong>支援 100% 離線 GuardVM</strong></td>
+                    <td><span class="check-icon">✓</span> 硬體 Dongle / 專屬 Cloud</td>
+                </tr>
+                <tr>
+                    <td>CTA 按鈕</td>
+                    <td><a href="#" class="cta-btn btn-outline">立即購買</a></td>
+                    <td><a href="#" class="cta-btn btn-outline">立即訂閱</a></td>
+                    <td class="featured-col"><a href="#" class="cta-btn btn-primary">立即選購 / 預約演示</a></td>
+                    <td><a href="#" class="cta-btn btn-outline">聯繫專案業務</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+</body>
+</html>
