@@ -250,35 +250,35 @@ export default function Home() {
               <Link to="/trust" className="btn btn-primary" style={{ padding: '0.8rem 2rem' }}>
                 {i18n.language === 'en' ? 'Explore Trust Page' : '進入確信驗證頁面'} &rarr;
               </Link>
-              <a href={`https://github.com/${githubUser}/Dharma-Reasoning-Operating-System`} target="_blank" rel="noreferrer" className="btn btn-secondary" style={{ padding: '0.8rem 2rem' }}>
-                {i18n.language === 'en' ? 'View on GitHub' : '在 GitHub 參與共建'}
-              </a>
+              <Link to="/docs" className="btn btn-secondary" style={{ padding: '0.8rem 2rem' }}>
+                {i18n.language === 'en' ? 'View Documentation' : '查看架構與技術規範'}
+              </Link>
             </div>
           </div>
           
           <div className="glass-card" style={{ zIndex: 1, background: 'rgba(10, 10, 12, 0.8)', border: '1px solid rgba(212,175,55,0.15)', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', padding: '2rem' }}>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', fontWeight: 'bold', color: 'var(--accent-gold)', fontFamily: 'monospace' }}>484.8 ns</div>
+              <div style={{ fontSize: '2rem', fontWeight: 'bold', color: 'var(--accent-gold)', fontFamily: 'monospace' }}>26.1 μs</div>
               <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '0.2rem' }}>
-                {i18n.language === 'en' ? 'Intercept Latency' : '核心攔截延遲'}
+                {i18n.language === 'en' ? 'In-Band Latency' : '帶內核心攔截延遲'}
               </div>
             </div>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', fontWeight: 'bold', color: 'var(--accent-blue)', fontFamily: 'monospace' }}>61,919</div>
+              <div style={{ fontSize: '2rem', fontWeight: 'bold', color: 'var(--accent-blue)', fontFamily: 'monospace' }}>100,000</div>
               <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '0.2rem' }}>
-                {i18n.language === 'en' ? 'Stress Queries' : '混沌壓測呼叫'}
+                {i18n.language === 'en' ? 'Benchmark Queries' : '基準壓測調用'}
               </div>
             </div>
             <div style={{ textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '1rem' }}>
-              <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#d2a8ff', fontFamily: 'monospace' }}>187</div>
+              <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#d2a8ff', fontFamily: 'monospace' }}>< 1 μs</div>
               <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '0.2rem' }}>
-                {i18n.language === 'en' ? 'RCU Swaps' : 'RCU 無鎖交換'}
+                {i18n.language === 'en' ? 'RCU Atomic Swap' : 'RCU 無鎖撤銷 (HTTP 403)'}
               </div>
             </div>
             <div style={{ textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '1rem' }}>
-              <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#27c93f', fontFamily: 'monospace' }}>0</div>
+              <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#27c93f', fontFamily: 'monospace' }}>100%</div>
               <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '0.2rem' }}>
-                {i18n.language === 'en' ? 'Race Conditions' : '競爭危害越權'}
+                {i18n.language === 'en' ? 'Hard Block Rate' : '紅隊對抗物理阻斷率'}
               </div>
             </div>
           </div>
@@ -299,7 +299,7 @@ export default function Home() {
         
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
           {[
-            { name: "DROS Main", repo: "Dharma-Reasoning-Operating-System", icon: "🌐", desc_tw: "主專案與核心規格總覽", desc_en: "Main Project & Specs Overview" },
+            { name: "DROS Main", repo: "DROS-Official-Website", icon: "🌐", desc_tw: "主專案與核心規格總覽", desc_en: "Main Project & Specs Overview" },
             { name: "Rust Core", repo: "dros-core-rs", icon: "⚙️", desc_tw: "記憶體安全的超高性能核心", desc_en: "Memory-safe high-performance core" },
             { name: "Go Core", repo: "dros-core-go", icon: "🐹", desc_tw: "高併發、易部署的雲端運行時", desc_en: "High-concurrency cloud runtime" },
             { name: "C++ Core", repo: "dros-core-cpp", icon: "⚡", desc_tw: "超低延遲的裸機/嵌入式引擎", desc_en: "Ultra-low latency bare-metal engine" },
@@ -359,9 +359,9 @@ export default function Home() {
           <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', marginBottom: '2rem', lineHeight: '1.8' }} dangerouslySetInnerHTML={{ __html: t('home.cta.desc') }}></p>
           
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href={`https://github.com/${githubUser}/Dharma-Reasoning-Operating-System`} target="_blank" rel="noreferrer" className="btn btn-secondary" style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
+            <Link to="/docs" className="btn btn-secondary" style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
               {t('home.cta.btn_github')}
-            </a>
+            </Link>
             <a href="https://drosvajra.gumroad.com/l/nebkzs" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
               {t('home.cta.btn_poc')}
             </a>
