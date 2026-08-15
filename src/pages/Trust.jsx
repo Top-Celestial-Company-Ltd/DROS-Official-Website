@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 // DROS Visual Assets
 import drosConcurrencyLatency from '../assets/DROS_Visual_Assets/dros_concurrency_latency.png';
