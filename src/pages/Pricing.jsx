@@ -28,42 +28,23 @@ export default function Pricing() {
       <div style={{background: 'linear-gradient(90deg, rgba(230, 185, 128, 0.05), rgba(230, 185, 128, 0.15), rgba(230, 185, 128, 0.05))', border: '1px solid var(--accent-gold)', padding: '1rem', borderRadius: '12px', textAlign: 'center', marginBottom: '4rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto', boxShadow: '0 0 20px rgba(212, 175, 55, 0.1)'}} dangerouslySetInnerHTML={{ __html: t('early_adopter') }}>
       </div>
 
-      <div className="grid-4" style={{ alignItems: 'flex-start' }}>
-        {/* Free-Trial Tier */}
-        <div className="glass-card pricing-card" style={{ padding: '2.5rem 2rem', background: 'rgba(20,20,20,0.6)' }}>
-          <h3 className="serif-font" style={{fontSize: '1.8rem', color: 'var(--text-primary)'}} dangerouslySetInnerHTML={{ __html: t('tiers.free_trial.name') }}></h3>
-          <div style={{fontSize: '2.5rem', fontWeight: 'bold', margin: '1rem 0', color: 'var(--accent-blue)'}}>{t('tiers.free_trial.price_yearly')}<span style={{fontSize:'1rem', color:'var(--text-secondary)'}}>/yr</span></div>
-          <p style={{fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '-0.5rem', marginBottom: '1.5rem'}}>{t('tiers.free_trial.price_monthly')}</p>
-          <p style={{color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '60px', lineHeight: '1.6'}}>{t('tiers.free_trial.desc')}</p>
-          <ul className="check-list" style={{textAlign: 'left', marginBottom: '2.5rem', lineHeight: '2.5', color: 'var(--text-primary)'}}>
-            {t('tiers.free_trial.features', { returnObjects: true }).map((f, i) => <li key={i}>{f}</li>)}
-          </ul>
-          
-          <details style={{marginBottom: '2rem', textAlign: 'left', color: 'var(--text-secondary)', background: 'rgba(255,255,255,0.05)', padding: '1rem', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)'}}>
-            <summary style={{cursor: 'pointer', fontWeight: 'bold', outline: 'none', color: 'var(--accent-blue)'}}>{t('tiers.free_trial.details_title')}</summary>
-            <div style={{marginTop: '1rem', fontSize: '0.9rem', lineHeight: '1.6'}} dangerouslySetInnerHTML={{ __html: t('tiers.free_trial.details_content') }}></div>
-          </details>
-
-          <a href="https://drosvajra.gumroad.com/l/nebkzs" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginBottom: '0.8rem', textAlign: 'center'}}>{t('tiers.free_trial.btn')}</a>
-        </div>
-
-        {/* Hacker Tier */}
-        <div className="glass-card pricing-card" style={{ padding: '2.5rem 2rem', background: 'rgba(20,20,20,0.6)' }}>
-          <h3 className="serif-font" style={{fontSize: '1.8rem', color: 'var(--text-primary)'}} dangerouslySetInnerHTML={{ __html: t('tiers.hacker.name') }}></h3>
-          <div style={{fontSize: '2.5rem', fontWeight: 'bold', margin: '1rem 0', color: 'var(--accent-blue)'}}>{t('tiers.hacker.price_yearly')}<span style={{fontSize:'1rem', color:'var(--text-secondary)'}}>/yr</span></div>
-          <p style={{fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '-0.5rem', marginBottom: '1.5rem'}}>{t('tiers.hacker.price_monthly')}</p>
+      <div className="grid-3" style={{ alignItems: 'flex-start', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
+        {/* Hacker Tier (Free for Personal / Non-Commercial Use) */}
+        <div className="glass-card pricing-card" style={{ padding: '2.5rem 2rem', background: 'rgba(20,20,20,0.6)', border: '1px solid rgba(16, 185, 129, 0.3)' }}>
+          <h3 className="serif-font" style={{fontSize: '1.8rem', color: '#10b981'}} dangerouslySetInnerHTML={{ __html: t('tiers.hacker.name') }}></h3>
+          <div style={{fontSize: '2.5rem', fontWeight: 'bold', margin: '1rem 0', color: '#10b981'}}>{t('tiers.hacker.price_yearly')}<span style={{fontSize:'1rem', color:'var(--text-secondary)'}}>{t('tiers.hacker.price_unit')}</span></div>
+          <p style={{fontSize: '0.9rem', color: '#10b981', marginTop: '-0.5rem', marginBottom: '1.5rem', fontWeight: '600'}}>{t('tiers.hacker.price_monthly')}</p>
           <p style={{color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '60px', lineHeight: '1.6'}}>{t('tiers.hacker.desc')}</p>
           <ul className="check-list" style={{textAlign: 'left', marginBottom: '2.5rem', lineHeight: '2.5', color: 'var(--text-primary)'}}>
             {t('tiers.hacker.features', { returnObjects: true }).map((f, i) => <li key={i}>{f}</li>)}
           </ul>
           
-          <details style={{marginBottom: '2rem', textAlign: 'left', color: 'var(--text-secondary)', background: 'rgba(255,255,255,0.05)', padding: '1rem', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)'}}>
-            <summary style={{cursor: 'pointer', fontWeight: 'bold', outline: 'none', color: 'var(--accent-blue)'}}>{t('tiers.hacker.details_title')}</summary>
+          <details style={{marginBottom: '2rem', textAlign: 'left', color: 'var(--text-secondary)', background: 'rgba(16, 185, 129, 0.05)', padding: '1rem', borderRadius: '8px', border: '1px solid rgba(16, 185, 129, 0.15)'}}>
+            <summary style={{cursor: 'pointer', fontWeight: 'bold', outline: 'none', color: '#10b981'}}>{t('tiers.hacker.details_title')}</summary>
             <div style={{marginTop: '1rem', fontSize: '0.9rem', lineHeight: '1.6'}} dangerouslySetInnerHTML={{ __html: t('tiers.hacker.details_content') }}></div>
           </details>
 
-          <a href="https://drosvajra.gumroad.com/l/vajraclaw-hacker" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginBottom: '0.8rem', textAlign: 'center'}}>{t('tiers.hacker.btn_yearly')}</a>
-          <a href="https://drosvajra.gumroad.com/l/vajraclaw-hacker" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', background: 'transparent', border: '1px solid rgba(0, 240, 255, 0.3)', color: 'var(--accent-blue)', textAlign: 'center'}}>{t('tiers.hacker.btn_monthly')}</a>
+          <a href="https://github.com/Top-Celestial-Company-Ltd/dsh-dros-vajraclaw" target="_blank" rel="noopener noreferrer" className="btn" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginBottom: '0.8rem', textAlign: 'center', background: 'transparent', border: '1px solid #10b981', color: '#10b981', fontWeight: 'bold'}}>{t('tiers.hacker.btn')}</a>
         </div>
 
         {/* Startup Tier (Recommended) */}
@@ -259,8 +240,8 @@ export default function Pricing() {
           <table style={{width: '100%', borderCollapse: 'collapse', fontSize: '0.88rem', minWidth: '700px'}}>
             <thead>
               <tr style={{background: 'rgba(255,255,255,0.04)'}}>
-                {['matrix.col_feature','matrix.col_free','matrix.col_hacker','matrix.col_startup','matrix.col_enterprise','matrix.col_sovereign'].map((key, i) => (
-                  <th key={i} style={{padding: '1rem 0.8rem', textAlign: i === 0 ? 'left' : 'center', fontWeight: 'bold', color: i === 3 ? 'var(--accent-gold)' : 'var(--text-primary)', borderBottom: '1px solid rgba(255,255,255,0.1)', whiteSpace: 'nowrap'}}>
+                {['matrix.col_feature','matrix.col_hacker','matrix.col_startup','matrix.col_enterprise','matrix.col_sovereign'].map((key, i) => (
+                  <th key={i} style={{padding: '1rem 0.8rem', textAlign: i === 0 ? 'left' : 'center', fontWeight: 'bold', color: i === 1 ? '#10b981' : i === 2 ? 'var(--accent-gold)' : 'var(--text-primary)', borderBottom: '1px solid rgba(255,255,255,0.1)', whiteSpace: 'nowrap'}}>
                     {t(key)}
                   </th>
                 ))}

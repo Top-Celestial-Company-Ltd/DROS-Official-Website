@@ -6,36 +6,22 @@
   "subtitle": "Eradicate hallucinations and injection attacks at the root. Upgrade your Enterprise AI infrastructure to an OS-level execution governance standard.",
   "early_adopter": "<strong style='color: var(--accent-gold)'>Early Adopter Pricing:</strong> We are currently in the V3 rollout phase. Enterprise licenses will increase to <strong>$15,000/yr</strong> in Q4 2026. Lock in your license before the price hike!",
   "tiers": {
-    "free_trial": {
-      "name": "VajraClaw Free-Trial <br/><span style='font-size: 1.2rem; color: #a0a0a0'>PLG Edition</span>",
-      "price_yearly": "$0",
-      "price_monthly": "30 Days Timebomb",
-      "desc": "A high-performance O(1) execution gate designed for independent developers and PoC validation.",
-      "features": [
-        "1 Machine UUID Binding",
-        "Max 2 Concurrent Agents",
-        "Online License Validation",
-        "Community forum support"
-      ],
-      "details_title": "View Technical Specs",
-      "details_content": "<p><strong>Target Audience</strong>: A lightweight, blazingly fast, embeddable developer toolkit focused on delivering constant-time evaluation (<0.02ms) at runtime.<br/><strong>Core Mechanisms:</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>O(1) Bitmap Engine</strong>: Native compilation, runtime latency under 0.02ms.</li><li><strong>Strict Fail-Closed</strong>: Triggers OS-level Panic immediately.</li><li><strong>DevEx</strong>: Compiles Vajra DSL for instant deployment.</li></ul>",
-      "btn": "Download Core Engine"
-    },
     "hacker": {
-      "name": "VajraClaw Hacker <br/><span style='font-size: 1.2rem; color: #a0a0a0'>Solo Developer</span>",
-      "price_yearly": "$149",
-      "price_monthly": "(or $19/month)",
-      "desc": "Ideal for solo developers and small side projects.",
+      "name": "VajraClaw Hacker <br/><span style='font-size: 1.2rem; color: #10b981'>Community (Non-Commercial)</span>",
+      "price_yearly": "$0",
+      "price_unit": " Free Forever",
+      "price_monthly": "Personal Use / 100% Free Forever",
+      "desc": "Enforces a unified execution governance boundary for local multi-agent workstations. 100% Free for personal and research use.",
       "features": [
         "1 Machine UUID Binding",
         "Max 5 Concurrent Agents",
-        "Online License Validation",
-        "Community forum support"
+        "Native W3C DID Key Fingerprinting (did:key)",
+        "Ed25519 Signatures & Local Tamper-Evident Audit Chain",
+        "Universal Docker Gateway & Open Source Support"
       ],
       "details_title": "View Technical Specs",
-      "details_content": "<p><strong>Hacker vs. Free Trial — Key Differences</strong>: Hacker is the first paid subscription tier, removing all restrictions of the Free Trial.</p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>⏱️ No Time Limit</strong>: Unlike the Free Trial's 30-day timebomb, your annual subscription is perpetual until the next renewal cycle.</li><li><strong>🤖 5 Concurrent Agents</strong>: Upgraded from Free Trial's 2 agents — supports more complex multi-agent workflows.</li><li><strong>O(1) Bitmap Engine</strong>: Native compilation, runtime validation latency under 0.02ms.</li><li><strong>Strict Fail-Closed</strong>: Triggers OS-level Panic immediately — cannot be bypassed by LLM semantic manipulation.</li><li><strong>Priority Software Updates</strong>: First access to security patches and new feature rollouts.</li></ul>",
-      "btn_yearly": "Buy Yearly ($149)",
-      "btn_monthly": "Buy Monthly ($19)"
+      "details_content": "<p><strong>Target Audience</strong>: A deterministic runtime security shield designed for solo developers, hackers, and researchers building local multi-agent workstations.<br/><strong>Core Mechanisms:</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>🛡️ 100% Free Forever (Non-Commercial)</strong>: No credit card, no license server required. Bootstraps locally.</li><li><strong>🤖 5 Concurrent Agents</strong>: Protects DSH, AGY, Codex, Claude Code, Cursor, and OpenClaw simultaneously.</li><li><strong>⚡ O(1) Constant-Time Kernel</strong>: Sub-microsecond (<1μs) bitmap circuit breaking against unauthorized tool calls.</li><li><strong>🪪 RFC-010 Open Passport</strong>: Native W3C did:key cryptographic identity issued locally.</li><li><strong>🐙 Open Source Community</strong>: Maintained by Top-Celestial open source community.</li></ul>",
+      "btn": "Get on GitHub (Free)"
     },
     "startup": {
       "badge": "RECOMMENDED",
@@ -81,24 +67,23 @@
     "title": "Full Feature Comparison Matrix",
     "subtitle": "Compare all security capabilities across tiers — choose the protection level your AI infrastructure deserves",
     "col_feature": "Security Feature / Spec",
-    "col_free": "⚪ Free Trial",
-    "col_hacker": "🟢 Hacker",
+    "col_hacker": "🟢 Hacker (Non-Commercial)",
     "col_startup": "🔵 Startup",
     "col_enterprise": "🟣 Enterprise",
     "col_sovereign": "👑 Sovereign",
     "rows": [
-      ["Target Audience", "Personal PoC", "Solo Developer", "SME AI Teams", "Large Enterprise", "Finance / Defense / Critical Infra"],
-      ["License Term", "1-Month Trial", "Annual Subscription", "Annual Subscription", "Annual Subscription", "Project Contract"],
-      ["Machine UUIDs", "1", "1", "3", "15", "Unlimited"],
-      ["Concurrent Agents", "2", "5", "30 (3×10)", "450 (15×30)", "Unlimited (Swarm)"],
-      ["VajraAgent UI Console Tier", "Single Agent Passport Console", "Single Agent Passport Console", "Single Agent Passport Console", "Enterprise Bidirectional Permission Control (DIT Issuance & Capability Toggles)", "Full Swarm Command Center (1ms Global Kill-Switch)"],
-      ["Pillar 1: Principal (RFC-010 Passport / DIT)", "✅ 30-Day Trial Token", "✅ Single Agent DIT", "✅ Bidirectional Role Tagging", "✅ Enterprise Hierarchical PKI Issuance", "✅ Sovereign Cross-Domain DID"],
-      ["Pillar 2: Authorization (Capability Bitmaps)", "✅ $O(1)$ Bit Vector", "✅ $O(1)$ Bit Vector", "✅ Visual Toggles & Dynamic Bitmaps", "✅ Enterprise 256-bit Matrix", "✅ Hardware SIMD Bitmask"],
-      ["Pillar 3: Tool/Action Bound (C-ABI Hard Block)", "✅ $26.1\\ \\mu\\text{s}$ In-Band Intercept", "✅ $26.1\\ \\mu\\text{s}$ In-Band Intercept", "✅ $26.1\\ \\mu\\text{s}$ In-Band Intercept", "✅ $26.1\\ \\mu\\text{s}$ In-Band Intercept", "✅ $26.1\\ \\mu\\text{s}$ eBPF/FPGA Intercept"],
-      ["Pillar 4: Policy Gate (Redaction / HITL / ZKP)", "❌", "❌", "✅ PII Redaction & HITL Hold", "✅ Full ZKP-Lite & HITL Hold", "✅ Defense-Grade Dual Sign-off"],
-      ["Pillar 5: Audit Log (Merkle Hash Chain)", "❌", "❌", "✅ Local Immutable Provenance", "✅ SHA-256 Merkle Chain + Ed25519", "✅ Distributed Multi-Server Chain"],
-      ["Pillar 6: Revocation (<1μs RCU Instant Revoke)", "❌", "❌", "✅ 1-Click Blacklist Button", "✅ 1-Click $<1\\ \\mu\\text{s}$ RCU Revoke (HTTP 403)", "✅ Full Swarm 1ms Tactical Kill-Switch"],
-      ["Deployment Target", "Local PC", "Local / Docker", "VM / NAS", "K8s / GKE / On-Premise", "Air-Gapped / Sovereign Cloud"]
+      ["Target Audience", "Solo Dev / Research (Non-Commercial)", "10~50 Dev Startup Teams", "Large Enterprise / Listed Co.", "Finance / Defense / Critical Infra"],
+      ["License Term", "Free Forever", "Annual Subscription", "Annual Subscription", "Project Contract"],
+      ["Machine UUIDs", "1", "3", "15", "Unlimited"],
+      ["Concurrent Agents", "5", "30 (3×10)", "450 (15×30)", "Unlimited (Swarm)"],
+      ["VajraAgent UI Console Tier", "Single Agent Passport Console", "Single Agent Passport Console", "Enterprise Bidirectional Permission Control (DIT Issuance & Capability Toggles)", "Full Swarm Command Center (1ms Global Kill-Switch)"],
+      ["Pillar 1: Principal (RFC-010 Passport / DIT)", "✅ Native W3C did:key Token", "✅ Bidirectional Role Tagging", "✅ Enterprise Hierarchical PKI Issuance", "✅ Sovereign Cross-Domain DID"],
+      ["Pillar 2: Authorization (Capability Bitmaps)", "✅ $O(1)$ Bit Vector", "✅ Visual Toggles & Dynamic Bitmaps", "✅ Enterprise 256-bit Matrix", "✅ Hardware SIMD Bitmask"],
+      ["Pillar 3: Tool/Action Bound (C-ABI Hard Block)", "✅ $26.1\\ \\mu\\text{s}$ In-Band Intercept", "✅ $26.1\\ \\mu\\text{s}$ In-Band Intercept", "✅ $26.1\\ \\mu\\text{s}$ In-Band Intercept", "✅ $26.1\\ \\mu\\text{s}$ eBPF/FPGA Intercept"],
+      ["Pillar 4: Policy Gate (Redaction / HITL / ZKP)", "❌", "✅ PII Redaction & HITL Hold", "✅ Full ZKP-Lite & HITL Hold", "✅ Defense-Grade Dual Sign-off"],
+      ["Pillar 5: Audit Log (Merkle Hash Chain)", "✅ Local Ed25519 Signed Log", "✅ Local Immutable Provenance", "✅ SHA-256 Merkle Chain + Ed25519", "✅ Distributed Multi-Server Chain"],
+      ["Pillar 6: Revocation (<1μs RCU Instant Revoke)", "❌", "✅ 1-Click Blacklist Button", "✅ 1-Click $<1\\ \\mu\\text{s}$ RCU Revoke (HTTP 403)", "✅ Full Swarm 1ms Tactical Kill-Switch"],
+      ["Deployment Target", "Local / Docker (Multi-Agent Gateway)", "VM / NAS Docker", "K8s / GKE / On-Premise", "Air-Gapped / Sovereign Cloud"]
     ]
   },
   "cta": {

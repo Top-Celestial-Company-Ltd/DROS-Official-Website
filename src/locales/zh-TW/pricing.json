@@ -6,36 +6,22 @@
   "subtitle": "從根本解決法義幻覺與注入攻擊。為您的企業 AI 基礎設施升級至 OS 等級的執行治理標準。",
   "early_adopter": "<strong style='color: var(--accent-gold)'>Early Adopter Pricing:</strong> 我們目前處於 V3 釋出階段。企業授權將於 2026 Q4 調漲至 <strong>$15,000/yr</strong>。強烈建議在下一波調漲前鎖定您的授權！",
   "tiers": {
-    "free_trial": {
-      "name": "VajraClaw Free-Trial <br/><span style='font-size: 1.2rem; color: #a0a0a0'>PLG Edition</span>",
-      "price_yearly": "$0",
-      "price_monthly": "30 Days Timebomb",
-      "desc": "適用於個人開發者與 PoC 概念驗證的 O(1) 攔截防禦工具。",
-      "features": [
-        "綁定 1 組 Machine UUID",
-        "最高 2 個 Concurrent Agents",
-        "線上授權驗證 (License Validation)",
-        "社群論壇支援"
-      ],
-      "details_title": "展開看詳細技術規格",
-      "details_content": "<p><strong>產品定位</strong>：輕量級、極速、可嵌入的開發者防護工具包，專注體驗低於 0.02ms 的極速攔截性能。<br/><strong>核心機制：</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>O(1) Bitmap 引擎</strong>：原生編譯，執行期驗證延遲低於 0.02ms。</li><li><strong>Strict Fail-Closed</strong>：直接觸發 Panic，拒絕服務。</li><li><strong>開發體驗</strong>：支援編譯 Vajra DSL，快速上手。</li></ul>",
-      "btn": "Download Core Engine"
-    },
     "hacker": {
-      "name": "VajraClaw Hacker <br/><span style='font-size: 1.2rem; color: #a0a0a0'>Solo Developer</span>",
-      "price_yearly": "$149",
-      "price_monthly": "(or $19/month)",
-      "desc": "適合個人開發者與小型 Side Project。",
+      "name": "VajraClaw Hacker <br/><span style='font-size: 1.2rem; color: #10b981'>社群版 (非商業用途)</span>",
+      "price_yearly": "$0",
+      "price_unit": " 永久免費",
+      "price_monthly": "個人使用 / 100% 永久免費",
+      "desc": "為本機多 Agent 工作站建立統一安全邊界，個人與學習研究 100% 免費。",
       "features": [
         "綁定 1 組 Machine UUID",
         "最高 5 個 Concurrent Agents",
-        "線上授權驗證 (License Validation)",
-        "社群論壇支援"
+        "原生 W3C DID 金鑰指紋綁定 (did:key)",
+        "Ed25519 數位簽章與本機不可否認審計鏈",
+        "Universal Docker 網關與開源社群支援"
       ],
       "details_title": "展開看詳細技術規格",
-      "details_content": "<p><strong>Hacker vs. Free Trial — 核心差異</strong>：Hacker 版為第一個正式付費訂閱級別，解除試用版的所有限制。</p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>⏱️ 無時限授權</strong>：不同於 Free Trial 的 30 天炸彈，年訂閱制永久使用至下一訂閱週期。</li><li><strong>🤖 5 個 Concurrent Agents</strong>：從 Free Trial 的 2 個提升至 5 個，支援更複雜的 Side Project 工作流。</li><li><strong>O(1) Bitmap 引擎</strong>：原生編譯，執行期驗證延遲低於 0.02ms。</li><li><strong>Strict Fail-Closed</strong>：直接觸發 OS 層 Panic，無法被 LLM 語意繞過。</li><li><strong>Priority Software Updates</strong>：優先獲得安全更新與新功能推送。</li></ul>",
-      "btn_yearly": "Buy Yearly ($149)",
-      "btn_monthly": "Buy Monthly ($19)"
+      "details_content": "<p><strong>產品定位</strong>：專為個人開發者、極客玩家打造的多 Agent 本機工作站執行期安全防線。</p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>🛡️ 100% 永久免費 (非商業用途)</strong>：免綁卡、免授權伺服器，本地即刻啟動。</li><li><strong>🤖 5 個 Concurrent Agents</strong>：守護 DSH、AGY、Codex、Claude Code、Cursor 與 OpenClaw。</li><li><strong>⚡ O(1) 常數時間微核心</strong>：原生點陣熔斷 (<1μs)，直接阻斷越權 Tool 調用。</li><li><strong>🪪 RFC-010 開放護照</strong>：本地簽發原生 W3C did:key 身分證。</li><li><strong>🐙 開源社群協作</strong>：由 Top-Celestial 官方開源庫持續維護。</li></ul>",
+      "btn": "前往 GitHub 免費獲取"
     },
     "startup": {
       "badge": "RECOMMENDED",
@@ -81,24 +67,23 @@
     "title": "完整功能規格對照表",
     "subtitle": "各版本完整安全功能一覽，選擇最符合您 AI 基礎設施需求的防護等級",
     "col_feature": "安全功能 / 規格",
-    "col_free": "⚪ Free Trial",
-    "col_hacker": "🟢 Hacker",
+    "col_hacker": "🟢 Hacker (個人非商用)",
     "col_startup": "🔵 Startup",
     "col_enterprise": "🟣 Enterprise",
     "col_sovereign": "👑 Sovereign",
     "rows": [
-      ["目標客戶", "個人試用", "個人開發者", "10~50 人新創", "中大型企業", "金融 / 國防 / 關鍵基建"],
-      ["使用期限", "1 個月試用", "年度訂閱", "年度訂閱", "年度訂閱", "專案雙向合約"],
-      ["Machine UUIDs", "1 組", "1 組", "3 組", "15 組", "無限制"],
-      ["Concurrent Agents", "2 個", "5 個", "30 個 (3×10)", "450 個 (15×30)", "無限制 (Swarm)"],
-      ["VajraAgent 主控頁控制台", "單機 Agent 護照控制台", "單機 Agent 護照控制台", "單機 Agent 護照控制台", "企業雙向權限總控台 (對內發行 DIT、對外 Capability 勾選)", "全網 Swarm 戰術指揮中心 (1ms 全網 Kill-Switch)"],
-      ["Pillar 1: Principal (RFC-010 護照 / DIT)", "✅ 30 天試用憑證", "✅ 單機 DIT 憑證", "✅ 雙向權限標籤發行", "✅ 企業階層式 PKI Token 發行", "✅ 跨國網域 Sovereign DID"],
-      ["Pillar 2: Authorization (Capability Bitmaps)", "✅ $O(1)$ 基礎位元圖", "✅ $O(1)$ 基礎位元圖", "✅ 視覺化勾選與動態 Bitmaps", "✅ 企業級 256-bit 位元矩陣", "✅ 自訂硬體級 SIMD 位元遮罩"],
-      ["Pillar 3: Tool/Action Bound (C-ABI 熔斷)", "✅ $26.1\\ \\mu\\text{s}$ 帶內硬熔斷", "✅ $26.1\\ \\mu\\text{s}$ 帶內硬熔斷", "✅ $26.1\\ \\mu\\text{s}$ 帶內硬熔斷", "✅ $26.1\\ \\mu\\text{s}$ 帶內硬熔斷", "✅ $26.1\\ \\mu\\text{s}$ 硬體 eBPF/FPGA 熔斷"],
-      ["Pillar 4: Policy Gate (動態遮蔽 / HITL / ZKP)", "❌", "❌", "✅ PII 動態遮蔽與 HITL 懸停", "✅ 完整 ZKP-Lite 零知識證明與 HITL", "✅ 國防級雙人授權與硬體門閥"],
-      ["Pillar 5: Audit Log (Merkle Hash Chain)", "❌", "❌", "✅ 本地不可篡改追溯", "✅ SHA-256 Merkle 雜湊鏈 + Ed25519 簽章", "✅ 分散式鏈上/跨伺服器稽核"],
-      ["Pillar 6: Revocation (<1μs RCU 一鍵撤銷)", "❌", "❌", "✅ 一鍵黑名單按鈕", "✅ 一鍵按鈕 $<1\\ \\mu\\text{s}$ RCU 撤銷 (HTTP 403)", "✅ 全網 1ms 戰術 Kill-Switch"],
-      ["部署環境", "Local PC", "Local / Docker", "VM / NAS", "K8s / GKE / On-Premise", "Air-Gapped / Sovereign Cloud"]
+      ["目標客戶", "個人開發者 / 研究 (非商用)", "10~50 人新創團隊", "中大型企業 / 上市公司", "金融 / 國防 / 關鍵基建"],
+      ["使用期限", "永久免費", "年度訂閱", "年度訂閱", "專案雙向合約"],
+      ["Machine UUIDs", "1 組", "3 組", "15 組", "無限制"],
+      ["Concurrent Agents", "5 個", "30 個 (3×10)", "450 個 (15×30)", "無限制 (Swarm)"],
+      ["VajraAgent 主控頁控制台", "單機 Agent 護照控制台", "單機 Agent 護照控制台", "企業雙向權限總控台 (對內發行 DIT、對外 Capability 勾選)", "全網 Swarm 戰術指揮中心 (1ms 全網 Kill-Switch)"],
+      ["Pillar 1: Principal (RFC-010 護照 / DIT)", "✅ 原生 W3C did:key 憑證", "✅ 雙向權限標籤發行", "✅ 企業階層式 PKI Token 發行", "✅ 跨國網域 Sovereign DID"],
+      ["Pillar 2: Authorization (Capability Bitmaps)", "✅ $O(1)$ 基礎位元圖", "✅ 視覺化勾選與動態 Bitmaps", "✅ 企業級 256-bit 位元矩陣", "✅ 自訂硬體級 SIMD 位元遮罩"],
+      ["Pillar 3: Tool/Action Bound (C-ABI 熔斷)", "✅ $26.1\\ \\mu\\text{s}$ 帶內硬熔斷", "✅ $26.1\\ \\mu\\text{s}$ 帶內硬熔斷", "✅ $26.1\\ \\mu\\text{s}$ 帶內硬熔斷", "✅ $26.1\\ \\mu\\text{s}$ 硬體 eBPF/FPGA 熔斷"],
+      ["Pillar 4: Policy Gate (動態遮蔽 / HITL / ZKP)", "❌", "✅ PII 動態遮蔽與 HITL 懸停", "✅ 完整 ZKP-Lite 零知識證明與 HITL", "✅ 國防級雙人授權與硬體門閥"],
+      ["Pillar 5: Audit Log (Merkle Hash Chain)", "✅ 本機 Ed25519 簽章日誌", "✅ 本地不可篡改追溯", "✅ SHA-256 Merkle 雜湊鏈 + Ed25519 簽章", "✅ 分散式鏈上/跨伺服器稽核"],
+      ["Pillar 6: Revocation (<1μs RCU 一鍵撤銷)", "❌", "✅ 一鍵黑名單按鈕", "✅ 一鍵按鈕 $<1\\ \\mu\\text{s}$ RCU 撤銷 (HTTP 403)", "✅ 全網 1ms 戰術 Kill-Switch"],
+      ["部署環境", "Local / Docker (多 Agent 網關)", "VM / NAS Docker", "K8s / GKE / On-Premise", "Air-Gapped / Sovereign Cloud"]
     ]
   },
   "cta": {
