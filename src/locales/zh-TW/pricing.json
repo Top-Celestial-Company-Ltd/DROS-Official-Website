@@ -26,7 +26,7 @@
     "startup": {
       "badge": "RECOMMENDED",
       "name": "VajraClaw+ Startup <br/><span style='font-size: 1.2rem; color: var(--accent-gold)'>Core Engine</span>",
-      "price_yearly": "$799",
+      "price_yearly": "$2,990",
       "desc": "完美契合中小企業 AI 團隊與內部微服務部署。",
       "features": [
         "最高 3 組 Machine UUIDs",
@@ -40,7 +40,7 @@
     },
     "enterprise": {
       "name": "VajraAgent Enterprise <br/><span style='font-size: 1.2rem; color: #ff4d4f'>Zero-Trust Mesh</span>",
-      "price_yearly": "$7,990",
+      "price_yearly": "$29,990",
       "desc": "專為高併發的大型組織打造。當 Agent 併發高達 450 個時，您會需要企業級中控網格與密碼學保護來進行集中管理。",
       "features": [
         "最高 15 組 Machine UUIDs",

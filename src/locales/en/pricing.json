@@ -26,7 +26,7 @@
     "startup": {
       "badge": "RECOMMENDED",
       "name": "VajraClaw+ Startup <br/><span style='font-size: 1.2rem; color: var(--accent-gold)'>Core Engine</span>",
-      "price_yearly": "$799",
+      "price_yearly": "$2,990",
       "desc": "Perfectly tailored for SMB AI teams and internal microservice deployments.",
       "features": [
         "Max 3 Machine UUIDs",
@@ -40,7 +40,7 @@
     },
     "enterprise": {
       "name": "VajraAgent Enterprise <br/><span style='font-size: 1.2rem; color: #ff4d4f'>Zero-Trust Mesh</span>",
-      "price_yearly": "$7,990",
+      "price_yearly": "$29,990",
       "desc": "Built for high-concurrency large organizations. When scaling up to 450 concurrent Agents, you need an enterprise-grade control mesh and cryptographic protection for centralized management.",
       "features": [
         "Max 15 Machine UUIDs",

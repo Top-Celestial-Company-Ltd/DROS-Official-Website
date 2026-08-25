@@ -24,10 +24,6 @@ export default function Pricing() {
         </p>
       </section>
 
-      {/* Early Adopter Banner */}
-      <div style={{background: 'linear-gradient(90deg, rgba(230, 185, 128, 0.05), rgba(230, 185, 128, 0.15), rgba(230, 185, 128, 0.05))', border: '1px solid var(--accent-gold)', padding: '1rem', borderRadius: '12px', textAlign: 'center', marginBottom: '4rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto', boxShadow: '0 0 20px rgba(212, 175, 55, 0.1)'}} dangerouslySetInnerHTML={{ __html: t('early_adopter') }}>
-      </div>
-
       <div className="grid-3" style={{ alignItems: 'flex-start', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
         {/* Hacker Tier (Free for Personal / Non-Commercial Use) */}
         <div className="glass-card pricing-card" style={{ padding: '2.5rem 2rem', background: 'rgba(20,20,20,0.6)', border: '1px solid rgba(16, 185, 129, 0.3)' }}>
