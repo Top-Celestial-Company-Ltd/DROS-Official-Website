@@ -7,21 +7,21 @@
   "early_adopter": "<strong style='color: var(--accent-gold)'>Early Adopter Pricing:</strong> We are currently in the V3 rollout phase. Enterprise licenses will increase to <strong>$15,000/yr</strong> in Q4 2026. Lock in your license before the price hike!",
   "tiers": {
     "hacker": {
-      "name": "VajraClaw Hacker <br/><span style='font-size: 1.2rem; color: #10b981'>Community (Non-Commercial)</span>",
+      "name": "VajraClaw Hacker <br/><span style='font-size: 1.2rem; color: #10b981'>Community (Free for Personal / Non-Commercial)</span>",
       "price_yearly": "$0",
       "price_unit": " Free Forever",
-      "price_monthly": "Personal Use / 100% Free Forever",
+      "price_monthly": "Personal / Non-Commercial Free License",
       "desc": "Enforces a unified execution governance boundary for local multi-agent workstations. 100% Free for personal and research use.",
       "features": [
         "1 Machine UUID Binding",
         "Max 5 Concurrent Agents",
         "Native W3C DID Key Fingerprinting (did:key)",
         "Ed25519 Signatures & Local Tamper-Evident Audit Chain",
-        "Universal Docker Gateway & Open Source Support"
+        "Universal Docker Gateway & Community Support"
       ],
       "details_title": "View Technical Specs",
-      "details_content": "<p><strong>Target Audience</strong>: A deterministic runtime security shield designed for solo developers, hackers, and researchers building local multi-agent workstations.<br/><strong>Core Mechanisms:</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>🛡️ 100% Free Forever (Non-Commercial)</strong>: No credit card, no license server required. Bootstraps locally.</li><li><strong>🤖 5 Concurrent Agents</strong>: Protects DSH, AGY, Codex, Claude Code, Cursor, and OpenClaw simultaneously.</li><li><strong>⚡ O(1) Constant-Time Kernel</strong>: Sub-microsecond (<1μs) bitmap circuit breaking against unauthorized tool calls.</li><li><strong>🪪 RFC-010 Open Passport</strong>: Native W3C did:key cryptographic identity issued locally.</li><li><strong>🐙 Open Source Community</strong>: Maintained by Top-Celestial open source community.</li></ul>",
-      "btn": "Get on GitHub (Free)"
+      "details_content": "<p><strong>Target Audience</strong>: A deterministic runtime security shield designed for solo developers, hackers, and researchers building local multi-agent workstations.<br/><strong>Core Mechanisms:</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>🛡️ 100% Free for Personal & Non-Commercial Use (Commercial License Required for Business)</strong>: No credit card, no license server required. Bootstraps locally.</li><li><strong>🤖 5 Concurrent Agents</strong>: Protects DSH, AGY, Codex, Claude Code, Cursor, and OpenClaw simultaneously.</li><li><strong>⚡ O(1) Constant-Time Kernel</strong>: Sub-microsecond (<1μs) bitmap circuit breaking against unauthorized tool calls.</li><li><strong>🪪 RFC-010 Open Passport</strong>: Native W3C did:key cryptographic identity issued locally.</li><li><strong>🐙 Community Maintained</strong>: Maintained by Top-Celestial developer community.</li></ul>",
+      "btn": "Get Community License (Free)"
     },
     "startup": {
       "badge": "RECOMMENDED",
