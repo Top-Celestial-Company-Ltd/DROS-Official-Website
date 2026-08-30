@@ -40,7 +40,7 @@ export default function Pricing() {
             <div style={{marginTop: '1rem', fontSize: '0.9rem', lineHeight: '1.6'}} dangerouslySetInnerHTML={{ __html: t('tiers.hacker.details_content') }}></div>
           </details>
 
-          <a href="https://github.com/Top-Celestial-Company-Ltd/dsh-dros-vajraclaw" target="_blank" rel="noopener noreferrer" className="btn" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginBottom: '0.8rem', textAlign: 'center', background: 'transparent', border: '1px solid #10b981', color: '#10b981', fontWeight: 'bold'}}>{t('tiers.hacker.btn')}</a>
+          <a href="https://github.com/Top-Celestial-Company-Ltd/DROS-VajraClaw-Hacker" target="_blank" rel="noopener noreferrer" className="btn" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginBottom: '0.8rem', textAlign: 'center', background: 'transparent', border: '1px solid #10b981', color: '#10b981', fontWeight: 'bold'}}>{t('tiers.hacker.btn')}</a>
         </div>
 
         {/* Startup Tier (Recommended) */}
