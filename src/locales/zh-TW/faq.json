@@ -100,6 +100,10 @@
         {
           "q": "在沒有安裝 DROS 中央控制台（Fleet Manager / VajraAgent）的單機版（VajraClaw、VajraClaw+）環境中，管理員該如何查看日誌？需要自己去翻找資料夾嗎？",
           "a": "**不需要盲目尋找。單機版雖無中央視覺化控制台，但遵循了標準的 SRE 日誌規範與 Unix 哲學，提供了極為直觀的系統級集成。**\n\n無中央控制台時，管理員可以透過以下三種極為標準且便利的方式查看與監控日誌：\n\n1. **系統級統一日誌（SystemD / Journalctl）**：\n   * VajraClaw 預設會將所有校驗與攔截日誌以標準 JSON 格式輸出至系統標準輸出流（stdout/stderr）。\n   * 如果您是以 SystemD 服務（如 `lobster`）運行 Agent，系統會自動接管日誌。您只需在終端機輸入一行標準指令，即可實時觀看滾動日誌：\n     ```bash\n     journalctl -u lobster -f\n     ```\n\n2. **標準路徑與自定義日誌檔（JSON Log File）**：\n   * 在配置檔（如 `openclaw.json` 或 `Vajra.json`）中，您可以自由指定一個標準路徑（例如 `log_path: \"/var/log/vajraclaw/audit.json\"`）。\n   * VajraClaw 會自動在此路徑生成按日輪轉（Rotate）的結構化日誌檔，管理員只需使用一行標準指令即可即時監聽攔截事件：\n     ```bash\n     tail -f /var/log/vajraclaw/audit.json\n     ```\n\n3. **無縫對接開源日誌收集器**：\n   * 由於日誌輸出是標準的單行 JSON 格式，開發者可以非常輕易地用開源的 Filebeat、Vector 或 FluentBit 收集這些日誌，直接打入企業現有的 ELK 或 Grafana Loki 中，無需 any 二次開發。"
+        },
+        {
+          "q": "如果黑客嘗試直接替換或覆寫 DROS 微核心 (.dll / .so) 或使用者遺漏了黑白名單規則，系統會破工嗎？",
+          "a": "**絕對不會破工。** DROS 在系統底層具備四重不變量防禦 (Four-Layer Invariant Defense)：\n\n1. **更換操作本身即是受管轄的 Syscall**：黑客若要替換二進位檔，必須驅使 Agent 執行 `cp`、`mv`、`curl` 或檔案寫入操作。在這些系統呼叫抵達作業系統前，就已被 DROS 帶內攔截。\n2. **嚴格白名單 (Default Fail-Closed)**：DROS 遵循零信任白名單架構。未在策略中明確宣告為 `ALLOW` 的動作預設一律為 `BLOCK`，安全不依賴使用者的細心。\n3. **內核級不可侵犯不變量 (Kernel Hard Invariants)**：DROS 編譯器強制將針對 DROS 核心二進位檔 (`.dll`/`.so`) 與私鑰種子的寫入操作永久鎖定為 `HARD_BLOCKED`，即使管理員給予全放行權限亦無法覆寫。\n4. **作業系統內核檔案鎖 (OS In-Memory File Lock) 與 Ed25519 簽名**：正在運行的動態庫受 OS 內核獨佔鎖定（Windows `FILE_SHARE_READ` / Linux `ETXTBUSY`），且宿主進程在啟動時會校驗 Ed25519 數位簽章，竄改後進程直接中斷拒絕加載。"
         }
       ]
     },
