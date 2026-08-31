@@ -174,5 +174,11 @@
         }
       ]
     }
+  ],
+  "items": [
+    {
+      "q": "如何設定 Vajra.md 安全策略？個人版與企業版防禦有何差異？",
+      "a": "個人開發者可透過直覺 Markdown (Vajra.md) 或 AI 提示詞一鍵生成白名單規則，並透過作業系統唯讀鎖 (chmod 444 / Docker :ro) 與 DROS 帶內微秒攔截杜絕 AI 自行改檔解鎖特權；企業版更進一步提供遠端 Vault / KMS 策略儲存（Agent 本地無實體檔）、多方多簽審批 (Multi-Sig M-of-N)、K8s eBPF 內核隔離與硬體 HSM 存證，構建法院級縱深防禦。"
+    }
   ]
 }

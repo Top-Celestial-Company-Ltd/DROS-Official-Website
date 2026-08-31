@@ -166,5 +166,11 @@
         }
       ]
     }
+  ],
+  "items": [
+    {
+      "q": "How to configure Vajra.md policies, and what are the key differences between Personal and Enterprise defense?",
+      "a": "Individual developers can define whitelist rules via plain Markdown (Vajra.md) or AI prompts, locking files to read-only (chmod 444 / Docker :ro) combined with DROS sub-microsecond in-band fusing. Enterprise editions provide remote Vault/KMS policy isolation (no local files on agent nodes), Multi-Sig M-of-N approval workflows, K8s eBPF kernel isolation, and hardware HSM WORM storage for court-grade compliance."
+    }
   ]
 }
