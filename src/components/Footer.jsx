@@ -59,7 +59,20 @@ export default function Footer() {
           <p>{t('footer.rights').replace('{{year}}', new Date().getFullYear())}</p>
           <p>{t('footer.dharma_exemption')}</p>
         </div>
-      </div>
+      
+        {/* LaunchNest Badge */}
+        <div className="flex justify-center my-4">
+          <a href="https://launchnest.io/p/dros-vajraclaw-hacker-edition" target="_blank" rel="noopener noreferrer">
+            <img 
+              src="https://launchnest.io/badge/dros-vajraclaw-hacker-edition.svg?variant=listed" 
+              alt="DROS VajraClaw (Hacker Edition) on LaunchNest" 
+              width="220" 
+              height="56" 
+              className="hover:opacity-90 transition-opacity"
+            />
+          </a>
+        </div>
+</div>
     </footer>
   );
 }
