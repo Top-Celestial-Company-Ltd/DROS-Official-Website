@@ -371,7 +371,46 @@
           "doi": "10.5281/zenodo.22254372",
           "url": "https://doi.org/10.5281/zenodo.22254372"
         }
-      ]
+      ],
+      "guide": {
+        "badge": "Reading Guide & Causal Defense Chain",
+        "title": "The DROS 6-Paper Research Trajectory Reading Guide",
+        "desc": "The DROS research trajectory is not six disjointed papers, but a cohesive causal defense chain expanding the foundational thesis Cognitive Compromise ⇏ Capability Expansion across six operational scales:",
+        "chain": [
+          {
+            "step": "01. Specification",
+            "target": "Paper 1 (6P)",
+            "role": "What to govern? Enterprise Trust"
+          },
+          {
+            "step": "02. Enforcement Depth",
+            "target": "Paper 2 (4-Layer)",
+            "role": "How to ground? Close Attribution Gap"
+          },
+          {
+            "step": "03. Binary Gate",
+            "target": "Paper 3 (PGM)",
+            "role": "Post-compromise? C-ABI/OS Hook Fusing"
+          },
+          {
+            "step": "04. Web Capability",
+            "target": "Paper 4 (WebMCP)",
+            "role": "Agentic Web? Temporal Closure"
+          },
+          {
+            "step": "05. Digital Edge",
+            "target": "Paper 5 (Mobile)",
+            "role": "Smartphones? Mobile OS Attenuation"
+          },
+          {
+            "step": "06. Cyber-Physical",
+            "target": "Paper 6 (UAV)",
+            "role": "Physical Motion? Swarm Dynamic Bounds"
+          }
+        ],
+        "btn_text": "Read Official Zenodo Reading Guide (DOI: 10.5281/zenodo.22255275)",
+        "url": "https://doi.org/10.5281/zenodo.22255275"
+      }
     },
     "vep_harness": {
       "title_prefix": "Scientific Reproducibility Harness",

@@ -92,6 +92,65 @@ export default function Trust() {
             </p>
           </div>
 
+          {/* ── Reading Guide Banner ── */}
+          <div style={{
+            background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(56, 189, 248, 0.05) 100%)',
+            border: '1px solid rgba(212, 175, 55, 0.25)',
+            borderRadius: '16px',
+            padding: '2.5rem',
+            marginBottom: '3.5rem',
+            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)'
+          }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
+              <div>
+                <span style={{ fontSize: '0.8rem', fontWeight: 'bold', color: 'var(--accent-gold)', background: 'rgba(212, 175, 55, 0.15)', padding: '3px 10px', borderRadius: '20px', border: '1px solid rgba(212, 175, 55, 0.3)', textTransform: 'uppercase' }}>
+                  {t('trust.papers.guide.badge')}
+                </span>
+                <h3 style={{ fontSize: '1.4rem', color: '#fff', marginTop: '0.8rem', marginBottom: '0.5rem', fontWeight: '700' }}>
+                  {t('trust.papers.guide.title')}
+                </h3>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6', maxWidth: '800px', margin: 0 }}>
+                  {t('trust.papers.guide.desc')}
+                </p>
+              </div>
+              <a
+                href={t('trust.papers.guide.url')}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
+                style={{ fontSize: '0.85rem', padding: '0.6rem 1.2rem', whiteSpace: 'nowrap' }}
+              >
+                {t('trust.papers.guide.btn_text')} &rarr;
+              </a>
+            </div>
+
+            {/* Causal Chain Steps */}
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
+              gap: '1rem',
+              marginTop: '1.5rem',
+              paddingTop: '1.5rem',
+              borderTop: '1px solid rgba(255, 255, 255, 0.08)'
+            }}>
+              {t('trust.papers.guide.chain', { returnObjects: true }).map((c, i) => (
+                <div key={i} style={{
+                  background: 'rgba(15, 23, 42, 0.6)',
+                  border: '1px solid rgba(255, 255, 255, 0.06)',
+                  borderRadius: '10px',
+                  padding: '1rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.3rem'
+                }}>
+                  <span style={{ fontSize: '0.75rem', color: '#94a3b8', fontFamily: 'monospace' }}>{c.step}</span>
+                  <span style={{ fontSize: '0.9rem', fontWeight: 'bold', color: '#38bdf8' }}>{c.target}</span>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>{c.role}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '2rem' }}>
             {t('trust.papers.items', { returnObjects: true }).map((p, idx) => (
               <div key={idx} className="glass-card" style={{ padding: '2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '14px', background: 'rgba(20,20,30,0.5)' }}>

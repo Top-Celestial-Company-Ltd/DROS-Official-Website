@@ -371,7 +371,46 @@
           "doi": "10.5281/zenodo.22254372",
           "url": "https://doi.org/10.5281/zenodo.22254372"
         }
-      ]
+      ],
+      "guide": {
+        "badge": "科研導讀與因果防禦鏈",
+        "title": "DROS 六部曲科研軌跡全景導讀 (Research Trajectory Reading Guide)",
+        "desc": "DROS 並非六篇互不相關的短文，而是針對「意圖認知出錯 ⇏ 實體執行權力膨脹」同一核心假說，在不同執行尺度遞進展開的因果防禦鏈：",
+        "chain": [
+          {
+            "step": "01. 規格定義",
+            "target": "Paper 1 (6P)",
+            "role": "要治理什麼？企業信任閉環"
+          },
+          {
+            "step": "02. 執行縱深",
+            "target": "Paper 2 (4-Layer)",
+            "role": "如何落地？消除進程歸因盲區"
+          },
+          {
+            "step": "03. 二進位門禁",
+            "target": "Paper 3 (PGM)",
+            "role": "遭攻陷後？C-ABI/Hook 硬阻斷"
+          },
+          {
+            "step": "04. 網絡能力",
+            "target": "Paper 4 (WebMCP)",
+            "role": "跨雲調用？時序閉包與歸因"
+          },
+          {
+            "step": "05. 端側系統",
+            "target": "Paper 5 (Mobile)",
+            "role": "手機生態？OS API 權限衰減"
+          },
+          {
+            "step": "06. 具身物理",
+            "target": "Paper 6 (UAV)",
+            "role": "實體動能？蜂群在環防摔機"
+          }
+        ],
+        "btn_text": "閱讀 Zenodo 官方導讀全文 (DOI: 10.5281/zenodo.22255275)",
+        "url": "https://doi.org/10.5281/zenodo.22255275"
+      }
     },
     "vep_harness": {
       "title_prefix": "Scientific Reproducibility Harness",
