@@ -7,7 +7,7 @@
     "faq": "常見問題",
     "get_started": "取得 DROS",
     "solutions": "企業方案",
-    "trust": "確信驗證"
+    "trust": "技術論文與評測"
   },
   "footer": {
     "desc": "DROS 是全球首個專為異質 AI 系統設計的執行治理標準 (Execution Governance Standard)。透過將策略驗證移至編譯期，並在執行期採用 O(1) 確定性查表，為企業級自主 AI 構築 Fail-Closed 實體安全防線。",
@@ -256,8 +256,8 @@
     }
   },
   "trust": {
-    "meta_title": "DROS | 確信驗證與系統物理極限揭露",
-    "meta_desc": "公開披露 DROS 驗證合約、實測 $26.1\\ \\mu\\text{s}$ 決策延遲基準與物理極限。我們秉持硬核系統工程的誠實態度，拒絕行銷吹誇。",
+    "meta_title": "DROS | 六大核心技術論文與 VEP Lite 科學評測環境",
+    "meta_desc": "公開揭露 DROS 六大核心技術論文 (Zenodo DOI)、DROS-VEP Lite 虛擬企業評測靶場與 24 小時長時浸潤攻防壓測數據。修辭不得超越證據，完全確定性重現。",
     "hero": {
       "title_prefix": "DROS Standard / AGI 時代安全保險絲",
       "title_highlight": "確信安全與 6-Pillars 憑證標準",
@@ -317,6 +317,76 @@
       "title": "生存威脅：完全「無痕」的自主 Agent 浪潮",
       "desc1": "當我們賦予 AI 大腦自主執行 System Call 的權限，就等於為惡意代碼開啟了一扇物理大門。一個發瘋的 Agent 可以自己註冊域名、編寫病毒、在不同的雲伺服器間轉移，且完全不留下任何人類的指紋紀錄。這在司法鑑定上是一場災難。",
       "desc2": "DROS 作為 **Agentic Web 的根憑證發放中心 (Root CA)**，強制為每一次執行注入不可抵賴的密碼學鋼印。我們將合規合約編譯為帶有 Ed25519 簽章的 `policy.bin` 與 DIT 身分憑證。AI 大腦可以想入非非，但只要伸手去觸碰未授權的實體 Tool，DROS 微核心便在 26.1 微秒內直接物理性熔斷，從根本上終結 AI 甩鍋的時代。"
+    },
+    "papers": {
+      "title_prefix": "DROS Research Program",
+      "title_highlight": "六大核心技術論文體系",
+      "subtitle": "DROS 執行期確定性治理架構具備嚴謹的密碼學形式化證明、狀態機模型與航太/物聯網同儕評鑑實證，已全面公開發布於全球永久學術存證庫 (Zenodo)：",
+      "items": [
+        {
+          "id": "Paper 1",
+          "tag": "治理規格層 (Specifications)",
+          "title": "DROS-6P: A Unified Deterministic Runtime Governance Architecture Closing the Six Fundamental Trust Boundaries of Enterprise AI Agents",
+          "desc": "形式化形式定義自主 AI Agent 執行的六大根本信任邊界，確立「認知出錯 ⇏ 權力膨脹」之不可違背不變量與封閉規格。",
+          "doi": "10.5281/zenodo.21833970",
+          "url": "https://doi.org/10.5281/zenodo.21833970"
+        },
+        {
+          "id": "Paper 2",
+          "tag": "執行落地層 (Defense-in-Depth)",
+          "title": "DROS 4-Layer Defense-in-Depth Architecture for Autonomous AI Workloads",
+          "desc": "建構四層縱深防禦架構（規格層、控制台戰情室、微核心門禁、審計鏈），消除進程內身分歸因盲區 (Attribution Gap)。",
+          "doi": "10.5281/zenodo.22092008",
+          "url": "https://doi.org/10.5281/zenodo.22092008"
+        },
+        {
+          "id": "Paper 3",
+          "tag": "內核控制層 (Kernel & Attribution)",
+          "title": "Runtime Attribution Framework: An External C-ABI and PKI-Based Zero-Trust Infrastructure for Non-Repudiable Execution Governance",
+          "desc": "基於外部 C-ABI 與 PKI 零信任基礎設施，在微秒級邊界實踐執行不可否認性（Non-Repudiation）與法庭級責任歸屬。",
+          "doi": "10.5281/zenodo.21903687",
+          "url": "https://doi.org/10.5281/zenodo.21903687"
+        },
+        {
+          "id": "Paper 4",
+          "tag": "網絡能力層 (Agentic Web)",
+          "title": "DROS-WebMCP: A Cryptographically Attributable Execution Governance Layer for the Agentic Web",
+          "desc": "針對 MCP (Model Context Protocol) 伺服器與開放 Web 代理提供密碼學可歸屬的權能暴露治理與動態降級通道。",
+          "doi": "10.5281/zenodo.22290238",
+          "url": "https://doi.org/10.5281/zenodo.22290238"
+        },
+        {
+          "id": "Paper 5",
+          "tag": "數位系統實證 (Mobile Agent Security)",
+          "title": "Post-Compromise Security for Autonomous Mobile Agents: A Deterministic Runtime Attenuation and Proof-Carrying Authorization Architecture",
+          "desc": "驗證智慧型手機端側 Agent 遭妥協後的邊界衰減機制，24 小時壓測 Memory Leak 為 0 Bytes，日常耗電增幅 <0.5%。",
+          "doi": "10.5281/zenodo.22253147",
+          "url": "https://doi.org/10.5281/zenodo.22253147"
+        },
+        {
+          "id": "Paper 6",
+          "tag": "網絡-實體實證 (Physical AI & UAV Swarm)",
+          "title": "Post-Compromise Security for Physical AI: Deterministic Runtime Enforcement of Physical Action Authority in Autonomous UAVs",
+          "desc": "實體驗證空中無人機蜂群與具身機器人：空中防 Disarm 摔機率 ΔS ≡ 0、NFZ 禁航區 0.0m 穿透熔斷、100 機串通攻擊阻斷。",
+          "doi": "10.5281/zenodo.22254372",
+          "url": "https://doi.org/10.5281/zenodo.22254372"
+        }
+      ]
+    },
+    "vep_harness": {
+      "title_prefix": "Scientific Reproducibility Harness",
+      "title_highlight": "DROS-VEP Lite 虛擬企業評測環境",
+      "subtitle": "拒絕口頭保證。DROS 提供完全開源的評測與證偽靶場，涵蓋 8 大核心威脅場景、B2B 供應鏈攻防與 24 小時連續壓力測試：",
+      "github_repo": "https://github.com/Top-Celestial-Company-Ltd/dros-vep-lite",
+      "soak_title": "24 小時不間斷對抗浸潤壓測官方實證 (Empirical Evidence)",
+      "soak_stat1": "160,611 次",
+      "soak_lbl1": "24hr 總評測負載請求",
+      "soak_stat2": "137,751 阻斷",
+      "soak_lbl2": "惡意攻擊 100% 成功阻斷",
+      "soak_stat3": "26.21 μs",
+      "soak_lbl3": "P50 中位數決策延遲 (σ = ±0.34μs)",
+      "soak_stat4": "0 Bytes",
+      "soak_lbl4": "連續 24 小時記憶體洩漏 (Zero Leak)"
     }
   }
 }

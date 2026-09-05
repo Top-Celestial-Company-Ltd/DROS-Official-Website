@@ -7,7 +7,7 @@
     "faq": "FAQ",
     "get_started": "Get DROS",
     "solutions": "Solutions",
-    "trust": "Trust"
+    "trust": "Research & VEP"
   },
   "footer": {
     "desc": "DROS is a vendor-neutral execution governance layer for agentic AI systems. It enforces AI tool execution through compile-time resolved, cryptographically signed policies executed in O(1) deterministic runtime.",
@@ -256,8 +256,8 @@
     }
   },
   "trust": {
-    "meta_title": "DROS | Trust, Verification & Systems Reality",
-    "meta_desc": "Public disclosure of DROS v1.0 Certification Harness, concurrent RCU stress test benchmarks, and physical hardware boundaries. We embrace strict systems engineering honesty.",
+    "meta_title": "DROS | 6-Paper Research Program & VEP Lite Test Harness",
+    "meta_desc": "Public disclosure of the DROS 6-Paper Research Program (Zenodo DOI), the open-source DROS-VEP Lite benchmark harness, and 24-hour continuous adversarial soak test data. Science before rhetoric.",
     "hero": {
       "title_prefix": "DROS v1.0 / AGI Security Fusing",
       "title_highlight": "Trust & Root CA Standard",
@@ -317,6 +317,76 @@
       "title": "Existential Threat: The Traceless Agent Swarms",
       "desc1": "Granting AI models the authority to initiate System Calls is opening a physical gate to malicious execution. A rogue Agent can register domains, compile viruses, and migrate across servers without leaving any human footprints. In terms of forensics and legal liability, this is a catastrophe.",
       "desc2": "DROS, acting as the **Root Certificate Authority (Root CA)** for the Agentic Web, forces a non-repudiable cryptographic seal onto every execution. We compile security contracts into a signed `policy.bin` (containing Header, Ed25519 signature, sorted agent/tool index tables, and O(1) capability bitmap matrix). The Agent can reason freely, but the moment it attempts to invoke an unauthorized tool, the DROS microkernel triggers a fail-closed thread panic in 484.8 ns, ending the era of AI blame-shifting."
+    },
+    "papers": {
+      "title_prefix": "DROS Research Program",
+      "title_highlight": "The 6-Paper Core Academic Program",
+      "subtitle": "The DROS runtime governance architecture is anchored by formal cryptographic proofs, finite state machine invariants, and empirical validation across avionics and IoT. Publicly accessible on Zenodo:",
+      "items": [
+        {
+          "id": "Paper 1",
+          "tag": "Governance Specification Layer",
+          "title": "DROS-6P: A Unified Deterministic Runtime Governance Architecture Closing the Six Fundamental Trust Boundaries of Enterprise AI Agents",
+          "desc": "Formally models the six fundamental trust boundaries of autonomous AI agents, establishing the invariant 'Cognitive Compromise ⇏ Capability Expansion'.",
+          "doi": "10.5281/zenodo.21833970",
+          "url": "https://doi.org/10.5281/zenodo.21833970"
+        },
+        {
+          "id": "Paper 2",
+          "tag": "Execution Grounding Layer",
+          "title": "DROS 4-Layer Defense-in-Depth Architecture for Autonomous AI Workloads",
+          "desc": "Constructs a four-layer defense-in-depth architecture (Specification, Command Center, Microkernel Gate, Merkle Audit Chain), closing the in-process Attribution Gap.",
+          "doi": "10.5281/zenodo.22092008",
+          "url": "https://doi.org/10.5281/zenodo.22092008"
+        },
+        {
+          "id": "Paper 3",
+          "tag": "Kernel & Attribution Layer",
+          "title": "Runtime Attribution Framework: An External C-ABI and PKI-Based Zero-Trust Infrastructure for Non-Repudiable Execution Governance",
+          "desc": "Anchors execution non-repudiation at microsecond boundaries using external C-ABI and PKI zero-trust primitives for courtroom-grade legal liability attribution.",
+          "doi": "10.5281/zenodo.21903687",
+          "url": "https://doi.org/10.5281/zenodo.21903687"
+        },
+        {
+          "id": "Paper 4",
+          "tag": "Agentic Web Capability Layer",
+          "title": "DROS-WebMCP: A Cryptographically Attributable Execution Governance Layer for the Agentic Web",
+          "desc": "Provides cryptographically attributable capability exposition governance and fail-closed degradation for Model Context Protocol (MCP) servers and open Web agents.",
+          "doi": "10.5281/zenodo.22290238",
+          "url": "https://doi.org/10.5281/zenodo.22290238"
+        },
+        {
+          "id": "Paper 5",
+          "tag": "Digital Systems Empirical Validation",
+          "title": "Post-Compromise Security for Autonomous Mobile Agents: A Deterministic Runtime Attenuation and Proof-Carrying Authorization Architecture",
+          "desc": "Validates runtime boundary attenuation on compromised smartphone agents. 24-hour soak tests demonstrate 0 Bytes memory leak and <0.5% daily battery overhead.",
+          "doi": "10.5281/zenodo.22253147",
+          "url": "https://doi.org/10.5281/zenodo.22253147"
+        },
+        {
+          "id": "Paper 6",
+          "tag": "Cyber-Physical Systems Empirical Validation",
+          "title": "Post-Compromise Security for Physical AI: Deterministic Runtime Enforcement of Physical Action Authority in Autonomous UAVs",
+          "desc": "Empirically validates airborne UAV swarms: mid-air disarm physical containment (crash drift ΔS ≡ 0), NFZ 0.0m spatial breach lockout, and 100-node multi-hop cascade isolation.",
+          "doi": "10.5281/zenodo.22254372",
+          "url": "https://doi.org/10.5281/zenodo.22254372"
+        }
+      ]
+    },
+    "vep_harness": {
+      "title_prefix": "Scientific Reproducibility Harness",
+      "title_highlight": "DROS-VEP Lite Evaluation Environment",
+      "subtitle": "Reject marketing claims. DROS provides a 100% open-source evaluation and falsification testbed covering 8 threat scenarios, B2B supply-chain attacks, and continuous soak benchmarking:",
+      "github_repo": "https://github.com/Top-Celestial-Company-Ltd/dros-vep-lite",
+      "soak_title": "Official 24-Hour Continuous Adversarial Soak Benchmark (Empirical Evidence)",
+      "soak_stat1": "160,611",
+      "soak_lbl1": "24hr Total Benchmark Workload Requests",
+      "soak_stat2": "137,751 Blocked",
+      "soak_lbl2": "Adversarial Attacks 100% Intercepted",
+      "soak_stat3": "26.21 μs",
+      "soak_lbl3": "P50 Median Lookup Latency (σ = ±0.34μs)",
+      "soak_stat4": "0 Bytes",
+      "soak_lbl4": "Continuous 24-Hour Memory Leak (Zero Leak)"
     }
   }
 }

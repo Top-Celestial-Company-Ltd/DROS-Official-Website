@@ -20,7 +20,6 @@ import drosGatiArchitecture from '../assets/DROS_Visual_Assets/dros_gati_archite
 
 export default function Trust() {
   const { t, i18n } = useTranslation();
-  const githubUser = "Top-Celestial-Company-Ltd";
 
   const isZh = i18n.language && i18n.language.startsWith('zh');
   const pkiAnimation = isZh ? drosPkiAnimationZh : drosPkiAnimationEn;
@@ -74,6 +73,104 @@ export default function Trust() {
             <p style={{ color: 'var(--text-primary)', fontSize: '1.05rem', lineHeight: '1.8', fontWeight: '500', textAlign: 'left' }}>
               {t('trust.threat.desc2')}
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Section 1: The 6-Paper Core Academic Program ── */}
+      <section style={{ padding: '6rem 0', background: 'rgba(10,10,15,0.6)', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+            <span style={{ background: 'rgba(212, 175, 55, 0.1)', color: 'var(--accent-gold)', padding: '0.4rem 1.2rem', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 'bold', border: '1px solid rgba(212, 175, 55, 0.3)', textTransform: 'uppercase', letterSpacing: '1px' }}>
+              {t('trust.papers.title_prefix')}
+            </span>
+            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginTop: '1rem', marginBottom: '1rem', background: 'linear-gradient(to right, #fff, var(--accent-gold))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+              {t('trust.papers.title_highlight')}
+            </h2>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '850px', margin: '0 auto', lineHeight: '1.7' }}>
+              {t('trust.papers.subtitle')}
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '2rem' }}>
+            {t('trust.papers.items', { returnObjects: true }).map((p, idx) => (
+              <div key={idx} className="glass-card" style={{ padding: '2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '14px', background: 'rgba(20,20,30,0.5)' }}>
+                <div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+                    <span style={{ fontSize: '0.85rem', fontWeight: 'bold', color: 'var(--accent-gold)', fontFamily: 'monospace' }}>{p.id}</span>
+                    <span style={{ fontSize: '0.75rem', color: '#38bdf8', background: 'rgba(56,189,248,0.1)', padding: '2px 8px', borderRadius: '4px', border: '1px solid rgba(56,189,248,0.2)' }}>{p.tag}</span>
+                  </div>
+                  <h3 style={{ fontSize: '1.15rem', color: '#fff', marginBottom: '0.8rem', lineHeight: '1.5' }}>{p.title}</h3>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>{p.desc}</p>
+                </div>
+                <div style={{ borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontSize: '0.8rem', color: '#94a3b8', fontFamily: 'monospace' }}>Zenodo: {p.doi}</span>
+                  <a href={p.url} target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ fontSize: '0.8rem', padding: '0.4rem 0.8rem' }}>
+                    View Paper &rarr;
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Section 2: DROS-VEP Lite 24H Soak Benchmark Evidence ── */}
+      <section style={{ padding: '6rem 0', background: 'linear-gradient(180deg, rgba(15,23,42,0.8) 0%, rgba(10,15,30,0.9) 100%)', borderBottom: '1px solid rgba(56,189,248,0.15)' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+            <span style={{ background: 'rgba(56, 189, 248, 0.1)', color: '#38bdf8', padding: '0.4rem 1.2rem', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 'bold', border: '1px solid rgba(56, 189, 248, 0.3)', textTransform: 'uppercase', letterSpacing: '1px' }}>
+              {t('trust.vep_harness.title_prefix')}
+            </span>
+            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginTop: '1rem', marginBottom: '1rem', color: '#fff' }}>
+              {t('trust.vep_harness.title_highlight')}
+            </h2>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '820px', margin: '0 auto', lineHeight: '1.7' }}>
+              {t('trust.vep_harness.subtitle')}
+            </p>
+          </div>
+
+          {/* 4 Macro Metrics Grid */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem', marginBottom: '3rem' }}>
+            <div className="glass-card" style={{ padding: '1.8rem', textAlign: 'center', border: '1px solid rgba(56,189,248,0.25)', background: 'rgba(15,23,42,0.6)' }}>
+              <div style={{ fontSize: '2.5rem', fontWeight: '800', color: '#38bdf8', fontFamily: 'monospace' }}>{t('trust.vep_harness.soak_stat1')}</div>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.5rem' }}>{t('trust.vep_harness.soak_lbl1')}</p>
+            </div>
+            <div className="glass-card" style={{ padding: '1.8rem', textAlign: 'center', border: '1px solid rgba(74,222,128,0.25)', background: 'rgba(15,23,42,0.6)' }}>
+              <div style={{ fontSize: '2.5rem', fontWeight: '800', color: '#4ade80', fontFamily: 'monospace' }}>{t('trust.vep_harness.soak_stat2')}</div>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.5rem' }}>{t('trust.vep_harness.soak_lbl2')}</p>
+            </div>
+            <div className="glass-card" style={{ padding: '1.8rem', textAlign: 'center', border: '1px solid rgba(251,191,36,0.25)', background: 'rgba(15,23,42,0.6)' }}>
+              <div style={{ fontSize: '2.5rem', fontWeight: '800', color: '#fbbf24', fontFamily: 'monospace' }}>{t('trust.vep_harness.soak_stat3')}</div>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.5rem' }}>{t('trust.vep_harness.soak_lbl3')}</p>
+            </div>
+            <div className="glass-card" style={{ padding: '1.8rem', textAlign: 'center', border: '1px solid rgba(192,132,252,0.25)', background: 'rgba(15,23,42,0.6)' }}>
+              <div style={{ fontSize: '2.5rem', fontWeight: '800', color: '#c084fc', fontFamily: 'monospace' }}>{t('trust.vep_harness.soak_stat4')}</div>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.5rem' }}>{t('trust.vep_harness.soak_lbl4')}</p>
+            </div>
+          </div>
+
+          {/* Reproducibility Terminal & GitHub Link */}
+          <div style={{ background: '#0d1117', border: '1px solid rgba(56,189,248,0.3)', borderRadius: '12px', padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+              <span style={{ color: '#38bdf8', fontWeight: 'bold', fontSize: '1rem', fontFamily: 'monospace' }}>
+                🔬 一鍵科學完全重現指南 (Scientific Reproducibility Harness)
+              </span>
+              <a href={t('trust.vep_harness.github_repo')} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '0.5rem 1.2rem', fontSize: '0.85rem' }}>
+                GitHub: dros-vep-lite &rarr;
+              </a>
+            </div>
+            <pre style={{ margin: 0, padding: '1rem', background: '#05070a', borderRadius: '8px', color: '#a5d6ff', fontFamily: 'JetBrains Mono, monospace', fontSize: '0.88rem', overflowX: 'auto', lineHeight: '1.6' }}>
+{`# 1. 複製開源評測靶場
+git clone https://github.com/Top-Celestial-Company-Ltd/dros-vep-lite.git
+cd dros-vep-lite
+
+# 2. 啟動 GuardVM 評測沙盒 (零外部資料庫依賴)
+docker compose up -d
+
+# 3. 執行 24 小時基準壓測 (支援自訂時長)
+python scripts/run_24h_soak_test.py`}
+            </pre>
           </div>
         </div>
       </section>
