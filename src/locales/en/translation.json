@@ -341,9 +341,9 @@
         },
         {
           "id": "Paper 3",
-          "tag": "Kernel & Attribution Layer",
-          "title": "Runtime Attribution Framework: An External C-ABI and PKI-Based Zero-Trust Infrastructure for Non-Repudiable Execution Governance",
-          "desc": "Anchors execution non-repudiation at microsecond boundaries using external C-ABI and PKI zero-trust primitives for courtroom-grade legal liability attribution.",
+          "tag": "Kernel & Post-Compromise Layer",
+          "title": "DROS-PGM: A Deterministic Kernel-Level Execution Control Plane for Post-Compromise Security",
+          "desc": "A deterministic kernel-level execution control plane ensuring that downstream unauthorized physical actions are fail-closed fused at binary C-ABI and OS hook boundaries even after post-compromise.",
           "doi": "10.5281/zenodo.21903687",
           "url": "https://doi.org/10.5281/zenodo.21903687"
         },

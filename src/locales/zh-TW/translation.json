@@ -341,9 +341,9 @@
         },
         {
           "id": "Paper 3",
-          "tag": "內核控制層 (Kernel & Attribution)",
-          "title": "Runtime Attribution Framework: An External C-ABI and PKI-Based Zero-Trust Infrastructure for Non-Repudiable Execution Governance",
-          "desc": "基於外部 C-ABI 與 PKI 零信任基礎設施，在微秒級邊界實踐執行不可否認性（Non-Repudiation）與法庭級責任歸屬。",
+          "tag": "內核控制層 (Kernel & Post-Compromise)",
+          "title": "DROS-PGM: A Deterministic Kernel-Level Execution Control Plane for Post-Compromise Security",
+          "desc": "基於內核級運行期安全之確定性執行控制平面，在應用層遭受攻陷後仍能在二進位 C-ABI 與 OS Hook 邊界硬熔斷未授權實體行為。",
           "doi": "10.5281/zenodo.21903687",
           "url": "https://doi.org/10.5281/zenodo.21903687"
         },
