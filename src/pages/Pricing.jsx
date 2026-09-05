@@ -85,6 +85,77 @@ export default function Pricing() {
         </div>
       </div>
 
+      {/* ── Mobile OEM SDK & Physical AI Swarm Suite Section ── */}
+      <section style={{marginTop: '5rem', marginBottom: '3rem'}}>
+        <div style={{textAlign: 'center', marginBottom: '2.5rem'}}>
+          <span style={{background: 'rgba(56, 189, 248, 0.1)', color: '#38bdf8', padding: '0.4rem 1.2rem', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 'bold', border: '1px solid rgba(56, 189, 248, 0.3)', textTransform: 'uppercase', letterSpacing: '1px'}}>
+            Silicon, UAV & Embodied Robotics
+          </span>
+          <h2 style={{fontSize: 'clamp(2rem, 4vw, 3rem)', marginTop: '1rem', marginBottom: '0.8rem', color: '#fff'}}>
+            端側嵌入式晶片與實體具身物理 AI 治理方案
+          </h2>
+          <p style={{fontSize: '1.1rem', color: 'var(--text-secondary)', maxWidth: '780px', margin: '0 auto'}}>
+            將確定性微核心門禁直接下沉至智慧手機晶片 (C-ABI) 與無人機蜂群飛控 (MAVLink/ROS2)，保障實體世界絕對安全。
+          </p>
+        </div>
+
+        <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem'}}>
+          {/* Card 1: Mobile & UAV Embedded SDK */}
+          <div className="glass-card pricing-card" style={{padding: '2.5rem 2rem', background: 'rgba(15, 23, 42, 0.7)', border: '1px solid rgba(56, 189, 248, 0.3)', borderRadius: '16px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+            <div>
+              <span style={{fontSize: '0.75rem', fontWeight: 'bold', color: '#38bdf8', background: 'rgba(56, 189, 248, 0.1)', border: '1px solid #38bdf8', padding: '3px 10px', borderRadius: '6px', display: 'inline-block', marginBottom: '1rem'}}>
+                {t('tiers.mobile_sdk.badge')}
+              </span>
+              <h3 className="serif-font" style={{fontSize: '1.8rem', color: '#38bdf8'}} dangerouslySetInnerHTML={{ __html: t('tiers.mobile_sdk.name') }}></h3>
+              <div style={{fontSize: '2.5rem', fontWeight: 'bold', margin: '1rem 0', color: '#38bdf8'}}>
+                {t('tiers.mobile_sdk.price_yearly')}<span style={{fontSize:'1rem', color:'var(--text-secondary)'}}>{t('tiers.mobile_sdk.price_unit')}</span>
+              </div>
+              <p style={{fontSize: '0.9rem', color: '#38bdf8', marginTop: '-0.5rem', marginBottom: '1.5rem', fontWeight: '600'}}>{t('tiers.mobile_sdk.price_monthly')}</p>
+              <p style={{color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '50px', lineHeight: '1.6'}}>{t('tiers.mobile_sdk.desc')}</p>
+              <ul className="check-list" style={{textAlign: 'left', marginBottom: '2.5rem', lineHeight: '2.2', color: 'var(--text-primary)'}}>
+                {t('tiers.mobile_sdk.features', { returnObjects: true }).map((f, i) => <li key={i}>{f}</li>)}
+              </ul>
+              
+              <details style={{marginBottom: '2rem', textAlign: 'left', color: 'var(--text-secondary)', background: 'rgba(56, 189, 248, 0.05)', padding: '1rem', borderRadius: '8px', border: '1px solid rgba(56, 189, 248, 0.15)'}}>
+                <summary style={{cursor: 'pointer', fontWeight: 'bold', outline: 'none', color: '#38bdf8'}}>{t('tiers.mobile_sdk.details_title')}</summary>
+                <div style={{marginTop: '1rem', fontSize: '0.9rem', lineHeight: '1.6'}} dangerouslySetInnerHTML={{ __html: t('tiers.mobile_sdk.details_content') }}></div>
+              </details>
+            </div>
+
+            <a href="mailto:sales@topcelestial.com?subject=Inquiry:%20DROS%20Mobile%20%26%20UAV%20SDK%20Licensing" className="btn" style={{width: '100%', display: 'block', boxSizing: 'border-box', textAlign: 'center', background: 'transparent', border: '1px solid #38bdf8', color: '#38bdf8', fontWeight: 'bold', padding: '1.1rem', borderRadius: '10px'}}>
+              {t('tiers.mobile_sdk.btn')}
+            </a>
+          </div>
+
+          {/* Card 2: Physical AI & Swarm Suite */}
+          <div className="glass-card pricing-card" style={{padding: '2.5rem 2rem', background: 'rgba(15, 23, 42, 0.7)', border: '1px solid rgba(245, 158, 11, 0.4)', borderRadius: '16px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+            <div>
+              <span style={{fontSize: '0.75rem', fontWeight: 'bold', color: '#f59e0b', background: 'rgba(245, 158, 11, 0.1)', border: '1px solid #f59e0b', padding: '3px 10px', borderRadius: '6px', display: 'inline-block', marginBottom: '1rem'}}>
+                {t('tiers.physical_swarm.badge')}
+              </span>
+              <h3 className="serif-font" style={{fontSize: '1.8rem', color: '#f59e0b'}} dangerouslySetInnerHTML={{ __html: t('tiers.physical_swarm.name') }}></h3>
+              <div style={{fontSize: '2.5rem', fontWeight: 'bold', margin: '1rem 0', color: '#f59e0b'}}>
+                {t('tiers.physical_swarm.price_yearly')}<span style={{fontSize:'1rem', color:'var(--text-secondary)'}}>{t('tiers.physical_swarm.price_unit')}</span>
+              </div>
+              <p style={{fontSize: '0.9rem', color: '#f59e0b', marginTop: '-0.5rem', marginBottom: '1.5rem', fontWeight: '600'}}>{t('tiers.physical_swarm.price_monthly')}</p>
+              <p style={{color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '50px', lineHeight: '1.6'}}>{t('tiers.physical_swarm.desc')}</p>
+              <ul className="check-list" style={{textAlign: 'left', marginBottom: '2.5rem', lineHeight: '2.2', color: 'var(--text-primary)'}}>
+                {t('tiers.physical_swarm.features', { returnObjects: true }).map((f, i) => <li key={i}>{f}</li>)}
+              </ul>
+              
+              <details style={{marginBottom: '2rem', textAlign: 'left', color: 'var(--text-secondary)', background: 'rgba(245, 158, 11, 0.05)', padding: '1rem', borderRadius: '8px', border: '1px solid rgba(245, 158, 11, 0.2)'}}>
+                <summary style={{cursor: 'pointer', fontWeight: 'bold', outline: 'none', color: '#f59e0b'}}>{t('tiers.physical_swarm.details_title')}</summary>
+                <div style={{marginTop: '1rem', fontSize: '0.9rem', lineHeight: '1.6'}} dangerouslySetInnerHTML={{ __html: t('tiers.physical_swarm.details_content') }}></div>
+              </details>
+            </div>
+
+            <a href="mailto:sales@topcelestial.com?subject=Inquiry:%20DROS%20Physical%20AI%20%26%20Swarm%20Governance%20Suite" className="btn" style={{width: '100%', display: 'block', boxSizing: 'border-box', textAlign: 'center', background: 'linear-gradient(135deg, rgba(245,158,11,0.2), rgba(245,158,11,0.4))', border: '1px solid #f59e0b', color: '#fff', fontWeight: 'bold', padding: '1.1rem', borderRadius: '10px'}}>
+              {t('tiers.physical_swarm.btn')}
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ── Paid Add-On Solution Packages Section ── */}
       <section style={{marginTop: '5rem', marginBottom: '3rem'}}>
         <div style={{textAlign: 'center', marginBottom: '2.5rem'}}>

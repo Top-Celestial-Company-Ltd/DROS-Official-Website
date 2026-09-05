@@ -55,6 +55,42 @@
       "details_title": "展開看詳細技術規格",
       "details_content": "<p><strong>產品定位</strong>：針對大型高併發場景，部署安全中控網格的終極防線，提供最高規格密碼學防護與自動化維運支援。<br/><strong>核心機制：</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>VajraAgent Mesh</strong>：統一進行 OTA 安全策略更新，無縫派發至數百個 AI Employee。</li><li><strong>多重防禦機制</strong>：包含 Sealed Binary Policy 與 Cryptographic Audit，杜絕內部與外部篡改。</li><li><strong>強固型底座</strong>：支援完全斷網/私有雲部署，搭配 K8s/Ansible 及離線自適應安全降級防禦。</li></ul>",
       "btn": "Contact Sales"
+    },
+    "mobile_sdk": {
+      "badge": "OEM & EMBEDDED",
+      "name": "DROS Mobile & UAV SDK <br/><span style='font-size: 1.2rem; color: #38bdf8'>嵌入式微核心 (C-ABI)</span>",
+      "price_yearly": "個別議定",
+      "price_unit": " (Contact Sales)",
+      "price_monthly": "手機廠 / 無人機硬體 OEM 專屬嵌入式授權",
+      "desc": "專為智慧型手機與邊緣嵌入式設備打造。純本地 C-ABI 二進位微核心，微秒級防越權、防竊密與實體兜底。",
+      "features": [
+        "支援 Android (.aar)、iOS (.xcframework) 與 Linux ARM64",
+        "純本地 C-ABI 微核心 (<25μs 確定性阻斷)",
+        "100% 離線自主運作 (Mode C 零雲端依賴)",
+        "超低系統負擔 (RAM < 10MB，24hr 耗電增幅 < 0.5%)",
+        "特洛伊木馬出廠兜底，後續企業能力無縫擴展"
+      ],
+      "details_title": "展開看詳細技術規格",
+      "details_content": "<p><strong>產品定位</strong>：專為手機 OEM (AI 手機) 與無人機製造商提供晶片底層級安全防線。<br/><strong>核心特性：</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>微秒級帶內防禦</strong>：高密度位元圖查表，不調用本地大模型，零推論算力開銷。</li><li><strong>零洩漏長時穩定</strong>：24 小時連續壓測 Memory Leak 為 0 Bytes。</li><li><strong>純本地硬阻斷</strong>：阻斷惡意 Prompt Injection、隱私外洩與越權致動器操作。</li></ul>",
+      "btn": "洽詢 OEM 合作 (Contact Sales)"
+    },
+    "physical_swarm": {
+      "badge": "PHYSICAL AI & KINETIC",
+      "name": "DROS Physical AI & Swarm <br/><span style='font-size: 1.2rem; color: #f59e0b'>蜂群與機器人機隊治理</span>",
+      "price_yearly": "個別議定",
+      "price_unit": " (Enterprise / Gov)",
+      "price_monthly": "無人機蜂群 / 智慧倉儲 AMR / 具身機器人專用",
+      "desc": "針對實體具身智能與自主蜂群的高動態物理治理。Central GCS 戰情室 + 機載帶內硬阻斷，防炸機、防失控衝撞。",
+      "features": [
+        "1 Device = 1 Hardware UUID 實體晶片綁定",
+        "空中停機/高速急煞物理動力阻斷 (摔機率 ΔS ≡ 0)",
+        "100 機/車 蜂群串通攻擊防擴散 (委託鏈 H ≤ 2)",
+        "三維絕對禁航區與地緣圍欄 (0.0m 穿透阻斷)",
+        "全面符合歐盟 EU AI Act Art. 14、EASA SORA 與 DO-178C"
+      ],
+      "details_title": "展開看詳細技術規格",
+      "details_content": "<p><strong>產品定位</strong>：針對無人機蜂群 (UAV)、智慧搬運車 (AMR/AGV) 與具身人形機器人的企業級戰情中心與實體動力學安全門禁。<br/><strong>核心特性：</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>Central GCS 戰情指揮中心</strong>：即時視覺化監控、OTA 動態策略廣播與 Merkle 飛行黑盒子。</li><li><strong>五大實體動力學防線</strong>：空中防 Disarm、蜂群防連鎖癱瘓、NFZ 禁航區硬熔斷、超速/超 G 動力包絡物理鉗制、電子戰感測器反欺騙。</li><li><strong>航太軍工級架構</strong>：符合 Simplex 雙通道隔離，確保大模型出錯不導致實體動力失控。</li></ul>",
+      "btn": "洽詢蜂群專案 (Contact Sales)"
     }
   },
   "disclaimer": {
@@ -72,18 +108,90 @@
     "col_enterprise": "🟣 Enterprise",
     "col_sovereign": "👑 Sovereign",
     "rows": [
-      ["目標客戶", "個人開發者 / 研究 (非商用)", "10~50 人新創團隊", "中大型企業 / 上市公司", "金融 / 國防 / 關鍵基建"],
-      ["使用期限", "永久免費", "年度訂閱", "年度訂閱", "專案雙向合約"],
-      ["Machine UUIDs", "1 組", "3 組", "15 組", "無限制"],
-      ["Concurrent Agents", "5 個", "30 個 (3×10)", "450 個 (15×30)", "無限制 (Swarm)"],
-      ["VajraAgent 主控頁控制台", "單機 Agent 護照控制台", "單機 Agent 護照控制台", "企業雙向權限總控台 (對內發行 DIT、對外 Capability 勾選)", "全網 Swarm 戰術指揮中心 (1ms 全網 Kill-Switch)"],
-      ["Pillar 1: Principal (RFC-010 護照 / DIT)", "✅ 原生 W3C did:key 憑證", "✅ 雙向權限標籤發行", "✅ 企業階層式 PKI Token 發行", "✅ 跨國網域 Sovereign DID"],
-      ["Pillar 2: Authorization (Capability Bitmaps)", "✅ $O(1)$ 基礎位元圖", "✅ 視覺化勾選與動態 Bitmaps", "✅ 企業級 256-bit 位元矩陣", "✅ 自訂硬體級 SIMD 位元遮罩"],
-      ["Pillar 3: Tool/Action Bound (C-ABI 熔斷)", "✅ $26.1\\ \\mu\\text{s}$ 帶內硬熔斷", "✅ $26.1\\ \\mu\\text{s}$ 帶內硬熔斷", "✅ $26.1\\ \\mu\\text{s}$ 帶內硬熔斷", "✅ $26.1\\ \\mu\\text{s}$ 硬體 eBPF/FPGA 熔斷"],
-      ["Pillar 4: Policy Gate (動態遮蔽 / HITL / ZKP)", "❌", "✅ PII 動態遮蔽與 HITL 懸停", "✅ 完整 ZKP-Lite 零知識證明與 HITL", "✅ 國防級雙人授權與硬體門閥"],
-      ["Pillar 5: Audit Log (Merkle Hash Chain)", "✅ 本機 Ed25519 簽章日誌", "✅ 本地不可篡改追溯", "✅ SHA-256 Merkle 雜湊鏈 + Ed25519 簽章", "✅ 分散式鏈上/跨伺服器稽核"],
-      ["Pillar 6: Revocation (<1μs RCU 一鍵撤銷)", "❌", "✅ 一鍵黑名單按鈕", "✅ 一鍵按鈕 $<1\\ \\mu\\text{s}$ RCU 撤銷 (HTTP 403)", "✅ 全網 1ms 戰術 Kill-Switch"],
-      ["部署環境", "Local / Docker (多 Agent 網關)", "VM / NAS Docker", "K8s / GKE / On-Premise", "Air-Gapped / Sovereign Cloud"]
+      [
+        "目標客戶",
+        "個人開發者 / 研究 (非商用)",
+        "10~50 人新創團隊",
+        "中大型企業 / 上市公司",
+        "金融 / 國防 / 關鍵基建"
+      ],
+      [
+        "使用期限",
+        "永久免費",
+        "年度訂閱",
+        "年度訂閱",
+        "專案雙向合約"
+      ],
+      [
+        "Machine UUIDs",
+        "1 組",
+        "3 組",
+        "15 組",
+        "無限制"
+      ],
+      [
+        "Concurrent Agents",
+        "5 個",
+        "30 個 (3×10)",
+        "450 個 (15×30)",
+        "無限制 (Swarm)"
+      ],
+      [
+        "VajraAgent 主控頁控制台",
+        "單機 Agent 護照控制台",
+        "單機 Agent 護照控制台",
+        "企業雙向權限總控台 (對內發行 DIT、對外 Capability 勾選)",
+        "全網 Swarm 戰術指揮中心 (1ms 全網 Kill-Switch)"
+      ],
+      [
+        "Pillar 1: Principal (RFC-010 護照 / DIT)",
+        "✅ 原生 W3C did:key 憑證",
+        "✅ 雙向權限標籤發行",
+        "✅ 企業階層式 PKI Token 發行",
+        "✅ 跨國網域 Sovereign DID"
+      ],
+      [
+        "Pillar 2: Authorization (Capability Bitmaps)",
+        "✅ $O(1)$ 基礎位元圖",
+        "✅ 視覺化勾選與動態 Bitmaps",
+        "✅ 企業級 256-bit 位元矩陣",
+        "✅ 自訂硬體級 SIMD 位元遮罩"
+      ],
+      [
+        "Pillar 3: Tool/Action Bound (C-ABI 熔斷)",
+        "✅ $26.1\\ \\mu\\text{s}$ 帶內硬熔斷",
+        "✅ $26.1\\ \\mu\\text{s}$ 帶內硬熔斷",
+        "✅ $26.1\\ \\mu\\text{s}$ 帶內硬熔斷",
+        "✅ $26.1\\ \\mu\\text{s}$ 硬體 eBPF/FPGA 熔斷"
+      ],
+      [
+        "Pillar 4: Policy Gate (動態遮蔽 / HITL / ZKP)",
+        "❌",
+        "✅ PII 動態遮蔽與 HITL 懸停",
+        "✅ 完整 ZKP-Lite 零知識證明與 HITL",
+        "✅ 國防級雙人授權與硬體門閥"
+      ],
+      [
+        "Pillar 5: Audit Log (Merkle Hash Chain)",
+        "✅ 本機 Ed25519 簽章日誌",
+        "✅ 本地不可篡改追溯",
+        "✅ SHA-256 Merkle 雜湊鏈 + Ed25519 簽章",
+        "✅ 分散式鏈上/跨伺服器稽核"
+      ],
+      [
+        "Pillar 6: Revocation (<1μs RCU 一鍵撤銷)",
+        "❌",
+        "✅ 一鍵黑名單按鈕",
+        "✅ 一鍵按鈕 $<1\\ \\mu\\text{s}$ RCU 撤銷 (HTTP 403)",
+        "✅ 全網 1ms 戰術 Kill-Switch"
+      ],
+      [
+        "部署環境",
+        "Local / Docker (多 Agent 網關)",
+        "VM / NAS Docker",
+        "K8s / GKE / On-Premise",
+        "Air-Gapped / Sovereign Cloud"
+      ]
     ]
   },
   "cta": {
@@ -100,14 +208,62 @@
     "col_api_gw": "API Gateway",
     "col_dros": "✦ DROS VEP",
     "rows": [
-      ["防禦層次", "基礎設施層<br/><small>（防雲端廠商）</small>", "資料協作層<br/><small>（批次聚合）</small>", "網路閘道層<br/><small>（流量控制）</small>", "AI Agent 執行期層<br/><small>（應用行為治理）</small>"],
-      ["防止雲端廠商 / Hypervisor 窺視", "✅ 強<br/><small>TEE 記憶體加密</small>", "✅ 中", "❌", "❌<br/><small>（非設計目標）</small>"],
-      ["欄位級動態 Policy 遮蔽（即時 API）", "❌<br/><small>無欄位層概念</small>", "⚠️ 部分<br/><small>批次聚合，非即時</small>", "⚠️ 部分<br/><small>靜態規則，無 AI 語意</small>", "✅<br/><small>帶內 26.1μs 決策</small>"],
-      ["AI Agent Tool Call 越權行為治理", "❌", "❌", "❌", "✅<br/><small>C-ABI 物理熔斷</small>"],
-      ["即時輸出密碼學簽章合規憑證（DPP）", "❌", "❌", "❌", "✅<br/><small>SHA-256 Merkle 簽章</small>"],
-      ["不可竄改稽核鏈（可獨立驗證）", "⚠️ 部分<br/><small>TEE Attestation</small>", "❌", "❌", "✅<br/><small>完整 Merkle Chain</small>"],
-      ["Human-in-the-Loop 高風險動作懸停", "❌", "❌", "❌", "✅<br/><small>HITL 雙重簽署</small>"],
-      ["秒級 Token 動態撤銷", "❌", "❌", "⚠️ 部分<br/><small>需重新部署</small>", "✅<br/><small>O(1) RCU 原子交換</small>"]
+      [
+        "防禦層次",
+        "基礎設施層<br/><small>（防雲端廠商）</small>",
+        "資料協作層<br/><small>（批次聚合）</small>",
+        "網路閘道層<br/><small>（流量控制）</small>",
+        "AI Agent 執行期層<br/><small>（應用行為治理）</small>"
+      ],
+      [
+        "防止雲端廠商 / Hypervisor 窺視",
+        "✅ 強<br/><small>TEE 記憶體加密</small>",
+        "✅ 中",
+        "❌",
+        "❌<br/><small>（非設計目標）</small>"
+      ],
+      [
+        "欄位級動態 Policy 遮蔽（即時 API）",
+        "❌<br/><small>無欄位層概念</small>",
+        "⚠️ 部分<br/><small>批次聚合，非即時</small>",
+        "⚠️ 部分<br/><small>靜態規則，無 AI 語意</small>",
+        "✅<br/><small>帶內 26.1μs 決策</small>"
+      ],
+      [
+        "AI Agent Tool Call 越權行為治理",
+        "❌",
+        "❌",
+        "❌",
+        "✅<br/><small>C-ABI 物理熔斷</small>"
+      ],
+      [
+        "即時輸出密碼學簽章合規憑證（DPP）",
+        "❌",
+        "❌",
+        "❌",
+        "✅<br/><small>SHA-256 Merkle 簽章</small>"
+      ],
+      [
+        "不可竄改稽核鏈（可獨立驗證）",
+        "⚠️ 部分<br/><small>TEE Attestation</small>",
+        "❌",
+        "❌",
+        "✅<br/><small>完整 Merkle Chain</small>"
+      ],
+      [
+        "Human-in-the-Loop 高風險動作懸停",
+        "❌",
+        "❌",
+        "❌",
+        "✅<br/><small>HITL 雙重簽署</small>"
+      ],
+      [
+        "秒級 Token 動態撤銷",
+        "❌",
+        "❌",
+        "⚠️ 部分<br/><small>需重新部署</small>",
+        "✅<br/><small>O(1) RCU 原子交換</small>"
+      ]
     ],
     "footnote": "📌 互補關係說明：Confidential Computing（Intel TDX / Azure Confidential VM）與 DROS 保護不同攻擊面，為互補而非競爭關係。Confidential Computing 防禦基礎設施層攻擊（防止雲端廠商與 Hypervisor 窺視 TEE 記憶體）；DROS 防禦 AI Agent 執行期應用層攻擊（防止 Agent 越權行為、Prompt Injection 導出機密資料）。兩者可同時部署，實現縱深防禦（Defense in Depth）。Data Clean Room 適用於離線批次多方資料協作，API Gateway 適用於流量管控，均非針對 AI Agent 執行期動態行為治理所設計。"
   },

@@ -55,6 +55,42 @@
       "details_title": "View Technical Specs",
       "details_content": "<p><strong>Target Audience</strong>: Enterprise-grade centralized control mesh and cryptographic protection designed for high-concurrency multi-agent environments.<br/><strong>Core Mechanisms:</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>VajraAgent Mesh</strong>: Unified OTA security policy updates seamlessly deployed across hundreds of AI Employees.</li><li><strong>Robust Security Shield</strong>: Sealed Binary Policy and Cryptographic Audit Trace to eliminate any threat of internal/external policy tampering.</li><li><strong>Enterprise Scale</strong>: Supports fully air-gapped private cloud deployments, Kubernetes Helm & Ansible automation, and autonomous fail-closed safe degradation.</li></ul>",
       "btn": "Contact Sales"
+    },
+    "mobile_sdk": {
+      "badge": "OEM & EMBEDDED",
+      "name": "DROS Mobile & UAV SDK <br/><span style='font-size: 1.2rem; color: #38bdf8'>Embedded Microkernel (C-ABI)</span>",
+      "price_yearly": "Contact Sales",
+      "price_unit": " (Custom Licensing)",
+      "price_monthly": "OEM Licensing for AI Smartphones & UAV Manufacturers",
+      "desc": "Engineered for smartphones and airborne edge devices. Pure local C-ABI binary microkernel providing microsecond-level boundary containment.",
+      "features": [
+        "Native Android (.aar), iOS (.xcframework) & Linux ARM64 support",
+        "Deterministic C-ABI microkernel (<25μs lookup latency)",
+        "100% off-grid autonomy (Mode C Zero-Cloud dependency)",
+        "Ultralight footprint (RAM < 10MB, 24hr battery impact < 0.5%)",
+        "Factory-installed trojan substrate with seamless enterprise upgrade path"
+      ],
+      "details_title": "View Technical Specs",
+      "details_content": "<p><strong>Target Audience</strong>: Smartphone OEMs and drone hardware vendors requiring silicon-level boundary enforcement.<br/><strong>Key Capabilities:</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>Sub-microsecond In-Band Defense</strong>: High-density bitmap evaluation without local model inference overhead.</li><li><strong>Zero-Leak Long-Term Stability</strong>: Continuous 24-hour soak tests verified 0 Bytes memory leak.</li><li><strong>Air-gapped Enforcement</strong>: Blocks prompt injection, credential theft, and unauthorized actuator disarms.</li></ul>",
+      "btn": "Contact Sales (OEM Licensing)"
+    },
+    "physical_swarm": {
+      "badge": "PHYSICAL AI & KINETIC",
+      "name": "DROS Physical AI & Swarm <br/><span style='font-size: 1.2rem; color: #f59e0b'>Swarm & Robotics Fleet Suite</span>",
+      "price_yearly": "Contact Sales",
+      "price_unit": " (Enterprise / Gov)",
+      "price_monthly": "Dedicated to UAV Swarms, Warehouse AMRs & Embodied Robotics",
+      "desc": "High-assurance kinetic runtime governance for autonomous swarms and embodied AI. Central GCS command center + airborne in-band containment.",
+      "features": [
+        "1 Device = 1 Hardware UUID immutable silicon identity",
+        "Deterministic mid-air disarm physical containment (Crash drift ΔS ≡ 0)",
+        "100-node multi-hop swarm mesh anti-cascade (Delegation depth H ≤ 2)",
+        "Absolute 3D geofencing & NFZ lockout (0.0m spatial breach)",
+        "Full alignment with EU AI Act Art. 14, EASA SORA & RTCA DO-178C"
+      ],
+      "details_title": "View Technical Specs",
+      "details_content": "<p><strong>Target Audience</strong>: Autonomous drone swarms (UAVs), mobile logistics fleets (AMRs/AGVs), and embodied humanoid robots.<br/><strong>Core Architecture:</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>Central GCS Command Center</strong>: Real-time visual mesh dashboard, dynamic OTA policy broadcast, and cryptographic Merkle Flight Black Box.</li><li><strong>5 Kinetic Defensive Invariants</strong>: Mid-air disarm prevention, swarm cascade isolation, geofence lockout, kinetic envelope clamping, and sensor spoofing fallback.</li><li><strong>Avionics-Grade Simplex Architecture</strong>: Guarantees cognitive planner compromise never induces kinetic loss of control.</li></ul>",
+      "btn": "Contact Sales (Swarm Suite)"
     }
   },
   "disclaimer": {
@@ -72,18 +108,90 @@
     "col_enterprise": "🟣 Enterprise",
     "col_sovereign": "👑 Sovereign",
     "rows": [
-      ["Target Audience", "Solo Dev / Research (Non-Commercial)", "10~50 Dev Startup Teams", "Large Enterprise / Listed Co.", "Finance / Defense / Critical Infra"],
-      ["License Term", "Free Forever", "Annual Subscription", "Annual Subscription", "Project Contract"],
-      ["Machine UUIDs", "1", "3", "15", "Unlimited"],
-      ["Concurrent Agents", "5", "30 (3×10)", "450 (15×30)", "Unlimited (Swarm)"],
-      ["VajraAgent UI Console Tier", "Single Agent Passport Console", "Single Agent Passport Console", "Enterprise Bidirectional Permission Control (DIT Issuance & Capability Toggles)", "Full Swarm Command Center (1ms Global Kill-Switch)"],
-      ["Pillar 1: Principal (RFC-010 Passport / DIT)", "✅ Native W3C did:key Token", "✅ Bidirectional Role Tagging", "✅ Enterprise Hierarchical PKI Issuance", "✅ Sovereign Cross-Domain DID"],
-      ["Pillar 2: Authorization (Capability Bitmaps)", "✅ $O(1)$ Bit Vector", "✅ Visual Toggles & Dynamic Bitmaps", "✅ Enterprise 256-bit Matrix", "✅ Hardware SIMD Bitmask"],
-      ["Pillar 3: Tool/Action Bound (C-ABI Hard Block)", "✅ $26.1\\ \\mu\\text{s}$ In-Band Intercept", "✅ $26.1\\ \\mu\\text{s}$ In-Band Intercept", "✅ $26.1\\ \\mu\\text{s}$ In-Band Intercept", "✅ $26.1\\ \\mu\\text{s}$ eBPF/FPGA Intercept"],
-      ["Pillar 4: Policy Gate (Redaction / HITL / ZKP)", "❌", "✅ PII Redaction & HITL Hold", "✅ Full ZKP-Lite & HITL Hold", "✅ Defense-Grade Dual Sign-off"],
-      ["Pillar 5: Audit Log (Merkle Hash Chain)", "✅ Local Ed25519 Signed Log", "✅ Local Immutable Provenance", "✅ SHA-256 Merkle Chain + Ed25519", "✅ Distributed Multi-Server Chain"],
-      ["Pillar 6: Revocation (<1μs RCU Instant Revoke)", "❌", "✅ 1-Click Blacklist Button", "✅ 1-Click $<1\\ \\mu\\text{s}$ RCU Revoke (HTTP 403)", "✅ Full Swarm 1ms Tactical Kill-Switch"],
-      ["Deployment Target", "Local / Docker (Multi-Agent Gateway)", "VM / NAS Docker", "K8s / GKE / On-Premise", "Air-Gapped / Sovereign Cloud"]
+      [
+        "Target Audience",
+        "Solo Dev / Research (Non-Commercial)",
+        "10~50 Dev Startup Teams",
+        "Large Enterprise / Listed Co.",
+        "Finance / Defense / Critical Infra"
+      ],
+      [
+        "License Term",
+        "Free Forever",
+        "Annual Subscription",
+        "Annual Subscription",
+        "Project Contract"
+      ],
+      [
+        "Machine UUIDs",
+        "1",
+        "3",
+        "15",
+        "Unlimited"
+      ],
+      [
+        "Concurrent Agents",
+        "5",
+        "30 (3×10)",
+        "450 (15×30)",
+        "Unlimited (Swarm)"
+      ],
+      [
+        "VajraAgent UI Console Tier",
+        "Single Agent Passport Console",
+        "Single Agent Passport Console",
+        "Enterprise Bidirectional Permission Control (DIT Issuance & Capability Toggles)",
+        "Full Swarm Command Center (1ms Global Kill-Switch)"
+      ],
+      [
+        "Pillar 1: Principal (RFC-010 Passport / DIT)",
+        "✅ Native W3C did:key Token",
+        "✅ Bidirectional Role Tagging",
+        "✅ Enterprise Hierarchical PKI Issuance",
+        "✅ Sovereign Cross-Domain DID"
+      ],
+      [
+        "Pillar 2: Authorization (Capability Bitmaps)",
+        "✅ $O(1)$ Bit Vector",
+        "✅ Visual Toggles & Dynamic Bitmaps",
+        "✅ Enterprise 256-bit Matrix",
+        "✅ Hardware SIMD Bitmask"
+      ],
+      [
+        "Pillar 3: Tool/Action Bound (C-ABI Hard Block)",
+        "✅ $26.1\\ \\mu\\text{s}$ In-Band Intercept",
+        "✅ $26.1\\ \\mu\\text{s}$ In-Band Intercept",
+        "✅ $26.1\\ \\mu\\text{s}$ In-Band Intercept",
+        "✅ $26.1\\ \\mu\\text{s}$ eBPF/FPGA Intercept"
+      ],
+      [
+        "Pillar 4: Policy Gate (Redaction / HITL / ZKP)",
+        "❌",
+        "✅ PII Redaction & HITL Hold",
+        "✅ Full ZKP-Lite & HITL Hold",
+        "✅ Defense-Grade Dual Sign-off"
+      ],
+      [
+        "Pillar 5: Audit Log (Merkle Hash Chain)",
+        "✅ Local Ed25519 Signed Log",
+        "✅ Local Immutable Provenance",
+        "✅ SHA-256 Merkle Chain + Ed25519",
+        "✅ Distributed Multi-Server Chain"
+      ],
+      [
+        "Pillar 6: Revocation (<1μs RCU Instant Revoke)",
+        "❌",
+        "✅ 1-Click Blacklist Button",
+        "✅ 1-Click $<1\\ \\mu\\text{s}$ RCU Revoke (HTTP 403)",
+        "✅ Full Swarm 1ms Tactical Kill-Switch"
+      ],
+      [
+        "Deployment Target",
+        "Local / Docker (Multi-Agent Gateway)",
+        "VM / NAS Docker",
+        "K8s / GKE / On-Premise",
+        "Air-Gapped / Sovereign Cloud"
+      ]
     ]
   },
   "cta": {
@@ -100,14 +208,62 @@
     "col_api_gw": "API Gateway",
     "col_dros": "✦ DROS VEP",
     "rows": [
-      ["Defense Layer", "Infrastructure Layer<br/><small>(Anti cloud-operator)</small>", "Data Collaboration Layer<br/><small>(Batch analytics)</small>", "Network Gateway Layer<br/><small>(Traffic control)</small>", "AI Agent Runtime Layer<br/><small>(Application behavior governance)</small>"],
-      ["Block Cloud Provider / Hypervisor Snooping", "✅ Strong<br/><small>TEE memory encryption</small>", "✅ Moderate", "❌", "❌<br/><small>(Out of scope by design)</small>"],
-      ["Field-Level Dynamic Policy Masking (Real-Time API)", "❌<br/><small>No field-level concept</small>", "⚠️ Partial<br/><small>Batch aggregation, not real-time</small>", "⚠️ Partial<br/><small>Static rules, no AI semantic awareness</small>", "✅<br/><small>In-band 26.1μs decision</small>"],
-      ["AI Agent Tool Call Unauthorized Behavior Governance", "❌", "❌", "❌", "✅<br/><small>C-ABI physical circuit-breaking</small>"],
-      ["Real-Time Cryptographic Compliance Proof Output (DPP)", "❌", "❌", "❌", "✅<br/><small>SHA-256 Merkle-signed</small>"],
-      ["Tamper-Evident Audit Chain (Independently Verifiable)", "⚠️ Partial<br/><small>TEE Attestation only</small>", "❌", "❌", "✅<br/><small>Full Merkle Chain</small>"],
-      ["Human-in-the-Loop High-Risk Action Suspension", "❌", "❌", "❌", "✅<br/><small>HITL dual-signature gate</small>"],
-      ["Sub-Second Token Dynamic Revocation", "❌", "❌", "⚠️ Partial<br/><small>Requires redeployment</small>", "✅<br/><small>O(1) RCU atomic swap</small>"]
+      [
+        "Defense Layer",
+        "Infrastructure Layer<br/><small>(Anti cloud-operator)</small>",
+        "Data Collaboration Layer<br/><small>(Batch analytics)</small>",
+        "Network Gateway Layer<br/><small>(Traffic control)</small>",
+        "AI Agent Runtime Layer<br/><small>(Application behavior governance)</small>"
+      ],
+      [
+        "Block Cloud Provider / Hypervisor Snooping",
+        "✅ Strong<br/><small>TEE memory encryption</small>",
+        "✅ Moderate",
+        "❌",
+        "❌<br/><small>(Out of scope by design)</small>"
+      ],
+      [
+        "Field-Level Dynamic Policy Masking (Real-Time API)",
+        "❌<br/><small>No field-level concept</small>",
+        "⚠️ Partial<br/><small>Batch aggregation, not real-time</small>",
+        "⚠️ Partial<br/><small>Static rules, no AI semantic awareness</small>",
+        "✅<br/><small>In-band 26.1μs decision</small>"
+      ],
+      [
+        "AI Agent Tool Call Unauthorized Behavior Governance",
+        "❌",
+        "❌",
+        "❌",
+        "✅<br/><small>C-ABI physical circuit-breaking</small>"
+      ],
+      [
+        "Real-Time Cryptographic Compliance Proof Output (DPP)",
+        "❌",
+        "❌",
+        "❌",
+        "✅<br/><small>SHA-256 Merkle-signed</small>"
+      ],
+      [
+        "Tamper-Evident Audit Chain (Independently Verifiable)",
+        "⚠️ Partial<br/><small>TEE Attestation only</small>",
+        "❌",
+        "❌",
+        "✅<br/><small>Full Merkle Chain</small>"
+      ],
+      [
+        "Human-in-the-Loop High-Risk Action Suspension",
+        "❌",
+        "❌",
+        "❌",
+        "✅<br/><small>HITL dual-signature gate</small>"
+      ],
+      [
+        "Sub-Second Token Dynamic Revocation",
+        "❌",
+        "❌",
+        "⚠️ Partial<br/><small>Requires redeployment</small>",
+        "✅<br/><small>O(1) RCU atomic swap</small>"
+      ]
     ],
     "footnote": "📌 Complementary Relationship Notice: Confidential Computing (Intel TDX / Azure Confidential VM) and DROS protect different attack surfaces and are complementary, not competing. Confidential Computing defends the infrastructure layer (preventing cloud operators and hypervisors from reading TEE memory); DROS defends the AI Agent runtime application layer (preventing Agent privilege escalation and Prompt Injection exfiltration). Both can be deployed simultaneously for Defense-in-Depth. Data Clean Rooms are designed for offline batch multi-party analytics; API Gateways handle traffic control — neither is designed for real-time AI Agent runtime behavioral governance."
   },
