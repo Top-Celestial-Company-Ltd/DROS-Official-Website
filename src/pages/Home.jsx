@@ -168,6 +168,25 @@ export default function Home() {
             </tbody>
           </table>
         </div>
+
+        {/* POSIX Analogy Callout Note */}
+        <div style={{
+          marginTop: '1.8rem',
+          padding: '1.4rem 1.8rem',
+          background: 'rgba(212, 175, 55, 0.03)',
+          borderRadius: '12px',
+          border: '1px solid rgba(212, 175, 55, 0.15)',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '0.6rem'
+        }}>
+          <p style={{ margin: 0, color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.7' }}>
+            <strong style={{ color: 'var(--accent-gold)' }}>💡 {t('home.paradigm_shift.posix_analogy_desc')}</strong>
+          </p>
+          <p style={{ margin: 0, color: '#8b949e', fontSize: '0.85rem', lineHeight: '1.6', fontStyle: 'italic' }}>
+            🛡️ {t('home.paradigm_shift.posix_disclaimer_note')}
+          </p>
+        </div>
       </section>
 
       {/* Pain Points & Solutions */}

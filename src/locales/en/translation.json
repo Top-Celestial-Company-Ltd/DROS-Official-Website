@@ -89,7 +89,9 @@
           "dros": "SHA-256 Merkle Tamper-Proof Audit Chain",
           "governance": "Empowers every Tool Call with non-repudiable legal traceability and court-admissible compliance proofs"
         }
-      ]
+      ],
+      "posix_analogy_desc": "Analogous to POSIX: POSIX did not eliminate application complexity; it prevented every application from reinventing low-level OS interfaces. DROS applies the exact same abstraction principle to agent governance—upstream applications need not independently invent identity, authorization, tool boundaries, gating, forensic auditability, and microsecond revocation mechanisms.",
+      "posix_disclaimer_note": "Special Note: This analogy describes an architectural role; it does not claim DROS replaces general-purpose operating systems like Linux or Windows."
     },
     "minimal_interface": {
       "badge": "MINIMAL INTERFACE ABSTRACTION",

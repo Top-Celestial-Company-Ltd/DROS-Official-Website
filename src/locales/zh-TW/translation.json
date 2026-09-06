@@ -89,7 +89,9 @@
           "dros": "SHA-256 Merkle 不可篡改證據鏈",
           "governance": "為每一次 Tool Call 賦予不可否認的法律追溯性與法院級合規存證"
         }
-      ]
+      ],
+      "posix_analogy_desc": "類比 POSIX：POSIX 並未消除應用複雜度，而是避免每個應用重造底層介面。DROS 對 Agent 治理採同一抽象原則——上層不必重造身份、授權、工具邊界、閘門、審計與撤銷的整套機制。",
+      "posix_disclaimer_note": "特別聲明：此類比描述的是架構角色，並非宣稱 DROS 取代 Linux／Windows 等通用作業系統。"
     },
     "minimal_interface": {
       "badge": "MINIMAL INTERFACE ABSTRACTION",
