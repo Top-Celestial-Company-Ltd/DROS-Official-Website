@@ -53,6 +53,69 @@
       "layer3_title": "👑 DROS 生態缺失層 (Missing Layer)",
       "layer3_desc": "DROS 捨棄執行期字串解析與 LLM 動態推理，將攔截微核心建置於 C-ABI 咽喉處，以 O(1) 位元運算在奈秒級內實行精確的實體通關驗證。"
     },
+    "paradigm_shift": {
+      "badge": "OPERATING SYSTEM PARADIGM SHIFT",
+      "title_prefix": "上一次統一底層介面的是 POSIX，這一次是 ",
+      "title_highlight": "DROS",
+      "subtitle": "傳統 OS 管進程（Process），DROS 管代理人（Agent）。當業務 Agent 不必各自重複發明安全邏輯，真正的企業自主智能才能安全落地。",
+      "headers": {
+        "posix": "傳統作業系統 (POSIX)",
+        "dros": "DROS 確定性執行期 OS",
+        "governance": "核心治理意義 (GOVERNANCE SIGNIFICANCE)"
+      },
+      "rows": [
+        {
+          "posix": "進程 (Process / PID)",
+          "dros": "自主代理人 (Agent / DIT)",
+          "governance": "解決共享進程中「同 PID 下到底誰在發起呼叫」的情境盲視"
+        },
+        {
+          "posix": "系統呼叫 (Syscall)",
+          "dros": "工具調用 (Agent Tool Call)",
+          "governance": "治理 Agent 對檔案、資料庫、外部 API 與具身硬體的所有副作用調用"
+        },
+        {
+          "posix": "POSIX 權限 (chmod / ACL)",
+          "dros": "能力點陣圖 (Capability Bitmap)",
+          "governance": "零堆積 Ο(1) 記憶體比對，Prompt 提示詞絕對無法說服或繞過點陣圖"
+        },
+        {
+          "posix": "核心不可繞過 (Kernel Space)",
+          "dros": "二進位 C-ABI / FFI 邊界閘門",
+          "governance": "執行邊界強制熔斷，未授權或異常呼叫在 353 ns 內直接 drop"
+        },
+        {
+          "posix": "系統審計 (auditd)",
+          "dros": "SHA-256 Merkle 不可篡改證據鏈",
+          "governance": "為每一次 Tool Call 賦予不可否認的法律追溯性與法院級合規存證"
+        }
+      ]
+    },
+    "minimal_interface": {
+      "badge": "MINIMAL INTERFACE ABSTRACTION",
+      "title": "SDK 可被繞過；執行邊界的點陣圖不能被 Prompt 說服",
+      "subtitle": "接入 DROS 不需要重構既有 LLM 框架。上層業務只要對接 <span style=\"color: var(--accent-blue); font-weight: 600;\">Ingress</span> 與 <span style=\"color: var(--accent-gold); font-weight: 600;\">Egress</span> 兩個咽喉，即可獲得確定性物理安全。",
+      "ingress": {
+        "badge": "📥 Ingress",
+        "title": "安全特徵讀入咽喉",
+        "desc": "負責讀入路徑的數據洗滌。防止未脫敏的商業機密與個人隱私 (PII) 原樣流入 LLM 推理上下文。",
+        "points": [
+          "動態敏感個資 (PII) 自動脫敏與遮蔽",
+          "L1 語意邊界過濾（阻斷 85.2% 未混淆提示詞）",
+          "最小權限特徵注入，降低推理上下文負擔"
+        ]
+      },
+      "egress": {
+        "badge": "📤 Egress",
+        "title": "確定性動作執行咽喉",
+        "desc": "負責寫出與執行路徑的物理強制。在 C-ABI / FFI 邊界進行 6P 閉環比對，違規動作直接熔斷。",
+        "points": [
+          "L2 PKI DIT 身分簽章驗證（消解情境盲視）",
+          "L4 二進位能力點陣圖比對（353 ns 物理熔斷）",
+          "SHA-256 Merkle 鏈即時寫入，不可篡改存證"
+        ]
+      }
+    },
     "pain_points": {
       "title_prefix": "三大主流方案的",
       "title_highlight": "底層架構盲區",

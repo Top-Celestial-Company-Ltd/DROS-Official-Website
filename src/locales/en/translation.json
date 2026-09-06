@@ -53,6 +53,69 @@
       "layer3_title": "👑 DROS Missing Layer Substrate",
       "layer3_desc": "DROS eliminates runtime text parsing and dynamic model judges, sitting directly at the FFI gateway to enforce capability-based authorization via O(1) bitwise operations in nanoseconds."
     },
+    "paradigm_shift": {
+      "badge": "OPERATING SYSTEM PARADIGM SHIFT",
+      "title_prefix": "The last layer to unify low-level interfaces was POSIX. This time, it's ",
+      "title_highlight": "DROS",
+      "subtitle": "Traditional OS manages Processes; DROS manages Autonomous Agents. When business agents don't have to reinvent security logic individually, true enterprise autonomy can safely land.",
+      "headers": {
+        "posix": "Traditional OS (POSIX)",
+        "dros": "DROS Deterministic Runtime OS",
+        "governance": "Governance Significance"
+      },
+      "rows": [
+        {
+          "posix": "Process (Process / PID)",
+          "dros": "Autonomous Agent (Agent / DIT)",
+          "governance": "Resolves contextual blindness in shared processes: identifying who is actually calling under the same PID"
+        },
+        {
+          "posix": "System Call (Syscall)",
+          "dros": "Tool Call (Agent Tool Call)",
+          "governance": "Governs all side-effect invocations by Agents across files, databases, external APIs, and embodied hardware"
+        },
+        {
+          "posix": "POSIX Permissions (chmod / ACL)",
+          "dros": "Capability Bitmap",
+          "governance": "Zero-heap O(1) memory comparison; adversarial prompts can never convince or bypass hardware bitmaps"
+        },
+        {
+          "posix": "Non-Bypassable Kernel (Kernel Space)",
+          "dros": "Binary C-ABI / FFI Boundary Gate",
+          "governance": "Deterministic execution containment; unauthorized or anomalous calls are hard-dropped within 353 ns"
+        },
+        {
+          "posix": "System Audit (auditd)",
+          "dros": "SHA-256 Merkle Tamper-Proof Audit Chain",
+          "governance": "Empowers every Tool Call with non-repudiable legal traceability and court-admissible compliance proofs"
+        }
+      ]
+    },
+    "minimal_interface": {
+      "badge": "MINIMAL INTERFACE ABSTRACTION",
+      "title": "SDKs Can Be Bypassed; Execution Boundary Bitmaps Cannot Be Convinced by Prompts",
+      "subtitle": "Integrating DROS requires zero refactoring of existing LLM frameworks. Upper-layer business logic simply connects to two choke points — <span style=\"color: var(--accent-blue); font-weight: 600;\">Ingress</span> and <span style=\"color: var(--accent-gold); font-weight: 600;\">Egress</span> — to obtain deterministic physical security.",
+      "ingress": {
+        "badge": "📥 Ingress",
+        "title": "Secure Feature Ingestion Choke Point",
+        "desc": "Responsible for ingestion-path data scrubbing. Prevents unredacted trade secrets and Personally Identifiable Information (PII) from entering LLM reasoning context.",
+        "points": [
+          "Automated dynamic PII/PHI redaction and masking",
+          "L1 semantic boundary filtering (blocks 85.2% raw prompts)",
+          "Least-privilege feature injection, reducing context overhead"
+        ]
+      },
+      "egress": {
+        "badge": "📤 Egress",
+        "title": "Deterministic Action Execution Choke Point",
+        "desc": "Enforces physical constraints on egress & execution paths. Performs 6P closed-loop verification at C-ABI / FFI boundary, instantly fusing unauthorized actions.",
+        "points": [
+          "L2 PKI DIT identity cryptographic validation (eliminates context blindness)",
+          "L4 binary capability bitmap evaluation (353 ns physical containment)",
+          "Real-time SHA-256 Merkle chain writing for tamper-evident audit"
+        ]
+      }
+    },
     "pain_points": {
       "title_prefix": "Structural Gaps of",
       "title_highlight": "Alternative Security Lines",

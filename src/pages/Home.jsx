@@ -119,6 +119,57 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Operating System Paradigm Shift (POSIX vs DROS) */}
+      <section className="container">
+        <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+          <span style={{ display: 'inline-block', padding: '0.4rem 1.2rem', background: 'rgba(212,175,55,0.08)', border: '1px solid rgba(212,175,55,0.25)', borderRadius: '30px', fontSize: '0.85rem', color: 'var(--accent-gold)', marginBottom: '1.2rem', letterSpacing: '2px', fontFamily: 'monospace', fontWeight: '600' }}>
+            {t('home.paradigm_shift.badge')}
+          </span>
+          <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: '800', lineHeight: '1.25', marginBottom: '1.2rem' }}>
+            {t('home.paradigm_shift.title_prefix')}
+            <span style={{ background: 'linear-gradient(135deg, #d4af37, #fff, #d4af37)', backgroundSize: '200% auto', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+              {t('home.paradigm_shift.title_highlight')}
+            </span>
+          </h2>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '1.15rem', maxWidth: '850px', margin: '0 auto', lineHeight: '1.7' }}>
+            {t('home.paradigm_shift.subtitle')}
+          </p>
+        </div>
+
+        <div style={{ overflowX: 'auto', background: 'rgba(12, 13, 18, 0.75)', backdropFilter: 'blur(16px)', borderRadius: '16px', border: '1px solid rgba(212, 175, 55, 0.2)', boxShadow: '0 20px 50px rgba(0,0,0,0.5), 0 0 30px rgba(212,175,55,0.03)' }}>
+          <table style={{ width: '100%', minWidth: '850px', borderCollapse: 'collapse' }}>
+            <thead>
+              <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.02)' }}>
+                <th style={{ padding: '1.4rem 1.6rem', textAlign: 'left', color: 'var(--text-secondary)', fontWeight: '600', fontSize: '0.95rem', letterSpacing: '0.5px' }}>
+                  {t('home.paradigm_shift.headers.posix')}
+                </th>
+                <th style={{ padding: '1.4rem 1.6rem', textAlign: 'left', color: 'var(--accent-gold)', fontWeight: '700', fontSize: '1.05rem', background: 'rgba(212,175,55,0.06)', borderLeft: '1px solid rgba(212,175,55,0.15)', borderRight: '1px solid rgba(212,175,55,0.15)' }}>
+                  {t('home.paradigm_shift.headers.dros')}
+                </th>
+                <th style={{ padding: '1.4rem 1.6rem', textAlign: 'left', color: 'var(--accent-blue)', fontWeight: '600', fontSize: '0.95rem', letterSpacing: '0.5px' }}>
+                  {t('home.paradigm_shift.headers.governance')}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {t('home.paradigm_shift.rows', { returnObjects: true }).map((row, idx) => (
+                <tr key={idx} style={{ borderBottom: idx !== 4 ? '1px solid rgba(255,255,255,0.04)' : 'none', transition: 'background 0.2s' }}>
+                  <td style={{ padding: '1.4rem 1.6rem', fontWeight: '600', color: 'var(--text-primary)', fontFamily: 'JetBrains Mono, monospace', fontSize: '0.95rem' }}>
+                    {row.posix}
+                  </td>
+                  <td style={{ padding: '1.4rem 1.6rem', color: '#fff', fontWeight: '600', background: 'rgba(212,175,55,0.02)', borderLeft: '1px solid rgba(212,175,55,0.1)', borderRight: '1px solid rgba(212,175,55,0.1)' }}>
+                    <span style={{ color: 'var(--accent-gold)' }}>{row.dros}</span>
+                  </td>
+                  <td style={{ padding: '1.4rem 1.6rem', color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6' }}>
+                    {row.governance}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       {/* Pain Points & Solutions */}
       <section className="container">
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
@@ -213,6 +264,85 @@ export default function Home() {
               ))}
             </tbody>
           </table>
+        </div>
+      </section>
+
+      {/* Minimal Interface Abstraction (Ingress & Egress) */}
+      <section className="container">
+        <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+          <span style={{ display: 'inline-block', padding: '0.4rem 1.2rem', background: 'rgba(0,240,255,0.08)', border: '1px solid rgba(0,240,255,0.25)', borderRadius: '30px', fontSize: '0.85rem', color: 'var(--accent-blue)', marginBottom: '1.2rem', letterSpacing: '2px', fontFamily: 'monospace', fontWeight: '600' }}>
+            {t('home.minimal_interface.badge')}
+          </span>
+          <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: '800', lineHeight: '1.3', marginBottom: '1.2rem' }}>
+            {t('home.minimal_interface.title')}
+          </h2>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '1.15rem', maxWidth: '850px', margin: '0 auto', lineHeight: '1.7' }} dangerouslySetInnerHTML={{ __html: t('home.minimal_interface.subtitle') }}></p>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2.5rem', maxWidth: '1100px', margin: '0 auto' }}>
+          {/* Ingress Card */}
+          <div className="glass-card" style={{ padding: '2.5rem', border: '1px solid rgba(0, 240, 255, 0.25)', background: 'linear-gradient(145deg, rgba(0, 240, 255, 0.04) 0%, rgba(10, 15, 25, 0.7) 100%)', borderRadius: '18px', display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden', boxShadow: '0 20px 45px rgba(0,0,0,0.5), 0 0 25px rgba(0,240,255,0.04)' }}>
+            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, var(--accent-blue), transparent)' }}></div>
+            
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
+              <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(0, 240, 255, 0.12)', border: '1px solid rgba(0, 240, 255, 0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem' }}>
+                📥
+              </div>
+              <div>
+                <span style={{ fontSize: '0.8rem', fontFamily: 'monospace', color: 'var(--accent-blue)', letterSpacing: '1px', textTransform: 'uppercase', fontWeight: 'bold' }}>
+                  {t('home.minimal_interface.ingress.badge')}
+                </span>
+                <h3 style={{ fontSize: '1.35rem', color: '#fff', margin: 0, fontWeight: '700' }}>
+                  {t('home.minimal_interface.ingress.title')}
+                </h3>
+              </div>
+            </div>
+
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.98rem', lineHeight: '1.7', marginBottom: '1.8rem', flexShrink: 0 }}>
+              {t('home.minimal_interface.ingress.desc')}
+            </p>
+
+            <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem', flex: 1 }}>
+              {t('home.minimal_interface.ingress.points', { returnObjects: true }).map((pt, i) => (
+                <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem' }}>
+                  <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--accent-blue)', marginTop: '0.55rem', flexShrink: 0 }}></div>
+                  <span style={{ color: 'var(--text-primary)', fontSize: '0.95rem', lineHeight: '1.6' }}>{pt}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Egress Card */}
+          <div className="glass-card" style={{ padding: '2.5rem', border: '1px solid rgba(212, 175, 55, 0.25)', background: 'linear-gradient(145deg, rgba(212, 175, 55, 0.04) 0%, rgba(20, 15, 10, 0.7) 100%)', borderRadius: '18px', display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden', boxShadow: '0 20px 45px rgba(0,0,0,0.5), 0 0 25px rgba(212,175,55,0.04)' }}>
+            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, var(--accent-gold), transparent)' }}></div>
+            
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
+              <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(212, 175, 55, 0.12)', border: '1px solid rgba(212, 175, 55, 0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem' }}>
+                📤
+              </div>
+              <div>
+                <span style={{ fontSize: '0.8rem', fontFamily: 'monospace', color: 'var(--accent-gold)', letterSpacing: '1px', textTransform: 'uppercase', fontWeight: 'bold' }}>
+                  {t('home.minimal_interface.egress.badge')}
+                </span>
+                <h3 style={{ fontSize: '1.35rem', color: '#fff', margin: 0, fontWeight: '700' }}>
+                  {t('home.minimal_interface.egress.title')}
+                </h3>
+              </div>
+            </div>
+
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.98rem', lineHeight: '1.7', marginBottom: '1.8rem', flexShrink: 0 }}>
+              {t('home.minimal_interface.egress.desc')}
+            </p>
+
+            <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem', flex: 1 }}>
+              {t('home.minimal_interface.egress.points', { returnObjects: true }).map((pt, i) => (
+                <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem' }}>
+                  <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--accent-gold)', marginTop: '0.55rem', flexShrink: 0 }}></div>
+                  <span style={{ color: 'var(--text-primary)', fontSize: '0.95rem', lineHeight: '1.6' }}>{pt}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
