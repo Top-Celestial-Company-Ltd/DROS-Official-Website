@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -6,6 +6,8 @@ import { useTranslation } from 'react-i18next';
 export default function StartupDetail() {
   const { i18n } = useTranslation();
   const isZh = i18n.language && i18n.language.startsWith('zh');
+  const [themeMode, setThemeMode] = useState('dark');
+  const isLight = themeMode === 'light';
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -64,87 +66,183 @@ export default function StartupDetail() {
         </div>
 
         {/* Console Mockup Container */}
-        <div style={{ background: '#0a0d14', border: '1px solid rgba(212, 175, 55, 0.3)', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 25px 60px rgba(0,0,0,0.7), 0 0 30px rgba(212, 175, 55, 0.08)' }}>
-          {/* Top Bar Telemetry */}
-          <div style={{ background: 'rgba(255,255,255,0.03)', borderBottom: '1px solid rgba(255,255,255,0.08)', padding: '1rem 1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+        <div style={{
+          background: isLight ? '#ffffff' : '#0a0d14',
+          border: isLight ? '1px solid rgba(0, 0, 0, 0.15)' : '1px solid rgba(212, 175, 55, 0.3)',
+          borderRadius: '16px',
+          overflow: 'hidden',
+          boxShadow: isLight ? '0 20px 45px rgba(0,0,0,0.1), 0 0 15px rgba(0,0,0,0.05)' : '0 25px 60px rgba(0,0,0,0.7), 0 0 30px rgba(212, 175, 55, 0.08)',
+          transition: 'all 0.25s ease'
+        }}>
+          {/* Top Bar Telemetry with Logo & Theme Switcher */}
+          <div style={{
+            background: isLight ? '#f1f5f9' : 'rgba(255,255,255,0.03)',
+            borderBottom: isLight ? '1px solid rgba(0,0,0,0.08)' : '1px solid rgba(255,255,255,0.08)',
+            padding: '0.8rem 1.5rem',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '1rem'
+          }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              {/* Traffic Lights */}
               <div style={{ display: 'flex', gap: '6px' }}>
                 <div style={{ width: '11px', height: '11px', borderRadius: '50%', background: '#ff5f56' }}></div>
                 <div style={{ width: '11px', height: '11px', borderRadius: '50%', background: '#ffbd2e' }}></div>
                 <div style={{ width: '11px', height: '11px', borderRadius: '50%', background: '#27c93f' }}></div>
               </div>
-              <span style={{ fontFamily: 'monospace', fontSize: '0.9rem', color: 'var(--accent-gold)', fontWeight: 'bold' }}>
-                VajraAgent v1.2 (Startup Edition)
-              </span>
+
+              {/* DROS Official Logo Badge */}
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.6rem',
+                borderLeft: isLight ? '1px solid rgba(0,0,0,0.12)' : '1px solid rgba(255,255,255,0.1)',
+                paddingLeft: '0.9rem'
+              }}>
+                <img
+                  src={isLight ? '/logos/dros-logo-transparent-black.png' : '/logos/dros-logo-transparent-white.png'}
+                  alt="DROS Logo"
+                  style={{ height: '22px', width: 'auto', objectFit: 'contain' }}
+                />
+                <span style={{
+                  fontFamily: 'monospace',
+                  fontSize: '0.88rem',
+                  color: isLight ? '#0f172a' : 'var(--accent-gold)',
+                  fontWeight: 'bold'
+                }}>
+                  VajraAgent v1.2 <span style={{ fontSize: '0.75rem', opacity: 0.7 }}>(Startup Edition)</span>
+                </span>
+              </div>
             </div>
-            <div style={{ display: 'flex', gap: '1.5rem', fontSize: '0.82rem', fontFamily: 'monospace', color: 'var(--text-secondary)' }}>
-              <span>Seats: <strong style={{ color: '#fff' }}>3 / 3 Active</strong></span>
-              <span>Concurrent Limit: <strong style={{ color: 'var(--accent-blue)' }}>30 Agents</strong></span>
-              <span>Memory Sandbox: <strong style={{ color: '#27c93f' }}>0-Leak Protected</strong></span>
+
+            {/* Right Telemetry & Theme Switcher Button */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1.2rem', fontSize: '0.82rem', fontFamily: 'monospace', color: isLight ? '#475569' : 'var(--text-secondary)' }}>
+              <span>Seats: <strong style={{ color: isLight ? '#0f172a' : '#fff' }}>3 / 3 Active</strong></span>
+              <span>Limit: <strong style={{ color: 'var(--accent-blue)' }}>30 Agents</strong></span>
+              <span>Memory Sandbox: <strong style={{ color: '#16a34a' }}>0-Leak Protected</strong></span>
+
+              {/* Theme Toggle Button */}
+              <button
+                onClick={() => setThemeMode(isLight ? 'dark' : 'light')}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.4rem',
+                  background: isLight ? '#e2e8f0' : 'rgba(255,255,255,0.08)',
+                  border: isLight ? '1px solid #cbd5e1' : '1px solid rgba(255,255,255,0.15)',
+                  color: isLight ? '#0f172a' : '#f1f5f9',
+                  padding: '0.25rem 0.65rem',
+                  borderRadius: '6px',
+                  fontSize: '0.75rem',
+                  fontWeight: '600',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s'
+                }}
+                title={isLight ? '切換為深色模式 (Dark Ops)' : '切換為淺色模式 (Light Enterprise)'}
+              >
+                <span>{isLight ? '☀️ Light' : '🌙 Dark'}</span>
+              </button>
             </div>
           </div>
 
           {/* Console Main Body Grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1px', background: 'rgba(255,255,255,0.05)' }}>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+            gap: '1px',
+            background: isLight ? '#e2e8f0' : 'rgba(255,255,255,0.05)'
+          }}>
             {/* Left Column: Control Panel & Leases */}
-            <div style={{ background: '#0d111a', padding: '1.8rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <div style={{
+              background: isLight ? '#f8fafc' : '#0d111a',
+              padding: '1.8rem',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '1.5rem'
+            }}>
               <div>
-                <span style={{ fontSize: '0.75rem', color: 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 'bold' }}>
+                <span style={{ fontSize: '0.75rem', color: isLight ? '#b45309' : 'var(--accent-gold)', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 'bold' }}>
                   {isZh ? '短效租約與實例監控' : 'Instance Leases & Micro-Control'}
                 </span>
-                <h4 style={{ color: '#fff', fontSize: '1.1rem', marginTop: '0.3rem' }}>
+                <h4 style={{ color: isLight ? '#0f172a' : '#fff', fontSize: '1.1rem', marginTop: '0.3rem' }}>
                   {isZh ? '3 節點租約生命週期' : '3-Node Active Lease Lifecycle'}
                 </h4>
               </div>
 
               {/* Node 1 */}
-              <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '10px', padding: '1rem' }}>
+              <div style={{
+                background: isLight ? '#ffffff' : 'rgba(255,255,255,0.02)',
+                border: isLight ? '1px solid #e2e8f0' : '1px solid rgba(255,255,255,0.08)',
+                borderRadius: '10px',
+                padding: '1rem',
+                boxShadow: isLight ? '0 2px 6px rgba(0,0,0,0.03)' : 'none'
+              }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
-                  <span style={{ color: '#27c93f', fontWeight: 'bold', fontSize: '0.85rem' }}>🟢 Node-1: dev-cluster-alpha</span>
-                  <span style={{ fontSize: '0.75rem', fontFamily: 'monospace', color: 'var(--text-secondary)' }}>TTL: 10m</span>
+                  <span style={{ color: '#16a34a', fontWeight: 'bold', fontSize: '0.85rem' }}>🟢 Node-1: dev-cluster-alpha</span>
+                  <span style={{ fontSize: '0.75rem', fontFamily: 'monospace', color: isLight ? '#64748b' : 'var(--text-secondary)' }}>TTL: 10m</span>
                 </div>
-                <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: '0.8rem' }}>
-                  Role: <code>support-agent</code> ｜ Epoch 14 (剩餘 6m 22s)
+                <div style={{ fontSize: '0.8rem', color: isLight ? '#475569' : 'var(--text-secondary)', marginBottom: '0.8rem' }}>
+                  Role: <code style={{ color: isLight ? '#0f172a' : '#fff', background: isLight ? '#f1f5f9' : 'rgba(255,255,255,0.08)', padding: '2px 6px', borderRadius: '4px' }}>support-agent</code> ｜ Epoch 14 (剩餘 6m 22s)
                 </div>
                 <div style={{ display: 'flex', gap: '0.5rem' }}>
-                  <span style={{ background: 'rgba(212,175,55,0.15)', color: 'var(--accent-gold)', padding: '0.2rem 0.6rem', borderRadius: '4px', fontSize: '0.75rem', fontFamily: 'monospace' }}>Pass: 1,420</span>
-                  <span style={{ background: 'rgba(255,77,79,0.15)', color: '#ff4d4f', padding: '0.2rem 0.6rem', borderRadius: '4px', fontSize: '0.75rem', fontFamily: 'monospace' }}>Fused: 2</span>
+                  <span style={{ background: isLight ? '#fef3c7' : 'rgba(212,175,55,0.15)', color: isLight ? '#92400e' : 'var(--accent-gold)', padding: '0.2rem 0.6rem', borderRadius: '4px', fontSize: '0.75rem', fontFamily: 'monospace', fontWeight: '600' }}>Pass: 1,420</span>
+                  <span style={{ background: isLight ? '#fee2e2' : 'rgba(255,77,79,0.15)', color: '#dc2626', padding: '0.2rem 0.6rem', borderRadius: '4px', fontSize: '0.75rem', fontFamily: 'monospace', fontWeight: '600' }}>Fused: 2</span>
                 </div>
               </div>
 
               {/* Node 2 */}
-              <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '10px', padding: '1rem' }}>
+              <div style={{
+                background: isLight ? '#ffffff' : 'rgba(255,255,255,0.02)',
+                border: isLight ? '1px solid #e2e8f0' : '1px solid rgba(255,255,255,0.08)',
+                borderRadius: '10px',
+                padding: '1rem',
+                boxShadow: isLight ? '0 2px 6px rgba(0,0,0,0.03)' : 'none'
+              }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
-                  <span style={{ color: '#27c93f', fontWeight: 'bold', fontSize: '0.85rem' }}>🟢 Node-2: staging-crm-bot</span>
-                  <span style={{ fontSize: '0.75rem', fontFamily: 'monospace', color: 'var(--text-secondary)' }}>TTL: 10m</span>
+                  <span style={{ color: '#16a34a', fontWeight: 'bold', fontSize: '0.85rem' }}>🟢 Node-2: staging-crm-bot</span>
+                  <span style={{ fontSize: '0.75rem', fontFamily: 'monospace', color: isLight ? '#64748b' : 'var(--text-secondary)' }}>TTL: 10m</span>
                 </div>
-                <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: '0.8rem' }}>
-                  Role: <code>ciso-auditor</code> ｜ Epoch 8 (剩餘 3m 45s)
+                <div style={{ fontSize: '0.8rem', color: isLight ? '#475569' : 'var(--text-secondary)', marginBottom: '0.8rem' }}>
+                  Role: <code style={{ color: isLight ? '#0f172a' : '#fff', background: isLight ? '#f1f5f9' : 'rgba(255,255,255,0.08)', padding: '2px 6px', borderRadius: '4px' }}>ciso-auditor</code> ｜ Epoch 8 (剩餘 3m 45s)
                 </div>
                 <div style={{ display: 'flex', gap: '0.5rem' }}>
-                  <span style={{ background: 'rgba(212,175,55,0.15)', color: 'var(--accent-gold)', padding: '0.2rem 0.6rem', borderRadius: '4px', fontSize: '0.75rem', fontFamily: 'monospace' }}>Pass: 890</span>
-                  <span style={{ background: 'rgba(255,77,79,0.15)', color: '#ff4d4f', padding: '0.2rem 0.6rem', borderRadius: '4px', fontSize: '0.75rem', fontFamily: 'monospace' }}>Fused: 0</span>
+                  <span style={{ background: isLight ? '#fef3c7' : 'rgba(212,175,55,0.15)', color: isLight ? '#92400e' : 'var(--accent-gold)', padding: '0.2rem 0.6rem', borderRadius: '4px', fontSize: '0.75rem', fontFamily: 'monospace', fontWeight: '600' }}>Pass: 890</span>
+                  <span style={{ background: isLight ? '#fee2e2' : 'rgba(255,77,79,0.15)', color: '#dc2626', padding: '0.2rem 0.6rem', borderRadius: '4px', fontSize: '0.75rem', fontFamily: 'monospace', fontWeight: '600' }}>Fused: 0</span>
                 </div>
               </div>
 
               {/* Node 3 */}
-              <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '10px', padding: '1rem' }}>
+              <div style={{
+                background: isLight ? '#ffffff' : 'rgba(255,255,255,0.02)',
+                border: isLight ? '1px solid #e2e8f0' : '1px solid rgba(255,255,255,0.08)',
+                borderRadius: '10px',
+                padding: '1rem',
+                boxShadow: isLight ? '0 2px 6px rgba(0,0,0,0.03)' : 'none'
+              }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
-                  <span style={{ color: '#ffbd2e', fontWeight: 'bold', fontSize: '0.85rem' }}>🟡 Node-3: worker-qa-eval</span>
-                  <span style={{ fontSize: '0.75rem', fontFamily: 'monospace', color: 'var(--text-secondary)' }}>TTL: 10m</span>
+                  <span style={{ color: '#d97706', fontWeight: 'bold', fontSize: '0.85rem' }}>🟡 Node-3: worker-qa-eval</span>
+                  <span style={{ fontSize: '0.75rem', fontFamily: 'monospace', color: isLight ? '#64748b' : 'var(--text-secondary)' }}>TTL: 10m</span>
                 </div>
-                <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: '0.8rem' }}>
-                  Role: <code>developer-test</code> ｜ Epoch 2 (剩餘 1m 10s)
+                <div style={{ fontSize: '0.8rem', color: isLight ? '#475569' : 'var(--text-secondary)', marginBottom: '0.8rem' }}>
+                  Role: <code style={{ color: isLight ? '#0f172a' : '#fff', background: isLight ? '#f1f5f9' : 'rgba(255,255,255,0.08)', padding: '2px 6px', borderRadius: '4px' }}>developer-test</code> ｜ Epoch 2 (剩餘 1m 10s)
                 </div>
                 <div style={{ display: 'flex', gap: '0.5rem' }}>
-                  <span style={{ background: 'rgba(212,175,55,0.15)', color: 'var(--accent-gold)', padding: '0.2rem 0.6rem', borderRadius: '4px', fontSize: '0.75rem', fontFamily: 'monospace' }}>Pass: 2,130</span>
-                  <span style={{ background: 'rgba(255,77,79,0.15)', color: '#ff4d4f', padding: '0.2rem 0.6rem', borderRadius: '4px', fontSize: '0.75rem', fontFamily: 'monospace' }}>Fused: 12</span>
+                  <span style={{ background: isLight ? '#fef3c7' : 'rgba(212,175,55,0.15)', color: isLight ? '#92400e' : 'var(--accent-gold)', padding: '0.2rem 0.6rem', borderRadius: '4px', fontSize: '0.75rem', fontFamily: 'monospace', fontWeight: '600' }}>Pass: 2,130</span>
+                  <span style={{ background: isLight ? '#fee2e2' : 'rgba(255,77,79,0.15)', color: '#dc2626', padding: '0.2rem 0.6rem', borderRadius: '4px', fontSize: '0.75rem', fontFamily: 'monospace', fontWeight: '600' }}>Fused: 12</span>
                 </div>
               </div>
             </div>
 
             {/* Right Column: Live Interception & PII Masking Stream */}
-            <div style={{ background: '#0a0e17', padding: '1.8rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div style={{
+              background: isLight ? '#0f172a' : '#0a0e17',
+              padding: '1.8rem',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between'
+            }}>
               <div>
                 <span style={{ fontSize: '0.75rem', color: 'var(--accent-blue)', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 'bold' }}>
                   {isZh ? '即時攻防對抗與 PII 遮蔽日誌' : 'Real-Time Interception & PII Redaction Stream'}
@@ -153,22 +251,31 @@ export default function StartupDetail() {
                   {isZh ? '帶內執行期事件流 (In-Band Events)' : 'In-Band Runtime Event Log'}
                 </h4>
 
-                <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.82rem', lineHeight: '1.7', background: 'rgba(0,0,0,0.5)', padding: '1.2rem', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)', display: 'flex', flexDirection: 'column', gap: '0.7rem' }}>
-                  <div style={{ color: '#8b949e' }}>[14:22:01.104] 📥 INGRESS: Input scrubbed. PII tokenized: [NAME: A*** Chen, ID: A123***789]</div>
-                  <div style={{ color: '#27c93f' }}>[14:22:01.105] ✅ POLICY_PASS: Tool `query_crm_summary` permitted (Latency: 26.1μs)</div>
-                  <div style={{ color: '#ffbd2e' }}>[14:22:03.412] ⚠️ HITL_SUSPEND: High-risk export triggered. Waiting for operator soft confirmation...</div>
-                  <div style={{ color: '#ff4d4f', background: 'rgba(255,77,79,0.08)', padding: '0.4rem', borderLeft: '3px solid #ff4d4f' }}>
+                <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.82rem', lineHeight: '1.7', background: 'rgba(0,0,0,0.6)', padding: '1.2rem', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.08)', display: 'flex', flexDirection: 'column', gap: '0.7rem' }}>
+                  <div style={{ color: '#94a3b8' }}>[14:22:01.104] 📥 INGRESS: Input scrubbed. PII tokenized: [NAME: A*** Chen, ID: A123***789]</div>
+                  <div style={{ color: '#4ade80' }}>[14:22:01.105] ✅ POLICY_PASS: Tool `query_crm_summary` permitted (Latency: 26.1μs)</div>
+                  <div style={{ color: '#facc15' }}>[14:22:03.412] ⚠️ HITL_SUSPEND: High-risk export triggered. Waiting for operator soft confirmation...</div>
+                  <div style={{ color: '#f87171', background: 'rgba(239,68,68,0.12)', padding: '0.5rem', borderRadius: '4px', borderLeft: '3px solid #ef4444' }}>
                     [14:22:04.918] 🛑 HARD_FUSE: Indirect Prompt Injection detected in webhook payload! Attempted `rm -rf /` or dump DB credentials. C-ABI Gate DROP (State drift: ΔS = 0).
                   </div>
                   <div style={{ color: 'var(--accent-gold)' }}>[14:22:04.920] 🔗 MERKLE_SEAL: Block #1089 sealed with SHA-256 (Hash: 9f83...b2c1)</div>
                 </div>
               </div>
 
-              <div style={{ marginTop: '1.5rem', padding: '1rem', background: 'rgba(212,175,55,0.05)', borderRadius: '8px', border: '1px solid rgba(212,175,55,0.2)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+              <div style={{
+                marginTop: '1.5rem',
+                padding: '1rem',
+                background: 'rgba(255,255,255,0.03)',
+                borderRadius: '8px',
+                border: '1px solid rgba(255,255,255,0.08)',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center'
+              }}>
+                <span style={{ fontSize: '0.85rem', color: '#94a3b8' }}>
                   {isZh ? '中央緊急阻斷開關 (Emergency Kill Switch)' : 'Central Emergency Kill Switch'}
                 </span>
-                <button style={{ background: '#ff4d4f', border: 'none', color: '#fff', padding: '0.4rem 1rem', borderRadius: '6px', fontSize: '0.8rem', fontWeight: 'bold', cursor: 'pointer' }}>
+                <button style={{ background: '#ef4444', border: 'none', color: '#fff', padding: '0.45rem 1rem', borderRadius: '6px', fontSize: '0.8rem', fontWeight: 'bold', cursor: 'pointer', transition: 'background 0.2s' }}>
                   REVOKE ALL LEASES (HTTP 403)
                 </button>
               </div>

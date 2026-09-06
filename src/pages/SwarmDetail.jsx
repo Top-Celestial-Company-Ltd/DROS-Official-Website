@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -6,6 +6,8 @@ import { useTranslation } from 'react-i18next';
 export default function SwarmDetail() {
   const { i18n } = useTranslation();
   const isZh = i18n.language && i18n.language.startsWith('zh');
+  const [themeMode, setThemeMode] = useState('dark');
+  const isLight = themeMode === 'light';
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -64,76 +66,181 @@ export default function SwarmDetail() {
         </div>
 
         {/* Console Mockup Container */}
-        <div style={{ background: '#0e0c08', border: '1px solid rgba(245, 158, 11, 0.35)', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 25px 60px rgba(0,0,0,0.8), 0 0 30px rgba(245, 158, 11, 0.1)' }}>
-          {/* Top Bar Telemetry */}
-          <div style={{ background: 'rgba(255,255,255,0.03)', borderBottom: '1px solid rgba(255,255,255,0.08)', padding: '1rem 1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+        <div style={{
+          background: isLight ? '#ffffff' : '#0e0c08',
+          border: isLight ? '1px solid rgba(0, 0, 0, 0.15)' : '1px solid rgba(245, 158, 11, 0.35)',
+          borderRadius: '16px',
+          overflow: 'hidden',
+          boxShadow: isLight ? '0 20px 45px rgba(0,0,0,0.1), 0 0 15px rgba(0,0,0,0.05)' : '0 25px 60px rgba(0,0,0,0.8), 0 0 30px rgba(245, 158, 11, 0.1)',
+          transition: 'all 0.25s ease'
+        }}>
+          {/* Top Bar Telemetry with Logo & Theme Switcher */}
+          <div style={{
+            background: isLight ? '#f1f5f9' : 'rgba(255,255,255,0.03)',
+            borderBottom: isLight ? '1px solid rgba(0,0,0,0.08)' : '1px solid rgba(255,255,255,0.08)',
+            padding: '0.8rem 1.5rem',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '1rem'
+          }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              {/* Traffic Lights */}
               <div style={{ display: 'flex', gap: '6px' }}>
                 <div style={{ width: '11px', height: '11px', borderRadius: '50%', background: '#ff5f56' }}></div>
                 <div style={{ width: '11px', height: '11px', borderRadius: '50%', background: '#ffbd2e' }}></div>
                 <div style={{ width: '11px', height: '11px', borderRadius: '50%', background: '#27c93f' }}></div>
               </div>
-              <span style={{ fontFamily: 'monospace', fontSize: '0.9rem', color: '#fbbf24', fontWeight: 'bold' }}>
-                DROS Sovereign Tactical Command · GCS Ground Station Alpha
-              </span>
+
+              {/* DROS Official Logo Badge */}
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.6rem',
+                borderLeft: isLight ? '1px solid rgba(0,0,0,0.12)' : '1px solid rgba(255,255,255,0.1)',
+                paddingLeft: '0.9rem'
+              }}>
+                <img
+                  src={isLight ? '/logos/dros-logo-transparent-black.png' : '/logos/dros-logo-transparent-white.png'}
+                  alt="DROS Logo"
+                  style={{ height: '22px', width: 'auto', objectFit: 'contain' }}
+                />
+                <span style={{
+                  fontFamily: 'monospace',
+                  fontSize: '0.88rem',
+                  color: isLight ? '#0f172a' : '#fbbf24',
+                  fontWeight: 'bold'
+                }}>
+                  DROS Sovereign Tactical Command <span style={{ fontSize: '0.75rem', opacity: 0.7 }}>· GCS Alpha</span>
+                </span>
+              </div>
             </div>
-            <div style={{ display: 'flex', gap: '1.5rem', fontSize: '0.82rem', fontFamily: 'monospace', color: 'var(--text-secondary)' }}>
-              <span>Swarm Mesh: <strong style={{ color: '#fff' }}>100 Units In-Flight</strong></span>
-              <span>Delegation Depth: <strong style={{ color: '#27c93f' }}>H ≤ 2 (Clamped)</strong></span>
-              <span>Kinetic Drift: <strong style={{ color: 'var(--accent-gold)' }}>ΔS ≡ 0.000m</strong></span>
+
+            {/* Right Telemetry & Theme Switcher Button */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1.2rem', fontSize: '0.82rem', fontFamily: 'monospace', color: isLight ? '#475569' : 'var(--text-secondary)' }}>
+              <span>Swarm Mesh: <strong style={{ color: isLight ? '#0f172a' : '#fff' }}>100 Units Active</strong></span>
+              <span>Delegation: <strong style={{ color: '#16a34a' }}>H ≤ 2 Clamped</strong></span>
+              <span>Drift: <strong style={{ color: isLight ? '#b45309' : 'var(--accent-gold)' }}>ΔS ≡ 0.000m</strong></span>
+
+              {/* Theme Toggle Button */}
+              <button
+                onClick={() => setThemeMode(isLight ? 'dark' : 'light')}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.4rem',
+                  background: isLight ? '#e2e8f0' : 'rgba(255,255,255,0.08)',
+                  border: isLight ? '1px solid #cbd5e1' : '1px solid rgba(255,255,255,0.15)',
+                  color: isLight ? '#0f172a' : '#f1f5f9',
+                  padding: '0.25rem 0.65rem',
+                  borderRadius: '6px',
+                  fontSize: '0.75rem',
+                  fontWeight: '600',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s'
+                }}
+                title={isLight ? '切換為深色模式 (Dark Ops)' : '切換為淺色模式 (Light Enterprise)'}
+              >
+                <span>{isLight ? '☀️ Light' : '🌙 Dark'}</span>
+              </button>
             </div>
           </div>
 
           {/* Console Main Body Grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1px', background: 'rgba(255,255,255,0.05)' }}>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+            gap: '1px',
+            background: isLight ? '#e2e8f0' : 'rgba(255,255,255,0.05)'
+          }}>
             {/* Left Column: Kinetic Controls & Swarm Mesh Status */}
-            <div style={{ background: '#120f09', padding: '1.8rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <div style={{
+              background: isLight ? '#f8fafc' : '#120f09',
+              padding: '1.8rem',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '1.5rem'
+            }}>
               <div>
-                <span style={{ fontSize: '0.75rem', color: '#fbbf24', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 'bold' }}>
+                <span style={{ fontSize: '0.75rem', color: isLight ? '#b45309' : '#fbbf24', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 'bold' }}>
                   {isZh ? '實體動力學硬約束開關' : 'Kinetic Actuator Invariants'}
                 </span>
-                <h4 style={{ color: '#fff', fontSize: '1.1rem', marginTop: '0.3rem' }}>
+                <h4 style={{ color: isLight ? '#0f172a' : '#fff', fontSize: '1.1rem', marginTop: '0.3rem' }}>
                   {isZh ? '飛行安全不可違背防線' : 'Flight Safety Invariants'}
                 </h4>
               </div>
 
               {/* Switches */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '8px', padding: '0.8rem 1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <div style={{
+                  background: isLight ? '#ffffff' : 'rgba(255,255,255,0.02)',
+                  border: isLight ? '1px solid #e2e8f0' : '1px solid rgba(255,255,255,0.08)',
+                  borderRadius: '8px',
+                  padding: '0.8rem 1rem',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  boxShadow: isLight ? '0 2px 6px rgba(0,0,0,0.03)' : 'none'
+                }}>
                   <div>
-                    <div style={{ color: '#fff', fontSize: '0.85rem', fontWeight: '600' }}>1. Mid-Air Disarm Lockout (空中鎖死)</div>
-                    <div style={{ color: 'var(--text-secondary)', fontSize: '0.75rem' }}>空中高度 &gt; 0.5m 時，任何停機指令 100% 物理熔斷</div>
+                    <div style={{ color: isLight ? '#0f172a' : '#fff', fontSize: '0.85rem', fontWeight: '600' }}>1. Mid-Air Disarm Lockout (空中鎖死)</div>
+                    <div style={{ color: isLight ? '#64748b' : 'var(--text-secondary)', fontSize: '0.75rem' }}>空中高度 &gt; 0.5m 時，任何停機指令 100% 物理熔斷</div>
                   </div>
-                  <span style={{ color: '#27c93f', fontFamily: 'monospace', fontSize: '0.8rem', fontWeight: 'bold' }}>[LOCKED]</span>
+                  <span style={{ color: '#16a34a', fontFamily: 'monospace', fontSize: '0.8rem', fontWeight: 'bold' }}>[LOCKED]</span>
                 </div>
 
-                <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '8px', padding: '0.8rem 1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <div style={{
+                  background: isLight ? '#ffffff' : 'rgba(255,255,255,0.02)',
+                  border: isLight ? '1px solid #e2e8f0' : '1px solid rgba(255,255,255,0.08)',
+                  borderRadius: '8px',
+                  padding: '0.8rem 1rem',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  boxShadow: isLight ? '0 2px 6px rgba(0,0,0,0.03)' : 'none'
+                }}>
                   <div>
-                    <div style={{ color: '#fff', fontSize: '0.85rem', fontWeight: '600' }}>2. NFZ 3D Geofence (三維禁航區硬阻斷)</div>
-                    <div style={{ color: 'var(--text-secondary)', fontSize: '0.75rem' }}>機載向量包絡保持，0.0 公尺絕對穿透阻絕</div>
+                    <div style={{ color: isLight ? '#0f172a' : '#fff', fontSize: '0.85rem', fontWeight: '600' }}>2. NFZ 3D Geofence (三維禁航區硬阻斷)</div>
+                    <div style={{ color: isLight ? '#64748b' : 'var(--text-secondary)', fontSize: '0.75rem' }}>機載向量包絡保持，0.0 公尺絕對穿透阻絕</div>
                   </div>
-                  <span style={{ color: '#27c93f', fontFamily: 'monospace', fontSize: '0.8rem', fontWeight: 'bold' }}>[ACTIVE]</span>
+                  <span style={{ color: '#16a34a', fontFamily: 'monospace', fontSize: '0.8rem', fontWeight: 'bold' }}>[ACTIVE]</span>
                 </div>
 
-                <div style={{ background: 'rgba(245,158,11,0.06)', border: '1px solid rgba(245,158,11,0.25)', borderRadius: '8px', padding: '0.8rem 1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <div style={{
+                  background: isLight ? '#fef3c7' : 'rgba(245,158,11,0.06)',
+                  border: isLight ? '1px solid #fde68a' : '1px solid rgba(245,158,11,0.25)',
+                  borderRadius: '8px',
+                  padding: '0.8rem 1rem',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center'
+                }}>
                   <div>
-                    <div style={{ color: '#fbbf24', fontSize: '0.85rem', fontWeight: '600' }}>3. Swarm Attenuation Clamp (蜂群衰減)</div>
-                    <div style={{ color: 'var(--text-secondary)', fontSize: '0.75rem' }}>委託深度超過 2 跳立即阻斷，杜絕連鎖攻陷</div>
+                    <div style={{ color: isLight ? '#92400e' : '#fbbf24', fontSize: '0.85rem', fontWeight: '600' }}>3. Swarm Attenuation Clamp (蜂群衰減)</div>
+                    <div style={{ color: isLight ? '#78350f' : 'var(--text-secondary)', fontSize: '0.75rem' }}>委託深度超過 2 跳立即阻斷，杜絕連鎖攻陷</div>
                   </div>
-                  <span style={{ color: '#fbbf24', fontFamily: 'monospace', fontSize: '0.8rem', fontWeight: 'bold' }}>[H=2 CLAMPED]</span>
+                  <span style={{ color: isLight ? '#b45309' : '#fbbf24', fontFamily: 'monospace', fontSize: '0.8rem', fontWeight: 'bold' }}>[H=2 CLAMPED]</span>
                 </div>
               </div>
 
               {/* Live Mesh Nodes Status */}
               <div>
-                <span style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                <span style={{ fontSize: '0.75rem', color: isLight ? '#64748b' : 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '1px' }}>
                   {isZh ? '蜂群分區健康狀態 (100 Nodes)' : 'Swarm Partition Status (100 Nodes)'}
                 </span>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.5rem', marginTop: '0.6rem' }}>
                   {['Squadron-A (25)', 'Squadron-B (25)', 'Squadron-C (25)', 'Squadron-D (25)'].map((sq, i) => (
-                    <div key={i} style={{ background: 'rgba(245,158,11,0.08)', border: '1px solid rgba(245,158,11,0.2)', padding: '0.5rem', borderRadius: '6px', textAlign: 'center' }}>
-                      <div style={{ color: '#27c93f', fontSize: '0.75rem', fontWeight: 'bold' }}>● 100% OK</div>
-                      <div style={{ color: 'var(--text-secondary)', fontSize: '0.7rem', marginTop: '2px' }}>{sq}</div>
+                    <div key={i} style={{
+                      background: isLight ? '#ffffff' : 'rgba(245,158,11,0.08)',
+                      border: isLight ? '1px solid #e2e8f0' : '1px solid rgba(245,158,11,0.2)',
+                      padding: '0.5rem',
+                      borderRadius: '6px',
+                      textAlign: 'center',
+                      boxShadow: isLight ? '0 2px 4px rgba(0,0,0,0.02)' : 'none'
+                    }}>
+                      <div style={{ color: '#16a34a', fontSize: '0.75rem', fontWeight: 'bold' }}>● 100% OK</div>
+                      <div style={{ color: isLight ? '#64748b' : 'var(--text-secondary)', fontSize: '0.7rem', marginTop: '2px' }}>{sq}</div>
                     </div>
                   ))}
                 </div>
@@ -141,20 +248,26 @@ export default function SwarmDetail() {
             </div>
 
             {/* Right Column: Tactical Black Box & MAVLink Stream */}
-            <div style={{ background: '#0b0906', padding: '1.8rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div style={{
+              background: isLight ? '#0f172a' : '#0b0906',
+              padding: '1.8rem',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between'
+            }}>
               <div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-                  <span style={{ fontSize: '0.75rem', color: '#fbbf24', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 'bold' }}>
+                  <span style={{ fontSize: '0.75rem', color: isLight ? '#facc15' : '#fbbf24', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 'bold' }}>
                     {isZh ? 'MAVLink / ROS2 實體黑盒子與法規大屏' : 'MAVLink/ROS2 Black Box & Compliance Telemetry'}
                   </span>
-                  <span style={{ fontSize: '0.75rem', color: '#27c93f', fontFamily: 'monospace' }}>EU AI Act Art. 14: PASS</span>
+                  <span style={{ fontSize: '0.75rem', color: '#4ade80', fontFamily: 'monospace' }}>EU AI Act Art. 14: PASS</span>
                 </div>
 
-                <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.82rem', lineHeight: '1.7', background: 'rgba(0,0,0,0.65)', padding: '1.2rem', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)', display: 'flex', flexDirection: 'column', gap: '0.7rem' }}>
-                  <div style={{ color: '#8b949e' }}>[15:10:04.221] 🛸 UAV-042 (Lead): Intent broadcast via MAVLink (DID: did:key:z6Mkuav042)</div>
-                  <div style={{ color: '#27c93f' }}>[15:10:04.222] ⚡ ACTUATOR_ALLOW: Waypoint vector (x: 120.4, y: 34.2, z: 45.0m) approved</div>
-                  <div style={{ color: '#ffbd2e' }}>[15:10:07.890] ⚠️ ATTACK_DETECTED: Adversarial Optical Injection attempting `COMMAND_DISARM`!</div>
-                  <div style={{ color: '#ff4d4f', background: 'rgba(255,77,79,0.12)', padding: '0.5rem', borderLeft: '3px solid #ff4d4f' }}>
+                <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.82rem', lineHeight: '1.7', background: 'rgba(0,0,0,0.65)', padding: '1.2rem', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.08)', display: 'flex', flexDirection: 'column', gap: '0.7rem' }}>
+                  <div style={{ color: '#94a3b8' }}>[15:10:04.221] 🛸 UAV-042 (Lead): Intent broadcast via MAVLink (DID: did:key:z6Mkuav042)</div>
+                  <div style={{ color: '#4ade80' }}>[15:10:04.222] ⚡ ACTUATOR_ALLOW: Waypoint vector (x: 120.4, y: 34.2, z: 45.0m) approved</div>
+                  <div style={{ color: '#facc15' }}>[15:10:07.890] ⚠️ ATTACK_DETECTED: Adversarial Optical Injection attempting `COMMAND_DISARM`!</div>
+                  <div style={{ color: '#f87171', background: 'rgba(239,68,68,0.14)', padding: '0.5rem', borderRadius: '4px', borderLeft: '3px solid #ef4444' }}>
                     [15:10:07.891] 🛑 C-ABI KINETIC FUSE: Altitude = 45.0m &gt; 0.5m. Mid-Air Disarm hard blocked in &lt; 25μs! Motors maintain nominal thrust. Observable state drift: ΔS ≡ 0.000m.
                   </div>
                   <div style={{ color: 'var(--accent-gold)' }}>[15:10:07.894] 🛰️ GCS_ALERT: Incident logged to Flight Black Box (Merkle Block #88219)</div>
@@ -162,16 +275,27 @@ export default function SwarmDetail() {
               </div>
 
               {/* Global Tactical Kill Switch */}
-              <div style={{ marginTop: '1.5rem', padding: '1rem', background: 'rgba(245,158,11,0.06)', borderRadius: '8px', border: '1px solid rgba(245,158,11,0.3)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+              <div style={{
+                marginTop: '1.5rem',
+                padding: '1rem',
+                background: 'rgba(255,255,255,0.03)',
+                borderRadius: '8px',
+                border: '1px solid rgba(255,255,255,0.08)',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                flexWrap: 'wrap',
+                gap: '1rem'
+              }}>
                 <div>
                   <div style={{ fontSize: '0.85rem', color: '#fff', fontWeight: 'bold' }}>
                     {isZh ? '戰術全網 Fail-Closed 廣播熔斷' : 'Global Swarm Fail-Closed Broadcast'}
                   </div>
-                  <div style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>
+                  <div style={{ fontSize: '0.75rem', color: '#94a3b8' }}>
                     {isZh ? '向 100 架無人機同步下達安全返航 (RTL) 或原點懸停指令' : 'Synchronous Fail-Closed Safe RTL / Hover broadcast to all 100 units'}
                   </div>
                 </div>
-                <button style={{ background: 'linear-gradient(135deg, #f59e0b, #d97706)', border: 'none', color: '#000', padding: '0.5rem 1.2rem', borderRadius: '6px', fontSize: '0.8rem', fontWeight: 'bold', cursor: 'pointer' }}>
+                <button style={{ background: 'linear-gradient(135deg, #f59e0b, #d97706)', border: 'none', color: '#000', padding: '0.5rem 1.2rem', borderRadius: '6px', fontSize: '0.8rem', fontWeight: 'bold', cursor: 'pointer', transition: 'opacity 0.2s' }}>
                   TACTICAL FAIL-CLOSED BROADCAST
                 </button>
               </div>
