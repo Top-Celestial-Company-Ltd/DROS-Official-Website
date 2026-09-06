@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 // DROS Visual Assets
 import drosDefenseLayersZh from '../assets/DROS_Visual_Assets/dros_defense_layers_zh.png';
@@ -67,39 +68,54 @@ export default function Solutions() {
             </div>
 
             {/* DROS Engine+ */}
-            <div className="glass-card animate-fade-up delay-3" style={{ borderColor: 'rgba(212, 175, 55, 0.3)' }}>
-              <div className="kernel-icon" style={{ color: 'var(--accent-gold)' }}>🛡️</div>
-              <h3 style={{ marginBottom: '0.5rem', fontSize: '1.4rem' }}>{t('solutions.products.dros_engine_plus.title')}</h3>
-              <div className="platform-tag" style={{ display: 'inline-block', marginBottom: '1rem', color: 'var(--accent-gold)', borderColor: 'rgba(212, 175, 55, 0.3)' }}>
-                {t('solutions.products.dros_engine_plus.tag')}
+            <div className="glass-card animate-fade-up delay-3" style={{ borderColor: 'rgba(212, 175, 55, 0.3)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div>
+                <div className="kernel-icon" style={{ color: 'var(--accent-gold)' }}>🛡️</div>
+                <h3 style={{ marginBottom: '0.5rem', fontSize: '1.4rem' }}>{t('solutions.products.dros_engine_plus.title')}</h3>
+                <div className="platform-tag" style={{ display: 'inline-block', marginBottom: '1rem', color: 'var(--accent-gold)', borderColor: 'rgba(212, 175, 55, 0.3)' }}>
+                  {t('solutions.products.dros_engine_plus.tag')}
+                </div>
+                <p style={{ color: 'var(--text-secondary)' }}>
+                  {t('solutions.products.dros_engine_plus.desc')}
+                </p>
               </div>
-              <p style={{ color: 'var(--text-secondary)' }}>
-                {t('solutions.products.dros_engine_plus.desc')}
-              </p>
+              <Link to="/products/startup" style={{ marginTop: '1.5rem', display: 'inline-block', color: 'var(--accent-gold)', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 'bold' }}>
+                🖥️ {isZh ? '查看 Startup 主控台與架構專頁' : 'Explore Startup Console & Spec'} &rarr;
+              </Link>
             </div>
 
             {/* VajraAgent */}
-            <div className="glass-card animate-fade-up delay-1" style={{ borderColor: 'rgba(210, 168, 255, 0.3)' }}>
-              <div className="kernel-icon" style={{ color: '#d2a8ff' }}>🧠</div>
-              <h3 style={{ marginBottom: '0.5rem', fontSize: '1.4rem' }}>{t('solutions.products.vajra_agent.title')}</h3>
-              <div className="platform-tag" style={{ display: 'inline-block', marginBottom: '1rem', color: '#d2a8ff', borderColor: 'rgba(210, 168, 255, 0.3)' }}>
-                {t('solutions.products.vajra_agent.tag')}
+            <div className="glass-card animate-fade-up delay-1" style={{ borderColor: 'rgba(210, 168, 255, 0.3)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div>
+                <div className="kernel-icon" style={{ color: '#d2a8ff' }}>🧠</div>
+                <h3 style={{ marginBottom: '0.5rem', fontSize: '1.4rem' }}>{t('solutions.products.vajra_agent.title')}</h3>
+                <div className="platform-tag" style={{ display: 'inline-block', marginBottom: '1rem', color: '#d2a8ff', borderColor: 'rgba(210, 168, 255, 0.3)' }}>
+                  {t('solutions.products.vajra_agent.tag')}
+                </div>
+                <p style={{ color: 'var(--text-secondary)' }}>
+                  {t('solutions.products.vajra_agent.desc')}
+                </p>
               </div>
-              <p style={{ color: 'var(--text-secondary)' }}>
-                {t('solutions.products.vajra_agent.desc')}
-              </p>
+              <Link to="/products/enterprise" style={{ marginTop: '1.5rem', display: 'inline-block', color: '#ff7875', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 'bold' }}>
+                🖥️ {isZh ? '查看 Enterprise 戰情室與架構專頁' : 'Explore Enterprise Console & Spec'} &rarr;
+              </Link>
             </div>
 
-            {/* DROS Mobile SDK */}
-            <div className="glass-card animate-fade-up delay-2" style={{ borderColor: 'rgba(39, 201, 63, 0.3)' }}>
-              <div className="kernel-icon" style={{ color: '#27c93f' }}>📱</div>
-              <h3 style={{ marginBottom: '0.5rem', fontSize: '1.4rem' }}>{t('solutions.products.dros_mobile.title')}</h3>
-              <div className="platform-tag" style={{ display: 'inline-block', marginBottom: '1rem', color: '#27c93f', borderColor: 'rgba(39, 201, 63, 0.3)' }}>
-                {t('solutions.products.dros_mobile.tag')}
+            {/* DROS Mobile SDK / Swarm */}
+            <div className="glass-card animate-fade-up delay-2" style={{ borderColor: 'rgba(39, 201, 63, 0.3)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div>
+                <div className="kernel-icon" style={{ color: '#27c93f' }}>📱</div>
+                <h3 style={{ marginBottom: '0.5rem', fontSize: '1.4rem' }}>{t('solutions.products.dros_mobile.title')}</h3>
+                <div className="platform-tag" style={{ display: 'inline-block', marginBottom: '1rem', color: '#27c93f', borderColor: 'rgba(39, 201, 63, 0.3)' }}>
+                  {t('solutions.products.dros_mobile.tag')}
+                </div>
+                <p style={{ color: 'var(--text-secondary)' }}>
+                  {t('solutions.products.dros_mobile.desc')}
+                </p>
               </div>
-              <p style={{ color: 'var(--text-secondary)' }}>
-                {t('solutions.products.dros_mobile.desc')}
-              </p>
+              <Link to="/products/swarm" style={{ marginTop: '1.5rem', display: 'inline-block', color: '#fbbf24', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 'bold' }}>
+                🖥️ {isZh ? '查看 Swarm 蜂群戰術指揮大屏專頁' : 'Explore Swarm Tactical GCS Spec'} &rarr;
+              </Link>
             </div>
           </div>
         </div>

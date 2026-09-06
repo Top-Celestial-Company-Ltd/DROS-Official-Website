@@ -12,6 +12,9 @@ import ComingSoon from './pages/ComingSoon';
 import Solutions from './pages/Solutions';
 import About from './pages/About';
 import Trust from './pages/Trust';
+import StartupDetail from './pages/StartupDetail';
+import EnterpriseDetail from './pages/EnterpriseDetail';
+import SwarmDetail from './pages/SwarmDetail';
 
 export default function App() {
   return (
@@ -29,6 +32,9 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/trust" element={<Trust />} />
             <Route path="/coming-soon" element={<ComingSoon />} />
+            <Route path="/products/startup" element={<StartupDetail />} />
+            <Route path="/products/enterprise" element={<EnterpriseDetail />} />
+            <Route path="/products/swarm" element={<SwarmDetail />} />
           </Routes>
         </ErrorBoundary>
       </div>

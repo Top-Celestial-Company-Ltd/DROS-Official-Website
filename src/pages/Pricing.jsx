@@ -54,12 +54,16 @@ export default function Pricing() {
             {t('tiers.startup.features', { returnObjects: true }).map((f, i) => <li key={i}>{f}</li>)}
           </ul>
 
-          <details style={{marginBottom: '2rem', textAlign: 'left', color: 'var(--text-secondary)', background: 'rgba(212, 175, 55, 0.05)', padding: '1rem', borderRadius: '8px', border: '1px solid rgba(212, 175, 55, 0.2)'}}>
+          <details style={{marginBottom: '1.2rem', textAlign: 'left', color: 'var(--text-secondary)', background: 'rgba(212, 175, 55, 0.05)', padding: '1rem', borderRadius: '8px', border: '1px solid rgba(212, 175, 55, 0.2)'}}>
             <summary style={{cursor: 'pointer', fontWeight: 'bold', outline: 'none', color: 'var(--accent-gold)'}}>{t('tiers.startup.details_title')}</summary>
             <div style={{marginTop: '1rem', fontSize: '0.9rem', lineHeight: '1.6'}} dangerouslySetInnerHTML={{ __html: t('tiers.startup.details_content') }}></div>
           </details>
 
-          <a href="https://drosvajra.gumroad.com/l/vajraclaw-startup" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginTop: '2.8rem', padding: '1.2rem', textAlign: 'center'}}>
+          <Link to="/products/startup" style={{ display: 'block', textAlign: 'center', marginBottom: '1.2rem', padding: '0.75rem', background: 'rgba(212, 175, 55, 0.1)', border: '1px solid rgba(212, 175, 55, 0.3)', borderRadius: '8px', color: 'var(--accent-gold)', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 'bold', transition: 'all 0.2s' }}>
+            🖥️ 探索主控台與完整規格專頁 &rarr;
+          </Link>
+
+          <a href="https://drosvajra.gumroad.com/l/vajraclaw-startup" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginTop: '1rem', padding: '1.2rem', textAlign: 'center'}}>
             {t('tiers.startup.btn')}
           </a>
         </div>
@@ -74,10 +78,14 @@ export default function Pricing() {
             {t('tiers.enterprise.features', { returnObjects: true }).map((f, i) => <li key={i}>{f}</li>)}
           </ul>
           
-          <details style={{marginBottom: '2rem', textAlign: 'left', color: 'var(--text-secondary)', background: 'rgba(255,255,255,0.05)', padding: '1rem', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)'}}>
+          <details style={{marginBottom: '1.2rem', textAlign: 'left', color: 'var(--text-secondary)', background: 'rgba(255,255,255,0.05)', padding: '1rem', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)'}}>
             <summary style={{cursor: 'pointer', fontWeight: 'bold', outline: 'none', color: 'var(--text-primary)'}}>{t('tiers.enterprise.details_title')}</summary>
             <div style={{marginTop: '1rem', fontSize: '0.9rem', lineHeight: '1.6'}} dangerouslySetInnerHTML={{ __html: t('tiers.enterprise.details_content') }}></div>
           </details>
+
+          <Link to="/products/enterprise" style={{ display: 'block', textAlign: 'center', marginBottom: '1.2rem', padding: '0.75rem', background: 'rgba(255, 77, 79, 0.1)', border: '1px solid rgba(255, 77, 79, 0.3)', borderRadius: '8px', color: '#ff7875', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 'bold', transition: 'all 0.2s' }}>
+            🖥️ 探索主控戰情室與完整規格專頁 &rarr;
+          </Link>
 
           <a href="https://drosvajra.gumroad.com/l/vajraclaw-enterprise" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginTop: '1rem', padding: '1.2rem', textAlign: 'center'}}>
             {t('tiers.enterprise.btn')}
@@ -143,10 +151,14 @@ export default function Pricing() {
                 {t('tiers.physical_swarm.features', { returnObjects: true }).map((f, i) => <li key={i}>{f}</li>)}
               </ul>
               
-              <details style={{marginBottom: '2rem', textAlign: 'left', color: 'var(--text-secondary)', background: 'rgba(245, 158, 11, 0.05)', padding: '1rem', borderRadius: '8px', border: '1px solid rgba(245, 158, 11, 0.2)'}}>
+              <details style={{marginBottom: '1.2rem', textAlign: 'left', color: 'var(--text-secondary)', background: 'rgba(245, 158, 11, 0.05)', padding: '1rem', borderRadius: '8px', border: '1px solid rgba(245, 158, 11, 0.2)'}}>
                 <summary style={{cursor: 'pointer', fontWeight: 'bold', outline: 'none', color: '#f59e0b'}}>{t('tiers.physical_swarm.details_title')}</summary>
                 <div style={{marginTop: '1rem', fontSize: '0.9rem', lineHeight: '1.6'}} dangerouslySetInnerHTML={{ __html: t('tiers.physical_swarm.details_content') }}></div>
               </details>
+
+              <Link to="/products/swarm" style={{ display: 'block', textAlign: 'center', marginBottom: '1.2rem', padding: '0.75rem', background: 'rgba(245, 158, 11, 0.1)', border: '1px solid rgba(245, 158, 11, 0.3)', borderRadius: '8px', color: '#fbbf24', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 'bold', transition: 'all 0.2s' }}>
+                🖥️ 探索蜂群戰術指揮大屏與完整規格專頁 &rarr;
+              </Link>
             </div>
 
             <a href="mailto:sales@topcelestial.com?subject=Inquiry:%20DROS%20Physical%20AI%20%26%20Swarm%20Governance%20Suite" className="btn" style={{width: '100%', display: 'block', boxSizing: 'border-box', textAlign: 'center', background: 'linear-gradient(135deg, rgba(245,158,11,0.2), rgba(245,158,11,0.4))', border: '1px solid #f59e0b', color: '#fff', fontWeight: 'bold', padding: '1.1rem', borderRadius: '10px'}}>
