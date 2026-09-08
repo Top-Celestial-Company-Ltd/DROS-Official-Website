@@ -33,7 +33,11 @@
       "subtitle": "\"If runtime needs intelligence to enforce policy, the system is already <strong>unsafe</strong>.\"<br/>如果執行安全防衛在運行時仍需依賴智慧進行決策，該系統本質上已暴露於風險中。",
       "value_prop": "貫徹「開放身份，在地治理 (Open Identity, Localized Governance)」範式：簽發符合 RFC-010 W3C DID 的 DIT 身分憑證與二進位能力憑證 policy.bin，在 26.1 μs 內為全球異質 AI 代理建立無可抵賴的不可否認性 (Execution Non-Repudiation) 責任審計軌跡。",
       "btn_github": "查閱 DROS 規格書",
-      "btn_poc": "開始 Free-Trial 體驗"
+      "btn_poc": "開始 Free-Trial 體驗",
+      "btn_win": "📥 下載 Windows 版 (.exe)",
+      "btn_win_note": "v1.0.0 穩定版 (免 Docker / 托盤守護)",
+      "btn_linux": "🐧 Linux / Docker 部署",
+      "btn_spec": "查閱完整技術規格"
     },
     "terminal": {
       "cmd": "mount policy.bin",

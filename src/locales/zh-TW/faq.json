@@ -22,6 +22,10 @@
         {
           "q": "DROS 六大信任邊界 (6-Pillars) 如何落地？",
           "a": "DROS 透過物理 C-ABI 與 eBPF 帶內執行層，完整閉環六大信任問題：\n1. **Principal**：透過 3-Tier PKI 簽署 DIT 驗證身份。\n2. **Authorization**：透過 $O(1)$ Capability Bitmaps 精確區隔工具存取權。\n3. **Tool/Action Bound**：透過 FFI 邊界 $26.1\\ \\mu\\text{s}$ 物理硬熔斷。\n4. **Policy Gate**：透過 PII/PHI 動態遮蔽、HITL 懸停與 ZKP-Lite 選擇性揭露。\n5. **Audit Log**：透過 SHA-256 Merkle Hash Chain + Ed25519 生成不可篡改追溯鏈。\n6. **Revocation**：透過 $O(1)$ RCU 原子指針切換提供 $<1\\ \\mu\\text{s}$ 即時撤銷 (HTTP 403)。"
+        },
+        {
+          "q": "如果 Agent 被駭或啟用 Computer Use（桌面/滑鼠鍵盤/GUI 操作），是否可能自行把 DROS 關閉或撤銷治理？",
+          "a": "答案是：**在權限拓撲與架構上被嚴密隔離，Agent 絕不具備撤銷自身治理的權限。**\n\n這並不是神話「AI 絕對點不到某個視窗」，而是嚴謹遵循「治理平面與執行平面解耦」的系統工程憲法：\n\n1. **核心不變量 (Core Invariant)**：\n   * **「DROS may be user-controlled, but it shall not be agent-controlled.」**\n   * Agent 執行環境（Execution Plane）永遠不被授予足以停止、撤銷或竄改 DROS 治理核心（Enforcement Plane）的權限。\n2. **權限拓撲與服務邊界隔離**：\n   * DROS 桌面守護核心運行於獨立守護進程，其 IPC 通道具備嚴格的 Access Control List (ACL) 與 Local Token 驗證；\n   * 即使受駭 Agent 透過 Computer Use 模擬滑鼠鍵盤點擊桌面，它所持有的進程身分與權杖，絕無權向 DROS 發起任何「關閉服務、卸載核心、修改規則」的特權 RPC 調用。\n3. **Effect-level 系統調用底層兜底**：\n   * 「Computer Use 賦予了 Agent 操作電腦的能力；DROS 則決定該操作是否被授權產生實際效力 (Effect)。」\n   * 當 Agent 試圖透過終端機執行 `sc stop`、`kill -9` 或修改 policy.bin 檔時，該行為在跨越作業系統 C-ABI / System Call 咽喉處時，就會在 microsecond (<1μs) 內被物理硬熔斷阻斷！"
         }
       ]
     },

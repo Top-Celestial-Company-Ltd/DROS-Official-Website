@@ -33,7 +33,11 @@
       "subtitle": "\"If runtime needs intelligence to enforce policy, the system is already <strong>unsafe</strong>.\"<br/>If execution safety depends on intelligence at runtime, the system is already exposed to risks.",
       "value_prop": "As the execution-layer Missing Layer for the Agentic Web, DROS signs policy.bin capability credentials to establish non-repudiable execution authorization and immutable audit trails.",
       "btn_github": "Read the DROS Spec",
-      "btn_poc": "Start Free-Trial"
+      "btn_poc": "Start Free-Trial",
+      "btn_win": "📥 Download for Windows (.exe)",
+      "btn_win_note": "v1.0.0 Stable (Zero-Docker / Native Tray)",
+      "btn_linux": "🐧 Linux / Docker Deploy",
+      "btn_spec": "Read Technical Specs"
     },
     "terminal": {
       "cmd": "mount policy.bin",

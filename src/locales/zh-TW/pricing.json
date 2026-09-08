@@ -21,7 +21,9 @@
       ],
       "details_title": "展開看詳細技術規格",
       "details_content": "<p><strong>產品定位</strong>：專為個人開發者、極客玩家打造的多 Agent 本機工作站執行期安全防線。</p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>🛡️ 100% 個人/非商用免費授權 (Commercial License Required for Business)</strong>：免綁卡、免授權伺服器，本地即刻啟動。</li><li><strong>🤖 5 個 Concurrent Agents</strong>：守護 DSH、AGY、Codex、Claude Code、Cursor 與 OpenClaw。</li><li><strong>⚡ O(1) 常數時間微核心</strong>：原生點陣熔斷 (<1μs)，直接阻斷越權 Tool 調用。</li><li><strong>🪪 RFC-010 開放護照</strong>：本地簽發原生 W3C did:key 身分證。</li><li><strong>🐙 社群協作與更新</strong>：由 Top-Celestial 官方維護提供。</li></ul>",
-      "btn": "免費獲取社群授權"
+      "btn": "免費獲取社群授權",
+      "btn_win": "📥 下載 Windows 桌面版 (.exe)",
+      "btn_linux": "🐧 Linux / Docker 終端部署"
     },
     "startup": {
       "badge": "RECOMMENDED",

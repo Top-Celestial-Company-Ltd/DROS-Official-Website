@@ -1,9 +1,12 @@
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import LinuxDeployModal from '../components/LinuxDeployModal';
 
 export default function Pricing() {
   const { t } = useTranslation('pricing');
+  const [isLinuxModalOpen, setIsLinuxModalOpen] = useState(false);
 
   return (
     <main className="container" style={{paddingTop: '4rem', paddingBottom: '6rem'}}>
@@ -40,7 +43,67 @@ export default function Pricing() {
             <div style={{marginTop: '1rem', fontSize: '0.9rem', lineHeight: '1.6'}} dangerouslySetInnerHTML={{ __html: t('tiers.hacker.details_content') }}></div>
           </details>
 
-          <a href="https://github.com/Top-Celestial-Company-Ltd/DROS-VajraClaw-Hacker" target="_blank" rel="noopener noreferrer" className="btn" style={{width: '100%', display: 'block', boxSizing: 'border-box', marginBottom: '0.8rem', textAlign: 'center', background: 'transparent', border: '1px solid #10b981', color: '#10b981', fontWeight: 'bold'}}>{t('tiers.hacker.btn')}</a>
+          {/* Dual-Track Action Buttons */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+            <a 
+              href="https://github.com/Top-Celestial-Company-Ltd/DROS-VajraClaw-Hacker/releases/latest/download/VajraClaw-Setup.exe" 
+              className="btn" 
+              style={{
+                width: '100%', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center', 
+                gap: '0.5rem',
+                boxSizing: 'border-box', 
+                textAlign: 'center', 
+                background: '#10b981', 
+                color: '#000', 
+                fontWeight: 'bold',
+                textDecoration: 'none'
+              }}
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.949-1.801"/></svg>
+              <span>{t('tiers.hacker.btn_win')}</span>
+            </a>
+
+            <button 
+              onClick={() => setIsLinuxModalOpen(true)}
+              className="btn" 
+              style={{
+                width: '100%', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center', 
+                gap: '0.5rem',
+                boxSizing: 'border-box', 
+                textAlign: 'center', 
+                background: 'rgba(0, 240, 255, 0.08)', 
+                border: '1px solid rgba(0, 240, 255, 0.4)', 
+                color: '#38bdf8', 
+                fontWeight: '600',
+                cursor: 'pointer'
+              }}
+            >
+              <span>🐧</span>
+              <span>{t('tiers.hacker.btn_linux')}</span>
+            </button>
+
+            <a 
+              href="https://github.com/Top-Celestial-Company-Ltd/DROS-VajraClaw-Hacker" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              style={{
+                fontSize: '0.82rem', 
+                color: 'var(--text-secondary)', 
+                textAlign: 'center', 
+                textDecoration: 'none',
+                marginTop: '0.4rem',
+                display: 'block'
+              }}
+            >
+              {t('tiers.hacker.btn')} (GitHub) &rarr;
+            </a>
+          </div>
         </div>
 
         {/* Startup Tier (Recommended) */}
@@ -355,6 +418,12 @@ export default function Pricing() {
           <p style={{fontSize: '1.5rem', color: 'var(--text-light)', fontWeight: '600', marginBottom: '2rem'}}>{t('cta.subtitle')}</p>
           <Link to="/coming-soon" className="btn btn-primary" style={{fontSize: '1.2rem', padding: '1rem 3rem'}}>{t('cta.btn')}</Link>
       </section>
+
+      {/* Linux / Server Deployment Modal */}
+      <LinuxDeployModal 
+        isOpen={isLinuxModalOpen} 
+        onClose={() => setIsLinuxModalOpen(false)} 
+      />
     </main>
   );
 }

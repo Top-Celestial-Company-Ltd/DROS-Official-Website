@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import LinuxDeployModal from '../components/LinuxDeployModal';
 
 // DROS Visual Assets
 import drosFlowAnimationZh from '../assets/DROS_Visual_Assets/dros_flow_animation_zh.webp';
@@ -11,6 +12,7 @@ export default function Home() {
   const { t, i18n } = useTranslation();
   const githubUser = "Top-Celestial-Company-Ltd";
   const [isCopied, setIsCopied] = useState(false);
+  const [isLinuxModalOpen, setIsLinuxModalOpen] = useState(false);
 
   const isZh = i18n.language && i18n.language.startsWith('zh');
   const flowAnimation = isZh ? drosFlowAnimationZh : drosFlowAnimationEn;
@@ -49,14 +51,72 @@ export default function Home() {
             {t('home.hero.value_prop')}
           </p>
 
-          <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link to="/docs" className="btn btn-secondary" style={{ padding: '1rem 2.5rem', fontSize: '1.1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <svg height="24" width="24" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
-              {t('home.hero.btn_github')}
-            </Link>
-            <a href="https://drosvajra.gumroad.com/l/nebkzs" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.1rem' }}>
-              {t('home.hero.btn_poc')} &rarr;
-            </a>
+          {/* Dual-Track Download Action Bar */}
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', marginTop: '1rem' }}>
+            <div style={{ display: 'flex', gap: '1.2rem', justifyContent: 'center', flexWrap: 'wrap', width: '100%', maxWidth: '750px' }}>
+              {/* Windows Direct Download Button */}
+              <a 
+                href="https://github.com/Top-Celestial-Company-Ltd/DROS-VajraClaw-Hacker/releases/latest/download/VajraClaw-Setup.exe" 
+                className="btn btn-primary" 
+                style={{ 
+                  padding: '1.1rem 2.2rem', 
+                  fontSize: '1.1rem', 
+                  display: 'flex', 
+                  flexDirection: 'column', 
+                  alignItems: 'center', 
+                  justifyContent: 'center',
+                  minWidth: '280px',
+                  boxShadow: '0 10px 25px rgba(212, 175, 55, 0.25)',
+                  textDecoration: 'none'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontWeight: '700' }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.949-1.801"/></svg>
+                  <span>{t('home.hero.btn_win')}</span>
+                </div>
+                <span style={{ fontSize: '0.75rem', opacity: 0.85, fontWeight: '400', marginTop: '0.2rem' }}>
+                  {t('home.hero.btn_win_note')}
+                </span>
+              </a>
+
+              {/* Linux / Docker Deployment Button */}
+              <button 
+                onClick={() => setIsLinuxModalOpen(true)}
+                className="btn btn-secondary" 
+                style={{ 
+                  padding: '1.1rem 2.2rem', 
+                  fontSize: '1.1rem', 
+                  display: 'flex', 
+                  flexDirection: 'column', 
+                  alignItems: 'center', 
+                  justifyContent: 'center',
+                  minWidth: '240px',
+                  cursor: 'pointer',
+                  border: '1px solid rgba(0, 240, 255, 0.4)',
+                  background: 'rgba(0, 240, 255, 0.04)'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontWeight: '700', color: '#38bdf8' }}>
+                  <span>🐧</span>
+                  <span>{t('home.hero.btn_linux')}</span>
+                </div>
+                <span style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', fontWeight: '400', marginTop: '0.2rem' }}>
+                  Docker / curl / pip
+                </span>
+              </button>
+            </div>
+
+            {/* Subtle Spec Link */}
+            <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '0.5rem' }}>
+              <Link to="/docs" style={{ color: 'var(--text-secondary)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.4rem', transition: 'color 0.2s' }}>
+                <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                {t('home.hero.btn_spec')} &rarr;
+              </Link>
+              <span>•</span>
+              <a href="https://drosvajra.gumroad.com/l/nebkzs" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-gold)', textDecoration: 'none' }}>
+                {t('home.hero.btn_poc')} &rarr;
+              </a>
+            </div>
           </div>
         </div>
 
@@ -517,6 +577,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Linux / Server Deployment Modal */}
+      <LinuxDeployModal 
+        isOpen={isLinuxModalOpen} 
+        onClose={() => setIsLinuxModalOpen(false)} 
+      />
     </main>
   );
 }
