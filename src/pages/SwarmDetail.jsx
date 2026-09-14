@@ -41,8 +41,8 @@ export default function SwarmDetail() {
         </p>
         <p style={{ fontSize: '1.05rem', color: 'var(--text-secondary)', maxWidth: '900px', lineHeight: '1.8' }}>
           {isZh
-            ? '針對實體具身智能 (Embodied AI)、無人機蜂群 (UAV Swarms) 與智慧搬運車 (AMR/AGV) 的高動態物理治理。當大語言模型或神經網路因感測器欺騙或提示詞注入產生幻覺時，機載 C-ABI 微核心在致動器底層實施物理鉗制，確保摔機與失控衝撞機率物理歸零 (ΔS ≡ 0)。'
-            : 'Designed for embodied AI, autonomous UAV swarms, and smart robotics. When cognitive neural networks hallucinate under adversarial spoofing or indirect prompt injection, the on-device C-ABI microkernel deterministically enforces physical actuator limits, ensuring zero unauthorized kinetic state drift (ΔS ≡ 0).'}
+            ? '針對實體具身智能 (Embodied AI)、無人機蜂群 (UAV Swarms) 與智慧機器人的高動態物理治理。在致動器與飛控通信前，對飛行狀態、任務授權與指令語義實施確定性治理，阻止未授權指令跨越受治理的執行邊界。'
+            : 'Designed for embodied AI, autonomous UAV swarms, and robotics. Deterministically governs flight-state, mission authorization, and command semantics before actuator execution, preventing unauthorized commands from crossing the governed execution boundary.'}
         </p>
       </section>
 
@@ -345,12 +345,12 @@ export default function SwarmDetail() {
 
           <div className="glass-card" style={{ padding: '2rem', borderTop: '3px solid #27c93f' }}>
             <h3 style={{ fontSize: '1.25rem', color: '#27c93f', marginBottom: '1rem' }}>
-              {isZh ? '4. 航太合規與飛行黑盒子' : '4. Aviation Compliance Black Box'}
+              {isZh ? '4. 航太可稽核與飛行黑盒子' : '4. Aviation Audit & Black Box Telemetry'}
             </h3>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.7' }}>
               {isZh
-                ? '全維度符合歐盟 EU AI Act Article 14 實體人機雙重覆核、EASA SORA 與 DO-178C 標準，黑盒子日誌不可篡改。'
-                : 'Fully compliant with EU AI Act Article 14, EASA SORA, and DO-178C aerospace guidelines with tamper-evident Merkle flight telemetry.'}
+                ? '專為高保障與安全關鍵開發環境設計，支援歐盟 EU AI Act Article 14 實體人機雙重覆核與 EASA SORA 規範，黑盒子日誌具備 Merkle 密碼學不可篡改存證。'
+                : 'Designed for integration into high-assurance and safety-critical development environments, supporting EU AI Act Article 14 human oversight and EASA SORA guidelines with tamper-evident Merkle flight telemetry.'}
             </p>
           </div>
         </div>
@@ -369,8 +369,16 @@ export default function SwarmDetail() {
                 <td style={{ padding: '1.2rem', color: '#fff', fontWeight: '600' }}>無人機 (UAV/FPV)、倉儲搬運車 (AMR/AGV)、具身機械手臂、四足機器人</td>
               </tr>
               <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                <td style={{ padding: '1.2rem', color: 'var(--text-secondary)' }}>{isZh ? '支援飛控與機器人架構' : 'Flight & Robotics Stacks'}</td>
-                <td style={{ padding: '1.2rem', color: '#fff', fontWeight: '600' }}>PX4, ArduPilot (MAVLink), ROS2 (DDS), Gazebo SITL</td>
+                <td style={{ padding: '1.2rem', color: 'var(--text-secondary)' }}>{isZh ? '支援飛控與通訊協定' : 'Flight Stacks & Protocols'}</td>
+                <td style={{ padding: '1.2rem', color: '#fff', fontWeight: '600' }}>PX4 Autopilot, ArduPilot (MAVLink 1.0/2.0), ROS 2 (DDS), Gazebo SITL</td>
+              </tr>
+              <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                <td style={{ padding: '1.2rem', color: 'var(--text-secondary)' }}>{isZh ? '底層隔離與執行基底' : 'Isolation & Execution Substrates'}</td>
+                <td style={{ padding: '1.2rem', color: '#fff', fontWeight: '500' }}>
+                  {isZh 
+                    ? 'Embedded Linux · WASI 沙箱 · seL4 能力隔離整合路線 (VEP 驗證中) · CHERI 硬體能力研究 Profile'
+                    : 'Embedded Linux · WASI Sandbox · seL4-oriented capability isolation (VEP validated) · CHERI research profile'}
+                </td>
               </tr>
               <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
                 <td style={{ padding: '1.2rem', color: 'var(--text-secondary)' }}>{isZh ? '機載微核心延遲' : 'Onboard Enforcement Latency'}</td>
