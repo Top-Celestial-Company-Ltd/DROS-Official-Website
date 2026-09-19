@@ -28,7 +28,7 @@ export default function EnterpriseDetail() {
         </Link>
         <span style={{ color: 'rgba(255,255,255,0.2)' }}>/</span>
         <span style={{ background: 'rgba(255, 77, 79, 0.1)', color: '#ff4d4f', padding: '0.2rem 0.8rem', borderRadius: '12px', fontSize: '0.8rem', border: '1px solid rgba(255, 77, 79, 0.25)', fontWeight: 'bold' }}>
-          ENTERPRISE ZERO-TRUST MESH
+          ENTERPRISE EXECUTION-GOVERNANCE FABRIC
         </span>
       </div>
 
@@ -37,13 +37,13 @@ export default function EnterpriseDetail() {
         <h1 style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.5rem)', fontWeight: '800', lineHeight: '1.2', marginBottom: '1.2rem', color: '#fff' }}>
           {isZh ? 'VajraAgent Enterprise 企業旗艦版' : 'VajraAgent Enterprise Edition'}
         </h1>
-        <p style={{ fontSize: '1.2rem', color: '#ff4d4f', fontWeight: '600', marginBottom: '1rem' }}>
-          {isZh ? 'K8s 叢集網格 · 450 並發治理 · 長任務短效租約 · 法院級 Merkle 存證' : 'K8s Cluster Mesh · 450 Concurrent Governance · Long-Task Short-Lease Registry · Court-Admissible Merkle Audit'}
+        <p style={{ fontSize: '1.25rem', color: '#ff4d4f', fontWeight: '700', marginBottom: '1rem' }}>
+          {isZh ? '為企業級 AI 與 Agent 執行構築具邊界約束的剛性執法層' : 'A bounded enforcement boundary for enterprise AI and agent execution.'}
         </p>
         <p style={{ fontSize: '1.05rem', color: 'var(--text-secondary)', maxWidth: '900px', lineHeight: '1.8' }}>
           {isZh
-            ? '針對上市企業、跨國金融與智慧醫療體系打造。當企業內有數十個部門與上百個 AI 員工同時調用生產資料庫與內部 ERP 時，您需要中央戰情室進行多租戶隔離、長任務短效租約動態換發、以及在 353 奈秒內熔斷異常威脅的硬體級防禦。'
-            : 'Designed for Fortune 500 enterprises, multinational banking, and healthcare systems. When hundreds of autonomous AI employees concurrently access production databases and ERPs, enterprise security requires a centralized command center for multi-tenant isolation, long-task credential renewal, and 353 ns hardware-level execution containment.'}
+            ? '專為上市企業、跨國金融與關鍵任務組織打造。DROS 不取代您現有的企業 IAM、PKI、SIEM、業務編排框架或 OPA 策略引擎，而是與其深度整合；落實「中央治理定義策略，分散式邊界剛性執法（Centralized Governance, Distributed Enforcement）」，讓 DROS 專注於其最擅長的核心職責：在執行期（Execution-time）實施帶內、確定性的邊界攔截與不可篡改存證。'
+            : 'Engineered for enterprises, financial institutions, and mission-critical systems. DROS does not replace your enterprise IAM, PKI, SIEM, orchestration frameworks, or policy engines—it integrates seamlessly with them. Enforcing "Centralized Governance, Distributed Enforcement", DROS focuses exclusively on what it does best: deterministic, in-band authorization and interception at execution-time.'}
         </p>
       </section>
 
@@ -583,23 +583,23 @@ export default function EnterpriseDetail() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
           <div className="glass-card" style={{ padding: '2rem', borderTop: '3px solid #ff4d4f' }}>
             <h3 style={{ fontSize: '1.25rem', color: '#ff7875', marginBottom: '1rem' }}>
-              {isZh ? '1. K8s 叢集 DaemonSet 治理' : '1. K8s DaemonSet Ingress'}
+              {isZh ? '1. 分散式 PEP 執行網格 (Level 2/3)' : '1. Distributed PEP Fabric (Level 2/3)'}
             </h3>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.7' }}>
               {isZh
-                ? '支援以 DaemonSet 或 Ingress Sidecar 原生嵌入 Kubernetes 叢集，跨多個工作負載 Pod 統一收斂執行權限，零單點故障。'
-                : 'Native Kubernetes DaemonSet and Ingress Sidecar integration. Unifies execution boundaries across distributed worker pods with zero single point of failure.'}
+                ? '支援 API Gateway Ingress 反向代理、K8s DaemonSet 與 Worker 執行邊界適配器，跨異質服務統一收斂執行權限，杜絕單點與邊界逃逸。'
+                : 'Supports API Gateway Ingress filters, K8s DaemonSets, and worker boundary adapters, unifying execution governance across heterogeneous services.'}
             </p>
           </div>
 
           <div className="glass-card" style={{ padding: '2rem', borderTop: '3px solid var(--accent-gold)' }}>
             <h3 style={{ fontSize: '1.25rem', color: 'var(--accent-gold)', marginBottom: '1rem' }}>
-              {isZh ? '2. 法院級 SHA-256 Merkle 溯源鏈' : '2. Court-Admissible Merkle Audit'}
+              {isZh ? '2. 派生憑證鏈與不可否認審計' : '2. Derived Capability Chain & Audit'}
             </h3>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.7' }}>
               {isZh
-                ? '每一次工具調用、參數哈希與策略版本均實時寫入單向密碼學 Merkle 鏈，支援日誌防篡改校驗與一鍵匯出供合規審計。'
-                : 'Every tool invocation, argument hash, and policy version is cryptographically anchored to an append-only Merkle tree, exported directly to corporate SIEM.'}
+                ? '強制執行「Scope(C_derived) ⊆ Scope(C_parent)」單調縮減不變量，根除混淆代理人；每一次工具調用與參數雜湊均寫入加密簽章不可否認日誌。'
+                : 'Enforces monotonic scope shrinkage "Scope(C_derived) ⊆ Scope(C_parent)" to permanently eliminate Confused Deputy attacks; all actions recorded to signed audit logs.'}
             </p>
           </div>
 
@@ -657,7 +657,7 @@ export default function EnterpriseDetail() {
               </tr>
               <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
                 <td style={{ padding: '1.2rem', color: 'var(--text-secondary)' }}>{isZh ? '支援部署架構' : 'Target Environments'}</td>
-                <td style={{ padding: '1.2rem', color: '#fff' }}>Kubernetes (Helm), Docker Swarm, VMware, OpenShift, On-Prem Bare Metal</td>
+                <td style={{ padding: '1.2rem', color: '#fff' }}>Level 1~3 全系標配 (K8s Helm DaemonSet, Envoy/Istio Ingress PEP, DB Proxy PEP, Docker Swarm, OpenShift, On-Prem Bare Metal)</td>
               </tr>
               <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
                 <td style={{ padding: '1.2rem', color: 'var(--text-secondary)' }}>{isZh ? 'SIEM 整合' : 'SIEM Integration'}</td>

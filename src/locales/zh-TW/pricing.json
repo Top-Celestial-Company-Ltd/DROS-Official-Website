@@ -2,16 +2,16 @@
   "meta_title": "DROS Pricing - 商業授權與定價方案",
   "meta_desc": "DROS 商業授權方案。從獨立開發者的 Free-Trial 到 Fortune 500 企業的密碼學稽核方案，為您的 Agentic AI 基礎設施提供執行期防護。",
   "badge": "Commercial License",
-  "title": "DROS <span class='gold-text'>生態定價方案</span>",
-  "subtitle": "從根本解決法義幻覺與注入攻擊。為您的企業 AI 基礎設施升級至 OS 等級的執行治理標準。",
+  "title": "確定性執行治理 <span class='gold-text'>授權與定價方案</span>",
+  "subtitle": "為既有 AI 技術棧增添確定性執行治理，無需推倒重來。全方案共享同一套核心執法引擎 — 僅依部署規模與拓撲結構彈性配置。",
   "early_adopter": "<strong style='color: var(--accent-gold)'>Early Adopter Pricing:</strong> 我們目前處於 V3 釋出階段。企業授權將於 2026 Q4 調漲至 <strong>$15,000/yr</strong>。強烈建議在下一波調漲前鎖定您的授權！",
   "tiers": {
     "hacker": {
-      "name": "VajraClaw Hacker <br/><span style='font-size: 1.2rem; color: #10b981'>社群版 (個人 / 非商用免費授權)</span>",
+      "name": "VajraClaw Community <br/><span style='font-size: 1.2rem; color: #10b981'>個人社群版 (非商用免費授權)</span>",
       "price_yearly": "$0",
       "price_unit": " 永久免費",
-      "price_monthly": "個人 / 學習研究 100% 免費授權",
-      "desc": "為本機多 Agent 工作站建立統一安全邊界，個人與學習研究 100% 免費授權。",
+      "price_monthly": "免費防護 AI Agent 的每一步動作",
+      "desc": "免費防護 AI Agent 的每一步動作。為個人開發者工作站與研究環境建立明確的帶內執行邊界。",
       "features": [
         "綁定 1 組 Machine UUID",
         "最高 5 個 Concurrent Agents",
@@ -20,7 +20,7 @@
         "Universal Docker 網關與社群技術支援"
       ],
       "details_title": "展開看詳細技術規格",
-      "details_content": "<p><strong>產品定位</strong>：專為個人開發者、極客玩家打造的多 Agent 本機工作站執行期安全防線。</p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>🛡️ 100% 個人/非商用免費授權 (Commercial License Required for Business)</strong>：免綁卡、免授權伺服器，本地即刻啟動。</li><li><strong>🤖 5 個 Concurrent Agents</strong>：守護 DSH、AGY、Codex、Claude Code、Cursor 與 OpenClaw。</li><li><strong>⚡ O(1) 常數時間微核心</strong>：原生點陣熔斷 (<1μs)，直接阻斷越權 Tool 調用。</li><li><strong>🪪 RFC-010 開放護照</strong>：本地簽發原生 W3C did:key 身分證。</li><li><strong>🐙 社群協作與更新</strong>：由 Top-Celestial 官方維護提供。</li></ul>",
+      "details_content": "<p><strong>部署環境</strong>：專為個人開發者、極客玩家打造的帶內執行期安全邊界，杜絕本機 Agent 越權與失控動作。</p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>🛡️ 個人/非商用 100% 免費</strong>：免綁卡、免授權伺服器，本地即刻啟動。</li><li><strong>🤖 5 個 Concurrent Agents</strong>：守護 DSH、AGY、Codex、Claude Code、Cursor 與 OpenClaw。</li><li><strong>⚡ O(1) 常數時間微核心</strong>：原生點陣熔斷 (<1μs)，直接阻斷越權 Tool 調用。</li><li><strong>🪪 RFC-010 開放護照</strong>：本地簽發原生 W3C did:key 身分證。</li><li><strong>🐙 社群協作與更新</strong>：由 Top-Celestial 官方維護提供。</li></ul>",
       "btn": "免費獲取社群授權",
       "btn_win": "📥 下載 Windows 桌面版 (.exe)",
       "btn_linux": "🐧 Linux / Docker 終端部署"
@@ -29,33 +29,33 @@
       "badge": "RECOMMENDED",
       "name": "VajraClaw+ Startup <br/><span style='font-size: 1.2rem; color: var(--accent-gold)'>Core Engine</span>",
       "price_yearly": "$2,990",
-      "desc": "完美契合中小企業 AI 團隊與內部微服務部署。",
+      "desc": "為既有 AI 技術棧增添確定性執行治理，無需推倒重來。無縫守護既有 Agent、MCP 伺服器與 Tool 調用。",
       "features": [
-        "最高 3 組 Machine UUIDs",
-        "每機台 10 個 Concurrent Agents",
+        "最高 3 組 Machine UUIDs (Dev / Staging / Prod)",
+        "每機台 10 個 Concurrent Agents (共 30 個)",
         "Python / Go 原生跨語言 SDK",
         "優先軟體更新與 Email 支援"
       ],
       "details_title": "展開看詳細技術規格",
-      "details_content": "<p><strong>🔐 核心升級：Level 2 資訊流控制 (IFC) — Startup 獨有</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>動態污點追蹤 (Dynamic Data Tainting)</strong>：將 <code>PII_CONFIDENTIAL</code> 等敏感標籤物理綁定到特定安全通道，阻斷任何未授權的資料流向。</li><li><strong>🚨 跨通道語意誘騙洩密阻斷 (POL-0021)</strong>：100% 物理熔斷攻擊者透過 Telegram / Discord / Email 等跨通道誘騙 Agent 洩漏 PII 的攻擊向量。Hacker 版無此防禦。</li><li><strong>Compile-time Intelligence</strong>：在編譯期解開複雜的正規表達式與權限繼承關係。</li><li><strong>跨語言 SDK (Zero-Code)</strong>：提供 Python <code>vajraclaw</code> 模組，一行程式碼封裝 LangChain / AutoGen 呼叫。</li><li><strong>3 組 Machine UUIDs</strong>：支援 Dev / Staging / Production 三環境隔離部署，共計 30 個 Concurrent Agents。</li></ul>",
+      "details_content": "<p><strong>部署環境</strong>：為中小企業與微服務團隊在既有 Agent 棧上架設剛性攔截邊界，無須引入龐大的企業套件。<br/><strong>核心能力：</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>Level 2 資訊流控制 (IFC)</strong>：將 <code>PII_CONFIDENTIAL</code> 等敏感標籤物理綁定到特定安全通道，在執行邊界阻斷未授權流向。</li><li><strong>🚨 語意誘騙外洩帶內攔截 (POL-0021)</strong>：物理熔斷攻擊者透過 Webhook、Email 或即時通訊誘騙 Agent 洩漏機密的攻擊向量。</li><li><strong>編譯期策略預編譯</strong>：在編譯期解開複雜權限繼承關係，確保執行期常數時間確定性判定。</li><li><strong>跨語言 SDK</strong>：提供 Python <code>vajraclaw</code> 模組，一行程式碼封裝 LangChain、AutoGen 與自建 Agent 運行時。</li><li><strong>3 組 Machine UUIDs</strong>：支援 Dev / Staging / Production 三環境隔離部署。</li></ul>",
       "btn": "Secure Startup License"
     },
     "enterprise": {
       "name": "VajraAgent Enterprise <br/><span style='font-size: 1.2rem; color: #ff4d4f'>Zero-Trust Mesh</span>",
       "price_yearly": "$29,990",
-      "desc": "專為高併發的大型組織打造。當 Agent 併發高達 450 個時，您會需要企業級中控網格與密碼學保護來進行集中管理。",
+      "desc": "為企業級 AI 與 Agent 執行構築具邊界約束的剛性執法層。與既有 IAM、SIEM 及調度平台無縫協同，不搞取代與重造輪子。",
       "features": [
         "最高 15 組 Machine UUIDs",
-        "每機台 30 個 Concurrent Agents",
-        "VajraAgent Mesh OTA 全局策略派發",
-        "中央視覺化監控戰情室 (Command Center)",
+        "每機台 30 個 Concurrent Agents (共 450 個)",
+        "VajraAgent Mesh 全局策略派發",
+        "中央可觀測性與監控戰情室 (Dashboard)",
         "100% On-Premise / 斷網私有雲部署",
         "K8s Helm 與 Ansible 自動化部署支援",
         "離線自適應安全降級 (Safe Degraded) 防禦",
         "Sealed Binary Policy (防篡改) 與密碼學稽核"
       ],
       "details_title": "展開看詳細技術規格",
-      "details_content": "<p><strong>產品定位</strong>：針對大型高併發場景，部署安全中控網格的終極防線，提供最高規格密碼學防護與自動化維運支援。<br/><strong>核心機制：</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>VajraAgent Mesh</strong>：統一進行 OTA 安全策略更新，無縫派發至數百個 AI Employee。</li><li><strong>多重防禦機制</strong>：包含 Sealed Binary Policy 與 Cryptographic Audit，杜絕內部與外部篡改。</li><li><strong>強固型底座</strong>：支援完全斷網/私有雲部署，搭配 K8s/Ansible 及離線自適應安全降級防禦。</li></ul>",
+      "details_content": "<p><strong>部署環境</strong>：集中式治理策略＋分散式就地執法。與企業既有身分、策略編寫及 SIEM 基礎設施深度整合。<br/><strong>核心能力：</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>VajraAgent Mesh</strong>：統一進行策略派發，多節點叢集各自執行本機自主剛性攔截。</li><li><strong>防篡改密碼學驗證</strong>：Sealed Binary Policy 與 SHA-256 Merkle 審計鏈，提供不可否認證據鏈。</li><li><strong>企業級維運規模</strong>：支援完全斷網/私有雲部署，搭配 K8s/Ansible 及離線自適應安全降級防禦。</li></ul>",
       "btn": "Contact Sales"
     },
     "mobile_sdk": {
@@ -197,13 +197,13 @@
     ]
   },
   "cta": {
-    "title": "升級至 <span class='gold-text'>OS 等級安全。</span>",
-    "subtitle": "為您的 Agent 基礎設施注入確定性防護。",
+    "title": "為您的 Agent 增添 <span class='gold-text'>具邊界約束的執法層。</span>",
+    "subtitle": "為您的 AI 基礎設施注入確定性執行期圍阻能力。",
     "btn": "聯繫銷售團隊"
   },
   "positioning": {
-    "title": "技術定位：DROS 在現有安全技術棧中的角色",
-    "subtitle": "DROS 不是既有安全工具的替代方案，而是 AI Agent 執行期治理的新類別。以下對比說明各技術的防禦層次與能力範圍，以利準確選型與縱深防禦部署。",
+    "title": "技術定位：DROS 在既有安全技術棧中的角色",
+    "subtitle": "DROS 是確定性執行治理底座 ── 責任邊界收斂，執行約束深入。它不取代 IAM、SIEM 或工作流調度，而是為您的技術棧補上關鍵的帶內執行邊界。",
     "col_dimension": "能力維度",
     "col_conf_vm": "Intel TDX / Confidential VM",
     "col_clean_room": "Data Clean Room",

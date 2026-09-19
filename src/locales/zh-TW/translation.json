@@ -10,7 +10,7 @@
     "trust": "技術論文與評測"
   },
   "footer": {
-    "desc": "DROS 是全球首個專為異質 AI 系統設計的執行治理標準 (Execution Governance Standard)。透過將策略驗證移至編譯期，並在執行期採用 O(1) 確定性查表，為企業級自主 AI 構築 Fail-Closed 實體安全防線。",
+    "desc": "DROS 是專為 AI Agent 與具備工具調用能力之系統設計的確定性執行治理基底。責任邊界收斂，執行約束深入。",
     "resources": "資源",
     "github": "GitHub 原始碼",
     "docs": "技術文件",
@@ -24,14 +24,15 @@
     "dharma_exemption": "Dharma Exemption：純粹的非營利佛教弘法用途可 100% 免費使用。"
   },
   "home": {
-    "meta_title": "DROS | Agentic Web 根憑證與 6-Pillars 執行不可否認性標準",
-    "meta_desc": "DROS 是 Agentic Web 的根憑證發行機構 (Root CA)。透過 C-ABI 帶內內核以平均 26.1 μs 決策延遲閉環六大信任邊界，簽發具備 Ed25519 簽章的 DIT 與 policy.bin 憑證。",
+    "meta_title": "DROS | AI Agent 運行期確定性執行治理基底",
+    "meta_desc": "DROS 是專為 AI Agent 與具備工具調用能力之系統設計的確定性執行治理基底。責任邊界收斂，執行約束深入。",
     "hero": {
-      "version": "DROS Unified Standard v2.0",
-      "title_prefix": "Agentic Web 的",
-      "title_highlight": "執行期身分與不可否認性歸責框架",
-      "subtitle": "\"If runtime needs intelligence to enforce policy, the system is already <strong>unsafe</strong>.\"<br/>如果執行安全防衛在運行時仍需依賴智慧進行決策，該系統本質上已暴露於風險中。",
-      "value_prop": "貫徹「開放身份，在地治理 (Open Identity, Localized Governance)」範式：簽發符合 RFC-010 W3C DID 的 DIT 身分憑證與二進位能力憑證 policy.bin，在 26.1 μs 內為全球異質 AI 代理建立無可抵賴的不可否認性 (Execution Non-Repudiation) 責任審計軌跡。",
+      "version": "DROS 確定性執行治理基底",
+      "title_prefix": "AI Agent 運行期",
+      "title_highlight": "確定性執行治理基底",
+      "doctrine_title": "責任邊界收斂，執行約束深入。",
+      "doctrine_subtitle": "DROS 刻意做得更少——只為了讓執行邊界能以確定、透明且可驗證的方式完成其本職工作。",
+      "value_prop": "在 Agent 的「行動決策」與系統的「實際執行」之間建立確定性帶內剛性邊界。即使 Agent 認知層遭受攻陷，底層系統動作依然受到嚴格約束。",
       "btn_github": "查閱 DROS 規格書",
       "btn_poc": "開始 Free-Trial 體驗",
       "btn_win": "📥 下載 Windows 版 (.exe)",
@@ -39,12 +40,92 @@
       "btn_linux": "🐧 Linux / Docker 部署",
       "btn_spec": "查閱完整技術規格"
     },
+    "deliberate_less": {
+      "badge": "POSITIONING DOCTRINE",
+      "title": "為什麼 DROS 刻意做得更少？",
+      "subtitle": "DROS 是一個<strong>執行治理基底 (Substrate)</strong>，而非包山包海的通用型 AI 資安平台。<br/>它的職責被刻意收斂得極為純粹：在執行邊界實施確定性授權與攔截。",
+      "principle_quote": "「基礎設施不需要聰明，需要的是穩定與可依賴。」",
+      "cards": [
+        {
+          "icon": "🎯",
+          "title": "責任邊界精確收斂",
+          "desc": "刻意僅專注於執行邊界，避免臃腫的相鄰抽象，將系統嚴格鎖定在最具權威的執行截斷點。"
+        },
+        {
+          "icon": "🛡️",
+          "title": "收斂的受信任執法表面",
+          "desc": "責任越明確，執法表面越具邊界約束，使整體系統行為更容易被推導、測試與嚴密驗證。"
+        },
+        {
+          "icon": "🔬",
+          "title": "窮舉驗證與可預測性",
+          "desc": "極簡的邊界允許 100% 確定性窮舉測試與形式化驗證，徹底告別不透明的模型機率猜測。"
+        }
+      ]
+    },
+    "three_domains": {
+      "badge": "ARCHITECTURE MODEL",
+      "title_prefix": "三大語義領域模型",
+      "title_highlight": "(The Three-Domain Model)",
+      "subtitle": "DROS 將治理明確劃分為三個不重疊的語義維度。它們是架構的解耦維度，絕非垂直堆疊的多層產品套件。",
+      "cards": [
+        {
+          "tag": "WHAT DROS KNOWS",
+          "title": "6P 治理上下文",
+          "desc": "執行決策前所必須校驗的多維信任輸入。DROS 接收並消費這些上下文，而非重複造輪子發明身分系統。",
+          "items": [
+            "Principal (主體歸屬與 Agent 身分綁定)",
+            "Privilege (任務級能力點陣圖授權)",
+            "Payload (工具白名單與參數語義邊界)",
+            "Posture, Policy & Merkle 溯源存證"
+          ],
+          "clarification": "決策上下文輸入——而非 6 個獨立軟體模組。"
+        },
+        {
+          "tag": "WHAT DROS DOES",
+          "title": "L1–L4 縱深執法路徑",
+          "desc": "沿著單一執行邊界連續展開的縱深防禦執法路徑，確保微秒級的確定性硬性截斷。",
+          "items": [
+            "L1 邊界過濾 (畸形與越界調用初篩)",
+            "L2 能力邊界 (任務點陣圖剛性約束)",
+            "L3 拓撲隔離 (目錄描述符與範疇非擴張)",
+            "L4 確定性 GuardVM (二進位 C-ABI 硬熔斷)"
+          ],
+          "clarification": "單一邊界的連續執法路徑——而非 4 套獨立安全產品。"
+        },
+        {
+          "tag": "WHAT DROS DOESN'T REPLACE",
+          "title": "既有企業技術棧",
+          "desc": "DROS 與您現有的企業資安與 AI 基礎設施無縫整合，無需推倒重來替換現有投資。",
+          "items": [
+            "IAM / IdP：Keycloak, Okta, Azure AD (身分認證源)",
+            "SIEM 稽核：Splunk, Datadog, Elastic (全域日誌中心)",
+            "Agent 框架：LangGraph, CrewAI, AutoGen (業務編排)",
+            "策略制定：OPA, 企業合規引擎 (策略制定權)"
+          ],
+          "clarification": "深度整合既有技術棧——DROS 補上最後一公尺的執行邊界。"
+        }
+      ]
+    },
+    "post_compromise": {
+      "badge": "PROBLEM DEFINITION",
+      "title_prefix": "DROS 解決的核心難題：",
+      "title_highlight": "入侵後遏制 (Post-Compromise Containment)",
+      "subtitle": "傳統資安著重於提示詞過濾或事後看日誌。一旦 Agent 認知層遭到攻陷，其執行權限絕不能依然毫無拘束。",
+      "card_title": "當思想層被挾持，執行層依然被確定性封鎖",
+      "card_desc": "在間接提示詞注入中，受害 Agent 往往持有合法的 JWT 憑證且發出語法乾淨的呼叫，外圍 WAF 看到的只是正常的請求。DROS 在實體作業系統與工具邊界建立最後一道剛性防衛，確實驗證其任務授權與參數邊界。",
+      "flow_agent": "遭攻陷之 Agent",
+      "flow_attempt": "未授權工具調用",
+      "flow_boundary": "DROS 執行治理邊界",
+      "flow_decision": "確定性物理阻斷",
+      "flow_target": "底層系統 / 工具 API"
+    },
     "terminal": {
       "cmd": "mount policy.bin",
-      "locked": "[DROS-Engine] ⚡ $O(1)$ Capability Bitmaps 策略已載入記憶體 (帶內 26.1 μs 模式)。",
-      "injected": "[DROS-Engine] 🛡️ 密碼學簽章驗證通過 (Ed25519 / DIT 憑證)。",
+      "locked": "[DROS-Engine] ⚡ 能力策略已載入記憶體 (確定性驗證模式)。",
+      "injected": "[DROS-Engine] 🛡️ 密碼學簽章驗證通過 (Ed25519 / 離線可驗證)。",
       "llm_stream": "Agent 嘗試執行呼叫：execute_payment...",
-      "fuse_blown": "🛑 物理熔斷觸發：Bitwise AND 驗證失敗。C-ABI 系統調用已被終止 (實測平均延遲: 26.1 μs / p99 = 29.8 μs)。"
+      "fuse_blown": "🛑 執行阻斷：未授權工具調用於執行邊界被確定性攔截 (Deterministic Guard Triggered)。"
     },
     "hourglass": {
       "title_prefix": "作業系統級",

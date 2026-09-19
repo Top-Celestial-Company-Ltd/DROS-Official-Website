@@ -10,7 +10,7 @@
     "trust": "Research & VEP"
   },
   "footer": {
-    "desc": "DROS is a vendor-neutral execution governance layer for agentic AI systems. It enforces AI tool execution through compile-time resolved, cryptographically signed policies executed in O(1) deterministic runtime.",
+    "desc": "DROS is a deterministic execution-governance substrate for AI agents and tool-enabled systems. Narrow in responsibility, deep in enforcement.",
     "resources": "Resources",
     "github": "GitHub Source",
     "docs": "Documentation",
@@ -24,14 +24,15 @@
     "dharma_exemption": "Dharma Exemption: 100% free for pure non-profit Buddhist propagation purposes."
   },
   "home": {
-    "meta_title": "DROS | Agentic Web Root CA & Execution Non-Repudiation Standard",
-    "meta_desc": "DROS is the Root Certificate Authority (Root CA) for the Agentic Web. Solving the Context Loss Problem by issuing signed policy.bin capability credentials to establish absolute Execution Non-Repudiation.",
+    "meta_title": "DROS | Deterministic Runtime Execution Governance Substrate",
+    "meta_desc": "DROS is a deterministic execution-governance substrate for AI agents and tool-enabled systems. Narrow in responsibility, deep in enforcement.",
     "hero": {
-      "version": "DROS Runtime Attribution Framework v7.3",
-      "title_prefix": "Agentic Web's",
-      "title_highlight": "Runtime Attribution Framework & Execution Identity",
-      "subtitle": "\"If runtime needs intelligence to enforce policy, the system is already <strong>unsafe</strong>.\"<br/>If execution safety depends on intelligence at runtime, the system is already exposed to risks.",
-      "value_prop": "As the execution-layer Missing Layer for the Agentic Web, DROS signs policy.bin capability credentials to establish non-repudiable execution authorization and immutable audit trails.",
+      "version": "DROS Execution Governance Substrate",
+      "title_prefix": "Deterministic Runtime",
+      "title_highlight": "Execution Governance for AI Agents",
+      "doctrine_title": "Narrow in responsibility. Deep in enforcement.",
+      "doctrine_subtitle": "DROS deliberately does less — so the execution boundary can do its job predictably, transparently, and verifiably.",
+      "value_prop": "An explicit, in-band enforcement boundary between an agent's decision to act and actual system execution. Even if agent cognition is hijacked, system actions remain deterministically contained.",
       "btn_github": "Read the DROS Spec",
       "btn_poc": "Start Free-Trial",
       "btn_win": "📥 Download for Windows (.exe)",
@@ -39,12 +40,92 @@
       "btn_linux": "🐧 Linux / Docker Deploy",
       "btn_spec": "Read Technical Specs"
     },
+    "deliberate_less": {
+      "badge": "POSITIONING DOCTRINE",
+      "title": "Why DROS Deliberately Does Less",
+      "subtitle": "DROS is an <strong>execution-governance substrate</strong>, not a general-purpose AI security suite or all-in-one platform.<br/>Its responsibility is deliberately narrow: deterministic authorization and interception at the execution boundary.",
+      "principle_quote": "\"Infrastructure doesn't need to be intelligent. It needs to be dependable.\"",
+      "cards": [
+        {
+          "icon": "🎯",
+          "title": "Narrower Responsibility",
+          "desc": "By deliberately focusing only on the execution boundary, DROS avoids bloated abstractions and stays strictly within its authoritative domain."
+        },
+        {
+          "icon": "🛡️",
+          "title": "Bounded Enforcement Surface",
+          "desc": "A narrower responsibility creates a more bounded enforcement surface, making behavior easier to reason about, test, and verify."
+        },
+        {
+          "icon": "🔬",
+          "title": "Exhaustive Verification",
+          "desc": "A small, explicit boundary allows 100% deterministic testing and formal analysis instead of probabilistic approximations."
+        }
+      ]
+    },
+    "three_domains": {
+      "badge": "ARCHITECTURE MODEL",
+      "title_prefix": "The Three-Domain",
+      "title_highlight": "Architecture Model",
+      "subtitle": "DROS separates governance into three distinct, non-overlapping semantic domains. They are architectural dimensions, not a multi-tier product stack.",
+      "cards": [
+        {
+          "tag": "WHAT DROS KNOWS",
+          "title": "6P Governance Context",
+          "desc": "Decision inputs and trust context evaluated prior to execution. DROS consumes, but does not reinvent, enterprise trust properties.",
+          "items": [
+            "Principal Attribution (Agent identity binding)",
+            "Privilege Authorization (Task-scoped capabilities)",
+            "Payload & Argument Semantics (Tool whitelist & bounds)",
+            "Posture, Policy & Tamper-Evident Provenance"
+          ],
+          "clarification": "Decision inputs — not 6 separate software products."
+        },
+        {
+          "tag": "WHAT DROS DOES",
+          "title": "L1–L4 Enforcement Path",
+          "desc": "A unified, defense-in-depth pipeline along a single execution boundary to ensure deterministic interception.",
+          "items": [
+            "L1: Boundary Filter (Malformed request rejection)",
+            "L2: Capability Bound (Strict task bitmap check)",
+            "L3: Topology Isolation (Resource scope confinement)",
+            "L4: Deterministic GuardVM (Binary C-ABI enforcement)"
+          ],
+          "clarification": "Continuous enforcement path — not 4 independent security engines."
+        },
+        {
+          "tag": "WHAT DROS DOESN'T REPLACE",
+          "title": "Existing Enterprise Stack",
+          "desc": "DROS integrates directly into your existing IT and AI infrastructure without rip-and-replace disruption.",
+          "items": [
+            "IAM / IdP: Keycloak, Okta, Azure AD (Identity authority)",
+            "SIEM & Telemetry: Splunk, Datadog, Elastic (Audit logging)",
+            "Agent Frameworks: LangGraph, CrewAI, AutoGen (Orchestration)",
+            "Policy Engines: OPA, Enterprise GRC (Policy authoring)"
+          ],
+          "clarification": "Integrated infrastructure — DROS adds the execution boundary."
+        }
+      ]
+    },
+    "post_compromise": {
+      "badge": "PROBLEM DEFINITION",
+      "title_prefix": "The Core Problem DROS Solves:",
+      "title_highlight": "Post-Compromise Containment",
+      "subtitle": "Traditional security inspects prompts or observes logs after the fact. When agent cognition is hijacked, execution authority must not remain unconstrained.",
+      "card_title": "Deterministic Confinement When Cognition Fails",
+      "card_desc": "In indirect prompt injection or context hijacking, the compromised agent often holds legitimate credentials and makes well-formed requests. Outer filters see clean JSON. DROS enforces physical constraints at the system execution boundary where it counts.",
+      "flow_agent": "Hijacked Agent",
+      "flow_attempt": "Unauthorized Action",
+      "flow_boundary": "DROS Execution Boundary",
+      "flow_decision": "Deterministic Block",
+      "flow_target": "System / Tool Action"
+    },
     "terminal": {
       "cmd": "mount policy.bin",
-      "locked": "[DROS-Engine] ⚡ O(1) Bitmap policy loaded in memory (Constant-time check mode).",
+      "locked": "[DROS-Engine] ⚡ Capability policy loaded in memory (Deterministic verification mode).",
       "injected": "[DROS-Engine] 🛡️ Cryptographic signature verified (Ed25519 / Offline Verifiable).",
       "llm_stream": "Agent attempting to call: execute_payment...",
-      "fuse_blown": "🛑 Physical Fusing Triggered: Bitwise AND verification failed. OS System Call terminated (Core Latency: 484.8 ns / 0.00048 ms)."
+      "fuse_blown": "🛑 Execution Blocked: Unauthorized tool invocation intercepted at execution boundary (Deterministic Guard Triggered)."
     },
     "hourglass": {
       "title_prefix": "OS-Level",

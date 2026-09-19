@@ -39,7 +39,7 @@
     },
     "architecture": {
       "title": "2. 能力網格與執行期身分 (Execution Identity)",
-      "desc": "DROS 從原本的單機架構升級為對標 Kubernetes 的<strong>零信任能力網格 (Zero-Trust Mesh)</strong>，扮演 Agentic Web 的<strong>根憑證發行機構 (Root CA)</strong>。相較於傳統僅停留在虛擬進程層級的 Workload Identity (如 SPIFFE/SPIRE)，DROS 首創提出更細粒度的 <strong>Execution Identity (執行期身分)</strong> 模型：每次 Tool Call 時，VajraAgent 會動態發放單次動態憑證 <code>policy.bin</code>，將當前執行的執行緒 (Thread) 與 Agent Role 進行密碼學綁定，以消除 Context Loss 痛點。詳細架構可參閱最新發佈的 <a href='file:///e:/vscode/AI%E7%9F%A5%E8%AD%98%E5%BA%AB/DROS%E5%95%86%E5%93%81%E5%B0%88%E6%A1%88%E6%9A%AB%E5%AD%98/%E5%95%86%E6%A5%AD%E8%88%87%E6%9E%B6%E6%A7%8B%E6%96%87%E4%BB%B6%E5%BA%AB/DROS_Agent_Trust_Infrastructure_Whitepaper.md' target='_blank' style='color:var(--accent-gold); text-decoration:underline;'>DROS Agent Trust Infrastructure Whitepaper</a>。",
+      "desc": "DROS 從原本的單機架構升級為對標 Kubernetes 的<strong>零信任能力網格 (Zero-Trust Mesh)</strong>，扮演 Agentic Web 的<strong>根憑證發行機構 (Root CA)</strong>。相較於傳統僅停留在虛擬進程層級的 Workload Identity (如 SPIFFE/SPIRE)，DROS 首創提出更細粒度的 <strong>Execution Identity (執行期身分)</strong> 模型：每次 Tool Call 時，VajraAgent 會動態發放單次動態憑證 <code>policy.bin</code>，將當前執行的執行緒 (Thread) 與 Agent Role 進行密碼學綁定，以消除 Context Loss 痛點。詳細架構可參閱最新發佈的 <a href='https://github.com/Top-Celestial-Company-Ltd/DROS-VEP-lite/blob/main/docs/whitepapers/DROS_AgenticWeb_Defense_Whitepaper_CN.md' target='_blank' style='color:var(--accent-gold); text-decoration:underline;'>DROS Agentic Web Defense Whitepaper (v2.0)</a>。",
       "key_components": "核心身分演進與能力元件結構",
       "components": [
         "<strong>身分粒度演進</strong>：由 Human Identity (終端人類) ➡️ Workload Identity (SPIFFE 應用服務級) ➡️ <strong>Execution Identity (DROS 執行期單次任務級)</strong> 的範式轉移。",

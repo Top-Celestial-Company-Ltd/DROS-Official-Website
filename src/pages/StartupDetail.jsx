@@ -36,13 +36,13 @@ export default function StartupDetail() {
         <h1 style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.5rem)', fontWeight: '800', lineHeight: '1.2', marginBottom: '1.2rem', color: '#fff' }}>
           {isZh ? 'VajraClaw+ Startup 新創團隊版' : 'VajraClaw+ Startup Edition'}
         </h1>
-        <p style={{ fontSize: '1.2rem', color: 'var(--accent-gold)', fontWeight: '600', marginBottom: '1rem' }}>
-          {isZh ? '集中式 PEP 網關 · 動態 PII 脫敏 · 短效租約治理 · 多工作站統一防線' : 'Centralized PEP Daemon · Dynamic PII Redaction · Short-Lease Governance · Unified Multi-Workstation Defense'}
+        <p style={{ fontSize: '1.25rem', color: 'var(--accent-gold)', fontWeight: '700', marginBottom: '1rem' }}>
+          {isZh ? '為既有 AI 技術棧增添確定性執行治理，無需推倒重來' : 'Add deterministic execution governance without rebuilding your AI stack.'}
         </p>
         <p style={{ fontSize: '1.05rem', color: 'var(--text-secondary)', maxWidth: '900px', lineHeight: '1.8' }}>
           {isZh
-            ? '專為 10~50 人成長型 AI 團隊打造。單台工程師工作站的 Cursor 或 Claude Code 無法防範惡意提示詞越權與機密外洩；Startup 版提供服務端集中式 PEP 守護進程與專屬視覺主控台，最高守護 3 組伺服器實例與 30 個並發 Agent。'
-            : 'Engineered for growing 10-50 member AI engineering teams. Individual developer workstations running Cursor or Claude Code cannot prevent prompt injection or data leakage. Startup Edition provides a centralized server-side PEP daemon and a dedicated visual console, securing up to 3 machine instances and 30 concurrent agents.'}
+            ? '專為 10~50 人成長型 AI 團隊打造。您現有的 Agent 框架（LangGraph、CrewAI、Claude Code、Cursor）、自定義工具與 API 均可原樣保留。DROS 專注於在其下游建立剛性的執行治理邊界（Execution Boundary），無需額外導入龐雜的 IAM、SIEM 或編排平台，讓小團隊也能以極低負擔取得 Post-Compromise 執行封鎖能力。'
+            : 'Engineered for growing 10-50 member AI engineering teams. Keep your existing agent frameworks (LangGraph, CrewAI, Claude Code, Cursor), custom tools, and APIs intact. DROS adds a bounded, deterministic execution governance gate right where actions occur—without forcing you to adopt heavy IAM, SIEM, or orchestration suites.'}
         </p>
       </section>
 
@@ -292,12 +292,12 @@ export default function StartupDetail() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
           <div className="glass-card" style={{ padding: '2rem', borderTop: '3px solid var(--accent-gold)' }}>
             <h3 style={{ fontSize: '1.25rem', color: 'var(--accent-gold)', marginBottom: '1rem' }}>
-              {isZh ? '1. 集中式 PEP 網關 (Daemon)' : '1. Centralized PEP Daemon'}
+              {isZh ? '1. Level 1 集中式 PEP 守護 (Daemon / SDK)' : '1. Level 1 Agent Server PEP (Daemon / SDK)'}
             </h3>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.7' }}>
               {isZh
-                ? '所有開發者與測試機器人的 Tool Call 統一導向本地或私有雲 Daemon，消解單機腳本各行其是的孤島漏洞，集中收斂執行咽喉。'
-                : 'All agent tool calls from developer workstations and testing bots route through a centralized server daemon, eliminating fragmented local script vulnerabilities.'}
+                ? '所有開發者工作站與測試機器人的 Tool Call 統一由本地極簡 PEP 守護進程或 In-Process SDK 攔截，確定性執行 C-ABI 門閘檢驗，收斂單機執行咽喉。'
+                : 'All agent tool calls from developer workstations and testing bots route through a lightweight deterministic PEP daemon or SDK, enforcing instant C-ABI containment.'}
             </p>
           </div>
 
@@ -325,13 +325,84 @@ export default function StartupDetail() {
 
           <div className="glass-card" style={{ padding: '2rem', borderTop: '3px solid #d2a8ff' }}>
             <h3 style={{ fontSize: '1.25rem', color: '#d2a8ff', marginBottom: '1rem' }}>
-              {isZh ? '4. 跨語言 SDK 與無縫接入' : '4. Multi-Language SDK Ready'}
+              {isZh ? '4. 三級部署適配器全標配 (Level 1~3)' : '4. All 3 Deployment Tiers Included'}
             </h3>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.7' }}>
               {isZh
-                ? '提供 Python、Node.js 與 Go 原生客戶端，只要三行代碼即可封裝 LangChain、AutoGen 或 AutoGPT，完全無須更動業務邏輯。'
-                : 'Zero-friction integration for Python, Node.js, and Go. Wrap existing LangChain or AutoGen pipelines with just three lines of code.'}
+                ? '不因初創版本而閹割安全深度！完整附帶 In-Process SDK、API Gateway PEP 與派生憑證鏈模組，初創高危險業務（如量化交易、無人機、金鑰管理）亦可自選深度執行治理。'
+                : 'Zero security compromises for startups. Includes In-Process SDKs, API Gateway PEPs, and derived capability modules—enabling high-risk startups (e.g. trading, robotics) to opt into Level 3 deep governance.'}
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 🚀 Architectural Deployment Matrix (All Tiers Included) */}
+      <section style={{ marginBottom: '5rem' }}>
+        <h2 style={{ fontSize: '1.8rem', color: '#fff', marginBottom: '1rem', textAlign: 'center' }}>
+          {isZh ? '🛠️ 自由選配：三大部署情境與配套模組 (全版本標配)' : '🛠️ 3 Deployment Tiers & Adapters (Fully Included)'}
+        </h2>
+        <p style={{ textAlign: 'center', color: 'var(--text-secondary)', fontSize: '0.95rem', maxWidth: '800px', margin: '0 auto 2.5rem auto' }}>
+          {isZh
+            ? '一個治理核心，多層執行深度。DROS 不強制您改變既有架構，依您的資產價值與風險胃納，自由決定 PEP 邊界掛載點：'
+            : 'One governance core. Multiple enforcement depths. Choose where to attach PEP boundaries based on your asset values and risk appetite:'}
+        </p>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
+          {/* Tier 1 Card */}
+          <div className="glass-card" style={{ padding: '1.8rem', border: '1px solid rgba(212, 175, 55, 0.25)', borderRadius: '12px', background: 'rgba(212, 175, 55, 0.03)' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.8rem' }}>
+              <span style={{ fontSize: '0.8rem', fontFamily: 'monospace', color: 'var(--accent-gold)', fontWeight: 'bold' }}>TIER 1 · BORDER</span>
+              <span style={{ fontSize: '0.75rem', background: 'rgba(39, 201, 63, 0.15)', color: '#27c93f', padding: '2px 8px', borderRadius: '4px' }}>幾分鐘即時上手</span>
+            </div>
+            <h4 style={{ fontSize: '1.15rem', color: '#fff', marginBottom: '0.6rem' }}>
+              {isZh ? '🟢 Level 1：Agent Server 邊界' : '🟢 Level 1: Agent Server PEP'}
+            </h4>
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '1rem' }}>
+              {isZh
+                ? '以 In-Process SDK（Python / Go）或 Local Daemon 攔截 Agent 的 Tool Call 直接發起點。零修改既有網路，防範本機檔案越權與 Key 外洩。'
+                : 'Intercepts tool calls at the agent runtime via SDK or local daemon. Zero network re-configuration required.'}
+            </p>
+            <div style={{ fontSize: '0.78rem', color: '#94a3b8', borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '0.8rem' }}>
+              <strong>配套軟體：</strong> `dros-python-sdk`, `vajra-local-daemon`, C-ABI binaries
+            </div>
+          </div>
+
+          {/* Tier 2 Card */}
+          <div className="glass-card" style={{ padding: '1.8rem', border: '1px solid rgba(56, 189, 248, 0.25)', borderRadius: '12px', background: 'rgba(56, 189, 248, 0.03)' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.8rem' }}>
+              <span style={{ fontSize: '0.8rem', fontFamily: 'monospace', color: 'var(--accent-blue)', fontWeight: 'bold' }}>TIER 2 · GATEWAY</span>
+              <span style={{ fontSize: '0.75rem', background: 'rgba(56, 189, 248, 0.15)', color: 'var(--accent-blue)', padding: '2px 8px', borderRadius: '4px' }}>免動業務邏輯</span>
+            </div>
+            <h4 style={{ fontSize: '1.15rem', color: '#fff', marginBottom: '0.6rem' }}>
+              {isZh ? '🔵 Level 2：API Gateway 邊界' : '🔵 Level 2: API Gateway PEP'}
+            </h4>
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '1rem' }}>
+              {isZh
+                ? '在既有 API Gateway（Envoy / Nginx / 反向代理）前置 PEP Filter。Agent 必須在 HTTP Header 帶有合法簽章之 Capability Token 方可存取 ERP/CRM。'
+                : 'Embeds a PEP filter into existing API Gateways (Envoy/Nginx/Reverse Proxy). Agents must present signed tokens to access internal APIs.'}
+            </p>
+            <div style={{ fontSize: '0.78rem', color: '#94a3b8', borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '0.8rem' }}>
+              <strong>配套軟體：</strong> `dros-envoy-filter`, `dros-proxy-sidecar`, Docker Gateway
+            </div>
+          </div>
+
+          {/* Tier 3 Card */}
+          <div className="glass-card" style={{ padding: '1.8rem', border: '1px solid rgba(168, 85, 247, 0.25)', borderRadius: '12px', background: 'rgba(168, 85, 247, 0.03)' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.8rem' }}>
+              <span style={{ fontSize: '0.8rem', fontFamily: 'monospace', color: '#c084fc', fontWeight: 'bold' }}>TIER 3 · DEEP</span>
+              <span style={{ fontSize: '0.75rem', background: 'rgba(168, 85, 247, 0.15)', color: '#c084fc', padding: '2px 8px', borderRadius: '4px' }}>防混淆代理人</span>
+            </div>
+            <h4 style={{ fontSize: '1.15rem', color: '#fff', marginBottom: '0.6rem' }}>
+              {isZh ? '🟣 Level 3：Worker / 派生執行邊界' : '🟣 Level 3: Deep Execution & Delegation'}
+            </h4>
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '1rem' }}>
+              {isZh
+                ? '針對核心 DB、非同步 Worker 與 Physical AI 實施派生憑證單調縮減（Scope 只能限縮不能放大），徹底杜絕混淆代理人 (Confused Deputy)。'
+                : 'Enforces monotonic scope shrinkage on derived tokens across background workers and database proxies, terminating Confused Deputy escalation.'}
+            </p>
+            <div style={{ fontSize: '0.78rem', color: '#94a3b8', borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '0.8rem' }}>
+              <strong>配套軟體：</strong> `dros-worker-adapter`, `dros-db-guard`, Capability Delegate Mint
+            </div>
           </div>
         </div>
       </section>
@@ -358,7 +429,7 @@ export default function StartupDetail() {
               </tr>
               <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
                 <td style={{ padding: '1.2rem', color: 'var(--text-secondary)' }}>{isZh ? '支援部署架構' : 'Deployment Targets'}</td>
-                <td style={{ padding: '1.2rem', color: '#fff' }}>Docker, Docker Compose, Linux VM (Ubuntu/Debian), Windows WSL2</td>
+                <td style={{ padding: '1.2rem', color: '#fff' }}>Level 1~3 全系支援 (In-Process SDK, Envoy/Reverse Proxy Gateway, Worker Adapter, Docker, Linux VM, WSL2)</td>
               </tr>
               <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
                 <td style={{ padding: '1.2rem', color: 'var(--text-secondary)' }}>{isZh ? '審計溯源模式' : 'Audit Trail'}</td>

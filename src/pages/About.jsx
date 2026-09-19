@@ -6,8 +6,8 @@ export default function About() {
   
   const isZh = i18n.language === 'zh-TW';
   const whitepaperLink = isZh
-    ? '/docs/DROS_Runtime_Attribution_Framework_ZH.pdf'
-    : '/docs/DROS_Runtime_Attribution_Framework_EN.pdf';
+    ? 'https://github.com/Top-Celestial-Company-Ltd/DROS-VEP-lite/blob/main/docs/whitepapers/DROS_AgenticWeb_Defense_Whitepaper_CN.md'
+    : 'https://github.com/Top-Celestial-Company-Ltd/DROS-VEP-lite/blob/main/docs/whitepapers/DROS_AgenticWeb_Defense_Whitepaper_EN.md';
 
   return (
     <main className="container" style={{paddingTop: '4rem', paddingBottom: '6rem'}}>

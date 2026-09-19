@@ -2,16 +2,16 @@
   "meta_title": "DROS Pricing - Commercial Licenses",
   "meta_desc": "DROS Commercial Licenses. From the Free-Trial for indie developers to the Cryptographic Audit solutions for Fortune 500 enterprises. Secure your Agentic AI infrastructure.",
   "badge": "Commercial License",
-  "title": "DROS <span class='gold-text'>Ecosystem Pricing</span>",
-  "subtitle": "Eradicate hallucinations and injection attacks at the root. Upgrade your Enterprise AI infrastructure to an OS-level execution governance standard.",
+  "title": "Deterministic Execution Governance <span class='gold-text'>Pricing & Plans</span>",
+  "subtitle": "Add deterministic execution governance without rebuilding your AI stack. The same core enforcement engine across all tiers — tailored to your deployment scale.",
   "early_adopter": "<strong style='color: var(--accent-gold)'>Early Adopter Pricing:</strong> We are currently in the V3 rollout phase. Enterprise licenses will increase to <strong>$15,000/yr</strong> in Q4 2026. Lock in your license before the price hike!",
   "tiers": {
     "hacker": {
-      "name": "VajraClaw Hacker <br/><span style='font-size: 1.2rem; color: #10b981'>Community (Free for Personal / Non-Commercial)</span>",
+      "name": "VajraClaw Community <br/><span style='font-size: 1.2rem; color: #10b981'>Personal (Free for Non-Commercial)</span>",
       "price_yearly": "$0",
       "price_unit": " Free Forever",
-      "price_monthly": "Personal / Non-Commercial Free License",
-      "desc": "Enforces a unified execution governance boundary for local multi-agent workstations. 100% Free for personal and research use.",
+      "price_monthly": "Protect your AI agent's actions — 100% Free",
+      "desc": "Protect your AI agent's actions for free. Enforces an explicit execution boundary for local developer workstations and research environments.",
       "features": [
         "1 Machine UUID Binding",
         "Max 5 Concurrent Agents",
@@ -20,7 +20,7 @@
         "Universal Docker Gateway & Community Support"
       ],
       "details_title": "View Technical Specs",
-      "details_content": "<p><strong>Target Audience</strong>: A deterministic runtime security shield designed for solo developers, hackers, and researchers building local multi-agent workstations.<br/><strong>Core Mechanisms:</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>🛡️ 100% Free for Personal & Non-Commercial Use (Commercial License Required for Business)</strong>: No credit card, no license server required. Bootstraps locally.</li><li><strong>🤖 5 Concurrent Agents</strong>: Protects DSH, AGY, Codex, Claude Code, Cursor, and OpenClaw simultaneously.</li><li><strong>⚡ O(1) Constant-Time Kernel</strong>: Sub-microsecond (<1μs) bitmap circuit breaking against unauthorized tool calls.</li><li><strong>🪪 RFC-010 Open Passport</strong>: Native W3C did:key cryptographic identity issued locally.</li><li><strong>🐙 Community Maintained</strong>: Maintained by Top-Celestial developer community.</li></ul>",
+      "details_content": "<p><strong>Deployment Context</strong>: An explicit in-band execution boundary for solo developers, hackers, and researchers running local multi-agent workstations.<br/><strong>Core Mechanisms:</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>🛡️ Free for Personal & Non-Commercial Use</strong>: No credit card or license server required. Runs locally at your tool execution boundary.</li><li><strong>🤖 5 Concurrent Agents</strong>: Protects DSH, AGY, Codex, Claude Code, Cursor, and OpenClaw simultaneously.</li><li><strong>⚡ O(1) Constant-Time Kernel</strong>: Sub-microsecond (<1μs) bitmap circuit breaking against unauthorized tool calls.</li><li><strong>🪪 RFC-010 Open Passport</strong>: Native W3C did:key cryptographic identity issued locally.</li><li><strong>🐙 Community Maintained</strong>: Maintained by Top-Celestial developer community.</li></ul>",
       "btn": "Get Community License (Free)",
       "btn_win": "📥 Download for Windows (.exe)",
       "btn_linux": "🐧 Linux / Docker Deploy"
@@ -29,33 +29,33 @@
       "badge": "RECOMMENDED",
       "name": "VajraClaw+ Startup <br/><span style='font-size: 1.2rem; color: var(--accent-gold)'>Core Engine</span>",
       "price_yearly": "$2,990",
-      "desc": "Perfectly tailored for SMB AI teams and internal microservice deployments.",
+      "desc": "Add deterministic execution governance without rebuilding your AI stack. Keep your existing agents, MCP servers, and tool integrations.",
       "features": [
-        "Max 3 Machine UUIDs",
-        "10 Concurrent Agents per Machine",
+        "Max 3 Machine UUIDs (Dev / Staging / Prod)",
+        "10 Concurrent Agents per Machine (30 Total)",
         "Native Python / Go SDK",
         "Priority updates & Email support"
       ],
       "details_title": "View Technical Specs",
-      "details_content": "<p><strong>🔐 Core Upgrade: Level 2 Information Flow Control (IFC) — Startup Exclusive</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>Dynamic Data Tainting</strong>: Physically binds <code>PII_CONFIDENTIAL</code> and other sensitive labels to specific secure channels, blocking all unauthorized data flows at the OS level.</li><li><strong>🚨 Cross-Channel Semantic Exfiltration Blocking (POL-0021)</strong>: 100% physical circuit-breaking against attackers who manipulate Agents into leaking PII via Telegram / Discord / Email. This defense does NOT exist in Hacker tier.</li><li><strong>Compile-time Intelligence</strong>: Resolves complex regex and permission inheritance chains at compile time.</li><li><strong>Cross-Language SDK (Zero-Code)</strong>: Python <code>vajraclaw</code> module for 1-line integration with LangChain / AutoGen.</li><li><strong>3 Machine UUIDs</strong>: Supports isolated Dev / Staging / Production deployments — 30 total Concurrent Agents.</li></ul>",
+      "details_content": "<p><strong>Deployment Context</strong>: Add deterministic execution containment to existing microservices and team agent stacks without adopting heavy enterprise suites.<br/><strong>Core Capabilities:</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>Level 2 Information Flow Control (IFC)</strong>: Physically binds <code>PII_CONFIDENTIAL</code> and sensitive labels to specific secure channels, blocking unauthorized data flows at the execution boundary.</li><li><strong>🚨 Semantic Exfiltration Interception (POL-0021)</strong>: In-band circuit breaking against attackers manipulating agents into leaking PII via webhooks, email, or chat tools.</li><li><strong>Compile-time Policy Compilation</strong>: Resolves permission inheritance chains at compile time for deterministic runtime evaluation.</li><li><strong>Cross-Language SDK</strong>: Python <code>vajraclaw</code> module for 1-line integration with LangChain, AutoGen, and custom agent runtimes.</li><li><strong>3 Machine UUIDs</strong>: Multi-environment support for isolated Dev, Staging, and Production deployments.</li></ul>",
       "btn": "Secure Startup License"
     },
     "enterprise": {
       "name": "VajraAgent Enterprise <br/><span style='font-size: 1.2rem; color: #ff4d4f'>Zero-Trust Mesh</span>",
       "price_yearly": "$29,990",
-      "desc": "Built for high-concurrency large organizations. When scaling up to 450 concurrent Agents, you need an enterprise-grade control mesh and cryptographic protection for centralized management.",
+      "desc": "A bounded enforcement boundary for enterprise AI and agent execution. Integrates seamlessly with your existing IAM, SIEM, and orchestration platforms.",
       "features": [
         "Max 15 Machine UUIDs",
-        "30 Concurrent Agents per Machine",
-        "VajraAgent Mesh OTA Central Deployment",
-        "Centralized Visual Command Center Dashboard",
+        "30 Concurrent Agents per Machine (450 Total)",
+        "VajraAgent Mesh Central Policy Deployment",
+        "Centralized Observability & Telemetry Dashboard",
         "100% On-Premise / Air-Gapped Datacenters",
         "Kubernetes Helm & Ansible Support",
         "Standalone Fail-Closed Safe Degraded Defense",
         "Sealed Binary Policy (Anti-tamper) & Cryptographic Audit"
       ],
       "details_title": "View Technical Specs",
-      "details_content": "<p><strong>Target Audience</strong>: Enterprise-grade centralized control mesh and cryptographic protection designed for high-concurrency multi-agent environments.<br/><strong>Core Mechanisms:</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>VajraAgent Mesh</strong>: Unified OTA security policy updates seamlessly deployed across hundreds of AI Employees.</li><li><strong>Robust Security Shield</strong>: Sealed Binary Policy and Cryptographic Audit Trace to eliminate any threat of internal/external policy tampering.</li><li><strong>Enterprise Scale</strong>: Supports fully air-gapped private cloud deployments, Kubernetes Helm & Ansible automation, and autonomous fail-closed safe degradation.</li></ul>",
+      "details_content": "<p><strong>Deployment Context</strong>: Centralized governance with distributed enforcement. Integrates with existing enterprise infrastructure without displacing identity, policy authoring, or SIEM tools.<br/><strong>Core Capabilities:</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>VajraAgent Mesh</strong>: Centralized policy distribution across multi-node agent clusters with local autonomous enforcement.</li><li><strong>Tamper-Proof Verification</strong>: Sealed Binary Policy and Cryptographic Audit Trace (SHA-256 Merkle Chain) for non-repudiation.</li><li><strong>Enterprise Operational Scale</strong>: Fully air-gapped private cloud support, Kubernetes Helm & Ansible automation, and autonomous fail-closed degradation.</li></ul>",
       "btn": "Contact Sales"
     },
     "mobile_sdk": {
@@ -197,13 +197,13 @@
     ]
   },
   "cta": {
-    "title": "Upgrade to <span class='gold-text'>OS-Level Security.</span>",
-    "subtitle": "SECURE your Agentic Infrastructure.",
+    "title": "Add a <span class='gold-text'>Bounded Execution Boundary.</span>",
+    "subtitle": "Deterministic execution containment for your AI agent infrastructure.",
     "btn": "Contact Sales Team"
   },
   "positioning": {
-    "title": "Technology Positioning: Where DROS Fits in the Security Stack",
-    "subtitle": "DROS is not a replacement for existing security tools — it is a new category: AI Agent Runtime Governance. The table below clarifies each technology's defense layer and capability scope for accurate selection and Defense-in-Depth deployment.",
+    "title": "Technology Positioning: Where DROS Fits in Your Security Stack",
+    "subtitle": "DROS is an execution-governance substrate — deliberately narrow in responsibility and deep in enforcement. It does not replace IAM, SIEM, or orchestration; it adds the missing in-band execution boundary.",
     "col_dimension": "Capability Dimension",
     "col_conf_vm": "Intel TDX / Confidential VM",
     "col_clean_room": "Data Clean Room",

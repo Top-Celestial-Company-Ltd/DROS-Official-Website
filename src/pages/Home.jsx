@@ -35,24 +35,34 @@ export default function Home() {
         <div className="hero-bg-circle-1" style={{ position: 'absolute', top: '20%', left: '50%', transform: 'translate(-50%, -50%)', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(212,175,55,0.15) 0%, rgba(0,0,0,0) 70%)', zIndex: -1, filter: 'blur(40px)' }}></div>
         <div className="hero-bg-circle-2" style={{ position: 'absolute', bottom: '10%', right: '10%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(0,240,255,0.1) 0%, rgba(0,0,0,0) 70%)', zIndex: -1, filter: 'blur(40px)' }}></div>
 
-        <div style={{ textAlign: 'center', maxWidth: '900px', zIndex: 1, animation: 'fadeUp 1s ease forwards' }}>
-          <span style={{ display: 'inline-block', padding: '0.4rem 1.2rem', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '30px', fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '2rem', letterSpacing: '1px' }}>
+        <div style={{ textAlign: 'center', maxWidth: '960px', zIndex: 1, animation: 'fadeUp 1s ease forwards' }}>
+          <span style={{ display: 'inline-block', padding: '0.4rem 1.2rem', background: 'rgba(212,175,55,0.08)', border: '1px solid rgba(212,175,55,0.25)', borderRadius: '30px', fontSize: '0.85rem', color: 'var(--accent-gold)', marginBottom: '1.5rem', letterSpacing: '1px', fontWeight: '600' }}>
             {t('home.hero.version')}
           </span>
           
-          <h1 style={{ fontSize: 'clamp(3rem, 6vw, 5rem)', fontWeight: '800', lineHeight: '1.1', marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
+          <h1 style={{ fontSize: 'clamp(2.8rem, 5.5vw, 4.5rem)', fontWeight: '800', lineHeight: '1.15', marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
             {t('home.hero.title_prefix')}<br/>
-            <span style={{ background: 'linear-gradient(135deg, #d4af37, #fff, #d4af37)', backgroundSize: '200% auto', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'shine 5s linear infinite' }}>{t('home.hero.title_highlight')}</span>
+            <span style={{ background: 'linear-gradient(135deg, #d4af37, #fff, #00f2fe)', backgroundSize: '200% auto', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'shine 5s linear infinite' }}>
+              {t('home.hero.title_highlight')}
+            </span>
           </h1>
 
-          <p style={{ fontSize: 'clamp(1.1rem, 2vw, 1.3rem)', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '1.5rem', maxWidth: '700px', margin: '0 auto 1.5rem' }} dangerouslySetInnerHTML={{ __html: t('home.hero.subtitle') }}></p>
+          {/* Positioning Doctrine Quote */}
+          <div style={{ padding: '1rem 1.5rem', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', maxWidth: '800px', margin: '0 auto 1.5rem auto' }}>
+            <p style={{ fontSize: '1.15rem', color: '#fff', fontWeight: '700', marginBottom: '0.4rem' }}>
+              {t('home.hero.doctrine_title')}
+            </p>
+            <p style={{ fontSize: '0.98rem', color: 'var(--text-secondary)', margin: 0, lineHeight: '1.6' }}>
+              {t('home.hero.doctrine_subtitle')}
+            </p>
+          </div>
 
-          <p style={{ fontSize: '1.1rem', color: 'var(--accent-blue)', marginBottom: '3rem', fontWeight: '600' }}>
+          <p style={{ fontSize: '1.1rem', color: 'var(--accent-blue)', marginBottom: '2.5rem', fontWeight: '600', maxWidth: '780px', margin: '0 auto 2.5rem auto', lineHeight: '1.6' }}>
             {t('home.hero.value_prop')}
           </p>
 
-          {/* Dual-Track Download Action Bar */}
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', marginTop: '1rem' }}>
+          {/* Dual-Track Action Bar */}
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', marginTop: '0.5rem' }}>
             <div style={{ display: 'flex', gap: '1.2rem', justifyContent: 'center', flexWrap: 'wrap', width: '100%', maxWidth: '750px' }}>
               {/* Windows Direct Download Button */}
               <a 
@@ -121,17 +131,17 @@ export default function Home() {
         </div>
 
         {/* Terminal & Flow Visualization */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2.5rem', width: '100%', maxWidth: '1200px', marginTop: '5rem', zIndex: 1, animation: 'fadeUp 1.2s ease forwards', opacity: 0 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2.5rem', width: '100%', maxWidth: '1200px', marginTop: '4rem', zIndex: 1, animation: 'fadeUp 1.2s ease forwards', opacity: 0 }}>
           {/* Terminal Code Mockup */}
           <div style={{ background: '#0d0d12', border: '1px solid rgba(212, 175, 55, 0.2)', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.6), 0 0 20px rgba(212, 175, 55, 0.05)', display: 'flex', flexDirection: 'column' }}>
             <div style={{ display: 'flex', gap: '8px', padding: '1rem', background: 'rgba(255,255,255,0.02)', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
               <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ff5f56' }}></div>
               <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ffbd2e' }}></div>
               <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#27c93f' }}></div>
-              <div style={{ marginLeft: '1rem', fontSize: '0.8rem', color: 'var(--text-secondary)', fontFamily: 'monospace' }}>vajra-terminal (v1.0.0)</div>
+              <div style={{ marginLeft: '1rem', fontSize: '0.8rem', color: 'var(--text-secondary)', fontFamily: 'monospace' }}>vajra-guard (v1.0.0)</div>
             </div>
             <div style={{ padding: '1.5rem', fontFamily: 'JetBrains Mono, monospace', fontSize: '0.9rem', lineHeight: '1.7', textAlign: 'left', flex: 1 }}>
-              <div><span style={{ color: '#8b949e' }}>$</span> <span style={{ color: 'var(--accent-gold)' }}>dros-cli</span> <span style={{ color: '#a5d6ff' }}>mount</span> vajra_claw.dll</div>
+              <div><span style={{ color: '#8b949e' }}>$</span> <span style={{ color: 'var(--accent-gold)' }}>dros-cli</span> <span style={{ color: '#a5d6ff' }}>mount</span> policy.bin</div>
               <div style={{ color: 'var(--accent-blue)', marginTop: '0.5rem' }}>{t('home.terminal.locked')}</div>
               <div style={{ color: 'var(--accent-blue)' }}>{t('home.terminal.injected')}</div>
               <div style={{ color: 'var(--text-secondary)', marginTop: '1rem' }}>{t('home.terminal.llm_stream')}</div>
@@ -143,109 +153,133 @@ export default function Home() {
 
           {/* Visual Flow Animation */}
           <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', background: 'rgba(20,20,30,0.4)', borderColor: 'rgba(255,255,255,0.08)', boxShadow: '0 20px 40px rgba(0,0,0,0.5)' }}>
-            <img src={flowAnimation} alt="DROS Zero-Trust Flow Animation" style={{ width: '100%', height: 'auto', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)', backgroundColor: '#0d0d12' }} />
+            <img src={flowAnimation} alt="DROS Execution Boundary Flow Animation" style={{ width: '100%', height: 'auto', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)', backgroundColor: '#0d0d12' }} />
             <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '1rem', fontFamily: 'monospace', letterSpacing: '0.5px' }}>
-              ℹ️ {isZh ? '圖-1：DROS 零信任執行期攔截流程' : 'fig-1: DROS Zero-Trust Runtime Interception Flow'}
+              ℹ️ {isZh ? '圖-1：DROS 執行邊界確定性治理流程' : 'fig-1: DROS Execution Boundary Governance Flow'}
             </span>
           </div>
         </div>
       </section>
 
-      {/* The Ultimate Bottleneck (Hourglass Theory) */}
-      <section className="container">
-        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{t('home.hourglass.title_prefix')}<span className="gold-text">{t('home.hourglass.title_highlight')}</span></h2>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto' }}>{t('home.hourglass.subtitle')}</p>
-        </div>
-
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem', maxWidth: '900px', margin: '0 auto', position: 'relative' }}>
-          {/* Vertical Connecting Line */}
-          <div style={{ position: 'absolute', left: '50%', top: '0', bottom: '0', width: '2px', background: 'linear-gradient(to bottom, rgba(212,175,55,0.1), rgba(0,240,255,0.5), rgba(255,77,79,0.3))', transform: 'translateX(-50%)', zIndex: 0 }}></div>
-          
-          <div className="glass-card" style={{ zIndex: 1, borderTop: '2px solid rgba(212,175,55,0.5)', background: 'rgba(212,175,55,0.03)', textAlign: 'center', padding: '2rem' }}>
-            <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', color: 'var(--accent-gold)' }}>{t('home.hourglass.layer1_title')}</h3>
-            <p style={{ color: 'var(--text-secondary)' }}>{t('home.hourglass.layer1_desc')}</p>
-          </div>
-          
-          <div className="glass-card" style={{ zIndex: 1, borderTop: '2px solid rgba(0,240,255,0.5)', background: 'rgba(0,240,255,0.03)', textAlign: 'center', padding: '2rem', width: '80%', margin: '0 auto' }}>
-            <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', color: 'var(--accent-blue)' }}>{t('home.hourglass.layer2_title')}</h3>
-            <p style={{ color: 'var(--text-secondary)' }}>{t('home.hourglass.layer2_desc')}</p>
-          </div>
-          
-          <div className="glass-card" style={{ zIndex: 1, borderTop: '2px solid #ff4d4f', background: 'rgba(255,77,79,0.03)', textAlign: 'center', padding: '2rem', width: '60%', margin: '0 auto' }}>
-            <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', color: '#ff4d4f' }}>{t('home.hourglass.layer3_title')}</h3>
-            <p style={{ color: 'var(--text-secondary)' }}>{t('home.hourglass.layer3_desc')}</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Operating System Paradigm Shift (POSIX vs DROS) */}
+      {/* 🏛️ Section 1: Why DROS Deliberately Does Less */}
       <section className="container">
         <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
           <span style={{ display: 'inline-block', padding: '0.4rem 1.2rem', background: 'rgba(212,175,55,0.08)', border: '1px solid rgba(212,175,55,0.25)', borderRadius: '30px', fontSize: '0.85rem', color: 'var(--accent-gold)', marginBottom: '1.2rem', letterSpacing: '2px', fontFamily: 'monospace', fontWeight: '600' }}>
-            {t('home.paradigm_shift.badge')}
+            {t('home.deliberate_less.badge')}
           </span>
           <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: '800', lineHeight: '1.25', marginBottom: '1.2rem' }}>
-            {t('home.paradigm_shift.title_prefix')}
-            <span style={{ background: 'linear-gradient(135deg, #d4af37, #fff, #d4af37)', backgroundSize: '200% auto', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-              {t('home.paradigm_shift.title_highlight')}
-            </span>
+            {t('home.deliberate_less.title')}
+          </h2>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '1.15rem', maxWidth: '850px', margin: '0 auto 1.5rem auto', lineHeight: '1.7' }} dangerouslySetInnerHTML={{ __html: t('home.deliberate_less.subtitle') }}></p>
+          <div style={{ display: 'inline-block', padding: '0.6rem 1.4rem', background: 'rgba(0, 240, 255, 0.05)', border: '1px solid rgba(0, 240, 255, 0.2)', borderRadius: '8px', color: 'var(--accent-blue)', fontStyle: 'italic', fontWeight: '600', fontSize: '1.05rem' }}>
+            {t('home.deliberate_less.principle_quote')}
+          </div>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', maxWidth: '1100px', margin: '0 auto' }}>
+          {t('home.deliberate_less.cards', { returnObjects: true }).map((card, idx) => (
+            <div key={idx} className="glass-card" style={{ padding: '2rem', display: 'flex', flexDirection: 'column', borderTop: idx === 0 ? '3px solid var(--accent-gold)' : idx === 1 ? '3px solid var(--accent-blue)' : '3px solid #27c93f' }}>
+              <div style={{ fontSize: '2.2rem', marginBottom: '1rem' }}>{card.icon}</div>
+              <h3 style={{ fontSize: '1.35rem', color: '#fff', marginBottom: '0.8rem', fontWeight: '700' }}>{card.title}</h3>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.98rem', lineHeight: '1.7', margin: 0 }}>{card.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 🏛️ Section 2: The Three-Domain Model (Horizontal Semantic Domains) */}
+      <section className="container">
+        <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+          <span style={{ display: 'inline-block', padding: '0.4rem 1.2rem', background: 'rgba(0,240,255,0.08)', border: '1px solid rgba(0,240,255,0.25)', borderRadius: '30px', fontSize: '0.85rem', color: 'var(--accent-blue)', marginBottom: '1.2rem', letterSpacing: '2px', fontFamily: 'monospace', fontWeight: '600' }}>
+            {t('home.three_domains.badge')}
+          </span>
+          <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: '800', lineHeight: '1.25', marginBottom: '1.2rem' }}>
+            {t('home.three_domains.title_prefix')} <span className="gold-text">{t('home.three_domains.title_highlight')}</span>
           </h2>
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.15rem', maxWidth: '850px', margin: '0 auto', lineHeight: '1.7' }}>
-            {t('home.paradigm_shift.subtitle')}
+            {t('home.three_domains.subtitle')}
           </p>
         </div>
 
-        <div style={{ overflowX: 'auto', background: 'rgba(12, 13, 18, 0.75)', backdropFilter: 'blur(16px)', borderRadius: '16px', border: '1px solid rgba(212, 175, 55, 0.2)', boxShadow: '0 20px 50px rgba(0,0,0,0.5), 0 0 30px rgba(212,175,55,0.03)' }}>
-          <table style={{ width: '100%', minWidth: '850px', borderCollapse: 'collapse' }}>
-            <thead>
-              <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.02)' }}>
-                <th style={{ padding: '1.4rem 1.6rem', textAlign: 'left', color: 'var(--text-secondary)', fontWeight: '600', fontSize: '0.95rem', letterSpacing: '0.5px' }}>
-                  {t('home.paradigm_shift.headers.posix')}
-                </th>
-                <th style={{ padding: '1.4rem 1.6rem', textAlign: 'left', color: 'var(--accent-gold)', fontWeight: '700', fontSize: '1.05rem', background: 'rgba(212,175,55,0.06)', borderLeft: '1px solid rgba(212,175,55,0.15)', borderRight: '1px solid rgba(212,175,55,0.15)' }}>
-                  {t('home.paradigm_shift.headers.dros')}
-                </th>
-                <th style={{ padding: '1.4rem 1.6rem', textAlign: 'left', color: 'var(--accent-blue)', fontWeight: '600', fontSize: '0.95rem', letterSpacing: '0.5px' }}>
-                  {t('home.paradigm_shift.headers.governance')}
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {t('home.paradigm_shift.rows', { returnObjects: true }).map((row, idx) => (
-                <tr key={idx} style={{ borderBottom: idx !== 4 ? '1px solid rgba(255,255,255,0.04)' : 'none', transition: 'background 0.2s' }}>
-                  <td style={{ padding: '1.4rem 1.6rem', fontWeight: '600', color: 'var(--text-primary)', fontFamily: 'JetBrains Mono, monospace', fontSize: '0.95rem' }}>
-                    {row.posix}
-                  </td>
-                  <td style={{ padding: '1.4rem 1.6rem', color: '#fff', fontWeight: '600', background: 'rgba(212,175,55,0.02)', borderLeft: '1px solid rgba(212,175,55,0.1)', borderRight: '1px solid rgba(212,175,55,0.1)' }}>
-                    <span style={{ color: 'var(--accent-gold)' }}>{row.dros}</span>
-                  </td>
-                  <td style={{ padding: '1.4rem 1.6rem', color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6' }}>
-                    {row.governance}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        {/* 3 Parallel Domain Cards */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
+          {t('home.three_domains.cards', { returnObjects: true }).map((c, i) => {
+            const cardTheme = i === 0 
+              ? { border: 'rgba(212,175,55,0.3)', tagBg: 'rgba(212,175,55,0.1)', tagColor: 'var(--accent-gold)' }
+              : i === 1 
+                ? { border: 'rgba(0,240,255,0.3)', tagBg: 'rgba(0,240,255,0.1)', tagColor: 'var(--accent-blue)' }
+                : { border: 'rgba(39,201,63,0.3)', tagBg: 'rgba(39,201,63,0.1)', tagColor: '#27c93f' };
+
+            return (
+              <div key={i} className="glass-card" style={{ padding: '2.2rem', border: `1px solid ${cardTheme.border}`, display: 'flex', flexDirection: 'column', position: 'relative', borderRadius: '16px' }}>
+                <span style={{ display: 'inline-block', alignSelf: 'flex-start', padding: '0.3rem 0.8rem', background: cardTheme.tagBg, color: cardTheme.tagColor, borderRadius: '6px', fontSize: '0.75rem', fontFamily: 'monospace', fontWeight: '700', letterSpacing: '1px', marginBottom: '1rem' }}>
+                  {c.tag}
+                </span>
+                <h3 style={{ fontSize: '1.45rem', color: '#fff', marginBottom: '0.8rem', fontWeight: '700' }}>{c.title}</h3>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '1.5rem', minHeight: '48px' }}>{c.desc}</p>
+                
+                <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '1.2rem', display: 'flex', flexDirection: 'column', gap: '0.8rem', flex: 1 }}>
+                  {c.items.map((it, itemIdx) => (
+                    <div key={itemIdx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem' }}>
+                      <span style={{ color: cardTheme.tagColor, fontSize: '0.9rem', marginTop: '0.1rem' }}>•</span>
+                      <span style={{ color: 'var(--text-primary)', fontSize: '0.9rem', lineHeight: '1.5' }}>{it}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div style={{ marginTop: '1.5rem', paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.06)', fontSize: '0.8rem', color: cardTheme.tagColor, fontFamily: 'monospace', fontWeight: '600' }}>
+                  ℹ️ {c.clarification}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* 🎯 Section 3: Post-Compromise Containment */}
+      <section className="container">
+        <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+          <span style={{ display: 'inline-block', padding: '0.4rem 1.2rem', background: 'rgba(255,77,79,0.08)', border: '1px solid rgba(255,77,79,0.25)', borderRadius: '30px', fontSize: '0.85rem', color: '#ff4d4f', marginBottom: '1.2rem', letterSpacing: '2px', fontFamily: 'monospace', fontWeight: '600' }}>
+            {t('home.post_compromise.badge')}
+          </span>
+          <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: '800', lineHeight: '1.25', marginBottom: '1.2rem' }}>
+            {t('home.post_compromise.title_prefix')} <span style={{ color: '#ff4d4f' }}>{t('home.post_compromise.title_highlight')}</span>
+          </h2>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '1.15rem', maxWidth: '850px', margin: '0 auto', lineHeight: '1.7' }}>
+            {t('home.post_compromise.subtitle')}
+          </p>
         </div>
 
-        {/* POSIX Analogy Callout Note */}
-        <div style={{
-          marginTop: '1.8rem',
-          padding: '1.4rem 1.8rem',
-          background: 'rgba(212, 175, 55, 0.03)',
-          borderRadius: '12px',
-          border: '1px solid rgba(212, 175, 55, 0.15)',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '0.6rem'
-        }}>
-          <p style={{ margin: 0, color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.7' }}>
-            <strong style={{ color: 'var(--accent-gold)' }}>💡 {t('home.paradigm_shift.posix_analogy_desc')}</strong>
+        <div className="glass-card" style={{ maxWidth: '1000px', margin: '0 auto', padding: '2.5rem', border: '1px solid rgba(255,77,79,0.2)', background: 'linear-gradient(180deg, rgba(255,77,79,0.03) 0%, rgba(10,12,18,0.7) 100%)', borderRadius: '18px' }}>
+          <h3 style={{ fontSize: '1.4rem', color: '#fff', marginBottom: '1rem', fontWeight: '700' }}>
+            {t('home.post_compromise.card_title')}
+          </h3>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '1.02rem', lineHeight: '1.7', marginBottom: '2rem' }}>
+            {t('home.post_compromise.card_desc')}
           </p>
-          <p style={{ margin: 0, color: '#8b949e', fontSize: '0.85rem', lineHeight: '1.6', fontStyle: 'italic' }}>
-            🛡️ {t('home.paradigm_shift.posix_disclaimer_note')}
-          </p>
+
+          {/* Visual Sequence Pipeline */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.8rem', flexWrap: 'wrap', background: 'rgba(0,0,0,0.4)', padding: '1.5rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.06)' }}>
+            <div style={{ textAlign: 'center', padding: '0.8rem 1rem', background: 'rgba(255,77,79,0.1)', border: '1px solid rgba(255,77,79,0.3)', borderRadius: '8px', minWidth: '150px' }}>
+              <div style={{ fontSize: '0.75rem', color: '#ff4d4f', fontFamily: 'monospace' }}>STAGE 1</div>
+              <div style={{ fontSize: '0.95rem', fontWeight: 'bold', color: '#fff' }}>{t('home.post_compromise.flow_agent')}</div>
+            </div>
+            <div style={{ color: '#8b949e', fontSize: '1.2rem', fontWeight: 'bold' }}>&rarr;</div>
+            <div style={{ textAlign: 'center', padding: '0.8rem 1rem', background: 'rgba(255,189,46,0.1)', border: '1px solid rgba(255,189,46,0.3)', borderRadius: '8px', minWidth: '150px' }}>
+              <div style={{ fontSize: '0.75rem', color: '#ffbd2e', fontFamily: 'monospace' }}>STAGE 2</div>
+              <div style={{ fontSize: '0.95rem', fontWeight: 'bold', color: '#fff' }}>{t('home.post_compromise.flow_attempt')}</div>
+            </div>
+            <div style={{ color: '#8b949e', fontSize: '1.2rem', fontWeight: 'bold' }}>&rarr;</div>
+            <div style={{ textAlign: 'center', padding: '0.8rem 1rem', background: 'rgba(0,240,255,0.1)', border: '2px solid var(--accent-blue)', borderRadius: '8px', minWidth: '180px', boxShadow: '0 0 15px rgba(0,240,255,0.2)' }}>
+              <div style={{ fontSize: '0.75rem', color: 'var(--accent-blue)', fontFamily: 'monospace', fontWeight: 'bold' }}>ENFORCEMENT GATE</div>
+              <div style={{ fontSize: '0.95rem', fontWeight: 'bold', color: '#fff' }}>{t('home.post_compromise.flow_boundary')}</div>
+            </div>
+            <div style={{ color: '#ff4d4f', fontSize: '1.2rem', fontWeight: 'bold' }}>&times;</div>
+            <div style={{ textAlign: 'center', padding: '0.8rem 1rem', background: 'rgba(255,77,79,0.15)', border: '1px dashed #ff4d4f', borderRadius: '8px', minWidth: '150px' }}>
+              <div style={{ fontSize: '0.75rem', color: '#ff4d4f', fontFamily: 'monospace' }}>CONTAINED</div>
+              <div style={{ fontSize: '0.95rem', fontWeight: 'bold', color: '#ff4d4f' }}>{t('home.post_compromise.flow_decision')}</div>
+            </div>
+          </div>
         </div>
       </section>
 
