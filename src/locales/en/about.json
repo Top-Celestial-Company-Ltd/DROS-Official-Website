@@ -17,7 +17,7 @@
     "card1_p2": "In philosophy, truth is measured not by words, but by action and consequence (Karma). To prevent AI from corrupting truth, we abandoned the futile game of prompt engineering. Instead, we built a physical boundary engine directly at the runtime layer—one that ignores words, disregards prompt intent, and validates strictly by behavior (Zero-overhead Bitmap lookup & C-ABI execution boundaries).",
     "card2_title": "⚡ The Birth of Enterprise DROS",
     "card2_p1": "Later, we adapted this core mechanism into an enterprise-grade security runtime: <strong>DROS (Deterministic Runtime OS)</strong>.",
-    "card2_p2": "<strong>DROS was not created merely to stop hackers; it was created to ensure AI can never deceive.</strong> We simply discovered that the exact physical mechanism that keeps AI truthful also renders prompt injections and privilege escalations completely powerless."
+    "card2_p2": "<strong>DROS was not created merely to stop hackers; it was created to keep AI behavior within the documented boundary.</strong> We simply discovered that the exact physical mechanism that keeps AI truthful also renders prompt injections and privilege escalations materially constrained."
   },
   "metaphor": {
     "title": "🐒 AI is Sun Wukong; DROS is the Golden Headband",
@@ -27,7 +27,7 @@
     "m1_2": "Language games: Easily swayed or hijacked by prompts",
     "m1_3": "Chaotic risk: Unchecked freedom leads to havoc in heaven",
     "m2_title": "☸️ Golden Headband (DROS Restraint)",
-    "m2_1": "Unsuppressed wisdom: Grants complete cognitive freedom",
+    "m2_1": "Unsuppressed wisdom: Grants bounded cognitive flexibility",
     "m2_2": "Physical boundary: Sub-microsecond C-ABI enforcement",
     "m2_3": "Deterministic consequence: Instant <500ns SIGKILL on breach"
   },
@@ -62,7 +62,7 @@
   },
   "vision": {
     "title": "🕸️ Ultimate Vision: From Execution Governance to Agent Accountability",
-    "desc": "Just as SSL/TLS certificates secure host trust and OAuth secures human identity, the <strong>DROS Vajra Contract</strong> will serve as the capability credential mesh for the Agentic Web. Our vision is to transition from basic 'execution governance' to absolute 'agent accountability', wrapping every agent in a non-repudiable cryptographic seal."
+    "desc": "Just as SSL/TLS certificates secure host trust and OAuth secures human identity, the <strong>DROS Vajra Contract</strong> will serve as the capability credential mesh for the Agentic Web. Our vision is to transition from basic 'execution governance' to stronger 'agent accountability', wrapping every agent in a cryptographic accountability seal."
   },
   "quote": {
     "text": "\"DROS was not built to fight hackers; it was built to keep AI truthful. We simply discovered that what keeps AI honest also keeps hackers at bay.\"",

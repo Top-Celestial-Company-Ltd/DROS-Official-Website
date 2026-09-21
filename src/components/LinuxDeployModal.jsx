@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export default function LinuxDeployModal({ isOpen, onClose }) {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const isZh = i18n.language && i18n.language.startsWith('zh');
   const [activeTab, setActiveTab] = useState('docker');
   const [copiedKey, setCopiedKey] = useState('');

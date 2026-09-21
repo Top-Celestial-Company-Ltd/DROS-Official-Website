@@ -41,7 +41,7 @@
     "t2_left": "<strong>因果不虛 (Law of Karma)</strong><br/>意圖毫無意義，唯有行為會產生不可逆後果。",
     "t2_right": "<strong>C-ABI 加密簽章 (Execution Signature)</strong><br/>每個 System Call 均需通過確定性 SHA-256 查表。",
     "t3_left": "<strong>戒律即保護 (Precepts as Shield)</strong><br/>戒律不是約束，而是讓生命遠離反噬的屏障。",
-    "t3_right": "<strong><500ns 物理熔斷 (Hardware Meltdown)</strong><br/>瞬間終止越權行程，確保主系統絕對零污染。"
+    "t3_right": "<strong><500ns 物理熔斷 (Hardware Meltdown)</strong><br/>瞬間終止越權行程，確保主系統可界定邊界內零污染。"
   },
   "logos": {
     "title": "🎨 DROS 官方品牌識別與 LOGO 下載",

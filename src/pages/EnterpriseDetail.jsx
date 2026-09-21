@@ -418,7 +418,7 @@ export default function EnterpriseDetail() {
                 }}>
                   <div style={{ fontSize: '0.75rem', color: isLight ? '#64748b' : 'var(--text-secondary)', textTransform: 'uppercase' }}>租約換約率 (Renewals)</div>
                   <div style={{ fontSize: '1.8rem', fontWeight: 'bold', color: 'var(--accent-blue)', fontFamily: 'monospace', marginTop: '0.3rem' }}>14 / min</div>
-                  <div style={{ fontSize: '0.75rem', color: isLight ? '#64748b' : 'var(--text-secondary)', marginTop: '0.3rem' }}>100% 通過七重安全斷言</div>
+                  <div style={{ fontSize: '0.75rem', color: isLight ? '#64748b' : 'var(--text-secondary)', marginTop: '0.3rem' }}>七重安全斷言已覆蓋</div>
                 </div>
 
                 <div style={{
@@ -441,7 +441,7 @@ export default function EnterpriseDetail() {
                 }}>
                   <div style={{ fontSize: '0.75rem', color: '#dc2626', textTransform: 'uppercase' }}>今日精準撤銷 (Revoked)</div>
                   <div style={{ fontSize: '1.8rem', fontWeight: 'bold', color: '#dc2626', fontFamily: 'monospace', marginTop: '0.3rem' }}>1 Task</div>
-                  <div style={{ fontSize: '0.75rem', color: '#dc2626', marginTop: '0.3rem' }}>微秒級阻斷，其餘零波及</div>
+                  <div style={{ fontSize: '0.75rem', color: '#dc2626', marginTop: '0.3rem' }}>微秒級阻斷，其餘任務保持正常</div>
                 </div>
               </div>
 
@@ -553,7 +553,7 @@ export default function EnterpriseDetail() {
                   </div>
                   <div style={{ color: isLight ? '#475569' : 'var(--text-secondary)', fontSize: '0.82rem', lineHeight: '1.6' }}>
                     {isZh
-                      ? '當您點擊「即時熔斷」時，後端網關在 < 2.5 微秒內將該 Task 的 Epoch 遞增 (Epoch ← Epoch + 1)。持有舊憑證的 Agent 再次呼叫 Tool 時直接被 C-ABI 硬熔斷，而叢集內其餘數十個長任務 Agent 100% 零波及、零停機。'
+                      ? '當您點擊「即時熔斷」時，後端網關在 < 2.5 微秒內將該 Task 的 Epoch 遞增 (Epoch ← Epoch + 1)。持有舊憑證的 Agent 再次呼叫 Tool 時直接被 C-ABI 硬熔斷，而叢集內其餘數十個長任務 Agent 低波及、可維持服務。'
                       : 'Triggering revocation broadcasts Epoch <- Epoch + 1 in under 2.5 microseconds. Subsequent tool calls by the compromised agent instantly hit C-ABI containment (Auth = 0), while all other cluster agents run with zero disruption.'}
                   </div>
                 </div>
@@ -605,11 +605,11 @@ export default function EnterpriseDetail() {
 
           <div className="glass-card" style={{ padding: '2rem', borderTop: '3px solid var(--accent-blue)' }}>
             <h3 style={{ fontSize: '1.25rem', color: 'var(--accent-blue)', marginBottom: '1rem' }}>
-              {isZh ? '3. 100% 離線斷網 / Air-Gapped 支援' : '3. 100% Air-Gapped Private Cloud'}
+              {isZh ? '3. 離線斷網 / Air-Gapped 支援' : '3. Air-Gapped Private Cloud'}
             </h3>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.7' }}>
               {isZh
-                ? '完全杜絕外部遙測與雲端依賴。策略二進位檔 (policy.bin) 離線簽章驗證，符合金融業、國防軍工與醫療體系的最高資安隔離要求。'
+                ? '可在離線條件下運作，並降低對外部遙測與雲端依賴。策略二進位檔 (policy.bin) 離線簽章驗證，符合金融業、國防軍工與醫療體系的高隔離要求。'
                 : 'Zero external telemetry and zero cloud dependencies. Binary policies are validated entirely on-premise, satisfying strict financial and defense air-gap requirements.'}
             </p>
           </div>
@@ -620,7 +620,7 @@ export default function EnterpriseDetail() {
             </h3>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.7' }}>
               {isZh
-                ? '通過 160,611 次連續調用之 72 小時抗壓測試，記憶體洩漏量為 0 Bytes，RSS 常駐記憶體零漂移，保障 24/7 生產環境長治久安。'
+                ? '通過 160,611 次連續調用之 72 小時抗壓測試，記憶體洩漏量為 0 Bytes，RSS 常駐記憶體零漂移，適合 24/7 生產環境長期運作。'
                 : 'Validated through 72-hour continuous soak tests across 160,611 invocations. Zero memory leaks and zero RSS drift ensure uninterrupted 24/7 production.'}
             </p>
           </div>

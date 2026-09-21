@@ -1,43 +1,42 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
+
+const getInitialChatState = () => {
+  const savedEmail = localStorage.getItem('dros_verified_email') || '';
+  const savedSessionId = localStorage.getItem('dros_chat_session_id') || '';
+  const savedMessages = localStorage.getItem('dros_chat_messages');
+  const verified = Boolean(savedEmail);
+  const defaultGreeting = [
+    {
+      role: 'assistant',
+      content: '您好！我是 Vajra-AI 線上技術客服。我已經成功讀取您的 DROS 授權驗證。請問今天有什麼我可以協助您的？',
+      time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+    }
+  ];
+
+  return {
+    email: savedEmail,
+    isVerified: verified,
+    sessionId: savedSessionId,
+    messages: verified
+      ? (savedMessages ? JSON.parse(savedMessages) : defaultGreeting)
+      : []
+  };
+};
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
-  const [email, setEmail] = useState('');
-  const [isVerified, setIsVerified] = useState(false);
+  const initialChatState = getInitialChatState();
+  const [email, setEmail] = useState(initialChatState.email);
+  const [isVerified, setIsVerified] = useState(initialChatState.isVerified);
   const [verifying, setVerifying] = useState(false);
   const [verifyError, setVerifyError] = useState('');
   
   const [inputMessage, setInputMessage] = useState('');
-  const [messages, setMessages] = useState([]);
-  const [sessionId, setSessionId] = useState('');
+  const [messages, setMessages] = useState(initialChatState.messages);
+  const [sessionId, setSessionId] = useState(initialChatState.sessionId);
   const [sending, setSending] = useState(false);
   
   const messagesEndRef = useRef(null);
-  
-  // Read verified email from LocalStorage on mount
-  useEffect(() => {
-    const savedEmail = localStorage.getItem('dros_verified_email');
-    const savedSessionId = localStorage.getItem('dros_chat_session_id');
-    const savedMessages = localStorage.getItem('dros_chat_messages');
-    
-    if (savedEmail) {
-      setEmail(savedEmail);
-      setIsVerified(true);
-      if (savedSessionId) setSessionId(savedSessionId);
-      if (savedMessages) {
-        setMessages(JSON.parse(savedMessages));
-      } else {
-        // Default greeting message
-        setMessages([
-          {
-            role: 'assistant',
-            content: '您好！我是 Vajra-AI 線上技術客服。我已經成功讀取您的 DROS 授權驗證。請問今天有什麼我可以協助您的？',
-            time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-          }
-        ]);
-      }
-    }
-  }, []);
   
   // Save messages to LocalStorage
   useEffect(() => {
@@ -84,7 +83,7 @@ export default function ChatWidget() {
       } else {
         setVerifyError(data.message || '驗證失敗，請聯絡管理員。');
       }
-    } catch (err) {
+    } catch {
       setVerifyError('連線失敗，請確保已啟用 Tailscale 連線。');
     } finally {
       setVerifying(false);
@@ -143,7 +142,7 @@ export default function ChatWidget() {
           }
         ]);
       }
-    } catch (err) {
+    } catch {
       setMessages(prev => [
         ...prev,
         {

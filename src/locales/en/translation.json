@@ -21,7 +21,7 @@
     "tax_id": "Tax ID: 43908974",
     "company_name": "Top-Celestial Company Ltd.",
     "rights": "© {{year}} DROS Project. All rights reserved. DROS-PGM Execution Enforcement Engine protected under U.S. Patent Application No. 64/111,973 (Patent Pending).",
-    "dharma_exemption": "Dharma Exemption: 100% free for pure non-profit Buddhist propagation purposes."
+    "dharma_exemption": "Dharma Exemption: Free for qualifying non-profit Buddhist propagation use."
   },
   "home": {
     "meta_title": "DROS | Deterministic Runtime Execution Governance Substrate",
@@ -59,7 +59,7 @@
         {
           "icon": "🔬",
           "title": "Exhaustive Verification",
-          "desc": "A small, explicit boundary allows 100% deterministic testing and formal analysis instead of probabilistic approximations."
+          "desc": "A small, explicit boundary allows deterministic testing and formal analysis within the stated measurement boundary."
         }
       ]
     },
@@ -123,7 +123,7 @@
     "terminal": {
       "cmd": "mount policy.bin",
       "locked": "[DROS-Engine] ⚡ Capability policy loaded in memory (Deterministic verification mode).",
-      "injected": "[DROS-Engine] 🛡️ Cryptographic signature verified (Ed25519 / Offline Verifiable).",
+      "injected": "[DROS-Engine] 🛡️ Cryptographic signature documented (Ed25519 / Offline Verifiable).",
       "llm_stream": "Agent attempting to call: execute_payment...",
       "fuse_blown": "🛑 Execution Blocked: Unauthorized tool invocation intercepted at execution boundary (Deterministic Guard Triggered)."
     },
@@ -162,7 +162,7 @@
         {
           "posix": "POSIX Permissions (chmod / ACL)",
           "dros": "Capability Bitmap",
-          "governance": "Zero-heap O(1) memory comparison; adversarial prompts can never convince or bypass hardware bitmaps"
+          "governance": "Zero-heap O(1) memory comparison; adversarial prompts are not expected to bypass hardware bitmaps within the governed boundary"
         },
         {
           "posix": "Non-Bypassable Kernel (Kernel Space)",
@@ -222,7 +222,7 @@
         }
       ],
       "conclusion_title": "The DROS Architectural Solution",
-      "conclusion_desc": "Maintain security intelligence within <strong>Compile-time</strong>. Enforce absolute deterministic defense at <strong>Runtime</strong>."
+      "conclusion_desc": "Maintain security intelligence within <strong>Compile-time</strong>. Enforce deterministic defense at <strong>Runtime</strong>."
     },
     "advantages": {
       "title_prefix": "Core DROS",
@@ -238,7 +238,7 @@
         },
         {
           "title": "🔒 Cryptographic Audit",
-          "desc": "Cryptographically binds compiled policy SHA-256 signatures and compiler versions to every audit trail, guaranteeing forensic-grade non-repudiation."
+          "desc": "Cryptographically binds compiled policy SHA-256 signatures and compiler versions to every audit trail, supporting forensic-grade non-repudiation."
         },
         {
           "title": "🛑 Strict Fail-Closed",
@@ -250,7 +250,7 @@
         },
         {
           "title": "🌐 VajraAgent Mesh OTA Control Plane",
-          "desc": "Supports 100% On-Premise or air-gapped private deployments. Push updates instantly to hundreds of microservice nodes via K8s/Ansible with a 1ms emergency global kill-switch."
+          "desc": "Supports On-Premise and air-gapped private deployments. Push updates via K8s/Ansible and use a documented emergency global kill-switch when configured."
         }
       ]
     },
@@ -274,7 +274,7 @@
           "item": "Mechanism",
           "traditional": "JSON Parsing / Heuristic Reasoning",
           "dros": "O(1) Bitmap Bitwise Operations",
-          "adv": "100% Deterministic"
+          "adv": "Boundary-Scoped Deterministic"
         },
         {
           "item": "Failure Mode",
@@ -306,7 +306,7 @@
     "industries": {
       "title_prefix": "Designed For",
       "title_highlight": "Compliance Industries",
-      "desc": "DROS is designed for sectors where security, compliance, and deterministic reliability are non-negotiable:",
+      "desc": "DROS is designed for sectors where security, compliance, and deterministic reliability are high priority:",
       "items": [
         "🏦 FinTech & High-Frequency Trading",
         "🏥 Digital Healthcare & Diagnostics",
@@ -317,7 +317,7 @@
     },
     "cta": {
       "title": "POSIX defined system calls. DROS defines AI execution boundaries.",
-      "desc": "Stop patching the application layer with probabilistic security.<br/>Upgrade to an OS-level <strong>Execution Governance Standard</strong>.",
+      "desc": "Stop patching the application layer with probabilistic security.<br/>Adopt an OS-level <strong>Execution Governance Standard</strong>.",
       "btn_github": "View Open Source Specs",
       "btn_poc": "Download Free-Trial"
     },
@@ -354,7 +354,7 @@
       "vajra_agent": {
         "title": "VajraAgent (Mesh / Corporate)",
         "tag": "Mesh Control Plane & Central CommandCenter",
-        "desc": "The central brain of distributed Agentic AI. Supports 100% On-Premise private clouds or air-gapped datacenters. Enables zero-touch automated deployment via Kubernetes Helm and Ansible with adaptive Phone Home connections. Instantly push updates via Mesh OTA to hundreds of nodes with a 1ms global emergency kill-switch."
+        "desc": "The central brain of distributed Agentic AI. Supports On-Premise private clouds or air-gapped datacenters. Enables zero-touch automated deployment via Kubernetes Helm and Ansible with adaptive Phone Home connections. Instantly push updates via Mesh OTA to hundreds of nodes with a 1ms global emergency kill-switch."
       },
       "dros_mobile": {
         "title": "DROS Mobile SDK",
@@ -368,7 +368,7 @@
     },
     "features": {
       "title": "Core Protection Mechanisms",
-      "subtitle": "Shifting security validation to compile-time to guarantee sub-millisecond execution latency at runtime.",
+      "subtitle": "Shifting security validation to compile-time to reduce runtime decision latency.",
       "items": {
         "mmap": {
           "title": "Compile-Time Intelligence",
@@ -411,7 +411,7 @@
     "hero": {
       "title_prefix": "DROS v1.0 / AGI Security Fusing",
       "title_highlight": "Trust & Root CA Standard",
-      "subtitle": "The future web will be crowded with autonomous Agents equipped with high-level reasoning. If rogue, they will execute illegal transactions, data breaches, or cyberattacks completely without human footprints—an untraceable crisis. DROS rejects probabilistic patches, acting as the Root CA of the Agentic Web to sign capability credentials, enforcing agent accountability from the ground up."
+      "subtitle": "The future web will be crowded with autonomous Agents equipped with high-level reasoning. If rogue, they will execute illegal transactions, data breaches, or cyberattacks with limited human traceability—an accountability gap. DROS rejects probabilistic patches, acting as the Root CA of the Agentic Web to sign capability credentials, supporting agent accountability from the ground up."
     },
     "harness": {
       "title": "2. v1.0 Certification Harness Specifications",
@@ -565,13 +565,13 @@
     "vep_harness": {
       "title_prefix": "Scientific Reproducibility Harness",
       "title_highlight": "DROS-VEP Lite Evaluation Environment",
-      "subtitle": "Reject marketing claims. DROS provides a 100% open-source evaluation and falsification testbed covering 8 threat scenarios, B2B supply-chain attacks, and continuous soak benchmarking:",
+      "subtitle": "Reject marketing claims. DROS provides an open evaluation and falsification testbed covering 8 threat scenarios, B2B supply-chain attacks, and continuous soak benchmarking:",
       "github_repo": "https://github.com/Top-Celestial-Company-Ltd/dros-vep-lite",
       "soak_title": "Official 24-Hour Continuous Adversarial Soak Benchmark (Empirical Evidence)",
       "soak_stat1": "160,611",
       "soak_lbl1": "24hr Total Benchmark Workload Requests",
       "soak_stat2": "137,751 Blocked",
-      "soak_lbl2": "Adversarial Attacks 100% Intercepted",
+      "soak_lbl2": "Adversarial Attacks Intercepted in the documented harness",
       "soak_stat3": "26.21 μs",
       "soak_lbl3": "P50 Median Lookup Latency (σ = ±0.34μs)",
       "soak_stat4": "0 Bytes",

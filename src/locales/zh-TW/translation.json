@@ -21,7 +21,7 @@
     "tax_id": "統編：43908974",
     "company_name": "康宸園有限公司",
     "rights": "© {{year}} DROS Project. 保留所有版權。DROS-PGM 執行強制引擎核心技術已受美國臨時專利保護 (申請案號：64/111,973，Patent Pending)。",
-    "dharma_exemption": "Dharma Exemption：純粹的非營利佛教弘法用途可 100% 免費使用。"
+    "dharma_exemption": "Dharma Exemption：符合資格的非營利佛教弘法用途可免費使用。"
   },
   "home": {
     "meta_title": "DROS | AI Agent 運行期確定性執行治理基底",
@@ -59,7 +59,7 @@
         {
           "icon": "🔬",
           "title": "窮舉驗證與可預測性",
-          "desc": "極簡的邊界允許 100% 確定性窮舉測試與形式化驗證，徹底告別不透明的模型機率猜測。"
+          "desc": "極簡且明確的邊界，允許在已定義測量邊界內進行確定性窮舉測試與形式化驗證，並將主張維持在可證據化範圍內。"
         }
       ]
     },
@@ -162,7 +162,7 @@
         {
           "posix": "POSIX 權限 (chmod / ACL)",
           "dros": "能力點陣圖 (Capability Bitmap)",
-          "governance": "零堆積 Ο(1) 記憶體比對，Prompt 提示詞絕對無法說服或繞過點陣圖"
+          "governance": "零堆積 Ο(1) 記憶體比對，Prompt 提示詞無法說服或繞過點陣圖"
         },
         {
           "posix": "核心不可繞過 (Kernel Space)",
@@ -222,7 +222,7 @@
         }
       ],
       "conclusion_title": "DROS 物理學解決方案",
-      "conclusion_desc": "將安全智慧與策略分析置於<strong>編譯期 (Compile-time)</strong>，把絕對的確定性與 Fail-Closed 物理防禦交給<strong>執行期 (Runtime)</strong>。"
+      "conclusion_desc": "將安全智慧與策略分析置於<strong>編譯期 (Compile-time)</strong>，把可界定邊界內的確定性與 Fail-Closed 物理防禦交給<strong>執行期 (Runtime)</strong>。"
     },
     "advantages": {
       "title_prefix": "DROS 以基準測試驅動的",
@@ -230,11 +230,11 @@
       "items": [
         {
           "title": "🧠 Compile-time Intelligence",
-          "desc": "於編譯期靜態展開萬用字元（Wildcard）與權限關聯，完全免除執行期的策略計算負荷。"
+          "desc": "於編譯期靜態展開萬用字元（Wildcard）與權限關聯，大幅降低執行期的策略計算負荷。"
         },
         {
           "title": "⚡ O(1) Bitmap Runtime",
-          "desc": "排除字串比對與模型推理。實測微內核純校驗延遲低至 484.8 奈秒，端到端加上 FFI 封裝開銷於行動端為 8–20 μs，雲端為 20–80 μs，相較傳統 OPA 毫秒級引擎具備絕對優勢。"
+          "desc": "排除字串比對與模型推理。實測微內核純校驗延遲低至 484.8 奈秒，端到端加上 FFI 封裝開銷於行動端為 8–20 μs，雲端為 20–80 μs，相較傳統 OPA 毫秒級引擎具備明顯優勢。"
         },
         {
           "title": "🔒 Cryptographic Audit",
@@ -250,7 +250,7 @@
         },
         {
           "title": "🌐 VajraAgent Mesh OTA 控制面",
-          "desc": "支援 100% On-Premise 與 Air-Gapped 私有雲部署，提供 K8s/Ansible 自動化推送，具備 1ms 內全局緊急熔斷與中央視覺化稽核功能。"
+          "desc": "支援 On-Premise 與 Air-Gapped 私有雲部署，提供 K8s/Ansible 自動化推送，並具備全局緊急熔斷與中央視覺化稽核功能。"
         }
       ]
     },
@@ -274,7 +274,7 @@
           "item": "防護機制",
           "traditional": "JSON 解析 / Heuristics 語意推理",
           "dros": "O(1) Bitmap 常數時間位元運算",
-          "adv": "100% 確定性"
+          "adv": "邊界內確定性"
         },
         {
           "item": "發生異常時",
@@ -306,7 +306,7 @@
     "industries": {
       "title_prefix": "最適合的",
       "title_highlight": "合規產業場景",
-      "desc": "DROS 特別適合對<strong>安全、合規、零延遲、零容錯</strong>要求極高的企業領域：",
+      "desc": "DROS 特別適合對<strong>安全、合規、低延遲與高可靠性</strong>要求極高的企業領域：",
       "items": [
         "🏦 金融科技與高頻交易",
         "🏥 智慧醫療與健康隱私",
@@ -317,14 +317,14 @@
     },
     "cta": {
       "title": "POSIX 定義了系統調用。DROS 定義了 AI 執行邊界。",
-      "desc": "停止在應用層進行機率性修補。<br/>升級到 OS 等級的 <strong>執行治理標準</strong>。<br/>準備好讓您的企業 AI 具備絕對確定性了嗎？",
+      "desc": "停止在應用層進行機率性修補。<br/>升級到 OS 等級的 <strong>執行治理標準</strong>。<br/>準備好讓您的企業 AI 進入可界定的執行邊界了嗎？",
       "btn_github": "查看開源架構規範",
       "btn_poc": "下載 Free-Trial 體驗版"
     },
     "easter_egg": {
       "title": "💡 Policy-as-Code 開發者體驗",
       "desc": "想知道 Vajra DSL 有多好寫？將以下提示詞複製給您的 ChatGPT 或 Claude，讓 AI 幫您產生一份符合 DROS 標準的「金融客服 Agent」權限政策：",
-      "prompt": "我正在為一間銀行開發 Agentic AI 客服系統。請使用 DROS 的 Vajra DSL (Policy-as-Code) 格式，幫我撰寫一份安全政策。要求：\n1. 允許 Agent 讀取帳戶餘額 (read_balance)。\n2. 允許 Agent 查詢信用卡帳單 (query_bill)。\n3. 絕對禁止 Agent 執行轉帳 (transfer_funds) 或刪除帳戶 (delete_account)。\n4. 請使用標準 YAML 語法描述，並解釋這份政策編譯為 policy.bin 後的防護效果。",
+      "prompt": "我正在為一間銀行開發 Agentic AI 客服系統。請使用 DROS 的 Vajra DSL (Policy-as-Code) 格式，幫我撰寫一份安全政策。要求：\n1. 允許 Agent 讀取帳戶餘額 (read_balance)。\n2. 允許 Agent 查詢信用卡帳單 (query_bill)。\n3. 明確禁止 Agent 執行轉帳 (transfer_funds) 或刪除帳戶 (delete_account)。\n4. 請使用標準 YAML 語法描述，並解釋這份政策編譯為 policy.bin 後的防護效果。",
       "btn_copy": "複製 Prompt",
       "copied": "✅ 已複製！現在去貼給您的 AI 吧！"
     }
@@ -363,12 +363,12 @@
       }
     },
     "architecture": {
-      "title": "架構優勢：極致的效能與絕對的確定性",
+      "title": "架構優勢：極致的效能與可界定邊界內的確定性",
       "desc": "DROS 捨棄傳統 API 網關的複雜解析鏈結，直接在記憶體中執行 Contiguous Bitmap 查表，將安全驗證開銷降至 CPU 週期極限。"
     },
     "features": {
       "title": "核心防護機制",
-      "subtitle": "將安全驗證與策略分析移至編譯期，為執行期換取低於 0.02 毫秒的極致效能。",
+      "subtitle": "將安全驗證與策略分析移至編譯期，為執行期換取可界定且更低的決策延遲。",
       "items": {
         "mmap": {
           "title": "Compile-Time Intelligence",
@@ -407,15 +407,15 @@
   },
   "trust": {
     "meta_title": "DROS | 六大核心技術論文與 VEP Lite 科學評測環境",
-    "meta_desc": "公開揭露 DROS 六大核心技術論文 (Zenodo DOI)、DROS-VEP Lite 虛擬企業評測靶場與 24 小時長時浸潤攻防壓測數據。修辭不得超越證據，完全確定性重現。",
+    "meta_desc": "公開揭露 DROS 六大核心技術論文 (Zenodo DOI)、DROS-VEP Lite 虛擬企業評測靶場與 24 小時長時浸潤攻防壓測數據。修辭不得超越證據，可驗證重現。",
     "hero": {
       "title_prefix": "DROS Standard / AGI 時代安全保險絲",
       "title_highlight": "確信安全與 6-Pillars 憑證標準",
-      "subtitle": "未來的網際網路將充斥著密密麻麻、高推理能力的自主 Agent。一旦它們被提示詞劫持發瘋，將在毫無人類指紋的情況下，執行完全「無人負責、無法追溯、無跡可尋」的無痕犯罪。DROS 拒絕機率性的修補，我們以 Root CA 簽發執行能力憑證，在 C-ABI 咽喉處為 Agent 戴上冰冷的密碼學手銬，將機率性的失控轉化為可證實的法律責任。"
+      "subtitle": "未來的網際網路將充斥著密密麻麻、高推理能力的自主 Agent。一旦它們被提示詞劫持發瘋，將在毫無人類指紋的情況下，執行可界定邊界內「無人負責、無法追溯、無跡可尋」的無痕犯罪。DROS 拒絕機率性的修補，我們以 Root CA 簽發執行能力憑證，在 C-ABI 咽喉處為 Agent 戴上冰冷的密碼學手銬，將機率性的失控轉化為可證實的法律責任。"
     },
     "harness": {
       "title": "二、DROS 驗證合約規格 (Certification Harness)",
-      "desc": "DROS 拒絕寫死的偽模擬。我們正式將本地 `dros-verification/` 與 `dros-home-lab/tests/` 下的 6 大產業賽道測試集，凍結為確信驗證合約。任何人皆可透過本地環境執行並重現相同的 100% 防護特徵：",
+      "desc": "DROS 拒絕寫死的偽模擬。我們正式將本地 `dros-verification/` 與 `dros-home-lab/tests/` 下的 6 大產業賽道測試集，凍結為確信驗證合約。任何人皆可透過本地環境執行並重現相同的 已定義邊界內的防護特徵：",
       "test1": "🧬 test_dros_6pillars_verification.py — 6-Pillars 六大信任邊界完整性驗證與 C-ABI 熔斷校驗",
       "test2": "🧪 test_rcu_chaos_concurrency.py — 50 執行緒動態 RCU 無鎖熱重載混亂壓力測試 (0.004s 通過)"
     },
@@ -428,7 +428,7 @@
       "queries_lbl": "基準測試與混沌調用總數",
       "swaps_val": "< 1 μs",
       "swaps_lbl": "O(1) RCU 原子指針切換 (即時 HTTP 403)",
-      "races_val": "100% 阻斷",
+      "races_val": "邊界內阻斷",
       "races_lbl": "紅隊 1,200 筆對抗 Payload 阻斷率"
     },
     "reality": {
@@ -464,8 +464,8 @@
       "hub_desc": "開放式 Agent 護照格式（libdros-id），支援跨系統流通與本地 GuardVM 確定性在地硬熔斷。"
     },
     "threat": {
-      "title": "生存威脅：完全「無痕」的自主 Agent 浪潮",
-      "desc1": "當我們賦予 AI 大腦自主執行 System Call 的權限，就等於為惡意代碼開啟了一扇物理大門。一個發瘋的 Agent 可以自己註冊域名、編寫病毒、在不同的雲伺服器間轉移，且完全不留下任何人類的指紋紀錄。這在司法鑑定上是一場災難。",
+      "title": "生存威脅：高隱蔽性的自主 Agent 浪潮",
+      "desc1": "當我們賦予 AI 大腦自主執行 System Call 的權限，就等於為惡意代碼開啟了一扇物理大門。一個發瘋的 Agent 可以自己註冊域名、編寫病毒、在不同的雲伺服器間轉移，且幾乎不留下可供追蹤的人類指紋紀錄。這在司法鑑定上是一場災難。",
       "desc2": "DROS 作為 **Agentic Web 的根憑證發放中心 (Root CA)**，強制為每一次執行注入不可抵賴的密碼學鋼印。我們將合規合約編譯為帶有 Ed25519 簽章的 `policy.bin` 與 DIT 身分憑證。AI 大腦可以想入非非，但只要伸手去觸碰未授權的實體 Tool，DROS 微核心便在 26.1 微秒內直接物理性熔斷，從根本上終結 AI 甩鍋的時代。"
     },
     "papers": {
@@ -565,13 +565,13 @@
     "vep_harness": {
       "title_prefix": "Scientific Reproducibility Harness",
       "title_highlight": "DROS-VEP Lite 虛擬企業評測環境",
-      "subtitle": "拒絕口頭保證。DROS 提供完全開源的評測與證偽靶場，涵蓋 8 大核心威脅場景、B2B 供應鏈攻防與 24 小時連續壓力測試：",
+      "subtitle": "拒絕口頭保證。DROS 提供開源的評測與證偽靶場，涵蓋 8 大核心威脅場景、B2B 供應鏈攻防與 24 小時連續壓力測試：",
       "github_repo": "https://github.com/Top-Celestial-Company-Ltd/dros-vep-lite",
       "soak_title": "24 小時不間斷對抗浸潤壓測官方實證 (Empirical Evidence)",
       "soak_stat1": "160,611 次",
       "soak_lbl1": "24hr 總評測負載請求",
       "soak_stat2": "137,751 阻斷",
-      "soak_lbl2": "惡意攻擊 100% 成功阻斷",
+      "soak_lbl2": "惡意攻擊在本靶場條件下成功阻斷",
       "soak_stat3": "26.21 μs",
       "soak_lbl3": "P50 中位數決策延遲 (σ = ±0.34μs)",
       "soak_stat4": "0 Bytes",

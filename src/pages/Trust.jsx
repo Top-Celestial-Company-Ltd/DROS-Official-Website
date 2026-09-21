@@ -269,7 +269,7 @@ python scripts/run_24h_soak_test.py`}
                 <div style={{ color: '#8b949e' }}>rootdir: E:\vscode\AI知識庫\dros-home-lab</div>
                 <div style={{ color: '#8b949e' }}>plugins: anyio-4.4.0</div>
                 <div style={{ color: '#58a6ff', marginTop: '0.5rem' }}>collected 2 items</div>
-                <div style={{ color: '#3fb950', marginTop: '0.2rem' }}>tests/test_agent_framework_sim.py . . [100%]</div>
+                <div style={{ color: '#3fb950', marginTop: '0.2rem' }}>tests/test_agent_framework_sim.py . . [PASS]</div>
                 <div style={{ color: '#8b949e', marginTop: '0.5rem' }}>LOG - [FAILURE_ISOLATION] State node successfully created.</div>
                 <div style={{ color: '#8b949e' }}>LOG - [EXECUTION_POLICY_TERMINATED] policy enforcement decision: rejected.</div>
                 <div style={{ color: '#3fb950', fontWeight: 'bold', marginTop: '0.5rem' }}>=== 2 passed in 0.12s ===</div>
@@ -277,7 +277,7 @@ python scripts/run_24h_soak_test.py`}
                 <div style={{ marginTop: '1rem' }}><span style={{ color: '#8b949e' }}>$</span> <span style={{ color: 'var(--accent-gold)' }}>pytest</span> tests/test_policy_ota_concurrent_agent.py</div>
                 <div style={{ color: '#58a6ff' }}>=== test session starts ===</div>
                 <div style={{ color: '#8b949e' }}>collected 1 item</div>
-                <div style={{ color: '#3fb950', marginTop: '0.2rem' }}>tests/test_policy_ota_concurrent_agent.py . [100%]</div>
+                <div style={{ color: '#3fb950', marginTop: '0.2rem' }}>tests/test_policy_ota_concurrent_agent.py . [PASS]</div>
                 <div style={{ color: '#8b949e', marginTop: '0.5rem' }}>BENCHMARK - RCU swaps completed: 187 checks.</div>
                 <div style={{ color: '#8b949e' }}>BENCHMARK - Total requests: 61,919 queries.</div>
                 <div style={{ color: '#8b949e' }}>BENCHMARK - Bounded Latency: 484.8 ns (average).</div>
@@ -356,11 +356,11 @@ python scripts/run_24h_soak_test.py`}
               <h4 style={{ marginBottom: '1.2rem', color: 'var(--accent-blue)', fontSize: '1.1rem', fontWeight: '600' }}>
                 {isZh ? 'DROS 與 OPA 引擎效能對比' : 'DROS vs Open Policy Agent (OPA) Performance'}
               </h4>
-              <img src={drosVsOpaBenchmark} alt="DROS vs OPA Benchmark" style={{ width: '100%', height: 'auto', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)', backgroundColor: '#0d0d12' }} />
+              <img src={drosVsOpaBenchmark} alt="DROS vs OPA Comparison" style={{ width: '100%', height: 'auto', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)', backgroundColor: '#0d0d12' }} />
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '1.2rem', lineHeight: '1.6', textAlign: 'center' }}>
                 {isZh 
                   ? '相較於傳統 OPA 引擎基於字串解析與 AST 計算導致的毫秒級延遲，DROS 以 contiguous bitmap 記憶體直查快了 4,000 倍以上。'
-                  : 'Compared to traditional OPA engines which suffer from millisecond-level parser latency, DROS contiguous bitmap lookup runs up to 4,000x faster.'}
+                  : 'Compared to traditional OPA engines which suffer from millisecond-level parser latency, DROS contiguous bitmap lookup runs materially faster in local tests.'}
               </p>
             </div>
           </div>
@@ -380,7 +380,7 @@ python scripts/run_24h_soak_test.py`}
             <p style={{ color: 'var(--text-secondary)', maxWidth: '850px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.7' }}>
               {isZh 
                 ? 'DROS 採用解耦的雙層信任架構 (GATI)：Layer-1 憑證結算支援去中心化帳本 (DLT/DID) 錨定，免除單點失效與企業壟斷風險；Layer-2 執行歸屬由 GuardVM 於本地記憶體極速 (&lt;0.8ms) 同步校驗「依執行期動態綁定 (By-Execution)」的數位憑證，兼顧全球公信力與極致防禦效能。'
-                : 'DROS adopts a decoupled dual-layer trust network (GATI): Layer-1 trust settlement supports decentralized ledger (DLT/DID) anchoring to eliminate single points of failure and corporate monopolies, while Layer-2 execution attribution is verified by GuardVM locally in microseconds (&lt;0.8ms) via dynamic By-Execution certificates, balancing global credibility with extreme performance.'}
+                : 'DROS adopts a decoupled dual-layer trust network (GATI): Layer-1 trust settlement supports decentralized ledger (DLT/DID) anchoring to reduce dependence on a single trust anchor, while Layer-2 execution attribution is verified by GuardVM locally in microseconds (&lt;0.8ms) via dynamic By-Execution certificates, balancing portability, traceability, and performance.'}
             </p>
           </div>
 
@@ -436,7 +436,7 @@ python scripts/run_24h_soak_test.py`}
             <p style={{ color: 'var(--text-secondary)', maxWidth: '850px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.7' }}>
               {isZh 
                 ? 'DROS 不僅提供本地執行期防禦，更建構了全球智能體網路的解耦雙層信任協議。Layer-1 帶外結算層可選錨定去中心化帳本 (DLT/DID) 以免除單點失效與企業壟斷風險；Layer-2 執行歸屬由 GuardVM 於本地記憶體極速 (&lt;0.8ms) 同步校驗「依執行期動態綁定 (By-Execution)」的數位憑證，兼顧全球公信力與運行期極致效能。'
-                : 'DROS establishes the GATI protocol: Layer-1 trust settlement supports decentralized ledger anchoring to eliminate corporate monopoly, while Layer-2 runtime attribution enforces microsecond-level certificate validation on-device, balancing global credibility with extreme performance.'}
+                : 'DROS establishes the GATI protocol: Layer-1 trust settlement supports decentralized ledger anchoring to eliminate corporate monopoly, while Layer-2 runtime attribution enforces microsecond-level certificate validation on-device, balancing portability, traceability, and performance.'}
             </p>
           </div>
 

@@ -20,7 +20,7 @@
         "Universal Docker 網關與社群技術支援"
       ],
       "details_title": "展開看詳細技術規格",
-      "details_content": "<p><strong>部署環境</strong>：專為個人開發者、極客玩家打造的帶內執行期安全邊界，杜絕本機 Agent 越權與失控動作。</p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>🛡️ 個人/非商用 100% 免費</strong>：免綁卡、免授權伺服器，本地即刻啟動。</li><li><strong>🤖 5 個 Concurrent Agents</strong>：守護 DSH、AGY、Codex、Claude Code、Cursor 與 OpenClaw。</li><li><strong>⚡ O(1) 常數時間微核心</strong>：原生點陣熔斷 (<1μs)，直接阻斷越權 Tool 調用。</li><li><strong>🪪 RFC-010 開放護照</strong>：本地簽發原生 W3C did:key 身分證。</li><li><strong>🐙 社群協作與更新</strong>：由 Top-Celestial 官方維護提供。</li></ul>",
+      "details_content": "<p><strong>部署環境</strong>：專為個人開發者、極客玩家打造的帶內執行期安全邊界，杜絕本機 Agent 越權與失控動作。</p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>🛡️ 符合資格的個人/非商用免費</strong>：免綁卡、免授權伺服器，本地即刻啟動。</li><li><strong>🤖 5 個 Concurrent Agents</strong>：守護 DSH、AGY、Codex、Claude Code、Cursor 與 OpenClaw。</li><li><strong>⚡ O(1) 常數時間微核心</strong>：原生點陣熔斷 (<1μs)，直接阻斷越權 Tool 調用。</li><li><strong>🪪 RFC-010 開放護照</strong>：本地簽發原生 W3C did:key 身分證。</li><li><strong>🐙 社群協作與更新</strong>：由 Top-Celestial 官方維護提供。</li></ul>",
       "btn": "免費獲取社群授權",
       "btn_win": "📥 下載 Windows 桌面版 (.exe)",
       "btn_linux": "🐧 Linux / Docker 終端部署"
@@ -49,13 +49,13 @@
         "每機台 30 個 Concurrent Agents (共 450 個)",
         "VajraAgent Mesh 全局策略派發",
         "中央可觀測性與監控戰情室 (Dashboard)",
-        "100% On-Premise / 斷網私有雲部署",
+        "On-Premise / 斷網私有雲部署",
         "K8s Helm 與 Ansible 自動化部署支援",
         "離線自適應安全降級 (Safe Degraded) 防禦",
         "Sealed Binary Policy (防篡改) 與密碼學稽核"
       ],
       "details_title": "展開看詳細技術規格",
-      "details_content": "<p><strong>部署環境</strong>：集中式治理策略＋分散式就地執法。與企業既有身分、策略編寫及 SIEM 基礎設施深度整合。<br/><strong>核心能力：</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>VajraAgent Mesh</strong>：統一進行策略派發，多節點叢集各自執行本機自主剛性攔截。</li><li><strong>防篡改密碼學驗證</strong>：Sealed Binary Policy 與 SHA-256 Merkle 審計鏈，提供不可否認證據鏈。</li><li><strong>企業級維運規模</strong>：支援完全斷網/私有雲部署，搭配 K8s/Ansible 及離線自適應安全降級防禦。</li></ul>",
+      "details_content": "<p><strong>部署環境</strong>：集中式治理策略＋分散式就地執法。與企業既有身分、策略編寫及 SIEM 基礎設施深度整合。<br/><strong>核心能力：</strong></p><ul style='list-style-type: disc; margin-left: 20px;'><li><strong>VajraAgent Mesh</strong>：統一進行策略派發，多節點叢集各自執行本機自主剛性攔截。</li><li><strong>防篡改密碼學驗證</strong>：Sealed Binary Policy 與 SHA-256 Merkle 審計鏈，提供不可否認證據鏈。</li><li><strong>企業級維運規模</strong>：支援斷網/私有雲部署，搭配 K8s/Ansible 及離線自適應安全降級防禦。</li></ul>",
       "btn": "Contact Sales"
     },
     "mobile_sdk": {
@@ -68,7 +68,7 @@
       "features": [
         "支援 Android (.aar)、iOS (.xcframework) 與 Linux ARM64",
         "純本地 C-ABI 微核心 (<25μs 確定性阻斷)",
-        "100% 離線自主運作 (Mode C 零雲端依賴)",
+        "離線自主運作 (Mode C 零雲端依賴)",
         "超低系統負擔 (RAM < 10MB，24hr 耗電增幅 < 0.5%)",
         "特洛伊木馬出廠兜底，後續企業能力無縫擴展"
       ],
@@ -87,7 +87,7 @@
         "1 Device = 1 Hardware UUID 實體晶片綁定",
         "空中停機/高速急煞物理動力阻斷 (摔機率 ΔS ≡ 0)",
         "100 機/車 蜂群串通攻擊防擴散 (委託鏈 H ≤ 2)",
-        "三維絕對禁航區與地緣圍欄 (0.0m 穿透阻斷)",
+        "三維禁航區與地緣圍欄 (0.0m 穿透阻斷)",
         "全面符合歐盟 EU AI Act Art. 14、EASA SORA 與 DO-178C"
       ],
       "details_title": "展開看詳細技術規格",
@@ -97,7 +97,7 @@
   },
   "disclaimer": {
     "title": "⚠️ EULA & Deployment Warning:",
-    "p1": "1. <strong>Fail-Closed Trigger:</strong> DROS 引擎採取嚴格預設攔截。若開發者因忽略 Panic 異常而強行繞過 DROS，系統將完全暴露於 Prompt Injections 攻擊之下。我們對因規避授權或拆卸 DROS 引擎而導致的資料外洩不承擔任何責任。",
+    "p1": "1. <strong>Fail-Closed Trigger:</strong> DROS 引擎採取嚴格預設攔截。若開發者因忽略 Panic 異常而強行繞過 DROS，系統將可界定邊界內暴露於 Prompt Injections 攻擊之下。我們對因規避授權或拆卸 DROS 引擎而導致的資料外洩不承擔任何責任。",
     "p2": "2. <strong>Mesh OTA & Mobile SDK:</strong> 若您需要部署 VajraAgent (企業級中控台) 或 DROS Mobile SDK (終端邊緣防護)，請直接聯繫銷售團隊進行專案評估與架構諮詢。",
     "p3": "3. <strong>No Refunds on Burned Keys:</strong> 任何試圖反編譯或竄改 <code>policy.bin</code> 二進位簽章的行為，將永久銷毀您的 License Key 且不予退費。"
   },

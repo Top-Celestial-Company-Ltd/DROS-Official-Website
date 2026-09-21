@@ -166,7 +166,7 @@ export default function Pricing() {
             端側嵌入式晶片與實體具身物理 AI 治理方案
           </h2>
           <p style={{fontSize: '1.1rem', color: 'var(--text-secondary)', maxWidth: '780px', margin: '0 auto'}}>
-            將確定性微核心門禁直接下沉至智慧手機晶片 (C-ABI) 與無人機蜂群飛控 (MAVLink/ROS2)，保障實體世界絕對安全。
+            將確定性微核心門禁直接下沉至智慧手機晶片 (C-ABI) 與無人機蜂群飛控 (MAVLink/ROS2)，為端側與實體系統提供可界定的治理補強。
           </p>
         </div>
 

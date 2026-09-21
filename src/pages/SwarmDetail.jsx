@@ -185,7 +185,7 @@ export default function SwarmDetail() {
                 }}>
                   <div>
                     <div style={{ color: isLight ? '#0f172a' : '#fff', fontSize: '0.85rem', fontWeight: '600' }}>1. Mid-Air Disarm Lockout (空中鎖死)</div>
-                    <div style={{ color: isLight ? '#64748b' : 'var(--text-secondary)', fontSize: '0.75rem' }}>空中高度 &gt; 0.5m 時，任何停機指令 100% 物理熔斷</div>
+                    <div style={{ color: isLight ? '#64748b' : 'var(--text-secondary)', fontSize: '0.75rem' }}>空中高度 &gt; 0.5m 時，任何停機指令即時物理熔斷</div>
                   </div>
                   <span style={{ color: '#16a34a', fontFamily: 'monospace', fontSize: '0.8rem', fontWeight: 'bold' }}>[LOCKED]</span>
                 </div>
@@ -202,7 +202,7 @@ export default function SwarmDetail() {
                 }}>
                   <div>
                     <div style={{ color: isLight ? '#0f172a' : '#fff', fontSize: '0.85rem', fontWeight: '600' }}>2. NFZ 3D Geofence (三維禁航區硬阻斷)</div>
-                    <div style={{ color: isLight ? '#64748b' : 'var(--text-secondary)', fontSize: '0.75rem' }}>機載向量包絡保持，0.0 公尺絕對穿透阻絕</div>
+                    <div style={{ color: isLight ? '#64748b' : 'var(--text-secondary)', fontSize: '0.75rem' }}>機載向量包絡維持，穿透誤差壓低至接近 0.0 公尺</div>
                   </div>
                   <span style={{ color: '#16a34a', fontFamily: 'monospace', fontSize: '0.8rem', fontWeight: 'bold' }}>[ACTIVE]</span>
                 </div>
@@ -239,7 +239,7 @@ export default function SwarmDetail() {
                       textAlign: 'center',
                       boxShadow: isLight ? '0 2px 4px rgba(0,0,0,0.02)' : 'none'
                     }}>
-                      <div style={{ color: '#16a34a', fontSize: '0.75rem', fontWeight: 'bold' }}>● 100% OK</div>
+                      <div style={{ color: '#16a34a', fontSize: '0.75rem', fontWeight: 'bold' }}>● OK</div>
                       <div style={{ color: isLight ? '#64748b' : 'var(--text-secondary)', fontSize: '0.7rem', marginTop: '2px' }}>{sq}</div>
                     </div>
                   ))}
@@ -268,7 +268,7 @@ export default function SwarmDetail() {
                   <div style={{ color: '#4ade80' }}>[15:10:04.222] ⚡ ACTUATOR_ALLOW: Waypoint vector (x: 120.4, y: 34.2, z: 45.0m) approved</div>
                   <div style={{ color: '#facc15' }}>[15:10:07.890] ⚠️ ATTACK_DETECTED: Adversarial Optical Injection attempting `COMMAND_DISARM`!</div>
                   <div style={{ color: '#f87171', background: 'rgba(239,68,68,0.14)', padding: '0.5rem', borderRadius: '4px', borderLeft: '3px solid #ef4444' }}>
-                    [15:10:07.891] 🛑 C-ABI KINETIC FUSE: Altitude = 45.0m &gt; 0.5m. Mid-Air Disarm hard blocked in &lt; 25μs! Motors maintain nominal thrust. Observable state drift: ΔS ≡ 0.000m.
+                    [15:10:07.891] 🛑 C-ABI KINETIC FUSE: Altitude = 45.0m &gt; 0.5m. Mid-Air Disarm hard blocked in &lt; 25μs! Motors maintain nominal thrust. Observable state drift remains bounded.
                   </div>
                   <div style={{ color: 'var(--accent-gold)' }}>[15:10:07.894] 🛰️ GCS_ALERT: Incident logged to Flight Black Box (Merkle Block #88219)</div>
                 </div>
@@ -316,7 +316,7 @@ export default function SwarmDetail() {
             </h3>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.7' }}>
               {isZh
-                ? '不論 AI 視覺大腦遭受如何劇烈的光學干擾或逆向提示詞攻擊，機載 C-ABI 在飛控底層將空中停機指令徹底物理封死，摔機率物理歸零。'
+                ? '不論 AI 視覺大腦遭受如何劇烈的光學干擾或逆向提示詞攻擊，機載 C-ABI 在飛控底層將空中停機指令限制在受控邊界內，顯著降低摔機風險。'
                 : 'Regardless of optical adversarial attacks on cognitive vision models, mid-air disarm commands are deterministically rejected by the onboard C-ABI layer.'}
             </p>
           </div>
@@ -338,8 +338,8 @@ export default function SwarmDetail() {
             </h3>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.7' }}>
               {isZh
-                ? '以硬體級常數時間計算飛行包絡線。當接近禁航區邊界時自動切換至 Simplex 確定性逃逸向量，穿透誤差為 0.0 公尺。'
-                : 'Constant-time flight envelope evaluations trigger deterministic Simplex escape vectors upon boundary proximity, guaranteeing 0.0m breach margin.'}
+                ? '以硬體級常數時間計算飛行包絡線。當接近禁航區邊界時自動切換至 Simplex 確定性逃逸向量，穿透誤差壓低至接近 0.0 公尺。'
+                : 'Constant-time flight envelope evaluations trigger deterministic Simplex escape vectors upon boundary proximity, targeting a near-zero breach margin within the boundary.'}
             </p>
           </div>
 
@@ -377,7 +377,7 @@ export default function SwarmDetail() {
                 <td style={{ padding: '1.2rem', color: '#fff', fontWeight: '500' }}>
                   {isZh 
                     ? 'Embedded Linux · WASI 沙箱 · seL4 能力隔離整合路線 (VEP 驗證中) · CHERI 硬體能力研究 Profile'
-                    : 'Embedded Linux · WASI Sandbox · seL4-oriented capability isolation (VEP validated) · CHERI research profile'}
+                    : 'Embedded Linux · WASI Sandbox · seL4-oriented capability isolation (VEP validation in progress) · CHERI research profile'}
                 </td>
               </tr>
               <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>

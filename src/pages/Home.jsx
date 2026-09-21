@@ -519,7 +519,7 @@ export default function Home() {
               </div>
             </div>
             <div style={{ textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '1rem' }}>
-              <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#27c93f', fontFamily: 'monospace' }}>100%</div>
+              <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#27c93f', fontFamily: 'monospace' }}>{i18n.language === 'en' ? 'Bounded' : '受控'}</div>
               <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '0.2rem' }}>
                 {i18n.language === 'en' ? 'Hard Block Rate' : '紅隊對抗物理阻斷率'}
               </div>
