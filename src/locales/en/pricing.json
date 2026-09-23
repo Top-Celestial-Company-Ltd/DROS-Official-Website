@@ -69,7 +69,7 @@
         "Native Android (.aar), iOS (.xcframework) & Linux ARM64 support",
         "Deterministic C-ABI microkernel (<25μs lookup latency)",
         "Off-grid autonomy (Mode C Zero-Cloud dependency)",
-        "Ultralight footprint (RAM < 10MB, 24hr battery impact < 0.5%)",
+        "Resource-footprint measurements are scoped to their declared target and workload; see the applicable benchmark report.",
         "Factory-installed trojan substrate with seamless enterprise upgrade path"
       ],
       "details_title": "View Technical Specs",

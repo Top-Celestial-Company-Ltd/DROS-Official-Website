@@ -507,11 +507,11 @@
         },
         {
           "id": "Paper 5",
-          "tag": "數位系統實證 (Mobile Agent Security)",
-          "title": "Post-Compromise Security for Autonomous Mobile Agents: A Deterministic Runtime Attenuation and Proof-Carrying Authorization Architecture",
-          "desc": "驗證智慧型手機端側 Agent 遭妥協後的邊界衰減機制，24 小時壓測 Memory Leak 為 0 Bytes，日常耗電增幅 <0.5%。",
-          "doi": "10.5281/zenodo.22253147",
-          "url": "https://doi.org/10.5281/zenodo.22253147"
+          "tag": "數位系統實證（TMC 投稿版）",
+          "title": "Post-Compromise Security for Autonomous Mobile Agents: Deterministic Runtime Enforcement of Mobile Execution Authority",
+          "desc": "Zenodo v2.0.1 預印本，已投稿 IEEE TMC。報告宣告範圍內 Pixel_7 Android 34 x86_64 AVD application-runtime 實驗，以及獨立的 permission、AppOps、protected Binder-service baseline observations。SELinux 結果僅屬觀察；不主張 Android-wide 或 OS-level enforcement。",
+          "doi": "10.5281/zenodo.22913070",
+          "url": "https://doi.org/10.5281/zenodo.22913070"
         },
         {
           "id": "Paper 6",

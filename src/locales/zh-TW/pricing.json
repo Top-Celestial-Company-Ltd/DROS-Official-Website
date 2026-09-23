@@ -69,7 +69,7 @@
         "支援 Android (.aar)、iOS (.xcframework) 與 Linux ARM64",
         "純本地 C-ABI 微核心 (<25μs 確定性阻斷)",
         "離線自主運作 (Mode C 零雲端依賴)",
-        "超低系統負擔 (RAM < 10MB，24hr 耗電增幅 < 0.5%)",
+        "資源負擔數據依宣告的測試目標與 workload 解讀；請參照對應 benchmark report。",
         "特洛伊木馬出廠兜底，後續企業能力無縫擴展"
       ],
       "details_title": "展開看詳細技術規格",

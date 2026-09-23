@@ -507,11 +507,11 @@
         },
         {
           "id": "Paper 5",
-          "tag": "Digital Systems Empirical Validation",
-          "title": "Post-Compromise Security for Autonomous Mobile Agents: A Deterministic Runtime Attenuation and Proof-Carrying Authorization Architecture",
-          "desc": "Validates runtime boundary attenuation on compromised smartphone agents. 24-hour soak tests demonstrate 0 Bytes memory leak and <0.5% daily battery overhead.",
-          "doi": "10.5281/zenodo.22253147",
-          "url": "https://doi.org/10.5281/zenodo.22253147"
+          "tag": "Digital Systems Empirical Validation / TMC Submission",
+          "title": "Post-Compromise Security for Autonomous Mobile Agents: Deterministic Runtime Enforcement of Mobile Execution Authority",
+          "desc": "Zenodo v2.0.1 preprint, submitted to IEEE TMC. Reports declared Pixel_7 Android 34 x86_64 AVD application-runtime experiments and separate permission, AppOps, and protected Binder-service baseline observations. SELinux results are observational only. No Android-wide or OS-level enforcement claim is made.",
+          "doi": "10.5281/zenodo.22913070",
+          "url": "https://doi.org/10.5281/zenodo.22913070"
         },
         {
           "id": "Paper 6",
